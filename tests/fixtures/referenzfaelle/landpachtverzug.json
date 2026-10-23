@@ -1,0 +1,489 @@
+[
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_BEIDE_TEILGRENZEN",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreimonatszeitraum_letzter_tag": "2024-03-31",
+        "laenger_als_drei_monate": true,
+        "laengste_rueckstandsfolge": 2,
+        "mindestens_zwei_aufeinanderfolgende_termine": true
+      }
+    },
+    "herleitung": "Tagesbeginn1.Januar:3Monate enden31.März;1.April liegt danach. Ereignis1.Januar:Ende1.April,also erst2.April danach. Nummern1/3nichtaufeinander;1/2und4/5/6 ergebenlängsteFolge3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_GENAU_DREIMONATSENDE",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-03-31",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreimonatszeitraum_letzter_tag": "2024-03-31",
+        "laenger_als_drei_monate": false,
+        "laengste_rueckstandsfolge": 2,
+        "mindestens_zwei_aufeinanderfolgende_termine": true
+      }
+    },
+    "herleitung": "Tagesbeginn1.Januar:3Monate enden31.März;1.April liegt danach. Ereignis1.Januar:Ende1.April,also erst2.April danach. Nummern1/3nichtaufeinander;1/2und4/5/6 ergebenlängsteFolge3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_NICHT_AUFEINANDER",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        3
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreimonatszeitraum_letzter_tag": "2024-03-31",
+        "laenger_als_drei_monate": true,
+        "laengste_rueckstandsfolge": 1,
+        "mindestens_zwei_aufeinanderfolgende_termine": false
+      }
+    },
+    "herleitung": "Tagesbeginn1.Januar:3Monate enden31.März;1.April liegt danach. Ereignis1.Januar:Ende1.April,also erst2.April danach. Nummern1/3nichtaufeinander;1/2und4/5/6 ergebenlängsteFolge3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_MEHRERE_FOLGEN",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        6,
+        2,
+        4,
+        5,
+        1
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreimonatszeitraum_letzter_tag": "2024-03-31",
+        "laenger_als_drei_monate": true,
+        "laengste_rueckstandsfolge": 3,
+        "mindestens_zwei_aufeinanderfolgende_termine": true
+      }
+    },
+    "herleitung": "Tagesbeginn1.Januar:3Monate enden31.März;1.April liegt danach. Ereignis1.Januar:Ende1.April,also erst2.April danach. Nummern1/3nichtaufeinander;1/2und4/5/6 ergebenlängsteFolge3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_KEINE_TERMINE",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreimonatszeitraum_letzter_tag": "2024-03-31",
+        "laenger_als_drei_monate": true,
+        "laengste_rueckstandsfolge": 0,
+        "mindestens_zwei_aufeinanderfolgende_termine": false
+      }
+    },
+    "herleitung": "Tagesbeginn1.Januar:3Monate enden31.März;1.April liegt danach. Ereignis1.Januar:Ende1.April,also erst2.April danach. Nummern1/3nichtaufeinander;1/2und4/5/6 ergebenlängsteFolge3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_EREIGNISBEGINN",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "ereignis",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreimonatszeitraum_letzter_tag": "2024-04-01",
+        "laenger_als_drei_monate": false,
+        "laengste_rueckstandsfolge": 2,
+        "mindestens_zwei_aufeinanderfolgende_termine": true
+      }
+    },
+    "herleitung": "Tagesbeginn1.Januar:3Monate enden31.März;1.April liegt danach. Ereignis1.Januar:Ende1.April,also erst2.April danach. Nummern1/3nichtaufeinander;1/2und4/5/6 ergebenlängsteFolge3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_MONATSENDE",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-31",
+      "beginnart": "ereignis",
+      "prueftag": "2024-05-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreimonatszeitraum_letzter_tag": "2024-04-30",
+        "laenger_als_drei_monate": true,
+        "laengste_rueckstandsfolge": 2,
+        "mindestens_zwei_aufeinanderfolgende_termine": true
+      }
+    },
+    "herleitung": "Tagesbeginn1.Januar:3Monate enden31.März;1.April liegt danach. Ereignis1.Januar:Ende1.April,also erst2.April danach. Nummern1/3nichtaufeinander;1/2und4/5/6 ergebenlängsteFolge3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_FEHLT_verzugsbeginn_am",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": null,
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_TYP_verzugsbeginn_am",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": {},
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_FEHLT_beginnart",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": null,
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_TYP_beginnart",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": {},
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_FEHLT_prueftag",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": null,
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_TYP_prueftag",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": {},
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_FEHLT_rueckstaendige_terminnummern",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": null,
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_TYP_rueckstaendige_terminnummern",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": {},
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_FEHLT_einordnungsnachweis",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_TYP_einordnungsnachweis",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_UNGUELTIG_0",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2023-12-31",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_UNGUELTIG_1",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        1
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_UNGUELTIG_2",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        0
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_UNGUELTIG_3",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        true
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_UNGUELTIG_4",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "ungeklaert",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": "§594eII: Ende einer qualifizierten Dreimonats-Verzugslaufzeit und strenges Überschreiten am Prüftag berechnen; daneben längste lückenlos aufeinanderfolgende Folge qualifiziert rückständiger Zahlungstermine zählen und mit2vergleichen. Keine erfundene Euro-/Prozentgrenze für nicht unerheblichen Teil. Beide numerischen Teilprüfungen getrennt ausgegeben; rechtliche Fallzuordnung nach Zahlungsabschnitt sowie deren Zusammenspiel und Kündigung nicht automatisch entschieden. Terminnummern müssen dem vollständigen Kalender entsprechen, keine nachträgliche Neunummerierung nur rückständiger Raten. Kein künstlicher Neustart/Stillstand des Verzugs bei unbekannten Zahlungsvorgängen; Fristbeginn und kontinuierlicher Verlauf vorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_VERZUG_ZEIT_UND_TERMINVERGLEICH_UNGUELTIG_5",
+    "funktion": "landpacht_verzug_zeit_und_terminvergleich",
+    "eingaben": {
+      "verzugsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "prueftag": "2024-04-01",
+      "rueckstaendige_terminnummern": [
+        1,
+        2
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

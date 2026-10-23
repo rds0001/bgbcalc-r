@@ -1,0 +1,610 @@
+[
+  {
+    "fall_id": "BGR_001",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "20000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesamtgrenze": {
+          "zaehler": "90000",
+          "nenner": "1"
+        },
+        "verbleibender_rahmen": {
+          "zaehler": "70000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "90 Prozent von 100000, davon bereits 20000 verbraucht.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_002",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "90000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesamtgrenze": {
+          "zaehler": "90000",
+          "nenner": "1"
+        },
+        "verbleibender_rahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gesamtgrenze erreicht.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_003",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "95000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesamtgrenze": {
+          "zaehler": "90000",
+          "nenner": "1"
+        },
+        "verbleibender_rahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Überschreitung erzeugt keine negative weitere Abschlagsgrenze.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_004",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "0",
+      "bisherige_abschlaege": "0",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesamtgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_rahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Nullvergütung, kein verbleibender Rahmen.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_005",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "0.01",
+      "bisherige_abschlaege": "0",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesamtgrenze": {
+          "zaehler": "9",
+          "nenner": "1000"
+        },
+        "verbleibender_rahmen": {
+          "zaehler": "9",
+          "nenner": "1000"
+        }
+      }
+    },
+    "herleitung": "Exakter Bruch ohne Aufrundung zur Überschreitung der Grenze.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_006",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "20000",
+      "verbraucherbauvertrag": false,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Kein Verbraucherbauvertrag.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_007",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "20000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": true,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "§ 650u Abs. 2 schließt § 650m Abs. 1 aus.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_008",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "20000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine Abschlagsforderung nach § 632a.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_009",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "-1",
+      "bisherige_abschlaege": "20000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_010",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "-1",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_011",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": 100000,
+      "bisherige_abschlaege": "20000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_012",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "20000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": 1,
+      "abschlag_nach_632a": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_013",
+    "funktion": "verbraucherbau_abschlagsgrenze",
+    "eingaben": {
+      "gesamtverguetung": "100000",
+      "bisherige_abschlaege": "20000",
+      "verbraucherbauvertrag": true,
+      "bautraegervertrag": false,
+      "abschlag_nach_632a": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Rechtliche Einordnung fehlt.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_014",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "15000",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "Minimum aus nächstem Abschlag 15000 und 20 Prozent=20000; Gleichheit überschreitet nicht.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_015",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "15000.01",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "15000",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": true
+      }
+    },
+    "herleitung": "Schon ein Cent über dem kleineren Grenzwert überschreitet.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_016",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "30000",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "20000",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "20-Prozent-Grenze ist kleiner als nächster Abschlag.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_017",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "30000",
+      "vereinbarte_sicherheit": "20000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "20000",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "Exakt 20 Prozent zulässige Betragsgrenze.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_018",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "30000",
+      "vereinbarte_sicherheit": "20000.01",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "20000",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": true
+      }
+    },
+    "herleitung": "Überschreitung der 20-Prozent-Grenze.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_019",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "0",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": true
+      }
+    },
+    "herleitung": "Nächster Abschlag null, somit Grenze null.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_020",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "0",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "0",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "Nullgrenze nicht überschritten.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_021",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": false,
+      "abschlaege_vereinbart": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "15000",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "Vereinbarte Abschläge genügen nach Satz 2.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_022",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "15000",
+          "nenner": "1"
+        },
+        "betragsgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "Beide Tatbestände gleichzeitig möglich.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_023",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": false,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Verbraucherbauvertrag oder beide Abschlagstatbestände fehlen.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_024",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": false,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Verbraucherbauvertrag oder beide Abschlagstatbestände fehlen.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_025",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "-1",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_026",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "-1",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_027",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "-1",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_028",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": "15000",
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  },
+  {
+    "fall_id": "BGR_029",
+    "funktion": "verbraucherbau_sicherungsgrenze",
+    "eingaben": {
+      "vereinbarte_verguetung": "100000",
+      "naechste_abschlagszahlung": "15000",
+      "vereinbarte_sicherheit": null,
+      "verbraucherbauvertrag": true,
+      "abschlaege_verlangt": true,
+      "abschlaege_vereinbart": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Vereinbarter Sicherheitsbetrag fehlt.",
+    "pruefnachweis": "Vor Implementierung aus lokaler BGB-PDF abgeleitete Grenzrechnung."
+  }
+]

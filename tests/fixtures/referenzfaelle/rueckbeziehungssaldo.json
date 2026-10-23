@@ -1,0 +1,323 @@
+[
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_vertragsbestaetigung_141",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_leistungssaldo": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "fehlender_leistungswert": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "uebersteigender_istwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_bedingungsrueckbeziehung_159",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "bedingungsrueckbeziehung_159",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_leistungssaldo": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "fehlender_leistungswert": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "uebersteigender_istwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_MEHRERHALT",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "30",
+      "bereits_erlangter_istwert": "100",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_leistungssaldo": {
+          "zaehler": "-70",
+          "nenner": "1"
+        },
+        "fehlender_leistungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "uebersteigender_istwert": {
+          "zaehler": "70",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_GLEICH",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "100",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_leistungssaldo": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "fehlender_leistungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "uebersteigender_istwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_EXAKT",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "0.3",
+      "bereits_erlangter_istwert": "0.1",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_leistungssaldo": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "fehlender_leistungswert": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "uebersteigender_istwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_FEHLT_sollwert_bei_rueckbeziehung",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": null,
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_TYP_sollwert_bei_rueckbeziehung",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": [],
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_FEHLT_bereits_erlangter_istwert",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": null,
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_TYP_bereits_erlangter_istwert",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": [],
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_FEHLT_regelfall",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": null,
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_TYP_regelfall",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": [],
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_FEHLT_bewertungsnachweis",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_TYP_bewertungsnachweis",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_ART",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "x",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_NEGATIV",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "-1",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": "Gleicher Beteiligter/Leistungskreis, qualifizierte gesetzliche Rückbeziehung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "RUECKBEZIEHUNG_LEISTUNGSSALDO_LEER",
+    "funktion": "rueckbeziehung_leistungssaldo",
+    "eingaben": {
+      "sollwert_bei_rueckbeziehung": "100",
+      "bereits_erlangter_istwert": "30",
+      "regelfall": "vertragsbestaetigung_141",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "100−30=70Fehlbetrag;30−100=−70Saldo und70rechnerischerMehrerhalt ohne automatische Rückgewähr.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

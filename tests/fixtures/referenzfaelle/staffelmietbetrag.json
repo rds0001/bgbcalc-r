@@ -1,0 +1,600 @@
+[
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_VORSTAFFELSCHUTZ",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "200",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Erste1000 auf900 begrenzen; zweite1100 bei neuer800-Grenze auf zuvor wirksame900 begrenzen. Nicht die vereinbarten1000 schützen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_GRENZE_STEIGT",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "1050"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "1050",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "1050",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "50",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Je Staffel min(vereinbarteMiete,max(neueGrenze,wirksameVorstaffelmiete)); positive Differenz zur Vereinbarung ausweisen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_VEREINBARUNG_NIEDRIGER",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "1200"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "1300"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "1200",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "1000",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "1300",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "1100",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Je Staffel min(vereinbarteMiete,max(neueGrenze,wirksameVorstaffelmiete)); positive Differenz zur Vereinbarung ausweisen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_GLEICHE_VEREINBARUNG",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Je Staffel min(vereinbarteMiete,max(neueGrenze,wirksameVorstaffelmiete)); positive Differenz zur Vereinbarung ausweisen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_NULL_GRENZEN",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "0"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "0"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "1000",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "1100",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Je Staffel min(vereinbarteMiete,max(neueGrenze,wirksameVorstaffelmiete)); positive Differenz zur Vereinbarung ausweisen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_DREI_STAFFELN",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "950"
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "vereinbarte_monatsmiete": "1200",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "850"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "950",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "950",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "150",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "950",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "950",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "250",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Je Staffel min(vereinbarteMiete,max(neueGrenze,wirksameVorstaffelmiete)); positive Differenz zur Vereinbarung ausweisen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_FEHLT_staffeln",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": null,
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_TYP_staffeln",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": {},
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_FEHLT_einordnungsnachweis",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_TYP_einordnungsnachweis",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_UNGUELTIG_0",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2024-12-31",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_UNGUELTIG_1",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_UNGUELTIG_2",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "999",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_UNGUELTIG_3",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "-1",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_UNGUELTIG_4",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "-1"
+        }
+      ],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_LEER",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [],
+      "einordnungsnachweis": "§557aIV in Verbindung556gI2: für jede aufsteigende gültige Staffel Höchstbetrag mit der zuvor wirksam begründeten Miethöhe vergleichen; höhere geschützte Vormietstaffel erhalten, vereinbarte Monatsmiete auf diesen Höchstbetrag begrenzen. Nur rechtlich qualifizierte, vollständig geordnete und nicht sinkende Vereinbarungsbeträge; absteigende/neu verhandelte Folgen benötigen gesonderte Bewertung. Anfängliche Überhöhung wird nicht als geschützte Vorstaffelmiete fortgeschrieben. Die Höchstbeträge müssen556d–g einschließlich relevanter Vormiete/Modernisierung/Auskunft und bei Folgestaffeln Zeitpunkt der ersten Fälligkeit bereits korrekt berücksichtigen. Keine automatische10%-Bewertung aus unqualifizierter Vergleichsmiete. Fehlende Jahresabstände führen zu Eingabefehler für diese vorqualifizierte gültige Folge; keine automatische Ersatzvereinbarung. Rückforderung, Rüge, Verjährung, Kündigungsausschluss und Rundung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_AUFSTEIGENDE_BETRAGSGRENZEN_NACHWEIS_LEER",
+    "funktion": "staffelmiete_aufsteigende_betragsgrenzen",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "1100",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

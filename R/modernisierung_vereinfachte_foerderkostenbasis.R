@@ -1,0 +1,13 @@
+modernisierung_vereinfachte_foerderkostenbasis <- function(geltend_gemachte_kosten=NULL, frueher_geltend_gemachte_kosten=NULL, abzuziehende_kapitalzuschuesse=NULL, pauschalenmethode=NULL, methodennachweis=NULL) {
+ k <- .geld(geltend_gemachte_kosten);z <- .geld(abzuziehende_kapitalzuschuesse);.text(methodennachweis,'methodennachweis');.auswahl(pauschalenmethode,'pauschalenmethode',c('pauschale_vor_kapitalabzug','kapitalabzug_vor_pauschale'))
+ b <- modernisierung_vereinfachte_kostenbasis(geltend_gemachte_kosten,frueher_geltend_gemachte_kosten,TRUE)
+ if(is.null(b$wert)) .fehler('geltend_gemachte_kosten','Verbleibende559c-Kostengrenze \u00fcberschritten.')
+ if(.vergleichen(z,k)>0) .fehler('abzuziehende_kapitalzuschuesse','Kapitalbeitrag h\u00f6chstens Kosten.')
+ vor <- .subtrahieren(.multiplizieren(k,.bruch(7,10)),z);if(.vergleichen(vor,.bruch(0))<0) vor <- .bruch(0)
+ nach <- .multiplizieren(.subtrahieren(k,z),.bruch(7,10))
+ wert <- list(kostenbasis_pauschale_vor_kapitalabzug=.bruchteile(vor),kostenbasis_kapitalabzug_vor_pauschale=.bruchteile(nach),ausgewaehlte_kostenbasis=.bruchteile(if(pauschalenmethode=='pauschale_vor_kapitalabzug') vor else nach),pauschalenmethode=pauschalenmethode)
+ eingaben <- list(geltend_gemachte_kosten=geltend_gemachte_kosten, frueher_geltend_gemachte_kosten=frueher_geltend_gemachte_kosten, abzuziehende_kapitalzuschuesse=abzuziehende_kapitalzuschuesse, pauschalenmethode=pauschalenmethode, methodennachweis=methodennachweis)
+ ergebnis <- .ergebnis(wert,"EUR","BGB_MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS",eingaben,list(list(operation="559c-Kostengrenze pr\u00fcfen, Kapitalbeitrag und30%-Pauschale in ausdr\u00fccklich gew\u00e4hlter Reihenfolge abziehen; beide bedingten Rechenwege ausweisen.")),eingaben)
+ ergebnis$hinweise <- list("Bedingte559c/559aI-Kostenrechnung mit zwingend begr\u00fcndeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abz\u00fcglich relevanter fr\u00fcherer Kosten vor dieser Rechnung mit vorhandenem Kern pr\u00fcfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgew\u00e4hlte Kostenbasis f\u00fcr8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schlie\u00dft559aII1bis3(Zinserm\u00e4\u00dfigung)aus, nicht559aII4(laufende Zusch\u00fcsse/Darlehen); letztere nach j\u00e4hrlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem F\u00f6rderkappungskern ber\u00fccksichtigen. Keine tats\u00e4chlichen Erhaltungskosten neben30%-Pauschale. F\u00f6rderzuordnung zu Wohnungen und Erkl\u00e4rungs-/H\u00e4rtevoraussetzungen separat; keine F\u00f6rderung automatisch erfinden.")
+ ergebnis
+}

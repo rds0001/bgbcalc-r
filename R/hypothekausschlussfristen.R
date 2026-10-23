@@ -1,0 +1,17 @@
+hypothek_glaeubigerausschluss_grenze <- function(letzte_eintragung_am=NULL, letztes_fristwirksames_anerkenntnis_am=NULL, kalendertag_zahlung_am=NULL, inhaberschuldverschreibung=NULL, vorlegungsfristende_am=NULL, fristgemaesse_vorlegung_oder_klage=NULL, verjaehrungsende_am=NULL, einordnungsnachweis=NULL) {
+ bezug <- .datum(letzte_eintragung_am,'letzte_eintragung_am')
+ if(!is.null(letztes_fristwirksames_anerkenntnis_am)) bezug <- max(bezug,.datum(letztes_fristwirksames_anerkenntnis_am,'letztes_fristwirksames_anerkenntnis_am'))
+ if(!is.null(kalendertag_zahlung_am)) bezug <- max(bezug,.datum(kalendertag_zahlung_am,'kalendertag_zahlung_am'))
+ .wahrheitswert(inhaberschuldverschreibung,'inhaberschuldverschreibung');.text(einordnungsnachweis,'einordnungsnachweis')
+ grundende <- .frist(.iso(bezug),10,'jahre','ereignis');ende <- grundende
+ if(inhaberschuldverschreibung) {
+  ende <- max(ende,.datum(vorlegungsfristende_am,'vorlegungsfristende_am'))
+  .wahrheitswert(fristgemaesse_vorlegung_oder_klage,'fristgemaesse_vorlegung_oder_klage')
+  if(fristgemaesse_vorlegung_oder_klage) ende <- max(ende,.datum(verjaehrungsende_am,'verjaehrungsende_am')) else if(!is.null(verjaehrungsende_am)) .fehler('verjaehrungsende_am','Ohne fristgem\u00e4\u00dfe Vorlegung/Klage keine ungenutzte Zusatzgrenze eingeben.')
+ } else if(!is.null(vorlegungsfristende_am)||!is.null(fristgemaesse_vorlegung_oder_klage)||!is.null(verjaehrungsende_am)) .fehler('inhaberschuldverschreibung','Au\u00dferhalb1188II alle Zusatzparameter ausdr\u00fccklich null.')
+ wert <- list(grundfristende_1170=.iso(grundende),kombinierte_zeitgrenze=.iso(ende),erster_tag_nach_zeitgrenzen=.iso(.tage_addieren(ende,1)))
+ eingaben <- list(letzte_eintragung_am=letzte_eintragung_am, letztes_fristwirksames_anerkenntnis_am=letztes_fristwirksames_anerkenntnis_am, kalendertag_zahlung_am=kalendertag_zahlung_am, inhaberschuldverschreibung=inhaberschuldverschreibung, vorlegungsfristende_am=vorlegungsfristende_am, fristgemaesse_vorlegung_oder_klage=fristgemaesse_vorlegung_oder_klage, verjaehrungsende_am=verjaehrungsende_am, einordnungsnachweis=einordnungsnachweis)
+ ergebnis <- .ergebnis(wert,"daten","BGB_HYPOTHEK_GLAEUBIGERAUSSCHLUSS_GRENZE",eingaben,list(list(operation="Sp\u00e4testen qualifizierten1170-Bezugstag bestimmen und zehnj\u00e4hrige Ereignisfrist berechnen; im1188II-Fall zus\u00e4tzliche Vorlegungs-/Verj\u00e4hrungsgrenzen als Maximum ber\u00fccksichtigen, ersten Folgetag ausgeben.")),eingaben)
+ ergebnis$hinweise <- list("\u00a71170I/1188II: nur zeitlicher Grundrahmen f\u00fcr Gl\u00e4ubigerausschluss, kein Ausschlie\u00dfungsbeschluss oder automatischer Eigentumserwerb. Zahlungstag wirkt als fr\u00fcheste Fristbeginnschranke; nicht zus\u00e4tzlich zehn Jahre nach bereits berechnetem Fristende addieren. Anerkenntnis als letzten rechtlich wirksamen Neubeginn vorqualifizieren; fr\u00fchere Anerkenntnisse vor sp\u00e4terer ma\u00dfgeblicher Eintragung \u00e4ndern deren sp\u00e4teren Beginn nicht. Keine automatische Ermittlung beliebiger Anerkenntnisketten. Bei1188II muss Vorlegungsfrist verstrichen sein; nach fristgem\u00e4\u00dfer Vorlegung/Klage zus\u00e4tzlich Verj\u00e4hrung abwarten. Zusatzfristen m\u00fcssen bereits vollst\u00e4ndig gerechnet sein. Ergebnis vor etwaigen weiteren rechtlich festgestellten Korrekturen des1170-Grundlaufs; keine pauschale193-Verschiebung. Keine Pr\u00fcfung der Unbekanntheit des Gl\u00e4ubigers, des Aufgebotsverfahrens oder der Voraussetzungen des Eigentumserwerbs1170II.")
+ ergebnis
+}

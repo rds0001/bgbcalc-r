@@ -1,0 +1,2084 @@
+[
+  {
+    "fall_id": "ANWACHSUNG_ALLGEMEIN",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "2",
+              "nenner": "3"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TESTAMENT",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": true,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": false,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_ERSATZ",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": false,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_BEIDE",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": true,
+      "vorrangiges_ersatzerbrecht": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": false,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_GRUPPENVORRANG",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "5",
+              "nenner": "6"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_GRUPPENVERHAELTNIS",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "8"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "5",
+              "nenner": "12"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "12"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "5",
+              "nenner": "24"
+            }
+          },
+          {
+            "erbe_id": "D",
+            "urspruenglicher_erbteil": {
+              "zaehler": "3",
+              "nenner": "8"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "3",
+              "nenner": "8"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_GRUPPE_ERSCHOEPFT",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "2",
+              "nenner": "3"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_FREMDE_GRUPPE",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": "G"
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "2",
+              "nenner": "3"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TEILEINSETZUNG_OHNE_GRUPPE",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "8"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": false,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": false,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TEILEINSETZUNG_MIT_GRUPPE",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "8"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": false,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TEILEINSETZUNG_GRUPPE_ERSCHOEPFT",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "8"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": false,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": false,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_ZWEI_ERBEN",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "3",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_LETZTER_WEG",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "C",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "A",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "10"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "3",
+              "nenner": "5"
+            }
+          },
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "15"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "2",
+              "nenner": "5"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_DEZIMALQUOTEN",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.75",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "3",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_FEHLT_eingesetzte_erben",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": null,
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TYP_eingesetzte_erben",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": {},
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_FEHLT_weggefallener_erbe_id",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": null,
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TYP_weggefallener_erbe_id",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": {},
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_FEHLT_gesetzliche_erbfolge_ausgeschlossen",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": null,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TYP_gesetzliche_erbfolge_ausgeschlossen",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": 1,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_FEHLT_anwachsung_testamentarisch_ausgeschlossen",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": null,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TYP_anwachsung_testamentarisch_ausgeschlossen",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": 1,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_FEHLT_vorrangiges_ersatzerbrecht",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": null,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TYP_vorrangiges_ersatzerbrecht",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": 1,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_FEHLT_einordnungsnachweis",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_TYP_einordnungsnachweis",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_SUMME_ZU_KLEIN",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "8"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_SUMME_ZU_GROSS",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_SUMME_TEIL_EINS",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": false,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_NULLQUOTE",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_NEGATIVE_QUOTE",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "-1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_QUOTE_UEBER_EINS",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "2",
+            "nenner": "1"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_DOPPELTE_ID",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_UNBEKANNTER_WEG",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "X",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_EIN_ERBE",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_GRUPPE_LEER",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": ""
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_GRUPPE_FALSCH",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": false
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_OBJEKT_ZUSATZ",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null,
+          "extra": 1
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_OBJEKT_FEHLT",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.5"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Originaleinsetzung und einzelner Wegfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ANWACHSUNG_NACHWEIS_LEER",
+    "funktion": "erbteil_anwachsungsquoten",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_erbe_id": "A",
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Bruchquoten: Halbanteil verteilt sich im Verhältnis2:1 in ein Drittel/ein Sechstel; gemeinschaftlicher Teil hat Vorrang; Sperren lassen Originalquoten unberührt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

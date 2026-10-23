@@ -1,0 +1,832 @@
+[
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_GRUNDFALL",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "15",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_2323_TEIL",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "15",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "4",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "4",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "36",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "6",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_2323_VOLL",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "25",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_VERMAECHTNIS_SCHUTZ",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "vermaechtnisnehmer",
+      "geschuetzter_pflichtteilswert": "35",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "5",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "35",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_VERMAECHTNIS_UNTERDECKT",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "vermaechtnisnehmer",
+      "geschuetzter_pflichtteilswert": "50",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "25",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_VERMAECHTNIS_KEIN_DECKEL",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "vermaechtnisnehmer",
+      "geschuetzter_pflichtteilswert": "20",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "15",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_ERBE_SCHUTZ",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "erbe",
+      "geschuetzter_pflichtteilswert": "50",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "15",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_ERBE_OHNE_MEHR",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "erbe",
+      "geschuetzter_pflichtteilswert": "20",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "15",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_ERBE_VOLLKUERZUNG",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "80",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "erbe",
+      "geschuetzter_pflichtteilswert": "60",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "32",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_NULL",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "0",
+      "vermaechtniswert": "0",
+      "gesamte_pflichtteilslast": "0",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilige_grundkuerzung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_vermaechtniswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "beim_erben_verbleibende_pflichtteilslast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_NICHT_ANWENDBAR",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FEHLT_erwerbswert_vor_vermaechtnis",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": null,
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_TYP_erwerbswert_vor_vermaechtnis",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": [],
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FEHLT_vermaechtniswert",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": null,
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_TYP_vermaechtniswert",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": [],
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FEHLT_gesamte_pflichtteilslast",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": null,
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_TYP_gesamte_pflichtteilslast",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": [],
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FEHLT_anderweitig_getragene_last_2323",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": null,
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_TYP_anderweitig_getragene_last_2323",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": [],
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FEHLT_schutzart",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": null,
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_TYP_schutzart",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": [],
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FEHLT_geschuetzter_pflichtteilswert",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": null,
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_TYP_geschuetzter_pflichtteilswert",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": [],
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FEHLT_einzelfall_nach_2318_qualifiziert",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_TYP_einzelfall_nach_2318_qualifiziert",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FEHLT_bewertungsnachweis",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_TYP_bewertungsnachweis",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_V_ZU_HOCH",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "101",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_P_ZU_HOCH",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "101",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_FREMD_ZU_HOCH",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "26",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_SCHUTZ_OHNE_FALL",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "1",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_SCHUTZ_VORHER_UNGEDECKT",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "erbe",
+      "geschuetzter_pflichtteilswert": "61",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch isolierter proportionaler Lastfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_PFLICHTTEILSKUERZUNG_NACHWEIS_LEER",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "100",
+      "vermaechtniswert": "40",
+      "gesamte_pflichtteilslast": "25",
+      "anderweitig_getragene_last_2323": "0",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundfall25×40/100=10; geschütztes Vermächtnis35 erlaubt nur5 Kürzung. Erbenschutz50 benötigt nach60−25=35 weitere15.2323-Fremdlast15 lässt10 zur Quotierung.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  }
+]

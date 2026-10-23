@@ -1,0 +1,438 @@
+[
+  {
+    "fall_id": "BETRAG_001",
+    "funktion": "wertpapier_sicherheitswert",
+    "eingaben": {
+      "kurswert": "100",
+      "papierart": "inhaberpapier",
+      "gattung_zulaessig": true,
+      "scheine_hinterlegt": true,
+      "gattungsnachweis": "Synthetischer bestätigter Gattungsnachweis"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "75",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "100 * 3/4 = 75.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_002",
+    "funktion": "wertpapier_sicherheitswert",
+    "eingaben": {
+      "kurswert": "0.01",
+      "papierart": "blanko_orderpapier",
+      "gattung_zulaessig": true,
+      "scheine_hinterlegt": true,
+      "gattungsnachweis": "Synthetischer bestätigter Gattungsnachweis"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3",
+        "nenner": "400"
+      }
+    },
+    "herleitung": "Ein Cent * 3/4 = 3/400 EUR; keine Cent-Rundung.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_003",
+    "funktion": "wertpapier_sicherheitswert",
+    "eingaben": {
+      "kurswert": "100",
+      "papierart": "inhaberpapier",
+      "gattung_zulaessig": false,
+      "scheine_hinterlegt": true,
+      "gattungsnachweis": "Synthetischer bestätigter Gattungsnachweis"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Geeignetheitsvoraussetzung fehlt.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_004",
+    "funktion": "wertpapier_sicherheitswert",
+    "eingaben": {
+      "kurswert": "100",
+      "papierart": "inhaberpapier",
+      "gattung_zulaessig": true,
+      "scheine_hinterlegt": false,
+      "gattungsnachweis": "Synthetischer bestätigter Gattungsnachweis"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Geeignetheitsvoraussetzung fehlt.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_005",
+    "funktion": "wertpapier_sicherheitswert",
+    "eingaben": {
+      "kurswert": "100",
+      "papierart": "sonstiges",
+      "gattung_zulaessig": true,
+      "scheine_hinterlegt": true,
+      "gattungsnachweis": "Synthetischer bestätigter Gattungsnachweis"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine zulässige Papierart.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_006",
+    "funktion": "buchforderung_sicherheitswert",
+    "eingaben": {
+      "kurswert": "200",
+      "schuldnerart": "bund"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "150",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "200 * 3/4 = 150 EUR.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_007",
+    "funktion": "buchforderung_sicherheitswert",
+    "eingaben": {
+      "kurswert": "200",
+      "schuldnerart": "land"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "150",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "200 * 3/4 = 150 EUR.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_008",
+    "funktion": "buchforderung_sicherheitswert",
+    "eingaben": {
+      "kurswert": "200",
+      "schuldnerart": "sonstiges"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "§ 236 erfasst Bund oder Land.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_009",
+    "funktion": "sach_sicherheitswert",
+    "eingaben": {
+      "schaetzungswert": "100",
+      "verderb_zu_besorgen": false,
+      "aufbewahrung_schwierig": false,
+      "zurueckweisung_erklaert": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "200",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "100 * 2/3 = 200/3 EUR, keine vorzeitige Rundung.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_010",
+    "funktion": "sach_sicherheitswert",
+    "eingaben": {
+      "schaetzungswert": "100",
+      "verderb_zu_besorgen": true,
+      "aufbewahrung_schwierig": false,
+      "zurueckweisung_erklaert": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "200",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Zurückweisungsgrund allein ist noch keine erklärte Zurückweisung.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_011",
+    "funktion": "sach_sicherheitswert",
+    "eingaben": {
+      "schaetzungswert": "100",
+      "verderb_zu_besorgen": true,
+      "aufbewahrung_schwierig": false,
+      "zurueckweisung_erklaert": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Auf gesetzlichem Grund beruhende erklärte Zurückweisung.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_012",
+    "funktion": "sach_sicherheitswert",
+    "eingaben": {
+      "schaetzungswert": "100",
+      "verderb_zu_besorgen": false,
+      "aufbewahrung_schwierig": true,
+      "zurueckweisung_erklaert": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Auf gesetzlichem Grund beruhende erklärte Zurückweisung.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_013",
+    "funktion": "sach_sicherheitswert",
+    "eingaben": {
+      "schaetzungswert": "100",
+      "verderb_zu_besorgen": false,
+      "aufbewahrung_schwierig": false,
+      "zurueckweisung_erklaert": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Im Eingabevertrag fehlt ein gesetzlicher Zurückweisungsgrund.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_014",
+    "funktion": "sicherheit_ergaenzungsbetrag",
+    "eingaben": {
+      "erforderliche_sicherheit": "100",
+      "vorhandener_sicherheitswert": "75",
+      "verschulden_berechtigter": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "25",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Positive Deckungslücke ausgleichen, soweit § 240 ohne Berechtigtenverschulden anwendbar ist.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_015",
+    "funktion": "sicherheit_ergaenzungsbetrag",
+    "eingaben": {
+      "erforderliche_sicherheit": "100",
+      "vorhandener_sicherheitswert": "125",
+      "verschulden_berechtigter": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Positive Deckungslücke ausgleichen, soweit § 240 ohne Berechtigtenverschulden anwendbar ist.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_016",
+    "funktion": "sicherheit_ergaenzungsbetrag",
+    "eingaben": {
+      "erforderliche_sicherheit": "100",
+      "vorhandener_sicherheitswert": "100",
+      "verschulden_berechtigter": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Positive Deckungslücke ausgleichen, soweit § 240 ohne Berechtigtenverschulden anwendbar ist.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_017",
+    "funktion": "sicherheit_ergaenzungsbetrag",
+    "eingaben": {
+      "erforderliche_sicherheit": "100",
+      "vorhandener_sicherheitswert": "75",
+      "verschulden_berechtigter": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Positive Deckungslücke ausgleichen, soweit § 240 ohne Berechtigtenverschulden anwendbar ist.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_018",
+    "funktion": "sachschaden_ersatzbetrag",
+    "eingaben": {
+      "erforderlicher_nettobetrag": "100",
+      "ersatzfaehige_angefallene_umsatzsteuer": "0",
+      "mitverschuldensquote": "0"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Netto plus tatsächlich angefallene ersatzfähige Steuer, danach verbleibender Anteil. 119*3/4=357/4; halber Cent=1/200.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_019",
+    "funktion": "sachschaden_ersatzbetrag",
+    "eingaben": {
+      "erforderlicher_nettobetrag": "100",
+      "ersatzfaehige_angefallene_umsatzsteuer": "19",
+      "mitverschuldensquote": "0.25"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "357",
+        "nenner": "4"
+      }
+    },
+    "herleitung": "Netto plus tatsächlich angefallene ersatzfähige Steuer, danach verbleibender Anteil. 119*3/4=357/4; halber Cent=1/200.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_020",
+    "funktion": "sachschaden_ersatzbetrag",
+    "eingaben": {
+      "erforderlicher_nettobetrag": "100",
+      "ersatzfaehige_angefallene_umsatzsteuer": "19",
+      "mitverschuldensquote": "1"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Netto plus tatsächlich angefallene ersatzfähige Steuer, danach verbleibender Anteil. 119*3/4=357/4; halber Cent=1/200.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_021",
+    "funktion": "sachschaden_ersatzbetrag",
+    "eingaben": {
+      "erforderlicher_nettobetrag": "0.01",
+      "ersatzfaehige_angefallene_umsatzsteuer": "0",
+      "mitverschuldensquote": "0.5"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "200"
+      }
+    },
+    "herleitung": "Netto plus tatsächlich angefallene ersatzfähige Steuer, danach verbleibender Anteil. 119*3/4=357/4; halber Cent=1/200.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_022",
+    "funktion": "sachschaden_ersatzbetrag",
+    "eingaben": {
+      "erforderlicher_nettobetrag": "100",
+      "ersatzfaehige_angefallene_umsatzsteuer": "0",
+      "mitverschuldensquote": "25"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Quote 25 ist nicht 25 Prozent; erlaubt ist 0..1.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_023",
+    "funktion": "buchforderung_sicherheitswert",
+    "eingaben": {
+      "kurswert": "-1",
+      "schuldnerart": "bund"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Negativer Kurswert unzulässig.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BETRAG_024",
+    "funktion": "wertpapier_sicherheitswert",
+    "eingaben": {
+      "kurswert": "100",
+      "papierart": "inhaberpapier",
+      "gattung_zulaessig": true,
+      "scheine_hinterlegt": true,
+      "gattungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Externe Einordnung muss nachvollziehbar belegt sein.",
+    "pruefnachweis": "Manuell aus lokaler Norm vor Implementierung festgelegt."
+  },
+  {
+    "fall_id": "BRUCHEINGABE_001",
+    "funktion": "sachschaden_ersatzbetrag",
+    "eingaben": {
+      "erforderlicher_nettobetrag": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "ersatzfaehige_angefallene_umsatzsteuer": "0",
+      "mitverschuldensquote": {
+        "zaehler": "1",
+        "nenner": "3"
+      }
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2",
+        "nenner": "9"
+      }
+    },
+    "herleitung": "Unabhängige Bruchrechnung beziehungsweise unveränderte fachliche Nichtnegativitätsgrenze; exakte Objekte statt gerundeter Dezimaltexte. Erwartung 2/9.",
+    "pruefnachweis": "Manuelle Erwartung für zusätzliche verlustfreie Eingabedarstellung; keine neue materielle Rechenregel."
+  }
+]

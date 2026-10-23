@@ -1,0 +1,604 @@
+[
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_FUENFZEHN",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "letzter_erfasster_miettag": "2024-01-31",
+        "betrag_im_zeitlichen_fenster": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "betrag_ausserhalb_des_zeitlichen_fensters": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abschnitt_ids_im_zeitlichen_fenster": [
+          "Januar"
+        ]
+      }
+    },
+    "herleitung": "15.Januar: nur100fürJanuar imFenster;16.Januar: Januar100+Februar200=300, März300außerhalb. ImSchaltjahrFebruarende29.;16.Dezember umfasstJanuar desFolgejahres.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_SECHZEHN",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-16",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "letzter_erfasster_miettag": "2024-02-29",
+        "betrag_im_zeitlichen_fenster": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "betrag_ausserhalb_des_zeitlichen_fensters": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "abschnitt_ids_im_zeitlichen_fenster": [
+          "Januar",
+          "Februar"
+        ]
+      }
+    },
+    "herleitung": "15.Januar: nur100fürJanuar imFenster;16.Januar: Januar100+Februar200=300, März300außerhalb. ImSchaltjahrFebruarende29.;16.Dezember umfasstJanuar desFolgejahres.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_MONATSLETZTER",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-31",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "letzter_erfasster_miettag": "2024-02-29",
+        "betrag_im_zeitlichen_fenster": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "betrag_ausserhalb_des_zeitlichen_fensters": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "abschnitt_ids_im_zeitlichen_fenster": [
+          "Januar",
+          "Februar"
+        ]
+      }
+    },
+    "herleitung": "15.Januar: nur100fürJanuar imFenster;16.Januar: Januar100+Februar200=300, März300außerhalb. ImSchaltjahrFebruarende29.;16.Dezember umfasstJanuar desFolgejahres.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_JAHRESWECHSEL",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2023-12-16",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "letzter_erfasster_miettag": "2024-01-31",
+        "betrag_im_zeitlichen_fenster": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "betrag_ausserhalb_des_zeitlichen_fensters": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abschnitt_ids_im_zeitlichen_fenster": [
+          "Januar"
+        ]
+      }
+    },
+    "herleitung": "15.Januar: nur100fürJanuar imFenster;16.Januar: Januar100+Februar200=300, März300außerhalb. ImSchaltjahrFebruarende29.;16.Dezember umfasstJanuar desFolgejahres.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_KEINE",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "letzter_erfasster_miettag": "2024-01-31",
+        "betrag_im_zeitlichen_fenster": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betrag_ausserhalb_des_zeitlichen_fensters": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "abschnitt_ids_im_zeitlichen_fenster": []
+      }
+    },
+    "herleitung": "15.Januar: nur100fürJanuar imFenster;16.Januar: Januar100+Februar200=300, März300außerhalb. ImSchaltjahrFebruarende29.;16.Dezember umfasstJanuar desFolgejahres.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_REIHENFOLGE",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "letzter_erfasster_miettag": "2024-01-31",
+        "betrag_im_zeitlichen_fenster": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "betrag_ausserhalb_des_zeitlichen_fensters": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abschnitt_ids_im_zeitlichen_fenster": [
+          "Januar"
+        ]
+      }
+    },
+    "herleitung": "15.Januar: nur100fürJanuar imFenster;16.Januar: Januar100+Februar200=300, März300außerhalb. ImSchaltjahrFebruarende29.;16.Dezember umfasstJanuar desFolgejahres.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_UEBERLAPPUNG_VERSCHIEDENE_KENNUNGEN",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-20",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "zweite",
+          "erster_miettag": "2024-01-15",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_FEHLT_beschlagnahme_am",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": null,
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_TYP_beschlagnahme_am",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": {},
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_FEHLT_mietabschnitte",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": null,
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_TYP_mietabschnitte",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": {},
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_FEHLT_einordnungsnachweis",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_TYP_einordnungsnachweis",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_UNGUELTIG_0",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_UNGUELTIG_1",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-02-01",
+          "verfuegungsbetrag": "100"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_UNGUELTIG_2",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2023-12-31",
+          "verfuegungsbetrag": "100"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_UNGUELTIG_3",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "-1"
+        }
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_UNGUELTIG_4",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {}
+      ],
+      "einordnungsnachweis": "§1124II: vor Beschlagnahme erfolgte Verfügungen nach ihrem Miet-/Pachtzeitraum der Monatsgrenze zuordnen. Beschlagnahme bis einschließlich15.: Ende laufender Monat; nach15.: Ende Folgemonat. Beträge vollständig innerhalb/außerhalb getrennt summieren. Keine pauschale gleichmäßige Tagesaufteilung für einen grenzüberschreitenden Gesamtbetrag. Nur eine Forderungs-/Vertragsgrundlage je Aufruf; mehrere Verträge getrennt behandeln. Zeitliche Zuordnung setzt übrige1124-Voraussetzungen voraus und entscheidet keine sonstigen Wirksamkeitsfragen.1123-Jahresbefreiung sowie1126-Dreimonatsregel nicht durch diesen Monatsvergleich ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_MIETVERFUEGUNG_ZEITZUORDNUNG_UNGUELTIG_5",
+    "funktion": "hypothek_mietverfuegung_zeitzuordnung",
+    "eingaben": {
+      "beschlagnahme_am": "2024-01-15",
+      "mietabschnitte": [
+        {
+          "abschnitt_id": "Januar",
+          "erster_miettag": "2024-01-01",
+          "letzter_miettag": "2024-01-31",
+          "verfuegungsbetrag": "100"
+        },
+        {
+          "abschnitt_id": "Februar",
+          "erster_miettag": "2024-02-01",
+          "letzter_miettag": "2024-02-29",
+          "verfuegungsbetrag": "200"
+        },
+        {
+          "abschnitt_id": "Maerz",
+          "erster_miettag": "2024-03-01",
+          "letzter_miettag": "2024-03-31",
+          "verfuegungsbetrag": "300"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

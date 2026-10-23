@@ -1,0 +1,10 @@
+gesamthypothek_regressanrechnung <- function(verbleibender_gesamthypothekenbetrag=NULL, eigentuemerquote=NULL, uebergegangener_regressbetrag=NULL, anwendungsnachweis=NULL) {
+ r <- .geld(verbleibender_gesamthypothekenbetrag);q <- .geld(eigentuemerquote);e <- .geld(uebergegangener_regressbetrag);.text(anwendungsnachweis,'anwendungsnachweis')
+ if(.vergleichen(q,.bruch(1))>0) .fehler('eigentuemerquote','Quote muss zwischen0und1liegen.')
+ a <- .multiplizieren(r,q);s <- .subtrahieren(a,e);positiv <- if(.vergleichen(s,.bruch(0))>0)s else .bruch(0);ueberhang <- if(.vergleichen(s,.bruch(0))<0).subtrahieren(.bruch(0),s) else .bruch(0)
+ wert <- list(anteil_vor_anrechnung=.bruchteile(a),rechnerischer_saldo=.bruchteile(s),verbleibender_anteil=.bruchteile(positiv),nicht_am_anteil_verrechenbarer_regress=.bruchteile(ueberhang))
+ eingaben <- list(verbleibender_gesamthypothekenbetrag=verbleibender_gesamthypothekenbetrag, eigentuemerquote=eigentuemerquote, uebergegangener_regressbetrag=uebergegangener_regressbetrag, anwendungsnachweis=anwendungsnachweis)
+ ergebnis <- .ergebnis(wert,"EUR","BGB_GESAMTHYPOTHEK_REGRESSANRECHNUNG",eingaben,list(list(operation="Restbetrag mit Eigent\u00fcmerquote multiplizieren und \u00fcbergegangenen Regressbetrag anrechnen; positiven Anteil und \u00dcberhang getrennt ausweisen.")),eingaben)
+ ergebnis$hinweise <- list("Unmittelbare Anrechnung gem\u00e4\u00df1174II: Anteil am \u00fcbrig bleibenden Betrag=Restbetrag*1172Quote. Davon den \u00fcbergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der \u00fcbergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zus\u00e4tzliche pers\u00f6nliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigent\u00fcmer. Die Funktion berechnet ausschlie\u00dflich die individuelle Anrechnung, nicht eine vollst\u00e4ndige Neuverteilung oder Rangvollstreckung.")
+ ergebnis
+}

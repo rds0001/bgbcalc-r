@@ -1,0 +1,578 @@
+[
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_GEMISCHT_VOR",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "1500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "6500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_jahresfoerderung": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "foerderkappung": {
+          "jaehrliche_laufende_abzuege": {
+            "zaehler": "120",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_vor_kappung": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_nach_kappung": {
+            "zaehler": "15",
+            "nenner": "1"
+          },
+          "monatlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "jaehrlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "300",
+            "nenner": "1"
+          },
+          "rechenweg": "abzug_vor_kappung"
+        }
+      }
+    },
+    "herleitung": "10000-1500-2000=6500;10%=650jährlich.120Jahresförderung:vorKappung530/12=>25,danach25-10=15. OhneKapitalförderung850jährlich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_GEMISCHT_NACH",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_nach_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "1500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "6500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_jahresfoerderung": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "foerderkappung": {
+          "jaehrliche_laufende_abzuege": {
+            "zaehler": "120",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_vor_kappung": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_nach_kappung": {
+            "zaehler": "15",
+            "nenner": "1"
+          },
+          "monatlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "15",
+            "nenner": "1"
+          },
+          "jaehrlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "180",
+            "nenner": "1"
+          },
+          "rechenweg": "abzug_nach_kappung"
+        }
+      }
+    },
+    "herleitung": "10000-1500-2000=6500;10%=650jährlich.120Jahresförderung:vorKappung530/12=>25,danach25-10=15. OhneKapitalförderung850jährlich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_NUR_ZINS_UND_LAUFEND",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "0",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "1500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "8500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_jahresfoerderung": {
+          "zaehler": "850",
+          "nenner": "1"
+        },
+        "foerderkappung": {
+          "jaehrliche_laufende_abzuege": {
+            "zaehler": "120",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_vor_kappung": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_nach_kappung": {
+            "zaehler": "15",
+            "nenner": "1"
+          },
+          "monatlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "jaehrlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "300",
+            "nenner": "1"
+          },
+          "rechenweg": "abzug_vor_kappung"
+        }
+      }
+    },
+    "herleitung": "10000-1500-2000=6500;10%=650jährlich.120Jahresförderung:vorKappung530/12=>25,danach25-10=15. OhneKapitalförderung850jährlich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_AUSNAHMEANTEIL",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "2000",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "6800",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_jahresfoerderung": {
+          "zaehler": "680",
+          "nenner": "1"
+        },
+        "foerderkappung": {
+          "jaehrliche_laufende_abzuege": {
+            "zaehler": "120",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_vor_kappung": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_nach_kappung": {
+            "zaehler": "15",
+            "nenner": "1"
+          },
+          "monatlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "jaehrlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "300",
+            "nenner": "1"
+          },
+          "rechenweg": "abzug_vor_kappung"
+        }
+      }
+    },
+    "herleitung": "10000-1500-2000=6500;10%=650jährlich.120Jahresförderung:vorKappung530/12=>25,danach25-10=15. OhneKapitalförderung850jährlich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FOERDERUNG_UEBER_UMLAGE",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "600",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "1500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "6500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_jahresfoerderung": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "foerderkappung": {
+          "jaehrliche_laufende_abzuege": {
+            "zaehler": "700",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_vor_kappung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_nach_kappung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "monatlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "jaehrlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "rechenweg": "abzug_vor_kappung"
+        }
+      }
+    },
+    "herleitung": "10000-1500-2000=6500;10%=650jährlich.120Jahresförderung:vorKappung530/12=>25,danach25-10=15. OhneKapitalförderung850jährlich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_KAPITALFALL",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "0",
+      "jaehrliche_laufende_foerderung": "0",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "1500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "6500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_jahresfoerderung": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "foerderkappung": {
+          "jaehrliche_laufende_abzuege": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_vor_kappung": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "monatsbetrag_abzug_nach_kappung": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "monatlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "jaehrlicher_betrag_nach_vorgegebener_methode": {
+            "zaehler": "300",
+            "nenner": "1"
+          },
+          "rechenweg": "abzug_vor_kappung"
+        }
+      }
+    },
+    "herleitung": "10000-1500-2000=6500;10%=650jährlich.120Jahresförderung:vorKappung530/12=>25,danach25-10=15. OhneKapitalförderung850jährlich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FEHLT_kosten_wohnung",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": null,
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FEHLT_von_erhaltungspauschale_ausgenommene_kosten",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": null,
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FEHLT_kapitalzuschuesse",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": null,
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FEHLT_jaehrliche_zinsermaessigung",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": null,
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FEHLT_jaehrliche_laufende_foerderung",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": null,
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FEHLT_monatliche_restkappung",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": null,
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FEHLT_abzugsreihenfolge",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": null,
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_FEHLT_methodennachweis",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_UNGUELTIG0",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "0",
+      "jaehrliche_zinsermaessigung": "0",
+      "jaehrliche_laufende_foerderung": "0",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_UNGUELTIG1",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "10001",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_UNGUELTIG2",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "10001",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_MIT_JAHRESFOERDERUNG_UNGUELTIG3",
+    "funktion": "heizungsmodernisierung_mit_jahresfoerderung",
+    "eingaben": {
+      "kosten_wohnung": "10000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "kapitalzuschuesse": "2000",
+      "jaehrliche_zinsermaessigung": "100",
+      "jaehrliche_laufende_foerderung": "20",
+      "monatliche_restkappung": "25",
+      "abzugsreihenfolge": "automatisch",
+      "methodennachweis": "Bedingte Heizungsrechnung nach559e:15%des nicht nach lokaler559eII2ausgenommenen Kostenanteils als Erhaltungspauschale, dann einmaliger Kapitalbeitrag, positive Kostenbasis*10%jährlich. Qualifizierte559aII-Zins-/laufende Jahresförderung mit bestehendem Förderkappungskern berücksichtigen. Die rechtliche Übertragung dieser Jahresabzugsmethode auf den konkreten559e-Förderfall wird ausdrücklich vorausgesetzt, nicht als allgemein geklärt behauptet. Der Nennbetrag eines rückzahlbaren Darlehens wird nicht ohne Rechtsgrund als verlorener Kapitalzuschuss behandelt. Mindestens eine tatsächliche berücksichtigungsfähige Förderung erforderlich; ohne Förderung ist559-Verfahren gesondert. Kein doppelter Abzug tatsächlicher Erhaltungskosten zusätzlich zur Pauschale; keine automatische Härte-/Förderfähigkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

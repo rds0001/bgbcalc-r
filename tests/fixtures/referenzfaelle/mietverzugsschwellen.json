@@ -1,0 +1,804 @@
+[
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_zwei_aufeinanderfolgende_termine_0",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "49999",
+        "nenner": "100"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "-1",
+          "nenner": "100"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_zwei_aufeinanderfolgende_termine_1",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_zwei_aufeinanderfolgende_termine_2",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "50001",
+        "nenner": "100"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "1",
+          "nenner": "100"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_zwei_aufeinanderfolgende_termine_3",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "0",
+        "nenner": "1"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "-500",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_zwei_aufeinanderfolgende_termine_4",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "1",
+        "nenner": "10"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "1",
+        "nenner": "10"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "vergleichsoperator": ">",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_zwei_aufeinanderfolgende_termine_5",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "vergleichsoperator": ">",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_miete_mehr_als_zwei_termine_0",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "miete_mehr_als_zwei_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "99999",
+        "nenner": "100"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "-1",
+          "nenner": "100"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_miete_mehr_als_zwei_termine_1",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "miete_mehr_als_zwei_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "1000",
+        "nenner": "1"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_miete_mehr_als_zwei_termine_2",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "miete_mehr_als_zwei_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "100001",
+        "nenner": "100"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "1",
+          "nenner": "100"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_miete_mehr_als_zwei_termine_3",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "miete_mehr_als_zwei_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "0",
+        "nenner": "1"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "-1000",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_miete_mehr_als_zwei_termine_4",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "miete_mehr_als_zwei_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "1",
+        "nenner": "10"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "1",
+        "nenner": "5"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_miete_mehr_als_zwei_termine_5",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "miete_mehr_als_zwei_termine",
+      "massgebliche_monatsmiete": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "2",
+        "nenner": "3"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "2",
+          "nenner": "3"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_sicherheitsleistung_0",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_sicherheitsleistung",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "99999",
+        "nenner": "100"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "-1",
+          "nenner": "100"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_sicherheitsleistung_1",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_sicherheitsleistung",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "1000",
+        "nenner": "1"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_sicherheitsleistung_2",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_sicherheitsleistung",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "100001",
+        "nenner": "100"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "1",
+          "nenner": "100"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_sicherheitsleistung_3",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_sicherheitsleistung",
+      "massgebliche_monatsmiete": {
+        "zaehler": "500",
+        "nenner": "1"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "0",
+        "nenner": "1"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "-1000",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_sicherheitsleistung_4",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_sicherheitsleistung",
+      "massgebliche_monatsmiete": {
+        "zaehler": "1",
+        "nenner": "10"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "1",
+        "nenner": "5"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_wohnraum_sicherheitsleistung_5",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_sicherheitsleistung",
+      "massgebliche_monatsmiete": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "qualifizierter_rueckstand": {
+        "zaehler": "2",
+        "nenner": "3"
+      },
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze": {
+          "zaehler": "2",
+          "nenner": "3"
+        },
+        "vergleichsoperator": ">=",
+        "rueckstand_abzueglich_grenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsvoraussetzung_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_FEHLT_regelfall",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": null,
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_TYP_regelfall",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": {},
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_FEHLT_massgebliche_monatsmiete",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": null,
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_TYP_massgebliche_monatsmiete",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": {},
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_FEHLT_qualifizierter_rueckstand",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": null,
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_TYP_qualifizierter_rueckstand",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": {},
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_TYP_einordnungsnachweis",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_UNGUELTIG_0",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "x",
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_UNGUELTIG_1",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": "0",
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_UNGUELTIG_2",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": "-1",
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_UNGUELTIG_3",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": "-1",
+      "einordnungsnachweis": "Normfall, Bezugsmonatsmiete und zeitlich zugeordneter Verzugsbestand qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_RUECKSTANDSBETRAGSGRENZE_UNGUELTIG_4",
+    "funktion": "miete_rueckstandsbetragsgrenze",
+    "eingaben": {
+      "regelfall": "wohnraum_zwei_aufeinanderfolgende_termine",
+      "massgebliche_monatsmiete": "500",
+      "qualifizierter_rueckstand": "500",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1x500=500 strikt;2x500=1000 einschließlich. Jeweils einen Cent unter, auf und über Grenze; exakte Brüche.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  }
+]

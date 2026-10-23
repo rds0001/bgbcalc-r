@@ -1,0 +1,133 @@
+[
+  {
+    "fall_id": "2320_A",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "0",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "100Gesamtlast rechtlich überschneidungsfrei A60/B40zugeordnet;Vorteile A50/B20. KeineautomatischeQuotenwahl."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "zugeordnete_sonderlast": {
+        "zaehler": "50",
+        "nenner": "1"
+      },
+      "nicht_durch_vorteil_zugeordnete_restlast": {
+        "zaehler": "10",
+        "nenner": "1"
+      }
+    }
+  },
+  {
+    "fall_id": "2320_B",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "40",
+      "angenommenes_vermaechtnis": "0",
+      "erlangter_vorteil": "20",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "100Gesamtlast rechtlich überschneidungsfrei A60/B40zugeordnet;Vorteile A50/B20. KeineautomatischeQuotenwahl."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "zugeordnete_sonderlast": {
+        "zaehler": "20",
+        "nenner": "1"
+      },
+      "nicht_durch_vorteil_zugeordnete_restlast": {
+        "zaehler": "20",
+        "nenner": "1"
+      }
+    }
+  },
+  {
+    "fall_id": "2322_A",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "50",
+      "beschwerungswert": "40",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Begünstigung durchAusschlagung belasteterHinterlassenschaft; zugeordneteLast ist dieselbe2320Last,keinezweiteLast. KeineRangkonkurrenz."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "kuerzungsbetrag": {
+        "zaehler": "40",
+        "nenner": "1"
+      },
+      "verbleibende_beschwerung": {
+        "zaehler": "0",
+        "nenner": "1"
+      },
+      "nicht_gedeckte_pflichtteilslast": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    }
+  },
+  {
+    "fall_id": "2322_B",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "20",
+      "beschwerungswert": "5",
+      "zu_deckende_pflichtteilslast": "20",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Begünstigung durchAusschlagung belasteterHinterlassenschaft; zugeordneteLast ist dieselbe2320Last,keinezweiteLast. KeineRangkonkurrenz."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "kuerzungsbetrag": {
+        "zaehler": "5",
+        "nenner": "1"
+      },
+      "verbleibende_beschwerung": {
+        "zaehler": "0",
+        "nenner": "1"
+      },
+      "nicht_gedeckte_pflichtteilslast": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    }
+  },
+  {
+    "fall_id": "2323_2318_ERBE",
+    "funktion": "vermaechtnis_pflichtteilskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnis": "200",
+      "vermaechtniswert": "60",
+      "gesamte_pflichtteilslast": "100",
+      "anderweitig_getragene_last_2323": "70",
+      "schutzart": "kein_schutz",
+      "geschuetzter_pflichtteilswert": "0",
+      "einzelfall_nach_2318_qualifiziert": true,
+      "bewertungsnachweis": "AnderweitigA50+B20=70einmalig,2322Kürzungen40+5nichtzusätzlichalsübernommeneLastzählen. VerbleibendeLast30,einVermächtnis60, eigenerErwerb200."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "anteilige_grundkuerzung": {
+        "zaehler": "9",
+        "nenner": "1"
+      },
+      "kuerzungsbetrag": {
+        "zaehler": "9",
+        "nenner": "1"
+      },
+      "verbleibender_vermaechtniswert": {
+        "zaehler": "51",
+        "nenner": "1"
+      },
+      "beim_erben_verbleibende_pflichtteilslast": {
+        "zaehler": "21",
+        "nenner": "1"
+      }
+    }
+  }
+]

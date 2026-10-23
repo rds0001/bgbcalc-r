@@ -1,0 +1,681 @@
+[
+  {
+    "fall_id": "FERN_001",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "auswahl": "voreltern",
+        "massgeblicher_grad": 3,
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Vorhandene Urgroßeltern erben allein zu gleichen Teilen.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_002",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "auswahl": "voreltern",
+        "massgeblicher_grad": 3,
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Mehrfachzugehörigkeit begründet ab vierter Ordnung keine mehrfachen Stammanteile; Personen einmal zählen.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_003",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "auswahl": "naechste_abkoemmlinge",
+        "massgeblicher_grad": 4,
+        "erbquoten": [
+          {
+            "person_id": "C",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Keine Voreltern; einzig nächster Abkömmling.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_004",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [],
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "verwandtschaftsgrad": 4
+        },
+        {
+          "person_id": "B",
+          "verwandtschaftsgrad": 5
+        },
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "auswahl": "naechste_abkoemmlinge",
+        "massgeblicher_grad": 4,
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "C",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Grad 4 verdrängt Grad 5 unabhängig von Linien.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_005",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [],
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "verwandtschaftsgrad": 6
+        },
+        {
+          "person_id": "A",
+          "verwandtschaftsgrad": 4
+        },
+        {
+          "person_id": "B",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "auswahl": "naechste_abkoemmlinge",
+        "massgeblicher_grad": 4,
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Bei mehreren Verwandtschaftswegen derselben Person zählt ihr nächster Grad; keine doppelte Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_006",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 5,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "auswahl": "voreltern",
+        "massgeblicher_grad": 4,
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Fünfte Ordnung entsprechend: Voreltern vierten Grades.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_007",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 5,
+      "voreltern": [],
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "verwandtschaftsgrad": 5
+        },
+        {
+          "person_id": "B",
+          "verwandtschaftsgrad": 5
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "auswahl": "naechste_abkoemmlinge",
+        "massgeblicher_grad": 5,
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Entsprechende Anwendung auf weitere Ordnungen.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_008",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 2
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "auswahl": "voreltern",
+        "massgeblicher_grad": 3,
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Vorgegebener Anteil 1/2 geteilt durch zwei Personen.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_009",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": true,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Vorhergehende Ordnung geht vor.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_010",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [],
+      "abkoemmlinge": [],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine berufene Person in ausgewählter Ordnung.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_011",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 3,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_012",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": true,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_013",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": "A",
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_014",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        ""
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_015",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_016",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 0
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_017",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 1.5
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_018",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": 1,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_019",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 2,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Ordnung, Datenstruktur, konkurrierende Personenrolle, Verwandtschaftsgrad oder Quote.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "FERN_020",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": null,
+      "abkoemmlinge": [
+        {
+          "person_id": "C",
+          "verwandtschaftsgrad": 4
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Angabe der Voreltern fehlt; für keine Voreltern leere Liste eingeben.",
+    "pruefnachweis": "Vor Implementierung manuelle Auswahl und Gleichteilung nach §§ 1928/1929/1930; keine Stammquoten."
+  },
+  {
+    "fall_id": "TECH_FERNERE_ERBFOLGE_001",
+    "funktion": "fernere_erbquoten",
+    "eingaben": {
+      "ordnungsnummer": 4,
+      "voreltern": [
+        "A",
+        "B"
+      ],
+      "abkoemmlinge": [
+        {
+          "person_id": "C"
+        }
+      ],
+      "vorrangige_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verwandtschaftsgrad im Nachkommenobjekt fehlt.",
+    "pruefnachweis": "Nach Codeabdeckungsmessung ergänzter Grenzfall aus dem dokumentierten technischen Eingabevertrag; keine zusätzliche materielle Rechenregel."
+  }
+]

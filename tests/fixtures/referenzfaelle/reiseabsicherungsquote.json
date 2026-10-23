@@ -1,0 +1,298 @@
+[
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_HALB",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_GLEICH_DECKEL",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "1000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_UNTER_DECKEL",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "500000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_DRITTEL",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "3000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_ALLEIN",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "2000000",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_KEIN_ANSPRUCH",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "0",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_KEINE_ANSPRUECHE",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "0",
+      "gesamtleistungsansprueche": "0",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_UMSATZ_KNAPP_UNTER",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2999999.99",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_UMSATZ_GRENZE",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "3000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_TEIL_ZU_GROSS",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "2000001",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_NEGATIV",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "-1",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_TYP",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": [],
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_LEER",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_FEHLT_eigener_leistungsanspruch",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": null,
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_FEHLT_gesamtleistungsansprueche",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": null,
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_FEHLT_jahresumsatz_veranstalter",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": null,
+      "einordnungsnachweis": "Wirksamer Ein-Million-Deckel bei Versicherer; vollständige Ansprüche derselben Insolvenz."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ABSICHERUNGSANTEIL_FEHLT_einordnungsnachweis",
+    "funktion": "pauschalreise_absicherungsanteil",
+    "eingaben": {
+      "eigener_leistungsanspruch": "1000",
+      "gesamtleistungsansprueche": "2000000",
+      "jahresumsatz_veranstalter": "2000000",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Verhältnisrechnung: bei zwei Millionen Gesamtschaden Hälfte des Einzelanspruchs; unter/eins Million voller Einzelanspruch.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

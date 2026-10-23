@@ -1,0 +1,103 @@
+[
+  {
+    "fall_id": "2327_nur_eigengeschenk",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "Eigen",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Rechtlich bewertetes Eigengeschenk ohne2315-Anrechnungsbestimmung; keine2316-Ausgleichung, gleicherWert20."
+    },
+    "wertpfad": [
+      "pflichtteilsergaenzung"
+    ],
+    "erwartet": {
+      "zaehler": "35",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2326_UNTER_PFLICHTTEIL",
+    "funktion": "pflichtteilsergaenzung_mehrhinterlassung",
+    "eingaben": {
+      "ergaenzungsbetrag_vor_mehrhinterlassung": "35",
+      "hinterlassener_wert": "20",
+      "ordentlicher_pflichtteilswert": "25",
+      "bewertungsnachweis": "2327-Ergänzung35nachEigengeschenk20, ordentlicherPflichtteil25unverändert mangels2315/2316; qualifizierter Hinterlassenschaftswert ohne Doppelabzug."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "mehrhinterlassung": {
+        "zaehler": "0",
+        "nenner": "1"
+      },
+      "angerechneter_betrag": {
+        "zaehler": "0",
+        "nenner": "1"
+      },
+      "verbleibende_ergaenzung": {
+        "zaehler": "35",
+        "nenner": "1"
+      }
+    }
+  },
+  {
+    "fall_id": "2326_MEHRHINTERLASSUNG",
+    "funktion": "pflichtteilsergaenzung_mehrhinterlassung",
+    "eingaben": {
+      "ergaenzungsbetrag_vor_mehrhinterlassung": "35",
+      "hinterlassener_wert": "30",
+      "ordentlicher_pflichtteilswert": "25",
+      "bewertungsnachweis": "2327-Ergänzung35nachEigengeschenk20, ordentlicherPflichtteil25unverändert mangels2315/2316; qualifizierter Hinterlassenschaftswert ohne Doppelabzug."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "mehrhinterlassung": {
+        "zaehler": "5",
+        "nenner": "1"
+      },
+      "angerechneter_betrag": {
+        "zaehler": "5",
+        "nenner": "1"
+      },
+      "verbleibende_ergaenzung": {
+        "zaehler": "30",
+        "nenner": "1"
+      }
+    }
+  },
+  {
+    "fall_id": "2326_AUFGEBRAUCHT",
+    "funktion": "pflichtteilsergaenzung_mehrhinterlassung",
+    "eingaben": {
+      "ergaenzungsbetrag_vor_mehrhinterlassung": "35",
+      "hinterlassener_wert": "100",
+      "ordentlicher_pflichtteilswert": "25",
+      "bewertungsnachweis": "2327-Ergänzung35nachEigengeschenk20, ordentlicherPflichtteil25unverändert mangels2315/2316; qualifizierter Hinterlassenschaftswert ohne Doppelabzug."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "mehrhinterlassung": {
+        "zaehler": "75",
+        "nenner": "1"
+      },
+      "angerechneter_betrag": {
+        "zaehler": "35",
+        "nenner": "1"
+      },
+      "verbleibende_ergaenzung": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    }
+  }
+]

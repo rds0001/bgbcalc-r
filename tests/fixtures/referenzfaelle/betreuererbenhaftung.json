@@ -1,0 +1,429 @@
+[
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_DECKEL",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibender_haftungsrahmen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "rechnerischer_haftungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "durch_rahmen_nicht_gedeckter_anspruch": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_TEILVERBRAUCH",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "30",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibender_haftungsrahmen": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "rechnerischer_haftungsbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "durch_rahmen_nicht_gedeckter_anspruch": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_KLEINER_ANSPRUCH",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "20",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibender_haftungsrahmen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "rechnerischer_haftungsbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "durch_rahmen_nicht_gedeckter_anspruch": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_AUSSCHLUSS",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "0",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibender_haftungsrahmen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "rechnerischer_haftungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "durch_rahmen_nicht_gedeckter_anspruch": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_LEERER_NACHLASS",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "0",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibender_haftungsrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerischer_haftungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "durch_rahmen_nicht_gedeckter_anspruch": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_AUSGESCHOEPFT",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "80",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibender_haftungsrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerischer_haftungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "durch_rahmen_nicht_gedeckter_anspruch": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_UEBERZAHLUNG",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "90",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibender_haftungsrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerischer_haftungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "durch_rahmen_nicht_gedeckter_anspruch": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_EXAKT",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "nachlasswert_im_erbfall": "0.3",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0.1",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibender_haftungsrahmen": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "rechnerischer_haftungsbetrag": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "durch_rahmen_nicht_gedeckter_anspruch": {
+          "zaehler": "2",
+          "nenner": "15"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_FEHLT_verbleibender_uebergegangener_anspruch",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": null,
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_TYP_verbleibender_uebergegangener_anspruch",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": {},
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_FEHLT_nachlasswert_im_erbfall",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": null,
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_TYP_nachlasswert_im_erbfall",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": {},
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_FEHLT_bereits_ausgeschoepfter_haftungsrahmen",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": null,
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_TYP_bereits_ausgeschoepfter_haftungsrahmen",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": {},
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_FEHLT_haftungsnachweis",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_TYP_haftungsnachweis",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_NEGATIV_verbleibender_uebergegangener_anspruch",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "-1",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_NEGATIV_nachlasswert_im_erbfall",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "-1",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_NEGATIV_bereits_ausgeschoepfter_haftungsrahmen",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "-1",
+      "haftungsnachweis": "§1881Satz2: nur BGB-Nachlasswertdeckel bei bereits rechtlich bestimmten Eingaben, keine vollständige Sozialhilfe-Erbenhaftungsberechnung. Entsprechend102III/IVSGBXII geltende Ausnahmen und Erlöschen sind vorab in den verbleibenden Anspruch einzubeziehen; externe Freibeträge nicht erfinden.1880II wird nach1881Satz2 auf Erben nicht angewandt. Die Wertgrenze desselben Nachlasses bei mehreren Ansprüchen nicht mehrfach ungekürzt ausschöpfen; anrechenbare Vorbefriedigungen rechtlich belegen. Keine automatische Erbquotenaufteilung, gesamtschuldnerische Innenverteilung oder Sachbewertung. Betrag außerhalb des Rahmens ist rechnerisch ungedeckt, kein automatisches Erlöschen gegenüber anderen Verpflichteten. Überhöhte frühere Zahlung erzeugt hier keine Rückerstattung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUER_ERBENHAFTUNGSBETRAG_LEERER_NACHWEIS",
+    "funktion": "betreuer_erbenhaftungsbetrag",
+    "eingaben": {
+      "verbleibender_uebergegangener_anspruch": "100",
+      "nachlasswert_im_erbfall": "80",
+      "bereits_ausgeschoepfter_haftungsrahmen": "0",
+      "haftungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:Anspruch100 bei Nachlassgrenze80 ergibt80Haftungsbetrag und20ungedeckt;30bereits ausgeschöpft lassen50Rahmen. Anspruch0 ergibt keine Haftung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

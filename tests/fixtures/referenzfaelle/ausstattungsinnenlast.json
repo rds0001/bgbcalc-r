@@ -1,0 +1,551 @@
+[
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_GEMEINSCHAFTLICH",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_UNTER_MASS",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "120",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_GLEICH_MASS",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "100",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_ELTERNTEIL_VERWALTET",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "nichtgemeinschaftliches_kind_elternteil_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_GEMEINSAME_VERWALTUNG",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "nichtgemeinschaftliches_kind_gemeinschaftliche_verwaltung",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_NICHTVERWALTER",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "nichtgemeinschaftliches_kind_elternteil_nichtverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_TEILZUSTIMMUNG",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "20",
+      "berechnungsfall": "nichtgemeinschaftliches_kind_elternteil_nichtverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_VOLLE_ZUSTIMMUNG",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "40",
+      "berechnungsfall": "nichtgemeinschaftliches_kind_elternteil_nichtverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_NULL",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "0",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_EXAKT",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "0.3",
+      "gesamtgutangemessener_betrag": "0.1",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "persoenliche_innenlast": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "nicht_als_persoenliche_innenlast_erfasst": {
+          "zaehler": "1",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_FEHLT_ausstattungsbetrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": null,
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_TYP_ausstattungsbetrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": [],
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_FEHLT_gesamtgutangemessener_betrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": null,
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_TYP_gesamtgutangemessener_betrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": [],
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_FEHLT_zugestimmter_mehrbetrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": null,
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_TYP_zugestimmter_mehrbetrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": [],
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_FEHLT_berechnungsfall",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": null,
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_TYP_berechnungsfall",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": [],
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_FEHLT_zuordnungsnachweis",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_TYP_zuordnungsnachweis",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_NEGATIV_ausstattungsbetrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "-1",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_NEGATIV_gesamtgutangemessener_betrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "-1",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_NEGATIV_zugestimmter_mehrbetrag",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "-1",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_FALL",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "frei",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_ZUSTIMMUNG_UNZULAESSIG",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "20",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_ZUSTIMMUNG_UEBER",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "41",
+      "berechnungsfall": "nichtgemeinschaftliches_kind_elternteil_nichtverwalter",
+      "zuordnungsnachweis": "Gesetzlicher Fall ohne abweichende Vereinbarung; Gesamtgutmaß und konkrete Zustimmung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_PERSOENLICHE_INNENLAST_NACHWEIS_LEER",
+    "funktion": "ausstattung_persoenliche_innenlast",
+    "eingaben": {
+      "ausstattungsbetrag": "100",
+      "gesamtgutangemessener_betrag": "60",
+      "zugestimmter_mehrbetrag": "0",
+      "berechnungsfall": "gemeinschaftliches_kind_alleinverwalter",
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:100−60=40Mehrbetrag; Nichtverwalter-Elternlast60+konkret zugestimmter Mehrbetrag, andere gesetzliche Elternfälle100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

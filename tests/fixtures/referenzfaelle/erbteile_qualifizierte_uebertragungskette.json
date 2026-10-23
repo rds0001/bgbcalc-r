@@ -1,0 +1,1373 @@
+[
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_KASKADE",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA",
+            "UB"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "ursprung_id": "UA",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "ursprung_id": "UB",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "ursprung_id": "UC",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "gesamtquoten": [
+          {
+            "erbe_id": "A",
+            "erbquote": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ],
+        "erfasste_gesamtquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A1/4waechst Bzu;spaeter Bmit getrennten UA1/4undUB1/4anC,soC1bei erhaltenen Urspruengen. Halber A-Teil=>A1/8,B3/8,C1/2. A1/4nach1:2=>B1/12,C1/6.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_TEILSPERRE",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "0.5",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "ursprung_id": "UA",
+            "erbe_id": "A",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          },
+          {
+            "ursprung_id": "UA",
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          },
+          {
+            "ursprung_id": "UB",
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "ursprung_id": "UC",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "gesamtquoten": [
+          {
+            "erbe_id": "A",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          },
+          {
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "3",
+              "nenner": "8"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erfasste_gesamtquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A1/4waechst Bzu;spaeter Bmit getrennten UA1/4undUB1/4anC,soC1bei erhaltenen Urspruengen. Halber A-Teil=>A1/8,B3/8,C1/2. A1/4nach1:2=>B1/12,C1/6.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_NUR_A_SONDERTEIL_WEITER",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "ursprung_id": "UA",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "ursprung_id": "UB",
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "ursprung_id": "UC",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "gesamtquoten": [
+          {
+            "erbe_id": "A",
+            "erbquote": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "3",
+              "nenner": "4"
+            }
+          }
+        ],
+        "erfasste_gesamtquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A1/4waechst Bzu;spaeter Bmit getrennten UA1/4undUB1/4anC,soC1bei erhaltenen Urspruengen. Halber A-Teil=>A1/8,B3/8,C1/2. A1/4nach1:2=>B1/12,C1/6.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_RELATIVE_ORIGINALGEWICHTE",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            },
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "2"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "ursprung_id": "UA",
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "12"
+            }
+          },
+          {
+            "ursprung_id": "UA",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "6"
+            }
+          },
+          {
+            "ursprung_id": "UB",
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "ursprung_id": "UC",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "gesamtquoten": [
+          {
+            "erbe_id": "A",
+            "erbquote": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "2",
+              "nenner": "3"
+            }
+          }
+        ],
+        "erfasste_gesamtquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A1/4waechst Bzu;spaeter Bmit getrennten UA1/4undUB1/4anC,soC1bei erhaltenen Urspruengen. Halber A-Teil=>A1/8,B3/8,C1/2. A1/4nach1:2=>B1/12,C1/6.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_KEINE_UEBERTRAGUNG",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "ursprung_id": "UA",
+            "erbe_id": "A",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "ursprung_id": "UB",
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "ursprung_id": "UC",
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "gesamtquoten": [
+          {
+            "erbe_id": "A",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "erbe_id": "B",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "erbe_id": "C",
+            "erbquote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erfasste_gesamtquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A1/4waechst Bzu;spaeter Bmit getrennten UA1/4undUB1/4anC,soC1bei erhaltenen Urspruengen. Halber A-Teil=>A1/8,B3/8,C1/2. A1/4nach1:2=>B1/12,C1/6.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_FEHLT_erben_ids",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": null,
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA",
+            "UB"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_FEHLT_ursprungsanteile",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": null,
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA",
+            "UB"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_FEHLT_uebertragungsschritte",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": null,
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_FEHLT_einordnungsnachweis",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA",
+            "UB"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG0",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "A",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA",
+            "UB"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG1",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA",
+            "UB"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG2",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        },
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA",
+            "UB"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG3",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "A",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG4",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "2",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG5",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG6",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "X",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG7",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "0"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG8",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            },
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG9",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA",
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§§2094/2095/2098/2099: rein rechnerische Fortfuehrung rechtlich bestimmter einzelner Uebertragungsschritte. Je ausgewahltem Ursprungsanteil aktuelle Quote des Abgebenden mit Uebertragungsquote multiplizieren, danach nach qualifizierten relativen Gewichten auf Empfaenger verteilen; Rest beim Abgebenden belassen. Jede spaetere Stufe verwendet den fortgeschriebenen Bestand, jeder angewachsene Sonderteil behaelt seinen Ursprung2095. Verschachtelte Gruppenvorraenge, individuelle Sperren und Ersatzerben bestimmen den rechtlich vorgegebenen Empfaengerkreis je Stufe; sie sind keine automatisch aus Namen erschlossene Familientopologie. Relative Gewichte muessen zum jeweiligen Normfall passen, insbesondere nicht blind aktuelle durch vorherige Anwachsung vergroesserte Gesamtquoten als urspruengliche Einsetzungsgewichte verwenden. Vorhandene2094/2098Grundfunktionen koennen passende Empfaenger-/Quotenbelege liefern. Nicht zu uebertragende oder rechtlich ungeklärte Teile bleiben getrennt; keine automatische Zuteilung an gesetzliche Erben. Gesamtquoten nur Summen, keine Aufhebung von Vermächtnis-/Auflagen-/Ausgleichungslasten am Ursprung. Keine Aussage, dass ein konkreter Wegfallgrund oder eine konkrete Testamentseinsetzung wirksam ist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILE_QUALIFIZIERTE_UEBERTRAGUNGSKETTE_UNGUELTIG10",
+    "funktion": "erbteile_qualifizierte_uebertragungskette",
+    "eingaben": {
+      "erben_ids": [
+        "A",
+        "B",
+        "C"
+      ],
+      "ursprungsanteile": [
+        {
+          "ursprung_id": "UA",
+          "erbe_id": "A",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UB",
+          "erbe_id": "B",
+          "erbquote": "0.25"
+        },
+        {
+          "ursprung_id": "UC",
+          "erbe_id": "C",
+          "erbquote": "0.5"
+        }
+      ],
+      "uebertragungsschritte": [
+        {
+          "abgebender_erbe_id": "A",
+          "ursprung_ids": [
+            "UA"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "B",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        },
+        {
+          "abgebender_erbe_id": "B",
+          "ursprung_ids": [
+            "UA",
+            "UB"
+          ],
+          "uebertragungsquote": "1",
+          "empfaenger": [
+            {
+              "erbe_id": "C",
+              "verteilungsgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

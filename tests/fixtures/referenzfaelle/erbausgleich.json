@@ -1,0 +1,4439 @@
+[
+  {
+    "fall_id": "EAU_001",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Ohne Zuwendungen gleiche Hälften.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_002",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "100+20=120; A60-20=40, B60.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_003",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "100"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Zuwendung genau rechnerischer Anteil: kein Mehrbetrag, daher A nicht nach § 2056 ausgeschlossen.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_004",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "101"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "A"
+        ]
+      }
+    },
+    "herleitung": "A überversorgt, Zuwendung und Quote herausnehmen; B erhält Nachlass100.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_005",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "120"
+        },
+        {
+          "person_id": "C",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "300"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "C",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "B",
+          "C"
+        ]
+      }
+    },
+    "herleitung": "Erste Runde520/3: nur C überversorgt. Zweite Runde220/2=110: nun B überversorgt. A verbleibt mit100.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_006",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "200"
+        },
+        {
+          "person_id": "C",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "300"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "C",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "B",
+          "C"
+        ]
+      }
+    },
+    "herleitung": "Erste Runde600/3=200: C über, B genau gleich. Nach C-Ausschluss B150<200, B ebenfalls heraus.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_007",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "200"
+        },
+        {
+          "person_id": "C",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "200"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "C",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "B",
+          "C"
+        ]
+      }
+    },
+    "herleitung": "B und C gleichzeitig überversorgt; beide Zuwendungen und Quoten herausnehmen.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_008",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "90",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "30"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "120*2/3-30=50,120/3=40; ungleiche Gruppenquoten.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_009",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "0",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Kein Nachlass und keine Zuwendung.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_010",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "0",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "100"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "A"
+        ]
+      }
+    },
+    "herleitung": "Keine Herauszahlung des Überempfangs.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_011",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "1",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "2",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Exakte Verteilung ohne Rundungsverlust.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_012",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 1,
+          "ausgleichungswert": "50"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Einziger Gruppenangehöriger: Hinzurechnung und Anrechnung gleichen sich aus.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_013",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": false,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausgleichungstatbestand nicht gegeben.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_014",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "-1",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_015",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_016",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_017",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 0,
+          "erbquote_nenner": 1,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 1,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_018",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_019",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 0,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_020",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "-1"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_021",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_022",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": "A",
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_023",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": 1,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_024",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "0"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": ""
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Bewertung oder Eingabeart.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_025",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": null,
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Bewertete Zuwendungen der Ausgleichungsgruppe"
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ausgleichungsgruppe fehlt.",
+    "pruefnachweis": "Vor Implementierung von Hand aus §§ 2055/2056 lokal abgeleitete Verteilung."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_001",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "179",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "679"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "274"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 10,
+          "ausgleichungswert": "998"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "179",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_002",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "425",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "443"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "531"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "420"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "196"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "957",
+              "nenner": "13"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "828",
+              "nenner": "13"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "3740",
+              "nenner": "13"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_003",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "632",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 18,
+          "ausgleichungswert": "286"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 6,
+          "ausgleichungswert": "372"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 18,
+          "ausgleichungswert": "545"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 18,
+          "ausgleichungswert": "455"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "112"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "553",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "35",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "338",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P2",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_004",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "644",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 4,
+          "ausgleichungswert": "593"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 4,
+          "ausgleichungswert": "688"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "644",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_005",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "744",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "832"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "303"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "562"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "1003",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "485",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_006",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "541",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "787"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "399"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "888"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "850"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "2339",
+              "nenner": "8"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "1989",
+              "nenner": "8"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P3",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_007",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "916",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "61"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "750"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "370"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "569"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "246"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "4961",
+              "nenner": "7"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "1451",
+              "nenner": "7"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2",
+          "P4",
+          "P5"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_008",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "0",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "221"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "958"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_009",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "430",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 8,
+          "ausgleichungswert": "581"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "151"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 8,
+          "ausgleichungswert": "200"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "430",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_010",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "976",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 16,
+          "ausgleichungswert": "235"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 16,
+          "ausgleichungswert": "516"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 8,
+          "ausgleichungswert": "187"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 4,
+          "ausgleichungswert": "325"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "7435",
+              "nenner": "16"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "2939",
+              "nenner": "16"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "743",
+              "nenner": "8"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "939",
+              "nenner": "4"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_011",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "691",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 6,
+          "ausgleichungswert": "341"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "61"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 12,
+          "ausgleichungswert": "5"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "992"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 12,
+          "ausgleichungswert": "9"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "1349",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "368",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "356",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_012",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "218",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "232"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "494"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "1688",
+              "nenner": "9"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "274",
+              "nenner": "9"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_013",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "145",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "539"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "153"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "870"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "145",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_014",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "347",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "201"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "293"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "370"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "780"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "347",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2",
+          "P3",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_015",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "670",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 22,
+          "ausgleichungswert": "865"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "272"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "222"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 22,
+          "ausgleichungswert": "962"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "300"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "216",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "266",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "188",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_016",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "0",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "947"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "16"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_017",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "995",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "10"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "950"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "669"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "7762",
+              "nenner": "11"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "46",
+              "nenner": "11"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "3137",
+              "nenner": "11"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_018",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "447",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 4,
+          "ausgleichungswert": "657"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 12,
+          "ausgleichungswert": "835"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "100"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "108"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "455",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "439",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_019",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "819",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "267"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "338"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "116"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "48"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "330"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "221",
+              "nenner": "14"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "27",
+              "nenner": "14"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "7583",
+              "nenner": "14"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "3635",
+              "nenner": "14"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_020",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "343",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "711"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "576"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "104",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "239",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_021",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "201",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "832"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "202"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 6,
+          "ausgleichungswert": "394"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "201",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_022",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "563",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 12,
+          "ausgleichungswert": "925"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 12,
+          "ausgleichungswert": "23"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 6,
+          "ausgleichungswert": "102"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "278"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "4577",
+              "nenner": "11"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "810",
+              "nenner": "11"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "806",
+              "nenner": "11"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_023",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "90",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "326"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "417"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "583"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "911"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "690"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "90",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P2",
+          "P4",
+          "P5"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_024",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "0",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 4,
+          "ausgleichungswert": "834"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 4,
+          "ausgleichungswert": "837"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_025",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "530",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "178"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "553"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "509"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "2359",
+              "nenner": "8"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "1881",
+              "nenner": "8"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_026",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "759",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "892"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "965"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "202"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "655"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "69",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "1449",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_027",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "267",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "288"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "987"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "748"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "756"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "714"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "267",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_028",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "865",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "13"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "783"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "865",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_029",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "757",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "155"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "398"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "49"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "709",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "805",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_030",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "860",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "239"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "990"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "656"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "713"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "2235",
+              "nenner": "14"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "6911",
+              "nenner": "14"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "1447",
+              "nenner": "7"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_031",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "86",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "834"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "170"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "56"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "180"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "973"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "86",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P2",
+          "P4",
+          "P5"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_032",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "0",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "948"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "13"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_033",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "606",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "142"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "17"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "818"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "2689",
+              "nenner": "8"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "2159",
+              "nenner": "8"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_034",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "920",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "815"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "602"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "150"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "947"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "234",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "686",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_035",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "201",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "734"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "7"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "489"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "345"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "753"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "662",
+              "nenner": "5"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "343",
+              "nenner": "5"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P4",
+          "P5"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_036",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "459",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "316"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "636"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "459",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_037",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "529",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "275"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "510"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 9,
+          "ausgleichungswert": "334"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "294",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "235",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_038",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "800",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "499"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "643"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "606"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "696"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "321",
+              "nenner": "2"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "709",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "2419",
+              "nenner": "6"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_039",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "512",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 7,
+          "ausgleichungswert": "882"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "781"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "8"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "237"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 14,
+          "ausgleichungswert": "322"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "1007",
+              "nenner": "9"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "3262",
+              "nenner": "9"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "113",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_040",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "0",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "207"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "ausgleichungswert": "464"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_041",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "740",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "467"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "105"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "470"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "127",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "489",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "124",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_042",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "700"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "174"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "552"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 13,
+          "ausgleichungswert": "557"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P3",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_043",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "131",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "842"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "647"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "823"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "314"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 15,
+          "ausgleichungswert": "169"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "286",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "107",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P2",
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_044",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "762",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "709"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 5,
+          "ausgleichungswert": "978"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "762",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_045",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "536",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "129"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 5,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "708"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 11,
+          "ausgleichungswert": "78"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "1099",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "509",
+              "nenner": "3"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P2"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_046",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "26",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 4,
+          "ausgleichungswert": "743"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 12,
+          "ausgleichungswert": "881"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "520"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "860"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "26",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          }
+        ],
+        "ausser_ansatz": [
+          "P1",
+          "P2",
+          "P4"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_047",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "785",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 17,
+          "ausgleichungswert": "387"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 17,
+          "ausgleichungswert": "241"
+        },
+        {
+          "person_id": "P3",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 17,
+          "ausgleichungswert": "960"
+        },
+        {
+          "person_id": "P4",
+          "erbquote_zaehler": 4,
+          "erbquote_nenner": 17,
+          "ausgleichungswert": "340"
+        },
+        {
+          "person_id": "P5",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 17,
+          "ausgleichungswert": "146"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "279",
+              "nenner": "14"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "2111",
+              "nenner": "7"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P3",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P4",
+            "betrag": {
+              "zaehler": "1418",
+              "nenner": "7"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "P5",
+            "betrag": {
+              "zaehler": "3653",
+              "nenner": "14"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P3"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  },
+  {
+    "fall_id": "EAU_ORAKEL_048",
+    "funktion": "erb_zuwendungen_ausgleichen",
+    "eingaben": {
+      "gruppennachlass": "0",
+      "miterben": [
+        {
+          "person_id": "P1",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "950"
+        },
+        {
+          "person_id": "P2",
+          "erbquote_zaehler": 2,
+          "erbquote_nenner": 3,
+          "ausgleichungswert": "751"
+        }
+      ],
+      "ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetische bewertete Zuwendungen; mathematisches Teilmengenorakel"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "P1",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "P2",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "P1"
+        ]
+      }
+    },
+    "herleitung": "Vollständige Teilmengenprüfung löst die nichtnegativen Auszahlungen; Summe exakt gleich Gruppennachlass.",
+    "pruefnachweis": "Nach Implementierung ergänzte unabhängige Gegenrechnung mit fractions.Fraction; feste Zufallsfolge 20552056. Keine Bibliotheksfunktionen im Orakel."
+  }
+]

@@ -1,0 +1,749 @@
+[
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_FAMILIE_UND_REST",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "900",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_FAMILIE_GEDECKELT",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "900",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "900",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_ERWERB_TEIL",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "300",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "100",
+      "billiger_familienbedarf": "900",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_ERWERB_UEBER",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "300",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "800",
+      "billiger_familienbedarf": "900",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "500",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_VERWALTUNG_UEBER",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "100",
+      "verwaltungsbedarf": "200",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "800",
+      "billiger_familienbedarf": "900",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_NULL",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "0",
+      "verwaltungsbedarf": "0",
+      "kindesunterhalt": "0",
+      "erwerbseinkuenfte": "0",
+      "billiger_familienbedarf": "0",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_KEIN_KIND",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "0",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "900",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "700",
+          "nenner": "1"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_GLEICH",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "600",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_DEZIMAL",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "0.8",
+      "verwaltungsbedarf": "0.1",
+      "kindesunterhalt": "0.4",
+      "erwerbseinkuenfte": "0.9",
+      "billiger_familienbedarf": "0.2",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_vermoegenseinkuenfte": {
+          "zaehler": "7",
+          "nenner": "10"
+        },
+        "vermoegenseinkuenfte_fuer_kind": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "erwerbseinkuenfte_fuer_kind_einsetzbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_kindesbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenseinkuenfte_fuer_familie_einsetzbar": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "verbleibende_vermoegenseinkuenfte": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "verbleibende_erwerbseinkuenfte": {
+          "zaehler": "9",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_FEHLT_vermoegenseinkuenfte",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": null,
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_TYP_vermoegenseinkuenfte",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": [],
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_FEHLT_verwaltungsbedarf",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": null,
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_TYP_verwaltungsbedarf",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": [],
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_FEHLT_kindesunterhalt",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": null,
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_TYP_kindesunterhalt",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": [],
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_FEHLT_erwerbseinkuenfte",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": null,
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_TYP_erwerbseinkuenfte",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": [],
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_FEHLT_billiger_familienbedarf",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": null,
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_TYP_billiger_familienbedarf",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": [],
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_FEHLT_bewertungsnachweis",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_TYP_bewertungsnachweis",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_NEGATIV_vermoegenseinkuenfte",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "-1",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_NEGATIV_verwaltungsbedarf",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "-1",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_NEGATIV_kindesunterhalt",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "-1",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_NEGATIV_erwerbseinkuenfte",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "-1",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_NEGATIV_billiger_familienbedarf",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "-1",
+      "bewertungsnachweis": "Qualifizierte Beträge gleicher Monatsperiode, Familienbedarf billig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "KINDESEINKUENFTE_VERWENDUNGSBETRAEGE_NACHWEIS_LEER",
+    "funktion": "kindeseinkuenfte_verwendungsbetraege",
+    "eingaben": {
+      "vermoegenseinkuenfte": "1000",
+      "verwaltungsbedarf": "100",
+      "kindesunterhalt": "500",
+      "erwerbseinkuenfte": "300",
+      "billiger_familienbedarf": "200",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: Verwaltungsbedarf vorrangig; Kindesfehlbedarf aus Erwerb begrenzt; Familie ausschließlich aus Vermögensüberschuss.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

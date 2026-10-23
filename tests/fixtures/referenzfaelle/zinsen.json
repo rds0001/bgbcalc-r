@@ -1,0 +1,587 @@
+[
+  {
+    "fall_id": "ZINS_001",
+    "funktion": "basiszinssatz_fortschreibung",
+    "eingaben": {
+      "bisheriger_basiszinssatz_prozent": "2",
+      "bisheriger_bezugszinssatz_prozent": "3",
+      "neuer_bezugszinssatz_prozent": "2.5",
+      "anpassungsdatum": "2026-07-01",
+      "quellenangabe": "Synthetische Bezugsgrößen, keine amtlichen Zeitreihendaten"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3",
+        "nenner": "2"
+      }
+    },
+    "herleitung": "2+2,5-3=1,5 Prozent.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_002",
+    "funktion": "basiszinssatz_fortschreibung",
+    "eingaben": {
+      "bisheriger_basiszinssatz_prozent": "-0.5",
+      "bisheriger_bezugszinssatz_prozent": "3",
+      "neuer_bezugszinssatz_prozent": "2",
+      "anpassungsdatum": "2026-01-01",
+      "quellenangabe": "Synthetische Bezugsgrößen, keine amtlichen Zeitreihendaten"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "-3",
+        "nenner": "2"
+      }
+    },
+    "herleitung": "-0,5+2-3=-1,5 Prozent; keine Nullkappung.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_003",
+    "funktion": "basiszinssatz_fortschreibung",
+    "eingaben": {
+      "bisheriger_basiszinssatz_prozent": "2",
+      "bisheriger_bezugszinssatz_prozent": "3",
+      "neuer_bezugszinssatz_prozent": "2.5",
+      "anpassungsdatum": "2026-07-02",
+      "quellenangabe": "Synthetische Bezugsgrößen, keine amtlichen Zeitreihendaten"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Anpassungstag muss 1. Januar oder 1. Juli sein.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_004",
+    "funktion": "gesetzliche_zinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ausdrücklich als halbes Zinsjahr bestimmter Testzeitraum",
+      "glaeubigerverzug": false,
+      "abweichender_zinssatz_prozent": null
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "1000*4/100*1/2=20 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_005",
+    "funktion": "gesetzliche_zinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ausdrücklich als halbes Zinsjahr bestimmter Testzeitraum",
+      "glaeubigerverzug": false,
+      "abweichender_zinssatz_prozent": "6"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "30",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Wirksam anderweitig bestimmter Satz 6 Prozent statt 4.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_006",
+    "funktion": "gesetzliche_zinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "zeitanteil_zaehler": 0,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ausdrücklich als halbes Zinsjahr bestimmter Testzeitraum",
+      "glaeubigerverzug": false,
+      "abweichender_zinssatz_prozent": null
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Null-Zeitanteil ergibt null Zinsen.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_007",
+    "funktion": "gesetzliche_zinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ausdrücklich als halbes Zinsjahr bestimmter Testzeitraum",
+      "glaeubigerverzug": true,
+      "abweichender_zinssatz_prozent": null
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "§ 301 schließt Zinsen für diesen Zeitanteil aus.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_008",
+    "funktion": "gesetzliche_zinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 0,
+      "zeitanteil_nachweis": "Ausdrücklich als halbes Zinsjahr bestimmter Testzeitraum",
+      "glaeubigerverzug": false,
+      "abweichender_zinssatz_prozent": null
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Jahresanteil mit Nenner null ist ungültig.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_009",
+    "funktion": "gesetzliche_zinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": null,
+      "glaeubigerverzug": false,
+      "abweichender_zinssatz_prozent": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Keine erfundene Zinstageskonvention.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_010",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": false,
+      "glaeubigerverzug": false,
+      "verzugsart": "allgemein",
+      "hoeherer_zinssatz_prozent": null,
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "55",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Nichtverbraucher-Entgeltforderung: (2+9) Prozent * 1000 *1/2=55.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_011",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": true,
+      "zinsschuld": false,
+      "glaeubigerverzug": false,
+      "verzugsart": "allgemein",
+      "hoeherer_zinssatz_prozent": null,
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "35",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Verbraucherbeteiligung: Basis+5=7 Prozent, halbes Jahr 35 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_012",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": false,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": false,
+      "glaeubigerverzug": false,
+      "verzugsart": "allgemein",
+      "hoeherer_zinssatz_prozent": null,
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "35",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ohne Entgeltforderung nur Basis+5, auch ohne Verbraucher.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_013",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": false,
+      "glaeubigerverzug": false,
+      "verzugsart": "verbraucherdarlehen",
+      "hoeherer_zinssatz_prozent": null,
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "35",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "§ 497 Abs. 1 verweist auf § 288 Abs. 1, nicht +9.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_014",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": false,
+      "glaeubigerverzug": false,
+      "verzugsart": "immobiliar_verbraucherdarlehen",
+      "hoeherer_zinssatz_prozent": null,
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "45",
+        "nenner": "2"
+      }
+    },
+    "herleitung": "Basis 2+2,5=4,5 Prozent; halbes Jahr 22,50 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_015",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": false,
+      "glaeubigerverzug": false,
+      "verzugsart": "allgemein",
+      "hoeherer_zinssatz_prozent": "12",
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "60",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Höherer anderer Rechtsgrund: 12 statt 11 Prozent.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_016",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": false,
+      "glaeubigerverzug": false,
+      "verzugsart": "allgemein",
+      "hoeherer_zinssatz_prozent": "8",
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "55",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Anderer Satz 8 ist nicht höher als gesetzliche 11; keine Kürzung.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_017",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": true,
+      "glaeubigerverzug": false,
+      "verzugsart": "allgemein",
+      "hoeherer_zinssatz_prozent": null,
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschluss nach § 289 Satz 1 bzw. § 301.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_018",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": false,
+      "glaeubigerverzug": true,
+      "verzugsart": "allgemein",
+      "hoeherer_zinssatz_prozent": null,
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschluss nach § 289 Satz 1 bzw. § 301.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_019",
+    "funktion": "verzugszinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "basiszinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Explizites halbes Zinsjahr ohne Satzwechsel",
+      "entgeltforderung": true,
+      "verbraucher_beteiligt": false,
+      "zinsschuld": false,
+      "glaeubigerverzug": false,
+      "verzugsart": "verbraucherdarlehen",
+      "hoeherer_zinssatz_prozent": "12",
+      "basiszinsnachweis": "Synthetisch konstant 2 Prozent, kein amtlicher Satz"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Abweichender nachgewiesener Schaden nach § 497 ist kein blind anzuwendender Zinssatz.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_020",
+    "funktion": "verzug_nebenkosten",
+    "eingaben": {
+      "rechtsverfolgungsschaden": "0",
+      "entgeltforderung": true,
+      "schuldner_verbraucher": false,
+      "schuldnerverzug": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "40",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "40 EUR Pauschale auf Rechtsverfolgungsschaden anrechnen; keine Doppeladdition.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_021",
+    "funktion": "verzug_nebenkosten",
+    "eingaben": {
+      "rechtsverfolgungsschaden": "15",
+      "entgeltforderung": true,
+      "schuldner_verbraucher": false,
+      "schuldnerverzug": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "40",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "40 EUR Pauschale auf Rechtsverfolgungsschaden anrechnen; keine Doppeladdition.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_022",
+    "funktion": "verzug_nebenkosten",
+    "eingaben": {
+      "rechtsverfolgungsschaden": "40",
+      "entgeltforderung": true,
+      "schuldner_verbraucher": false,
+      "schuldnerverzug": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "40",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "40 EUR Pauschale auf Rechtsverfolgungsschaden anrechnen; keine Doppeladdition.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_023",
+    "funktion": "verzug_nebenkosten",
+    "eingaben": {
+      "rechtsverfolgungsschaden": "100",
+      "entgeltforderung": true,
+      "schuldner_verbraucher": false,
+      "schuldnerverzug": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "40 EUR Pauschale auf Rechtsverfolgungsschaden anrechnen; keine Doppeladdition.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_024",
+    "funktion": "verzug_nebenkosten",
+    "eingaben": {
+      "rechtsverfolgungsschaden": "100",
+      "entgeltforderung": false,
+      "schuldner_verbraucher": false,
+      "schuldnerverzug": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Pauschalenanspruchsvoraussetzung fehlt; separater Kostenanspruch nicht entschieden.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_025",
+    "funktion": "verzug_nebenkosten",
+    "eingaben": {
+      "rechtsverfolgungsschaden": "100",
+      "entgeltforderung": true,
+      "schuldner_verbraucher": true,
+      "schuldnerverzug": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Pauschalenanspruchsvoraussetzung fehlt; separater Kostenanspruch nicht entschieden.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "ZINS_026",
+    "funktion": "verzug_nebenkosten",
+    "eingaben": {
+      "rechtsverfolgungsschaden": "100",
+      "entgeltforderung": true,
+      "schuldner_verbraucher": false,
+      "schuldnerverzug": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Pauschalenanspruchsvoraussetzung fehlt; separater Kostenanspruch nicht entschieden.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Norm und expliziten synthetischen Parametern abgeleitet."
+  },
+  {
+    "fall_id": "BRUCHEINGABE_004",
+    "funktion": "basiszinssatz_fortschreibung",
+    "eingaben": {
+      "bisheriger_basiszinssatz_prozent": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "bisheriger_bezugszinssatz_prozent": {
+        "zaehler": "2",
+        "nenner": "3"
+      },
+      "neuer_bezugszinssatz_prozent": "1",
+      "anpassungsdatum": "2026-07-01",
+      "quellenangabe": "Synthetische Bezugsgrößen, keine amtlichen Zeitreihendaten"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Unabhängige Bruchrechnung beziehungsweise unveränderte fachliche Nichtnegativitätsgrenze; exakte Objekte statt gerundeter Dezimaltexte. Erwartung 2/3.",
+    "pruefnachweis": "Manuelle Erwartung für zusätzliche verlustfreie Eingabedarstellung; keine neue materielle Rechenregel."
+  }
+]

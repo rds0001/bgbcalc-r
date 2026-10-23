@@ -1,0 +1,278 @@
+[
+  {
+    "fall_id": "VRG_001",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2020-02-29",
+      "kenntnis_oder_kennenmuessen_am": "2020-03-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_mit_jahresschluss": "2020-12-31",
+        "rechnerischer_letzter_tag": "2023-12-31"
+      }
+    },
+    "herleitung": "Beide Merkmale im Jahr2020; Ende der Grundfrist2023, ohne Feiertagsverschiebung.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_002",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2020-12-31",
+      "kenntnis_oder_kennenmuessen_am": "2021-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_mit_jahresschluss": "2021-12-31",
+        "rechnerischer_letzter_tag": "2024-12-31"
+      }
+    },
+    "herleitung": "Kenntnis erst im Folgejahr verschiebt den Jahresschlussbeginn um ein Jahr.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_003",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2021-01-01",
+      "kenntnis_oder_kennenmuessen_am": "2020-12-31",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_mit_jahresschluss": "2021-12-31",
+        "rechnerischer_letzter_tag": "2024-12-31"
+      }
+    },
+    "herleitung": "Kenntnis vor Entstehung ersetzt die erforderliche Anspruchsentstehung nicht.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_004",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2020-12-31",
+      "kenntnis_oder_kennenmuessen_am": "2020-12-31",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_mit_jahresschluss": "2020-12-31",
+        "rechnerischer_letzter_tag": "2023-12-31"
+      }
+    },
+    "herleitung": "Beide Merkmale am letzten Jahrestag; kein zusätzliches Wartejahr.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_005",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2020-01-01",
+      "kenntnis_oder_kennenmuessen_am": "2020-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_mit_jahresschluss": "2020-12-31",
+        "rechnerischer_letzter_tag": "2023-12-31"
+      }
+    },
+    "herleitung": "Jahresschlussbeginn trotz Merkmalsverwirklichung am Jahresanfang.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_006",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "0001-01-01",
+      "kenntnis_oder_kennenmuessen_am": "0001-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_mit_jahresschluss": "0001-12-31",
+        "rechnerischer_letzter_tag": "0004-12-31"
+      }
+    },
+    "herleitung": "Unterer Datumsbereich.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_007",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "9996-12-31",
+      "kenntnis_oder_kennenmuessen_am": "9996-12-31",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_mit_jahresschluss": "9996-12-31",
+        "rechnerischer_letzter_tag": "9999-12-31"
+      }
+    },
+    "herleitung": "Letzter darstellbarer Endjahrgang.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_008",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "9997-01-01",
+      "kenntnis_oder_kennenmuessen_am": "9997-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Endjahr10000 außerhalb des gemeinsamen Datumsbereichs.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_009",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2020-01-01",
+      "kenntnis_oder_kennenmuessen_am": "2020-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Abweichende Dauer oder anderer Beginn: Grundmodell nicht anwendbar.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_010",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2025-02-29",
+      "kenntnis_oder_kennenmuessen_am": "2025-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Datumsformat oder Wahrheitswert.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_011",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2025-01-01",
+      "kenntnis_oder_kennenmuessen_am": "2025-02-29",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Datumsformat oder Wahrheitswert.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_012",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2025-01-01",
+      "kenntnis_oder_kennenmuessen_am": "2025-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Datumsformat oder Wahrheitswert.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_013",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "01.01.2020",
+      "kenntnis_oder_kennenmuessen_am": "2020-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Datumsformat oder Wahrheitswert.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_014",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2020-01-01",
+      "kenntnis_oder_kennenmuessen_am": "2020-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": "ja"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Datumsformat oder Wahrheitswert.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_015",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": null,
+      "kenntnis_oder_kennenmuessen_am": "2020-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Voraussetzung wird nicht aus anderen Angaben ergänzt.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_016",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2020-01-01",
+      "kenntnis_oder_kennenmuessen_am": null,
+      "regelmaessiger_jahresschlussbeginn_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Voraussetzung wird nicht aus anderen Angaben ergänzt.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  },
+  {
+    "fall_id": "VRG_017",
+    "funktion": "regelverjaehrung_grundfrist",
+    "eingaben": {
+      "entstehung_oder_zuwiderhandlung_am": "2020-01-01",
+      "kenntnis_oder_kennenmuessen_am": "2020-01-01",
+      "regelmaessiger_jahresschlussbeginn_anwendbar": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Voraussetzung wird nicht aus anderen Angaben ergänzt.",
+    "pruefnachweis": "Handrechnung aus §§ 195, 199 Absatz 1/5 der lokalen Quelle vor Implementierung; keine Prüfung eines endgültigen Verjährungstags."
+  }
+]

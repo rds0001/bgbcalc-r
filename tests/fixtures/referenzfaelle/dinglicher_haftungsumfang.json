@@ -1,0 +1,328 @@
+[
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_HYPOTHEK",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "110",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_PFAND",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "pfand_1210",
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "zinsen": "1",
+        "vertragsstrafen": "2",
+        "verwendungsersatz": "3",
+        "kuendigungskosten": "4",
+        "rechtsverfolgungskosten": "5",
+        "pfandverkaufskosten": "6"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "121",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_NULL",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "0",
+        "gesetzliche_zinsen": "0",
+        "kuendigungskosten": "0",
+        "rechtsverfolgungskosten": "0"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_EXAKT",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "0.1",
+        "gesetzliche_zinsen": "0.2",
+        "kuendigungskosten": "0",
+        "rechtsverfolgungskosten": "0"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3",
+        "nenner": "10"
+      }
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_FEHLT_regelfall",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": null,
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_TYP_regelfall",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": [],
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_FEHLT_forderungsbestandteile",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": null,
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_TYP_forderungsbestandteile",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": [],
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_FEHLT_zuordnungsnachweis",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_TYP_zuordnungsnachweis",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_ART",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "x",
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_NACHWEIS",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_FALSCHE_KOMPONENTE",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "100",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5",
+        "extra": "1"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_NEGATIV",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "-1",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_UEBERLAUF",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": "9007199254740991",
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_HAFTUNGSUMFANG_KOMPONENTE_FEHLT",
+    "funktion": "dinglicher_haftungsumfang",
+    "eingaben": {
+      "regelfall": "hypothek_1118",
+      "forderungsbestandteile": {
+        "forderung": null,
+        "gesetzliche_zinsen": "3",
+        "kuendigungskosten": "2",
+        "rechtsverfolgungskosten": "5"
+      },
+      "zuordnungsnachweis": "Qualifizierte gedeckte Forderungsbestandteile ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition100+3+2+5=110; Pfand100+1+2+3+4+5+6=121. Exakte Dezimaladdition ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

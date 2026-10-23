@@ -1,0 +1,575 @@
+[
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_GRUND",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grundstockvermoegen": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "sonstiges_vermoegen": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "stiftungsvermoegen": {
+          "zaehler": "145",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_ALLES_SONSTIG",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "100",
+      "zustiftungen": "0",
+      "umgewidmeter_grundstock": "0",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grundstockvermoegen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "sonstiges_vermoegen": {
+          "zaehler": "105",
+          "nenner": "1"
+        },
+        "stiftungsvermoegen": {
+          "zaehler": "105",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_NULL",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "0",
+      "davon_sonstig_gewidmet": "0",
+      "zustiftungen": "0",
+      "umgewidmeter_grundstock": "0",
+      "weiteres_sonstiges_vermoegen": "0",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grundstockvermoegen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "sonstiges_vermoegen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "stiftungsvermoegen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_FEHLT_gewidmetes_vermoegen",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": null,
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_TYP_gewidmetes_vermoegen",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": [],
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_FEHLT_davon_sonstig_gewidmet",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": null,
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_TYP_davon_sonstig_gewidmet",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": [],
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_FEHLT_zustiftungen",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": null,
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_TYP_zustiftungen",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": [],
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_FEHLT_umgewidmeter_grundstock",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": null,
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_TYP_umgewidmeter_grundstock",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": [],
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_FEHLT_weiteres_sonstiges_vermoegen",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": null,
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_TYP_weiteres_sonstiges_vermoegen",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": [],
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_FEHLT_zuordnungsnachweis",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_TYP_zuordnungsnachweis",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_TEIL_ZU_GROSS",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "101",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_NEGATIV",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "-1",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": "Gleicher Stichtag, überschneidungsfreie vorhandene Vermögensbestandteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_VERMOEGENSZUSAMMENSETZUNG_LEER",
+    "funktion": "stiftung_vermoegenszusammensetzung",
+    "eingaben": {
+      "gewidmetes_vermoegen": "100",
+      "davon_sonstig_gewidmet": "20",
+      "zustiftungen": "30",
+      "umgewidmeter_grundstock": "10",
+      "weiteres_sonstiges_vermoegen": "5",
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_REST",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": "40",
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "60",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_VOLL",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": "100",
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_MEHR",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": "120",
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_NULL",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "0",
+      "bereits_wiederaufgestockt": "0",
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_EXAKT",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "0.3",
+      "bereits_wiederaufgestockt": "0.1",
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_FEHLT_verbrauchter_grundstock",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": null,
+      "bereits_wiederaufgestockt": "40",
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_TYP_verbrauchter_grundstock",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": [],
+      "bereits_wiederaufgestockt": "40",
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_FEHLT_bereits_wiederaufgestockt",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": null,
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_TYP_bereits_wiederaufgestockt",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": [],
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_FEHLT_zuordnungsnachweis",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": "40",
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_TYP_zuordnungsnachweis",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": "40",
+      "zuordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_LEER",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": "40",
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "STIFTUNG_WIEDERAUFSTOCKUNGSREST_NEGATIV",
+    "funktion": "stiftung_wiederaufstockungsrest",
+    "eingaben": {
+      "verbrauchter_grundstock": "100",
+      "bereits_wiederaufgestockt": "-1",
+      "zuordnungsnachweis": "Derselbe qualifizierte Verbrauch, keine Doppelanrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Grundstock100−20+30+10=120; Sonstiges20+5=25; Gesamt145. Auffüllung100−40=60; kein negativer Auffüllungsrest.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

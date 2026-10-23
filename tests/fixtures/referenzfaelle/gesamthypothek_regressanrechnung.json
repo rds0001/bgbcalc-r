@@ -1,0 +1,361 @@
+[
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_TEILANRECHNUNG",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteil_vor_anrechnung": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "rechnerischer_saldo": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "verbleibender_anteil": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "nicht_am_anteil_verrechenbarer_regress": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rest80*1/2=40;minus20=20. Rest40*1/2=20;minus60=-40, kein positiver Eigentümeranteil und40nicht am Anteil verrechenbar. Keine Verteilung dieses Differenzbetrags behauptet.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_UEBERANRECHNUNG",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "40",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "60",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteil_vor_anrechnung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "rechnerischer_saldo": {
+          "zaehler": "-40",
+          "nenner": "1"
+        },
+        "verbleibender_anteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_am_anteil_verrechenbarer_regress": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rest80*1/2=40;minus20=20. Rest40*1/2=20;minus60=-40, kein positiver Eigentümeranteil und40nicht am Anteil verrechenbar. Keine Verteilung dieses Differenzbetrags behauptet.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_VOLLSTAENDIGE_ANRECHNUNG",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "40",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteil_vor_anrechnung": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "rechnerischer_saldo": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_anteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_am_anteil_verrechenbarer_regress": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rest80*1/2=40;minus20=20. Rest40*1/2=20;minus60=-40, kein positiver Eigentümeranteil und40nicht am Anteil verrechenbar. Keine Verteilung dieses Differenzbetrags behauptet.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_KEIN_REGRESS",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "0",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteil_vor_anrechnung": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "rechnerischer_saldo": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "verbleibender_anteil": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "nicht_am_anteil_verrechenbarer_regress": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rest80*1/2=40;minus20=20. Rest40*1/2=20;minus60=-40, kein positiver Eigentümeranteil und40nicht am Anteil verrechenbar. Keine Verteilung dieses Differenzbetrags behauptet.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_NULLQUOTE",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "0",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteil_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerischer_saldo": {
+          "zaehler": "-20",
+          "nenner": "1"
+        },
+        "verbleibender_anteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_am_anteil_verrechenbarer_regress": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rest80*1/2=40;minus20=20. Rest40*1/2=20;minus60=-40, kein positiver Eigentümeranteil und40nicht am Anteil verrechenbar. Keine Verteilung dieses Differenzbetrags behauptet.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_GANZE_QUOTE",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "1",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteil_vor_anrechnung": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "rechnerischer_saldo": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "verbleibender_anteil": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "nicht_am_anteil_verrechenbarer_regress": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rest80*1/2=40;minus20=20. Rest40*1/2=20;minus60=-40, kein positiver Eigentümeranteil und40nicht am Anteil verrechenbar. Keine Verteilung dieses Differenzbetrags behauptet.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_NULLREST",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "0",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteil_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerischer_saldo": {
+          "zaehler": "-20",
+          "nenner": "1"
+        },
+        "verbleibender_anteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_am_anteil_verrechenbarer_regress": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rest80*1/2=40;minus20=20. Rest40*1/2=20;minus60=-40, kein positiver Eigentümeranteil und40nicht am Anteil verrechenbar. Keine Verteilung dieses Differenzbetrags behauptet.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_FEHLT_verbleibender_gesamthypothekenbetrag",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": null,
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_FEHLT_eigentuemerquote",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": null,
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_FEHLT_uebergegangener_regressbetrag",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": null,
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_FEHLT_anwendungsnachweis",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_UNGUELTIG0",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "1.1",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_UNGUELTIG1",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "-0.1",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_UNGUELTIG2",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "-1",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "20",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESSANRECHNUNG_UNGUELTIG3",
+    "funktion": "gesamthypothek_regressanrechnung",
+    "eingaben": {
+      "verbleibender_gesamthypothekenbetrag": "80",
+      "eigentuemerquote": "0.5",
+      "uebergegangener_regressbetrag": "-1",
+      "anwendungsnachweis": "Unmittelbare Anrechnung gemäß1174II: Anteil am übrig bleibenden Betrag=Restbetrag*1172Quote. Davon den übergegangenen Regressbetrag abziehen. Negativen rechnerischen Saldo gesondert ausweisen; positiver verbleibender Anteil=max(Saldo,0), nicht am Anteil verrechenbarer Regress=max(-Saldo,0). Der übergegangene dingliche Regress wird durch diese Anrechnung nicht getilgt. Keine zusätzliche persönliche Zahlungspflicht aus negativem Saldo, keine erfundene Umverteilung an andere Eigentümer. Die Funktion berechnet ausschließlich die individuelle Anrechnung, nicht eine vollständige Neuverteilung oder Rangvollstreckung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

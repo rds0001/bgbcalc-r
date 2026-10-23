@@ -1,0 +1,1170 @@
+[
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_GEMEINSAMER_RAHMEN",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A_spaet",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B_mitte",
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A_frueh",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "SpäteAnna80 wird durch gemeinsamen Rahmen50 begrenzt;Bert30, früheAnna0, Rest20. BeiAnna20/Bert50/früheAnna80 undAnna-Gesamtrahmen60 stehen für früheAnna höchstens40 zur Verfügung; bei Fehlbetrag100 werden davon nur30 benötigt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_FEHLBETRAG_KLEINER",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "20",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A_spaet",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B_mitte",
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A_frueh",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "SpäteAnna80 wird durch gemeinsamen Rahmen50 begrenzt;Bert30, früheAnna0, Rest20. BeiAnna20/Bert50/früheAnna80 undAnna-Gesamtrahmen60 stehen für früheAnna höchstens40 zur Verfügung; bei Fehlbetrag100 werden davon nur30 benötigt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_KEIN_FEHLBETRAG",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "0",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A_spaet",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B_mitte",
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A_frueh",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "SpäteAnna80 wird durch gemeinsamen Rahmen50 begrenzt;Bert30, früheAnna0, Rest20. BeiAnna20/Bert50/früheAnna80 undAnna-Gesamtrahmen60 stehen für früheAnna höchstens40 zur Verfügung; bei Fehlbetrag100 werden davon nur30 benötigt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_ZWEITER_ANTEIL_ANNA",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "50"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A_spaet",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B_mitte",
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A_frueh",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "SpäteAnna80 wird durch gemeinsamen Rahmen50 begrenzt;Bert30, früheAnna0, Rest20. BeiAnna20/Bert50/früheAnna80 undAnna-Gesamtrahmen60 stehen für früheAnna höchstens40 zur Verfügung; bei Fehlbetrag100 werden davon nur30 benötigt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_RAHMEN_AUSGESCHOEPFT",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "200",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "50"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A_spaet",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B_mitte",
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A_frueh",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "90",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "SpäteAnna80 wird durch gemeinsamen Rahmen50 begrenzt;Bert30, früheAnna0, Rest20. BeiAnna20/Bert50/früheAnna80 undAnna-Gesamtrahmen60 stehen für früheAnna höchstens40 zur Verfügung; bei Fehlbetrag100 werden davon nur30 benötigt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_EINGABEREIHENFOLGE_UMGEKEHRT",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A_frueh",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B_mitte",
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A_spaet",
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "Anna",
+            "haftungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "Bert",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Reihenfolge der Eingabeliste beeinflusst den materiellen zeitlichen Vorrang nicht: späteAnna50, Bert30, früheAnna0.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_FEHLT_fehlbetrag",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": null,
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_TYP_fehlbetrag",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": {},
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_FEHLT_schenkungen",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": null,
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_TYP_schenkungen",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": {},
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_FEHLT_personenrahmen",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": null,
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_TYP_personenrahmen",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": {},
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_FEHLT_einordnungsnachweis",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_TYP_einordnungsnachweis",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_UNGUELTIG_0",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_UNGUELTIG_1",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_UNGUELTIG_2",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_UNGUELTIG_3",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "Clara",
+          "gemeinsame_haftungsgrenze": "1"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_UNGUELTIG_4",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "-1"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_UNGUELTIG_5",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_UNGUELTIG_6",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {}
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": "§2329III: zeitlich eindeutig geordnete Schenkungen, gegebenenfalls mehrfach an dieselbe Person. Gemeinsamen rechtlich bestimmten Personenrahmen nur einmal verwenden und späteren Schenkungen vorrangig zuordnen; anschließend vorhandenen Schenkungsrang-/Empfängersummenkern anwenden. Rahmen müssen für diesen Ergänzungsanspruch tatsächlich rechtlich gelten, etwa nach vorqualifizierter Bereicherungs-/Einwendungsbewertung; keine automatisch erfundene Gesamtvermögens-, Selbstbehalts- oder Zahlungsfähigkeitsgrenze. Einzelgrenzen und gemeinsamer Rahmen dürfen nicht dieselbe Kürzung doppelt enthalten. Bereits geleistete Erfüllung und weitere konkurrierende Berechtigte gesondert. Gleichzeitige Schenkungen weiterhin außerhalb, keine erfundene Gleichquote oder Gesamtschuld. Ausgabe numerische Haftungs-/Befriedigungsgrenzen, kein automatischer gewöhnlicher Geldanspruch aus Sachherausgabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_PERSONENBEGRENZTE_SCHENKUNGEN_UNGUELTIG_7",
+    "funktion": "pflichtteilsergaenzung_personenbegrenzte_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A_spaet",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "B_mitte",
+          "beschenkter_id": "Bert",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "80"
+        },
+        {
+          "schenkung_id": "A_frueh",
+          "beschenkter_id": "Anna",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "80"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "Anna",
+          "gemeinsame_haftungsgrenze": "50"
+        },
+        {
+          "beschenkter_id": "Bert",
+          "gemeinsame_haftungsgrenze": "30"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

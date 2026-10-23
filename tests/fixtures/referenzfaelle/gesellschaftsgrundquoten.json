@@ -1,0 +1,495 @@
+[
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_VERHAELTNIS",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "A",
+          "quote": {
+            "zaehler": "2",
+            "nenner": "5"
+          }
+        },
+        {
+          "gesellschafter_id": "B",
+          "quote": {
+            "zaehler": "3",
+            "nenner": "5"
+          }
+        }
+      ]
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_BEITRAGSWERT",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beitragswerte",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "A",
+          "quote": {
+            "zaehler": "2",
+            "nenner": "5"
+          }
+        },
+        {
+          "gesellschafter_id": "B",
+          "quote": {
+            "zaehler": "3",
+            "nenner": "5"
+          }
+        }
+      ]
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_GLEICH",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": null
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": null
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewicht": null
+        }
+      ],
+      "quotenbasis": "gleiche_anteile",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "A",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "gesellschafter_id": "B",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "gesellschafter_id": "C",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        }
+      ]
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_NULLGEWICHT",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "0"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "A",
+          "quote": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "gesellschafter_id": "B",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_BRUCH",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "0.1"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "0.2"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "A",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "gesellschafter_id": "B",
+          "quote": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        }
+      ]
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_SUMME_NULL",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "0"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "0"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_DOPPELT",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        },
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_GLEICH_MIT_WERT",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "gleiche_anteile",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_ZU_WENIGE",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_NEGATIV",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "-1"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_FORM",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {},
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_MODUS",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "x",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_LEER",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_TYP",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": "x",
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_FEHLT_gesellschafter",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": null,
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_FEHLT_quotenbasis",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": null,
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_FEHLT_einordnungsnachweis",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "2"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_STIMMQUOTEN_GEWICHT_FEHLT",
+    "funktion": "gesellschaft_gewinn_verlust_stimmquoten",
+    "eingaben": {
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": null
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "Qualifizierter709III-Vorrangfall und vollständiger Gesellschafterkreis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Normierung:2:3 ergibt2/5,3/5; drei gleiche Personen je1/3.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

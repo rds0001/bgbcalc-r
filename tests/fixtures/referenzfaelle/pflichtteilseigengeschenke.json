@@ -1,0 +1,6008 @@
+[
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_GEMISCHT",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "eigengeschenke_mit_2315": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "eigengeschenke_ohne_2315": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "ordentlicher_pflichtteil": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "pflichtteilsergaenzung": {
+          "zaehler": "85",
+          "nenner": "2"
+        },
+        "gesamtanspruch": {
+          "zaehler": "105",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_MEHRERE_JE_ART",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "C",
+          "einheitlicher_wert": "5",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "D",
+          "einheitlicher_wert": "5",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "eigengeschenke_mit_2315": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "eigengeschenke_ohne_2315": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "ordentlicher_pflichtteil": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "pflichtteilsergaenzung": {
+          "zaehler": "85",
+          "nenner": "2"
+        },
+        "gesamtanspruch": {
+          "zaehler": "105",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_KEINE_EIGENEN",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "eigengeschenke_mit_2315": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "eigengeschenke_ohne_2315": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ordentlicher_pflichtteil": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "pflichtteilsergaenzung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gesamtanspruch": {
+          "zaehler": "75",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_NUR_2315",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "eigengeschenke_mit_2315": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "eigengeschenke_ohne_2315": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ordentlicher_pflichtteil": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "pflichtteilsergaenzung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gesamtanspruch": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_NUR_2327",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "eigengeschenke_mit_2315": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "eigengeschenke_ohne_2315": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ordentlicher_pflichtteil": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "pflichtteilsergaenzung": {
+          "zaehler": "35",
+          "nenner": "1"
+        },
+        "gesamtanspruch": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_ORDENTLICHER_GESCHUETZT",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "0",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "100",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "eigengeschenke_mit_2315": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "eigengeschenke_ohne_2315": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "ordentlicher_pflichtteil": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "pflichtteilsergaenzung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtanspruch": {
+          "zaehler": "25",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_NEGATIVER_NACHLASS",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "-100",
+      "drittschenkungen_ergaenzungswert": "300",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "eigengeschenke_mit_2315": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "eigengeschenke_ohne_2315": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "ordentlicher_pflichtteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pflichtteilsergaenzung": {
+          "zaehler": "55",
+          "nenner": "2"
+        },
+        "gesamtanspruch": {
+          "zaehler": "55",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_NEGATIVE_GESAMTBASIS",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "-300",
+      "drittschenkungen_ergaenzungswert": "0",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "eigengeschenke_mit_2315": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "eigengeschenke_ohne_2315": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "ordentlicher_pflichtteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pflichtteilsergaenzung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtanspruch": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_NICHT_ANWENDBAR",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": false,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_FEHLT_pflichtteilsnachlass",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": null,
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_TYP_pflichtteilsnachlass",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": [],
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_FEHLT_drittschenkungen_ergaenzungswert",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": null,
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_TYP_drittschenkungen_ergaenzungswert",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": [],
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_FEHLT_eigengeschenke",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": null,
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_TYP_eigengeschenke",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": {},
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_FEHLT_gesetzliche_erbquote_zaehler",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": null,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_TYP_gesetzliche_erbquote_zaehler",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": [],
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_FEHLT_gesetzliche_erbquote_nenner",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": null,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_TYP_gesetzliche_erbquote_nenner",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": [],
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_FEHLT_kombination_ohne_ausgleichung_qualifiziert",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": null,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_TYP_kombination_ohne_ausgleichung_qualifiziert",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_FEHLT_bewertungsnachweis",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_TYP_bewertungsnachweis",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_DOPPELT",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "1",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "2",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_FELD_FEHLT",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {}
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_NEGATIV",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "-1",
+          "anrechnung_nach_2315": true
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_BOOL_FALSCH",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "1",
+          "anrechnung_nach_2315": "ja"
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_ZU_VIELE",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "0",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "1",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "2",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "3",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "4",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "5",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "6",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "7",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "8",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "9",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "10",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "11",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "12",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "13",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "14",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "15",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "16",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "17",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "18",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "19",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "20",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "21",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "22",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "23",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "24",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "25",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "26",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "27",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "28",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "29",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "30",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "31",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "32",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "33",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "34",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "35",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "36",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "37",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "38",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "39",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "40",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "41",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "42",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "43",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "44",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "45",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "46",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "47",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "48",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "49",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "50",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "51",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "52",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "53",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "54",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "55",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "56",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "57",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "58",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "59",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "60",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "61",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "62",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "63",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "64",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "65",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "66",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "67",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "68",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "69",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "70",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "71",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "72",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "73",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "74",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "75",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "76",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "77",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "78",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "79",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "80",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "81",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "82",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "83",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "84",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "85",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "86",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "87",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "88",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "89",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "90",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "91",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "92",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "93",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "94",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "95",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "96",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "97",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "98",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "99",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "100",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "101",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "102",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "103",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "104",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "105",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "106",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "107",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "108",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "109",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "110",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "111",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "112",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "113",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "114",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "115",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "116",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "117",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "118",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "119",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "120",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "121",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "122",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "123",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "124",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "125",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "126",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "127",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "128",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "129",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "130",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "131",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "132",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "133",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "134",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "135",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "136",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "137",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "138",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "139",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "140",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "141",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "142",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "143",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "144",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "145",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "146",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "147",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "148",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "149",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "150",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "151",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "152",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "153",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "154",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "155",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "156",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "157",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "158",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "159",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "160",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "161",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "162",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "163",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "164",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "165",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "166",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "167",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "168",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "169",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "170",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "171",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "172",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "173",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "174",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "175",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "176",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "177",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "178",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "179",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "180",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "181",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "182",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "183",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "184",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "185",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "186",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "187",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "188",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "189",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "190",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "191",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "192",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "193",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "194",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "195",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "196",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "197",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "198",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "199",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "200",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "201",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "202",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "203",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "204",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "205",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "206",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "207",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "208",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "209",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "210",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "211",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "212",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "213",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "214",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "215",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "216",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "217",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "218",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "219",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "220",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "221",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "222",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "223",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "224",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "225",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "226",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "227",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "228",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "229",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "230",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "231",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "232",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "233",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "234",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "235",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "236",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "237",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "238",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "239",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "240",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "241",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "242",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "243",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "244",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "245",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "246",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "247",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "248",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "249",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "250",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "251",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "252",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "253",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "254",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "255",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "256",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "257",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "258",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "259",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "260",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "261",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "262",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "263",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "264",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "265",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "266",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "267",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "268",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "269",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "270",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "271",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "272",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "273",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "274",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "275",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "276",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "277",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "278",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "279",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "280",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "281",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "282",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "283",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "284",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "285",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "286",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "287",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "288",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "289",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "290",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "291",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "292",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "293",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "294",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "295",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "296",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "297",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "298",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "299",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "300",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "301",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "302",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "303",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "304",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "305",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "306",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "307",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "308",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "309",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "310",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "311",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "312",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "313",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "314",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "315",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "316",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "317",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "318",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "319",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "320",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "321",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "322",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "323",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "324",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "325",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "326",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "327",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "328",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "329",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "330",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "331",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "332",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "333",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "334",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "335",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "336",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "337",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "338",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "339",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "340",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "341",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "342",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "343",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "344",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "345",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "346",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "347",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "348",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "349",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "350",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "351",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "352",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "353",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "354",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "355",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "356",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "357",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "358",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "359",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "360",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "361",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "362",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "363",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "364",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "365",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "366",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "367",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "368",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "369",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "370",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "371",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "372",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "373",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "374",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "375",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "376",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "377",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "378",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "379",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "380",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "381",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "382",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "383",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "384",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "385",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "386",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "387",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "388",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "389",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "390",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "391",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "392",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "393",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "394",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "395",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "396",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "397",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "398",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "399",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "400",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "401",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "402",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "403",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "404",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "405",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "406",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "407",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "408",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "409",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "410",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "411",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "412",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "413",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "414",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "415",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "416",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "417",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "418",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "419",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "420",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "421",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "422",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "423",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "424",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "425",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "426",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "427",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "428",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "429",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "430",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "431",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "432",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "433",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "434",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "435",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "436",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "437",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "438",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "439",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "440",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "441",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "442",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "443",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "444",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "445",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "446",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "447",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "448",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "449",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "450",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "451",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "452",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "453",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "454",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "455",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "456",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "457",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "458",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "459",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "460",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "461",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "462",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "463",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "464",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "465",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "466",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "467",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "468",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "469",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "470",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "471",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "472",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "473",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "474",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "475",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "476",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "477",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "478",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "479",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "480",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "481",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "482",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "483",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "484",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "485",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "486",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "487",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "488",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "489",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "490",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "491",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "492",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "493",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "494",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "495",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "496",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "497",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "498",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "499",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "500",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "501",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "502",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "503",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "504",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "505",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "506",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "507",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "508",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "509",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "510",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "511",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "512",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "513",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "514",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "515",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "516",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "517",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "518",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "519",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "520",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "521",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "522",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "523",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "524",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "525",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "526",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "527",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "528",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "529",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "530",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "531",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "532",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "533",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "534",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "535",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "536",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "537",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "538",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "539",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "540",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "541",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "542",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "543",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "544",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "545",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "546",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "547",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "548",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "549",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "550",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "551",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "552",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "553",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "554",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "555",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "556",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "557",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "558",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "559",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "560",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "561",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "562",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "563",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "564",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "565",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "566",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "567",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "568",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "569",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "570",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "571",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "572",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "573",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "574",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "575",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "576",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "577",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "578",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "579",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "580",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "581",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "582",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "583",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "584",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "585",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "586",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "587",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "588",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "589",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "590",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "591",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "592",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "593",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "594",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "595",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "596",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "597",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "598",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "599",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "600",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "601",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "602",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "603",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "604",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "605",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "606",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "607",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "608",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "609",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "610",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "611",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "612",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "613",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "614",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "615",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "616",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "617",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "618",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "619",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "620",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "621",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "622",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "623",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "624",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "625",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "626",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "627",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "628",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "629",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "630",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "631",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "632",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "633",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "634",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "635",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "636",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "637",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "638",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "639",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "640",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "641",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "642",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "643",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "644",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "645",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "646",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "647",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "648",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "649",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "650",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "651",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "652",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "653",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "654",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "655",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "656",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "657",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "658",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "659",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "660",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "661",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "662",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "663",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "664",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "665",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "666",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "667",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "668",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "669",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "670",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "671",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "672",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "673",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "674",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "675",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "676",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "677",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "678",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "679",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "680",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "681",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "682",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "683",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "684",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "685",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "686",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "687",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "688",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "689",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "690",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "691",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "692",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "693",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "694",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "695",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "696",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "697",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "698",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "699",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "700",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "701",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "702",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "703",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "704",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "705",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "706",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "707",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "708",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "709",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "710",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "711",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "712",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "713",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "714",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "715",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "716",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "717",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "718",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "719",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "720",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "721",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "722",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "723",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "724",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "725",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "726",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "727",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "728",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "729",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "730",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "731",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "732",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "733",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "734",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "735",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "736",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "737",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "738",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "739",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "740",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "741",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "742",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "743",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "744",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "745",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "746",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "747",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "748",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "749",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "750",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "751",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "752",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "753",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "754",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "755",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "756",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "757",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "758",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "759",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "760",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "761",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "762",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "763",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "764",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "765",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "766",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "767",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "768",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "769",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "770",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "771",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "772",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "773",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "774",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "775",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "776",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "777",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "778",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "779",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "780",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "781",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "782",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "783",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "784",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "785",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "786",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "787",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "788",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "789",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "790",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "791",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "792",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "793",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "794",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "795",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "796",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "797",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "798",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "799",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "800",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "801",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "802",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "803",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "804",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "805",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "806",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "807",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "808",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "809",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "810",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "811",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "812",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "813",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "814",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "815",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "816",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "817",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "818",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "819",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "820",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "821",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "822",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "823",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "824",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "825",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "826",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "827",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "828",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "829",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "830",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "831",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "832",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "833",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "834",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "835",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "836",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "837",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "838",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "839",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "840",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "841",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "842",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "843",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "844",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "845",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "846",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "847",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "848",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "849",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "850",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "851",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "852",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "853",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "854",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "855",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "856",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "857",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "858",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "859",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "860",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "861",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "862",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "863",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "864",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "865",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "866",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "867",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "868",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "869",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "870",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "871",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "872",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "873",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "874",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "875",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "876",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "877",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "878",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "879",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "880",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "881",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "882",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "883",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "884",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "885",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "886",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "887",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "888",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "889",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "890",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "891",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "892",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "893",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "894",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "895",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "896",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "897",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "898",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "899",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "900",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "901",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "902",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "903",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "904",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "905",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "906",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "907",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "908",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "909",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "910",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "911",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "912",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "913",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "914",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "915",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "916",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "917",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "918",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "919",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "920",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "921",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "922",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "923",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "924",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "925",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "926",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "927",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "928",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "929",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "930",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "931",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "932",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "933",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "934",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "935",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "936",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "937",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "938",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "939",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "940",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "941",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "942",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "943",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "944",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "945",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "946",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "947",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "948",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "949",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "950",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "951",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "952",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "953",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "954",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "955",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "956",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "957",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "958",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "959",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "960",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "961",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "962",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "963",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "964",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "965",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "966",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "967",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "968",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "969",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "970",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "971",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "972",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "973",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "974",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "975",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "976",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "977",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "978",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "979",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "980",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "981",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "982",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "983",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "984",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "985",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "986",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "987",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "988",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "989",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "990",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "991",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "992",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "993",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "994",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "995",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "996",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "997",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "998",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "999",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        },
+        {
+          "geschenk_id": "1000",
+          "einheitlicher_wert": "0",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_QUOTE_ZU_GROSS",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 3,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische einheitliche Werte je Eigengeschenk."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_MEHRERE_EIGENGESCHENKE_NACHWEIS_LEER",
+    "funktion": "pflichtteilsergaenzung_mehrere_eigengeschenke",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "drittschenkungen_ergaenzungswert": "200",
+      "eigengeschenke": [
+        {
+          "geschenk_id": "A",
+          "einheitlicher_wert": "20",
+          "anrechnung_nach_2315": true
+        },
+        {
+          "geschenk_id": "B",
+          "einheitlicher_wert": "10",
+          "anrechnung_nach_2315": false
+        }
+      ],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "kombination_ohne_ausgleichung_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:N100,D200,A20,B10,q1/4:ordentlich30−20=10;fiktiv330/4=82.5;Ergänzung82.5−30−10=42.5;gesamt52.5. Nur2327-Geschenk100 ohneDrittschenkung darf ordentlichen25 nicht mindern.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität;2315-Kern wiederverwendet."
+  }
+]

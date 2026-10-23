@@ -1,0 +1,635 @@
+[
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_NACHVERTEILUNG",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "Anna",
+            "ungekuerzter_anteil": {
+              "zaehler": "800",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "500",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "Bert",
+            "ungekuerzter_anteil": {
+              "zaehler": "400",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "700",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "ungedeckter_barunterhalt": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bedarf1200 und Gewichte2:1 zunächst800/400; Anna höchstens500, Rest700 zu Bert, sofern dessen Grenze reicht. BeiBert600 insgesamt1100, Fehlbedarf100. Keine automatische unterhaltsrechtliche Basisbewertung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_UNGEDECKTER_REST",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "600"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "Anna",
+            "ungekuerzter_anteil": {
+              "zaehler": "800",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "500",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "Bert",
+            "ungekuerzter_anteil": {
+              "zaehler": "400",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "600",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "1100",
+          "nenner": "1"
+        },
+        "ungedeckter_barunterhalt": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bedarf1200 und Gewichte2:1 zunächst800/400; Anna höchstens500, Rest700 zu Bert, sofern dessen Grenze reicht. BeiBert600 insgesamt1100, Fehlbedarf100. Keine automatische unterhaltsrechtliche Basisbewertung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_OHNE_DECKELWIRKUNG",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "Anna",
+            "ungekuerzter_anteil": {
+              "zaehler": "800",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "800",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "Bert",
+            "ungekuerzter_anteil": {
+              "zaehler": "400",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "ungedeckter_barunterhalt": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bedarf1200 und Gewichte2:1 zunächst800/400; Anna höchstens500, Rest700 zu Bert, sofern dessen Grenze reicht. BeiBert600 insgesamt1100, Fehlbedarf100. Keine automatische unterhaltsrechtliche Basisbewertung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_KEINE_LEISTUNGSFAEHIGKEIT",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "0"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "0"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "Anna",
+            "ungekuerzter_anteil": {
+              "zaehler": "800",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "Bert",
+            "ungekuerzter_anteil": {
+              "zaehler": "400",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_barunterhalt": {
+          "zaehler": "1200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bedarf1200 und Gewichte2:1 zunächst800/400; Anna höchstens500, Rest700 zu Bert, sofern dessen Grenze reicht. BeiBert600 insgesamt1100, Fehlbedarf100. Keine automatische unterhaltsrechtliche Basisbewertung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_NULLBEDARF",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "0",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "Anna",
+            "ungekuerzter_anteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "Bert",
+            "ungekuerzter_anteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_barunterhalt": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bedarf1200 und Gewichte2:1 zunächst800/400; Anna höchstens500, Rest700 zu Bert, sofern dessen Grenze reicht. BeiBert600 insgesamt1100, Fehlbedarf100. Keine automatische unterhaltsrechtliche Basisbewertung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_EXAKTER_BRUCH",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "100",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "Anna",
+            "ungekuerzter_anteil": {
+              "zaehler": "200",
+              "nenner": "3"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "200",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "Bert",
+            "ungekuerzter_anteil": {
+              "zaehler": "100",
+              "nenner": "3"
+            },
+            "beibringbarer_unterhaltsbetrag": {
+              "zaehler": "100",
+              "nenner": "3"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "ungedeckter_barunterhalt": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bedarf1200 und Gewichte2:1 zunächst800/400; Anna höchstens500, Rest700 zu Bert, sofern dessen Grenze reicht. BeiBert600 insgesamt1100, Fehlbedarf100. Keine automatische unterhaltsrechtliche Basisbewertung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_FEHLT_verteilbarer_barunterhalt",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": null,
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_TYP_verteilbarer_barunterhalt",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": {},
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_FEHLT_unterhaltspflichtige",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": null,
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_TYP_unterhaltspflichtige",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": {},
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_FEHLT_verteilungsnachweis",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_TYP_verteilungsnachweis",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_UNGUELTIG_0",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "-1",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_UNGUELTIG_1",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_UNGUELTIG_2",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_UNGUELTIG_3",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "0",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_UNGUELTIG_4",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "-1"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": "§1606III1 mit rechtlich bestimmten1603-Leistungsgrenzen: proportionaler Barunterhaltsanteil für einen Berechtigten; bei Begrenzung verbleibenden Bedarf im ausdrücklich qualifizierten Modell nach relativen Gewichten der übrigen Pflichtigen nachverteilen. Keine automatisch vorausgesetzte einheitliche Methode für sämtliche Unterhalts-Mangelfälle. Eingaben enthalten bereits passende Selbstbehalte, Belastungen, Rang- und Bewertungsentscheidungen; keine Tabelle oder Einkommensbereinigung erfinden. Gewichte/Grenzen müssen für diesen Bedarf und sämtliche Nachverteilungsschritte rechtlich gelten. Ändert sich dadurch die rechtliche Berechnungsbasis, ist diese außerhalb neu zu bestimmen. Mehrere Berechtigte, konkurrierende1609-Ränge, gesteigerte1603II-Gesamtmittelaufteilung, Wechselmodell, Naturalunterhalt und subsidiäre1607-Haftung nicht automatisch kombiniert. Ergebnis ungedeckter Bedarf ist kein Erlass oder automatischer Anspruch gegen weitere Personen. Keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_ANTEILE_MIT_LEISTUNGSGRENZEN_UNGUELTIG_5",
+    "funktion": "unterhalt_anteile_mit_leistungsgrenzen",
+    "eingaben": {
+      "verteilbarer_barunterhalt": "1200",
+      "unterhaltspflichtige": [
+        {
+          "person_id": "Anna",
+          "verteilungsgewicht": "2",
+          "leistungsfaehiger_hoechstbetrag": "500"
+        },
+        {
+          "person_id": "Bert",
+          "verteilungsgewicht": "1",
+          "leistungsfaehiger_hoechstbetrag": "1000"
+        }
+      ],
+      "verteilungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

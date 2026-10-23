@@ -1,0 +1,840 @@
+[
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_0",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "100",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        },
+        {
+          "kosten_id": "B",
+          "betrag": "50",
+          "rechtzeitig_ordnungsgemaess_informiert": false
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nach_informationsgrenze_einbezogene_kosten": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wegen_information_ausgeschlossene_kosten": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_1",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "10",
+          "rechtzeitig_ordnungsgemaess_informiert": false
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nach_informationsgrenze_einbezogene_kosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "wegen_information_ausgeschlossene_kosten": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_2",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "10",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        },
+        {
+          "kosten_id": "B",
+          "betrag": "20",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nach_informationsgrenze_einbezogene_kosten": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "wegen_information_ausgeschlossene_kosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_3",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "0",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nach_informationsgrenze_einbezogene_kosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "wegen_information_ausgeschlossene_kosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_4",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "0.1",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        },
+        {
+          "kosten_id": "B",
+          "betrag": "0.2",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nach_informationsgrenze_einbezogene_kosten": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "wegen_information_ausgeschlossene_kosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_POSITION_UNGUELTIG_0",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_POSITION_UNGUELTIG_1",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "1",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        },
+        {
+          "kosten_id": "A",
+          "betrag": "2",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_POSITION_UNGUELTIG_2",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "-1",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_POSITION_UNGUELTIG_3",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "1",
+          "rechtzeitig_ordnungsgemaess_informiert": true,
+          "extra": 1
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_POSITION_UNGUELTIG_4",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "1"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_POSITION_UNGUELTIG_5",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "1",
+          "rechtzeitig_ordnungsgemaess_informiert": 1
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_POSITION_UNGUELTIG_6",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": " ",
+          "betrag": "1",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_INFORMATION_FEHLT",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "1",
+          "rechtzeitig_ordnungsgemaess_informiert": null
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_0",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzahl_erfasster_naechte": 4,
+        "anzahl_beruecksichtigter_naechte": 3,
+        "kosten_im_qualifizierten_umfang": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "kosten_ausserhalb_dreinaechtegrenze": {
+          "zaehler": "400",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_1",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "dreinaechtegrenze_anwendbar": false,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzahl_erfasster_naechte": 4,
+        "anzahl_beruecksichtigter_naechte": 4,
+        "kosten_im_qualifizierten_umfang": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "kosten_ausserhalb_dreinaechtegrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_2",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "0",
+        "100",
+        "200",
+        "300"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzahl_erfasster_naechte": 4,
+        "anzahl_beruecksichtigter_naechte": 3,
+        "kosten_im_qualifizierten_umfang": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "kosten_ausserhalb_dreinaechtegrenze": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_3",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "10",
+        "20"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzahl_erfasster_naechte": 2,
+        "anzahl_beruecksichtigter_naechte": 2,
+        "kosten_im_qualifizierten_umfang": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "kosten_ausserhalb_dreinaechtegrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_4",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "0.1",
+        "0.2",
+        "0.3",
+        "0.4"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzahl_erfasster_naechte": 4,
+        "anzahl_beruecksichtigter_naechte": 3,
+        "kosten_im_qualifizierten_umfang": {
+          "zaehler": "3",
+          "nenner": "5"
+        },
+        "kosten_ausserhalb_dreinaechtegrenze": {
+          "zaehler": "2",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_5",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzahl_erfasster_naechte": 0,
+        "anzahl_beruecksichtigter_naechte": 0,
+        "kosten_im_qualifizierten_umfang": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kosten_ausserhalb_dreinaechtegrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_6",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [],
+      "dreinaechtegrenze_anwendbar": false,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzahl_erfasster_naechte": 0,
+        "anzahl_beruecksichtigter_naechte": 0,
+        "kosten_im_qualifizierten_umfang": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kosten_ausserhalb_dreinaechtegrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_7",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "0"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzahl_erfasster_naechte": 1,
+        "anzahl_beruecksichtigter_naechte": 1,
+        "kosten_im_qualifizierten_umfang": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kosten_ausserhalb_dreinaechtegrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_NACHT_UNGUELTIG_0",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "-1"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_NACHT_UNGUELTIG_1",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "1",
+        {}
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_NACHT_UNGUELTIG_2",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "1",
+        true
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_NACHT_UNGUELTIG_3",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": "100",
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_FEHLT_kostenpositionen",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": null,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_TYP_kostenpositionen",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": {},
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "100",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_TYP_einordnungsnachweis",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "100",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_ZUSATZKOSTEN_INFORMATIONSGRENZE_NACHWEIS_LEER",
+    "funktion": "pauschalreise_zusatzkosten_informationsgrenze",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "kosten_id": "A",
+          "betrag": "100",
+          "rechtzeitig_ordnungsgemaess_informiert": true
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_FEHLT_nachtkosten",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": null,
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_TYP_nachtkosten",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": {},
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_FEHLT_dreinaechtegrenze_anwendbar",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "dreinaechtegrenze_anwendbar": null,
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_TYP_dreinaechtegrenze_anwendbar",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "dreinaechtegrenze_anwendbar": {},
+      "einordnungsnachweis": "Qualifizierte überschneidungsfreie Kosten des gesetzlichen Normfalls; Information beziehungsweise notwendige Beherbergung/Zeitraum festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_FEHLT_einordnungsnachweis",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_TYP_einordnungsnachweis",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_NOTBEHERBERGUNGSKOSTEN_NACHWEIS_LEER",
+    "funktion": "pauschalreise_notbeherbergungskosten",
+    "eingaben": {
+      "nachtkosten": [
+        "100",
+        "200",
+        "300",
+        "400"
+      ],
+      "dreinaechtegrenze_anwendbar": true,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige gefilterte Kostensummen und chronologische Nachtkosten, keine Auswahl der teuersten drei Nächte; Null-/Leerfall und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  }
+]

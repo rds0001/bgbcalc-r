@@ -1,0 +1,522 @@
+[
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_SCHULDEN_NICHT_ABZIEHEN",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "4000",
+          "immobilie": false
+        },
+        {
+          "wert": "2000",
+          "immobilie": false
+        },
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzusetzender_vermoegenswert": {
+          "zaehler": "6000",
+          "nenner": "1"
+        },
+        "nicht_beruecksichtigter_immobilienwert": {
+          "zaehler": "1000000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_OHNE_SCHULDEN",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "4000",
+          "immobilie": false
+        },
+        {
+          "wert": "2000",
+          "immobilie": false
+        },
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": "0",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzusetzender_vermoegenswert": {
+          "zaehler": "6000",
+          "nenner": "1"
+        },
+        "nicht_beruecksichtigter_immobilienwert": {
+          "zaehler": "1000000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_NUR_IMMOBILIEN",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzusetzender_vermoegenswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_beruecksichtigter_immobilienwert": {
+          "zaehler": "1000000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_KEIN_VERMOEGEN",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "0",
+          "immobilie": false
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzusetzender_vermoegenswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_beruecksichtigter_immobilienwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_MEHRERE_IMMOBILIEN",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "100",
+          "immobilie": true
+        },
+        {
+          "wert": "200",
+          "immobilie": true
+        },
+        {
+          "wert": "10",
+          "immobilie": false
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzusetzender_vermoegenswert": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "nicht_beruecksichtigter_immobilienwert": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_EXAKT",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "0.1",
+          "immobilie": false
+        },
+        {
+          "wert": "0.2",
+          "immobilie": false
+        },
+        {
+          "wert": "0.4",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anzusetzender_vermoegenswert": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "nicht_beruecksichtigter_immobilienwert": {
+          "zaehler": "2",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_FEHLT_vermoegenspositionen",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": null,
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_TYP_vermoegenspositionen",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": {},
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_FEHLT_verbindlichkeiten",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "4000",
+          "immobilie": false
+        },
+        {
+          "wert": "2000",
+          "immobilie": false
+        },
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": null,
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_TYP_verbindlichkeiten",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "4000",
+          "immobilie": false
+        },
+        {
+          "wert": "2000",
+          "immobilie": false
+        },
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": {},
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_FEHLT_bewertungsnachweis",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "4000",
+          "immobilie": false
+        },
+        {
+          "wert": "2000",
+          "immobilie": false
+        },
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_TYP_bewertungsnachweis",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "4000",
+          "immobilie": false
+        },
+        {
+          "wert": "2000",
+          "immobilie": false
+        },
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_LEER",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_NEGATIVE_SCHULD",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "4000",
+          "immobilie": false
+        },
+        {
+          "wert": "2000",
+          "immobilie": false
+        },
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": "-1",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_NEGATIVER_WERT",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "-1",
+          "immobilie": false
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_BOOL_TYP",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "1",
+          "immobilie": 1
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_EXTRAFELD",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "1",
+          "immobilie": false,
+          "extra": 1
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_NACHWEIS_LEER",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "4000",
+          "immobilie": false
+        },
+        {
+          "wert": "2000",
+          "immobilie": false
+        },
+        {
+          "wert": "1000000",
+          "immobilie": true
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_WERT_FEHLT",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": null,
+          "immobilie": false
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNG_VERMOEGENSWERT_OHNE_IMMOBILIEN_IMMOBILIE_FEHLT",
+    "funktion": "betreuung_vermoegenswert_ohne_immobilien",
+    "eingaben": {
+      "vermoegenspositionen": [
+        {
+          "wert": "1",
+          "immobilie": null
+        }
+      ],
+      "verbindlichkeiten": "10000",
+      "bewertungsnachweis": "Vollständige qualifizierte Positionen zum maßgeblichen Stichtag, keine Verbindlichkeiten vorab abgezogen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:4000+2000=6000Nichtimmobilienwert;1000000Immobilien unberücksichtigt,10000Verbindlichkeiten nicht abziehen. Kein Ergebnis zur richterlichen Befreiung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

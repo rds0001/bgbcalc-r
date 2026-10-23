@@ -1,0 +1,692 @@
+[
+  {
+    "fall_id": "ELTERN_001",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "V",
+            "stammpfad": [
+              "V"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "M",
+            "stammpfad": [
+              "M"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "V",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "M",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Beide Eltern treten ein, gleiche Hälften.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_002",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "K1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            },
+            {
+              "person_id": "K2",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "K1",
+            "stammpfad": [
+              "V",
+              "K1"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "K2",
+            "stammpfad": [
+              "V",
+              "K2"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "M",
+            "stammpfad": [
+              "M"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "K1",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "K2",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "M",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Abkömmlinge vertreten Vater innerhalb seiner Hälfte, Mutter behält Hälfte.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_003",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": false,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "M",
+            "stammpfad": [
+              "M"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "M",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Verstorbener Vater ohne berufene Abkömmlinge: Mutter erhält ganzen Verwandtenanteil.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_004",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "K1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            },
+            {
+              "person_id": "K2",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "K1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            },
+            {
+              "person_id": "K2",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "K1",
+            "stammpfad": [
+              "V",
+              "K1"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "K2",
+            "stammpfad": [
+              "V",
+              "K2"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "K1",
+            "stammpfad": [
+              "M",
+              "K1"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "K2",
+            "stammpfad": [
+              "M",
+              "K2"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "K1",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "K2",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Vollgeschwister erben über beide Elternlinien; besondere Erbteile getrennt nachweisen.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_005",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "K1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            },
+            {
+              "person_id": "K2",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "K1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "K1",
+            "stammpfad": [
+              "V",
+              "K1"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "K2",
+            "stammpfad": [
+              "V",
+              "K2"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "K1",
+            "stammpfad": [
+              "M",
+              "K1"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "K1",
+            "quote": {
+              "zaehler": "3",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "K2",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Vollgeschwisterteil K1 erhält zwei Linienanteile, Halbgeschwisterteil K2 nur väterlichen Anteil.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_006",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 4
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "V",
+            "stammpfad": [
+              "V"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          },
+          {
+            "person_id": "M",
+            "stammpfad": [
+              "M"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "V",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          },
+          {
+            "person_id": "M",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Bereits bestimmter Verwandtenanteil 1/4 halbiert.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_007",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": false,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": false,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine besetzte zweite Ordnung.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_008",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": true,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Erste Ordnung schließt zweite nach § 1930 aus.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_009",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Genau zwei Elternlinien, expliziter Wahrheitswert und gültiger Anteil erforderlich.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_010",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Genau zwei Elternlinien, expliziter Wahrheitswert und gültiger Anteil erforderlich.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_011",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "D",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Genau zwei Elternlinien, expliziter Wahrheitswert und gültiger Anteil erforderlich.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_012",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": 1,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Genau zwei Elternlinien, expliziter Wahrheitswert und gültiger Anteil erforderlich.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_013",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": false,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 0
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Genau zwei Elternlinien, expliziter Wahrheitswert und gültiger Anteil erforderlich.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  },
+  {
+    "fall_id": "ELTERN_014",
+    "funktion": "elternlinien_erbquoten",
+    "eingaben": {
+      "elternlinien": [
+        {
+          "person_id": "V",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "M",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "erste_ordnung_vorhanden": null,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Vorrangige Ordnung nicht eingeordnet.",
+    "pruefnachweis": "Manuelle Stamm-/Linienteilung vor Implementierung aus §§ 1925/1927/1930."
+  }
+]

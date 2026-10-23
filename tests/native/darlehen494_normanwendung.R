@@ -1,0 +1,11 @@
+argumente <- getOption('bgb.pruefargumente',commandArgs(trailingOnly=TRUE))
+if(!isTRUE(getOption('bgb.instrumentiert'))) for(datei in list.files(file.path(argumente[[1]],'r/R'),full.names=TRUE)) source(datei)
+f <- jsonlite::fromJSON(file.path(argumente[[1]],'tests/fixtures/kompositionsfaelle/darlehen494_normanwendung.json'),simplifyVector=FALSE)
+korr <- verbraucherdarlehen_sollzinskorrektur(f$vertraglicher_sollzinssatz,f$angegebener_effektiver_jahreszins,f$tatsaechlicher_effektiver_jahreszins,'Qualifizierte Unterangabe494III.')
+stopifnot(korr$status=='BERECHNET')
+monat <- .dividieren(.zahleneingabe(korr$wert$rechnerisch_verminderter_sollzinssatz),.bruch(12))
+e <- verbraucherdarlehen_centannuitaet_neuberechnen(f$anfangskapital,.bruchteile(monat),f$laufzeit_monate,'0','kaufmaennisch','Vertraglich konstante nachschüssige Monatsrate, Zinsen aufCent, letzte Rate angepasst.')
+stopifnot(e$status=='BERECHNET');e <- e$wert
+pruefe <- function(x,y) stopifnot(.vergleichen(.zahleneingabe(x),.zahleneingabe(y))==0)
+pruefe(e$regelmaessiger_kapitaldienst,f$erwartete_rate);pruefe(e$teilzahlungen[[360]]$kapitaldienst,f$erwartete_schlussrate);pruefe(e$zinsgesamtbetrag,f$erwartete_zinssumme);pruefe(e$neuer_gesamtbetrag,f$erwartete_zahlungssumme);pruefe(e$restkapital,'0')
+cat('494III/V:360Monate nativ bestanden.\n')

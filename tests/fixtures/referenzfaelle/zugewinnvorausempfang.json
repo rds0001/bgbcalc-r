@@ -1,0 +1,1389 @@
+[
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_REST",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_GLEICH",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "100",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "kein_zahlbetrag",
+        "zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_GEGENRICHTUNG",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "0",
+      "zugewinn_empfaenger": "100",
+      "vorausempfang": "100",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "richtung": "empfaenger_an_zuwendenden",
+        "zahlbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TEILANRECHNUNG",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "80",
+      "zugewinn_empfaenger": "100",
+      "vorausempfang": "30",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "110",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "richtung": "empfaenger_an_zuwendenden",
+        "zahlbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_KEINE_EMPFAENGERFORDERUNG",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "0",
+      "zugewinn_empfaenger": "100",
+      "vorausempfang": "10",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "90",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "richtung": "empfaenger_an_zuwendenden",
+        "zahlbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_KORRIGIERT_GLEICH",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "0",
+      "zugewinn_empfaenger": "100",
+      "vorausempfang": "50",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "richtung": "empfaenger_an_zuwendenden",
+        "zahlbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_OHNE_EMPFANG",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "0",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_ALLES_NULL",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "0",
+      "zugewinn_empfaenger": "0",
+      "vorausempfang": "0",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "kein_zahlbetrag",
+        "zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_BRUCH",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "0.3",
+      "zugewinn_empfaenger": "0.1",
+      "vorausempfang": "0.1",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "1",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_GEBERGRENZE_GLEICH",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "50",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_GEBERGRENZE_UNTER",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "49.99",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_EMPFAENGERGRENZE_GLEICH",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "0",
+      "zugewinn_empfaenger": "100",
+      "vorausempfang": "100",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "50",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "richtung": "empfaenger_an_zuwendenden",
+        "zahlbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_EMPFAENGERGRENZE_UNTER",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "0",
+      "zugewinn_empfaenger": "100",
+      "vorausempfang": "100",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "49.99",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_EMPFANG_UEBER_ZUGEWINN",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "40.01",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "14001",
+          "nenner": "100"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "14001",
+          "nenner": "200"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "4001",
+          "nenner": "100"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "5999",
+          "nenner": "200"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "5999",
+          "nenner": "200"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_VERBRAUCHT",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "0",
+      "vorausempfang": "40",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "140",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TEILVERBRAUCHT",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "20",
+      "vorausempfang": "50",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "75",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "25",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_VERBRAUCHT_KEINE_RUECKFORDERUNG",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "30",
+      "zugewinn_empfaenger": "0",
+      "vorausempfang": "50",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "kein_zahlbetrag",
+        "zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_VERBRAUCHT_GEGENRICHTUNG",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "0",
+      "zugewinn_empfaenger": "20",
+      "vorausempfang": "50",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "richtung": "empfaenger_an_zuwendenden",
+        "zahlbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_EMPFANG_GLEICH_ZUGEWINN",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "40",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "140",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_EMPFANG_KNAPP_UNTER_ZUGEWINN",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "39.99",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "13999",
+          "nenner": "100"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "1",
+          "nenner": "100"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "6999",
+          "nenner": "100"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "3999",
+          "nenner": "100"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_VERBRAUCHT_GRENZE_GLEICH",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "0",
+      "vorausempfang": "40",
+      "haftungsgrenze_zuwendender": "70",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugewinn_zuwendender_bereinigt": {
+          "zaehler": "140",
+          "nenner": "1"
+        },
+        "zugewinn_empfaenger_bereinigt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgleichsforderung_vor_anrechnung": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "angerechneter_vorausempfang": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "restforderung_empfaenger": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gegenforderung_ohne_1380": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "richtung": "zuwendender_an_empfaenger",
+        "zahlbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_VERBRAUCHT_GRENZE_UNTER",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "0",
+      "vorausempfang": "40",
+      "haftungsgrenze_zuwendender": "69.99",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_KEIN_STANDARDFALL",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": false,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_FEHLT_zugewinn_zuwendender",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": null,
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TYP_zugewinn_zuwendender",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": [],
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_FEHLT_zugewinn_empfaenger",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": null,
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TYP_zugewinn_empfaenger",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": [],
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_FEHLT_vorausempfang",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": null,
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TYP_vorausempfang",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": [],
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_FEHLT_haftungsgrenze_zuwendender",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": null,
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TYP_haftungsgrenze_zuwendender",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": [],
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_FEHLT_haftungsgrenze_empfaenger",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": null,
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TYP_haftungsgrenze_empfaenger",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": [],
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_FEHLT_standardfall_bestaetigt",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": null,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TYP_standardfall_bestaetigt",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": 1,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_FEHLT_bewertungsnachweis",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_TYP_bewertungsnachweis",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_NEGATIV_zugewinn_zuwendender",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "-1",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_NEGATIV_zugewinn_empfaenger",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "-1",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_NEGATIV_vorausempfang",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "-1",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_NEGATIV_haftungsgrenze_zuwendender",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "-1",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_NEGATIV_haftungsgrenze_empfaenger",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "-1",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": "Synthetischer einseitiger Standardfall; tatsächliche Vermögensdifferenzen nichtnegativ, Vorausempfang vollständig wertgleich enthalten, Haftungsgrenzen greifen nicht ein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNVORAUSEMPFANG_NACHWEIS_LEER",
+    "funktion": "zugewinnausgleich_vorausempfang_standardfall",
+    "eingaben": {
+      "zugewinn_zuwendender": "100",
+      "zugewinn_empfaenger": "40",
+      "vorausempfang": "20",
+      "haftungsgrenze_zuwendender": "1000",
+      "haftungsgrenze_empfaenger": "1000",
+      "standardfall_bestaetigt": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige zweistufige Rechenbeispiele; Forderung vor Anrechnung und separate Gegenrichtung anhand fester erwarteter Werte.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

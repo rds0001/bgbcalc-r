@@ -1,0 +1,644 @@
+[
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_NETTOWERTE",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "grundstueck_id": "A",
+          "anteilsquote": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "hypothekenanteil": {
+            "zaehler": "600",
+            "nenner": "1"
+          }
+        },
+        {
+          "grundstueck_id": "B",
+          "anteilsquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "hypothekenanteil": {
+            "zaehler": "300",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_NULLNETTOWERT",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "200",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "grundstueck_id": "A",
+          "anteilsquote": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "hypothekenanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "grundstueck_id": "B",
+          "anteilsquote": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "hypothekenanteil": {
+            "zaehler": "900",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_EINER",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "2",
+          "vorrangige_belastungen": "1"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "grundstueck_id": "A",
+          "anteilsquote": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "hypothekenanteil": {
+            "zaehler": "900",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_EXAKT",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "1",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "grundstueck_id": "A",
+          "anteilsquote": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "hypothekenanteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        },
+        {
+          "grundstueck_id": "B",
+          "anteilsquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "hypothekenanteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        }
+      ]
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_NULLBETRAG",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "0",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "grundstueck_id": "A",
+          "anteilsquote": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "hypothekenanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "grundstueck_id": "B",
+          "anteilsquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "hypothekenanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_FEHLT_zu_verteilender_hypothekenbetrag",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": null,
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_TYP_zu_verteilender_hypothekenbetrag",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": [],
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_FEHLT_grundstuecke",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": null,
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_TYP_grundstuecke",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_FEHLT_verteilungsnachweis",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_TYP_verteilungsnachweis",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_NEGATIV",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "-1",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_LEER",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_DOPPELT",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "2",
+          "vorrangige_belastungen": "1"
+        },
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "2",
+          "vorrangige_belastungen": "1"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_UEBERBELASTET",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "1",
+          "vorrangige_belastungen": "2"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_ALLES_NULL",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "1",
+          "vorrangige_belastungen": "1"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_WERT_NEGATIV",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "-1",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_LAST_NEGATIV",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "1",
+          "vorrangige_belastungen": "-1"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_EINTRAG_TYP",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        "A"
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_ID_LEER",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": " ",
+          "grundstueckswert": "2",
+          "vorrangige_belastungen": "1"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_EXTRAFELD",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "2",
+          "vorrangige_belastungen": "1",
+          "extra": 1
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_NACHWEIS",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "200"
+        }
+      ],
+      "verteilungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_FEHLT_grundstueckswert",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": null,
+          "vorrangige_belastungen": "1"
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_WERTANTEILE_FEHLT_vorrangige_belastungen",
+    "funktion": "gesamthypothek_wertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "900",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "2",
+          "vorrangige_belastungen": null
+        }
+      ],
+      "verteilungsnachweis": "Nettowerte200:100, keine abweichende Vereinbarung oder konkurrierenden Teilansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Gleiche Bruttowerte300:300, unterschiedliche Vorränge100:200 ergeben Nettowerte200:100, daher600:300 statt450:450.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

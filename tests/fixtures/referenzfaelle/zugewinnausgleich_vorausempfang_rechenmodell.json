@@ -1,0 +1,1150 @@
+[
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_STANDARD",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "90",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "40",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "30",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "20",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_DECKEL_VORHER",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "25",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "90",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "40",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "15",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "20",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "15",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_DECKEL_NACHHER",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "25",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_nach_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "90",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "40",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "25",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "20",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "25",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_GEGENSEITIG",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        },
+        {
+          "richtung": "b_an_a",
+          "hinzurechnungswert": "5",
+          "herausrechnungswert": "5",
+          "anrechnungswert": "5"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "90",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "40",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "30",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "25",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "75",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "5",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_GEGENRICHTUNG_TROTZ_GROSSEM_EMPFANG",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "b_an_a",
+          "hinzurechnungswert": "100",
+          "herausrechnungswert": "100",
+          "anrechnungswert": "100"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "20",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "30",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "30",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "120",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "60",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_VERLUST_VORHER_BEGRENZT",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "-10",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "0",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "100",
+          "herausrechnungswert": "0",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "40",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_VERLUST_NACHHER_BEGRENZT",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "-10",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "0",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "100",
+          "herausrechnungswert": "0",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "vermoegenskorrektur_vor_nullgrenze",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "90",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "45",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "35",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "35",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_SCHULDEN_UND_ILLOYAL",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "-10",
+          "illoyale_hinzurechnung": "40"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "90",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "40",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "30",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "10",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "20",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "20",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_KEINE_ZUWENDUNG",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "a_an_b": {
+          "korrigierte_geberbasis": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "20",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "30",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "30",
+            "nenner": "1"
+          }
+        },
+        "b_an_a": {
+          "korrigierte_geberbasis": {
+            "zaehler": "20",
+            "nenner": "1"
+          },
+          "korrigierte_empfaengerbasis": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "halbe_positive_differenz": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "haftungsgrenze": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "anrechnungswert": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "bedingter_restbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "rechnerischer_saldo_a_an_b": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "A80/B20,Empfang10:A90/B10=>40vorAnrechnung,30Rest. Haftungsgrenze25:vorAnrechnung15,danach25. NegativeGeberdifferenz-10mitHinzurechnung100undAnrechnung10:NullgrenzevorKorrektur40,danach35.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_FEHLT_ehegatten",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": null,
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_FEHLT_vorausempfaenge",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": null,
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_FEHLT_nullbegrenzungsfolge",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": null,
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_FEHLT_haftungsgrenzenfolge",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": null,
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_FEHLT_methodennachweis",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_UNGUELTIG0",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {},
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_UNGUELTIG1",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "-1"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_UNGUELTIG2",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "automatisch",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_UNGUELTIG3",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "a_an_b",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "automatisch",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_VORAUSEMPFANG_RECHENMODELL_UNGUELTIG4",
+    "funktion": "zugewinnausgleich_vorausempfang_rechenmodell",
+    "eingaben": {
+      "ehegatten": {
+        "a": {
+          "vermoegensdifferenz": "80",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        },
+        "b": {
+          "vermoegensdifferenz": "20",
+          "endnettovermoegen": "100",
+          "illoyale_hinzurechnung": "0"
+        }
+      },
+      "vorausempfaenge": [
+        {
+          "richtung": "x",
+          "hinzurechnungswert": "10",
+          "herausrechnungswert": "10",
+          "anrechnungswert": "10"
+        }
+      ],
+      "nullbegrenzungsfolge": "zugewinn_vor_korrektur",
+      "haftungsgrenzenfolge": "haftungsgrenze_vor_anrechnung",
+      "methodennachweis": "Bedingte Erweiterung des vorhandenen einseitigen1380-Grundmodells: je Anspruchsrichtung die zugehörigen Vorausempfänge summieren, Geberbasis um Hinzurechnung erhöhen und Empfängerbasis um Herausrechnung vermindern. Zwingend gewählte Nullbegrenzungsfolge bestimmt, ob ursprüngliche Vermögensdifferenzen schon vor dieser Korrektur bei0begrenzt werden oder erst die korrigierten Differenzen. Positive halbe Differenz berechnen;1378II-Haftungsgrenze=max(Endnettovermögen+illoyaleHinzurechnung,0) selbst berechnen. Haftungsgrenze gemäß gewählter Folge vor oder nach der auf0begrenzten Anrechnung anwenden. Beide Richtungsrechnungen separat ausweisen, einschließlich Gegenrichtung ohne einschlägigen Empfang. Gegenseitige Empfänge werden in diesem ausdrücklich qualifizierten Modell getrennt nach Richtung behandelt; kein unbelegtes automatisches Saldieren der Zuwendungswerte. Rechnerischer Saldo der beiden Ergebnisse ist nur Vergleichswert, keine automatische Aufrechnung oder rechtliche Feststellung zweier Ansprüche. Reihenfolge/reziproke Behandlung/verschiedene Wertansätze rechtlich nicht allgemein bestätigt; keine Standardwahl. Kein negativer Rückforderungsanspruch allein aus überhöhter Anrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

@@ -1,0 +1,842 @@
+[
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_VOR_QUOTE",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "nettodeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_innenpflicht": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "basis_vor_quotierung": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "quotierter_betrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100Schuld,40Drittberichtigung,1/2Quote:vorQuote30;bei bloßemInnenrestdeckel50. Innenpflicht50,Dritter20:Gesamtschuldbasisergibtmin40,30=30;InnenbasisvorQuote15,ohneVorabzug25.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_NUR_RESTDECKEL",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "nur_innenrestgrenze",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "nettodeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_innenpflicht": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "basis_vor_quotierung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "quotierter_betrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100Schuld,40Drittberichtigung,1/2Quote:vorQuote30;bei bloßemInnenrestdeckel50. Innenpflicht50,Dritter20:Gesamtschuldbasisergibtmin40,30=30;InnenbasisvorQuote15,ohneVorabzug25.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_UNGLEICHE_INNENPFLICHT",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "50",
+      "vom_dritten_erlangbarer_betrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "nettodeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_innenpflicht": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "basis_vor_quotierung": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "quotierter_betrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100Schuld,40Drittberichtigung,1/2Quote:vorQuote30;bei bloßemInnenrestdeckel50. Innenpflicht50,Dritter20:Gesamtschuldbasisergibtmin40,30=30;InnenbasisvorQuote15,ohneVorabzug25.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_INNENBASIS_VOR_QUOTE",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "50",
+      "vom_dritten_erlangbarer_betrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "interne_berichtigungspflicht",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "nettodeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_innenpflicht": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "basis_vor_quotierung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "quotierter_betrag": {
+          "zaehler": "15",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "15",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100Schuld,40Drittberichtigung,1/2Quote:vorQuote30;bei bloßemInnenrestdeckel50. Innenpflicht50,Dritter20:Gesamtschuldbasisergibtmin40,30=30;InnenbasisvorQuote15,ohneVorabzug25.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_INNENBASIS_NUR_DECKEL",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "50",
+      "vom_dritten_erlangbarer_betrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "interne_berichtigungspflicht",
+      "drittleistungsreihenfolge": "nur_innenrestgrenze",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "nettodeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_innenpflicht": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "basis_vor_quotierung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "quotierter_betrag": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "25",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100Schuld,40Drittberichtigung,1/2Quote:vorQuote30;bei bloßemInnenrestdeckel50. Innenpflicht50,Dritter20:Gesamtschuldbasisergibtmin40,30=30;InnenbasisvorQuote15,ohneVorabzug25.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_VOLLE_DRITTBERICHTIGUNG",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "nettodeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_innenpflicht": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "basis_vor_quotierung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "quotierter_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100Schuld,40Drittberichtigung,1/2Quote:vorQuote30;bei bloßemInnenrestdeckel50. Innenpflicht50,Dritter20:Gesamtschuldbasisergibtmin40,30=30;InnenbasisvorQuote15,ohneVorabzug25.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_WERTDECKEL",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "500",
+      "interne_berichtigungspflicht": "500",
+      "vom_dritten_erlangbarer_betrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "nettodeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_innenpflicht": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "basis_vor_quotierung": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "quotierter_betrag": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100Schuld,40Drittberichtigung,1/2Quote:vorQuote30;bei bloßemInnenrestdeckel50. Innenpflicht50,Dritter20:Gesamtschuldbasisergibtmin40,30=30;InnenbasisvorQuote15,ohneVorabzug25.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_NULLDECKUNG",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "100"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertquote": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nettodeckung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_innenpflicht": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "basis_vor_quotierung": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "quotierter_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100Schuld,40Drittberichtigung,1/2Quote:vorQuote30;bei bloßemInnenrestdeckel50. Innenpflicht50,Dritter20:Gesamtschuldbasisergibtmin40,30=30;InnenbasisvorQuote15,ohneVorabzug25.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_FEHLT_gesicherter_schuldbetrag",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": null,
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_FEHLT_interne_berichtigungspflicht",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": null,
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_FEHLT_vom_dritten_erlangbarer_betrag",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": null,
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_FEHLT_grundstuecke",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": null,
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_FEHLT_vermachtes_grundstueck_id",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": null,
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_FEHLT_quotierungsbasis",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": null,
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_FEHLT_drittleistungsreihenfolge",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": null,
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_FEHLT_methodennachweis",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_UNGUELTIG0",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "101",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_UNGUELTIG1",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "101",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_UNGUELTIG2",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "automatisch",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_UNGUELTIG3",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "automatisch",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEKENVERMAECHTNIS_DRITTLEISTUNGSMODELL_UNGUELTIG4",
+    "funktion": "gesamthypothekenvermaechtnis_drittleistungsmodell",
+    "eingaben": {
+      "gesicherter_schuldbetrag": "100",
+      "interne_berichtigungspflicht": "100",
+      "vom_dritten_erlangbarer_betrag": "40",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "X",
+      "quotierungsbasis": "gesicherte_schuld",
+      "drittleistungsreihenfolge": "vor_wertquote",
+      "methodennachweis": "Bedingte2166II/2167-Rechnung: bestehender Grundstücksquotenkern liefert Nettodeckung und Wertquote. Innenrest=interneBerichtigungspflicht-erlangbareDrittberichtigung. Ausdrücklich gewählte Quotierungsbasis ist Gesamtschuld oder internePflicht. Bei vor_wertquote Drittbetrag von dieser Basis vor Quotierung abziehen; bei nur_innenrestgrenze bleibt die Quote ungekürzt und Drittberichtigung wirkt nur durch den Innenrestdeckel. Betrag=min(quotierterBasis,Innenrest,Nettodeckung). Vier arithmetische Kombinationen sind keine vier als rechtlich zulässig bestätigten Alternativen: keine Standardwahl, zwingende fallbezogene rechtliche Begründung. Modellwahl und ihre allgemeine rechtliche Geltung bleiben getrennt von getesteter Arithmetik.2168IIrechtliche Verweisung nur im qualifizierten Nachlassgruppenfall; Fremdgrundstückswerte nicht aufnehmen.2168Iohne2166II-Verweisung ist kein Anwendungsfall.2168aSchiffshypotheken nur bei qualifizierter entsprechender Anwendung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

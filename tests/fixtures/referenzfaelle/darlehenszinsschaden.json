@@ -1,0 +1,308 @@
+[
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_GEDECKELT",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_KLEINER_SCHADEN",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "10",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_GLEICH",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "20",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_KEIN_SCHADEN",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "0",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_KEINE_ZEIT",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 0,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_BRUCHZEIT",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 3,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "40",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_NENNER_NULL",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 0,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_NEGATIV",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "-1",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_TYP",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": "1",
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_LEER",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_FEHLT_gesondert_verbuchte_verzugszinsen",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": null,
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_FEHLT_nachgewiesener_zinsschaden",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": null,
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_FEHLT_zeitanteil_zaehler",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": null,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_FEHLT_zeitanteil_nenner",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": null,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_FEHLT_zeitanteil_nachweis",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": null,
+      "einordnungsnachweis": "Allgemein-Verbraucherdarlehen, qualifizierter nachgewiesener497II-Zinsschaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_ZINSSCHADENSGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "verbraucherdarlehen_zinsschadensgrenze",
+    "eingaben": {
+      "gesondert_verbuchte_verzugszinsen": "1000",
+      "nachgewiesener_zinsschaden": "50",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein rechtlich belegtes halbes Jahr bei unveränderter Zinsschuld.",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*0.04*1/2=20EUR Höchstschaden; nachgewiesene geringere Schäden bleiben geringer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; vorhandener gesetzlicher Zinskern wiederverwendet."
+  }
+]

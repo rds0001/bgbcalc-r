@@ -1,0 +1,952 @@
+[
+  {
+    "fall_id": "FUNDGAST_001",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "0",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "5 Prozent der ersten 500 EUR, 3 Prozent des Mehrwerts; bei 500,01 EUR genau 25,0003 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_002",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "25",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "5 Prozent der ersten 500 EUR, 3 Prozent des Mehrwerts; bei 500,01 EUR genau 25,0003 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_003",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "1000",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "40",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "5 Prozent der ersten 500 EUR, 3 Prozent des Mehrwerts; bei 500,01 EUR genau 25,0003 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_004",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500.01",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "250003",
+        "nenner": "10000"
+      }
+    },
+    "herleitung": "5 Prozent der ersten 500 EUR, 3 Prozent des Mehrwerts; bei 500,01 EUR genau 25,0003 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_005",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "1000",
+      "tier": true,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "30",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Tier: 3 Prozent des gesamten Werts, keine 5-Prozent-Stufe.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_006",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": true,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschluss nach § 971 Abs. 2.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_007",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": true,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschluss nach § 971 Abs. 2.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_008",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": true,
+      "billiger_finderlohn": "12.34",
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "617",
+        "nenner": "50"
+      }
+    },
+    "herleitung": "Bewertungszweig: vorgegebene billige Bemessung, keine vermeintlich berechnete Ermessensquote.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_009",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "49.99",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "behoerde_oder_verkehrsanstalt",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Öffentlicher Fund unter 50 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_010",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "50",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "behoerde_oder_verkehrsanstalt",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "5",
+        "nenner": "4"
+      }
+    },
+    "herleitung": "50*5 Prozent/2=1,25 EUR, Schwelle einschließlich 50.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_011",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "1000",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "behoerde_oder_verkehrsanstalt",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Allgemeine Staffel 40 EUR halbiert.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_012",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "1000",
+      "tier": true,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "behoerde_oder_verkehrsanstalt",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "15",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Tier 1000*3 Prozent/2=15 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_013",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "behoerde_oder_verkehrsanstalt",
+      "bediensteter": true,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Öffentlicher Ausschlusstatbestand nach § 978.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_014",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "behoerde_oder_verkehrsanstalt",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Öffentlicher Ausschlusstatbestand nach § 978.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_015",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": null,
+      "fundort": "behoerde_oder_verkehrsanstalt",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": true,
+      "fund_verheimlicht": true,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "25",
+        "nenner": "2"
+      }
+    },
+    "herleitung": "§ 978 schließt § 971 als direkte Norm aus und verweist auf Abs. 1 Satz 2/3; öffentliche Ablieferungspflicht hier erfüllt.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_016",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": true,
+      "billiger_finderlohn": "12.34",
+      "fundort": "behoerde_oder_verkehrsanstalt",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "617",
+        "nenner": "100"
+      }
+    },
+    "herleitung": "Billiger Betrag 12,34 EUR halbiert=6,17 EUR.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_017",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": true,
+      "billiger_finderlohn": null,
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Keine automatische Ermessensschätzung.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_018",
+    "funktion": "finderlohn_betrag",
+    "eingaben": {
+      "sachwert": "500",
+      "tier": false,
+      "nur_persoenlicher_wert": false,
+      "billiger_finderlohn": "10",
+      "fundort": "allgemein",
+      "bediensteter": false,
+      "anzeigepflicht_verletzt": false,
+      "fund_verheimlicht": false,
+      "ablieferungspflicht_verletzt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nicht verwendete konkurrierende Bewertung ausdrücklich zurückweisen.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_019",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "1",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "600",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Schaden auf 100 Tagespreise begrenzen, Haftungsgrenze mindestens 600, höchstens 3500 bzw. 800. Kein Mindestschadensersatz von 600.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_020",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Schaden auf 100 Tagespreise begrenzen, Haftungsgrenze mindestens 600, höchstens 3500 bzw. 800. Kein Mindestschadensersatz von 600.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_021",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "100",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Schaden auf 100 Tagespreise begrenzen, Haftungsgrenze mindestens 600, höchstens 3500 bzw. 800. Kein Mindestschadensersatz von 600.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_022",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "geld_wertpapiere_kostbarkeiten",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "800",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Schaden auf 100 Tagespreise begrenzen, Haftungsgrenze mindestens 600, höchstens 3500 bzw. 800. Kein Mindestschadensersatz von 600.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_023",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "1",
+      "schaden": "100",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Schaden auf 100 Tagespreise begrenzen, Haftungsgrenze mindestens 600, höchstens 3500 bzw. 800. Kein Mindestschadensersatz von 600.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_024",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "1",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "geld_wertpapiere_kostbarkeiten",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "600",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Schaden auf 100 Tagespreise begrenzen, Haftungsgrenze mindestens 600, höchstens 3500 bzw. 800. Kein Mindestschadensersatz von 600.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_025",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": true,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "5000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unbeschränkte gesetzliche Haftung bis tatsächlichem Schaden nach § 702 Abs. 2.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_026",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": true,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "5000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unbeschränkte gesetzliche Haftung bis tatsächlichem Schaden nach § 702 Abs. 2.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_027",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": true,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "5000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unbeschränkte gesetzliche Haftung bis tatsächlichem Schaden nach § 702 Abs. 2.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_028",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Anspruch nach § 703 erloschen.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_029",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": true,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "5000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ausnahme von Anzeigeobliegenheit des § 703.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_030",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": true,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "5000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ausnahme von Anzeigeobliegenheit des § 703.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_031",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": true,
+      "anzeige_unverzueglich": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Pflichtwidrige Ablehnung ohne Verschulden am Sachschaden ist keine Ausnahme des § 703.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_032",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "fahrzeug",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausgeschlossene Sachenart nach § 701 Abs. 4.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_033",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "fahrzeuginhalt",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausgeschlossene Sachenart nach § 701 Abs. 4.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_034",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "lebendes_tier",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausgeschlossene Sachenart nach § 701 Abs. 4.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_035",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "gast",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschlussursache nach § 701 Abs. 3.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_036",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "begleiter",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschlussursache nach § 701 Abs. 3.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_037",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "aufgenommene_person",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschlussursache nach § 701 Abs. 3.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_038",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sachbeschaffenheit",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschlussursache nach § 701 Abs. 3.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_039",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "hoehere_gewalt",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschlussursache nach § 701 Abs. 3.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_040",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": false,
+      "eingebracht_nach_701": true,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Anwendungsbedingung der gesetzlichen Gastwirtshaftung fehlt.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  },
+  {
+    "fall_id": "FUNDGAST_041",
+    "funktion": "gastwirt_haftungsbetrag",
+    "eingaben": {
+      "beherbergungspreis_tag": "10",
+      "schaden": "5000",
+      "beherbergung_gewerblich": true,
+      "eingebracht_nach_701": false,
+      "sachenart": "sonstige",
+      "ursache": "sonstige",
+      "verschulden_gastwirt_oder_leute": false,
+      "aufbewahrung_uebernommen": false,
+      "aufbewahrung_pflichtwidrig_abgelehnt": false,
+      "anzeige_unverzueglich": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Anwendungsbedingung der gesetzlichen Gastwirtshaftung fehlt.",
+    "pruefnachweis": "Manuell vor Implementierung aus lokaler Quelle abgeleitet."
+  }
+]

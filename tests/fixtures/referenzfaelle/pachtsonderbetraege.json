@@ -1,0 +1,334 @@
+[
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_PAECHTER_ZAHLT",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": "1000",
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": "800",
+      "einordnungsnachweis": "Qualifiziertes Inventar; beide Bestände zu Preisen bei Pachtende, abgelehnte Stücke bereinigt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "200",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_VERPAECHTER_ZAHLT",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": "1000",
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": "1200",
+      "einordnungsnachweis": "Qualifiziertes Inventar; beide Bestände zu Preisen bei Pachtende, abgelehnte Stücke bereinigt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "-200",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_GLEICH",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": "1000",
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": "1000",
+      "einordnungsnachweis": "Qualifiziertes Inventar; beide Bestände zu Preisen bei Pachtende, abgelehnte Stücke bereinigt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_MEHRNUTZUNG",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "120",
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_GENAU_ZULAESSIG",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "100",
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_UNTER_ZULAESSIG",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "90",
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_BRUCHMENGE",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "100.5",
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "0.1",
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "20"
+      }
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_FEHLT_uebernommener_gesamtschaetzwert_zu_endpreisen",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": null,
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": "800",
+      "einordnungsnachweis": "Qualifiziertes Inventar; beide Bestände zu Preisen bei Pachtende, abgelehnte Stücke bereinigt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_FEHLT_zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": "1000",
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": null,
+      "einordnungsnachweis": "Qualifiziertes Inventar; beide Bestände zu Preisen bei Pachtende, abgelehnte Stücke bereinigt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_FEHLT_einordnungsnachweis",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": "1000",
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": "800",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_NEGATIV",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": "-1",
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": "800",
+      "einordnungsnachweis": "Qualifiziertes Inventar; beide Bestände zu Preisen bei Pachtende, abgelehnte Stücke bereinigt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_TYP",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": [],
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": "800",
+      "einordnungsnachweis": "Qualifiziertes Inventar; beide Bestände zu Preisen bei Pachtende, abgelehnte Stücke bereinigt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_INVENTAR_AUSGLEICHSDIFFERENZ_LEER",
+    "funktion": "pacht_inventar_ausgleichsdifferenz",
+    "eingaben": {
+      "uebernommener_gesamtschaetzwert_zu_endpreisen": "1000",
+      "zurueckzugewaehrender_gesamtschaetzwert_zu_endpreisen": "800",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_FEHLT_eingeschlagene_holzmenge",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": null,
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_FEHLT_ordnungsgemaess_zulaessige_holzmenge",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "120",
+      "ordnungsgemaess_zulaessige_holzmenge": null,
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_FEHLT_wert_je_mengeneinheit",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "120",
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": null,
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_FEHLT_einordnungsnachweis",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "120",
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_NEGATIV",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "-1",
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_TYP",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": [],
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": "Qualifizierter Mehrholzeinschlag bei vergleichbaren Mengen/Sortimenten und Werten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "PACHT_HOLZMEHRNUTZUNG_WERTERSATZ_LEER",
+    "funktion": "pacht_holzmehrnutzung_wertersatz",
+    "eingaben": {
+      "eingeschlagene_holzmenge": "120",
+      "ordnungsgemaess_zulaessige_holzmenge": "100",
+      "wert_je_mengeneinheit": "50",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000-800=200 vom Pächter; bei1200 Rückinventar -200 umgekehrt. Holzüberschuss(120-100)*50=1000.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

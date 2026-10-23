@@ -1,0 +1,852 @@
+[
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_GENAU_ENDE",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-15",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-15",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": true
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_TAG_DANACH",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-16",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-15",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-15",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": false
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_TEILZAHLUNGEN",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-10",
+          "betrag": "600"
+        },
+        {
+          "zahlung_id": "B",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "400"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-15",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-15",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": true
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_TEIL_ZU_SPAET",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "600"
+        },
+        {
+          "zahlung_id": "B",
+          "rueckzahlung_am": "2024-08-16",
+          "betrag": "400"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-15",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-15",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": false
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_UEBERZAHLUNG",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1200"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-15",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-15",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": true
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_KEINE",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-15",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-15",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": false
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_KEINE_RESTSCHULD",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "0",
+      "rueckzahlungen": [],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-15",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-15",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": true
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_SONNTAG",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-04",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-19",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-18",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-19",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": true
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_FEIERTAG",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-16",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [
+          "2024-08-15"
+        ],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlungsgrundfrist_letzter_tag": "2024-08-15",
+        "rueckzahlungsfrist_letzter_tag": "2024-08-16",
+        "rechtzeitig_zurueckgezahlt": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "spaeter_zurueckgezahlt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechtzeitiger_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldeter_betrag_rechtzeitig_gedeckt": true
+      }
+    },
+    "herleitung": "14Tage ab1.8.2024 ergeben15.8.;600+400=1000. Am16.8.zu spät außer bestätigterFeiertagsverschiebung. Grundende18.8.Sonntag→19.8.Montag. Überschuss erzeugt keinen negativen Fehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_FEHLTkuendigung_wirksam_am",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": null,
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_TYPkuendigung_wirksam_am",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": {},
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_FEHLTgeschuldeter_betrag",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": null,
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_TYPgeschuldeter_betrag",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": {},
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_FEHLTrueckzahlungen",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": null,
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_TYPrueckzahlungen",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": {},
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_FEHLTfeiertagskalender",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": null,
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_TYPfeiertagskalender",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {},
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_FEHLTeinordnungsnachweis",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_TYPeinordnungsnachweis",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_UNGUELTIG0",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "-1",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_UNGUELTIG1",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-07-31",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_UNGUELTIG2",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        },
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_UNGUELTIG3",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "-1"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_UNGUELTIG4",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2024-08-14"
+      },
+      "einordnungsnachweis": "§489III: Zweiwochengrundfrist ab Wirksamwerden der Kündigung, anschließend193-Leistungsfristkorrektur mit vorhandenem Kalenderkern. Nur bis einschließlich korrigiertem Ende erfüllungswirksame Rückzahlungen summieren; Deckung und positiven Fehlbetrag vergleichen. Spätere Zahlungen getrennt summieren, sie heilen die Frist nicht automatisch. Keine automatische Kündigungswirksamkeitsentscheidung; geschuldete Summe und Erfüllung rechtlich vorqualifiziert. Kalenderdatum einer Zahlung reicht nur bei rechtlich eindeutig normalisiertem Erfüllungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_RUECKZAHLUNG_IM_ZWEIWOCHENFENSTER_UNGUELTIG5",
+    "funktion": "darlehen_rueckzahlung_im_zweiwochenfenster",
+    "eingaben": {
+      "kuendigung_wirksam_am": "2024-08-01",
+      "geschuldeter_betrag": "1000",
+      "rueckzahlungen": [
+        {
+          "zahlung_id": "A",
+          "rueckzahlung_am": "2024-08-15",
+          "betrag": "1000"
+        }
+      ],
+      "feiertagskalender": {
+        "feiertage": [],
+        "ort": "Testort",
+        "kalenderquelle": "Vollständiger ausdrücklich qualifizierter Beispielkalender",
+        "kalender_von": "2024-01-01",
+        "kalender_bis": "2025-12-31"
+      },
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

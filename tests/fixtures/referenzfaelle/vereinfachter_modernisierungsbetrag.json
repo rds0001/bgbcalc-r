@@ -1,0 +1,785 @@
+[
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_UNGEKAPPT",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "7000",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_vor_kappung": {
+          "zaehler": "560",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_vor_kappung": {
+          "zaehler": "140",
+          "nenner": "3"
+        },
+        "monatliche_restkappung": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_kappung": {
+          "zaehler": "140",
+          "nenner": "3"
+        },
+        "jaehrlicher_betrag_nach_kappung": {
+          "zaehler": "560",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000−30%=7000;8%=560/Jahr=140/3proMonat.50qm*3EUR=150,ungekappt.10qm*3EUR=30/Monat=360/Jahr. Heizungsgrenze50qm*0,50=25;abzüglich10Vorbelastung15.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_KAPPUNG_DREI_EURO",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "10",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "7000",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_vor_kappung": {
+          "zaehler": "560",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_vor_kappung": {
+          "zaehler": "140",
+          "nenner": "3"
+        },
+        "monatliche_restkappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_kappung": {
+          "zaehler": "360",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000−30%=7000;8%=560/Jahr=140/3proMonat.50qm*3EUR=150,ungekappt.10qm*3EUR=30/Monat=360/Jahr. Heizungsgrenze50qm*0,50=25;abzüglich10Vorbelastung15.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_KAPPUNG_ZWEI_EURO",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "10",
+      "monatliche_miete_je_quadratmeter": "6",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "7000",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_vor_kappung": {
+          "zaehler": "560",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_vor_kappung": {
+          "zaehler": "140",
+          "nenner": "3"
+        },
+        "monatliche_restkappung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_kappung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_kappung": {
+          "zaehler": "240",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000−30%=7000;8%=560/Jahr=140/3proMonat.50qm*3EUR=150,ungekappt.10qm*3EUR=30/Monat=360/Jahr. Heizungsgrenze50qm*0,50=25;abzüglich10Vorbelastung15.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_HEIZUNG",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "heizung_559",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "7000",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_vor_kappung": {
+          "zaehler": "560",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_vor_kappung": {
+          "zaehler": "140",
+          "nenner": "3"
+        },
+        "monatliche_restkappung": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_kappung": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_kappung": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000−30%=7000;8%=560/Jahr=140/3proMonat.50qm*3EUR=150,ungekappt.10qm*3EUR=30/Monat=360/Jahr. Heizungsgrenze50qm*0,50=25;abzüglich10Vorbelastung15.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_HEIZUNG_VORBELASTUNG",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "20",
+      "bisherige_monatliche_heizungserhoehung": "10",
+      "erhoehungsart": "heizung_559",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "7000",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_vor_kappung": {
+          "zaehler": "560",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_vor_kappung": {
+          "zaehler": "140",
+          "nenner": "3"
+        },
+        "monatliche_restkappung": {
+          "zaehler": "15",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_kappung": {
+          "zaehler": "15",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_kappung": {
+          "zaehler": "180",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000−30%=7000;8%=560/Jahr=140/3proMonat.50qm*3EUR=150,ungekappt.10qm*3EUR=30/Monat=360/Jahr. Heizungsgrenze50qm*0,50=25;abzüglich10Vorbelastung15.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_KOSTENREST",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "5000",
+      "frueher_geltend_gemachte_kosten": "5000",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "1500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "3500",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_vor_kappung": {
+          "zaehler": "280",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_vor_kappung": {
+          "zaehler": "70",
+          "nenner": "3"
+        },
+        "monatliche_restkappung": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_kappung": {
+          "zaehler": "70",
+          "nenner": "3"
+        },
+        "jaehrlicher_betrag_nach_kappung": {
+          "zaehler": "280",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000−30%=7000;8%=560/Jahr=140/3proMonat.50qm*3EUR=150,ungekappt.10qm*3EUR=30/Monat=360/Jahr. Heizungsgrenze50qm*0,50=25;abzüglich10Vorbelastung15.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_NULL",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "0",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_vor_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_vor_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatliche_restkappung": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000−30%=7000;8%=560/Jahr=140/3proMonat.50qm*3EUR=150,ungekappt.10qm*3EUR=30/Monat=360/Jahr. Heizungsgrenze50qm*0,50=25;abzüglich10Vorbelastung15.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_FEHLT_geltend_gemachte_kosten",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": null,
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_TYP_geltend_gemachte_kosten",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": {},
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_FEHLT_frueher_geltend_gemachte_kosten",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": null,
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_TYP_frueher_geltend_gemachte_kosten",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": {},
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_FEHLT_wohnflaeche",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": null,
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_TYP_wohnflaeche",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": {},
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_FEHLT_monatliche_miete_je_quadratmeter",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": null,
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_TYP_monatliche_miete_je_quadratmeter",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": {},
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_FEHLT_bisherige_monatliche_erhoehung_gesamt",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": null,
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_TYP_bisherige_monatliche_erhoehung_gesamt",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": {},
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_FEHLT_bisherige_monatliche_heizungserhoehung",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": null,
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_TYP_bisherige_monatliche_heizungserhoehung",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": {},
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_FEHLT_erhoehungsart",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": null,
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_TYP_erhoehungsart",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": {},
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_TYP_einordnungsnachweis",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_UNGUELTIG_0",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10001",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_UNGUELTIG_1",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "1",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_UNGUELTIG_2",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "0",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_UNGUELTIG_3",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "heizung_559e",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_UNGUELTIG_4",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "1",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": "§559cI/II mit559I/IIIa: qualifizierte Kosten minus30%Erhaltungspauschale;8%jährliche Umlage, durch12zumMonat, anschließend einschlägige Restkappung. Nur förderfreier Grundfall ohne abzuziehende559a-Beiträge/laufende Zuschüsse; dadurch keine ungeklärte Reihenfolge laufender Förderabzüge gegenüber Kappung. Keine zusätzliche tatsächliche Erhaltungskostenkürzung neben30%Pauschale. Heizungsfall559 zusätzlich50Cent je Quadratmeter;559e nicht hier. Schonzeit, Auskunft/Erklärung559b, Sperre559cIV und gegebenenfalls verbleibende Härteprüfung559cI3 separat. Überschrittene Kostengrenze ist ungültige Eingabe für diesen vorqualifizierten vereinfachten Ablauf, keine automatische Umstellung auf Regelverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTER_FOERDERFREIER_BETRAG_UNGUELTIG_5",
+    "funktion": "modernisierung_vereinfachter_foerderfreier_betrag",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "wohnflaeche": "50",
+      "monatliche_miete_je_quadratmeter": "10",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

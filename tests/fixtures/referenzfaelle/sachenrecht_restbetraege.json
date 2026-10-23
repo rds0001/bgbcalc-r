@@ -1,0 +1,614 @@
+[
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_0",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "70",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_1",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "30",
+      "abzugsfaehige_kosten": "100",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_2",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "100",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_3",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "0",
+      "abzugsfaehige_kosten": "0",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_4",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "0",
+      "abzugsfaehige_kosten": "10",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_5",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "0.3",
+      "abzugsfaehige_kosten": "0.1",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_AUSSERHALB",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": false,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_FEHLT_herausgabefaehiger_bruttobetrag",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": null,
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_TYP_herausgabefaehiger_bruttobetrag",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": [],
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_FEHLT_abzugsfaehige_kosten",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": null,
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_TYP_abzugsfaehige_kosten",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": [],
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_FEHLT_anwendungsfall_qualifiziert",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": null,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_TYP_anwendungsfall_qualifiziert",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": [],
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_FEHLT_bewertungsnachweis",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_TYP_bewertungsnachweis",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_NEGATIV_herausgabefaehiger_bruttobetrag",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "-1",
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_NEGATIV_abzugsfaehige_kosten",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "-1",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_HERAUSGABEBETRAG_NACH_KOSTEN_LEER",
+    "funktion": "fund_herausgabebetrag_nach_kosten",
+    "eingaben": {
+      "herausgabefaehiger_bruttobetrag": "100",
+      "abzugsfaehige_kosten": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_0",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "70",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_1",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "30",
+      "bereits_ersetzter_bestandteilswert": "100",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_2",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "100",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_3",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "0",
+      "bereits_ersetzter_bestandteilswert": "0",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_4",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "0",
+      "bereits_ersetzter_bestandteilswert": "10",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_5",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "0.3",
+      "bereits_ersetzter_bestandteilswert": "0.1",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_AUSSERHALB",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": false,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_FEHLT_bestandteilswert_nach_abtrennung",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": null,
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_TYP_bestandteilswert_nach_abtrennung",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": [],
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_FEHLT_bereits_ersetzter_bestandteilswert",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": null,
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_TYP_bereits_ersetzter_bestandteilswert",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": [],
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_FEHLT_anwendungsfall_qualifiziert",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": null,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_TYP_anwendungsfall_qualifiziert",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": [],
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_TYP_bewertungsnachweis",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_NEGATIV_bestandteilswert_nach_abtrennung",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "-1",
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_NEGATIV_bereits_ersetzter_bestandteilswert",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "-1",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische qualifizierte Beträge für denselben Normfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ABTRENNUNG_ABWENDUNGSFEHLBETRAG_LEER",
+    "funktion": "abtrennung_abwendungsfehlbetrag",
+    "eingaben": {
+      "bestandteilswert_nach_abtrennung": "100",
+      "bereits_ersetzter_bestandteilswert": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig festgelegte Minima/Summen/Differenzen, einschließlich Null-, Gleichheits- und Bruchfälle.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

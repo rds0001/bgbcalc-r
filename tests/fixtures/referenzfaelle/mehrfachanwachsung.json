@@ -1,0 +1,1524 @@
+[
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_GRUPPENVORRANG",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "weggefallener_erbe_id": "A",
+            "verteilung": [
+              {
+                "erbe_id": "B",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "4"
+                }
+              }
+            ],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "C",
+            "verteilung": [
+              {
+                "erbe_id": "B",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              },
+              {
+                "erbe_id": "D",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              }
+            ],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "3",
+              "nenner": "8"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "5",
+              "nenner": "8"
+            }
+          },
+          {
+            "erbe_id": "D",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "3",
+              "nenner": "8"
+            }
+          }
+        ],
+        "nicht_angewachsene_wegfallquote": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_WEGFALLLISTE_UMGEKEHRT",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "C",
+        "A"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "weggefallener_erbe_id": "A",
+            "verteilung": [
+              {
+                "erbe_id": "B",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "4"
+                }
+              }
+            ],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "C",
+            "verteilung": [
+              {
+                "erbe_id": "B",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              },
+              {
+                "erbe_id": "D",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              }
+            ],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "3",
+              "nenner": "8"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "5",
+              "nenner": "8"
+            }
+          },
+          {
+            "erbe_id": "D",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "3",
+              "nenner": "8"
+            }
+          }
+        ],
+        "nicht_angewachsene_wegfallquote": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_GRUPPE_GANZ_WEG",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "B"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "weggefallener_erbe_id": "A",
+            "verteilung": [
+              {
+                "erbe_id": "C",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              },
+              {
+                "erbe_id": "D",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              }
+            ],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "B",
+            "verteilung": [
+              {
+                "erbe_id": "C",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              },
+              {
+                "erbe_id": "D",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              }
+            ],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "erbteile": [
+          {
+            "erbe_id": "C",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "erbe_id": "D",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "nicht_angewachsene_wegfallquote": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_GESETZLICHER_REST",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.125",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.125",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.125",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.125",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": false,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "weggefallener_erbe_id": "A",
+            "verteilung": [
+              {
+                "erbe_id": "B",
+                "angewachsener_erbteil": {
+                  "zaehler": "1",
+                  "nenner": "8"
+                }
+              }
+            ],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "C",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ],
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "erbe_id": "D",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ],
+        "nicht_angewachsene_wegfallquote": {
+          "zaehler": "1",
+          "nenner": "8"
+        }
+      }
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_ALLE_WEG",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "weggefallener_erbe_id": "A",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "B",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "C",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "D",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ],
+        "erbteile": [],
+        "nicht_angewachsene_wegfallquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_AUSSCHLUSS",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": true,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "weggefallener_erbe_id": "A",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "C",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ],
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "erbe_id": "D",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ],
+        "nicht_angewachsene_wegfallquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_ERSATZ",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": true,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sonderteile_nach_ursprung": [
+          {
+            "weggefallener_erbe_id": "A",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "weggefallener_erbe_id": "C",
+            "verteilung": [],
+            "nicht_angewachsener_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ],
+        "erbteile": [
+          {
+            "erbe_id": "B",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "erbe_id": "D",
+            "urspruenglicher_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_erbteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_erbteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ],
+        "nicht_angewachsene_wegfallquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_NICHT_QUALIFIZIERT",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": false,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_FEHLT_eingesetzte_erben",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": null,
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_TYP_eingesetzte_erben",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": {},
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_FEHLT_weggefallene_erben_ids",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": null,
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_TYP_weggefallene_erben_ids",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": {},
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_FEHLT_gesetzliche_erbfolge_ausgeschlossen",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": null,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_TYP_gesetzliche_erbfolge_ausgeschlossen",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": 1,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_FEHLT_anwachsung_testamentarisch_ausgeschlossen",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": null,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_TYP_anwachsung_testamentarisch_ausgeschlossen",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": 1,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_FEHLT_vorrangiges_ersatzerbrecht",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": null,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_TYP_vorrangiges_ersatzerbrecht",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": 1,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_FEHLT_gemeinsamer_wegfall_qualifiziert",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": null,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_TYP_gemeinsamer_wegfall_qualifiziert",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": 1,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_FEHLT_einordnungsnachweis",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_TYP_einordnungsnachweis",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "C"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_DOPPELT",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "A"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_FREMD",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        "A",
+        "Z"
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_LEER",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  },
+  {
+    "fall_id": "ERBTEILE_GLEICHZEITIGE_ANWACHSUNG_ID_LEER",
+    "funktion": "erbteile_gleichzeitige_anwachsung",
+    "eingaben": {
+      "eingesetzte_erben": [
+        {
+          "erbe_id": "A",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "B",
+          "erbquote": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "erbe_id": "C",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "erbe_id": "D",
+          "erbquote": "0.25",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallene_erben_ids": [
+        " "
+      ],
+      "gesetzliche_erbfolge_ausgeschlossen": true,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzerbrecht": false,
+      "gemeinsamer_wegfall_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische gleichzeitig qualifizierte WegfälleA,C; A/Bgemeinschaftlich, C/DohneGruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "VierViertel,A/BGruppe,WegfallAundC: A-Viertel nurB,C-Viertel jehalbB/D; B5/8,D3/8. KeineWiederzuweisung an bereits ebenfalls weggefallenePerson.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität; ursprünglicheSonderteile explizitgeprüft."
+  }
+]

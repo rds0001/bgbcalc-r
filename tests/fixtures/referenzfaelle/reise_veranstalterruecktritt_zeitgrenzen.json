@@ -1,0 +1,483 @@
+[
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_LANG20",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "kalendertage",
+        "kalendertage_vorlauf": 20,
+        "letzter_voller_zugangstag": "2024-06-30",
+        "gesetzliche_zeitgrenze_eingehalten": true,
+        "vertragliche_zeitgrenze_eingehalten": true,
+        "beide_zeitgrenzen_eingehalten": true
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_LANG_ZU_SPAET",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-07-01",
+      "ruecktrittszugang_utc": "2024-07-01T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "kalendertage",
+        "kalendertage_vorlauf": 20,
+        "letzter_voller_zugangstag": "2024-06-30",
+        "gesetzliche_zeitgrenze_eingehalten": false,
+        "vertragliche_zeitgrenze_eingehalten": true,
+        "beide_zeitgrenzen_eingehalten": false
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_GENAU6",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "6",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-07-13",
+      "ruecktrittszugang_utc": "2024-07-13T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "kalendertage",
+        "kalendertage_vorlauf": 7,
+        "letzter_voller_zugangstag": "2024-07-13",
+        "gesetzliche_zeitgrenze_eingehalten": true,
+        "vertragliche_zeitgrenze_eingehalten": true,
+        "beide_zeitgrenzen_eingehalten": true
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_GENAU2",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "2",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "kalendertage",
+        "kalendertage_vorlauf": 7,
+        "letzter_voller_zugangstag": "2024-07-13",
+        "gesetzliche_zeitgrenze_eingehalten": true,
+        "vertragliche_zeitgrenze_eingehalten": true,
+        "beide_zeitgrenzen_eingehalten": true
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_MEHRALS6",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "6.1",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "kalendertage",
+        "kalendertage_vorlauf": 20,
+        "letzter_voller_zugangstag": "2024-06-30",
+        "gesetzliche_zeitgrenze_eingehalten": true,
+        "vertragliche_zeitgrenze_eingehalten": true,
+        "beide_zeitgrenzen_eingehalten": true
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_KURZ48",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "1.5",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-07-19",
+      "ruecktrittszugang_utc": "2024-07-19T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "48_stunden",
+        "kalendertage_vorlauf": null,
+        "letzter_voller_zugangstag": null,
+        "gesetzliche_zeitgrenze_eingehalten": true,
+        "vertragliche_zeitgrenze_eingehalten": true,
+        "beide_zeitgrenzen_eingehalten": true
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_KURZ_EINE_SEKUNDE_ZU_SPAET",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "1.5",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-07-19",
+      "ruecktrittszugang_utc": "2024-07-19T12:00:01Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "48_stunden",
+        "kalendertage_vorlauf": null,
+        "letzter_voller_zugangstag": null,
+        "gesetzliche_zeitgrenze_eingehalten": false,
+        "vertragliche_zeitgrenze_eingehalten": true,
+        "beide_zeitgrenzen_eingehalten": false
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_VERTRAG_FRUEHER",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-06-29T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "kalendertage",
+        "kalendertage_vorlauf": 20,
+        "letzter_voller_zugangstag": "2024-06-30",
+        "gesetzliche_zeitgrenze_eingehalten": true,
+        "vertragliche_zeitgrenze_eingehalten": false,
+        "beide_zeitgrenzen_eingehalten": false
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_VERTRAG_GRENZE",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-06-30T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gesetzlicher_vorlauf": "kalendertage",
+        "kalendertage_vorlauf": 20,
+        "letzter_voller_zugangstag": "2024-06-30",
+        "gesetzliche_zeitgrenze_eingehalten": true,
+        "vertragliche_zeitgrenze_eingehalten": true,
+        "beide_zeitgrenzen_eingehalten": true
+      }
+    },
+    "herleitung": "21.7.Reisebeginn:20volle Kalendertage rückwärts enden am Beginn1.7.,letzter voller Zugangstag30.6.;7Tage entsprechend13.7. Bei48Stunden ist19.7.12Uhrgenau rechtzeitig für21.7.12Uhr.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_FEHLT_reisedauer_tage",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": null,
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_FEHLT_reisebeginn_lokal_am",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": null,
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_FEHLT_reisebeginn_utc",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": null,
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_FEHLT_ruecktrittszugang_lokal_am",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": null,
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_FEHLT_ruecktrittszugang_utc",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": null,
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_FEHLT_vertraglicher_letzter_ruecktritt_utc",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": null,
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_FEHLT_zeitnachweis",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_UNGUELTIG0",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "0",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_UNGUELTIG1",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "-1",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_UNGUELTIG2",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": true,
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_UNGUELTIG3",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-02-30",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_UNGUELTIG4",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": "651hIV1: mehrals6Tage→20Kalendertage Vorlauf; mindestens2bis6Tage→7Kalendertage; wenigerals2Tage→48echteStunden. Für Tagesvorläufe ausdrücklich ereignistagbezogene Rückwärtsanalogie: Grenze beginnt am zurückliegenden Vergleichstag, Zugang spätestens bis zum vorhergehenden vollen Tag; keine Umrechnung in480/168Stunden. KurzeReise sekundengenau mindestens48Stunden vor Reisebeginn. Gesetzliche und tatsächliche Vertragsgrenze müssen beide eingehalten sein; vertragliche Frist darf gesetzlichen Mindestschutz nicht verkürzen. Kein automatischer Teilnehmerzahl-/Rücktrittsgrundtest und keine Geldfolge. Reisedauer ist qualifizierte Tagesgröße; Zeitspanne der Reise nicht ungeprüft in24Stunden-Tage umdeuten. Lokaldaten gehören zuUTC-Ereignissen, keine Zeitzone erraten. Keine193-Verlängerung dieses Mindestvorlaufs.651hIV2unverzüglich bleibt qualitative Anforderung, kein erfundener fixer Stundenwert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_VERANSTALTERRUECKTRITT_ZEITGRENZEN_UNGUELTIG5",
+    "funktion": "reise_veranstalterruecktritt_zeitgrenzen",
+    "eingaben": {
+      "reisedauer_tage": "7",
+      "reisebeginn_lokal_am": "2024-07-21",
+      "reisebeginn_utc": "2024-07-21T12:00:00Z",
+      "ruecktrittszugang_lokal_am": "2024-06-30",
+      "ruecktrittszugang_utc": "2024-06-30T12:00:00Z",
+      "vertraglicher_letzter_ruecktritt_utc": "2024-07-20T12:00:00Z",
+      "zeitnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

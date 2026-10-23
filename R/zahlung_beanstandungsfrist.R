@@ -1,0 +1,11 @@
+zahlung_beanstandungsfrist <- function(belastung_am=NULL, ordnungsgemaesse_unterrichtung_am=NULL, beanstandung_am=NULL, einordnungsnachweis=NULL) {
+ b <- .datum(belastung_am,'belastung_am');a <- .datum(beanstandung_am,'beanstandung_am');.text(einordnungsnachweis,'einordnungsnachweis')
+ if(a<b) .fehler('beanstandung_am','Beanstandung der betrachteten Belastung nicht vor Belastungstag.')
+ u <- if(is.null(ordnungsgemaesse_unterrichtung_am)) NULL else .datum(ordnungsgemaesse_unterrichtung_am,'ordnungsgemaesse_unterrichtung_am')
+ beginn <- if(is.null(u)) NULL else max(b,u);ende <- if(is.null(beginn)) NULL else .frist(format(beginn,'%Y-%m-%d'),13,'monate','ereignis')
+ wert <- list(massgeblicher_fristbeginn=if(is.null(beginn)) NULL else format(beginn,'%Y-%m-%d'),rechnerisches_grundfristende=if(is.null(ende)) NULL else format(ende,'%Y-%m-%d'),beanstandung_bis_grundfristende=if(is.null(ende)) NULL else a<=ende)
+ eingaben <- list(belastung_am=belastung_am, ordnungsgemaesse_unterrichtung_am=ordnungsgemaesse_unterrichtung_am, beanstandung_am=beanstandung_am, einordnungsnachweis=einordnungsnachweis)
+ ergebnis <- .ergebnis(wert,"daten_und_wahrheitswert","BGB_ZAHLUNG_BEANSTANDUNGSFRIST",eingaben,list(list(operation="Spaeteren qualifizierten Belastungs-/Unterrichtungstag bestimmen,13Monatsgrundfrist berechnen und Beanstandung vergleichen; bei fehlender Unterrichtung kein Fristende erfinden.")),eingaben)
+ ergebnis$hinweise <- list("\u00a7676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung.")
+ ergebnis
+}

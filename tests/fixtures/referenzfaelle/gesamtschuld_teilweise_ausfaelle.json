@@ -1,0 +1,1488 @@
+[
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGLEICHE_QUOTEN",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "schuldner_id": "Anna",
+            "urspruenglicher_beitrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Bert",
+            "urspruenglicher_beitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "80",
+              "nenner": "3"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "200",
+              "nenner": "3"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "200",
+              "nenner": "3"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Clara",
+            "urspruenglicher_beitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "40",
+              "nenner": "3"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "100",
+              "nenner": "3"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "100",
+              "nenner": "3"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruenglicher_ausfall": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "ungedeckter_ausfall": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamt_gezahlter_beitrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenueber_glaeubiger_noch_offen": {
+          "zaehler": "120",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grundanteile60/40/20;Anna nur20, Ausfall40 nach2:1 ergibt80/3und40/3 Zusatz. Gesamt120 exakt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_WEITERER_TEILAUSFALL",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "50",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "schuldner_id": "Anna",
+            "urspruenglicher_beitrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Bert",
+            "urspruenglicher_beitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Clara",
+            "urspruenglicher_beitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruenglicher_ausfall": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "ungedeckter_ausfall": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamt_gezahlter_beitrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenueber_glaeubiger_noch_offen": {
+          "zaehler": "120",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bert kann insgesamt nur50, also Zusatz10; verbleibende30 zu Clara.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_NICHT_VOLL_DECKBAR",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "50",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "25",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "schuldner_id": "Anna",
+            "urspruenglicher_beitrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Bert",
+            "urspruenglicher_beitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Clara",
+            "urspruenglicher_beitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "5",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "25",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "25",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruenglicher_ausfall": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "ungedeckter_ausfall": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "gesamt_gezahlter_beitrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenueber_glaeubiger_noch_offen": {
+          "zaehler": "120",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gesamtgrenzen20+50+25=95; vom Betrag120 verbleiben25 ungedeckt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_KEINE_ZUSAETZLICHE_TRAGUNG",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "schuldner_id": "Anna",
+            "urspruenglicher_beitrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Bert",
+            "urspruenglicher_beitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Clara",
+            "urspruenglicher_beitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruenglicher_ausfall": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "ungedeckter_ausfall": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "gesamt_gezahlter_beitrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenueber_glaeubiger_noch_offen": {
+          "zaehler": "120",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_NULLBETRAG",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "0",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "schuldner_id": "Anna",
+            "urspruenglicher_beitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Bert",
+            "urspruenglicher_beitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Clara",
+            "urspruenglicher_beitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruenglicher_ausfall": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_ausfall": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamt_gezahlter_beitrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gegenueber_glaeubiger_noch_offen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_FEHLT_gesamtbetrag",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": null,
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_TYP_gesamtbetrag",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": {},
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_FEHLT_gesamtschuldner",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": null,
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_TYP_gesamtschuldner",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": {},
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_FEHLT_einordnungsnachweis",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_TYP_einordnungsnachweis",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGUELTIG_0",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "-1",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGUELTIG_1",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGUELTIG_2",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGUELTIG_3",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGUELTIG_4",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": "1",
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGUELTIG_5",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "-1",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGUELTIG_6",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "-1",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_UNGUELTIG_7",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_GLAEUBIGER_VOLL_BEFRIEDIGT",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "120"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "50",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "schuldner_id": "Anna",
+            "urspruenglicher_beitrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Bert",
+            "urspruenglicher_beitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuldner_id": "Clara",
+            "urspruenglicher_beitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "beibringbarer_grundbeitrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "gesamt_beibringbar": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_beitragsrest": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_ueberbeitrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruenglicher_ausfall": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "ungedeckter_ausfall": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamt_gezahlter_beitrag": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "gegenueber_glaeubiger_noch_offen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Anna hat120 auf gemeinsamen Betrag bezahlt, rechnerische Innenlast20: Überbeitrag100. Bert/Clara jeweils Last50 und bisher0: Rest50. Kein automatisch bestimmter Forderungsübergang.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_ZAHLUNG_UEBER_GESAMTBETRAG",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "121"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_QUOTEN_MIT_TEILAUSFAELLEN_NEGATIVE_ZAHLUNG",
+    "funktion": "gesamtschuld_quoten_mit_teilausfaellen",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "gesamtschuldner": [
+        {
+          "schuldner_id": "Anna",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_gesamtbeitrag": "20",
+          "ausfallgewicht": "0",
+          "geleisteter_beitrag": "-1"
+        },
+        {
+          "schuldner_id": "Bert",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "2",
+          "geleisteter_beitrag": "0"
+        },
+        {
+          "schuldner_id": "Clara",
+          "innenquote": {
+            "zaehler": "1",
+            "nenner": "6"
+          },
+          "einbringlicher_gesamtbeitrag": "100",
+          "ausfallgewicht": "1",
+          "geleisteter_beitrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§426I: zunächst Gesamtbetrag nach rechtlich bestimmten Innenquoten, daraus nur erlangbare Grundbeiträge. Nicht erlangbaren Rest nach ausdrücklich qualifizierten Ausfallgewichten auf übrige noch verfügbare Beiträge verteilen, bei weiterer Begrenzung wiederholt proportional nachverteilen. Vorhandener begrenzter Quotenkern wird wiederverwendet. Gesetzlicher Gleichanteilsfall mit gleichen Quoten/Gewichten; abweichende Bestimmung muss rechtlich belegt sein. Keine automatische Annahme, dass beliebige Innenquote stets dieselbe Ausfallquote vorgibt. Grenzen sind tatsächlich/rechtlich erlangbare Gesamtbeiträge und keine bloßen Zahlungsangebote. Ursprüngliche Beitragspflicht ausgefallener Schuldner wird nicht erlassen. Keine Begrenzung der Außenhaftung, kein automatischer Forderungsübergang426II oder Zahlungssaldo zwischen bereits leistenden Schuldnern. Kein Gesamtvermögens- oder Insolvenzmodell und keine Cent-Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

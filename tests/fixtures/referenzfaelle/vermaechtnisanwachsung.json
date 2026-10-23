@@ -1,0 +1,796 @@
+[
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_ALLGEMEIN",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "vermaechtnisanteile": [
+          {
+            "bedachter_id": "B",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "12"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "bedachter_id": "C",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "2",
+              "nenner": "3"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_anteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_GRUPPE",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "vermaechtnisanteile": [
+          {
+            "bedachter_id": "B",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "bedachter_id": "C",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_anteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_GRUPPE_OHNE_UEBRIGE",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": "G"
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": true,
+        "vermaechtnisanteile": [
+          {
+            "bedachter_id": "B",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "12"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "bedachter_id": "C",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "2",
+              "nenner": "3"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_anteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_AUSGESCHLOSSEN",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": true,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": false,
+        "vermaechtnisanteile": [
+          {
+            "bedachter_id": "B",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "bedachter_id": "C",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_anteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_ERSATZ",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": true,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anwachsung_erfolgt": false,
+        "vermaechtnisanteile": [
+          {
+            "bedachter_id": "B",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "bedachter_id": "C",
+            "urspruenglicher_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            },
+            "angewachsener_vermaechtnisanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "gesamter_vermaechtnisanteil": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "nicht_angewachsener_wegfallender_anteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_FEHLT_bedachte",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": null,
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_TYP_bedachte",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": {},
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_FEHLT_weggefallener_bedachter_id",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": null,
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_TYP_weggefallener_bedachter_id",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": [],
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_FEHLT_anwachsung_testamentarisch_ausgeschlossen",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": null,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_TYP_anwachsung_testamentarisch_ausgeschlossen",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": 1,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_FEHLT_vorrangiges_ersatzvermaechtnis",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": null,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_TYP_vorrangiges_ersatzvermaechtnis",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": 1,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_FEHLT_einordnungsnachweis",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_TYP_einordnungsnachweis",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_NUR_EINER",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "1",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_FALSCHE_STRUKTUR",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {},
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "1",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_UNVOLLSTAENDIG",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.2",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.3",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_FREMDE_ID",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "X",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": "Synthetischer Einzelwegfall am selben Gegenstand."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_ANWACHSUNGSANTEILE_NACHWEIS_LEER",
+    "funktion": "vermaechtnis_anwachsungsanteile",
+    "eingaben": {
+      "bedachte": [
+        {
+          "bedachter_id": "A",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "B",
+          "vermaechtnisanteil": "0.25",
+          "gemeinschaft_id": null
+        },
+        {
+          "bedachter_id": "C",
+          "vermaechtnisanteil": "0.5",
+          "gemeinschaft_id": null
+        }
+      ],
+      "weggefallener_bedachter_id": "A",
+      "anwachsung_testamentarisch_ausgeschlossen": false,
+      "vorrangiges_ersatzvermaechtnis": false,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Wegfall1/4 verteilt auf verbleibende1/4 und1/2 im Verhältnis1:2→Zuwächse1/12,1/6; GruppeA/B erhält Balle1/4, Cbleibt1/2.",
+    "pruefnachweis": "Vorhandener numerischer Wegfallkern wiederverwendet; native Python/R-Referenzen und vollständige Parität."
+  }
+]

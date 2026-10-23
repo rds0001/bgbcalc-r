@@ -1,0 +1,685 @@
+[
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_RANG",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_deckung": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "anspruch_id": "frueher",
+            "deckungsbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "anspruch_id": "spaeter",
+            "deckungsbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtdeckungsbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "unverbrauchte_deckung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_EINGABEFOLGE",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_deckung": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "anspruch_id": "frueher",
+            "deckungsbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "anspruch_id": "spaeter",
+            "deckungsbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtdeckungsbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "unverbrauchte_deckung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_KEINE_DECKUNG",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "1200",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_deckung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "anspruch_id": "frueher",
+            "deckungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            }
+          },
+          {
+            "anspruch_id": "spaeter",
+            "deckungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtdeckungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "unverbrauchte_deckung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_VOLLE_DECKUNG",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "0",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_deckung": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "anspruch_id": "frueher",
+            "deckungsbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "anspruch_id": "spaeter",
+            "deckungsbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtdeckungsbetrag": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "unverbrauchte_deckung": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_KEINE_ANSPRUECHE",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_deckung": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [],
+        "gesamtdeckungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "unverbrauchte_deckung": {
+          "zaehler": "600",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_BRUCH",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "0.1",
+      "geschuetzter_mittelbedarf": "0.03",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "0.02"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verfuegbare_deckung": {
+          "zaehler": "7",
+          "nenner": "100"
+        },
+        "verteilung": [
+          {
+            "anspruch_id": "frueher",
+            "deckungsbetrag": {
+              "zaehler": "1",
+              "nenner": "50"
+            },
+            "verweigerbarer_fehlbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtdeckungsbetrag": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "unverbrauchte_deckung": {
+          "zaehler": "1",
+          "nenner": "20"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_RANG_DOPPELT",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_KENNUNG_DOPPELT",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_RANG_NULL",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 0,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_FORM",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {}
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_NEGATIV",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "-1",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_ANSPRUCH_NEGATIV",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "-1"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_LEER",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_TYP",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": "x",
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_FEHLT_verfuegbare_mittel",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": null,
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_FEHLT_geschuetzter_mittelbedarf",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": null,
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_FEHLT_schenkungsansprueche",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": null,
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_FEHLT_einordnungsnachweis",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "spaeter",
+          "entstehungsrang": 2,
+          "anspruchsbetrag": "400"
+        },
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_ANSPRUCH_FEHLT_anspruch_id",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": null,
+          "entstehungsrang": 1,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_ANSPRUCH_FEHLT_entstehungsrang",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": null,
+          "anspruchsbetrag": "400"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNGSVERSPRECHEN_DECKUNGSVERTEILUNG_ANSPRUCH_FEHLT_anspruchsbetrag",
+    "funktion": "schenkungsversprechen_deckungsverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "1000",
+      "geschuetzter_mittelbedarf": "400",
+      "schenkungsansprueche": [
+        {
+          "anspruch_id": "frueher",
+          "entstehungsrang": 1,
+          "anspruchsbetrag": null
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte offene Geldschenkungsansprüche; Schutzbedarf und eindeutiger Entstehungsrang."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:600 Deckung, älterer Anspruch400 zuerst, späterer200; Restforderung200 verweigerbar. Andere Fälle unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

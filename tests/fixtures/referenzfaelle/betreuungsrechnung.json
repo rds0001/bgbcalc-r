@@ -1,0 +1,937 @@
+[
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_GETRENNT",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einnahmensumme": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "ausgabensumme": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "einnahmen_ausgaben_saldo": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "vermoegenszugangssumme": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "vermoegensabgangssumme": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "vermoegensbewegungssaldo": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_KEINE_DOPPELZAEHLUNG",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100"
+      ],
+      "ausgaben": [
+        "40"
+      ],
+      "vermoegenszugaenge": [
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einnahmensumme": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "ausgabensumme": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "einnahmen_ausgaben_saldo": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "vermoegenszugangssumme": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "vermoegensabgangssumme": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "vermoegensbewegungssaldo": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_SACHZUGANG",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "0"
+      ],
+      "ausgaben": [
+        "0"
+      ],
+      "vermoegenszugaenge": [
+        "200"
+      ],
+      "vermoegensabgaenge": [
+        "0"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einnahmensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgabensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "einnahmen_ausgaben_saldo": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenszugangssumme": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "vermoegensabgangssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegensbewegungssaldo": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_UMSCHICHTUNG",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "0"
+      ],
+      "ausgaben": [
+        "100"
+      ],
+      "vermoegenszugaenge": [
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "100"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einnahmensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgabensumme": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "einnahmen_ausgaben_saldo": {
+          "zaehler": "-100",
+          "nenner": "1"
+        },
+        "vermoegenszugangssumme": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "vermoegensabgangssumme": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "vermoegensbewegungssaldo": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_ALLES_NULL",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "0"
+      ],
+      "ausgaben": [
+        "0"
+      ],
+      "vermoegenszugaenge": [
+        "0"
+      ],
+      "vermoegensabgaenge": [
+        "0"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einnahmensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgabensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "einnahmen_ausgaben_saldo": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegenszugangssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegensabgangssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vermoegensbewegungssaldo": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_EXAKT",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "0.1",
+        "0.2"
+      ],
+      "ausgaben": [
+        "0.5"
+      ],
+      "vermoegenszugaenge": [
+        {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        {
+          "zaehler": "1",
+          "nenner": "6"
+        }
+      ],
+      "vermoegensabgaenge": [
+        "0.1"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einnahmensumme": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "ausgabensumme": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "einnahmen_ausgaben_saldo": {
+          "zaehler": "-1",
+          "nenner": "5"
+        },
+        "vermoegenszugangssumme": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "vermoegensabgangssumme": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "vermoegensbewegungssaldo": {
+          "zaehler": "2",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_FEHLT_einnahmen",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": null,
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_TYP_einnahmen",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": {},
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_LEERE_LISTE_einnahmen",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_NEGATIV_einnahmen",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "-1"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_NULLPOSITION_einnahmen",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        null
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_FEHLT_ausgaben",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": null,
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_TYP_ausgaben",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": {},
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_LEERE_LISTE_ausgaben",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_NEGATIV_ausgaben",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "-1"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_NULLPOSITION_ausgaben",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        null
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_FEHLT_vermoegenszugaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": null,
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_TYP_vermoegenszugaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": {},
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_LEERE_LISTE_vermoegenszugaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_NEGATIV_vermoegenszugaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "-1"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_NULLPOSITION_vermoegenszugaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        null
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_FEHLT_vermoegensabgaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": null,
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_TYP_vermoegensabgaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": {},
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_LEERE_LISTE_vermoegensabgaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_NEGATIV_vermoegensabgaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "-1"
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_NULLPOSITION_vermoegensabgaenge",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        null
+      ],
+      "rechnungsnachweis": "Identische rechtlich abgegrenzte Periode, getrennte Geldfluss- und Vermögensbewegungssichten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_FEHLT_rechnungsnachweis",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_TYP_rechnungsnachweis",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUUNGSRECHNUNG_SUMMEN_LEERER_NACHWEIS",
+    "funktion": "betreuungsrechnung_summen",
+    "eingaben": {
+      "einnahmen": [
+        "100",
+        "50"
+      ],
+      "ausgaben": [
+        "20",
+        "30"
+      ],
+      "vermoegenszugaenge": [
+        "200",
+        "100"
+      ],
+      "vermoegensabgaenge": [
+        "40",
+        "60"
+      ],
+      "rechnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige getrennte Summen:150Einnahmen−50Ausgaben=100;300Zugänge−100Abgänge=200; kein daraus erfundener Gesamtzuwachs300.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

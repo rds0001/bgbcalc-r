@@ -1,0 +1,606 @@
+[
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_VIER_PROZENT",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilzahlungen": [
+          {
+            "zahlung_id": "A",
+            "anfangssaldo": {
+              "zaehler": "1000",
+              "nenner": "1"
+            },
+            "kapitaltilgung": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "520",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "500",
+              "nenner": "1"
+            }
+          },
+          {
+            "zahlung_id": "B",
+            "anfangssaldo": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "kapitaltilgung": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "520",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "geschuldete_kosten_gesamt": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "entfallene_kosten_gesamt": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "1040",
+          "nenner": "1"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000*4%*1/2=20;500*4%*1/2=10. Kosten0und10, somit520+520=1040. Bei-2%: -10/-5Zins,490+505=995.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_NULLZINS",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilzahlungen": [
+          {
+            "zahlung_id": "A",
+            "anfangssaldo": {
+              "zaehler": "1000",
+              "nenner": "1"
+            },
+            "kapitaltilgung": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "500",
+              "nenner": "1"
+            }
+          },
+          {
+            "zahlung_id": "B",
+            "anfangssaldo": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "kapitaltilgung": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "510",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldete_kosten_gesamt": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "entfallene_kosten_gesamt": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "1010",
+          "nenner": "1"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000*4%*1/2=20;500*4%*1/2=10. Kosten0und10, somit520+520=1040. Bei-2%: -10/-5Zins,490+505=995.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_NEGATIVER_KORREKTURWERT",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "-0.02",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilzahlungen": [
+          {
+            "zahlung_id": "A",
+            "anfangssaldo": {
+              "zaehler": "1000",
+              "nenner": "1"
+            },
+            "kapitaltilgung": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "-10",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "490",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "500",
+              "nenner": "1"
+            }
+          },
+          {
+            "zahlung_id": "B",
+            "anfangssaldo": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "kapitaltilgung": {
+              "zaehler": "500",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "-5",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "505",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "-15",
+          "nenner": "1"
+        },
+        "geschuldete_kosten_gesamt": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "entfallene_kosten_gesamt": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "995",
+          "nenner": "1"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000*4%*1/2=20;500*4%*1/2=10. Kosten0und10, somit520+520=1040. Bei-2%: -10/-5Zins,490+505=995.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_FEHLT_anfangskapital",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": null,
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_FEHLT_korrigierter_sollzinssatz",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": null,
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_FEHLT_teilzahlungen",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": null,
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_FEHLT_plannachweis",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_UNGUELTIG0",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_UNGUELTIG1",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        },
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_UNGUELTIG2",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "1001",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_UNGUELTIG3",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_UNGUELTIG4",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "11"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FESTE_TILGUNG_NEUBERECHNEN_UNGUELTIG5",
+    "funktion": "verbraucherdarlehen_feste_tilgung_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1000",
+      "korrigierter_sollzinssatz": "0.04",
+      "teilzahlungen": [
+        {
+          "zahlung_id": "A",
+          "kapitaltilgung": "500",
+          "jahresanteil": "-1",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "10"
+        },
+        {
+          "zahlung_id": "B",
+          "kapitaltilgung": "500",
+          "jahresanteil": "0.5",
+          "vereinbarte_kosten": "10",
+          "nicht_geschuldete_kosten": "0"
+        }
+      ],
+      "plannachweis": "494V mit vertraglich unveränderten festen Kapitaltilgungen: jeden Anfangssaldo aus Anfangskapital und vorherigen Tilgungen selbst fortschreiben; Zins=Anfangssaldo*korrigierte Jahresquote*Jahresanteil, geschuldete Kosten=vereinbart-nichtgeschuldet, neue Teilzahlung=Tilgung+Zins+geschuldete Kosten. Summe der Tilgungen muss das Anfangskapital vollständig decken; keine Übertilgung. Negative mathematische Zinsen/Teilzahlungen sichtbar, keine automatische Zahlungspflicht des Darlehensgebers. Keine eigenständige gesetzliche Annuitätenannahme: Verträge mit gleichbleibender Gesamtrate oder verändertem Tilgungsverlauf werden hier nicht in feste Kapitaltilgungen umgedeutet. Jahresanteile und Vertragsstruktur müssen belegt sein; keine Effektivzinsberechnung, keine automatische Rundung, keine Zins-/Kostenkapitalisierung. Rechtliche Folgen494II/III separat in vorhandenen Zinsfunktionen berechnen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

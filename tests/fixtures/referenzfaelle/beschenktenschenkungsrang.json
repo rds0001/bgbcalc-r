@@ -1,0 +1,757 @@
+[
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_MEHRFACH",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A1",
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B",
+            "beschenkter_id": "B",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A2",
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_REST",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A1",
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B",
+            "beschenkter_id": "B",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A2",
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "haftungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_NULL",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "0",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A1",
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B",
+            "beschenkter_id": "B",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A2",
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_LETZTER_GENUEGT",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "10",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "haftung_je_schenkung": [
+          {
+            "schenkung_id": "A1",
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "B",
+            "beschenkter_id": "B",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schenkung_id": "A2",
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            }
+          }
+        ],
+        "haftung_je_beschenktem": [
+          {
+            "beschenkter_id": "A",
+            "haftungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "haftungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_QUALIFIKATION",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": false,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_FEHLT_fehlbetrag",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": null,
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_TYP_fehlbetrag",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": [],
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_FEHLT_schenkungen",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": null,
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_TYP_schenkungen",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": {},
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_FEHLT_vorgangsgrenzen_qualifiziert",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": null,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_TYP_vorgangsgrenzen_qualifiziert",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": 1,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_FEHLT_einordnungsnachweis",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_TYP_einordnungsnachweis",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_LEER",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_DOPPELT",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "10"
+        },
+        {
+          "schenkung_id": "A",
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "10"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_GLEICHRANG",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "10"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "10"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_NEGATIV",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "-1",
+      "schenkungen": [
+        {
+          "schenkung_id": "A1",
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "40"
+        },
+        {
+          "schenkung_id": "B",
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "haftungsgrenze": "30"
+        },
+        {
+          "schenkung_id": "A2",
+          "beschenkter_id": "A",
+          "schenkungsrang": 3,
+          "haftungsgrenze": "20"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_FELD",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {}
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_SCHENKUNGSVORGAENGE_EMPF_LEER",
+    "funktion": "pflichtteilsergaenzung_schenkungsvorgaenge",
+    "eingaben": {
+      "fehlbetrag": "70",
+      "schenkungen": [
+        {
+          "schenkung_id": "A",
+          "beschenkter_id": " ",
+          "schenkungsrang": 1,
+          "haftungsgrenze": "10"
+        }
+      ],
+      "vorgangsgrenzen_qualifiziert": true,
+      "einordnungsnachweis": "Synthetische überschneidungsfreie Vorgangsgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Lücke70: letzter VorgangA2 deckt20,davorB30,davorA1noch20; Agesamt40,B30. Lücke100:20+30+40,Rest10.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

@@ -1,0 +1,677 @@
+[
+  {
+    "fall_id": "PFL_001",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "25000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "100000 * gesetzliche Quote 1/2 * Pflichtteilshälfte 1/2 = 25000.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_002",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "10000",
+      "anrechnungsbestimmung": true,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "17500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "(100000+10000)*1/4 - 10000 = 17500; Hinzurechnung vor Abzug.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_003",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "10000",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "25000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ohne wirksame Anrechnungsbestimmung keine Hinzurechnung oder Anrechnung nach § 2315.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_004",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "100000",
+      "anrechnungsbestimmung": true,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Anrechnung verbraucht Pflichtteil; keine negative Rückzahlung aus dieser Regel.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_005",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "-100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Negativer Nettopflichtteilsnachlass begründet keinen positiven Pflichtteil.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_006",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "0",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Kein werthaltiger Nachlass.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_007",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 1,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "50000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Hälfte des gesamten gesetzlichen Erbteils.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_008",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "1",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 3,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "6"
+      }
+    },
+    "herleitung": "Exakter Bruch; keine Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_009",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": false,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine Pflichtteilsberechtigung im ausgewählten Fall.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_010",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 3,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_011",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 0,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_012",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "-1",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_013",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": 100000,
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_014",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": 1,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_015",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": ""
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_016",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": "100000",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": null,
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Anrechnungswert fehlt; keine Anrechnung muss ausdrücklich mit null Euro angegeben werden.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_017",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_erbteilwert": "7500",
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Fehlender Betrag 10000-7500.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_018",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_erbteilwert": "10000",
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Genau Pflichtteilswert: kein Fehlbetrag.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_019",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_erbteilwert": "12000",
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Hinterlassenes übersteigt Pflichtteil.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_020",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_erbteilwert": "0",
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Wert des Erbteils null, voller rechnerischer Fehlbetrag.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_021",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_erbteilwert": "7500",
+      "pflichtteilsberechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Berechtigung fehlt.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_022",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_erbteilwert": "-1",
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Berechtigung expliziter Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_023",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "-1",
+      "unbeschwerter_erbteilwert": "7500",
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Berechtigung expliziter Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_024",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_erbteilwert": "7500",
+      "pflichtteilsberechtigt": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Berechtigung expliziter Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_025",
+    "funktion": "zusatzpflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_erbteilwert": null,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Bewerteter Erbteil fehlt.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_026",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "7500",
+      "vermaechtnis_ausgeschlagen": false,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Nicht ausgeschlagenes Vermächtnis deckt 7500, Rest 2500.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_027",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "7500",
+      "vermaechtnis_ausgeschlagen": true,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ausgeschlagenes Vermächtnis wird nicht abgezogen.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_028",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "12000",
+      "vermaechtnis_ausgeschlagen": false,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Vermächtniswert deckt ganzen Pflichtteil.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_029",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "0",
+      "vermaechtnis_ausgeschlagen": false,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Wert null deckt nichts.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_030",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "12000",
+      "vermaechtnis_ausgeschlagen": true,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Auch höherwertiges ausgeschlagenes Vermächtnis kein Abzug.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_031",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "7500",
+      "vermaechtnis_ausgeschlagen": false,
+      "pflichtteilsberechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine Pflichtteilsberechtigung.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_032",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "-1",
+      "vermaechtnis_ausgeschlagen": false,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Typ.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_033",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "7500",
+      "vermaechtnis_ausgeschlagen": 1,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Typ.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_034",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": 10000,
+      "unbeschwerter_vermaechtniswert": "7500",
+      "vermaechtnis_ausgeschlagen": false,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag oder Typ.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "PFL_035",
+    "funktion": "pflichtteil_vermaechtnisrest",
+    "eingaben": {
+      "pflichtteilsbetrag": "10000",
+      "unbeschwerter_vermaechtniswert": "7500",
+      "vermaechtnis_ausgeschlagen": null,
+      "pflichtteilsberechtigt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Rechtlicher Ausschlagungsstatus fehlt.",
+    "pruefnachweis": "Vor Implementierung manuelle Halbierungs-/Hinzurechnungs-/Anrechnungsrechnung aus lokaler Quelle."
+  },
+  {
+    "fall_id": "BRUCHEINGABE_003",
+    "funktion": "pflichtteil_betrag",
+    "eingaben": {
+      "pflichtteilsnachlass": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "anrechnungswert": "0",
+      "anrechnungsbestimmung": false,
+      "pflichtteilsberechtigt": true,
+      "bewertungsnachweis": "Bewerteter Nettopflichtteilsnachlass und maßgebliche Erbquote nach § 2310"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "12"
+      }
+    },
+    "herleitung": "Unabhängige Bruchrechnung beziehungsweise unveränderte fachliche Nichtnegativitätsgrenze; exakte Objekte statt gerundeter Dezimaltexte. Erwartung 1/12.",
+    "pruefnachweis": "Manuelle Erwartung für zusätzliche verlustfreie Eingabedarstellung; keine neue materielle Rechenregel."
+  }
+]

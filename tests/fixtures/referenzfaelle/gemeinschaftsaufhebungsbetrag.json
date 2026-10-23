@@ -1,0 +1,410 @@
+[
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_BASIS",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilbare_erloesmasse": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "anteil_vor_teilhaberschuld": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "berichtigungsbetrag_teilhaberschuld": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "verbleibender_einzelanteil": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "ungedeckte_teilhaberschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckte_gemeinsame_schuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_INDIVIDUELL_UNGEDECKT",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "250",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilbare_erloesmasse": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "anteil_vor_teilhaberschuld": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "berichtigungsbetrag_teilhaberschuld": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verbleibender_einzelanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckte_teilhaberschuld": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "ungedeckte_gemeinsame_schuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_GEMEINSAM_UNGEDECKT",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "1200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilbare_erloesmasse": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anteil_vor_teilhaberschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "berichtigungsbetrag_teilhaberschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_einzelanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckte_teilhaberschuld": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "ungedeckte_gemeinsame_schuld": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_KEINE_SCHULD",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "0",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilbare_erloesmasse": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "anteil_vor_teilhaberschuld": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "berichtigungsbetrag_teilhaberschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_einzelanteil": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "ungedeckte_teilhaberschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckte_gemeinsame_schuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_NULLQUOTE",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilbare_erloesmasse": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "anteil_vor_teilhaberschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "berichtigungsbetrag_teilhaberschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_einzelanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckte_teilhaberschuld": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "ungedeckte_gemeinsame_schuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_BRUCHQUOTE",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilbare_erloesmasse": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "anteil_vor_teilhaberschuld": {
+          "zaehler": "800",
+          "nenner": "3"
+        },
+        "berichtigungsbetrag_teilhaberschuld": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "verbleibender_einzelanteil": {
+          "zaehler": "650",
+          "nenner": "3"
+        },
+        "ungedeckte_teilhaberschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckte_gemeinsame_schuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_QUOTE_ZU_GROSS",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "1.1",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_NEGATIV",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "-0.1",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_TYP",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": [],
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_LEER",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_FEHLT_gemeinschaftlicher_erloes",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": null,
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_FEHLT_zu_berichtigende_gemeinsame_schulden",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": null,
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_FEHLT_teilhaberquote",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": null,
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_FEHLT_gemeinschaftsbezogene_teilhaberschuld",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": null,
+      "einordnungsnachweis": "Qualifizierte gemeinsame und individuelle Gemeinschaftsschuld, Berichtigung verlangt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFT_AUFHEBUNGSANTEIL_FEHLT_einordnungsnachweis",
+    "funktion": "gemeinschaft_aufhebungsanteil",
+    "eingaben": {
+      "gemeinschaftlicher_erloes": "1000",
+      "zu_berichtigende_gemeinsame_schulden": "200",
+      "teilhaberquote": "0.25",
+      "gemeinschaftsbezogene_teilhaberschuld": "50",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-200)*1/4=200;50 Teilhaberschuld berichtigen,150 verbleiben.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

@@ -1,0 +1,526 @@
+[
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_0",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "100"
+        },
+        {
+          "zahlungs_id": "B",
+          "faellig_utc": "2024-02-01T00:00:00Z",
+          "betrag": "100"
+        },
+        {
+          "zahlungs_id": "C",
+          "faellig_utc": "2024-02-01T00:00:01Z",
+          "betrag": "100"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgebliche_teilzahlungssumme": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "anzahl_einbezogener_teilzahlungen": 2,
+        "anzahl_spaeter_faelliger_teilzahlungen": 1
+      }
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_1",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-02-01T00:00:01Z",
+          "betrag": "100"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgebliche_teilzahlungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anzahl_einbezogener_teilzahlungen": 0,
+        "anzahl_spaeter_faelliger_teilzahlungen": 1
+      }
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_2",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-02-01T00:00:00Z",
+          "betrag": "199.99"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgebliche_teilzahlungssumme": {
+          "zaehler": "19999",
+          "nenner": "100"
+        },
+        "anzahl_einbezogener_teilzahlungen": 1,
+        "anzahl_spaeter_faelliger_teilzahlungen": 0
+      }
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_3",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-02-01T00:00:00Z",
+          "betrag": "200.01"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgebliche_teilzahlungssumme": {
+          "zaehler": "20001",
+          "nenner": "100"
+        },
+        "anzahl_einbezogener_teilzahlungen": 1,
+        "anzahl_spaeter_faelliger_teilzahlungen": 0
+      }
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_4",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-02-01T00:00:00Z",
+          "betrag": "0"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgebliche_teilzahlungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anzahl_einbezogener_teilzahlungen": 1,
+        "anzahl_spaeter_faelliger_teilzahlungen": 0
+      }
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_5",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-02-01T00:00:00Z",
+          "betrag": "0.1"
+        },
+        {
+          "zahlungs_id": "B",
+          "faellig_utc": "2024-02-01T00:00:00Z",
+          "betrag": "0.2"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgebliche_teilzahlungssumme": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "anzahl_einbezogener_teilzahlungen": 2,
+        "anzahl_spaeter_faelliger_teilzahlungen": 0
+      }
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_6",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "C",
+          "faellig_utc": "2024-02-01T00:00:01Z",
+          "betrag": "100"
+        },
+        {
+          "zahlungs_id": "B",
+          "faellig_utc": "2024-02-01T00:00:00Z",
+          "betrag": "100"
+        },
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "100"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgebliche_teilzahlungssumme": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "anzahl_einbezogener_teilzahlungen": 2,
+        "anzahl_spaeter_faelliger_teilzahlungen": 1
+      }
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_FEHLT_teilzahlungen",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": null,
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_TYP_teilzahlungen",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": {},
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_FEHLT_fruehestmoeglicher_kuendigungszeitpunkt_utc",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "100"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": null,
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_TYP_fruehestmoeglicher_kuendigungszeitpunkt_utc",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "100"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": {},
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_FEHLT_einordnungsnachweis",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "100"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_TYP_einordnungsnachweis",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "100"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_UNGUELTIG_0",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_UNGUELTIG_1",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "1"
+        },
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-02-01T00:00:01Z",
+          "betrag": "2"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_UNGUELTIG_2",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "-1"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_UNGUELTIG_3",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-02-01T00:00:01Z",
+          "betrag": "-1"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_UNGUELTIG_4",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-02-30T00:00:00Z",
+          "betrag": "1"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_UNGUELTIG_5",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "1",
+          "extra": 1
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_UNGUELTIG_6",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": " ",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "1"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_FAELLIGKEIT_FEHLT",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": null,
+          "betrag": "1"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": "§510III2: gesetzliche Ersatzbezugsgröße für den Nettodarlehensbetrag491II2Nr1. Alle bis zum maßgeblichen Kündigungszeitpunkt zu entrichtenden Teilzahlungen einbeziehen, auch bereits entrichtete; keine Berechnung bloß des offenen Saldos. Später fällige Raten nicht einbeziehen. Mehrere verschiedene Raten dürfen denselben Fälligkeitszeitpunkt haben, aber jede Zahlung nur einmal erfassen. Kündigungsregel und Zahlungsplan extern qualifizieren; Ergebnis entscheidet keine weiteren491-Ausnahmen, kein Widerrufsrecht und keine tatsächliche Restschuld. Strikte UTC-Zeitpunkte ohne Zeitzonenannahmen; vorhandenen Standard-Datumsparser wiederverwenden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RATENLIEFERUNG_MASSGEBLICHE_TEILZAHLUNGSSUMME_NACHWEIS_LEER",
+    "funktion": "ratenlieferung_massgebliche_teilzahlungssumme",
+    "eingaben": {
+      "teilzahlungen": [
+        {
+          "zahlungs_id": "A",
+          "faellig_utc": "2024-01-01T00:00:00Z",
+          "betrag": "100"
+        }
+      ],
+      "fruehestmoeglicher_kuendigungszeitpunkt_utc": "2024-02-01T00:00:00Z",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Auswahl:vor und exakt am Zeitpunkt einbeziehen, eine Sekunde später ausschließen. Zahlungsplan umfasst auch frühere schon entrichtete Raten; Eingabereihenfolge unerheblich.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

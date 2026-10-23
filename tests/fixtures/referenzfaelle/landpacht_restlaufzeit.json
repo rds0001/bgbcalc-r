@@ -1,0 +1,381 @@
+[
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_GLEICH",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2026-12-31",
+        "restlaufzeit_weniger_als_drei_jahre": false
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_TAG_DAVOR",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2026-12-30",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2026-12-31",
+        "restlaufzeit_weniger_als_drei_jahre": true
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_TAG_DANACH",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2027-01-01",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2026-12-31",
+        "restlaufzeit_weniger_als_drei_jahre": false
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_EREIGNIS_GLEICH",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "ereignis",
+      "pachtende_am": "2027-01-01",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2027-01-01",
+        "restlaufzeit_weniger_als_drei_jahre": false
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_EREIGNIS_DAVOR",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "ereignis",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2027-01-01",
+        "restlaufzeit_weniger_als_drei_jahre": true
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_SCHALTTAG",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-02-29",
+      "beginnart": "ereignis",
+      "pachtende_am": "2027-02-28",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2027-02-28",
+        "restlaufzeit_weniger_als_drei_jahre": false
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_SCHALTTAG_DAVOR",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-02-29",
+      "beginnart": "ereignis",
+      "pachtende_am": "2027-02-27",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2027-02-28",
+        "restlaufzeit_weniger_als_drei_jahre": true
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_TAGESBEGINN_SCHALTTAG",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-02-29",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2027-02-28",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2027-02-28",
+        "restlaufzeit_weniger_als_drei_jahre": false
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_GLEICHER_TAG",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2024-01-01",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreijahreszeitraum_letzter_tag": "2026-12-31",
+        "restlaufzeit_weniger_als_drei_jahre": true
+      }
+    },
+    "herleitung": "Drei Kalenderjahre nach187/188; Tagesbeginn1.1.2024 ergibt31.12.2026. Strikter Datumsvergleich; genau drei Jahre sind nicht weniger. Fehlender29.Februar2027 führt auf28.Februar.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_FEHLT_beurteilungsbeginn_am",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": null,
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_TYP_beurteilungsbeginn_am",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": {},
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_FEHLT_beginnart",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": null,
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_TYP_beginnart",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": {},
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_FEHLT_pachtende_am",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": null,
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_TYP_pachtende_am",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": {},
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_FEHLT_einordnungsnachweis",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_TYP_einordnungsnachweis",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_UNGUELTIG_0",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2023-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_UNGUELTIG_1",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "ungeklaert",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_UNGUELTIG_2",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-02-30",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_UNGUELTIG_3",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "2024-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "2026-12-31",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "LANDPACHT_DREIJAHRES_RESTLAUFZEIT_UNGUELTIG_4",
+    "funktion": "landpacht_dreijahres_restlaufzeit",
+    "eingaben": {
+      "beurteilungsbeginn_am": "9998-01-01",
+      "beginnart": "tagesbeginn",
+      "pachtende_am": "9999-12-31",
+      "einordnungsnachweis": "§§590II/591II: Ende eines Dreijahreszeitraums ab qualifiziertem Bezugstag mit dem letzten Vertragstag vergleichen. Strikt früheres Pachtende bedeutet weniger als drei Jahre; Gleichheit genügt nicht. Keine automatische gerichtliche Erlaubnis, keine Festlegung des juristischen Beurteilungszeitpunkts. Nur kalendertäglich eindeutig normalisierte Zeitpunkte, keine ungeklärten untertägigen Grenzfälle."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

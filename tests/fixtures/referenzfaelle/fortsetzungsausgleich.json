@@ -1,0 +1,1091 @@
+[
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_TEILWEISE_BEREITS_AUSGEGLICHEN",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "70",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "60−20=40 verbleibender Vorempfang;100+40=140;70−40=30 für A,70 für B. Kein erneuter Ausgleich der20.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_ALLES_BEREITS_AUSGEGLICHEN",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "60"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Vorempfang vollständig bereits ausgeglichen;100 nur hälftig teilen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_KEINE_VORAUSGLEICHUNG",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "80",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "100+60=160; Hälfte80, abzüglich60 für A ergibt20.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_UEBEREMPFANG",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "140",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "120",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "A"
+        ]
+      }
+    },
+    "herleitung": "Restvorempfang120 übersteigt die Hälfte von220; A scheidet mit120 und Quote aus, B erhält100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_GLEICHHEIT_KEIN_AUSSCHLUSS",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "100",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "Vorempfang100 gleich Hälfte von200; A erhält null ohne Überempfangausschluss.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_KASKADE",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "30",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "vorempfangswert": "150",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "C",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "150",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "C",
+            "betrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "A",
+          "B"
+        ]
+      }
+    },
+    "herleitung": "Zunächst240/3=80: A ausgeschlossen. Danach90/2=45: B ausgeschlossen. C erhält30; keine Rückzahlung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_UNGLEICHE_QUOTEN",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 4,
+          "vorempfangswert": "40",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 3,
+          "erbquote_nenner": 4,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "A"
+        ]
+      }
+    },
+    "herleitung": "A rechnerisch140/4=35 kleiner Vorempfang40; Ausschluss, B erhält100.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_NULLMASSE",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "0",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": true
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": [
+          "A"
+        ]
+      }
+    },
+    "herleitung": "Bei Masse0 und verbleibendem Vorempfang40 wird A ausgeschlossen, B erhält0.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_BRUCHBETRAEGE",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "0.3",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0.2",
+          "bereits_ausgeglichener_vorempfangswert": "0.1"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_vorempfaenge": [
+          {
+            "person_id": "A",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "1",
+              "nenner": "10"
+            }
+          },
+          {
+            "person_id": "B",
+            "verbleibender_ausgleichungswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verteilung": [
+          {
+            "person_id": "A",
+            "betrag": {
+              "zaehler": "1",
+              "nenner": "10"
+            },
+            "ausser_ansatz": false
+          },
+          {
+            "person_id": "B",
+            "betrag": {
+              "zaehler": "1",
+              "nenner": "5"
+            },
+            "ausser_ansatz": false
+          }
+        ],
+        "ausser_ansatz": []
+      }
+    },
+    "herleitung": "0.2−0.1=0.1; Masse0.4 hälftig0.2; A Rest0.1, B0.2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_FEHLT_abkoemmlings_teilungsmasse",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": null,
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_TYP_abkoemmlings_teilungsmasse",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": {},
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_FEHLT_abkoemmlinge",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": null,
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_TYP_abkoemmlinge",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": {},
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_FEHLT_bewertungsnachweis",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_TYP_bewertungsnachweis",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_LEERE_GRUPPE",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_NEGATIVE_MASSE",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "-1",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_UEBERAUSGLEICH",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "1",
+          "bereits_ausgeglichener_vorempfangswert": "2"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_NEGATIVER_VOREMPFANG",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "-1",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_NEGATIVER_VORAUSGLEICH",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "1",
+          "bereits_ausgeglichener_vorempfangswert": "-1"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_DOPPEL_ID",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_QUOTENSUMME",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 3,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_NACHWEIS_LEER",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_POSITION_FEHLT_vorempfangswert",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": null,
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_POSITION_FEHLT_bereits_ausgeglichener_vorempfangswert",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "person_id": "A",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": null
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ungültige oder fehlende qualifizierte Eingabe.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_VOREMPFANGSAUSGLEICH_UNVOLLSTAENDIGER_POSITIONSSATZ",
+    "funktion": "fortgesetzte_guetergemeinschaft_vorempfangsausgleich",
+    "eingaben": {
+      "abkoemmlings_teilungsmasse": "100",
+      "abkoemmlinge": [
+        {
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "60",
+          "bereits_ausgeglichener_vorempfangswert": "20"
+        },
+        {
+          "person_id": "B",
+          "erbquote_zaehler": 1,
+          "erbquote_nenner": 2,
+          "vorempfangswert": "0",
+          "bereits_ausgeglichener_vorempfangswert": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte Abkömmlingshälfte, relative Ausgleichungsquoten, bereits ausgeglichene Vorempfangsteile auf derselben Wertbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unvollständige Positionsfelder dürfen nicht stillschweigend als null gerechnet werden.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität; vorhandener Ausgleichungskern wiederverwendet."
+  }
+]

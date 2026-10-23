@@ -1,0 +1,5 @@
+argumente <- getOption('bgb.pruefargumente',commandArgs(trailingOnly=TRUE))
+if(!isTRUE(getOption('bgb.instrumentiert'))) for(datei in list.files(file.path(argumente[[1]],'r/R'),full.names=TRUE)) source(datei)
+faelle <- jsonlite::fromJSON(file.path(argumente[[1]],'tests/fixtures/kompositionsfaelle/reiseverjaehrung_normanwendung.json'),simplifyVector=FALSE)
+for(f in faelle) stopifnot(identical(fristende(f$vertragliches_reiseende_am,2,'jahre','tagesbeginn')$wert,f$erwartetes_grundfristende))
+cat(length(faelle),'native R-Reiseverjaehrungsfälle bestanden.\n')

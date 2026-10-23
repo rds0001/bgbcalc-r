@@ -1,0 +1,839 @@
+[
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_GRUNDFALL",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "1000",
+      "neuer_verkaufspreis": "800",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "250",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_GRUNDFALL",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": "300",
+      "bewirkte_werterhoehung": "200",
+      "einordnungsnachweis": "Qualifizierte Verwendungen vor Wiederkauf ohne460-Sonderfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "200",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_PREIS_MIT_NEBENLEISTUNGSWERT_GRUNDFALL",
+    "funktion": "vorkauf_preis_mit_nebenleistungswert",
+    "eingaben": {
+      "kaufpreis": "1000",
+      "zu_ersetzender_nebenleistungswert": "200",
+      "einordnungsnachweis": "Schätzbare, nicht selbst erfüllbare und zu ersetzende Nebenleistung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1200",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_GRUNDFALL",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": "1",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_GRUNDFALL",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": "1000",
+      "bereits_qualifiziert_gesicherter_teil": "300",
+      "einordnungsnachweis": "Qualifiziert befreiter Hypothekenteil468II ohne Überlappung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "700",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_MEHRERLOES",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "1000",
+      "neuer_verkaufspreis": "1100",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "50",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_GLEICH",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "1000",
+      "neuer_verkaufspreis": "1000",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "50",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_KEIN_ERLOES",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "1000",
+      "neuer_verkaufspreis": "0",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1050",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_WERT_HOEHER",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": "300",
+      "bewirkte_werterhoehung": "400",
+      "einordnungsnachweis": "Qualifizierte Verwendungen vor Wiederkauf ohne460-Sonderfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "300",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_KEIN_MEHRWERT",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": "300",
+      "bewirkte_werterhoehung": "0",
+      "einordnungsnachweis": "Qualifizierte Verwendungen vor Wiederkauf ohne460-Sonderfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_PREIS_MIT_NEBENLEISTUNGSWERT_KEIN_ZUSATZ",
+    "funktion": "vorkauf_preis_mit_nebenleistungswert",
+    "eingaben": {
+      "kaufpreis": "1000",
+      "zu_ersetzender_nebenleistungswert": "0",
+      "einordnungsnachweis": "Schätzbare, nicht selbst erfüllbare und zu ersetzende Nebenleistung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_GANZER_KAUF",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": "3",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_WERT_NULL",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": "0",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_BRUCHWERTE",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "0.1",
+      "wert_vorkaufsgegenstand": "0.1",
+      "wert_gesamtkauf": "0.3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "30"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_KEINE_HYPOTHEK",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": "1000",
+      "bereits_qualifiziert_gesicherter_teil": "0",
+      "einordnungsnachweis": "Qualifiziert befreiter Hypothekenteil468II ohne Überlappung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_VOLL_GEDECKT",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": "1000",
+      "bereits_qualifiziert_gesicherter_teil": "1000",
+      "einordnungsnachweis": "Qualifiziert befreiter Hypothekenteil468II ohne Überlappung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_NENNER_NULL",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": "1",
+      "wert_gesamtkauf": "0",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_TEIL_ZU_GROSS",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": "4",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_TEIL_ZU_GROSS",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": "1000",
+      "bereits_qualifiziert_gesicherter_teil": "1001",
+      "einordnungsnachweis": "Qualifiziert befreiter Hypothekenteil468II ohne Überlappung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_FEHLT_urspruenglicher_verkaufspreis",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": null,
+      "neuer_verkaufspreis": "800",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_FEHLT_neuer_verkaufspreis",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "1000",
+      "neuer_verkaufspreis": null,
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_FEHLT_kosten_neuverkauf",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "1000",
+      "neuer_verkaufspreis": "800",
+      "kosten_neuverkauf": null,
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_FEHLT_einordnungsnachweis",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "1000",
+      "neuer_verkaufspreis": "800",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_TYP",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": [],
+      "neuer_verkaufspreis": "800",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_NEGATIV",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "-1",
+      "neuer_verkaufspreis": "800",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": "Qualifizierte Genehmigungsverweigerung und Neuverkaufswerte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "NEUVERKAUF_KOSTEN_UND_MINDERERLOES_LEER",
+    "funktion": "neuverkauf_kosten_und_mindererloes",
+    "eingaben": {
+      "urspruenglicher_verkaufspreis": "1000",
+      "neuer_verkaufspreis": "800",
+      "kosten_neuverkauf": "50",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_FEHLT_verwendungsaufwand",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": null,
+      "bewirkte_werterhoehung": "200",
+      "einordnungsnachweis": "Qualifizierte Verwendungen vor Wiederkauf ohne460-Sonderfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_FEHLT_bewirkte_werterhoehung",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": "300",
+      "bewirkte_werterhoehung": null,
+      "einordnungsnachweis": "Qualifizierte Verwendungen vor Wiederkauf ohne460-Sonderfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_FEHLT_einordnungsnachweis",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": "300",
+      "bewirkte_werterhoehung": "200",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_TYP",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": [],
+      "bewirkte_werterhoehung": "200",
+      "einordnungsnachweis": "Qualifizierte Verwendungen vor Wiederkauf ohne460-Sonderfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_NEGATIV",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": "-1",
+      "bewirkte_werterhoehung": "200",
+      "einordnungsnachweis": "Qualifizierte Verwendungen vor Wiederkauf ohne460-Sonderfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "WIEDERKAUF_VERWENDUNGSERSATZ_LEER",
+    "funktion": "wiederkauf_verwendungsersatz",
+    "eingaben": {
+      "verwendungsaufwand": "300",
+      "bewirkte_werterhoehung": "200",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_PREIS_MIT_NEBENLEISTUNGSWERT_FEHLT_kaufpreis",
+    "funktion": "vorkauf_preis_mit_nebenleistungswert",
+    "eingaben": {
+      "kaufpreis": null,
+      "zu_ersetzender_nebenleistungswert": "200",
+      "einordnungsnachweis": "Schätzbare, nicht selbst erfüllbare und zu ersetzende Nebenleistung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_PREIS_MIT_NEBENLEISTUNGSWERT_FEHLT_zu_ersetzender_nebenleistungswert",
+    "funktion": "vorkauf_preis_mit_nebenleistungswert",
+    "eingaben": {
+      "kaufpreis": "1000",
+      "zu_ersetzender_nebenleistungswert": null,
+      "einordnungsnachweis": "Schätzbare, nicht selbst erfüllbare und zu ersetzende Nebenleistung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_PREIS_MIT_NEBENLEISTUNGSWERT_FEHLT_einordnungsnachweis",
+    "funktion": "vorkauf_preis_mit_nebenleistungswert",
+    "eingaben": {
+      "kaufpreis": "1000",
+      "zu_ersetzender_nebenleistungswert": "200",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_PREIS_MIT_NEBENLEISTUNGSWERT_TYP",
+    "funktion": "vorkauf_preis_mit_nebenleistungswert",
+    "eingaben": {
+      "kaufpreis": [],
+      "zu_ersetzender_nebenleistungswert": "200",
+      "einordnungsnachweis": "Schätzbare, nicht selbst erfüllbare und zu ersetzende Nebenleistung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_PREIS_MIT_NEBENLEISTUNGSWERT_NEGATIV",
+    "funktion": "vorkauf_preis_mit_nebenleistungswert",
+    "eingaben": {
+      "kaufpreis": "-1",
+      "zu_ersetzender_nebenleistungswert": "200",
+      "einordnungsnachweis": "Schätzbare, nicht selbst erfüllbare und zu ersetzende Nebenleistung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_PREIS_MIT_NEBENLEISTUNGSWERT_LEER",
+    "funktion": "vorkauf_preis_mit_nebenleistungswert",
+    "eingaben": {
+      "kaufpreis": "1000",
+      "zu_ersetzender_nebenleistungswert": "200",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_FEHLT_gesamtpreis",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": null,
+      "wert_vorkaufsgegenstand": "1",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_FEHLT_wert_vorkaufsgegenstand",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": null,
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_FEHLT_wert_gesamtkauf",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": "1",
+      "wert_gesamtkauf": null,
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_FEHLT_einordnungsnachweis",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": "1",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_TYP",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": [],
+      "wert_vorkaufsgegenstand": "1",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_NEGATIV",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "-1",
+      "wert_vorkaufsgegenstand": "1",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": "Qualifiziertes Wertverhältnis des Vorkaufsgegenstands im Gesamtkauf."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_GESAMTPREISANTEIL_LEER",
+    "funktion": "vorkauf_gesamtpreisanteil",
+    "eingaben": {
+      "gesamtpreis": "1000",
+      "wert_vorkaufsgegenstand": "1",
+      "wert_gesamtkauf": "3",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_FEHLT_gestundeter_kaufpreis",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": null,
+      "bereits_qualifiziert_gesicherter_teil": "300",
+      "einordnungsnachweis": "Qualifiziert befreiter Hypothekenteil468II ohne Überlappung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_FEHLT_bereits_qualifiziert_gesicherter_teil",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": "1000",
+      "bereits_qualifiziert_gesicherter_teil": null,
+      "einordnungsnachweis": "Qualifiziert befreiter Hypothekenteil468II ohne Überlappung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_FEHLT_einordnungsnachweis",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": "1000",
+      "bereits_qualifiziert_gesicherter_teil": "300",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_TYP",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": [],
+      "bereits_qualifiziert_gesicherter_teil": "300",
+      "einordnungsnachweis": "Qualifiziert befreiter Hypothekenteil468II ohne Überlappung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_NEGATIV",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": "-1",
+      "bereits_qualifiziert_gesicherter_teil": "300",
+      "einordnungsnachweis": "Qualifiziert befreiter Hypothekenteil468II ohne Überlappung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  },
+  {
+    "fall_id": "VORKAUF_STUNDUNGSSICHERHEIT_LEER",
+    "funktion": "vorkauf_stundungssicherheit",
+    "eingaben": {
+      "gestundeter_kaufpreis": "1000",
+      "bereits_qualifiziert_gesicherter_teil": "300",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handgerechnete Kosten-/Mindererlössumme, Minimum, Wertersatzaddition, Verhältnisquote oder Sicherungsdifferenz; unabhängig vom Produktionscode.",
+    "pruefnachweis": "NativePython/R undvolleErgebnisparität."
+  }
+]

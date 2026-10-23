@@ -1,0 +1,361 @@
+[
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_GRUND",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "800",
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse_mit_abfindung": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rechnerischer_ehegattenhalbteil": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abkoemmlingshalbteil_vor_anrechnung": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_nach_anrechnung": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_KEINE_ABFINDUNG",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "800",
+      "qualifizierte_abfindungen": "0",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse_mit_abfindung": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "rechnerischer_ehegattenhalbteil": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "abkoemmlingshalbteil_vor_anrechnung": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_nach_anrechnung": {
+          "zaehler": "400",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_HAELFTE_VERBRAUCHT",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "200",
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse_mit_abfindung": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "rechnerischer_ehegattenhalbteil": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "abkoemmlingshalbteil_vor_anrechnung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_nach_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_NEGATIVER_RECHENSALDO",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "100",
+      "qualifizierte_abfindungen": "300",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse_mit_abfindung": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "rechnerischer_ehegattenhalbteil": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "abkoemmlingshalbteil_vor_anrechnung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_nach_anrechnung": {
+          "zaehler": "-100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_KEINE_RESTMASSE",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "0",
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse_mit_abfindung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "rechnerischer_ehegattenhalbteil": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "abkoemmlingshalbteil_vor_anrechnung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_nach_anrechnung": {
+          "zaehler": "-100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_ALLES_NULL",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "0",
+      "qualifizierte_abfindungen": "0",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse_mit_abfindung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerischer_ehegattenhalbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "abkoemmlingshalbteil_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_nach_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_EXAKT",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "0.3",
+      "qualifizierte_abfindungen": "0.1",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse_mit_abfindung": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "rechnerischer_ehegattenhalbteil": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "abkoemmlingshalbteil_vor_anrechnung": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "abkoemmlingssaldo_nach_anrechnung": {
+          "zaehler": "1",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_FEHLT_bereinigte_restmasse_ohne_abfindungen",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": null,
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_TYP_bereinigte_restmasse_ohne_abfindungen",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": [],
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_NEGATIV_bereinigte_restmasse_ohne_abfindungen",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "-1",
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_FEHLT_qualifizierte_abfindungen",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "800",
+      "qualifizierte_abfindungen": null,
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_TYP_qualifizierte_abfindungen",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "800",
+      "qualifizierte_abfindungen": [],
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_NEGATIV_qualifizierte_abfindungen",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "800",
+      "qualifizierte_abfindungen": "-1",
+      "bilanznachweis": "Nach Abfindung verbleibende bereinigte Masse800; gewährte einrechenbare Abfindung200, kein abweichender Vertrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_FEHLT_bilanznachweis",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "800",
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_TYP_bilanznachweis",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "800",
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ABFINDUNGSBILANZ_NACHWEIS_LEER",
+    "funktion": "fortgesetzte_guetergemeinschaft_abfindungsbilanz",
+    "eingaben": {
+      "bereinigte_restmasse_ohne_abfindungen": "800",
+      "qualifizierte_abfindungen": "200",
+      "bilanznachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig: ursprüngliche Rechenmasse1000 enthält Abfindung200; nach Abfluss800 vorhanden. Ehegattenhalbteil500, Abkömmlinge nach bereits gewährten200 noch rechnerisch300. Keine negative Pflicht bei negativem Saldo unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

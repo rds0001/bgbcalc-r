@@ -1,0 +1,234 @@
+[
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_GRENZTAG",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-31",
+      "beanstandung_am": "2025-02-28",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_fristbeginn": "2024-01-31",
+        "rechnerisches_grundfristende": "2025-02-28",
+        "beanstandung_bis_grundfristende": true
+      }
+    },
+    "herleitung": "31.1.2024+13Kalendermonate=28.2.2025. BeiUnterrichtung29.2.2024erst29.3.2025. OhneUnterrichtung kein festes Grundfristende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_NACH_GRENZE",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-31",
+      "beanstandung_am": "2025-03-01",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_fristbeginn": "2024-01-31",
+        "rechnerisches_grundfristende": "2025-02-28",
+        "beanstandung_bis_grundfristende": false
+      }
+    },
+    "herleitung": "31.1.2024+13Kalendermonate=28.2.2025. BeiUnterrichtung29.2.2024erst29.3.2025. OhneUnterrichtung kein festes Grundfristende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_SPAETE_UNTERRICHTUNG",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-02-29",
+      "beanstandung_am": "2025-03-29",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_fristbeginn": "2024-02-29",
+        "rechnerisches_grundfristende": "2025-03-29",
+        "beanstandung_bis_grundfristende": true
+      }
+    },
+    "herleitung": "31.1.2024+13Kalendermonate=28.2.2025. BeiUnterrichtung29.2.2024erst29.3.2025. OhneUnterrichtung kein festes Grundfristende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_NOCH_KEINE_UNTERRICHTUNG",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": null,
+      "beanstandung_am": "2025-02-28",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_fristbeginn": null,
+        "rechnerisches_grundfristende": null,
+        "beanstandung_bis_grundfristende": null
+      }
+    },
+    "herleitung": "31.1.2024+13Kalendermonate=28.2.2025. BeiUnterrichtung29.2.2024erst29.3.2025. OhneUnterrichtung kein festes Grundfristende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_FRUEHE_BEANSTANDUNG",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-02-29",
+      "beanstandung_am": "2024-02-01",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_fristbeginn": "2024-02-29",
+        "rechnerisches_grundfristende": "2025-03-29",
+        "beanstandung_bis_grundfristende": true
+      }
+    },
+    "herleitung": "31.1.2024+13Kalendermonate=28.2.2025. BeiUnterrichtung29.2.2024erst29.3.2025. OhneUnterrichtung kein festes Grundfristende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_VORHERIGE_UNTERRICHTUNG",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-30",
+      "beanstandung_am": "2025-02-28",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_fristbeginn": "2024-01-31",
+        "rechnerisches_grundfristende": "2025-02-28",
+        "beanstandung_bis_grundfristende": true
+      }
+    },
+    "herleitung": "31.1.2024+13Kalendermonate=28.2.2025. BeiUnterrichtung29.2.2024erst29.3.2025. OhneUnterrichtung kein festes Grundfristende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_FEHLT_belastung_am",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": null,
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-31",
+      "beanstandung_am": "2025-02-28",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_FEHLT_beanstandung_am",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-31",
+      "beanstandung_am": null,
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_FEHLT_einordnungsnachweis",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-31",
+      "beanstandung_am": "2025-02-28",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_UNGUELTIG0",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-31",
+      "beanstandung_am": "2024-01-30",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_UNGUELTIG1",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-02-30",
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-31",
+      "beanstandung_am": "2025-02-28",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_UNGUELTIG2",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "",
+      "beanstandung_am": "2025-02-28",
+      "einordnungsnachweis": "§676bII/IV:13Monate ab Belastung, bei spaeterer ordnungsgemaesser Unterrichtung erst ab dieser; vollstaendig fehlende Unterrichtung startet keinen fiktiven Fristlauf. Fehlendes Fristende ist keine Behauptung unbegrenzter Anspruchsdauer: allgemeine Verjaehrung und unverzuegliche Meldung676bI bleiben getrennt. Fristende nach187I/188, kein pauschales390Tage-Fenster. Beanstandung vor spaeterer formeller Unterrichtung kann die Ausschlussfrist bereits wahren.676bIII/Vunverschuldete Verhinderung bei dort genannten anderen Anspruechen ist qualitative Ausnahme ohne feste weitere Tageszahl; keine automatische6Monatsverlaengerung oder erfundenes Nachfristende.676cHaftungsausschluesse sind qualitative Tatbestaende ohne zusaetzliche feste Rechenregel.193gegebenenfalls mit bestehendem Kern nach rechtlicher Qualifikation, keine automatische Verschiebung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_BEANSTANDUNGSFRIST_UNGUELTIG3",
+    "funktion": "zahlung_beanstandungsfrist",
+    "eingaben": {
+      "belastung_am": "2024-01-31",
+      "ordnungsgemaesse_unterrichtung_am": "2024-01-31",
+      "beanstandung_am": "2025-02-28",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

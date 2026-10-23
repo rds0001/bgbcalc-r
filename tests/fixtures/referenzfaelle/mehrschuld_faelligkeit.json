@@ -1,0 +1,1217 @@
+[
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_FAELLIG_VOR_SICHERHEIT",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_BEIDE_FAELLIG",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_BEIDE_NICHT_FAELLIG",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_BESTIMMTE_NICHT_FAELLIGE",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": "B",
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_BESTIMMUNG_UEBERSCHUSS",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "150",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": "B",
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_ZWEI_GRUPPEN",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "150",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UEBERSCHUSS",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "250",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_NULL",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "0",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_LAESTIGKEIT_VOR_ALTER",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 2,
+          "altersrang": 1
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 2
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_ALTER_ENTSCHEIDET",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 2
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_EINE_SCHULD",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UMGEKEHRT",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        },
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ohne Bestimmung wird fälligeA trotz ungünstigerer Rangwerte zuerst bedient. BestimmungB bedient nurB;150aufB100 lässt50unzugeordnet. Ohne Bestimmung150verteilt100aufAund50aufB.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_GLEICHRANG_VERHAELTNIS",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "50",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "40",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "60",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "tilgungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "tilgungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "restschuld": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleichrang40:60verteilt50imVerhältnis2:3,also20/30.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_FEHLT_zahlung",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": null,
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_TYP_zahlung",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": {},
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_FEHLT_schulden",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": null,
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_TYP_schulden",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": {},
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_TYP_bestimmte_schuld_id",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": {},
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_FEHLT_einordnungsnachweis",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_TYP_einordnungsnachweis",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UNGUELTIG_0",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": "C",
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UNGUELTIG_1",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": " ",
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UNGUELTIG_2",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UNGUELTIG_3",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UNGUELTIG_4",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "0",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UNGUELTIG_5",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 0,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UNGUELTIG_6",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "-1",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": "§366I/II: bei qualifizierter eindeutiger Tilgungsbestimmung nur bestimmte Schuld bedienen; Überschuss bleibt unzugeordnet, keine erfundene weitere Schuldnerbestimmung. Ohne Bestimmung fällige vor nicht fälligen Schulden, dann geringere Sicherheit, größere Lästigkeit, höheres Alter; bei vollständigem Gleichrang verhältnismäßig nach offenen Beträgen. Nicht fällige Forderungen müssen vorzeitig erfüllbar sein. Qualifizierte Rangwerte sind keine automatisch bewertete Sicherheit/Lästigkeit. Mehrfachbestimmungen, Gläubiger-/Parteivereinbarungen und Spezialregeln gesondert. Innerhalb jeder Schuld Kosten/Zinsen/Hauptforderung367 separat; keine automatische Erstattung des unzugeordneten Betrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BESTIMMUNG_ODER_RANG_TILGEN_UNGUELTIG_7",
+    "funktion": "geldschulden_nach_bestimmung_oder_rang_tilgen",
+    "eingaben": {
+      "zahlung": "60",
+      "schulden": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "100",
+          "faellig": true,
+          "sicherheitsrang": 9,
+          "laestigkeitsrang": 9,
+          "altersrang": 9
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "faellig": false,
+          "sicherheitsrang": 1,
+          "laestigkeitsrang": 1,
+          "altersrang": 1
+        }
+      ],
+      "bestimmte_schuld_id": null,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

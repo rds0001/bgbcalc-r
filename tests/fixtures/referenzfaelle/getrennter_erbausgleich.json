@@ -1,0 +1,834 @@
+[
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_UEBEREMPFAENGER",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "restnachlass_nach_leistungsvorwegabzug": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "ausser_ansatz": [
+          "A"
+        ],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_MEHRERE_UEBEREMPFAENGER",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ausgleichungswert_zuwendungen": "200",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "D",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "restnachlass_nach_leistungsvorwegabzug": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "ausser_ansatz": [
+          "A",
+          "B"
+        ],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "D",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_EINER_VERBLEIBT",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "restnachlass_nach_leistungsvorwegabzug": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "ausser_ansatz": [
+          "A",
+          "B"
+        ],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_OHNE_UEBEREMPFANG",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "30",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "restnachlass_nach_leistungsvorwegabzug": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "ausser_ansatz": [],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "20",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "170",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "110",
+              "nenner": "3"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_UEBERSCHNEIDUNG",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "1"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_QUALIFIKATION_FEHLT",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": false,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_FEHLT_gruppennachlass",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": null,
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_TYP_gruppennachlass",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": [],
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_FEHLT_miterben",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": null,
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_TYP_miterben",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": {},
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_FEHLT_getrennte_empfaenger_und_reihenfolge_qualifiziert",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": null,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_TYP_getrennte_empfaenger_und_reihenfolge_qualifiziert",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": 1,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_FEHLT_rechts_und_bewertungsnachweis",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_TYP_rechts_und_bewertungsnachweis",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_NEGATIV",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "-1",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_LEISTUNG_ZU_HOCH",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "101"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": "GetrennteEmpfänger, gleicheGruppe,Leistungsvorwegabzug fachlichqualifiziert. A NichtleistenderÜberempfänger."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GETRENNTER_ZUWENDUNGS_LEISTUNGSAUSGLEICH_LEERER_NACHWEIS",
+    "funktion": "erbteilung_getrennter_zuwendungs_leistungsausgleich",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "getrennte_empfaenger_und_reihenfolge_qualifiziert": true,
+      "rechts_und_bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "N100−Leistung20=80; A mit300bei1/3Überempfänger, verbleibendeB/Cteilen80je40. Bplus20Leistung=60,C40,A0. KeineRückzahlungA.",
+    "pruefnachweis": "NativePython/R;vorhandene2056-Iteration wiederverwendet,nurNichtleistendeausscheiden."
+  }
+]

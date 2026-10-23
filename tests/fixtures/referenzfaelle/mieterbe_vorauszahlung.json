@@ -1,0 +1,340 @@
+[
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_MONAT_31",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "450",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Qualifizierter Vorteil gleich Vorauszahlung mal Anteil:930*15/31=450;870*14/29=420;100/3 bleibt ungerundet. Kein gesetzlich erfundener Todestagesanteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_SCHALTFEBRUAR",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "870",
+      "nach_tod_zugeordneter_anteil_zaehler": 14,
+      "nach_tod_zugeordneter_anteil_nenner": 29,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "420",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Qualifizierter Vorteil gleich Vorauszahlung mal Anteil:930*15/31=450;870*14/29=420;100/3 bleibt ungerundet. Kein gesetzlich erfundener Todestagesanteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_VOLL",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 31,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "930",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Qualifizierter Vorteil gleich Vorauszahlung mal Anteil:930*15/31=450;870*14/29=420;100/3 bleibt ungerundet. Kein gesetzlich erfundener Todestagesanteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_KEIN_ANTEIL",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 0,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Qualifizierter Vorteil gleich Vorauszahlung mal Anteil:930*15/31=450;870*14/29=420;100/3 bleibt ungerundet. Kein gesetzlich erfundener Todestagesanteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_KEINE_ZAHLUNG",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "0",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Qualifizierter Vorteil gleich Vorauszahlung mal Anteil:930*15/31=450;870*14/29=420;100/3 bleibt ungerundet. Kein gesetzlich erfundener Todestagesanteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_EXAKT",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "100",
+      "nach_tod_zugeordneter_anteil_zaehler": 1,
+      "nach_tod_zugeordneter_anteil_nenner": 3,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Qualifizierter Vorteil gleich Vorauszahlung mal Anteil:930*15/31=450;870*14/29=420;100/3 bleibt ungerundet. Kein gesetzlich erfundener Todestagesanteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_FEHLT_vorausgezahlte_abschnittsmiete",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": null,
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_TYP_vorausgezahlte_abschnittsmiete",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": {},
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_FEHLT_nach_tod_zugeordneter_anteil_zaehler",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": null,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_TYP_nach_tod_zugeordneter_anteil_zaehler",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": {},
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_FEHLT_nach_tod_zugeordneter_anteil_nenner",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": null,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_TYP_nach_tod_zugeordneter_anteil_nenner",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": {},
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_FEHLT_einordnungsnachweis",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_TYP_einordnungsnachweis",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_UNGUELTIG_0",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "-1",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_UNGUELTIG_1",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": -1,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_UNGUELTIG_2",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 32,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_UNGUELTIG_3",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 0,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_UNGUELTIG_4",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": true,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": "§563bII: rechnerischer Erstattungsbetrag gegenüber dem Erben für den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollständig zugutekommt. Der Tod beendet das Mietverhältnis hier nicht. Keine automatische Anwendung der547-Rückforderung gegen den Vermieter. Zeitanteil, tatsächliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem für denselben Vorteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETERBE_VORAUSZAHLUNGSERSPARNIS_UNGUELTIG_5",
+    "funktion": "mieterbe_vorauszahlungsersparnis",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "930",
+      "nach_tod_zugeordneter_anteil_zaehler": 15,
+      "nach_tod_zugeordneter_anteil_nenner": 31,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

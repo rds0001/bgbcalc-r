@@ -1,0 +1,362 @@
+[
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_HOECHSTER_SCHUTZ",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "850",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "vereinbarte_monatsmiete": "950",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "schutzmodell": "hoechste_wirksame_vorstaffel",
+      "einordnungsnachweis": "Jede vereinbarte Staffel wird nur nach oben durch ihre individuelle556d–g-Grenze samt qualifiziertem Vorstaffelschutz begrenzt. Geschützte frühere Miete darf eine niedriger vereinbarte Miete nicht erhöhen. Modell höchste_wirksame_Vorstaffel hält den höchsten tatsächlich zulässigen früheren Betrag; Modell unmittelbar_vorherige_Staffel schreibt nur den zuletzt wirksam begründeten Betrag fort. Rechtliche Fortgeltung bei sinkenden/neu vereinbarten Beträgen ist ausdrücklich vorzugeben, keine allgemeine Entscheidung dieser Auslegungsfrage. In keiner Variante anfänglich unzulässige Überhöhung schützen. Eine rechtlich eigenständige neue Folge gesondert rechnen und etwaiges556e-Vormietprivileg mit vorhandenem Vormietkern bestimmen; nicht ungeprüft historischen Höchstwert übertragen. Mindestjahresabstände mit vorhandenem Kalenderkern.556g-Auskunft/Privilegnutzbarkeit und Rüge gesondert; keine automatische10%-Grenze ohne556e-Ausnahmen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "850",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "50",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "1000auf900begrenzen,vereinbarte850bleibt850;dritte950jeFortgeltungsmodellauf900oder850begrenzen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_LETZTER_SCHUTZ",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "850",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "vereinbarte_monatsmiete": "950",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "schutzmodell": "unmittelbar_vorherige_staffel",
+      "einordnungsnachweis": "Jede vereinbarte Staffel wird nur nach oben durch ihre individuelle556d–g-Grenze samt qualifiziertem Vorstaffelschutz begrenzt. Geschützte frühere Miete darf eine niedriger vereinbarte Miete nicht erhöhen. Modell höchste_wirksame_Vorstaffel hält den höchsten tatsächlich zulässigen früheren Betrag; Modell unmittelbar_vorherige_Staffel schreibt nur den zuletzt wirksam begründeten Betrag fort. Rechtliche Fortgeltung bei sinkenden/neu vereinbarten Beträgen ist ausdrücklich vorzugeben, keine allgemeine Entscheidung dieser Auslegungsfrage. In keiner Variante anfänglich unzulässige Überhöhung schützen. Eine rechtlich eigenständige neue Folge gesondert rechnen und etwaiges556e-Vormietprivileg mit vorhandenem Vormietkern bestimmen; nicht ungeprüft historischen Höchstwert übertragen. Mindestjahresabstände mit vorhandenem Kalenderkern.556g-Auskunft/Privilegnutzbarkeit und Rüge gesondert; keine automatische10%-Grenze ohne556e-Ausnahmen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "900",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "850",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "rechnerische_monatsgrenze": {
+            "zaehler": "850",
+            "nenner": "1"
+          },
+          "rechnerische_monatsmiete": {
+            "zaehler": "850",
+            "nenner": "1"
+          },
+          "monatlicher_ueberhoehungsbetrag": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "1000auf900begrenzen,vereinbarte850bleibt850;dritte950jeFortgeltungsmodellauf900oder850begrenzen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_FEHLT_staffeln",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": null,
+      "schutzmodell": "hoechste_wirksame_vorstaffel",
+      "einordnungsnachweis": "Jede vereinbarte Staffel wird nur nach oben durch ihre individuelle556d–g-Grenze samt qualifiziertem Vorstaffelschutz begrenzt. Geschützte frühere Miete darf eine niedriger vereinbarte Miete nicht erhöhen. Modell höchste_wirksame_Vorstaffel hält den höchsten tatsächlich zulässigen früheren Betrag; Modell unmittelbar_vorherige_Staffel schreibt nur den zuletzt wirksam begründeten Betrag fort. Rechtliche Fortgeltung bei sinkenden/neu vereinbarten Beträgen ist ausdrücklich vorzugeben, keine allgemeine Entscheidung dieser Auslegungsfrage. In keiner Variante anfänglich unzulässige Überhöhung schützen. Eine rechtlich eigenständige neue Folge gesondert rechnen und etwaiges556e-Vormietprivileg mit vorhandenem Vormietkern bestimmen; nicht ungeprüft historischen Höchstwert übertragen. Mindestjahresabstände mit vorhandenem Kalenderkern.556g-Auskunft/Privilegnutzbarkeit und Rüge gesondert; keine automatische10%-Grenze ohne556e-Ausnahmen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_FEHLT_schutzmodell",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "850",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "vereinbarte_monatsmiete": "950",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "schutzmodell": null,
+      "einordnungsnachweis": "Jede vereinbarte Staffel wird nur nach oben durch ihre individuelle556d–g-Grenze samt qualifiziertem Vorstaffelschutz begrenzt. Geschützte frühere Miete darf eine niedriger vereinbarte Miete nicht erhöhen. Modell höchste_wirksame_Vorstaffel hält den höchsten tatsächlich zulässigen früheren Betrag; Modell unmittelbar_vorherige_Staffel schreibt nur den zuletzt wirksam begründeten Betrag fort. Rechtliche Fortgeltung bei sinkenden/neu vereinbarten Beträgen ist ausdrücklich vorzugeben, keine allgemeine Entscheidung dieser Auslegungsfrage. In keiner Variante anfänglich unzulässige Überhöhung schützen. Eine rechtlich eigenständige neue Folge gesondert rechnen und etwaiges556e-Vormietprivileg mit vorhandenem Vormietkern bestimmen; nicht ungeprüft historischen Höchstwert übertragen. Mindestjahresabstände mit vorhandenem Kalenderkern.556g-Auskunft/Privilegnutzbarkeit und Rüge gesondert; keine automatische10%-Grenze ohne556e-Ausnahmen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_FEHLT_einordnungsnachweis",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "850",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "vereinbarte_monatsmiete": "950",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "schutzmodell": "hoechste_wirksame_vorstaffel",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_UNGUELTIG0",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [],
+      "schutzmodell": "hoechste_wirksame_vorstaffel",
+      "einordnungsnachweis": "Jede vereinbarte Staffel wird nur nach oben durch ihre individuelle556d–g-Grenze samt qualifiziertem Vorstaffelschutz begrenzt. Geschützte frühere Miete darf eine niedriger vereinbarte Miete nicht erhöhen. Modell höchste_wirksame_Vorstaffel hält den höchsten tatsächlich zulässigen früheren Betrag; Modell unmittelbar_vorherige_Staffel schreibt nur den zuletzt wirksam begründeten Betrag fort. Rechtliche Fortgeltung bei sinkenden/neu vereinbarten Beträgen ist ausdrücklich vorzugeben, keine allgemeine Entscheidung dieser Auslegungsfrage. In keiner Variante anfänglich unzulässige Überhöhung schützen. Eine rechtlich eigenständige neue Folge gesondert rechnen und etwaiges556e-Vormietprivileg mit vorhandenem Vormietkern bestimmen; nicht ungeprüft historischen Höchstwert übertragen. Mindestjahresabstände mit vorhandenem Kalenderkern.556g-Auskunft/Privilegnutzbarkeit und Rüge gesondert; keine automatische10%-Grenze ohne556e-Ausnahmen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_UNGUELTIG1",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "850",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "vereinbarte_monatsmiete": "950",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "schutzmodell": "automatisch",
+      "einordnungsnachweis": "Jede vereinbarte Staffel wird nur nach oben durch ihre individuelle556d–g-Grenze samt qualifiziertem Vorstaffelschutz begrenzt. Geschützte frühere Miete darf eine niedriger vereinbarte Miete nicht erhöhen. Modell höchste_wirksame_Vorstaffel hält den höchsten tatsächlich zulässigen früheren Betrag; Modell unmittelbar_vorherige_Staffel schreibt nur den zuletzt wirksam begründeten Betrag fort. Rechtliche Fortgeltung bei sinkenden/neu vereinbarten Beträgen ist ausdrücklich vorzugeben, keine allgemeine Entscheidung dieser Auslegungsfrage. In keiner Variante anfänglich unzulässige Überhöhung schützen. Eine rechtlich eigenständige neue Folge gesondert rechnen und etwaiges556e-Vormietprivileg mit vorhandenem Vormietkern bestimmen; nicht ungeprüft historischen Höchstwert übertragen. Mindestjahresabstände mit vorhandenem Kalenderkern.556g-Auskunft/Privilegnutzbarkeit und Rüge gesondert; keine automatische10%-Grenze ohne556e-Ausnahmen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_UNGUELTIG2",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2024-12-31",
+          "vereinbarte_monatsmiete": "850",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "schutzmodell": "hoechste_wirksame_vorstaffel",
+      "einordnungsnachweis": "Jede vereinbarte Staffel wird nur nach oben durch ihre individuelle556d–g-Grenze samt qualifiziertem Vorstaffelschutz begrenzt. Geschützte frühere Miete darf eine niedriger vereinbarte Miete nicht erhöhen. Modell höchste_wirksame_Vorstaffel hält den höchsten tatsächlich zulässigen früheren Betrag; Modell unmittelbar_vorherige_Staffel schreibt nur den zuletzt wirksam begründeten Betrag fort. Rechtliche Fortgeltung bei sinkenden/neu vereinbarten Beträgen ist ausdrücklich vorzugeben, keine allgemeine Entscheidung dieser Auslegungsfrage. In keiner Variante anfänglich unzulässige Überhöhung schützen. Eine rechtlich eigenständige neue Folge gesondert rechnen und etwaiges556e-Vormietprivileg mit vorhandenem Vormietkern bestimmen; nicht ungeprüft historischen Höchstwert übertragen. Mindestjahresabstände mit vorhandenem Kalenderkern.556g-Auskunft/Privilegnutzbarkeit und Rüge gesondert; keine automatische10%-Grenze ohne556e-Ausnahmen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_UNGUELTIG3",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "-1",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "schutzmodell": "hoechste_wirksame_vorstaffel",
+      "einordnungsnachweis": "Jede vereinbarte Staffel wird nur nach oben durch ihre individuelle556d–g-Grenze samt qualifiziertem Vorstaffelschutz begrenzt. Geschützte frühere Miete darf eine niedriger vereinbarte Miete nicht erhöhen. Modell höchste_wirksame_Vorstaffel hält den höchsten tatsächlich zulässigen früheren Betrag; Modell unmittelbar_vorherige_Staffel schreibt nur den zuletzt wirksam begründeten Betrag fort. Rechtliche Fortgeltung bei sinkenden/neu vereinbarten Beträgen ist ausdrücklich vorzugeben, keine allgemeine Entscheidung dieser Auslegungsfrage. In keiner Variante anfänglich unzulässige Überhöhung schützen. Eine rechtlich eigenständige neue Folge gesondert rechnen und etwaiges556e-Vormietprivileg mit vorhandenem Vormietkern bestimmen; nicht ungeprüft historischen Höchstwert übertragen. Mindestjahresabstände mit vorhandenem Kalenderkern.556g-Auskunft/Privilegnutzbarkeit und Rüge gesondert; keine automatische10%-Grenze ohne556e-Ausnahmen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "STAFFELMIETE_FLEXIBLE_BETRAGSFOLGE_UNGUELTIG4",
+    "funktion": "staffelmiete_flexible_betragsfolge",
+    "eingaben": {
+      "staffeln": [
+        {
+          "staffelbeginn_am": "2024-01-01",
+          "vereinbarte_monatsmiete": "1000",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "900"
+        },
+        {
+          "staffelbeginn_am": "2025-01-01",
+          "vereinbarte_monatsmiete": "850",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        },
+        {
+          "staffelbeginn_am": "2026-01-01",
+          "vereinbarte_monatsmiete": "950",
+          "zulaessige_monatsmiete_ohne_vorstaffelschutz": "800"
+        }
+      ],
+      "schutzmodell": "hoechste_wirksame_vorstaffel",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

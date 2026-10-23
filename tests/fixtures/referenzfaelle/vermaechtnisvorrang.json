@@ -1,0 +1,489 @@
+[
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_TEILWEISE",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorrangiger_zuteilungsbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "nachrangiger_zuteilungsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "vorrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nachrangiger_kuerzungsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "nicht_verbrauchtes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_VORRANG_UNGEDECKT",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "30",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorrangiger_zuteilungsbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "nachrangiger_zuteilungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vorrangiger_kuerzungsbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "nachrangiger_kuerzungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nicht_verbrauchtes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_VORRANG_GENAU",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "60",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorrangiger_zuteilungsbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "nachrangiger_zuteilungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vorrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nachrangiger_kuerzungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nicht_verbrauchtes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_GESAMT_GENAU",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "140",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorrangiger_zuteilungsbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "nachrangiger_zuteilungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "vorrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nachrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_verbrauchtes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_BUDGETREST",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "200",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorrangiger_zuteilungsbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "nachrangiger_zuteilungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "vorrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nachrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_verbrauchtes_budget": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_NULL",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "0",
+      "vorrangige_beschwerung": "0",
+      "nachrangige_beschwerungen": "0",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorrangiger_zuteilungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nachrangiger_zuteilungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vorrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nachrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_verbrauchtes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_BRUCH",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "0.03",
+      "vorrangige_beschwerung": "0.01",
+      "nachrangige_beschwerungen": "0.04",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorrangiger_zuteilungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        },
+        "nachrangiger_zuteilungsbetrag": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "vorrangiger_kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nachrangiger_kuerzungsbetrag": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "nicht_verbrauchtes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_NICHT_ANWENDBAR",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_FEHLT_verfuegbarer_beschwerungsbetrag",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": null,
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_TYP_verfuegbarer_beschwerungsbetrag",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": [],
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_FEHLT_vorrangige_beschwerung",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": null,
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_TYP_vorrangige_beschwerung",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": [],
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_FEHLT_nachrangige_beschwerungen",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": null,
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_TYP_nachrangige_beschwerungen",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": [],
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_FEHLT_vorrang_nach_2189_qualifiziert",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_TYP_vorrang_nach_2189_qualifiziert",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_FEHLT_bewertungsnachweis",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_TYP_bewertungsnachweis",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_NEGATIV",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "-1",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Vorrang und begrenztes Beschwerungsbudget."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_VORRANGVERTEILUNG_NACHWEIS_LEER",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "80",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:Budget100 bedient Vorrang60 vollständig, Nachrang80 nur40. Budget30 reicht nur für30 Vorrang. Budget200 lässt nach60+80 noch60 frei.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzen und vollständige Ergebnisparität."
+  }
+]

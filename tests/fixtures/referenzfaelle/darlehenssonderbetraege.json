@@ -1,0 +1,494 @@
+[
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_WERTQUOTE",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": "500000",
+      "vertraglicher_wertanteil": "0.2",
+      "einordnungsnachweis": "Qualifiziertes Wertbeteiligungsdarlehen und Immobilienwert bei Rückzahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_NULLWERT",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": "0",
+      "vertraglicher_wertanteil": "0.2",
+      "einordnungsnachweis": "Qualifiziertes Wertbeteiligungsdarlehen und Immobilienwert bei Rückzahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_BRUCHQUOTE",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": "500000",
+      "vertraglicher_wertanteil": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "einordnungsnachweis": "Qualifiziertes Wertbeteiligungsdarlehen und Immobilienwert bei Rückzahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "500000",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_GEDECKELT",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": "120",
+      "vorab_mitgeteilter_hoechstbetrag": "100",
+      "einordnungsnachweis": "Wirksame Auslagenvereinbarung und vorab mitgeteilte Kostengrenze."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_UNTER_GRENZE",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": "80",
+      "vorab_mitgeteilter_hoechstbetrag": "100",
+      "einordnungsnachweis": "Wirksame Auslagenvereinbarung und vorab mitgeteilte Kostengrenze."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "80",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_GLEICH",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": "100",
+      "vorab_mitgeteilter_hoechstbetrag": "100",
+      "einordnungsnachweis": "Wirksame Auslagenvereinbarung und vorab mitgeteilte Kostengrenze."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_KORREKTUR",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "9800",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_KEINE_DIFFERENZ",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.06",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_VOLLE_DIFFERENZ",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "1.06",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_DIFFERENZ_ZU_GROSS",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "1.07",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_UEBERANGABE",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.05",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_FEHLT_immobilienwert_bei_rueckzahlung",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": null,
+      "vertraglicher_wertanteil": "0.2",
+      "einordnungsnachweis": "Qualifiziertes Wertbeteiligungsdarlehen und Immobilienwert bei Rückzahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_FEHLT_vertraglicher_wertanteil",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": "500000",
+      "vertraglicher_wertanteil": null,
+      "einordnungsnachweis": "Qualifiziertes Wertbeteiligungsdarlehen und Immobilienwert bei Rückzahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": "500000",
+      "vertraglicher_wertanteil": "0.2",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_NEGATIV",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": "-1",
+      "vertraglicher_wertanteil": "0.2",
+      "einordnungsnachweis": "Qualifiziertes Wertbeteiligungsdarlehen und Immobilienwert bei Rückzahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_TYP",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": [],
+      "vertraglicher_wertanteil": "0.2",
+      "einordnungsnachweis": "Qualifiziertes Wertbeteiligungsdarlehen und Immobilienwert bei Rückzahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHEN_WERTBETEILIGUNGSBETRAG_LEER",
+    "funktion": "darlehen_wertbeteiligungsbetrag",
+    "eingaben": {
+      "immobilienwert_bei_rueckzahlung": "500000",
+      "vertraglicher_wertanteil": "0.2",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_FEHLT_entstandene_erforderliche_auslagen",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": null,
+      "vorab_mitgeteilter_hoechstbetrag": "100",
+      "einordnungsnachweis": "Wirksame Auslagenvereinbarung und vorab mitgeteilte Kostengrenze."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_FEHLT_vorab_mitgeteilter_hoechstbetrag",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": "120",
+      "vorab_mitgeteilter_hoechstbetrag": null,
+      "einordnungsnachweis": "Wirksame Auslagenvereinbarung und vorab mitgeteilte Kostengrenze."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": "120",
+      "vorab_mitgeteilter_hoechstbetrag": "100",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_NEGATIV",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": "-1",
+      "vorab_mitgeteilter_hoechstbetrag": "100",
+      "einordnungsnachweis": "Wirksame Auslagenvereinbarung und vorab mitgeteilte Kostengrenze."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_TYP",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": [],
+      "vorab_mitgeteilter_hoechstbetrag": "100",
+      "einordnungsnachweis": "Wirksame Auslagenvereinbarung und vorab mitgeteilte Kostengrenze."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DARLEHENSVERMITTLUNG_AUSLAGENOBERGRENZE_LEER",
+    "funktion": "darlehensvermittlung_auslagenobergrenze",
+    "eingaben": {
+      "entstandene_erforderliche_auslagen": "120",
+      "vorab_mitgeteilter_hoechstbetrag": "100",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_FEHLT_vertraglicher_gesamtbetrag",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": null,
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_FEHLT_angegebener_effektiver_jahreszins",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": null,
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_FEHLT_tatsaechlicher_effektiver_jahreszins",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": null,
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_FEHLT_einordnungsnachweis",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_NEGATIV",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "-1",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_TYP",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": [],
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifiziertes Teilzahlungsgeschäft mit zwei Prozentpunkten Effektivzins-Unterangabe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_GESAMTBETRAGSKORREKTUR_LEER",
+    "funktion": "teilzahlung_gesamtbetragskorrektur",
+    "eingaben": {
+      "vertraglicher_gesamtbetrag": "10000",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:500000*0.2=100000;min(120,100)=100;10000*(1-(0.08-0.06))=9800.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

@@ -1,0 +1,640 @@
+[
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_DRITTER",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2024-03-05"
+      }
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_SAMSTAG_QUALIFIZIERT",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-04",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-02",
+          "2024-03-04"
+        ]
+      },
+      "kalendernachweis": "Rechtlich qualifizierter Zahlungsfall mit Samstag als Werktag;1.,2.,4.März sind drei Werktage. Kein Überweisungsfall ohne Samstagszählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2024-03-04"
+      }
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_BEGINN_FREIER_TAG",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-04-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-04-01",
+        "letzter_kalendertag": "2024-04-04",
+        "werktage": [
+          "2024-04-02",
+          "2024-04-03",
+          "2024-04-04"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2024-04-04"
+      }
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_QUARTAL",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "grundstueck_quartal_579",
+      "bezugsdatum": "2024-03-31",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-31",
+        "letzter_kalendertag": "2024-04-02",
+        "werktage": [
+          "2024-04-02"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2024-04-02"
+      }
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_JAHRESWECHSEL",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "grundstueck_quartal_579",
+      "bezugsdatum": "2023-12-31",
+      "werktagskalender": {
+        "erster_kalendertag": "2023-12-31",
+        "letzter_kalendertag": "2024-01-02",
+        "werktage": [
+          "2024-01-02"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2024-01-02"
+      }
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_FRUEHES_JAHR",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "0001-01-01",
+      "werktagskalender": {
+        "erster_kalendertag": "0001-01-01",
+        "letzter_kalendertag": "0001-01-03",
+        "werktage": [
+          "0001-01-01",
+          "0001-01-02",
+          "0001-01-03"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "0001-01-03"
+      }
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_FEHLT_fristfall",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": null,
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_TYP_fristfall",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": {},
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_FEHLT_bezugsdatum",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": null,
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_TYP_bezugsdatum",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": {},
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_FEHLT_werktagskalender",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": null,
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_TYP_werktagskalender",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {},
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_FEHLT_kalendernachweis",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_TYP_kalendernachweis",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_0",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "grundstueck_quartal_579",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_1",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "grundstueck_quartal_579",
+      "bezugsdatum": "2024-03-30",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_2",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-02-29",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_3",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-04",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_4",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-01",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_5",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-05",
+          "2024-03-04",
+          "2024-03-01"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_6",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": []
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_7",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-04",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": "§556bI und579II: Miete zu Beginn, spätestens am dritten Werktag des Bemessungszeitabschnitts; Ergebnis ist äußerer Zahlungstermin, nicht automatisch Verzugseintritt oder notwendiger Geldeingang. §579I3 nur Grundstücksmiete ohne kürzere Bemessungsabschnitte: erster Werktag nach Kalenderquartal. Räume folgen579II/556b. Andere bewegliche Sachen oder kürzere Grundstücksabschnitte nach579I1/2 nicht dieser Quartalsregel unterwerfen. Werk-/Bankgeschäftstagsbegriffe nicht gleichsetzen: intern wird nur dieselbe geordnete Kalendersuche wiederverwendet. Überweisungs-/Barzahlungsregeln und Feiertage ausdrücklich im Werktagskalender begründen; keine pauschale Montag-bis-Freitag- oder Samstagannahme. Unzureichend belegte Kalender werden zurückgewiesen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_UNGUELTIG_8",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "zahlung_556b",
+      "bezugsdatum": "2024-03-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-03-01",
+        "letzter_kalendertag": "2024-03-05",
+        "werktage": [
+          "2024-03-01",
+          "2024-03-04",
+          "2024-03-05"
+        ]
+      },
+      "kalendernachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Manuell im ausdrücklich vorgegebenen Kalender zählen:1./4./5.März→dritter5.März;Quartalsende31.März mit Ostermontag1.April→erster2.April. Keine automatisch ergänzten Geschäftstage.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_587_SAMSTAG",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "landpacht_abschnitt_587",
+      "bezugsdatum": "2024-05-31",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-05-31",
+        "letzter_kalendertag": "2024-06-03",
+        "werktage": [
+          "2024-06-01",
+          "2024-06-03"
+        ]
+      },
+      "kalendernachweis": "§587I2: bei Bemessung nach Zeitabschnitten erster rechtlich einschlaegiger Werktag nach deren Ablauf; bezugsdatum ist letzter Abschnittstag, kein zwingendes Kalenderquartal. Werktagskalender vollstaendig rechtlich belegen. Ohne Abschnittsbemessung gilt587I1: Ende der Pachtzeit; gegebenenfalls193 gesondert.587II verweist fuer Ersparnis und anderweitige Verwertung auf537; vorhandene Betragsrechnung verwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2024-06-01"
+      }
+    },
+    "herleitung": "Im expliziten vollstaendigen Kalender ersten Werktag strikt nach Abschnittsablauf auswaehlen; kein Quartalszwang.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_587_SONNTAG",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "landpacht_abschnitt_587",
+      "bezugsdatum": "2024-06-01",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-06-01",
+        "letzter_kalendertag": "2024-06-03",
+        "werktage": [
+          "2024-06-03"
+        ]
+      },
+      "kalendernachweis": "§587I2: bei Bemessung nach Zeitabschnitten erster rechtlich einschlaegiger Werktag nach deren Ablauf; bezugsdatum ist letzter Abschnittstag, kein zwingendes Kalenderquartal. Werktagskalender vollstaendig rechtlich belegen. Ohne Abschnittsbemessung gilt587I1: Ende der Pachtzeit; gegebenenfalls193 gesondert.587II verweist fuer Ersparnis und anderweitige Verwertung auf537; vorhandene Betragsrechnung verwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2024-06-03"
+      }
+    },
+    "herleitung": "Im expliziten vollstaendigen Kalender ersten Werktag strikt nach Abschnittsablauf auswaehlen; kein Quartalszwang.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_587_FEIERTAG",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "landpacht_abschnitt_587",
+      "bezugsdatum": "2024-12-31",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-12-31",
+        "letzter_kalendertag": "2025-01-02",
+        "werktage": [
+          "2025-01-02"
+        ]
+      },
+      "kalendernachweis": "§587I2: bei Bemessung nach Zeitabschnitten erster rechtlich einschlaegiger Werktag nach deren Ablauf; bezugsdatum ist letzter Abschnittstag, kein zwingendes Kalenderquartal. Werktagskalender vollstaendig rechtlich belegen. Ohne Abschnittsbemessung gilt587I1: Ende der Pachtzeit; gegebenenfalls193 gesondert.587II verweist fuer Ersparnis und anderweitige Verwertung auf537; vorhandene Betragsrechnung verwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2025-01-02"
+      }
+    },
+    "herleitung": "Im expliziten vollstaendigen Kalender ersten Werktag strikt nach Abschnittsablauf auswaehlen; kein Quartalszwang.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETE_WERKTAGSTERMIN_587_ABSCHNITTSMITTE",
+    "funktion": "miete_werktagstermin",
+    "eingaben": {
+      "fristfall": "landpacht_abschnitt_587",
+      "bezugsdatum": "2024-06-12",
+      "werktagskalender": {
+        "erster_kalendertag": "2024-06-12",
+        "letzter_kalendertag": "2024-06-14",
+        "werktage": [
+          "2024-06-12",
+          "2024-06-13",
+          "2024-06-14"
+        ]
+      },
+      "kalendernachweis": "§587I2: bei Bemessung nach Zeitabschnitten erster rechtlich einschlaegiger Werktag nach deren Ablauf; bezugsdatum ist letzter Abschnittstag, kein zwingendes Kalenderquartal. Werktagskalender vollstaendig rechtlich belegen. Ohne Abschnittsbemessung gilt587I1: Ende der Pachtzeit; gegebenenfalls193 gesondert.587II verweist fuer Ersparnis und anderweitige Verwertung auf537; vorhandene Betragsrechnung verwenden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_zahlungstermin": "2024-06-13"
+      }
+    },
+    "herleitung": "Im expliziten vollstaendigen Kalender ersten Werktag strikt nach Abschnittsablauf auswaehlen; kein Quartalszwang.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

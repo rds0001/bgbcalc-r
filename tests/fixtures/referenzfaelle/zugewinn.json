@@ -1,0 +1,586 @@
+[
+  {
+    "fall_id": "ZUGE_001",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "100",
+      "endvermoegen": "300",
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "200",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Endvermögen minus Anfangsvermögen.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_002",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "-100",
+      "endvermoegen": "300",
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "400",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Negatives Anfangsvermögen erhöht Zugewinn.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_003",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "-300",
+      "endvermoegen": "-100",
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "200",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Schuldenabbau kann trotz negativen Endvermögens Zugewinn sein.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_004",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "300",
+      "endvermoegen": "100",
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Vermögensabnahme ist kein negativer Zugewinn.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_005",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "100",
+      "endvermoegen": "100",
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Gleiche Werte: kein Zugewinn.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_006",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "0",
+      "endvermoegen": "0",
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Beide Werte null.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_007",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": 100,
+      "endvermoegen": "300",
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nicht vertragsgemäßer Typ oder fehlender Bewertungsbeleg.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_008",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "100",
+      "endvermoegen": "1e2",
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nicht vertragsgemäßer Typ oder fehlender Bewertungsbeleg.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_009",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "100",
+      "endvermoegen": "300",
+      "bewertungsnachweis": ""
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nicht vertragsgemäßer Typ oder fehlender Bewertungsbeleg.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_010",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": "100",
+      "endvermoegen": null,
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Endvermögen fehlt.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_011",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "b_an_a",
+        "halber_ueberschuss": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "haftungsgrenze": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "B hat 200 mehr Zugewinn, A erhält rechnerisch Hälfte 100; Grenze 500 greift nicht.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_012",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "300",
+      "zugewinn_ehegatte_b": "100",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "a_an_b",
+        "halber_ueberschuss": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "haftungsgrenze": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gegenrichtung bei vertauschten Zugewinnen.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_013",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "100",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "kein_ueberschuss",
+        "halber_ueberschuss": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "haftungsgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Kein Zugewinnüberschuss, keine Berechnung einer Schuldnergrenze erforderlich.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_014",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "40",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "b_an_a",
+        "halber_ueberschuss": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "haftungsgrenze": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Vorhandenes Nettovermögen begrenzt auf 40.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_015",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "-40",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "b_an_a",
+        "halber_ueberschuss": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "haftungsgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Negatives verfügbares Vermögen ohne Hinzurechnung: keine positive Haftungsgrenze.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_016",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "-40",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "100",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "b_an_a",
+        "halber_ueberschuss": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "haftungsgrenze": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Erst negatives Nettovermögen und Hinzurechnung addieren, dann Nulluntergrenze: -40+100=60, nicht 100.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_017",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "40",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "100",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "b_an_a",
+        "halber_ueberschuss": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "haftungsgrenze": {
+          "zaehler": "140",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Hinzurechnung hebt Grenze auf 140 an; Anspruch bleibt auf halben Überschuss 100 beschränkt.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_018",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "0",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "900",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "b_an_a",
+        "halber_ueberschuss": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "haftungsgrenze": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Nur Vermögen und Hinzurechnung des ausgleichspflichtigen Ehegatten begrenzen.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_019",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "0",
+      "zugewinn_ehegatte_b": "1",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "richtung": "b_an_a",
+        "halber_ueberschuss": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "haftungsgrenze": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "grundbetrag": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Halbierung exakt, keine Rundung.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_020",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "-1",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Zugewinn/Hinzurechnung nichtnegativ, Nettovermögen signierte Dezimalzeichenfolge, Nachweis nichtleer.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_021",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "-1",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Zugewinn/Hinzurechnung nichtnegativ, Nettovermögen signierte Dezimalzeichenfolge, Nachweis nichtleer.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_022",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": 500,
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Zugewinn/Hinzurechnung nichtnegativ, Nettovermögen signierte Dezimalzeichenfolge, Nachweis nichtleer.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_023",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": "300",
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": ""
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Zugewinn/Hinzurechnung nichtnegativ, Nettovermögen signierte Dezimalzeichenfolge, Nachweis nichtleer.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "ZUGE_024",
+    "funktion": "zugewinnausgleich_grundbetrag",
+    "eingaben": {
+      "zugewinn_ehegatte_a": "100",
+      "zugewinn_ehegatte_b": null,
+      "nettovermoegen_ehegatte_a": "500",
+      "nettovermoegen_ehegatte_b": "500",
+      "hinzurechnung_ehegatte_a": "0",
+      "hinzurechnung_ehegatte_b": "0",
+      "bewertungsnachweis": "Stichtagswerte nach §§ 1378/1384/1387 und anerkannte Hinzurechnungen"
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ein Zugewinn fehlt.",
+    "pruefnachweis": "Unabhängige manuelle Differenz-, Halbierungs- und Begrenzungsrechnung aus §§ 1373/1378 vor Implementierung."
+  },
+  {
+    "fall_id": "BRUCHEINGABE_002",
+    "funktion": "zugewinn_betrag",
+    "eingaben": {
+      "anfangsvermoegen": {
+        "zaehler": "-1",
+        "nenner": "3"
+      },
+      "endvermoegen": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "bewertungsnachweis": "Rechtlich bewertete und vergleichbar bereinigte Vermögenswerte"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Unabhängige Bruchrechnung beziehungsweise unveränderte fachliche Nichtnegativitätsgrenze; exakte Objekte statt gerundeter Dezimaltexte. Erwartung 2/3.",
+    "pruefnachweis": "Manuelle Erwartung für zusätzliche verlustfreie Eingabedarstellung; keine neue materielle Rechenregel."
+  }
+]

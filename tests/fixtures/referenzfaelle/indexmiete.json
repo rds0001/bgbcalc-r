@@ -1,0 +1,746 @@
+[
+  {
+    "fall_id": "INDEXMIETE_PLUS",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "indexverhaeltnis": {
+          "zaehler": "11",
+          "nenner": "10"
+        },
+        "neue_miete": {
+          "zaehler": "880",
+          "nenner": "1"
+        },
+        "mietaenderung": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "800 mal110/100=880; Differenz80.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_MINUS",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "90",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "indexverhaeltnis": {
+          "zaehler": "9",
+          "nenner": "10"
+        },
+        "neue_miete": {
+          "zaehler": "720",
+          "nenner": "1"
+        },
+        "mietaenderung": {
+          "zaehler": "-80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Auch fallender Index:800 mal90/100=720; Änderung minus80.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_GLEICH",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "110",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "indexverhaeltnis": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "neue_miete": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "mietaenderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unveränderter Index ergibt unveränderte Miete.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_DRITTEL",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "1",
+      "ausgangsindex": "3",
+      "neuer_index": "4",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "indexverhaeltnis": {
+          "zaehler": "4",
+          "nenner": "3"
+        },
+        "neue_miete": {
+          "zaehler": "4",
+          "nenner": "3"
+        },
+        "mietaenderung": {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      }
+    },
+    "herleitung": "Exaktes Indexverhältnis4/3; keine Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_NULLMIETE",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "0",
+      "ausgangsindex": "100",
+      "neuer_index": "120",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "indexverhaeltnis": {
+          "zaehler": "6",
+          "nenner": "5"
+        },
+        "neue_miete": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "mietaenderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Nullbasis bleibt Null, auch bei positiver Indexänderung.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_BRUCH",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": {
+        "zaehler": "1",
+        "nenner": "2"
+      },
+      "ausgangsindex": {
+        "zaehler": "3",
+        "nenner": "2"
+      },
+      "neuer_index": {
+        "zaehler": "9",
+        "nenner": "4"
+      },
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "indexverhaeltnis": {
+          "zaehler": "3",
+          "nenner": "2"
+        },
+        "neue_miete": {
+          "zaehler": "3",
+          "nenner": "4"
+        },
+        "mietaenderung": {
+          "zaehler": "1",
+          "nenner": "4"
+        }
+      }
+    },
+    "herleitung": "Indexverhältnis(9/4)/(3/2)=3/2, Miete3/4.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_KEINE_VEREINBARUNG",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ohne wirksame Indexvereinbarung keine Anwendung.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_MONATSANFANG",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-01",
+      "bisherige_indexmiete_ab": "2025-03-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_nach_zugang": "2026-03-01",
+        "fruehester_beginn_nach_jahresfrist": "2026-03-01",
+        "jahresfrist_eingehalten": true
+      }
+    },
+    "herleitung": "Übernächster Monat März; genau ein Jahr unverändert.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_MONATSENDE",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "bisherige_indexmiete_ab": "2025-03-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_nach_zugang": "2026-03-01",
+        "fruehester_beginn_nach_jahresfrist": "2026-03-01",
+        "jahresfrist_eingehalten": true
+      }
+    },
+    "herleitung": "Zugang am letzten Januartag ändert den Monatsbeginn März nicht.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_JAHRNICHTVOLL",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-15",
+      "bisherige_indexmiete_ab": "2025-03-02",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_nach_zugang": "2026-03-01",
+        "fruehester_beginn_nach_jahresfrist": "2026-03-02",
+        "jahresfrist_eingehalten": false
+      }
+    },
+    "herleitung": "Märzbeginn liegt einen Tag vor Ablauf der Mindestdauer; keine automatische Verschiebung.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_SCHALTSTART",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2025-01-15",
+      "bisherige_indexmiete_ab": "2024-02-29",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_nach_zugang": "2025-03-01",
+        "fruehester_beginn_nach_jahresfrist": "2025-03-01",
+        "jahresfrist_eingehalten": true
+      }
+    },
+    "herleitung": "Jahresfrist bei Beginn29.Februar endet28.Februar2025; Änderung ab1.März.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_JAHRESWECHSEL",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-12-31",
+      "bisherige_indexmiete_ab": "2025-01-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_nach_zugang": "2027-02-01",
+        "fruehester_beginn_nach_jahresfrist": "2026-01-01",
+        "jahresfrist_eingehalten": true
+      }
+    },
+    "herleitung": "Übernächster Monat nach Dezember ist Februar des Folgejahres.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_EIN_TAG",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-02-28",
+      "bisherige_indexmiete_ab": "2026-02-27",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_nach_zugang": "2026-04-01",
+        "fruehester_beginn_nach_jahresfrist": "2027-02-27",
+        "jahresfrist_eingehalten": false
+      }
+    },
+    "herleitung": "Seit27.Februar geltende Indexmiete ist am1.April desselben Jahres noch kein Jahr unverändert.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_UNTERGRENZE",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "0001-01-01",
+      "bisherige_indexmiete_ab": "0001-01-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beginn_nach_zugang": "0001-03-01",
+        "fruehester_beginn_nach_jahresfrist": "0002-01-01",
+        "jahresfrist_eingehalten": false
+      }
+    },
+    "herleitung": "Proleptischer Kalender; kein Ablauf eines Jahres am1.März desselben Jahres.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_KEINE_ERKLAERUNG",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-01",
+      "bisherige_indexmiete_ab": "2025-03-01",
+      "erklaerung_formell_ordnungsgemaess": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ohne formell ordnungsgemäße Erklärung kein Termin aus dieser Funktion.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_AUSGANGSMIETE0",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "-1",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_AUSGANGSMIETE1",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": null,
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_AUSGANGSINDEX0",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "0",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_AUSGANGSINDEX1",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "-1",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_AUSGANGSINDEX2",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "abc",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_AUSGANGSINDEX3",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": null,
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_NEUER_INDEX0",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "0",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_NEUER_INDEX1",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "-1",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_NEUER_INDEX2",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": null,
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_INDEXNACHWEIS0",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": "",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_INDEXNACHWEIS1",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": null,
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_INDEXNACHWEIS2",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": 1,
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_WIRKSAME_INDEXVEREINBARUNG0",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_WIRKSAME_INDEXVEREINBARUNG1",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "800",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": "ja"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_RECHENUEBERLAUF",
+    "funktion": "indexmiete_betrag",
+    "eingaben": {
+      "ausgangsmiete": "9007199254740991",
+      "ausgangsindex": "100",
+      "neuer_index": "110",
+      "indexnachweis": "Synthetische Indexwerte gleicher Basis und Reihe; Ausgangs- und Änderungsmonat ausdrücklich bestimmt.",
+      "wirksame_indexvereinbarung": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_ZUGANG_ERKLAERUNG0",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": null,
+      "bisherige_indexmiete_ab": "2025-03-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_ZUGANG_ERKLAERUNG1",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-02-30",
+      "bisherige_indexmiete_ab": "2025-03-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_ZUGANG_ERKLAERUNG2",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "9999-11-01",
+      "bisherige_indexmiete_ab": "2025-03-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_BISHERIGE_INDEXMIETE_AB0",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-01",
+      "bisherige_indexmiete_ab": null,
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_BISHERIGE_INDEXMIETE_AB1",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-01",
+      "bisherige_indexmiete_ab": "2027-01-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_BISHERIGE_INDEXMIETE_AB2",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-01",
+      "bisherige_indexmiete_ab": "9999-01-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_ERKLAERUNG_FORMELL_ORDNUNGSGEMAESS0",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-01",
+      "bisherige_indexmiete_ab": "2025-03-01",
+      "erklaerung_formell_ordnungsgemaess": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_ERKLAERUNG_FORMELL_ORDNUNGSGEMAESS1",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-01",
+      "bisherige_indexmiete_ab": "2025-03-01",
+      "erklaerung_formell_ordnungsgemaess": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des dokumentierten Eingabevertrags oder des darstellbaren Zahlen-/Datumsbereichs.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  },
+  {
+    "fall_id": "INDEXMIETE_JAHRESUEBERLAUF",
+    "funktion": "indexmiete_aenderungstermin_pruefen",
+    "eingaben": {
+      "zugang_erklaerung": "9999-10-01",
+      "bisherige_indexmiete_ab": "9999-01-01",
+      "erklaerung_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Jahresfrist führt über den darstellbaren Kalender hinaus.",
+    "pruefnachweis": "Vor Implementierung manuell aus §557b der lokalen PDF und §§187/188 abgeleitet."
+  }
+]

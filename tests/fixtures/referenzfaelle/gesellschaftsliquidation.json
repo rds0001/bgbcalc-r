@@ -1,0 +1,1370 @@
+[
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_UEBERSCHUSS",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "1000",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "glaeubiger_und_reservebedarf": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "nach_glaeubigern_verbleibend": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "beitragsrueckerstattungsbedarf": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verteilbarer_ueberschuss": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "von_gesellschaftern_zu_deckender_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_BEITRAGSFEHLBETRAG",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "600",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "glaeubiger_und_reservebedarf": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "nach_glaeubigern_verbleibend": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "beitragsrueckerstattungsbedarf": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verteilbarer_ueberschuss": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "von_gesellschaftern_zu_deckender_fehlbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_GLAEUBIGERFEHLBETRAG",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "300",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "glaeubiger_und_reservebedarf": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "nach_glaeubigern_verbleibend": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "beitragsrueckerstattungsbedarf": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verteilbarer_ueberschuss": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "von_gesellschaftern_zu_deckender_fehlbetrag": {
+          "zaehler": "400",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_GENAU",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "700",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "glaeubiger_und_reservebedarf": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "nach_glaeubigern_verbleibend": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "beitragsrueckerstattungsbedarf": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verteilbarer_ueberschuss": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "von_gesellschaftern_zu_deckender_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_KEIN_AUSFALL",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "gesellschafter_id": "A",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "B",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "C",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_MEHRSTUFIG",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "10"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "40"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "gesellschafter_id": "A",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "B",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "C",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "70",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_ALLES_BEGRENZT",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "10"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "20"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "30"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "gesellschafter_id": "A",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "B",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "C",
+            "regelanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_UNGLEICHE_QUOTEN",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_hoechstbetrag": "0"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "3",
+            "nenner": "10"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "5"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "gesellschafter_id": "A",
+            "regelanteil": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "B",
+            "regelanteil": {
+              "zaehler": "36",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "72",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "36",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "C",
+            "regelanteil": {
+              "zaehler": "24",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "48",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "24",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_NULLQUOTE",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_hoechstbetrag": "0"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_hoechstbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "gesellschafter_id": "A",
+            "regelanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "B",
+            "regelanteil": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "C",
+            "regelanteil": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "70",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "10",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_NULLFEHLBETRAG",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "0",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "gesellschafter_id": "A",
+            "regelanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "B",
+            "regelanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "C",
+            "regelanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_BRUCH",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "0.1",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "gesellschafter_id": "A",
+            "regelanteil": {
+              "zaehler": "1",
+              "nenner": "30"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "1",
+              "nenner": "30"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "B",
+            "regelanteil": {
+              "zaehler": "1",
+              "nenner": "30"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "1",
+              "nenner": "30"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "gesellschafter_id": "C",
+            "regelanteil": {
+              "zaehler": "1",
+              "nenner": "30"
+            },
+            "beibringbarer_betrag": {
+              "zaehler": "1",
+              "nenner": "30"
+            },
+            "zusaetzliche_ausfalllast": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_beibringbar": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_QUOTENSUMME",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "einbringlicher_hoechstbetrag": "10"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "10"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_DOPPELT",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_FORM",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {},
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_GRENZE_NEGATIV",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "-1"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_ZU_WENIGE",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_QUOTE_ZU_GROSS",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "2",
+            "nenner": "1"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_FEHLT_gesellschaftsvermoegen",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": null,
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_FEHLT_zu_berichtigende_verbindlichkeiten",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "1000",
+      "zu_berichtigende_verbindlichkeiten": null,
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_FEHLT_erforderliche_rueckbehalte",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "1000",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": null,
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_FEHLT_rueckzuerstattende_beitraege",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "1000",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": null,
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_FEHLT_einordnungsnachweis",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "1000",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_NEGATIV",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "-1",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_TYP",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": [],
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": "Qualifizierte Liquidationswerte ohne Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSGRUNDBETRAEGE_LEER",
+    "funktion": "gesellschaft_liquidationsgrundbetraege",
+    "eingaben": {
+      "gesellschaftsvermoegen": "1000",
+      "zu_berichtigende_verbindlichkeiten": "400",
+      "erforderliche_rueckbehalte": "100",
+      "rueckzuerstattende_beitraege": "200",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_FEHLT_fehlbetrag",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": null,
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_FEHLT_gesellschafter",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": null,
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_FEHLT_einordnungsnachweis",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_NEGATIV",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "-1",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_TYP",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": [],
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Vollständige Quoten und qualifiziert erlangbare Gesamtbeträge desselben Fehlbetrags."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_LIQUIDATIONSFEHLBETRAG_VERTEILEN_LEER",
+    "funktion": "gesellschaft_liquidationsfehlbetrag_verteilen",
+    "eingaben": {
+      "fehlbetrag": "120",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewinn_verlust_anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "einbringlicher_hoechstbetrag": "1000"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: Grundbedarf500+200=700; bei AusfallA10 undB40 werden von120 schließlich10/40/70 beigebracht, da C den weiteren Ausfall übernimmt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; Mehrstufen-Ausfallfälle separat gerechnet."
+  }
+]

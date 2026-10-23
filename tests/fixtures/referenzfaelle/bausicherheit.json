@@ -1,0 +1,572 @@
+[
+  {
+    "fall_id": "BAUS_001",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "11000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Streitige nicht festgestellte Gegenforderung bleibt unberücksichtigt: 10000+10 Prozent=11000.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_002",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": true,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "9900",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unstreitige Gegenforderung mindert zu sichernde Vergütung auf 9000; dazu 10 Prozent.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_003",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": true,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "9900",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Rechtskräftig festgestellte Gegenforderung ebenfalls berücksichtigen.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_004",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "11000",
+      "gegenforderung_unstreitig": true,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Gegenforderung übersteigt offene Vergütung: keine positive Vergütung mehr zu sichern.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_005",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "0",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Keine offene Vergütung, keine Nebenforderungspauschale.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_006",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "oeffentlich_insolvenzunfaehig",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschluss des § 650f Abs. 6.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_007",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "verbraucherbau",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschluss des § 650f Abs. 6.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_008",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "bautraeger_verbraucher",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ausschluss des § 650f Abs. 6.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_009",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "verbraucherbau",
+      "baubetreuer_bevollmaechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "11000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ermächtigter Baubetreuer hebt ausschließlich den Verbraucherausschluss auf.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_010",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "bautraeger_verbraucher",
+      "baubetreuer_bevollmaechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "11000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ermächtigter Baubetreuer hebt ausschließlich den Verbraucherausschluss auf.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_011",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "oeffentlich_insolvenzunfaehig",
+      "baubetreuer_bevollmaechtigt": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Baubetreuer-Ausnahme hebt öffentlich-rechtlichen Ausschluss nicht auf.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_012",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "-1",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_013",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": 1000,
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_014",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "verbraucher",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_015",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": "10000",
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": 1,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des Eingabevertrags.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_016",
+    "funktion": "bau_sicherungsbetrag",
+    "eingaben": {
+      "offene_verguetung": null,
+      "aufrechenbare_gegenforderung": "1000",
+      "gegenforderung_unstreitig": false,
+      "gegenforderung_rechtskraeftig": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Offener Betrag fehlt.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_017",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "10000",
+      "bereits_gestellte_sicherheit": "0",
+      "verbraucherbauvertrag": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grundsicherheit": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "zusaetzliche_sicherheit": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtsicherheit": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "noch_zu_stellen": {
+          "zaehler": "5000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Genau 10 Prozent Mehrvergütung überschreiten Schwelle nicht.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_018",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "12000",
+      "bereits_gestellte_sicherheit": "0",
+      "verbraucherbauvertrag": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grundsicherheit": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "zusaetzliche_sicherheit": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "gesamtsicherheit": {
+          "zaehler": "5600",
+          "nenner": "1"
+        },
+        "noch_zu_stellen": {
+          "zaehler": "5600",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "12 Prozent Mehrvergütung: 5 Prozent der gesamten Mehrvergütung 12000, nicht nur des Überschreitungsbetrags 2000.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_019",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "12000",
+      "bereits_gestellte_sicherheit": "5000",
+      "verbraucherbauvertrag": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grundsicherheit": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "zusaetzliche_sicherheit": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "gesamtsicherheit": {
+          "zaehler": "5600",
+          "nenner": "1"
+        },
+        "noch_zu_stellen": {
+          "zaehler": "600",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bereits geleistete Grundsicherheit berücksichtigen.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_020",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "12000",
+      "bereits_gestellte_sicherheit": "6000",
+      "verbraucherbauvertrag": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grundsicherheit": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "zusaetzliche_sicherheit": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "gesamtsicherheit": {
+          "zaehler": "5600",
+          "nenner": "1"
+        },
+        "noch_zu_stellen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Kein zusätzlicher Stellungsbedarf; keine automatische Entscheidung über Freigabe.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_021",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "0",
+      "bereits_gestellte_sicherheit": "0",
+      "verbraucherbauvertrag": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grundsicherheit": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "zusaetzliche_sicherheit": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtsicherheit": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "noch_zu_stellen": {
+          "zaehler": "5000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Nur Grundsicherheit.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_022",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "12000",
+      "bereits_gestellte_sicherheit": "0",
+      "verbraucherbauvertrag": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Regelbereich Verbraucherbauvertrag nicht eröffnet.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_023",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "-1",
+      "bereits_gestellte_sicherheit": "0",
+      "verbraucherbauvertrag": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Bereich oder Typ. Änderungsverminderungen benötigen eigene Bewertung.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_024",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "0",
+      "zusaetzliche_verguetung": "10000",
+      "bereits_gestellte_sicherheit": "0",
+      "verbraucherbauvertrag": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Bereich oder Typ. Änderungsverminderungen benötigen eigene Bewertung.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_025",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "10000",
+      "bereits_gestellte_sicherheit": "-1",
+      "verbraucherbauvertrag": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Bereich oder Typ. Änderungsverminderungen benötigen eigene Bewertung.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_026",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "10000",
+      "bereits_gestellte_sicherheit": "0",
+      "verbraucherbauvertrag": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Bereich oder Typ. Änderungsverminderungen benötigen eigene Bewertung.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  },
+  {
+    "fall_id": "BAUS_027",
+    "funktion": "verbraucherbau_herstellungssicherheit",
+    "eingaben": {
+      "urspruengliche_gesamtverguetung": "100000",
+      "zusaetzliche_verguetung": "10000",
+      "bereits_gestellte_sicherheit": "0",
+      "verbraucherbauvertrag": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Vertragsqualifikation fehlt.",
+    "pruefnachweis": "Manuelle Ableitung aus lokalem § 650f bzw. § 650m vor Implementierung."
+  }
+]

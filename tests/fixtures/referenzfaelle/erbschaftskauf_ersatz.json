@@ -1,0 +1,823 @@
+[
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_DIFFERENZ",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertminderung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "ersatzbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_GLEICH",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "100",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertminderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ersatzbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_KEINE_MINDERUNG",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "110",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertminderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ersatzbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_NULL",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "0",
+      "wert_mit_belastung": "0",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertminderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ersatzbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_VOLLSTAENDIG",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "0",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertminderung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "ersatzbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_BRUCH",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "0.03",
+      "wert_mit_belastung": "0.01",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertminderung": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "ersatzbetrag": {
+          "zaehler": "1",
+          "nenner": "50"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_KENNTNIS",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": true,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertminderung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "ersatzbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_NICHT_ANWENDBAR",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": false,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_FEHLT_wert_ohne_belastung",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": null,
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_TYP_wert_ohne_belastung",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": [],
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_FEHLT_wert_mit_belastung",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": null,
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_TYP_wert_mit_belastung",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": [],
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_FEHLT_unentgeltliche_belastung_vor_kauf_qualifiziert",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": null,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_TYP_unentgeltliche_belastung_vor_kauf_qualifiziert",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": 1,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_FEHLT_kaeufer_kennt_belastung_beim_kauf",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": null,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_TYP_kaeufer_kennt_belastung_beim_kauf",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": 1,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_FEHLT_bewertungsnachweis",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_TYP_bewertungsnachweis",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_NACHWEIS_LEER",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "100",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_BELASTUNGSWERTMINDERUNG_NEGATIV",
+    "funktion": "erbschaftskauf_belastungswertminderung",
+    "eingaben": {
+      "wert_ohne_belastung": "-1",
+      "wert_mit_belastung": "70",
+      "unentgeltliche_belastung_vor_kauf_qualifiziert": true,
+      "kaeufer_kennt_belastung_beim_kauf": false,
+      "bewertungsnachweis": "Synthetisch vergleichbare Werte gleicher Bewertungszeitpunkt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_WERTDECKEL",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ersatz_notwendiger_verwendungen": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ersatz_anderer_aufwendungen": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gesamter_verwendungsersatz": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_KOSTENDECKEL",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "30",
+      "fortbestehende_wertsteigerung_beim_kauf": "80",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ersatz_notwendiger_verwendungen": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ersatz_anderer_aufwendungen": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gesamter_verwendungsersatz": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_GLEICH",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "30",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ersatz_notwendiger_verwendungen": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ersatz_anderer_aufwendungen": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gesamter_verwendungsersatz": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_KEINE_WERTSTEIGERUNG",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "30",
+      "fortbestehende_wertsteigerung_beim_kauf": "0",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ersatz_notwendiger_verwendungen": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ersatz_anderer_aufwendungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamter_verwendungsersatz": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_NULL",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "0",
+      "andere_aufwendungen_vor_kauf": "0",
+      "fortbestehende_wertsteigerung_beim_kauf": "0",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ersatz_notwendiger_verwendungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ersatz_anderer_aufwendungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamter_verwendungsersatz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_BRUCH",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "0.01",
+      "andere_aufwendungen_vor_kauf": "0.03",
+      "fortbestehende_wertsteigerung_beim_kauf": "0.02",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ersatz_notwendiger_verwendungen": {
+          "zaehler": "1",
+          "nenner": "100"
+        },
+        "ersatz_anderer_aufwendungen": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "gesamter_verwendungsersatz": {
+          "zaehler": "3",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_NICHT_ANWENDBAR",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_FEHLT_notwendige_verwendungen_vor_kauf",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": null,
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_TYP_notwendige_verwendungen_vor_kauf",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": [],
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_FEHLT_andere_aufwendungen_vor_kauf",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": null,
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_TYP_andere_aufwendungen_vor_kauf",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": [],
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_FEHLT_fortbestehende_wertsteigerung_beim_kauf",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": null,
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_TYP_fortbestehende_wertsteigerung_beim_kauf",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": [],
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_FEHLT_aufwendungen_nach_2381_qualifiziert",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_TYP_aufwendungen_nach_2381_qualifiziert",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_FEHLT_bewertungsnachweis",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_TYP_bewertungsnachweis",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_NACHWEIS_LEER",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_NEGATIV",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "20",
+      "andere_aufwendungen_vor_kauf": "-1",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSKAUF_VERWENDUNGSERSATZ_UEBERLAUF",
+    "funktion": "erbschaftskauf_verwendungsersatz",
+    "eingaben": {
+      "notwendige_verwendungen_vor_kauf": "9007199254740991",
+      "andere_aufwendungen_vor_kauf": "80",
+      "fortbestehende_wertsteigerung_beim_kauf": "30",
+      "aufwendungen_nach_2381_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch überschneidungsfrei abgegrenzte Voraufwendungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Wertdifferenzen und Wertdeckel:100−70=30; notwendige20 plus min(80,30)=50. Null-/Gleichheits-/Bruchfälle getrennt.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

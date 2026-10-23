@@ -1,0 +1,529 @@
+[
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_ANTEILIG",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beschenktenanteile": [
+          {
+            "beschenkter_id": "A",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "2000",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "4000",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Schenkungswerte5000:10000=1:2; Fehlbetrag6000 verteilt2000/4000. Höchstens insgesamt15000 zuordnen;18000 lässt3000ungedeckt. Keine Gleichteilung3000/3000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_VOLLER_WERT",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "15000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beschenktenanteile": [
+          {
+            "beschenkter_id": "A",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "5000",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "10000",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Schenkungswerte5000:10000=1:2; Fehlbetrag6000 verteilt2000/4000. Höchstens insgesamt15000 zuordnen;18000 lässt3000ungedeckt. Keine Gleichteilung3000/3000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_UEBER_GESAMTWERT",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "18000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beschenktenanteile": [
+          {
+            "beschenkter_id": "A",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "5000",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "10000",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "3000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Schenkungswerte5000:10000=1:2; Fehlbetrag6000 verteilt2000/4000. Höchstens insgesamt15000 zuordnen;18000 lässt3000ungedeckt. Keine Gleichteilung3000/3000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_NULL",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "0",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beschenktenanteile": [
+          {
+            "beschenkter_id": "A",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Schenkungswerte5000:10000=1:2; Fehlbetrag6000 verteilt2000/4000. Höchstens insgesamt15000 zuordnen;18000 lässt3000ungedeckt. Keine Gleichteilung3000/3000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_UMGEKEHRT",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        },
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beschenktenanteile": [
+          {
+            "beschenkter_id": "B",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "4000",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "A",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "2000",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Schenkungswerte5000:10000=1:2; Fehlbetrag6000 verteilt2000/4000. Höchstens insgesamt15000 zuordnen;18000 lässt3000ungedeckt. Keine Gleichteilung3000/3000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_BRUCH",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "1",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beschenktenanteile": [
+          {
+            "beschenkter_id": "A",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "2",
+              "nenner": "3"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1EUR nach1:2 ergibt1/3und2/3, keine Cent-Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_FEHLT_fehlbetrag",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": null,
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_TYP_fehlbetrag",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": {},
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_FEHLT_beschenkte",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": null,
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_TYP_beschenkte",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": {},
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_FEHLT_einordnungsnachweis",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_TYP_einordnungsnachweis",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_UNGUELTIG_0",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_UNGUELTIG_1",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_UNGUELTIG_2",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_UNGUELTIG_3",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "0"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_UNGUELTIG_4",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "-1",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": "§2329III mit ergänzender Primärquelle AG Bielefeld, Urteil17.05.2019,409C30/18,Rn35: gleichzeitige Schenkungen anteilig nach maßgeblichen Schenkungswerten. Nur Grundfall ohne zusätzliche individuelle Haftungsbegrenzungen/Ausfälle und ohne gruppenübergreifende Personenrahmen. Fehlbetrag höchstens bis zur Summe dieser Schenkungswerte proportional zuordnen; größerer Rest bleibt für eine gesonderte Prüfung früherer Schenkungen. Nicht nach Köpfen, keine Gesamtschuld. Werte, Gleichzeitigkeit und Bereicherungs-/Pflichtteilsvoraussetzungen rechtlich qualifizieren; kein automatischer Geldanspruch statt Sachherausgabe. Kein allgemeiner Streitentscheid über Sonderfälle aus einem amtsgerichtlichen Urteil ableiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_GLEICHZEITIGE_SCHENKUNGEN_UNGUELTIG_5",
+    "funktion": "pflichtteilsergaenzung_gleichzeitige_schenkungen",
+    "eingaben": {
+      "fehlbetrag": "6000",
+      "beschenkte": [
+        {
+          "beschenkter_id": "A",
+          "massgeblicher_schenkungswert": "5000"
+        },
+        {
+          "beschenkter_id": "B",
+          "massgeblicher_schenkungswert": "10000"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

@@ -1,0 +1,286 @@
+[
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_GLEICH_ERSTMALS",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "1200",
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "relative_wertaenderung": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "neuausloesungsschwelle_ueberschritten": false,
+        "fortdauerschwelle_erreicht": true,
+        "numerische_warnbedingung": false
+      }
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_GLEICH_BEREITS",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "1200",
+      "warnfolge_bereits_ausgeloest": true,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "relative_wertaenderung": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "neuausloesungsschwelle_ueberschritten": false,
+        "fortdauerschwelle_erreicht": true,
+        "numerische_warnbedingung": true
+      }
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_UEBER_ERSTMALS",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "1201",
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "relative_wertaenderung": {
+          "zaehler": "201",
+          "nenner": "1000"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "neuausloesungsschwelle_ueberschritten": true,
+        "fortdauerschwelle_erreicht": true,
+        "numerische_warnbedingung": true
+      }
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_UNTER_BEREITS",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "1199",
+      "warnfolge_bereits_ausgeloest": true,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "relative_wertaenderung": {
+          "zaehler": "199",
+          "nenner": "1000"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "neuausloesungsschwelle_ueberschritten": false,
+        "fortdauerschwelle_erreicht": false,
+        "numerische_warnbedingung": false
+      }
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_GESUNKEN",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "900",
+      "warnfolge_bereits_ausgeloest": true,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "relative_wertaenderung": {
+          "zaehler": "-1",
+          "nenner": "10"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "neuausloesungsschwelle_ueberschritten": false,
+        "fortdauerschwelle_erreicht": false,
+        "numerische_warnbedingung": false
+      }
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_NULLBASIS",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "0",
+      "wert_zum_vergleichskurs": "1200",
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_NEGATIV",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "-1",
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_TYP_BOOL",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "1200",
+      "warnfolge_bereits_ausgeloest": 1,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_TYP_WERT",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": [],
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_LEER",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "1200",
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_FEHLT_wert_zum_vertragskurs",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": null,
+      "wert_zum_vergleichskurs": "1200",
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_FEHLT_wert_zum_vergleichskurs",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": null,
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_FEHLT_warnfolge_bereits_ausgeloest",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "1200",
+      "warnfolge_bereits_ausgeloest": null,
+      "einordnungsnachweis": "Qualifizierte gleiche Beträge/Währung und rechtlich bestimmter Warnfolgestatus."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSWARNSCHWELLE_FEHLT_einordnungsnachweis",
+    "funktion": "immobiliardarlehen_wechselkurswarnschwelle",
+    "eingaben": {
+      "wert_zum_vertragskurs": "1000",
+      "wert_zum_vergleichskurs": "1200",
+      "warnfolge_bereits_ausgeloest": false,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: genau20% löst erstmals nicht aus, hält eine ausgelöste Folge jedoch aufrecht;19,9% beendet numerische Fortdauer.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

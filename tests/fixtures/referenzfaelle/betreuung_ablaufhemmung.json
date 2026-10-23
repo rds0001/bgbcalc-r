@@ -1,0 +1,320 @@
+[
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_VERLAENGERT",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_fristende": "2024-04-10"
+      }
+    },
+    "herleitung": "Ablaufhemmung: Maximum aus bisherigem letzten Tag und rechtskräftiger Genehmigung.29.Februar bis10.April→10.April, nicht29.Februar plus gesamte Verfahrensdauer.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_FRUEHERE_RECHTSKRAFT",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-02-20",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_fristende": "2024-02-29"
+      }
+    },
+    "herleitung": "Ablaufhemmung: Maximum aus bisherigem letzten Tag und rechtskräftiger Genehmigung.29.Februar bis10.April→10.April, nicht29.Februar plus gesamte Verfahrensdauer.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_GLEICHTAG",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-02-29",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_fristende": "2024-02-29"
+      }
+    },
+    "herleitung": "Ablaufhemmung: Maximum aus bisherigem letzten Tag und rechtskräftiger Genehmigung.29.Februar bis10.April→10.April, nicht29.Februar plus gesamte Verfahrensdauer.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_BEGINN_AM_LETZTEN_TAG",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-29",
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_fristende": "2024-04-10"
+      }
+    },
+    "herleitung": "Ablaufhemmung: Maximum aus bisherigem letzten Tag und rechtskräftiger Genehmigung.29.Februar bis10.April→10.April, nicht29.Februar plus gesamte Verfahrensdauer.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_GLEICHER_VERFAHRENSTAG",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-02-15",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_fristende": "2024-02-29"
+      }
+    },
+    "herleitung": "Ablaufhemmung: Maximum aus bisherigem letzten Tag und rechtskräftiger Genehmigung.29.Februar bis10.April→10.April, nicht29.Februar plus gesamte Verfahrensdauer.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_FRUEHES_JAHR",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "0001-01-02",
+      "genehmigungsverfahren_beginn_am": "0001-01-01",
+      "genehmigung_rechtskraft_am": "0001-01-03",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_fristende": "0001-01-03"
+      }
+    },
+    "herleitung": "Ablaufhemmung: Maximum aus bisherigem letzten Tag und rechtskräftiger Genehmigung.29.Februar bis10.April→10.April, nicht29.Februar plus gesamte Verfahrensdauer.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_SPAETESTES_JAHR",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "9999-12-01",
+      "genehmigungsverfahren_beginn_am": "9999-11-01",
+      "genehmigung_rechtskraft_am": "9999-12-31",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_fristende": "9999-12-31"
+      }
+    },
+    "herleitung": "Ablaufhemmung: Maximum aus bisherigem letzten Tag und rechtskräftiger Genehmigung.29.Februar bis10.April→10.April, nicht29.Februar plus gesamte Verfahrensdauer.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_FEHLT_rechnerisches_fristende_ohne_genehmigungsverfahren",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": null,
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_TYP_rechnerisches_fristende_ohne_genehmigungsverfahren",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": {},
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_FEHLT_genehmigungsverfahren_beginn_am",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": null,
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_TYP_genehmigungsverfahren_beginn_am",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": {},
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_FEHLT_genehmigung_rechtskraft_am",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": null,
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_TYP_genehmigung_rechtskraft_am",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": {},
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_TYP_einordnungsnachweis",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_ZU_SPAETER_BEGINN",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-03-01",
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_RECHTSKRAFT_VOR_BEGINN",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-02-14",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_UNGUELTIGES_DATUM",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2023-02-29",
+      "einordnungsnachweis": "§1858III: qualifiziertes einseitiges Rechtsgeschäft gegenüber Gericht oder Behörde, für das eine nachträgliche betreuungsgerichtliche Genehmigung rechtskräftig erteilt wird. Gesetzlicher Fristablauf während des wirksamen Genehmigungsverfahrens gehemmt; keine Addition sämtlicher Verfahrenstage nach209 und keine neue volle Frist ab Rechtskraft. Verfahrensbeginn und Rechtskraft der Erteilung bereits rechtlich bestimmt. Rechtskraft einer Versagung, nichtgesetzliche Fristen und andere Genehmigungslagen sind nicht Gegenstand dieses Bausteins. Ein bereits vor Verfahrensbeginn außerhalb des Schutzes eingetretener Fristablauf wird nicht wiederbelebt. Bei laufendem Verfahren ohne Rechtskraft kein fiktiver Endtag. Ereignisse auf rechtlich maßgebliche Kalendertage normalisieren; weitere Fristkorrekturen gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_GENEHMIGUNG_ABLAUFGRENZE_LEER",
+    "funktion": "betreuung_genehmigung_ablaufgrenze",
+    "eingaben": {
+      "rechnerisches_fristende_ohne_genehmigungsverfahren": "2024-02-29",
+      "genehmigungsverfahren_beginn_am": "2024-02-15",
+      "genehmigung_rechtskraft_am": "2024-04-10",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

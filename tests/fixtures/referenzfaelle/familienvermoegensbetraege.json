@@ -1,0 +1,400 @@
+[
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_REST",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": "300",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "700",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_GLEICH",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": "1000",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_UEBER",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": "1200",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_KEINE_RESERVE",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": "0",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_NULL",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "0",
+      "ausgabenreserve": "0",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_EXAKT",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "0.3",
+      "ausgabenreserve": "0.1",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_FEHLT_geldbestand",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": null,
+      "ausgabenreserve": "300",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_TYP_geldbestand",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": [],
+      "ausgabenreserve": "300",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_FEHLT_ausgabenreserve",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": null,
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_TYP_ausgabenreserve",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": [],
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": "300",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_TYP_bewertungsnachweis",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": "300",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_NEGATIV_GELD",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "-1",
+      "ausgabenreserve": "300",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_NEGATIV_RESERVE",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": "-1",
+      "bewertungsnachweis": "Verwaltetes Geld und notwendiger Ausgabenbedarf zum selben Zeitpunkt qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "VERWALTUNGSANLAGEBETRAG_NACHWEIS",
+    "funktion": "verwaltungsanlagebetrag",
+    "eingaben": {
+      "geldbestand": "1000",
+      "ausgabenreserve": "300",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_JAHR",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": "300",
+      "bewertungsnachweis": "Konstante qualifizierte Monatsrente300EUR."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3600",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_NULL",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": "0",
+      "bewertungsnachweis": "Konstante qualifizierte Monatsrente300EUR."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_DEZIMAL",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": "0.1",
+      "bewertungsnachweis": "Konstante qualifizierte Monatsrente300EUR."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "6",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_BRUCH",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "bewertungsnachweis": "Konstante qualifizierte Monatsrente300EUR."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "4",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_FEHLT_monatsrente",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": null,
+      "bewertungsnachweis": "Konstante qualifizierte Monatsrente300EUR."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_TYP_monatsrente",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": [],
+      "bewertungsnachweis": "Konstante qualifizierte Monatsrente300EUR."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": "300",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_TYP_bewertungsnachweis",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": "300",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_NEGATIV",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": "-1",
+      "bewertungsnachweis": "Konstante qualifizierte Monatsrente300EUR."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_SICHERHEITSREGELBETRAG_NACHWEIS",
+    "funktion": "unterhalt_sicherheitsregelbetrag",
+    "eingaben": {
+      "monatsrente": "300",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restbetragsrechnung beziehungsweise Faktor12 nach lokaler Norm.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

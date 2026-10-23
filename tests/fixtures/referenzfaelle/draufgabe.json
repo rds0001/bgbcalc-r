@@ -1,0 +1,432 @@
+[
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_TEIL",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "angerechneter_betrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "verbleibender_betrag": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "nicht_angerechnete_draufgabe": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "min(Draufgabe,Schuld) anrechnen;100−30=70 Rest. Bei120 auf100 bleiben20 unzugeordnet, ohne Entscheidung über deren Rückzahlung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_GANZ",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "100",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "angerechneter_betrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_angerechnete_draufgabe": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "min(Draufgabe,Schuld) anrechnen;100−30=70 Rest. Bei120 auf100 bleiben20 unzugeordnet, ohne Entscheidung über deren Rückzahlung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_UEBER",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "120",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "angerechneter_betrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_angerechnete_draufgabe": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "min(Draufgabe,Schuld) anrechnen;100−30=70 Rest. Bei120 auf100 bleiben20 unzugeordnet, ohne Entscheidung über deren Rückzahlung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_NULL_DRAUFGABE",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "0",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "angerechneter_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_betrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "nicht_angerechnete_draufgabe": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "min(Draufgabe,Schuld) anrechnen;100−30=70 Rest. Bei120 auf100 bleiben20 unzugeordnet, ohne Entscheidung über deren Rückzahlung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_NULL_SCHULD",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "0",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "angerechneter_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_angerechnete_draufgabe": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "min(Draufgabe,Schuld) anrechnen;100−30=70 Rest. Bei120 auf100 bleiben20 unzugeordnet, ohne Entscheidung über deren Rückzahlung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_SCHADEN",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "schadensersatz_338",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "angerechneter_betrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "verbleibender_betrag": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "nicht_angerechnete_draufgabe": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "min(Draufgabe,Schuld) anrechnen;100−30=70 Rest. Bei120 auf100 bleiben20 unzugeordnet, ohne Entscheidung über deren Rückzahlung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_SCHADEN_UEBER",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "schadensersatz_338",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "120",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "angerechneter_betrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_angerechnete_draufgabe": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "min(Draufgabe,Schuld) anrechnen;100−30=70 Rest. Bei120 auf100 bleiben20 unzugeordnet, ohne Entscheidung über deren Rückzahlung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_BRUCH",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": {
+        "zaehler": "2",
+        "nenner": "3"
+      },
+      "draufgabebetrag": {
+        "zaehler": "1",
+        "nenner": "2"
+      },
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "angerechneter_betrag": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "verbleibender_betrag": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "nicht_angerechnete_draufgabe": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2/3−1/2=1/6.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_FEHLT_anrechnungsfall",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": null,
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_TYP_anrechnungsfall",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": {},
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_FEHLT_geschuldeter_betrag",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": null,
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_TYP_geschuldeter_betrag",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": {},
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_FEHLT_draufgabebetrag",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": null,
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_TYP_draufgabebetrag",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": {},
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_FEHLT_einordnungsnachweis",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_TYP_einordnungsnachweis",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_UNGUELTIG_0",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "rueckgabe",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_UNGUELTIG_1",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "-1",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_UNGUELTIG_2",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "-1",
+      "einordnungsnachweis": "§337I beziehungsweise338Satz2: Anrechnung einer qualifizierten Geld-Draufgabe auf den bestimmten Leistungs- beziehungsweise Schadensersatzbetrag. Anrechnung höchstens in Höhe des geschuldeten Betrags, danach rechnerischer Rest. Ein nicht angerechneter Draufgabenteil wird separat ausgewiesen; daraus folgt weder Rückzahlungsanspruch noch Verwirkung. Insbesondere bei338 keine automatische Rückzahlung des den Schaden übersteigenden Betrags. Nicht anrechenbare Sach-Draufgaben und reine Rückgabepflichten337II/338 sind keine eigenständige Geldberechnung; weder Geldersatz noch Eigentums-/Rückgabeentscheidung wird erfunden. Keine automatische Bestimmung der gesetzlichen Zweifelregel oder Anrechnung auf zusätzliche Zinsen/Kosten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DRAUFGABE_GELDANRECHNUNG_UNGUELTIG_3",
+    "funktion": "draufgabe_geldanrechnung",
+    "eingaben": {
+      "anrechnungsfall": "leistung_337",
+      "geschuldeter_betrag": "100",
+      "draufgabebetrag": "30",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

@@ -1,0 +1,617 @@
+[
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_SECHS_MONATE",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-03-31",
+          "ueberziehungsbetrag": "80"
+        },
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_beobachteter_tag": "2024-01-01",
+        "letzter_beobachteter_tag": "2024-06-30",
+        "einmonatsablauf": "2024-01-31",
+        "dreimonatsablauf": "2024-03-31",
+        "sechsmonatsablauf": "2024-06-30",
+        "mehr_als_ein_monat": true,
+        "mehr_als_drei_monate": true,
+        "sechs_monate_erreicht": true,
+        "durchschnitt": {
+          "beobachtete_kalendertage": 182,
+          "durchschnittlicher_ueberziehungsbetrag": {
+            "zaehler": "90",
+            "nenner": "1"
+          },
+          "betragsgrenze": {
+            "zaehler": "75",
+            "nenner": "1"
+          },
+          "betragsgrenze_strikt_ueberschritten": true,
+          "alle_abschnitte_mit_positiver_ueberziehung": true
+        }
+      }
+    },
+    "herleitung": "Jan-Maerz2024undApr-Juni2024je91Tage:80/100geben90Durchschnitt,75Grenze. Apr1-Jun30genau3Monate,Jul1mehr; Jan1-Jan31genau1Monat. Nulltag zaehlt mit.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_VOR_SECHS",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-06-29",
+          "ueberziehungsbetrag": "80"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_beobachteter_tag": "2024-01-01",
+        "letzter_beobachteter_tag": "2024-06-29",
+        "einmonatsablauf": "2024-01-31",
+        "dreimonatsablauf": "2024-03-31",
+        "sechsmonatsablauf": "2024-06-30",
+        "mehr_als_ein_monat": true,
+        "mehr_als_drei_monate": true,
+        "sechs_monate_erreicht": false,
+        "durchschnitt": {
+          "beobachtete_kalendertage": 181,
+          "durchschnittlicher_ueberziehungsbetrag": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "betragsgrenze": {
+            "zaehler": "75",
+            "nenner": "1"
+          },
+          "betragsgrenze_strikt_ueberschritten": true,
+          "alle_abschnitte_mit_positiver_ueberziehung": true
+        }
+      }
+    },
+    "herleitung": "Jan-Maerz2024undApr-Juni2024je91Tage:80/100geben90Durchschnitt,75Grenze. Apr1-Jun30genau3Monate,Jul1mehr; Jan1-Jan31genau1Monat. Nulltag zaehlt mit.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_GENAU_DREI",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "60"
+        }
+      ],
+      "bezugsbetrag": "300",
+      "vergleichsregel": "geduldete_ueberziehung_505",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_beobachteter_tag": "2024-04-01",
+        "letzter_beobachteter_tag": "2024-06-30",
+        "einmonatsablauf": "2024-04-30",
+        "dreimonatsablauf": "2024-06-30",
+        "sechsmonatsablauf": "2024-09-30",
+        "mehr_als_ein_monat": true,
+        "mehr_als_drei_monate": false,
+        "sechs_monate_erreicht": false,
+        "durchschnitt": {
+          "beobachtete_kalendertage": 91,
+          "durchschnittlicher_ueberziehungsbetrag": {
+            "zaehler": "60",
+            "nenner": "1"
+          },
+          "betragsgrenze": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "betragsgrenze_strikt_ueberschritten": true,
+          "alle_abschnitte_mit_positiver_ueberziehung": true
+        }
+      }
+    },
+    "herleitung": "Jan-Maerz2024undApr-Juni2024je91Tage:80/100geben90Durchschnitt,75Grenze. Apr1-Jun30genau3Monate,Jul1mehr; Jan1-Jan31genau1Monat. Nulltag zaehlt mit.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_MEHR_ALS_DREI",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-07-01",
+          "ueberziehungsbetrag": "60"
+        }
+      ],
+      "bezugsbetrag": "300",
+      "vergleichsregel": "geduldete_ueberziehung_505",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_beobachteter_tag": "2024-04-01",
+        "letzter_beobachteter_tag": "2024-07-01",
+        "einmonatsablauf": "2024-04-30",
+        "dreimonatsablauf": "2024-06-30",
+        "sechsmonatsablauf": "2024-09-30",
+        "mehr_als_ein_monat": true,
+        "mehr_als_drei_monate": true,
+        "sechs_monate_erreicht": false,
+        "durchschnitt": {
+          "beobachtete_kalendertage": 92,
+          "durchschnittlicher_ueberziehungsbetrag": {
+            "zaehler": "60",
+            "nenner": "1"
+          },
+          "betragsgrenze": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "betragsgrenze_strikt_ueberschritten": true,
+          "alle_abschnitte_mit_positiver_ueberziehung": true
+        }
+      }
+    },
+    "herleitung": "Jan-Maerz2024undApr-Juni2024je91Tage:80/100geben90Durchschnitt,75Grenze. Apr1-Jun30genau3Monate,Jul1mehr; Jan1-Jan31genau1Monat. Nulltag zaehlt mit.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_GENAU_MONAT",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-01-31",
+          "ueberziehungsbetrag": "80"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_beobachteter_tag": "2024-01-01",
+        "letzter_beobachteter_tag": "2024-01-31",
+        "einmonatsablauf": "2024-01-31",
+        "dreimonatsablauf": "2024-03-31",
+        "sechsmonatsablauf": "2024-06-30",
+        "mehr_als_ein_monat": false,
+        "mehr_als_drei_monate": false,
+        "sechs_monate_erreicht": false,
+        "durchschnitt": {
+          "beobachtete_kalendertage": 31,
+          "durchschnittlicher_ueberziehungsbetrag": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "betragsgrenze": {
+            "zaehler": "75",
+            "nenner": "1"
+          },
+          "betragsgrenze_strikt_ueberschritten": true,
+          "alle_abschnitte_mit_positiver_ueberziehung": true
+        }
+      }
+    },
+    "herleitung": "Jan-Maerz2024undApr-Juni2024je91Tage:80/100geben90Durchschnitt,75Grenze. Apr1-Jun30genau3Monate,Jul1mehr; Jan1-Jan31genau1Monat. Nulltag zaehlt mit.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_MEHR_ALS_MONAT",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-02-01",
+          "ueberziehungsbetrag": "80"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_beobachteter_tag": "2024-01-01",
+        "letzter_beobachteter_tag": "2024-02-01",
+        "einmonatsablauf": "2024-01-31",
+        "dreimonatsablauf": "2024-03-31",
+        "sechsmonatsablauf": "2024-06-30",
+        "mehr_als_ein_monat": true,
+        "mehr_als_drei_monate": false,
+        "sechs_monate_erreicht": false,
+        "durchschnitt": {
+          "beobachtete_kalendertage": 32,
+          "durchschnittlicher_ueberziehungsbetrag": {
+            "zaehler": "80",
+            "nenner": "1"
+          },
+          "betragsgrenze": {
+            "zaehler": "75",
+            "nenner": "1"
+          },
+          "betragsgrenze_strikt_ueberschritten": true,
+          "alle_abschnitte_mit_positiver_ueberziehung": true
+        }
+      }
+    },
+    "herleitung": "Jan-Maerz2024undApr-Juni2024je91Tage:80/100geben90Durchschnitt,75Grenze. Apr1-Jun30genau3Monate,Jul1mehr; Jan1-Jan31genau1Monat. Nulltag zaehlt mit.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_NULLTAG",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-01-01",
+          "ueberziehungsbetrag": "0"
+        },
+        {
+          "erster_tag": "2024-01-02",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "80"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_beobachteter_tag": "2024-01-01",
+        "letzter_beobachteter_tag": "2024-06-30",
+        "einmonatsablauf": "2024-01-31",
+        "dreimonatsablauf": "2024-03-31",
+        "sechsmonatsablauf": "2024-06-30",
+        "mehr_als_ein_monat": true,
+        "mehr_als_drei_monate": true,
+        "sechs_monate_erreicht": true,
+        "durchschnitt": {
+          "beobachtete_kalendertage": 182,
+          "durchschnittlicher_ueberziehungsbetrag": {
+            "zaehler": "7240",
+            "nenner": "91"
+          },
+          "betragsgrenze": {
+            "zaehler": "75",
+            "nenner": "1"
+          },
+          "betragsgrenze_strikt_ueberschritten": true,
+          "alle_abschnitte_mit_positiver_ueberziehung": false
+        }
+      }
+    },
+    "herleitung": "Jan-Maerz2024undApr-Juni2024je91Tage:80/100geben90Durchschnitt,75Grenze. Apr1-Jun30genau3Monate,Jul1mehr; Jan1-Jan31genau1Monat. Nulltag zaehlt mit.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_UMGEKEHRT",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-03-31",
+          "ueberziehungsbetrag": "80"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_beobachteter_tag": "2024-01-01",
+        "letzter_beobachteter_tag": "2024-06-30",
+        "einmonatsablauf": "2024-01-31",
+        "dreimonatsablauf": "2024-03-31",
+        "sechsmonatsablauf": "2024-06-30",
+        "mehr_als_ein_monat": true,
+        "mehr_als_drei_monate": true,
+        "sechs_monate_erreicht": true,
+        "durchschnitt": {
+          "beobachtete_kalendertage": 182,
+          "durchschnittlicher_ueberziehungsbetrag": {
+            "zaehler": "90",
+            "nenner": "1"
+          },
+          "betragsgrenze": {
+            "zaehler": "75",
+            "nenner": "1"
+          },
+          "betragsgrenze_strikt_ueberschritten": true,
+          "alle_abschnitte_mit_positiver_ueberziehung": true
+        }
+      }
+    },
+    "herleitung": "Jan-Maerz2024undApr-Juni2024je91Tage:80/100geben90Durchschnitt,75Grenze. Apr1-Jun30genau3Monate,Jul1mehr; Jan1-Jan31genau1Monat. Nulltag zaehlt mit.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_FEHLT_kontosaldoabschnitte",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": null,
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_FEHLT_bezugsbetrag",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-03-31",
+          "ueberziehungsbetrag": "80"
+        },
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": null,
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_FEHLT_vergleichsregel",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-03-31",
+          "ueberziehungsbetrag": "80"
+        },
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": null,
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_FEHLT_einordnungsnachweis",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-03-31",
+          "ueberziehungsbetrag": "80"
+        },
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_UNGUELTIG0",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_UNGUELTIG1",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-01-10",
+          "ueberziehungsbetrag": "80"
+        },
+        {
+          "erster_tag": "2024-01-12",
+          "letzter_tag": "2024-01-20",
+          "ueberziehungsbetrag": "80"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_UNGUELTIG2",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-03-31",
+          "ueberziehungsbetrag": "80"
+        },
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-03-31",
+          "ueberziehungsbetrag": "80"
+        },
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_UNGUELTIG3",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-02",
+          "letzter_tag": "2024-01-01",
+          "ueberziehungsbetrag": "80"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_UNGUELTIG4",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-02-30",
+          "letzter_tag": "2024-03-01",
+          "ueberziehungsbetrag": "80"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "§504aI/505II: tatsaechliche lueckenlose Tagesabschnitte sortieren, Ueberschneidungen/Luecken ablehnen, Dauer und Betragstage mit bestehendem Durchschnittskern rechnen. Kalendermonate nach187II/188: sechs Monate einschliesslich Ablauf, mehr als ein/drei Monate strikt nach jeweiligem Ablauf; keine180/90/30-Tage-Ersatzregel. Erste Nutzung und Ende als ganze rechtlich qualifizierte Tage, keine Rundung untertaegiger Ereignisse. Nullsaldoabschnitt bleibt in Mittelung enthalten und widerlegt ununterbrochene positive Ueberziehung. Bei vierteljaehrlichem Abschluss ist504aI2am jeweiligen Abschluss zu beurteilen;505II3nennt ausdruecklich die Informationsvoraussetzungen vonSatz1. Datum des bankvertraglichen Abschlusses vorgeben, nicht automatisch Kalenderquartal unterstellen. Die Berechnung am gewaehlten Beobachtungsende ersetzt keine gesetzliche Stichtagsqualifikation.505II2: Bezugsbetrag gesamter Geldeingang der letzten3Monate, Vergleichsgrenze dessen1/6; Bezugseingangsfenster rechtlich separat bestimmen. Veraenderliche Kreditlinie und andere Mittelungskonventionen nicht automatisch behandeln. Keine vollstaendige Beratungs-/Informationsentscheidung aus reinem Zahlenvergleich."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_KALENDERABSCHNITTE_UNGUELTIG5",
+    "funktion": "ueberziehung_kalenderabschnitte",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "erster_tag": "2024-01-01",
+          "letzter_tag": "2024-03-31",
+          "ueberziehungsbetrag": "80"
+        },
+        {
+          "erster_tag": "2024-04-01",
+          "letzter_tag": "2024-06-30",
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": "100",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

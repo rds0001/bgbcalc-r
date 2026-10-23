@@ -1,0 +1,1194 @@
+[
+  {
+    "fall_id": "EIGENGESCHENK_NUR_ERGAENZUNG",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "525",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "175",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "425",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_GESAMT_ANRECHNUNG",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": true,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "175",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "525",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "425",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_GROSSES_GESCHENK_OHNE2315",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "500",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "625",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_GROSSES_GESCHENK_MIT2315",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "500",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": true,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "625",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "125",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "125",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_KEINE_DRITTGESCHENKE_OHNE2315",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "0",
+      "eigengeschenk_wert": "500",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "375",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_KEINE_DRITTGESCHENKE_MIT2315",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "0",
+      "eigengeschenk_wert": "500",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": true,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "375",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_KEIN_EIGENGESCHENK",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "0",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "500",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NEGATIVER_NACHLASS",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "-100",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "150",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NEGATIVER_NACHLASS_MIT2315",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "-100",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": true,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "150",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NEGATIVE_FIKTIVE_MASSE",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "-2000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NEGATIVE_FIKTIVE_MASSE_MIT2315",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "-2000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": true,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_BRUCHBETRAG",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "hinzuzurechnende_drittschenkungen": "100",
+      "eigengeschenk_wert": "10",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "105",
+          "nenner": "2"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "35",
+          "nenner": "2"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "85",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_BRUCHBETRAG_MIT2315",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "100",
+      "hinzuzurechnende_drittschenkungen": "100",
+      "eigengeschenk_wert": "10",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": true,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "35",
+          "nenner": "2"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "105",
+          "nenner": "2"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "85",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NULLQUOTE",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 0,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_VOLLE_ERBQUOTE",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 1,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "1050",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "450",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "950",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_ANRECHNUNG_GRENZE",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "300",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "350",
+          "nenner": "1"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_BEINAHE_GRENZE",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "300.04",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ordentlicher_pflichtteilsbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "erhoehter_pflichtteilswert_vor_anrechnung": {
+          "zaehler": "35001",
+          "nenner": "100"
+        },
+        "ergaenzungsbetrag_nach_eigengeschenk": {
+          "zaehler": "1",
+          "nenner": "100"
+        },
+        "gesamtbetrag_nach_eigengeschenk": {
+          "zaehler": "25001",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NICHT_einheitlicher_wert_qualifiziert",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": false,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NICHT_grundmodell_ohne_ausgleichung_anwendbar",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": false,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_pflichtteilsnachlass",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": null,
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_pflichtteilsnachlass",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": [],
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_hinzuzurechnende_drittschenkungen",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": null,
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_hinzuzurechnende_drittschenkungen",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": [],
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_eigengeschenk_wert",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": null,
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_eigengeschenk_wert",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": [],
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_gesetzliche_erbquote_zaehler",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": null,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_gesetzliche_erbquote_zaehler",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": [],
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_gesetzliche_erbquote_nenner",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": null,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_gesetzliche_erbquote_nenner",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": [],
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_eigengeschenk_nach_2315_anzurechnen",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": null,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_eigengeschenk_nach_2315_anzurechnen",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": 1,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_einheitlicher_wert_qualifiziert",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": null,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_einheitlicher_wert_qualifiziert",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": 1,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_grundmodell_ohne_ausgleichung_anwendbar",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": null,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_grundmodell_ohne_ausgleichung_anwendbar",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": 1,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_FEHLT_bewertungsnachweis",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_TYP_bewertungsnachweis",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_QUOTE_UEBER_EINS",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 3,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NENNER_NULL",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 0,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NEGATIVE_EIGENSCHENKUNG",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "-1",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NEGATIVE_DRITTSCHENKUNG",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "-1",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_UEBERLAUF",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "9007199254740991",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": "Synthetisch ein Eigengeschenk, identische maßgebliche Bewertung, keine2316-Ausgleichung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "EIGENGESCHENK_NACHWEIS_LEER",
+    "funktion": "pflichtteilsergaenzung_eigengeschenk",
+    "eingaben": {
+      "pflichtteilsnachlass": "1000",
+      "hinzuzurechnende_drittschenkungen": "1000",
+      "eigengeschenk_wert": "100",
+      "gesetzliche_erbquote_zaehler": 1,
+      "gesetzliche_erbquote_nenner": 2,
+      "eigengeschenk_nach_2315_anzurechnen": false,
+      "einheitlicher_wert_qualifiziert": true,
+      "grundmodell_ohne_ausgleichung_anwendbar": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Rechenbeispiele: bei Nachlass1000, Drittschenkung1000, Eigengeschenk100 und Pflichtteilsquote1/4 fiktiv525; ohne2315 ordentlich250/Ergänzung175, mit2315 ordentlich175/Ergänzung250, Gesamt jeweils425.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

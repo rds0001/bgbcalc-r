@@ -1,0 +1,269 @@
+[
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_UEBER",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "120",
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "pauschale_uebersteigt_vergleichsbetrag": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120−100=20; Gleichheit überschreitet nicht. 2/3−1/2=1/6. Bei Unterschreitung ist der positive Überschreitungsbetrag null.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_GLEICH",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "100",
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "pauschale_uebersteigt_vergleichsbetrag": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120−100=20; Gleichheit überschreitet nicht. 2/3−1/2=1/6. Bei Unterschreitung ist der positive Überschreitungsbetrag null.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_UNTER",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "80",
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "pauschale_uebersteigt_vergleichsbetrag": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120−100=20; Gleichheit überschreitet nicht. 2/3−1/2=1/6. Bei Unterschreitung ist der positive Überschreitungsbetrag null.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_BEIDE_NULL",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "0",
+      "gewoehnlich_zu_erwartender_betrag": "0",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "pauschale_uebersteigt_vergleichsbetrag": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120−100=20; Gleichheit überschreitet nicht. 2/3−1/2=1/6. Bei Unterschreitung ist der positive Überschreitungsbetrag null.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_BEZUG_NULL",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "120",
+      "gewoehnlich_zu_erwartender_betrag": "0",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "pauschale_uebersteigt_vergleichsbetrag": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "120",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120−100=20; Gleichheit überschreitet nicht. 2/3−1/2=1/6. Bei Unterschreitung ist der positive Überschreitungsbetrag null.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_BRUCH",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": {
+        "zaehler": "2",
+        "nenner": "3"
+      },
+      "gewoehnlich_zu_erwartender_betrag": {
+        "zaehler": "1",
+        "nenner": "2"
+      },
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "pauschale_uebersteigt_vergleichsbetrag": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "6"
+        }
+      }
+    },
+    "herleitung": "120−100=20; Gleichheit überschreitet nicht. 2/3−1/2=1/6. Bei Unterschreitung ist der positive Überschreitungsbetrag null.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_FEHLT_pauschalbetrag",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": null,
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_TYP_pauschalbetrag",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": {},
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_FEHLT_gewoehnlich_zu_erwartender_betrag",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "120",
+      "gewoehnlich_zu_erwartender_betrag": null,
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_TYP_gewoehnlich_zu_erwartender_betrag",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "120",
+      "gewoehnlich_zu_erwartender_betrag": {},
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_FEHLT_einordnungsnachweis",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "120",
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_TYP_einordnungsnachweis",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "120",
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_UNGUELTIG_0",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "-1",
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_UNGUELTIG_1",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "120",
+      "gewoehnlich_zu_erwartender_betrag": "-1",
+      "einordnungsnachweis": "§309Nr5a: strenger Betragsvergleich der Pauschale mit dem qualifizierten gewöhnlich zu erwartenden Schaden oder der Wertminderung. Vergleichsmaßstab ist nicht automatisch der konkret entstandene Einzelschaden. Keine automatische Wirksamkeitsentscheidung, insbesondere keine Prüfung von309Nr5b. Der positive Überschreitungsbetrag ist keine automatische Rückforderung oder geltungserhaltende Herabsetzung auf einen zulässigen Vertragsbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHADENSPAUSCHALE_BETRAGSVERGLEICH_UNGUELTIG_2",
+    "funktion": "schadenspauschale_betragsvergleich",
+    "eingaben": {
+      "pauschalbetrag": "120",
+      "gewoehnlich_zu_erwartender_betrag": "100",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

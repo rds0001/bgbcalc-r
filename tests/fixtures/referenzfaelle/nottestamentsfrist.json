@@ -1,0 +1,431 @@
+[
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_MONATSENDE",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "2024-01-31",
+      "einordnungsnachweis": "Synthetisch qualifizierter Errichtungstag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2024-04-30"
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_SCHALTJAHR",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "2023-11-30",
+      "einordnungsnachweis": "Synthetisch qualifizierter Errichtungstag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2024-02-29"
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_NORMALJAHR",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "2024-11-30",
+      "einordnungsnachweis": "Synthetisch qualifizierter Errichtungstag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2025-02-28"
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_JAHRESWECHSEL",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "2024-12-15",
+      "einordnungsnachweis": "Synthetisch qualifizierter Errichtungstag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2025-03-15"
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_FEHLT_errichtung_am",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": null,
+      "einordnungsnachweis": "Synthetisch qualifizierter Errichtungstag."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_TYP_errichtung_am",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": [],
+      "einordnungsnachweis": "Synthetisch qualifizierter Errichtungstag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_FEHLT_einordnungsnachweis",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "2024-01-31",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_TYP_einordnungsnachweis",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "2024-01-31",
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_UNGULTIGES_DATUM",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "2024-02-30",
+      "einordnungsnachweis": "Synthetisch qualifizierter Errichtungstag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NOTTESTAMENT_GRUNDFRIST_UEBERLAUF",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "9999-12-01",
+      "einordnungsnachweis": "Synthetisch qualifizierter Errichtungstag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_VORHER",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2024-05-20"
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_LETZTER_TAG",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-31",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2024-05-20"
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_ZU_SPAET",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-02-01",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_KEIN_SEETESTAMENT",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": false,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_MONATSENDE",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-05-31",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2024-08-31"
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_FEHLT_bisheriges_fristende",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": null,
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_TYP_bisheriges_fristende",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": [],
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_FEHLT_neue_seereise_beginn",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": null,
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_TYP_neue_seereise_beginn",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": [],
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_FEHLT_neue_seereise_ende",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": null,
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_TYP_neue_seereise_ende",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": [],
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_FEHLT_seetestament_nach_2251_qualifiziert",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": null,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_TYP_seetestament_nach_2251_qualifiziert",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": 1,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_FEHLT_einordnungsnachweis",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_TYP_einordnungsnachweis",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_REISE_UMGEKEHRT",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-01-01",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch korrigiertes bisheriges Fristende und neue Reise."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "SEETESTAMENT_REISE_NEUSTART_NACHWEIS_LEER",
+    "funktion": "seetestament_reise_neustart",
+    "eingaben": {
+      "bisheriges_fristende": "2024-01-31",
+      "neue_seereise_beginn": "2024-01-30",
+      "neue_seereise_ende": "2024-02-20",
+      "seetestament_nach_2251_qualifiziert": true,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kalenderunabhängige Referenzdaten:31.Januar plus3Monate endet30.April;30.November2023 plus3Monate endet29.Februar2024. Reiseantritt am letzten Fristtag rechtzeitig, danach nicht.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_RELATIV",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "abkoemmling_id": "A",
+          "interner_schuldanteil": {
+            "zaehler": "30",
+            "nenner": "1"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "interner_schuldanteil": {
+            "zaehler": "90",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "120nach1/8:3/8 ergibt30/90;einziger anteilsberechtigter Abkoemmling traegt intern120;keine nochmalige Halbierung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_NULL",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "0",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "abkoemmling_id": "A",
+          "interner_schuldanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "interner_schuldanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "120nach1/8:3/8 ergibt30/90;einziger anteilsberechtigter Abkoemmling traegt intern120;keine nochmalige Halbierung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_EINZEL",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "2"
+          }
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "abkoemmling_id": "A",
+          "interner_schuldanteil": {
+            "zaehler": "120",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "120nach1/8:3/8 ergibt30/90;einziger anteilsberechtigter Abkoemmling traegt intern120;keine nochmalige Halbierung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_DRITTEL",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "1",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "6"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "abkoemmling_id": "A",
+          "interner_schuldanteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "interner_schuldanteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        }
+      ]
+    },
+    "herleitung": "120nach1/8:3/8 ergibt30/90;einziger anteilsberechtigter Abkoemmling traegt intern120;keine nochmalige Halbierung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_FEHLT_gesamtgutschuld",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": null,
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_FEHLT_abkoemmlinge",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": null,
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_FEHLT_haftungsnachweis",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "haftungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_UNGUELTIG0",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": [],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_UNGUELTIG1",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_UNGUELTIG2",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": "2"
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_UNGUELTIG3",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": "0"
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_UNGUELTIG4",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "-1",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "haftungsnachweis": "§1504 interne Verteilung der qualifizierten Gesamtgutschuld nach relativer Groesse der Gesamtgutsanteile der anteilsberechtigten Abkoemmlinge. Vorhandenen exakten Beguenstigten-Gewichtskern rein rechnerisch wiederverwenden; keine Anwendung1503III auf Glaeubigerschulden behaupten. Die Verpflichtung beschraenkt sich auf zugeteilte Gegenstaende: kein pauschaler Gelddeckel in Hoehe ihres Schaetzwerts und keine allgemeine persoenliche Nachschusspflicht. Ergebnis ist interne Schuldzuordnung vor gegenstaendlicher Vollstreckungs-/Haftungspruefung, kein bezifferter individuell durchsetzbarer Zahlungsanspruch. Keine automatische Ausfallumlage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_INTERNE_SCHULDANTEILE_UNGUELTIG5",
+    "funktion": "fortsetzung_interne_schuldanteile",
+    "eingaben": {
+      "gesamtgutschuld": "120",
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "anteil_gesamtgut": {
+            "zaehler": "1",
+            "nenner": "8"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "anteil_gesamtgut": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "haftungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

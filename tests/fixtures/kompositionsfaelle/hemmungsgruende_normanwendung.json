@@ -1,0 +1,94 @@
+[
+  {
+    "fall_id": "207_208_209_UEBERLAPPUNG",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-01-01",
+      "grundfrist_letzter_tag": "2024-03-01",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-01",
+          "letzter_gehemmter_tag": "2024-01-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-10",
+          "letzter_gehemmter_tag": "2024-01-31"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "rechnerischer_letzter_tag": "2024-04-01",
+      "beruecksichtigte_hemmungstage": 31
+    }
+  },
+  {
+    "fall_id": "207_208_209_DOPPELTE_GRUENDE",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-01-01",
+      "grundfrist_letzter_tag": "2024-03-01",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-01",
+          "letzter_gehemmter_tag": "2024-01-31"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-01",
+          "letzter_gehemmter_tag": "2024-01-31"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "rechnerischer_letzter_tag": "2024-04-01",
+      "beruecksichtigte_hemmungstage": 31
+    }
+  },
+  {
+    "fall_id": "207_208_209_ZUSAETZLICHER_SPATERER_GRUND",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-01-01",
+      "grundfrist_letzter_tag": "2024-03-01",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-01",
+          "letzter_gehemmter_tag": "2024-01-31"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-10",
+          "letzter_gehemmter_tag": "2024-03-19"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "rechnerischer_letzter_tag": "2024-04-11",
+      "beruecksichtigte_hemmungstage": 41
+    }
+  },
+  {
+    "fall_id": "207_208_209_ABGELAUFEN_NICHT_WIEDERBELEBT",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-01-01",
+      "grundfrist_letzter_tag": "2024-03-01",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-10",
+          "letzter_gehemmter_tag": "2024-03-19"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "rechnerischer_letzter_tag": "2024-03-01",
+      "beruecksichtigte_hemmungstage": 0
+    }
+  }
+]

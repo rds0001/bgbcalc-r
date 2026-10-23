@@ -1,0 +1,329 @@
+[
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_GEDECKELT",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": "300",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zusaetzliches_viertel": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "ausbildungsrahmen": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "nicht_aus_viertel_gedeckter_bedarf": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "nicht_fuer_diesen_gesamtbedarf_benoetigtes_viertel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_GLEICH",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": "250",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zusaetzliches_viertel": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "ausbildungsrahmen": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "nicht_aus_viertel_gedeckter_bedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_fuer_diesen_gesamtbedarf_benoetigtes_viertel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_UNTER",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": "200",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zusaetzliches_viertel": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "ausbildungsrahmen": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "nicht_aus_viertel_gedeckter_bedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_fuer_diesen_gesamtbedarf_benoetigtes_viertel": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_KEIN_BEDARF",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": "0",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zusaetzliches_viertel": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "ausbildungsrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_aus_viertel_gedeckter_bedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_fuer_diesen_gesamtbedarf_benoetigtes_viertel": {
+          "zaehler": "250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_KEINE_BASIS",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "0",
+      "qualifizierter_ausbildungsgesamtbedarf": "300",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zusaetzliches_viertel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausbildungsrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_aus_viertel_gedeckter_bedarf": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "nicht_fuer_diesen_gesamtbedarf_benoetigtes_viertel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_EXAKT",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1",
+      "qualifizierter_ausbildungsgesamtbedarf": "0.3",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zusaetzliches_viertel": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "ausbildungsrahmen": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "nicht_aus_viertel_gedeckter_bedarf": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "nicht_fuer_diesen_gesamtbedarf_benoetigtes_viertel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_FEHLT_viertelbemessungsgrundlage",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": null,
+      "qualifizierter_ausbildungsgesamtbedarf": "300",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_TYP_viertelbemessungsgrundlage",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": [],
+      "qualifizierter_ausbildungsgesamtbedarf": "300",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_NEGATIV_viertelbemessungsgrundlage",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "-1",
+      "qualifizierter_ausbildungsgesamtbedarf": "300",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_FEHLT_qualifizierter_ausbildungsgesamtbedarf",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": null,
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_TYP_qualifizierter_ausbildungsgesamtbedarf",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": [],
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_NEGATIV_qualifizierter_ausbildungsgesamtbedarf",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": "-1",
+      "bewertungsnachweis": "Tatsächlich gewährtes Zusatzviertel, vollständig qualifizierter Ausbildungsbedarf berechtigter Abkömmlinge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_FEHLT_bewertungsnachweis",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": "300",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_TYP_bewertungsnachweis",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": "300",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUSATZVIERTEL_AUSBILDUNGSRAHMEN_NACHWEIS_LEER",
+    "funktion": "zusatzviertel_ausbildungsrahmen",
+    "eingaben": {
+      "viertelbemessungsgrundlage": "1000",
+      "qualifizierter_ausbildungsgesamtbedarf": "300",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000/4=250; Gesamtbedarf300 daraus bis250 gedeckt,50ungedeckt. Keine Einzelpriorität unterstellt.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

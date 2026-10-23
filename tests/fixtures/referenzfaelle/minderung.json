@@ -1,0 +1,841 @@
+[
+  {
+    "fall_id": "MIND_001",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "800*750/1000 = 600; gezahlte 800 minus 600 = 200 Erstattung.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_002",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "500",
+      "regelbereich": "werk",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Vergütung sinkt um 200; gezahlte 500 unterschreiten 600, daher kein Mehrbetrag.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_003",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "0",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "800",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Wertverhältnis null, Preis auf null gemindert.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_004",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "1000",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleiches Wertniveau: keine rechnerische Minderung.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_005",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "0",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "0",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Ausgangspreis null: keine preisbezogene Minderung.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_006",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "1000",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "400",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Erstattbarer Mehrbetrag 1000-600; nicht auf Minderungsbetrag 200 begrenzt.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_007",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "digital_einmal",
+      "wertzeitpunkt": "bereitstellung",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Digitale Einmalleistung: Werte zum Zeitpunkt der Bereitstellung.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_008",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "digital_dauer",
+      "wertzeitpunkt": "bereitstellung",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 2,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "700",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Mangel besteht für halben maßgeblichen Zeitraum: 800*(1-3/4)/2 = 100.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_009",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "reise",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 4,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": false,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "750",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Reiseminderung kraft Gesetzes für Viertel der Dauer: 200/4 = 50, Erklärung nicht erforderlich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_010",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "reise",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 0,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "minderungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Kein betroffener Zeitanteil: keine rechnerische Minderung.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_011",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "1",
+      "mangelfreier_wert": "3",
+      "wirklicher_wert": "1",
+      "geleistete_zahlung": "1",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "geminderter_preis": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "minderungsbetrag": {
+          "zaehler": "2",
+          "nenner": "3"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "2",
+          "nenner": "3"
+        }
+      }
+    },
+    "herleitung": "Ein Drittel verbleibender Preis, zwei Drittel Minderung und Erstattung; keine Rundung.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_012",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": false,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Recht fehlt, erforderliche Erklärung fehlt oder kausaler Anzeigeausschluss bei Reise.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_013",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": false,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Recht fehlt, erforderliche Erklärung fehlt oder kausaler Anzeigeausschluss bei Reise.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_014",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "digital_einmal",
+      "wertzeitpunkt": "bereitstellung",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": false,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Recht fehlt, erforderliche Erklärung fehlt oder kausaler Anzeigeausschluss bei Reise.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_015",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "reise",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Recht fehlt, erforderliche Erklärung fehlt oder kausaler Anzeigeausschluss bei Reise.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_016",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "0",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_017",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "1001",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_018",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 0,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_019",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 2,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_020",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 2,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_021",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "digital_einmal",
+      "wertzeitpunkt": "bereitstellung",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 2,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_022",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "bereitstellung",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_023",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "digital_dauer",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_024",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "miete",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_025",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_026",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_027",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": 1,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_028",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": "1000",
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "-1",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher Wertebereich, Bewertungszeitpunkt oder zeitliche Zuordnung für gewählten Regelbereich.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  },
+  {
+    "fall_id": "MIND_029",
+    "funktion": "minderung_betrag",
+    "eingaben": {
+      "vereinbarter_preis": "800",
+      "mangelfreier_wert": null,
+      "wirklicher_wert": "750",
+      "geleistete_zahlung": "800",
+      "regelbereich": "kauf",
+      "wertzeitpunkt": "vertragsschluss",
+      "mangelzeitanteil_zaehler": 1,
+      "mangelzeitanteil_nenner": 1,
+      "wert_und_zeitnachweis": "Bewertete Vertragswerte; gesamte Leistung betroffen",
+      "minderungsrecht": true,
+      "minderungserklaerung": true,
+      "anzeigeausschluss": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Für die Verhältnisrechnung erforderlicher Vergleichswert fehlt.",
+    "pruefnachweis": "Manuelle Verhältnisrechnung vor Implementierung aus lokalem Normtext; Bewertungsbeträge sind ausdrücklich synthetische Nutzervorgaben."
+  }
+]

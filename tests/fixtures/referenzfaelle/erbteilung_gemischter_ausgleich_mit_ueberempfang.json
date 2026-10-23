@@ -1,0 +1,712 @@
+[
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_VORWEG",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+        "ausser_ansatz": [
+          "A"
+        ],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "25",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "25",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100,A-Z150/L50:VorwegN50,2056Aausgeschlossen,RestB/C25+LeistungA50;gemeinsamnegativerA-Endbetrag,AmitLheraus=>B/C50. OhneZ:70/3plusA30. BeiZ300/150erfolgenzweiAusscheidungsrunden.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_GEMEINSAM",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "gemeinsame_neuberechnung_ohne_ausgeschiedene",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ausgleichungsmodell": "gemeinsame_neuberechnung_ohne_ausgeschiedene",
+        "ausser_ansatz": [
+          "A"
+        ],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100,A-Z150/L50:VorwegN50,2056Aausgeschlossen,RestB/C25+LeistungA50;gemeinsamnegativerA-Endbetrag,AmitLheraus=>B/C50. OhneZ:70/3plusA30. BeiZ300/150erfolgenzweiAusscheidungsrunden.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_NULL_IST_KEIN_UEBEREMPFANG",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "100",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "gemeinsame_neuberechnung_ohne_ausgeschiedene",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ausgleichungsmodell": "gemeinsame_neuberechnung_ohne_ausgeschiedene",
+        "ausser_ansatz": [],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100,A-Z150/L50:VorwegN50,2056Aausgeschlossen,RestB/C25+LeistungA50;gemeinsamnegativerA-Endbetrag,AmitLheraus=>B/C50. OhneZ:70/3plusA30. BeiZ300/150erfolgenzweiAusscheidungsrunden.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_OHNE_ZUWENDUNG",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "30"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+        "ausser_ansatz": [],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "160",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "70",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "70",
+              "nenner": "3"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100,A-Z150/L50:VorwegN50,2056Aausgeschlossen,RestB/C25+LeistungA50;gemeinsamnegativerA-Endbetrag,AmitLheraus=>B/C50. OhneZ:70/3plusA30. BeiZ300/150erfolgenzweiAusscheidungsrunden.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_MEHRERE_AUSSCHEIDUNGEN_VORWEG",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+        "ausser_ansatz": [
+          "A",
+          "B"
+        ],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100,A-Z150/L50:VorwegN50,2056Aausgeschlossen,RestB/C25+LeistungA50;gemeinsamnegativerA-Endbetrag,AmitLheraus=>B/C50. OhneZ:70/3plusA30. BeiZ300/150erfolgenzweiAusscheidungsrunden.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_MEHRERE_AUSSCHEIDUNGEN_GEMEINSAM",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "300",
+          "leistungs_ausgleichsbetrag": "20"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "gemeinsame_neuberechnung_ohne_ausgeschiedene",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ausgleichungsmodell": "gemeinsame_neuberechnung_ohne_ausgeschiedene",
+        "ausser_ansatz": [
+          "A",
+          "B"
+        ],
+        "zuteilungen": [
+          {
+            "person_id": "A",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "erbteil_nach_gemischtem_ausgleich": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "N100,A-Z150/L50:VorwegN50,2056Aausgeschlossen,RestB/C25+LeistungA50;gemeinsamnegativerA-Endbetrag,AmitLheraus=>B/C50. OhneZ:70/3plusA30. BeiZ300/150erfolgenzweiAusscheidungsrunden.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_FEHLT_gruppennachlass",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": null,
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_FEHLT_miterben",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": null,
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_FEHLT_ausgleichungsmodell",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": null,
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_FEHLT_methodennachweis",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_UNGUELTIG0",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "automatisch",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_UNGUELTIG1",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "101"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "2055/2056/2057a-Rechenkonkurrenz bei zugleich Leistenden und Überempfängern: keine allgemeine juristische Lösung aus ungeprüfter Iteration behaupten. Bedingtes Vorwegmodell zieht sämtliche qualifizierten Leistungen ab, verwendet vorhandene2056-Zuwendungsausscheidung und fügt individuelle Leistungen auch ausgeschiedenen Zuwendungsempfängern wieder hinzu. Bedingtes gemeinsames Modell berechnet je aktiver Gruppe q_i/Summeq*(N-SummeL+SummeZ)-Z_i+L_i; negative Endbeträge scheiden mit Quote,Zuwendung und Leistungsposition aus, Gruppe wird neu berechnet. Diese Behandlung muss im konkreten Fall rechtlich vorgegeben sein, nicht aus einem bloßen negativen Zwischenergebnis als Rechtsfolge erfunden werden. Beide Modelle erhalten die SummeN und erzeugen keine Rückzahlung aus negativem Erbteil. Leistungen sind billig bemessene Eingaben, keine erfundene Pflegevergütung. Keine2315-Anrechnung, Pflichtteilsergänzung oder automatische rechtliche Auswahl."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERBTEILUNG_GEMISCHTER_AUSGLEICH_MIT_UEBEREMPFANG_UNGUELTIG2",
+    "funktion": "erbteilung_gemischter_ausgleich_mit_ueberempfang",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

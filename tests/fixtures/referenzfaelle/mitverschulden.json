@@ -1,0 +1,428 @@
+[
+  {
+    "fall_id": "MVS_001",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "750",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000EUR mal1/4 ergibt250EUR Kürzung und750EUR Rest.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_002",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Quote null: keine Kürzung.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_003",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "1",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Quote eins: vollständige Kürzung, kein negativer Rest.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_004",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "0",
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Kein positiver Betrag aus einem Nullschaden.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_005",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": {
+        "zaehler": "2",
+        "nenner": "3"
+      },
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "2000",
+          "nenner": "3"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "1000",
+          "nenner": "3"
+        }
+      }
+    },
+    "herleitung": "Zwei Drittel Kürzung ohne Rundungsverlust.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_006",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "mitverschuldensquote": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "2",
+          "nenner": "9"
+        }
+      }
+    },
+    "herleitung": "Bruchobjekte als Betrag und Quote direkt verarbeitet.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_007",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "0.01",
+      "mitverschuldensquote": "0.5",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "1",
+          "nenner": "200"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "1",
+          "nenner": "200"
+        }
+      }
+    },
+    "herleitung": "Halber Cent bleibt exakt; keine pauschale Cent-Rundung.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_008",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0.000001",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "1",
+          "nenner": "1000"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "999999",
+          "nenner": "1000"
+        }
+      }
+    },
+    "herleitung": "Quote unmittelbar oberhalb null im gewählten Millionstelraster.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_009",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0.999999",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "999999",
+          "nenner": "1000"
+        },
+        "verbleibender_ersatzbetrag": {
+          "zaehler": "1",
+          "nenner": "1000"
+        }
+      }
+    },
+    "herleitung": "Quote unmittelbar unter eins im gewählten Millionstelraster.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_010",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine Kürzungsberechnung ohne rechtliche Anwendbarkeit.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_011",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "-0.01",
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ; Prozent und Anteil nicht stillschweigend umdeuten.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_012",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "-0.000001",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ; Prozent und Anteil nicht stillschweigend umdeuten.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_013",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "1.000001",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ; Prozent und Anteil nicht stillschweigend umdeuten.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_014",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "25",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ; Prozent und Anteil nicht stillschweigend umdeuten.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_015",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": 0.25,
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ; Prozent und Anteil nicht stillschweigend umdeuten.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_016",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": "",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ; Prozent und Anteil nicht stillschweigend umdeuten.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_017",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ; Prozent und Anteil nicht stillschweigend umdeuten.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_018",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": null,
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe vermoegensschaden fehlt.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_019",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": null,
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe mitverschuldensquote fehlt.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_020",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": null,
+      "kuerzung_nach_254_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe quotenbegruendung fehlt.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  },
+  {
+    "fall_id": "MVS_021",
+    "funktion": "vermoegensschaden_mitverschulden",
+    "eingaben": {
+      "vermoegensschaden": "1000",
+      "mitverschuldensquote": "0.25",
+      "quotenbegruendung": "Synthetische rechtlich vorgegebene Abwägung dieser Vermögensschadensposition",
+      "kuerzung_nach_254_anwendbar": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe kuerzung_nach_254_anwendbar fehlt.",
+    "pruefnachweis": "Unabhängige Handrechnung der ausdrücklich vorgegebenen Quote; keine Ableitung oder Bestätigung einer realen Mitverschuldensbewertung."
+  }
+]

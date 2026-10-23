@@ -1,0 +1,966 @@
+[
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_BEGINN_OFFEN",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gezogener_nutzungswert": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "schuldhaft_nichtgezogener_nutzungswert": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "gesamter_nutzungswert": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "beruecksichtigte_nutzung_ids": [
+          "spaeter",
+          "unterlassen"
+        ]
+      }
+    },
+    "herleitung": "Offener Beginn10:00:00 schließt20aus, zählt30danach und40bis zum eingeschlossenen Ende=70. Eingeschlossener Beginn addiert20=90.500davor und600danach bleiben außerhalb.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_BEGINN_EINGESCHLOSSEN",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": true,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gezogener_nutzungswert": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "schuldhaft_nichtgezogener_nutzungswert": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "gesamter_nutzungswert": {
+          "zaehler": "90",
+          "nenner": "1"
+        },
+        "beruecksichtigte_nutzung_ids": [
+          "grenze",
+          "spaeter",
+          "unterlassen"
+        ]
+      }
+    },
+    "herleitung": "Offener Beginn10:00:00 schließt20aus, zählt30danach und40bis zum eingeschlossenen Ende=70. Eingeschlossener Beginn addiert20=90.500davor und600danach bleiben außerhalb.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_LEER",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gezogener_nutzungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "schuldhaft_nichtgezogener_nutzungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamter_nutzungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "beruecksichtigte_nutzung_ids": []
+      }
+    },
+    "herleitung": "Offener Beginn10:00:00 schließt20aus, zählt30danach und40bis zum eingeschlossenen Ende=70. Eingeschlossener Beginn addiert20=90.500davor und600danach bleiben außerhalb.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_EIN_ZEITPUNKT_OFFEN",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-01T10:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gezogener_nutzungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "schuldhaft_nichtgezogener_nutzungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamter_nutzungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "beruecksichtigte_nutzung_ids": []
+      }
+    },
+    "herleitung": "Offener Beginn10:00:00 schließt20aus, zählt30danach und40bis zum eingeschlossenen Ende=70. Eingeschlossener Beginn addiert20=90.500davor und600danach bleiben außerhalb.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_EIN_ZEITPUNKT_EINGESCHLOSSEN",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": true,
+      "abrechnungsende_utc": "2024-01-01T10:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gezogener_nutzungswert": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "schuldhaft_nichtgezogener_nutzungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamter_nutzungswert": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "beruecksichtigte_nutzung_ids": [
+          "grenze"
+        ]
+      }
+    },
+    "herleitung": "Offener Beginn10:00:00 schließt20aus, zählt30danach und40bis zum eingeschlossenen Ende=70. Eingeschlossener Beginn addiert20=90.500davor und600danach bleiben außerhalb.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_REIHENFOLGE",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gezogener_nutzungswert": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "schuldhaft_nichtgezogener_nutzungswert": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "gesamter_nutzungswert": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "beruecksichtigte_nutzung_ids": [
+          "unterlassen",
+          "spaeter"
+        ]
+      }
+    },
+    "herleitung": "Offener Beginn10:00:00 schließt20aus, zählt30danach und40bis zum eingeschlossenen Ende=70. Eingeschlossener Beginn addiert20=90.500davor und600danach bleiben außerhalb.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_FEHLT_haftungsbeginn_utc",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": null,
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_TYP_haftungsbeginn_utc",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": {},
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_FEHLT_beginn_eingeschlossen",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": null,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_TYP_beginn_eingeschlossen",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": {},
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_FEHLT_abrechnungsende_utc",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": null,
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_TYP_abrechnungsende_utc",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": {},
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_FEHLT_nutzungen",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": null,
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_TYP_nutzungen",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": {},
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_FEHLT_einordnungsnachweis",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_TYP_einordnungsnachweis",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_UNGUELTIG_0",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-01T09:59:59Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_UNGUELTIG_1",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_UNGUELTIG_2",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {}
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_UNGUELTIG_3",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "-1"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_UNGUELTIG_4",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "unverschuldet",
+          "nutzungswert": "500"
+        }
+      ],
+      "einordnungsnachweis": "§§987/990,gegebenenfalls991I: qualifizierte Nutzungspositionen nach Haftungszeitraum auswählen, tatsächlich gezogene und schuldhaft nicht gezogene Werte getrennt summieren. Anwendungsfall, gegebenenfalls kumulative Verantwortlichkeit mittelbaren Besitzers991I, Bewertungsmaßstab und zeitliche Zuordnung extern. Keine automatische Bösgläubigkeit, Rechtshängigkeit oder Verschuldensentscheidung. Mehrtägige Nutzungsabschnitte an Haftungsgrenzen vorher rechtlich zutreffend aufteilen; kein pauschales Abstellen auf Buchungs-/Zahlungstag. UTC-Sekunden nur bei ausreichend genauer Normalisierung, keine Subsekunden abschneiden. Werte in Euro begründen keinen automatischen Geldersatz statt Naturherausgabe.988/993-Bereicherung und weitergehende Verzugshaftung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZ_NUTZUNGSWERTE_IM_HAFTUNGSZEITRAUM_UNGUELTIG_5",
+    "funktion": "besitz_nutzungswerte_im_haftungszeitraum",
+    "eingaben": {
+      "haftungsbeginn_utc": "2024-01-01T10:00:00Z",
+      "beginn_eingeschlossen": false,
+      "abrechnungsende_utc": "2024-01-02T12:00:00Z",
+      "nutzungen": [
+        {
+          "nutzung_id": "vorher",
+          "nutzungszeitpunkt_utc": "2024-01-01T09:59:59Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "500"
+        },
+        {
+          "nutzung_id": "grenze",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:00Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "20"
+        },
+        {
+          "nutzung_id": "spaeter",
+          "nutzungszeitpunkt_utc": "2024-01-01T10:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "30"
+        },
+        {
+          "nutzung_id": "unterlassen",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:00Z",
+          "nutzungsart": "schuldhaft_nichtgezogen",
+          "nutzungswert": "40"
+        },
+        {
+          "nutzung_id": "danach",
+          "nutzungszeitpunkt_utc": "2024-01-02T12:00:01Z",
+          "nutzungsart": "gezogen",
+          "nutzungswert": "600"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

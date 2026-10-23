@@ -1,0 +1,381 @@
+[
+  {
+    "fall_id": "MVK_001",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenhoechstbetrag": {
+          "zaehler": "10000",
+          "nenner": "1"
+        },
+        "erhaltungspauschale": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "7000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Kosten genau10000; Grenze vor Pauschale,30 Prozent3000,Rest7000.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_002",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "9999.99",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenhoechstbetrag": {
+          "zaehler": "10000",
+          "nenner": "1"
+        },
+        "erhaltungspauschale": {
+          "zaehler": "2999997",
+          "nenner": "1000"
+        },
+        "kostenbasis": {
+          "zaehler": "6999993",
+          "nenner": "1000"
+        }
+      }
+    },
+    "herleitung": "Ein Cent unter der Grenze; keine Rundung der Zehntelcentreste.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_003",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000.01",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ein Cent über der Grenze;30-Prozent-Abzug darf die Zulässigkeit nicht nachträglich herstellen.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_004",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "8000",
+      "frueher_geltend_gemachte_kosten": "2000",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenhoechstbetrag": {
+          "zaehler": "8000",
+          "nenner": "1"
+        },
+        "erhaltungspauschale": {
+          "zaehler": "2400",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "5600",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Frühere Kosten2000 reduzieren Grenze auf8000, nicht auf einen monatlichen Mietbetrag.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_005",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "8000.01",
+      "frueher_geltend_gemachte_kosten": "2000",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ein Cent über reduziertem Kostenhöchstbetrag.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_006",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "0",
+      "frueher_geltend_gemachte_kosten": "10000",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenhoechstbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhaltungspauschale": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Grenze vollständig verbraucht, null Kosten erzeugen null Basis.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_007",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "0",
+      "frueher_geltend_gemachte_kosten": "10001",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenhoechstbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erhaltungspauschale": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Negative rechnerische Restgrenze eröffnet keinen negativen Kostenbetrag.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_008",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "0.01",
+      "frueher_geltend_gemachte_kosten": "10000",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Bei ausgeschöpfter Grenze keine weiteren positiven Kosten.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_009",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "0",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenhoechstbetrag": {
+          "zaehler": "10000",
+          "nenner": "1"
+        },
+        "erhaltungspauschale": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Nullkosten: kein positiver Anspruch aus der Teilrechnung.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_010",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenhoechstbetrag": {
+          "zaehler": "10000",
+          "nenner": "1"
+        },
+        "erhaltungspauschale": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "kostenbasis": {
+          "zaehler": "7",
+          "nenner": "30"
+        }
+      }
+    },
+    "herleitung": "Drittelkosten mit30-Prozent-Abzug exakt1/10,Rest7/30.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_011",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Verfahren nicht gewählt.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_012",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "-1",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_013",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "1",
+      "frueher_geltend_gemachte_kosten": "-1",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_014",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "1",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_015",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "1",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": "ja"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_016",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": 1,
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Wertebereich oder Typ.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_017",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": null,
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Pflichteingabe.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_018",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "1",
+      "frueher_geltend_gemachte_kosten": null,
+      "vereinfachtes_verfahren_gewaehlt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Pflichteingabe.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  },
+  {
+    "fall_id": "MVK_019",
+    "funktion": "modernisierung_vereinfachte_kostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "1",
+      "frueher_geltend_gemachte_kosten": "0",
+      "vereinfachtes_verfahren_gewaehlt": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Pflichteingabe.",
+    "pruefnachweis": "Handrechnung aus lokalem § 559c Absätzen 1/2 vor Implementierung; kein Aufruf der zu prüfenden Funktion."
+  }
+]

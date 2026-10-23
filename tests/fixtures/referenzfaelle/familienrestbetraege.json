@@ -1,0 +1,830 @@
+[
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_TEIL",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": "300",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "700",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_GLEICH",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": "1000",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_UEBER",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": "1200",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_NULL",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "0",
+      "gerichtlicher_anrechnungsbetrag": "0",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_NICHTS_ANGERECHNET",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": "0",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_EXAKT",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "0.3",
+      "gerichtlicher_anrechnungsbetrag": "0.1",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_FEHLT_ausgleichsforderung",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": null,
+      "gerichtlicher_anrechnungsbetrag": "300",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_TYP_ausgleichsforderung",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": [],
+      "gerichtlicher_anrechnungsbetrag": "300",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_NEGATIV_ausgleichsforderung",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "-1",
+      "gerichtlicher_anrechnungsbetrag": "300",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_FEHLT_gerichtlicher_anrechnungsbetrag",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": null,
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_TYP_gerichtlicher_anrechnungsbetrag",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": [],
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_NEGATIV_gerichtlicher_anrechnungsbetrag",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": "-1",
+      "anrechnungsnachweis": "Wirksam anzurechnender gerichtlich festgesetzter Betrag belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_FEHLT_anrechnungsnachweis",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": "300",
+      "anrechnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_TYP_anrechnungsnachweis",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": "300",
+      "anrechnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_SACHANRECHNUNGSREST_LEER_anrechnungsnachweis",
+    "funktion": "zugewinnausgleich_sachanrechnungsrest",
+    "eingaben": {
+      "ausgleichsforderung": "1000",
+      "gerichtlicher_anrechnungsbetrag": "300",
+      "anrechnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_TEIL",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "700",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_GLEICH",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "300",
+      "anrechenbarer_arbeitsertrag": "700",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_UEBER",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "600",
+      "anrechenbarer_arbeitsertrag": "600",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_NULL",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "0",
+      "anrechenbare_vermoegenseinkuenfte": "0",
+      "anrechenbarer_arbeitsertrag": "0",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_KEINE_ERTRAEGE",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "0",
+      "anrechenbarer_arbeitsertrag": "0",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_EXAKT",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "0.5",
+      "anrechenbare_vermoegenseinkuenfte": "0.1",
+      "anrechenbarer_arbeitsertrag": "0.2",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_FEHLT_unterhaltsbedarf",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": null,
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_TYP_unterhaltsbedarf",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": [],
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_NEGATIV_unterhaltsbedarf",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "-1",
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_FEHLT_anrechenbare_vermoegenseinkuenfte",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": null,
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_TYP_anrechenbare_vermoegenseinkuenfte",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": [],
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_NEGATIV_anrechenbare_vermoegenseinkuenfte",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "-1",
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_FEHLT_anrechenbarer_arbeitsertrag",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": null,
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_TYP_anrechenbarer_arbeitsertrag",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": [],
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_NEGATIV_anrechenbarer_arbeitsertrag",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": "-1",
+      "bewertungsnachweis": "Qualifizierter minderjähriger Bedarf und anrechenbare Erträge derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_TYP_bewertungsnachweis",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "MINDERJAEHRIGEN_UNTERHALTSFEHLBETRAG_LEER_bewertungsnachweis",
+    "funktion": "minderjaehrigen_unterhaltsfehlbetrag",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "anrechenbare_vermoegenseinkuenfte": "100",
+      "anrechenbarer_arbeitsertrag": "200",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_TEIL",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": "300",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_anspruch": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "verbleibender_betreueranspruch": {
+          "zaehler": "700",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_GLEICH",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": "1000",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_anspruch": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "verbleibender_betreueranspruch": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_UEBER",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": "1200",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_anspruch": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "verbleibender_betreueranspruch": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_NULL",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "0",
+      "staatskassenbefriedigung": "0",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_anspruch": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_betreueranspruch": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_NICHTS_ANGERECHNET",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": "0",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_anspruch": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_betreueranspruch": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_EXAKT",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "0.3",
+      "staatskassenbefriedigung": "0.1",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_anspruch": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "verbleibender_betreueranspruch": {
+          "zaehler": "1",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_FEHLT_bestehender_betreueranspruch",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": null,
+      "staatskassenbefriedigung": "300",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_TYP_bestehender_betreueranspruch",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": [],
+      "staatskassenbefriedigung": "300",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_NEGATIV_bestehender_betreueranspruch",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "-1",
+      "staatskassenbefriedigung": "300",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_FEHLT_staatskassenbefriedigung",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": null,
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_TYP_staatskassenbefriedigung",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": [],
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_NEGATIV_staatskassenbefriedigung",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": "-1",
+      "zuordnungsnachweis": "Bestehender Anspruch und zugeordnete tatsächliche Staatskassenleistung belegt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_FEHLT_zuordnungsnachweis",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": "300",
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_TYP_zuordnungsnachweis",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": "300",
+      "zuordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "BETREUER_STAATSKASSEN_ANSPRUCHSUEBERGANG_LEER_zuordnungsnachweis",
+    "funktion": "betreuer_staatskassen_anspruchsuebergang",
+    "eingaben": {
+      "bestehender_betreueranspruch": "1000",
+      "staatskassenbefriedigung": "300",
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige qualifizierte Anrechnungs-/Deckungsrechnung mit Mindestrest0 oder Anspruchsbegrenzung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

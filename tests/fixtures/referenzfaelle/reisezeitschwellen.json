@@ -1,0 +1,684 @@
+[
+  {
+    "fall_id": "REISE_STUNDENGRENZE_tagesreise_dauer_DAVOR",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "tagesreise_dauer",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T11:59:59Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 86399,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "weniger_als",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_tagesreise_dauer_GRENZE",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "tagesreise_dauer",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 86400,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "weniger_als",
+        "grenze_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_tagesreise_dauer_DANACH",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "tagesreise_dauer",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:01Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 86401,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "weniger_als",
+        "grenze_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_onlinebuchung_verbund_DAVOR",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T11:59:59Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 86399,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_onlinebuchung_verbund_GRENZE",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 86400,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_onlinebuchung_verbund_DANACH",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:01Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 86401,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_veranstalter_ruecktritt_kurzreise_DAVOR",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "veranstalter_ruecktritt_kurzreise",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-04-01T11:59:59Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 172799,
+        "grenzdauer_sekunden": 172800,
+        "vergleich": "mindestens",
+        "grenze_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_veranstalter_ruecktritt_kurzreise_GRENZE",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "veranstalter_ruecktritt_kurzreise",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-04-01T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 172800,
+        "grenzdauer_sekunden": 172800,
+        "vergleich": "mindestens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_veranstalter_ruecktritt_kurzreise_DANACH",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "veranstalter_ruecktritt_kurzreise",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-04-01T12:00:01Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 172801,
+        "grenzdauer_sekunden": 172800,
+        "vergleich": "mindestens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_beherbergungsausnahme_vorabinformation_DAVOR",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "beherbergungsausnahme_vorabinformation",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-04-01T11:59:59Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 172799,
+        "grenzdauer_sekunden": 172800,
+        "vergleich": "mindestens",
+        "grenze_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_beherbergungsausnahme_vorabinformation_GRENZE",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "beherbergungsausnahme_vorabinformation",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-04-01T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 172800,
+        "grenzdauer_sekunden": 172800,
+        "vergleich": "mindestens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_beherbergungsausnahme_vorabinformation_DANACH",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "beherbergungsausnahme_vorabinformation",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-04-01T12:00:01Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 172801,
+        "grenzdauer_sekunden": 172800,
+        "vergleich": "mindestens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_KALENDER_0",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-02-28T23:59:59Z",
+      "zeitraum_bis_utc": "2024-02-29T00:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 1,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_KALENDER_1",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-12-31T23:59:59Z",
+      "zeitraum_bis_utc": "2025-01-01T00:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 1,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_KALENDER_2",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "0001-01-01T00:00:00Z",
+      "zeitraum_bis_utc": "0001-01-01T00:00:01Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 1,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_KALENDER_3",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "9999-12-31T23:59:58Z",
+      "zeitraum_bis_utc": "9999-12-31T23:59:59Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 1,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_KALENDER_4",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-01-01T00:00:00Z",
+      "zeitraum_bis_utc": "2024-01-01T00:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 0,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": true
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_KALENDER_5",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "0001-01-01T00:00:00Z",
+      "zeitraum_bis_utc": "9999-12-31T23:59:59Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zeitspanne_sekunden": 315537897599,
+        "grenzdauer_sekunden": 86400,
+        "vergleich": "hoechstens",
+        "grenze_erfuellt": false
+      }
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_FEHLT_regelfall",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": null,
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_TYP_regelfall",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": {},
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_FEHLT_zeitraum_von_utc",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": null,
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_TYP_zeitraum_von_utc",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": {},
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_FEHLT_zeitraum_bis_utc",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": null,
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_TYP_zeitraum_bis_utc",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": {},
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_FEHLT_zeitnachweis",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_TYP_zeitnachweis",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_0",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "x",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_1",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_2",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-29T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_3",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_4",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00+00:00",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_5",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:00.5Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_6",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2023-02-29T12:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_7",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T24:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_8",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:60:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_9",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "2024-03-30T12:00:60Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "REISE_STUNDENGRENZE_UNGUELTIG_10",
+    "funktion": "reise_stundengrenze",
+    "eingaben": {
+      "regelfall": "onlinebuchung_verbund",
+      "zeitraum_von_utc": "0000-01-01T00:00:00Z",
+      "zeitraum_bis_utc": "2024-03-31T12:00:00Z",
+      "zeitnachweis": "Sekundengenaue maßgebliche UTC-Ereignisse, lokale Zeitzonen rechtlich qualifiziert, keine Rundung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sekundengrenzen:24h=86400s,48h=172800s, eine Sekunde davor/danach; UTC-Sommerzeitdatum verändert Zeitspanne nicht.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  }
+]

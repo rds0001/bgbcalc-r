@@ -1,0 +1,282 @@
+[
+  {
+    "fall_id": "MAKLER_ANDERER_PARTEI_HOECHSTBELASTUNG_HAELFTE",
+    "funktion": "makler_anderer_partei_hoechstbelastung",
+    "eingaben": {
+      "qualifizierter_gesamtmaklerlohn": "6000",
+      "einordnungsnachweis": "Qualifizierter656d-Fall mit Verbraucher-Käufer."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_ANDERER_PARTEI_HOECHSTBELASTUNG_NULL",
+    "funktion": "makler_anderer_partei_hoechstbelastung",
+    "eingaben": {
+      "qualifizierter_gesamtmaklerlohn": "0",
+      "einordnungsnachweis": "Qualifizierter656d-Fall mit Verbraucher-Käufer."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_ANDERER_PARTEI_HOECHSTBELASTUNG_BRUCH",
+    "funktion": "makler_anderer_partei_hoechstbelastung",
+    "eingaben": {
+      "qualifizierter_gesamtmaklerlohn": "0.01",
+      "einordnungsnachweis": "Qualifizierter656d-Fall mit Verbraucher-Käufer."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "200"
+      }
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_TEILERLASS",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": "3000",
+      "qualifizierter_erlassbetrag": "500",
+      "einordnungsnachweis": "Wirksam gleiche Ausgangsprovisionen und qualifizierter gleichwirkender Erlass."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_VOLLERLASS",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": "3000",
+      "qualifizierter_erlassbetrag": "3000",
+      "einordnungsnachweis": "Wirksam gleiche Ausgangsprovisionen und qualifizierter gleichwirkender Erlass."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_KEINERLASS",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": "3000",
+      "qualifizierter_erlassbetrag": "0",
+      "einordnungsnachweis": "Wirksam gleiche Ausgangsprovisionen und qualifizierter gleichwirkender Erlass."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_ZU_GROSS",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": "3000",
+      "qualifizierter_erlassbetrag": "3001",
+      "einordnungsnachweis": "Wirksam gleiche Ausgangsprovisionen und qualifizierter gleichwirkender Erlass."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_ANDERER_PARTEI_HOECHSTBELASTUNG_FEHLT_qualifizierter_gesamtmaklerlohn",
+    "funktion": "makler_anderer_partei_hoechstbelastung",
+    "eingaben": {
+      "qualifizierter_gesamtmaklerlohn": null,
+      "einordnungsnachweis": "Qualifizierter656d-Fall mit Verbraucher-Käufer."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_ANDERER_PARTEI_HOECHSTBELASTUNG_FEHLT_einordnungsnachweis",
+    "funktion": "makler_anderer_partei_hoechstbelastung",
+    "eingaben": {
+      "qualifizierter_gesamtmaklerlohn": "6000",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_ANDERER_PARTEI_HOECHSTBELASTUNG_NEGATIV",
+    "funktion": "makler_anderer_partei_hoechstbelastung",
+    "eingaben": {
+      "qualifizierter_gesamtmaklerlohn": "-1",
+      "einordnungsnachweis": "Qualifizierter656d-Fall mit Verbraucher-Käufer."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_ANDERER_PARTEI_HOECHSTBELASTUNG_TYP",
+    "funktion": "makler_anderer_partei_hoechstbelastung",
+    "eingaben": {
+      "qualifizierter_gesamtmaklerlohn": [],
+      "einordnungsnachweis": "Qualifizierter656d-Fall mit Verbraucher-Käufer."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_ANDERER_PARTEI_HOECHSTBELASTUNG_LEER",
+    "funktion": "makler_anderer_partei_hoechstbelastung",
+    "eingaben": {
+      "qualifizierter_gesamtmaklerlohn": "6000",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_FEHLT_bisheriger_gleicher_maklerlohn_je_partei",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": null,
+      "qualifizierter_erlassbetrag": "500",
+      "einordnungsnachweis": "Wirksam gleiche Ausgangsprovisionen und qualifizierter gleichwirkender Erlass."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_FEHLT_qualifizierter_erlassbetrag",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": "3000",
+      "qualifizierter_erlassbetrag": null,
+      "einordnungsnachweis": "Wirksam gleiche Ausgangsprovisionen und qualifizierter gleichwirkender Erlass."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": "3000",
+      "qualifizierter_erlassbetrag": "500",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_NEGATIV",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": "-1",
+      "qualifizierter_erlassbetrag": "500",
+      "einordnungsnachweis": "Wirksam gleiche Ausgangsprovisionen und qualifizierter gleichwirkender Erlass."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_TYP",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": [],
+      "qualifizierter_erlassbetrag": "500",
+      "einordnungsnachweis": "Wirksam gleiche Ausgangsprovisionen und qualifizierter gleichwirkender Erlass."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MAKLER_GLEICHWIRKENDER_ERLASS_RESTBETRAG_LEER",
+    "funktion": "makler_gleichwirkender_erlass_restbetrag",
+    "eingaben": {
+      "bisheriger_gleicher_maklerlohn_je_partei": "3000",
+      "qualifizierter_erlassbetrag": "500",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:6000/2=3000;3000-500=2500 je Partei, keine automatische Vertragsreparatur.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

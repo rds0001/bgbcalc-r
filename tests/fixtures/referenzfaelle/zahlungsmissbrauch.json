@@ -1,0 +1,428 @@
+[
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_DECKEL",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "50",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_KLEINSCHADEN",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "49.99",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "4999",
+        "nenner": "100"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_GLEICH",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "50",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "50",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_NULL",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "0",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_AUSSCHLUSS_II",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": true,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_PFLICHTVERLETZUNG",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": true,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_III_VOR_II",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": true,
+      "ausschluss_absatz_2": true,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_IV_V_VOR_III",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": true,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": true,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_BETRUG_VOR_ALLEM",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": true,
+      "qualifizierte_pflichtverletzung": true,
+      "ausschluss_absatz_2": true,
+      "ausschluss_absatz_4_oder_5": true,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_BETRUG_ALLEIN",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": true,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_FEHLT_schadensbetrag",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": null,
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_FEHLT_betruegerische_absicht",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": null,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_FEHLT_qualifizierte_pflichtverletzung",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": null,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_FEHLT_ausschluss_absatz_2",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": null,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_FEHLT_ausschluss_absatz_4_oder_5",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": null,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_TYP_betruegerische_absicht",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": 1,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_TYP_qualifizierte_pflichtverletzung",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": 1,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_TYP_ausschluss_absatz_2",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": 1,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_TYP_ausschluss_absatz_4_oder_5",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": 1,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_NEGATIV",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "-1",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": "Qualifizierter675v-Grundfall und einheitlicher Schaden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "ZAHLUNGSMISSBRAUCH_ZAHLERHAFTUNGSBETRAG_LEER",
+    "funktion": "zahlungsmissbrauch_zahlerhaftungsbetrag",
+    "eingaben": {
+      "schadensbetrag": "1000",
+      "betruegerische_absicht": false,
+      "qualifizierte_pflichtverletzung": false,
+      "ausschluss_absatz_2": false,
+      "ausschluss_absatz_4_oder_5": false,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiger Zweigfall: Grundhaftung höchstens50, gesetzlicher Ausschluss0, qualifizierte Pflichtverletzung oder vorrangiger Betrug voller Schaden.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

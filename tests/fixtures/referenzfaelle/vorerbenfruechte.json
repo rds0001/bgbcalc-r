@@ -1,0 +1,450 @@
+[
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_NUTZUNGSGRENZE",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nicht_wiederherstellungsgebundener_fruchtwert": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "dem_vorerben_gebuehrender_fruchtwert": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "dem_vorerben_nicht_gebuehrender_fruchtwert": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_FRUCHTGRENZE",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "90",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nicht_wiederherstellungsgebundener_fruchtwert": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "dem_vorerben_gebuehrender_fruchtwert": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "dem_vorerben_nicht_gebuehrender_fruchtwert": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_GLEICH",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "80",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nicht_wiederherstellungsgebundener_fruchtwert": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "dem_vorerben_gebuehrender_fruchtwert": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "dem_vorerben_nicht_gebuehrender_fruchtwert": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_VOLL_GEBUNDEN",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "90",
+      "wiederherstellungsgebundener_fruchtwert": "100",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nicht_wiederherstellungsgebundener_fruchtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "dem_vorerben_gebuehrender_fruchtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "dem_vorerben_nicht_gebuehrender_fruchtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_KEINE_BEEINTRAECHTIGUNG",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "0",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nicht_wiederherstellungsgebundener_fruchtwert": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "dem_vorerben_gebuehrender_fruchtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "dem_vorerben_nicht_gebuehrender_fruchtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_NULL",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "0",
+      "beeintraechtigte_eigene_nutzungen": "0",
+      "wiederherstellungsgebundener_fruchtwert": "0",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nicht_wiederherstellungsgebundener_fruchtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "dem_vorerben_gebuehrender_fruchtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "dem_vorerben_nicht_gebuehrender_fruchtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_BRUCH",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "0.05",
+      "beeintraechtigte_eigene_nutzungen": "0.03",
+      "wiederherstellungsgebundener_fruchtwert": "0.01",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nicht_wiederherstellungsgebundener_fruchtwert": {
+          "zaehler": "1",
+          "nenner": "25"
+        },
+        "dem_vorerben_gebuehrender_fruchtwert": {
+          "zaehler": "3",
+          "nenner": "100"
+        },
+        "dem_vorerben_nicht_gebuehrender_fruchtwert": {
+          "zaehler": "1",
+          "nenner": "50"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_NICHT_ANWENDBAR",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_FEHLT_fruchtwert",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": null,
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_TYP_fruchtwert",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": [],
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_FEHLT_beeintraechtigte_eigene_nutzungen",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": null,
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_TYP_beeintraechtigte_eigene_nutzungen",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": [],
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_FEHLT_wiederherstellungsgebundener_fruchtwert",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": null,
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_TYP_wiederherstellungsgebundener_fruchtwert",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": [],
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_FEHLT_fruchtziehung_nach_2133_qualifiziert",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_TYP_fruchtziehung_nach_2133_qualifiziert",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_FEHLT_bewertungsnachweis",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_TYP_bewertungsnachweis",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_GEBUNDEN_ZU_HOCH",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "101",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_NEGATIV",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "-1",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Fruchtbezug und getrennte Wertgrenzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VORERBE_FRUCHTWERTGRENZE_NACHWEIS_LEER",
+    "funktion": "vorerbe_fruchtwertgrenze",
+    "eingaben": {
+      "fruchtwert": "100",
+      "beeintraechtigte_eigene_nutzungen": "50",
+      "wiederherstellungsgebundener_fruchtwert": "20",
+      "fruchtziehung_nach_2133_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Doppelgrenzen:Frucht100−gebunden20=frei80, bei eigenen beeinträchtigten Nutzungen50 gebühren50; bei Nutzungen90 nur80. Voll gebundener Fruchtwert ergibt0.",
+    "pruefnachweis": "Native Python/R-Referenzen und vollständige Ergebnisparität."
+  }
+]

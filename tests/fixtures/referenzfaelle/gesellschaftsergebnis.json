@@ -1,0 +1,713 @@
+[
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_GEWINN",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "Anna",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "25",
+            "nenner": "1"
+          }
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "quote": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "75",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_VERLUST",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "-100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "Anna",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "-25",
+            "nenner": "1"
+          }
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "quote": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "-75",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_NULL",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "0",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "Anna",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "quote": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_BEITRAG",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beitragswerte",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "Anna",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "25",
+            "nenner": "1"
+          }
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "quote": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "75",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_EXAKT",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "Anna",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "1",
+            "nenner": "12"
+          }
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "quote": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "ergebnisanteil": {
+            "zaehler": "1",
+            "nenner": "4"
+          }
+        }
+      ]
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_GLEICH",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "0.01",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": null
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": null
+        },
+        {
+          "gesellschafter_id": "C",
+          "gewicht": null
+        }
+      ],
+      "quotenbasis": "gleiche_anteile",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "A",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ergebnisanteil": {
+            "zaehler": "1",
+            "nenner": "300"
+          }
+        },
+        {
+          "gesellschafter_id": "B",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ergebnisanteil": {
+            "zaehler": "1",
+            "nenner": "300"
+          }
+        },
+        {
+          "gesellschafter_id": "C",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ergebnisanteil": {
+            "zaehler": "1",
+            "nenner": "300"
+          }
+        }
+      ]
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_NULLGEWICHT",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "0"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "1"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "gesellschafter_id": "A",
+          "quote": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "ergebnisanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "gesellschafter_id": "B",
+          "quote": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "ergebnisanteil": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_FEHLT_gesellschaftsergebnis",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": null,
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_TYP_gesellschaftsergebnis",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": {},
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_FEHLT_gesellschafter",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": null,
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_TYP_gesellschafter",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": {},
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_FEHLT_quotenbasis",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": null,
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_TYP_quotenbasis",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": {},
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_FEHLT_einordnungsnachweis",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_TYP_einordnungsnachweis",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_UNGUELTIG_0",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": true,
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_UNGUELTIG_1",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "NaN",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_UNGUELTIG_2",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "9007199254740992",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_UNGUELTIG_3",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "frei",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_UNGUELTIG_4",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "1"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_UNGUELTIG_5",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "A",
+          "gewicht": "0"
+        },
+        {
+          "gesellschafter_id": "B",
+          "gewicht": "0"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": "§§709III/718: festgestelltes Gesellschaftsergebnis mit rechtlich ausgewählter Gewinn-/Verlustquote verteilen. Beteiligungsverhältnisse haben Vorrang vor vereinbarten Beitragswerten, sonst gleiche Anteile. Individuelle abweichende Gewinn-/Verlustvereinbarungen und wechselnder Gesellschafterbestand gesondert. Rechnerische Ergebnisanteile sind nicht automatisch fällige Ausschüttungen oder sofortige Nachschusspflichten; keine Vermischung mit Liquidation oder Ausscheiden. Im Zweifel Rechnungsabschluss und Gewinnverteilung zum Kalenderjahresende718; abweichende Vereinbarung vorqualifizieren. Keine Rundung, kein Restcentverfahren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_GEWINN_VERLUST_BETRAEGE_UNGUELTIG_6",
+    "funktion": "gesellschaft_gewinn_verlust_betraege",
+    "eingaben": {
+      "gesellschaftsergebnis": "100",
+      "gesellschafter": [
+        {
+          "gesellschafter_id": "Anna",
+          "gewicht": "1"
+        },
+        {
+          "gesellschafter_id": "Bert",
+          "gewicht": "3"
+        }
+      ],
+      "quotenbasis": "beteiligungsverhaeltnisse",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Gewichte1:3 ergeben1/4 und3/4; Ergebnis100 ergibt25 und75. Verlust erhält negatives Vorzeichen. Drittel bleiben exakt ohne Restcent.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

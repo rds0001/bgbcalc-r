@@ -1,0 +1,355 @@
+[
+  {
+    "fall_id": "MEI_001",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Regelfall: doppelte Mangelbeseitigungskosten 2*1000.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_002",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "1500",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Tatsächlich verweigerbare Zahlung höchstens fällige Vergütung.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_003",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "2000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Doppelbetrag genau gleich fälliger Vergütung.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_004",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "0",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Keine fällige Vergütung zurückzuhalten.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_005",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "0",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ohne Kosten im Regelfall kein Betrag.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_006",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "0.001",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "500"
+      }
+    },
+    "herleitung": "Keine automatische Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_007",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": "1500",
+      "abweichungsbegruendung": "Einzelfallbewertung"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Begründete Einzelfallbewertung ersetzt Regeldoppelbetrag, begrenzt durch fällige Vergütung.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_008",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": "3000",
+      "abweichungsbegruendung": "Einzelfallbewertung"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Begründete Einzelfallbewertung ersetzt Regeldoppelbetrag, begrenzt durch fällige Vergütung.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_009",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": "15000",
+      "abweichungsbegruendung": "Einzelfallbewertung"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Begründete Einzelfallbewertung ersetzt Regeldoppelbetrag, begrenzt durch fällige Vergütung.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_010",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": "0",
+      "abweichungsbegruendung": "Einzelfallbewertung"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Begründete Einzelfallbewertung ersetzt Regeldoppelbetrag, begrenzt durch fällige Vergütung.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_011",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": false,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Kein Anspruch auf Mangelbeseitigung; keine Aussage über andere Zurückbehaltungsrechte.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_012",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "-1",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Rechtsstatus explizit, Abweichung und Begründung müssen zusammenpassen.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_013",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "-1",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Rechtsstatus explizit, Abweichung und Begründung müssen zusammenpassen.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_014",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": "-1",
+      "abweichungsbegruendung": "Bewertung"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Rechtsstatus explizit, Abweichung und Begründung müssen zusammenpassen.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_015",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": 1,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Rechtsstatus explizit, Abweichung und Begründung müssen zusammenpassen.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_016",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": "Grund ohne Abweichungsbetrag"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Rechtsstatus explizit, Abweichung und Begründung müssen zusammenpassen.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_017",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": "100",
+      "abweichungsbegruendung": ""
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Beträge nichtnegativ, Rechtsstatus explizit, Abweichung und Begründung müssen zusammenpassen.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_018",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": null,
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": null,
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kosten fehlen.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  },
+  {
+    "fall_id": "MEI_019",
+    "funktion": "werk_maengeleinbehalt",
+    "eingaben": {
+      "faellige_verguetung": "10000",
+      "mangelbeseitigungskosten": "1000",
+      "mangelbeseitigungsanspruch": true,
+      "abweichender_angemessener_betrag": "100",
+      "abweichungsbegruendung": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Für Abweichung erforderliche Begründung fehlt.",
+    "pruefnachweis": "Vor Implementierung aus § 641 Abs. 3 und § 632a Abs. 1 lokal abgeleitet."
+  }
+]

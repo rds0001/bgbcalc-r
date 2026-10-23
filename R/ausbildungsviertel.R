@@ -1,0 +1,10 @@
+zusatzviertel_ausbildungsrahmen <- function(viertelbemessungsgrundlage=NULL,qualifizierter_ausbildungsgesamtbedarf=NULL,bewertungsnachweis=NULL) {
+  basis <- .geld(viertelbemessungsgrundlage);bedarf <- .geld(qualifizierter_ausbildungsgesamtbedarf)
+  .text(bewertungsnachweis,"bewertungsnachweis")
+  viertel <- .dividieren(basis,.bruch(4));mittel <- if (.vergleichen(viertel,bedarf)<=0) viertel else bedarf
+  eingaben <- list(viertelbemessungsgrundlage=viertelbemessungsgrundlage,qualifizierter_ausbildungsgesamtbedarf=qualifizierter_ausbildungsgesamtbedarf,bewertungsnachweis=bewertungsnachweis)
+  wert <- list(zusaetzliches_viertel=.bruchteile(viertel),ausbildungsrahmen=.bruchteile(mittel),nicht_aus_viertel_gedeckter_bedarf=.bruchteile(.subtrahieren(bedarf,mittel)),nicht_fuer_diesen_gesamtbedarf_benoetigtes_viertel=.bruchteile(.subtrahieren(viertel,mittel)))
+  ergebnis <- .ergebnis(wert,"EUR","BGB_ZUSATZVIERTEL_AUSBILDUNGSRAHMEN",eingaben,list(list(operation="Rechtlich bewertete Viertelbemessungsgrundlage durch vier teilen und qualifizierten gesamten Ausbildungsbedarf auf dieses zus\u00e4tzliche Viertel begrenzen.")),eingaben)
+  ergebnis$hinweise <- list("\u00a71371IV setzt tats\u00e4chlich nachAbsatz1 zus\u00e4tzlich gew\u00e4hrtes Viertel und bed\u00fcrftige erbberechtigte Abk\u00f6mmlinge voraus, die nicht aus der aufgel\u00f6sten Ehe stammen. Bemessungsgrundlage und angemessener bed\u00fcrftigkeitsabh\u00e4ngiger Gesamtausbildungsbedarf rechtlich qualifiziert, keine pauschalen Bruttonachlass- oder Ausbildungskostenannahmen. Aggregierte Rahmenrechnung f\u00fcr vollst\u00e4ndig abgegrenzten Kreis/Bedarfsumfang; keine Einzelverteilung, Rangregel oder Priorit\u00e4t nach zeitlicher Geltendmachung erfunden. Vergangene Leistungen/Verbrauch des Viertels, Wert\u00e4nderungen, abweichende Nachlassbindungen und Wiederverwendung desselben Viertels f\u00fcr neue Bedarfsrunden gesondert rechtlich abgrenzen; dieser Rahmen darf nicht wiederholt ohne Anrechnung ausgesch\u00f6pft werden. Keine autonome Pr\u00fcfung von Erbberechtigung, Abstammung, Bed\u00fcrftigkeit oder Angemessenheit.")
+  ergebnis
+}

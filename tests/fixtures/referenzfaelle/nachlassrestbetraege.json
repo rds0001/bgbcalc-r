@@ -1,0 +1,866 @@
+[
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_POSITIV",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_verbindlichkeiten": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "zulaenglichkeitsdifferenz": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_NEGATIV",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "60",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_verbindlichkeiten": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "zulaenglichkeitsdifferenz": {
+          "zaehler": "-20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_GLEICH",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "80",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_verbindlichkeiten": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "zulaenglichkeitsdifferenz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_ALLES_AUSGENOMMEN",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "40",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_verbindlichkeiten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zulaenglichkeitsdifferenz": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_NULL",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "0",
+      "gesamte_nachlassverbindlichkeiten": "0",
+      "enthaltene_vermaechtnisverbindlichkeiten": "0",
+      "enthaltene_auflagenverbindlichkeiten": "0",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_verbindlichkeiten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zulaenglichkeitsdifferenz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_FEHLT_nachlassaktiva",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": null,
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_TYP_nachlassaktiva",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": [],
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_FEHLT_gesamte_nachlassverbindlichkeiten",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": null,
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_TYP_gesamte_nachlassverbindlichkeiten",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": [],
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_FEHLT_enthaltene_vermaechtnisverbindlichkeiten",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": null,
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_TYP_enthaltene_vermaechtnisverbindlichkeiten",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": [],
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_FEHLT_enthaltene_auflagenverbindlichkeiten",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": null,
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_TYP_enthaltene_auflagenverbindlichkeiten",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": [],
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_TYP_bewertungsnachweis",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "120",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHLASS_ZULAENGLICHKEITSBETRAG_AUSNAHMEN_ZU_HOCH",
+    "funktion": "nachlass_zulaenglichkeitsbetrag",
+    "eingaben": {
+      "nachlassaktiva": "100",
+      "gesamte_nachlassverbindlichkeiten": "39",
+      "enthaltene_vermaechtnisverbindlichkeiten": "30",
+      "enthaltene_auflagenverbindlichkeiten": "10",
+      "bewertungsnachweis": "Synthetisch qualifizierte Aktiva/Schulden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_TEIL",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": "60",
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "berichtigung_aus_eigenem_anteil": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "verbleibender_erbteilwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_aus_anteil_berichtigter_schuldteil": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_VOLL",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "60",
+      "individuell_zugeordnete_nachlassschuld": "40",
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "berichtigung_aus_eigenem_anteil": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "verbleibender_erbteilwert": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "nicht_aus_anteil_berichtigter_schuldteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_GLEICH",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": "40",
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "berichtigung_aus_eigenem_anteil": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "verbleibender_erbteilwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_aus_anteil_berichtigter_schuldteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_NULL",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "0",
+      "individuell_zugeordnete_nachlassschuld": "0",
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "berichtigung_aus_eigenem_anteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_erbteilwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_aus_anteil_berichtigter_schuldteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_NICHT_ANWENDBAR",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": "60",
+      "last_nach_2046_abs2_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_FEHLT_zugeteilter_erbteilwert",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": null,
+      "individuell_zugeordnete_nachlassschuld": "60",
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_TYP_zugeteilter_erbteilwert",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": [],
+      "individuell_zugeordnete_nachlassschuld": "60",
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_FEHLT_individuell_zugeordnete_nachlassschuld",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": null,
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_TYP_individuell_zugeordnete_nachlassschuld",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": [],
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_FEHLT_last_nach_2046_abs2_qualifiziert",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": "60",
+      "last_nach_2046_abs2_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_TYP_last_nach_2046_abs2_qualifiziert",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": "60",
+      "last_nach_2046_abs2_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch individuelle Nachlasslast."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_FEHLT_bewertungsnachweis",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": "60",
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBTEIL_INDIVIDUELLE_SCHULDENDECKUNG_TYP_bewertungsnachweis",
+    "funktion": "erbteil_individuelle_schuldendeckung",
+    "eingaben": {
+      "zugeteilter_erbteilwert": "40",
+      "individuell_zugeordnete_nachlassschuld": "60",
+      "last_nach_2046_abs2_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_TEIL",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "70",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_VOLL",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "0",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_GEDECKT",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "100",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_NULL",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "0",
+      "vom_erben_erlangbarer_ersatz": "0",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_BRUCH",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "0.03",
+      "vom_erben_erlangbarer_ersatz": "0.01",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "50"
+      }
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_NICHT_ANWENDBAR",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_FEHLT_geschuldeter_ersatzwert",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": null,
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_TYP_geschuldeter_ersatzwert",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": [],
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_FEHLT_vom_erben_erlangbarer_ersatz",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": null,
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_TYP_vom_erben_erlangbarer_ersatz",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": [],
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_FEHLT_subsidiaerfall_nach_2288_qualifiziert",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_TYP_subsidiaerfall_nach_2288_qualifiziert",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_TYP_bewertungsnachweis",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_ERLANGBAR_ZU_HOCH",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "101",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_NEGATIV",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "-1",
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter subsidiärer Ersatzfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERTRAGSVERMAECHTNIS_SUBSIDIAERER_FEHLBETRAG_NACHWEIS_LEER",
+    "funktion": "vertragsvermaechtnis_subsidiaerer_fehlbetrag",
+    "eingaben": {
+      "geschuldeter_ersatzwert": "100",
+      "vom_erben_erlangbarer_ersatz": "30",
+      "subsidiaerfall_nach_2288_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Betragsrechnung:Schulden120−Vermächtnis30−Auflage10=80, Aktiva100→Differenz20. Eigener Anteil40 deckt Schuld60 nur40. Ersatz100−beim Erben erlangbar30=Fehlbetrag70.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  }
+]

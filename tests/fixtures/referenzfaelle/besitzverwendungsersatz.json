@@ -1,0 +1,323 @@
+[
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_GRUND",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "110",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_EIGENE_AUSGESCHLOSSEN",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "90",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "40",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_KEINE_ABZUEGE",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "0",
+      "ausgeschlossene_lasten": "0",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "140",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_NULL",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "0",
+      "ausgeschlossene_erhaltungskosten": "0",
+      "ausgeschlossene_lasten": "0",
+      "ersatzfaehige_vorgaengerverwendungen": "0",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_EXAKT",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "0.3",
+      "ausgeschlossene_erhaltungskosten": "0.1",
+      "ausgeschlossene_lasten": "0.1",
+      "ersatzfaehige_vorgaengerverwendungen": "0.05",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3",
+        "nenner": "20"
+      }
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_FEHLT_notwendige_eigene_verwendungen",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": null,
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_TYP_notwendige_eigene_verwendungen",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": [],
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_FEHLT_ausgeschlossene_erhaltungskosten",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": null,
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_TYP_ausgeschlossene_erhaltungskosten",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": [],
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_FEHLT_ausgeschlossene_lasten",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": null,
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_TYP_ausgeschlossene_lasten",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": [],
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_FEHLT_ersatzfaehige_vorgaengerverwendungen",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": null,
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_TYP_ersatzfaehige_vorgaengerverwendungen",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": [],
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_FEHLT_zuordnungsnachweis",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_TYP_zuordnungsnachweis",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_AUSSCHLUSS_ZU_GROSS",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "91",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_NEGATIV",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "-1",
+      "zuordnungsnachweis": "Qualifizierte994I-Verwendungen und separat bereinigter999-Vorgängeranspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "BESITZ_NOTWENDIGER_VERWENDUNGSERSATZ_LEER",
+    "funktion": "besitz_notwendiger_verwendungsersatz",
+    "eingaben": {
+      "notwendige_eigene_verwendungen": "100",
+      "ausgeschlossene_erhaltungskosten": "20",
+      "ausgeschlossene_lasten": "10",
+      "ersatzfaehige_vorgaengerverwendungen": "40",
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Eigene100−20gewöhnlicheErhaltung−10Lasten+40bereinigterVorgänger=110. Bei vollständigem eigenen Ausschluss bleibt nur Vorgängerbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

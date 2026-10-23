@@ -1,0 +1,563 @@
+[
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_346",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_vorausanteil": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "rechnerischer_rueckzahlungsbetrag": {
+          "zaehler": "400",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1200x1/3=400für spätere Zeit; qualifizierte Entreicherung100 mindert im Bereicherungsfall auf300.346 kennt diesen Abzug hier nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_BEREICHERUNG",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": true,
+      "abziehbare_entreicherung": "100",
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_vorausanteil": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "rechnerischer_rueckzahlungsbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1200x1/3=400für spätere Zeit; qualifizierte Entreicherung100 mindert im Bereicherungsfall auf300.346 kennt diesen Abzug hier nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_BEREICHERUNG_NULL",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": true,
+      "abziehbare_entreicherung": "0",
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_vorausanteil": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "rechnerischer_rueckzahlungsbetrag": {
+          "zaehler": "400",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1200x1/3=400für spätere Zeit; qualifizierte Entreicherung100 mindert im Bereicherungsfall auf300.346 kennt diesen Abzug hier nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_VOLLSTAENDIG_ENTREICHERT",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": true,
+      "abziehbare_entreicherung": "400",
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_vorausanteil": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "rechnerischer_rueckzahlungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1200x1/3=400für spätere Zeit; qualifizierte Entreicherung100 mindert im Bereicherungsfall auf300.346 kennt diesen Abzug hier nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_KEINE_SPAETERE_ZEIT",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 0,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_vorausanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerischer_rueckzahlungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1200x1/3=400für spätere Zeit; qualifizierte Entreicherung100 mindert im Bereicherungsfall auf300.346 kennt diesen Abzug hier nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_GANZER_ZEITRAUM",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 3,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_vorausanteil": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "rechnerischer_rueckzahlungsbetrag": {
+          "zaehler": "1200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1200x1/3=400für spätere Zeit; qualifizierte Entreicherung100 mindert im Bereicherungsfall auf300.346 kennt diesen Abzug hier nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_KEINE_ZAHLUNG",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "0",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_vorausanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerischer_rueckzahlungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1200x1/3=400für spätere Zeit; qualifizierte Entreicherung100 mindert im Bereicherungsfall auf300.346 kennt diesen Abzug hier nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_EXAKT",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_vorausanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "rechnerischer_rueckzahlungsbetrag": {
+          "zaehler": "1",
+          "nenner": "9"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1200x1/3=400für spätere Zeit; qualifizierte Entreicherung100 mindert im Bereicherungsfall auf300.346 kennt diesen Abzug hier nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_FEHLT_vorausverguetung",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": null,
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_TYP_vorausverguetung",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": {},
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_FEHLT_zeitanteil_nach_kuendigung_zaehler",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": null,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_TYP_zeitanteil_nach_kuendigung_zaehler",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": {},
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_FEHLT_zeitanteil_nach_kuendigung_nenner",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": null,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_TYP_zeitanteil_nach_kuendigung_nenner",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": {},
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_FEHLT_kuendigungsumstand_nicht_zu_vertreten",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": null,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_TYP_kuendigungsumstand_nicht_zu_vertreten",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": {},
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_TYP_abziehbare_entreicherung",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": {},
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_FEHLT_einordnungsnachweis",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_TYP_einordnungsnachweis",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_ENTREICHERUNG_FEHLT",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": true,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_UNGUELTIG_0",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": "0",
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_UNGUELTIG_1",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": true,
+      "abziehbare_entreicherung": "401",
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_UNGUELTIG_2",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": true,
+      "abziehbare_entreicherung": "-1",
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_UNGUELTIG_3",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "-1",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_UNGUELTIG_4",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 4,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_UNGUELTIG_5",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 0,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": "§628I3 nach qualifizierter Kündigung626/627 nach Dienstbeginn: nur im Voraus entrichtete Vergütung für Zeit nach Kündigung. Anteil auf den tatsächlich vorausbezahlten Zeitraum beziehen, nicht blind auf gesamte Vertragsvergütung oder bisherige Leistungsquote. Teilbetrag nach der rechtlich einschlägigen Vergütungs-/Zeitkonvention bestimmen; keine universelle Dreißigtage- oder Jahreskonvention. Hat der Dienstverpflichtete den Kündigungsumstand nicht zu vertreten, gelten Bereicherungsvorschriften; abzugsfähige Entreicherung insbesondere unter Berücksichtigung818/819/820 rechtlich bestimmen. Im346-Fall keine818III-Entreicherung abziehen. Weitere Nutzungen, Wertersatz, frühere Leistungen und Interessenverlust628I1/2 sowie Kündigungsschaden628II separat; keine automatische Aufrechnung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DIENSTKUENDIGUNG_VORAUSVERGUETUNGSRUECKZAHLUNG_UNGUELTIG_6",
+    "funktion": "dienstkuendigung_vorausverguetungsrueckzahlung",
+    "eingaben": {
+      "vorausverguetung": "1200",
+      "zeitanteil_nach_kuendigung_zaehler": 1,
+      "zeitanteil_nach_kuendigung_nenner": 3,
+      "kuendigungsumstand_nicht_zu_vertreten": false,
+      "abziehbare_entreicherung": null,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

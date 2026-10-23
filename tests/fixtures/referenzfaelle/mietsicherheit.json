@@ -1,0 +1,573 @@
+[
+  {
+    "fall_id": "MSI_001",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000",
+      "ausgewiesene_betriebskosten": "200",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2400",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Dreifache Miete ohne ausgewiesene Betriebskosten:3*(1000-200).",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_002",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000",
+      "ausgewiesene_betriebskosten": "0",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ohne gesondert ausgewiesene Betriebskosten kein pauschal geschätzter Abzug.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_003",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000",
+      "ausgewiesene_betriebskosten": "1000",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Rechnerische Basis null.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_004",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "0",
+      "ausgewiesene_betriebskosten": "0",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Nullmiete ergibt Nullgrenze.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_005",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000.01",
+      "ausgewiesene_betriebskosten": "200.005",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "480003",
+        "nenner": "200"
+      }
+    },
+    "herleitung": "Exakte Berechnung ohne Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_006",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000",
+      "ausgewiesene_betriebskosten": "200",
+      "wohnraummietverhaeltnis": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Kein hier eingeordnetes Wohnraummietverhältnis.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_007",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000",
+      "ausgewiesene_betriebskosten": "1001",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Miete, Betriebskosten oder Einordnung.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_008",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "-1",
+      "ausgewiesene_betriebskosten": "200",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Miete, Betriebskosten oder Einordnung.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_009",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000",
+      "ausgewiesene_betriebskosten": "-1",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Miete, Betriebskosten oder Einordnung.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_010",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000",
+      "ausgewiesene_betriebskosten": "200",
+      "wohnraummietverhaeltnis": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Miete, Betriebskosten oder Einordnung.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_011",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": 1000,
+      "ausgewiesene_betriebskosten": "200",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Miete, Betriebskosten oder Einordnung.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_012",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": "1000",
+      "ausgewiesene_betriebskosten": null,
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ausgewiesene Betriebskosten müssen ausdrücklich auch mit null angegeben werden.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_013",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "nummer": 1,
+          "faellig_am": "2026-10-15",
+          "betrag": {
+            "zaehler": "800",
+            "nenner": "1"
+          }
+        },
+        {
+          "nummer": 2,
+          "faellig_am": "2026-11-04",
+          "betrag": {
+            "zaehler": "800",
+            "nenner": "1"
+          }
+        },
+        {
+          "nummer": 3,
+          "faellig_am": "2026-12-03",
+          "betrag": {
+            "zaehler": "800",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Drei gleiche Teilzahlungen800; erste bei Mietbeginn, weitere bei vorgegebenen Folgemietfälligkeiten.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_014",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "1",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "nummer": 1,
+          "faellig_am": "2026-10-15",
+          "betrag": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "nummer": 2,
+          "faellig_am": "2026-11-04",
+          "betrag": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "nummer": 3,
+          "faellig_am": "2026-12-03",
+          "betrag": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        }
+      ]
+    },
+    "herleitung": "Keine verdeckte Cent-Verteilung.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_015",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "0",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "nummer": 1,
+          "faellig_am": "2026-10-15",
+          "betrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "nummer": 2,
+          "faellig_am": "2026-11-04",
+          "betrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "nummer": 3,
+          "faellig_am": "2026-12-03",
+          "betrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Nullsicherheit ergibt drei Nullbeträge.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_016",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2023-12-31",
+      "zweite_mietfaelligkeit": "2024-01-04",
+      "dritte_mietfaelligkeit": "2024-02-05",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "nummer": 1,
+          "faellig_am": "2023-12-31",
+          "betrag": {
+            "zaehler": "800",
+            "nenner": "1"
+          }
+        },
+        {
+          "nummer": 2,
+          "faellig_am": "2024-01-04",
+          "betrag": {
+            "zaehler": "800",
+            "nenner": "1"
+          }
+        },
+        {
+          "nummer": 3,
+          "faellig_am": "2024-02-05",
+          "betrag": {
+            "zaehler": "800",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Jahreswechsel und unterschiedliche rechtlich vorgegebene Fälligkeitstage.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_017",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": false,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine geschuldete Geldsicherheit im ausgewählten Wohnraummietfall.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_018",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine geschuldete Geldsicherheit im ausgewählten Wohnraummietfall.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_019",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "-1",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Termin, Reihenfolge oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_020",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-10-15",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Termin, Reihenfolge oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_021",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-11-04",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Termin, Reihenfolge oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_022",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2026-02-30",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Termin, Reihenfolge oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_023",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": "2026-11-04",
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Termin, Reihenfolge oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "MSI_024",
+    "funktion": "mietsicherheit_raten",
+    "eingaben": {
+      "geschuldete_geldsicherheit": "2400",
+      "mietbeginn": "2026-10-15",
+      "zweite_mietfaelligkeit": null,
+      "dritte_mietfaelligkeit": "2026-12-03",
+      "wohnraummietverhaeltnis": true,
+      "geldsicherheit_geschuldet": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Maßgeblicher zweiter Mietzahlungstermin fehlt; nicht automatisch aus Kalenderdaten erfunden.",
+    "pruefnachweis": "Vor Implementierung manuelle Dreifach-/Drittelrechnung aus § 551 lokaler PDF."
+  },
+  {
+    "fall_id": "BRUCHEINGABE_006",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": {
+        "zaehler": "2",
+        "nenner": "3"
+      },
+      "ausgewiesene_betriebskosten": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Bruchrechnung beziehungsweise unveränderte fachliche Nichtnegativitätsgrenze; exakte Objekte statt gerundeter Dezimaltexte. Erwartung 1.",
+    "pruefnachweis": "Manuelle Erwartung für zusätzliche verlustfreie Eingabedarstellung; keine neue materielle Rechenregel."
+  },
+  {
+    "fall_id": "BRUCHEINGABE_007",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": {
+        "zaehler": "-1",
+        "nenner": "3"
+      },
+      "ausgewiesene_betriebskosten": "200",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Bruchrechnung beziehungsweise unveränderte fachliche Nichtnegativitätsgrenze; exakte Objekte statt gerundeter Dezimaltexte. Erwartung EINGABE_UNGUELTIG.",
+    "pruefnachweis": "Manuelle Erwartung für zusätzliche verlustfreie Eingabedarstellung; keine neue materielle Rechenregel."
+  },
+  {
+    "fall_id": "BRUCHEINGABE_008",
+    "funktion": "mietsicherheit_hoechstbetrag",
+    "eingaben": {
+      "monatsmiete": {
+        "zaehler": "1",
+        "nenner": 3
+      },
+      "ausgewiesene_betriebskosten": "200",
+      "wohnraummietverhaeltnis": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Bruchrechnung beziehungsweise unveränderte fachliche Nichtnegativitätsgrenze; exakte Objekte statt gerundeter Dezimaltexte. Erwartung EINGABE_UNGUELTIG.",
+    "pruefnachweis": "Manuelle Erwartung für zusätzliche verlustfreie Eingabedarstellung; keine neue materielle Rechenregel."
+  }
+]

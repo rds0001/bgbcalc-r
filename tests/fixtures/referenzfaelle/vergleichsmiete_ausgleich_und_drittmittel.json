@@ -1,0 +1,660 @@
+[
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_ALTERNATIVE",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrlicher_drittmittelabzug": {
+          "zaehler": "240",
+          "nenner": "1"
+        },
+        "vergleichsmiete_nach_drittmitteln": {
+          "zaehler": "880",
+          "nenner": "1"
+        },
+        "monatsmiete_alternativmodell": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "monatsmiete_additionsmodell": {
+          "zaehler": "750",
+          "nenner": "1"
+        },
+        "monatsmiete_nach_vorgegebenem_modell": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "erhoehungsbetrag": {
+          "zaehler": "150",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1500*8%+60+60=240/Jahr=20/Monat;Vergleich900=>880. Regulär500*1.2=600;Ausgleich150:alternativ650,additiv750.15%=>575undadditiv725. Vergleichsgrenze und Erhöhung mindestens0.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_ADDITIV",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "zusaetzlicher_ausnahmebetrag",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrlicher_drittmittelabzug": {
+          "zaehler": "240",
+          "nenner": "1"
+        },
+        "vergleichsmiete_nach_drittmitteln": {
+          "zaehler": "880",
+          "nenner": "1"
+        },
+        "monatsmiete_alternativmodell": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "monatsmiete_additionsmodell": {
+          "zaehler": "750",
+          "nenner": "1"
+        },
+        "monatsmiete_nach_vorgegebenem_modell": {
+          "zaehler": "750",
+          "nenner": "1"
+        },
+        "erhoehungsbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1500*8%+60+60=240/Jahr=20/Monat;Vergleich900=>880. Regulär500*1.2=600;Ausgleich150:alternativ650,additiv750.15%=>575undadditiv725. Vergleichsgrenze und Erhöhung mindestens0.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FUENFZEHN",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": true,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrlicher_drittmittelabzug": {
+          "zaehler": "240",
+          "nenner": "1"
+        },
+        "vergleichsmiete_nach_drittmitteln": {
+          "zaehler": "880",
+          "nenner": "1"
+        },
+        "monatsmiete_alternativmodell": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "monatsmiete_additionsmodell": {
+          "zaehler": "725",
+          "nenner": "1"
+        },
+        "monatsmiete_nach_vorgegebenem_modell": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "erhoehungsbetrag": {
+          "zaehler": "150",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1500*8%+60+60=240/Jahr=20/Monat;Vergleich900=>880. Regulär500*1.2=600;Ausgleich150:alternativ650,additiv750.15%=>575undadditiv725. Vergleichsgrenze und Erhöhung mindestens0.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_KEINE_AUSNAHME",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "0",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrlicher_drittmittelabzug": {
+          "zaehler": "240",
+          "nenner": "1"
+        },
+        "vergleichsmiete_nach_drittmitteln": {
+          "zaehler": "880",
+          "nenner": "1"
+        },
+        "monatsmiete_alternativmodell": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "monatsmiete_additionsmodell": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "monatsmiete_nach_vorgegebenem_modell": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "erhoehungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1500*8%+60+60=240/Jahr=20/Monat;Vergleich900=>880. Regulär500*1.2=600;Ausgleich150:alternativ650,additiv750.15%=>575undadditiv725. Vergleichsgrenze und Erhöhung mindestens0.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_VERGLEICH_DECKEL",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "600",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrlicher_drittmittelabzug": {
+          "zaehler": "240",
+          "nenner": "1"
+        },
+        "vergleichsmiete_nach_drittmitteln": {
+          "zaehler": "580",
+          "nenner": "1"
+        },
+        "monatsmiete_alternativmodell": {
+          "zaehler": "580",
+          "nenner": "1"
+        },
+        "monatsmiete_additionsmodell": {
+          "zaehler": "580",
+          "nenner": "1"
+        },
+        "monatsmiete_nach_vorgegebenem_modell": {
+          "zaehler": "580",
+          "nenner": "1"
+        },
+        "erhoehungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1500*8%+60+60=240/Jahr=20/Monat;Vergleich900=>880. Regulär500*1.2=600;Ausgleich150:alternativ650,additiv750.15%=>575undadditiv725. Vergleichsgrenze und Erhöhung mindestens0.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_KEINE_SENKUNG",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "400",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrlicher_drittmittelabzug": {
+          "zaehler": "240",
+          "nenner": "1"
+        },
+        "vergleichsmiete_nach_drittmitteln": {
+          "zaehler": "380",
+          "nenner": "1"
+        },
+        "monatsmiete_alternativmodell": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "monatsmiete_additionsmodell": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "monatsmiete_nach_vorgegebenem_modell": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "erhoehungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1500*8%+60+60=240/Jahr=20/Monat;Vergleich900=>880. Regulär500*1.2=600;Ausgleich150:alternativ650,additiv750.15%=>575undadditiv725. Vergleichsgrenze und Erhöhung mindestens0.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_KEINE_FOERDERUNG",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "0",
+      "jaehrliche_zinsermaessigung": "0",
+      "jaehrliche_laufende_foerderung": "0",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrlicher_drittmittelabzug": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "vergleichsmiete_nach_drittmitteln": {
+          "zaehler": "900",
+          "nenner": "1"
+        },
+        "monatsmiete_alternativmodell": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "monatsmiete_additionsmodell": {
+          "zaehler": "750",
+          "nenner": "1"
+        },
+        "monatsmiete_nach_vorgegebenem_modell": {
+          "zaehler": "650",
+          "nenner": "1"
+        },
+        "erhoehungsbetrag": {
+          "zaehler": "150",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1500*8%+60+60=240/Jahr=20/Monat;Vergleich900=>880. Regulär500*1.2=600;Ausgleich150:alternativ650,additiv750.15%=>575undadditiv725. Vergleichsgrenze und Erhöhung mindestens0.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_ausgangsmiete_drei_jahre",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": null,
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_nicht_anzurechnende_erhoehungen",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": null,
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_derzeitige_monatsmiete",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": null,
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_ortsuebliche_vergleichsmiete",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": null,
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_gueltige_fuenfzehnprozent_verordnung",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": null,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_kapitalzuschuesse_559a_1",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": null,
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_jaehrliche_zinsermaessigung",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": null,
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_jaehrliche_laufende_foerderung",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": null,
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_letzte_monatliche_ausgleichszahlung",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": null,
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_ausnahmemodell",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": null,
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_FEHLT_methodennachweis",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_UNGUELTIG0",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "-1",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_UNGUELTIG1",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "automatisch",
+      "methodennachweis": "558V:8%der559aI-Zuschüsse plus jährliche Zinsermäßigung und laufende Förderbeträge vom Jahresbetrag der Vergleichsmiete abziehen, für Monatsgrenze durch12. Nicht den Zuschuss selbst als Jahresabzug und nicht nochmals von bereits bereinigter Vergleichsmiete abziehen. Reguläre Kappung aus Dreijahresbasis*1.15oder1.20plusausgenommenen Erhöhungen.558IV-Konkurrenz rechtlich zwingend wählen: alternativeErhöhungsgrenze=max(regulärer positiver Erhöhungsspielraum,Ausgleichszahlung); zusätzlicherAusnahmebetrag=regulärer positiver Spielraum+Ausgleichszahlung. Beide bedingten Wege werden ausgewiesen, keine allgemein bestätigte Addition behauptet. Vergleichsmiete nach Förderung bleibt in beiden Varianten Obergrenze. Bereits darüber liegende Bestandsmiete wird nicht automatisch gesenkt; nur positiver neuer Erhöhungsbetrag. Antwort-/Vorlauffristen und Wirksamkeit gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETE_AUSGLEICH_UND_DRITTMITTEL_UNGUELTIG2",
+    "funktion": "vergleichsmiete_ausgleich_und_drittmittel",
+    "eingaben": {
+      "ausgangsmiete_drei_jahre": "500",
+      "nicht_anzurechnende_erhoehungen": "0",
+      "derzeitige_monatsmiete": "500",
+      "ortsuebliche_vergleichsmiete": "900",
+      "gueltige_fuenfzehnprozent_verordnung": false,
+      "kapitalzuschuesse_559a_1": "1500",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_foerderung": "60",
+      "letzte_monatliche_ausgleichszahlung": "150",
+      "ausnahmemodell": "alternative_erhoehungsgrenze",
+      "methodennachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

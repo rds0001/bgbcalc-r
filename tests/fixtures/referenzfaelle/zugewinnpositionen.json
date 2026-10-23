@@ -1,0 +1,1800 @@
+[
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_AGGREGATION",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruengliches_nettoanfangsvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nettoerwerbe": [
+          {
+            "zaehler": "40",
+            "nenner": "1"
+          },
+          {
+            "zaehler": "25",
+            "nenner": "1"
+          }
+        ],
+        "hinzuzurechnende_nettoerwerbssumme": {
+          "zaehler": "65",
+          "nenner": "1"
+        },
+        "anfangsvermoegenssumme": {
+          "zaehler": "145",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_ANFANG_NEGATIV",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "200",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruengliches_nettoanfangsvermoegen": {
+          "zaehler": "-100",
+          "nenner": "1"
+        },
+        "nettoerwerbe": [
+          {
+            "zaehler": "40",
+            "nenner": "1"
+          },
+          {
+            "zaehler": "25",
+            "nenner": "1"
+          }
+        ],
+        "hinzuzurechnende_nettoerwerbssumme": {
+          "zaehler": "65",
+          "nenner": "1"
+        },
+        "anfangsvermoegenssumme": {
+          "zaehler": "-35",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_ERWERB_NEGATIV",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "200"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruengliches_nettoanfangsvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nettoerwerbe": [
+          {
+            "zaehler": "-150",
+            "nenner": "1"
+          }
+        ],
+        "hinzuzurechnende_nettoerwerbssumme": {
+          "zaehler": "-150",
+          "nenner": "1"
+        },
+        "anfangsvermoegenssumme": {
+          "zaehler": "-70",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_BEIDE_NEGATIV",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "200",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "200"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruengliches_nettoanfangsvermoegen": {
+          "zaehler": "-100",
+          "nenner": "1"
+        },
+        "nettoerwerbe": [
+          {
+            "zaehler": "-150",
+            "nenner": "1"
+          }
+        ],
+        "hinzuzurechnende_nettoerwerbssumme": {
+          "zaehler": "-150",
+          "nenner": "1"
+        },
+        "anfangsvermoegenssumme": {
+          "zaehler": "-250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_KEIN_ERWERB",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "0",
+          "zugehoerige_verbindlichkeiten": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruengliches_nettoanfangsvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nettoerwerbe": [
+          {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        ],
+        "hinzuzurechnende_nettoerwerbssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anfangsvermoegenssumme": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_EXAKT",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "0.3",
+      "anfangsverbindlichkeiten": "0.5",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "0.2",
+          "zugehoerige_verbindlichkeiten": "0.1"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruengliches_nettoanfangsvermoegen": {
+          "zaehler": "-1",
+          "nenner": "5"
+        },
+        "nettoerwerbe": [
+          {
+            "zaehler": "1",
+            "nenner": "10"
+          }
+        ],
+        "hinzuzurechnende_nettoerwerbssumme": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "anfangsvermoegenssumme": {
+          "zaehler": "-1",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_FEHLT_anfangsaktivvermoegen",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": null,
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_TYP_anfangsaktivvermoegen",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": {},
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_FEHLT_anfangsverbindlichkeiten",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": null,
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_TYP_anfangsverbindlichkeiten",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": {},
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_FEHLT_privilegierte_erwerbe",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": null,
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_TYP_privilegierte_erwerbe",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": {},
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_FEHLT_bewertungsnachweis",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_TYP_bewertungsnachweis",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_LEERE_LISTE",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_NEGATIV_AKTIVA",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "-1",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_NEGATIV_SCHULDEN",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "-1",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_NEGATIV_ERWERB",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "-1",
+          "zugehoerige_verbindlichkeiten": "0"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_NEGATIV_ERWERBSLAST",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "1",
+          "zugehoerige_verbindlichkeiten": "-1"
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_EXTRAFELD",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "1",
+          "zugehoerige_verbindlichkeiten": "0",
+          "extra": 1
+        }
+      ],
+      "bewertungsnachweis": "Qualifizierte privilegierte Erwerbe, Werte/Schulden ohne Doppelzählung und auf rechtlich konsistenter Bewertungsbasis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ANFANGSVERMOEGEN_POSITIONSSUMME_NACHWEIS",
+    "funktion": "zugewinn_anfangsvermoegen_positionssumme",
+    "eingaben": {
+      "anfangsaktivvermoegen": "100",
+      "anfangsverbindlichkeiten": "20",
+      "privilegierte_erwerbe": [
+        {
+          "erwerbswert": "50",
+          "zugehoerige_verbindlichkeiten": "10"
+        },
+        {
+          "erwerbswert": "30",
+          "zugehoerige_verbindlichkeiten": "5"
+        }
+      ],
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_AGGREGATION",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "minderung_id": "B",
+            "hinzurechnungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "130",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_NETTO_NEGATIV",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "200",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "-100",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "minderung_id": "B",
+            "hinzurechnungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "-50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_ZEHNJAHRE_GLEICH",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2020-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_ZEHNJAHRE_UNTER",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2020-01-02",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "110",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_ZEHNJAHRE_UEBER",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2019-12-31",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_ZUWENDUNG_ZUSTIMMUNG",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": true
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_VERSCHWENDUNG_ZUSTIMMUNG",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": true
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_BENACHTEILIGUNG_FLAG_KEIN_AUSSCHLUSS",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "benachteiligung",
+          "einverstaendnis_anderer": true
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "110",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_SCHALT_GRENZE",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-02-28",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2020-02-29",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_SCHALT_DAVOR",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-02-27",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2020-02-29",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "110",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_KEINE_MINDERUNG",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "NULL",
+          "betrag": "0",
+          "eingetreten_am": "2030-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "NULL",
+            "hinzurechnungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_OBERER_DATUMSBEREICH",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "9999-12-31",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "9999-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "110",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_EXAKT",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "0.3",
+      "endverbindlichkeiten": "0.5",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "0.1",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettoendvermoegen": {
+          "zaehler": "-1",
+          "nenner": "5"
+        },
+        "hinzurechnungspositionen": [
+          {
+            "minderung_id": "A",
+            "hinzurechnungsbetrag": {
+              "zaehler": "1",
+              "nenner": "10"
+            }
+          }
+        ],
+        "hinzurechnungssumme": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "endvermoegenssumme": {
+          "zaehler": "-1",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_FEHLT_endaktivvermoegen",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": null,
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_TYP_endaktivvermoegen",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": {},
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_FEHLT_endverbindlichkeiten",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": null,
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_TYP_endverbindlichkeiten",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": {},
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_FEHLT_bezugsstichtag_am",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": null,
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_TYP_bezugsstichtag_am",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": {},
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_FEHLT_vermoegensminderungen",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": null,
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_TYP_vermoegensminderungen",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": {},
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_FEHLT_bewertungsnachweis",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_TYP_bewertungsnachweis",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_LEERE_LISTE",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_NEGATIV_AKTIVA",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "-1",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_NEGATIV_SCHULDEN",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "-1",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_NEGATIVE_MINDERUNG",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "-1",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_DATUM_ZUKUNFT",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "1",
+          "eingetreten_am": "2030-01-02",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_DOPPELT",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "1",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "A",
+          "betrag": "2",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_ART",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "1",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "frei",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_BOOL_TYP",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "1",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": 1
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_NACHWEIS",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "minderung_id": "A",
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Nettopositionen gemäß§1374III/1375I ohne Nullkappung; für§1375III feste Zehnjahresgrenzen und Zustimmung nur für Nummer1/2.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "ZUGEWINN_ENDVERMOEGEN_POSITIONSSUMME_UNVOLLSTAENDIGER_POSITIONSSATZ",
+    "funktion": "zugewinn_endvermoegen_positionssumme",
+    "eingaben": {
+      "endaktivvermoegen": "100",
+      "endverbindlichkeiten": "20",
+      "bezugsstichtag_am": "2030-01-01",
+      "vermoegensminderungen": [
+        {
+          "betrag": "30",
+          "eingetreten_am": "2029-01-01",
+          "minderungsart": "unentgeltliche_zuwendung",
+          "einverstaendnis_anderer": false
+        },
+        {
+          "minderung_id": "B",
+          "betrag": "20",
+          "eingetreten_am": "2028-01-01",
+          "minderungsart": "verschwendung",
+          "einverstaendnis_anderer": false
+        }
+      ],
+      "bewertungsnachweis": "Tatsächliche Minderungen nach Güterstandseintritt, Tatbestand und Bewertungs-/Bezugsstichtag rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unvollständige Positionsfelder dürfen nicht stillschweigend als null gerechnet werden.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

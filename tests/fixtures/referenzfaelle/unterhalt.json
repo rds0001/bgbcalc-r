@@ -1,0 +1,859 @@
+[
+  {
+    "fall_id": "UNT_001",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2020-05-20",
+      "stichtag": "2026-04-30"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": 1
+    },
+    "herleitung": "Vor dem Monat des sechsten Geburtstags erste Altersstufe.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_002",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2020-05-20",
+      "stichtag": "2026-05-01"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": 2
+    },
+    "herleitung": "Höhere Stufe bereits ab Monatsbeginn, nicht erst am Geburtstag.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_003",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2014-05-20",
+      "stichtag": "2026-05-01"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": 3
+    },
+    "herleitung": "Dritte Stufe ab Monatsbeginn des zwölften Geburtstags.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_004",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2008-05-20",
+      "stichtag": "2026-05-19"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": 3
+    },
+    "herleitung": "Noch minderjährig am Stichtag im Monat des 18. Geburtstags.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_005",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2008-05-20",
+      "stichtag": "2026-05-20"
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ab Volljährigkeit nicht mehr Minderjährigen-Altersstufen nach § 1612a.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_006",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2016-02-29",
+      "stichtag": "2022-02-28"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": 1
+    },
+    "herleitung": "Sechs Lebensjahre am 1. März 2022 vollendet; höhere Stufe daher ab März.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_007",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2016-02-29",
+      "stichtag": "2022-03-01"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": 2
+    },
+    "herleitung": "Beginn des maßgeblichen Märzmonats.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_008",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2016-02-29",
+      "stichtag": "2028-02-01"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": 3
+    },
+    "herleitung": "Zwölfter Geburtstag liegt im Schaltjahr im Februar; höhere Stufe ab 1. Februar.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_009",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "9990-05-20",
+      "stichtag": "9999-12-31"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": 2
+    },
+    "herleitung": "Zweite Stufe; nicht darstellbare spätere Geburtstage müssen nicht berechnet werden.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_010",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2026-05-01",
+      "stichtag": "2026-04-30"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Geburt nach Stichtag oder ungültiges Datum.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_011",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": "2020-05-20",
+      "stichtag": "2026-02-30"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Geburt nach Stichtag oder ungültiges Datum.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_012",
+    "funktion": "unterhaltsaltersstufe",
+    "eingaben": {
+      "geburtsdatum": null,
+      "stichtag": "2026-04-30"
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Geburtsdatum fehlt.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_013",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": "6000",
+      "altersstufe": 1,
+      "quellenangabe": "Synthetischer Jahresbetrag, keine amtliche Zeitreihe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "435",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Jahresbetrag/12 = 500; Altersfaktor 87, 100 oder 117 Prozent.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_014",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": "6000",
+      "altersstufe": 2,
+      "quellenangabe": "Synthetischer Jahresbetrag, keine amtliche Zeitreihe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Jahresbetrag/12 = 500; Altersfaktor 87, 100 oder 117 Prozent.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_015",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": "6000",
+      "altersstufe": 3,
+      "quellenangabe": "Synthetischer Jahresbetrag, keine amtliche Zeitreihe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "585",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Jahresbetrag/12 = 500; Altersfaktor 87, 100 oder 117 Prozent.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_016",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": "6001",
+      "altersstufe": 1,
+      "quellenangabe": "Synthetischer Jahresbetrag, keine amtliche Zeitreihe"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "436",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "6001/12*87/100 = 435,0725; auf volle EUR aufrunden.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_017",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": "6000",
+      "altersstufe": 4,
+      "quellenangabe": "Synthetischer Jahresbetrag, keine amtliche Zeitreihe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Altersstufe, nichtpositiver Basisbetrag oder fehlender Beleg.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_018",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": "6000",
+      "altersstufe": true,
+      "quellenangabe": "Synthetischer Jahresbetrag, keine amtliche Zeitreihe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Altersstufe, nichtpositiver Basisbetrag oder fehlender Beleg.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_019",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": "0",
+      "altersstufe": 1,
+      "quellenangabe": "Synthetischer Jahresbetrag, keine amtliche Zeitreihe"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Altersstufe, nichtpositiver Basisbetrag oder fehlender Beleg.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_020",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": "6000",
+      "altersstufe": 1,
+      "quellenangabe": ""
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Altersstufe, nichtpositiver Basisbetrag oder fehlender Beleg.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_021",
+    "funktion": "mindestunterhalt_aus_existenzminimum",
+    "eingaben": {
+      "jaehrliches_existenzminimum": null,
+      "altersstufe": 1,
+      "quellenangabe": "Synthetischer Jahresbetrag, keine amtliche Zeitreihe"
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Extern bestimmter Jahresbetrag fehlt.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_022",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": "100",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "100 Prozent von 500.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_023",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": "100.19",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "501",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Auf 100,1 Prozent begrenzen; 500,5 auf 501 aufrunden, nicht Prozentsatz auf 100,2 runden.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_024",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": "100.09",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Auf 100,0 Prozent begrenzen, danach exakt 500.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_025",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": "99.99",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "99,9 Prozent ergibt 499,5; auf 500 aufrunden.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_026",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": "0",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Explizit vorgegebener Prozentsatz null ergibt null; keine Aussage über dessen rechtliche Zulässigkeit.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_027",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": "120",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "600",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "120 Prozent von 500 = 600.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_028",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500.1",
+      "prozentsatz": "100",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Mindestunterhalt positive volle EUR; Prozentsatz nichtnegative Dezimalzeichenfolge; Beleg erforderlich.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_029",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "0",
+      "prozentsatz": "100",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Mindestunterhalt positive volle EUR; Prozentsatz nichtnegative Dezimalzeichenfolge; Beleg erforderlich.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_030",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": "-1",
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Mindestunterhalt positive volle EUR; Prozentsatz nichtnegative Dezimalzeichenfolge; Beleg erforderlich.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_031",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": 100,
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Mindestunterhalt positive volle EUR; Prozentsatz nichtnegative Dezimalzeichenfolge; Beleg erforderlich.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_032",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": "100",
+      "mindestunterhaltsnachweis": ""
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Mindestunterhalt positive volle EUR; Prozentsatz nichtnegative Dezimalzeichenfolge; Beleg erforderlich.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_033",
+    "funktion": "dynamischer_kindesunterhalt",
+    "eingaben": {
+      "mindestunterhalt": "500",
+      "prozentsatz": null,
+      "mindestunterhaltsnachweis": "Synthetischer Mindestunterhalt für ausgewählte Altersstufe/Zeitraum"
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Dynamischer Prozentsatz fehlt.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_034",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bedarfsrelevante_leistung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bedarfsdeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_barbedarf": {
+          "zaehler": "400",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Betreuender Elternteil: hälftige Anrechnung.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_035",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": false,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bedarfsrelevante_leistung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "bedarfsdeckung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "verbleibender_barbedarf": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "In sonstigen Fällen volle Anrechnung.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_036",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "40",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bedarfsrelevante_leistung": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "bedarfsdeckung": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "verbleibender_barbedarf": {
+          "zaehler": "420",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Zunächst Erhöhung 40 herausnehmen; Hälfte von 160 = 80.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_037",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "50",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bedarfsrelevante_leistung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bedarfsdeckung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "verbleibender_barbedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bedarf wird höchstens auf null gemindert; rechnerisch relevante Leistung 100, Deckung nur 50.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_038",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "0",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bedarfsrelevante_leistung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "bedarfsdeckung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_barbedarf": {
+          "zaehler": "500",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Explizit keine kindbezogene Leistung.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_039",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "ersatzleistung",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bedarfsrelevante_leistung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bedarfsdeckung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_barbedarf": {
+          "zaehler": "400",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Regelmäßig wiederkehrende Ersatzleistung schließt Kindergeld aus, § 1612c entsprechend.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_040",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "ersatzleistung",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Voraussetzungen der entsprechenden Anwendung nach § 1612c fehlen.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_041",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "ersatzleistung",
+      "regelmaessig_wiederkehrend": false,
+      "kindergeld_ausgeschlossen": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Voraussetzungen der entsprechenden Anwendung nach § 1612c fehlen.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_042",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "201",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Beträge, Typen oder widersprüchliche Zuordnung.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_043",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "-1",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Beträge, Typen oder widersprüchliche Zuordnung.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_044",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": 1,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Beträge, Typen oder widersprüchliche Zuordnung.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_045",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "sonstiges",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Beträge, Typen oder widersprüchliche Zuordnung.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_046",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": "200",
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Beträge, Typen oder widersprüchliche Zuordnung.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  },
+  {
+    "fall_id": "UNT_047",
+    "funktion": "kindbezogene_leistung_anrechnen",
+    "eingaben": {
+      "barbedarf": "500",
+      "leistungsbetrag": null,
+      "erhoehung_nichtgemeinschaftliches_kind": "0",
+      "betreuung_durch_elternteil": true,
+      "leistungsart": "kindergeld",
+      "regelmaessig_wiederkehrend": true,
+      "kindergeld_ausgeschlossen": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Leistungsbetrag fehlt.",
+    "pruefnachweis": "Vor Implementierung manuell aus lokaler Quelle und synthetischen Beträgen abgeleitet; keine aktuellen Mindestunterhalts- oder Kindergeldwerte."
+  }
+]

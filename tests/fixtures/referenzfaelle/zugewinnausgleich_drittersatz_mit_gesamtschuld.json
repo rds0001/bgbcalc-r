@@ -1,0 +1,660 @@
+[
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_NICHT_NUR_FEHLBETRAG",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": true,
+        "vermoegensfehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FORDERUNGSDECKEL",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "150",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": true,
+        "vermoegensfehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_ENTREICHERUNG",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "20",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": true,
+        "vermoegensfehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_ZAHLUNGEN_BEIDER",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "50",
+      "erfuellung_dritter": "20",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": true,
+        "vermoegensfehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_EHEGATTE_ZAHLT_KLEINEN_TEIL",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "20",
+      "erfuellung_dritter": "10",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": true,
+        "vermoegensfehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_SCHWELLE_GLEICH",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "100",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": false,
+        "vermoegensfehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_NEGATIVES_VERMOEGEN",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "-10",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": true,
+        "vermoegensfehlbetrag": {
+          "zaehler": "110",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_ALLES_ERFUELLT",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "100",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": true,
+        "vermoegensfehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_VOLLE_ENTREICHERUNG",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "50",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsmerkmal_erfuellt": true,
+        "vermoegensfehlbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "bereicherungsrest": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "drittgrundbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gemeinsame_restforderung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_drittersatz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Forderung100,Endnetto80=>Fehlbetrag20alsTatbestand;Zuwendung50=>Drittgrundbetrag50nicht20. ZahlungenEhegatte50/Dritter20=>gemeinsamerRest30,Drittrahmen30. Ehegatte20/Dritter10=>Rest70,Drittrahmen40.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FEHLT_ausgleichsforderung",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": null,
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FEHLT_endnettovermoegen",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": null,
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FEHLT_bereicherungsrechtlicher_zuwendungswert",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": null,
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FEHLT_anrechenbare_entreicherung",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": null,
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FEHLT_erfuellung_ehegatte",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": null,
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FEHLT_erfuellung_dritter",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": null,
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FEHLT_begrenzungsmodell",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": null,
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_FEHLT_methodennachweis",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_UNGUELTIG0",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "101",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_UNGUELTIG1",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "51",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_UNGUELTIG2",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "80",
+      "erfuellung_dritter": "30",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_UNGUELTIG3",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "0",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "automatisch",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_UNGUELTIG4",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "-1",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZUGEWINNAUSGLEICH_DRITTERSATZ_MIT_GESAMTSCHULD_UNGUELTIG5",
+    "funktion": "zugewinnausgleich_drittersatz_mit_gesamtschuld",
+    "eingaben": {
+      "ausgleichsforderung": "100",
+      "endnettovermoegen": "80",
+      "bereicherungsrechtlicher_zuwendungswert": "50",
+      "anrechenbare_entreicherung": "60",
+      "erfuellung_ehegatte": "0",
+      "erfuellung_dritter": "0",
+      "begrenzungsmodell": "ausgleichsforderung_als_obergrenze",
+      "methodennachweis": "Bedingtes1390-Geldersatzmodell mit ausdrücklich qualifizierter Forderungsobergrenze: Tatbestandsmerkmal ursprünglicheAusgleichsforderung>Endnettovermögen selbst vergleichen. Bereicherungsrest durch vorhandenen818-Kern. Drittgrundbetrag bei erfülltem Betragsmerkmal=min(Bereicherungsrest,ursprünglicheAusgleichsforderung), nicht min(...,Vermögensfehlbetrag). Rechtliche Geltung dieser Forderungsobergrenze wird als Voraussetzung verlangt, nicht abschließend aus der Reformbegründung2009 behauptet. Beide Erfüllungsbeträge einmal von der gemeinsamen Forderung abziehen; Drittrest=min(noch offener gemeinsamer Forderung,Drittgrundbetrag-Dritterfüllung). Ehegattenzahlung verkleinert die gemeinsame Restforderung, ist aber nicht zusätzlich nochmals vom individuellen Drittrahmen abzuziehen. Ursprüngliches Betragsmerkmal nicht nachträglich anhand der bereits getilgten Forderung neu prüfen. Keine über den ursprünglichen Anspruch hinausgehenden Nebenforderungen; Sachherausgabe zur Abwendung nur bei rechtlich bestimmter Erfüllungsbewertung als Erfüllungsbetrag erfassen. §1390III-Verjährungsbeginn bleibt separate Kalenderbindung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

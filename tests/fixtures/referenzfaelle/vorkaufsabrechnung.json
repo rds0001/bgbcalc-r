@@ -1,0 +1,355 @@
+[
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_0",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erstattung_an_kaeufer": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "verbleibender_vorkaufpreis_an_verpflichteten": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "befreiung_urspruenglicher_kaeufer": {
+          "zaehler": "70",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_1",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "100",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erstattung_an_kaeufer": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibender_vorkaufpreis_an_verpflichteten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "befreiung_urspruenglicher_kaeufer": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_2",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "0",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erstattung_an_kaeufer": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_vorkaufpreis_an_verpflichteten": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "befreiung_urspruenglicher_kaeufer": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_3",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "0",
+      "bereits_berichtigter_kaufpreis": "0",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erstattung_an_kaeufer": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibender_vorkaufpreis_an_verpflichteten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "befreiung_urspruenglicher_kaeufer": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_4",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "0.3",
+      "bereits_berichtigter_kaufpreis": "0.1",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erstattung_an_kaeufer": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "verbleibender_vorkaufpreis_an_verpflichteten": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "befreiung_urspruenglicher_kaeufer": {
+          "zaehler": "1",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_AUSSERHALB",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": false,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_FEHLT_vereinbarter_kaufpreis",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": null,
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_TYP_vereinbarter_kaufpreis",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": [],
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_FEHLT_bereits_berichtigter_kaufpreis",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": null,
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_TYP_bereits_berichtigter_kaufpreis",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": [],
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_FEHLT_anwendungsfall_qualifiziert",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": null,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_TYP_anwendungsfall_qualifiziert",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": [],
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_FEHLT_bewertungsnachweis",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_TYP_bewertungsnachweis",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_NEGATIV_vereinbarter_kaufpreis",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "-1",
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_NEGATIV_bereits_berichtigter_kaufpreis",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "-1",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_UEBERZAHLUNG",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "100.01",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer gleichpreisiger1100–1102-Fall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "DINGLICHER_VORKAUF_PREISABRECHNUNG_LEER",
+    "funktion": "dinglicher_vorkauf_preisabrechnung",
+    "eingaben": {
+      "vereinbarter_kaufpreis": "100",
+      "bereits_berichtigter_kaufpreis": "30",
+      "anwendungsfall_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Feste unabhängig berechnete Restpreise; Erstattung+Vorkaufrest ergibt Gesamtpreis ohne doppelte Zahlung.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

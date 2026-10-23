@@ -1,0 +1,898 @@
+[
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_KAPPUNG_UNTERSCHIED_abzug_vor_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "360",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_vor_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_KAPPUNG_UNTERSCHIED_abzug_nach_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_nach_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "240",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_nach_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_OHNE_KAPPUNG_abzug_vor_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "100",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "110",
+          "nenner": "3"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "110",
+          "nenner": "3"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "110",
+          "nenner": "3"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "440",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_vor_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_OHNE_KAPPUNG_abzug_nach_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "100",
+      "abzugsreihenfolge": "abzug_nach_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "110",
+          "nenner": "3"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "110",
+          "nenner": "3"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "110",
+          "nenner": "3"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "440",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_nach_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_KEINE_FOERDERUNG_abzug_vor_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "0",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "360",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_vor_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_KEINE_FOERDERUNG_abzug_nach_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "0",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_nach_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "360",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_nach_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_RESTKAPPUNG_NULL_abzug_vor_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "0",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_vor_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_RESTKAPPUNG_NULL_abzug_nach_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "0",
+      "abzugsreihenfolge": "abzug_nach_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_nach_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_FOERDERUNG_UEBER_JAHR_abzug_vor_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "600",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_vor_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_FOERDERUNG_UEBER_JAHR_abzug_nach_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "600",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_nach_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_nach_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_MEHRERE_JAHRESABZUEGE_abzug_vor_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "60",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "360",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_vor_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_MEHRERE_JAHRESABZUEGE_abzug_nach_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "60",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "60",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_nach_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "240",
+          "nenner": "1"
+        },
+        "rechenweg": "abzug_nach_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_EXAKTE_BRUECHE_abzug_vor_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "1",
+      "jaehrliche_zinsermaessigung": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": {
+        "zaehler": "1",
+        "nenner": "24"
+      },
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "1",
+          "nenner": "24"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "1",
+          "nenner": "72"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "1",
+          "nenner": "24"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "rechenweg": "abzug_vor_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_EXAKTE_BRUECHE_abzug_nach_kappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "1",
+      "jaehrliche_zinsermaessigung": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": {
+        "zaehler": "1",
+        "nenner": "24"
+      },
+      "abzugsreihenfolge": "abzug_nach_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jaehrliche_laufende_abzuege": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "monatsbetrag_abzug_vor_kappung": {
+          "zaehler": "1",
+          "nenner": "24"
+        },
+        "monatsbetrag_abzug_nach_kappung": {
+          "zaehler": "1",
+          "nenner": "72"
+        },
+        "monatlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "1",
+          "nenner": "72"
+        },
+        "jaehrlicher_betrag_nach_vorgegebener_methode": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "rechenweg": "abzug_nach_kappung"
+      }
+    },
+    "herleitung": "J560,Abzüge120,Monatskap30: vorKappung min(440/12,30)=30; nachKappung min(560/12,30)-10=20. UngekappterFall beide110/3. J1,Abzug1/3,Kap1/24:vor1/24,nach1/72. Rechenwerte unabhängig von rechtlicher Methodenwahl festgelegt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_FEHLTjahresbetrag_vor_laufenden_abzuegen",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": null,
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_TYPjahresbetrag_vor_laufenden_abzuegen",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": {},
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_FEHLTjaehrliche_zinsermaessigung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": null,
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_TYPjaehrliche_zinsermaessigung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": {},
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_FEHLTjaehrliche_laufende_zuschuesse_und_darlehen",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": null,
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_TYPjaehrliche_laufende_zuschuesse_und_darlehen",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": {},
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_FEHLTmonatliche_restkappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": null,
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_TYPmonatliche_restkappung",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": {},
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_FEHLTabzugsreihenfolge",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": null,
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_TYPabzugsreihenfolge",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": {},
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_FEHLTmethodennachweis",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_TYPmethodennachweis",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_UNGUELTIG0",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "-1",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_UNGUELTIG1",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "-1",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_UNGUELTIG2",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "-1",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_UNGUELTIG3",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "-1",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_UNGUELTIG4",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "automatisch",
+      "methodennachweis": "Synthetischer Test der ausdrücklich gewählten Rechenreihenfolge; keine allgemeine Freigabe einer Rechtsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_KAPPUNG_MIT_LAUFENDEN_ABZUEGEN_UNGUELTIG5",
+    "funktion": "modernisierung_kappung_mit_laufenden_abzuegen",
+    "eingaben": {
+      "jahresbetrag_vor_laufenden_abzuegen": "560",
+      "jaehrliche_zinsermaessigung": "120",
+      "jaehrliche_laufende_zuschuesse_und_darlehen": "0",
+      "monatliche_restkappung": "30",
+      "abzugsreihenfolge": "abzug_vor_kappung",
+      "methodennachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

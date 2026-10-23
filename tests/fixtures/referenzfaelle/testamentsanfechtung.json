@@ -1,0 +1,638 @@
+[
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_JAHR_EXAKT",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2029-02-28",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2029-02-28",
+        "anfechtung_fristgerecht": true
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_JAHR_DAVOR",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-27",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2029-02-28",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2029-02-28",
+        "anfechtung_fristgerecht": true
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_JAHR_DANACH",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-03-01",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2029-02-28",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2029-02-28",
+        "anfechtung_fristgerecht": false
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_KENNTNISTAG",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2028-02-29",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2029-02-28",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2029-02-28",
+        "anfechtung_fristgerecht": true
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_KORREKTUR",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-03-31",
+      "massgeblicher_anfechtungstag": "2029-03-31",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2029-02-28",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2029-03-31",
+        "anfechtung_fristgerecht": true
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_KORREKTUR_DANACH",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-03-31",
+      "massgeblicher_anfechtungstag": "2029-04-01",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2029-02-28",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2029-03-31",
+        "anfechtung_fristgerecht": false
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_HOECHST_EXAKT",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2058-01-01",
+      "massgebliches_jahresfristende": "2059-01-01",
+      "massgeblicher_anfechtungstag": "2058-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2059-01-01",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2058-02-28",
+        "anfechtung_fristgerecht": true
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_HOECHST_DANACH",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2058-01-01",
+      "massgebliches_jahresfristende": "2059-01-01",
+      "massgeblicher_anfechtungstag": "2058-03-01",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2059-01-01",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2058-02-28",
+        "anfechtung_fristgerecht": false
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_KENNTNIS_NACH_HOECHST",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2059-01-01",
+      "massgebliches_jahresfristende": "2060-01-01",
+      "massgeblicher_anfechtungstag": "2059-01-01",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2060-01-01",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2058-02-28",
+        "anfechtung_fristgerecht": false
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_BEIDE_GRENZEN_GLEICH",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2057-02-28",
+      "massgebliches_jahresfristende": "2058-02-28",
+      "massgeblicher_anfechtungstag": "2058-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "2058-02-28",
+        "dreissigjahresgrenze": "2058-02-28",
+        "massgebliche_kalendergrenze": "2058-02-28",
+        "anfechtung_fristgerecht": true
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_MINIMUM",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "0001-01-01",
+      "massgebliche_kenntnis_am": "0001-01-01",
+      "massgebliches_jahresfristende": "0002-01-01",
+      "massgeblicher_anfechtungstag": "0002-01-01",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "0002-01-01",
+        "dreissigjahresgrenze": "0031-01-01",
+        "massgebliche_kalendergrenze": "0002-01-01",
+        "anfechtung_fristgerecht": true
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_MAXIMUM",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "9969-12-31",
+      "massgebliche_kenntnis_am": "9998-12-31",
+      "massgebliches_jahresfristende": "9999-12-31",
+      "massgeblicher_anfechtungstag": "9999-12-31",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerisches_jahresfristende": "9999-12-31",
+        "dreissigjahresgrenze": "9999-12-31",
+        "massgebliche_kalendergrenze": "9999-12-31",
+        "anfechtung_fristgerecht": true
+      }
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_NICHT_ANWENDBAR",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_FEHLT_erbfall_am",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": null,
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_TYP_erbfall_am",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": [],
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_FEHLT_massgebliche_kenntnis_am",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": null,
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_TYP_massgebliche_kenntnis_am",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": [],
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_FEHLT_massgebliches_jahresfristende",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": null,
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_TYP_massgebliches_jahresfristende",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": [],
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_FEHLT_massgeblicher_anfechtungstag",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": null,
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_TYP_massgeblicher_anfechtungstag",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": [],
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_FEHLT_anfechtungsregel_2082_anwendbar",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": null,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_TYP_anfechtungsregel_2082_anwendbar",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": 1,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_FEHLT_einordnungsnachweis",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_TYP_einordnungsnachweis",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_KENNTNIS_VOR_ERBFALL",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-28",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_ANFECHTUNG_VOR_KENNTNIS",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2028-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_KORREKTUR_ZU_KURZ",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-27",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_UNGUELTIGES_DATUM",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2029-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_UEBERLAUF_JAHR",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "9999-01-01",
+      "massgebliches_jahresfristende": "9999-12-31",
+      "massgeblicher_anfechtungstag": "9999-12-31",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_UEBERLAUF_HOECHST",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "9970-01-01",
+      "massgebliche_kenntnis_am": "9970-01-01",
+      "massgebliches_jahresfristende": "9971-01-01",
+      "massgeblicher_anfechtungstag": "9971-01-01",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte Kenntnis und ordnungsgemäßer Erklärungstag; keine Jahresfristkorrektur."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TESTAMENTSANFECHTUNG_NACHWEIS_LEER",
+    "funktion": "testament_anfechtungsfrist",
+    "eingaben": {
+      "erbfall_am": "2028-02-29",
+      "massgebliche_kenntnis_am": "2028-02-29",
+      "massgebliches_jahresfristende": "2029-02-28",
+      "massgeblicher_anfechtungstag": "2029-02-28",
+      "anfechtungsregel_2082_anwendbar": true,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig bestimmte Jahres-/Dreißigjahresgrenzen und Vorrang der früheren Grenze, ohne Produktionsaufruf für Erwartung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

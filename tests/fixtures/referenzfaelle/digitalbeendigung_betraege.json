@@ -1,0 +1,538 @@
+[
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_HALB",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "entfallender_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "erloschener_preisanteil": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_VOLLZAHLUNG",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "120",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "entfallender_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "erloschener_preisanteil": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_UNBEZAHLT",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "0",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "entfallender_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "erloschener_preisanteil": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_NUR_ZUKUNFT",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "0",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "entfallender_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "erloschener_preisanteil": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_NUR_MANGEL",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "0",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "entfallender_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "erloschener_preisanteil": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_KEIN_ENTFALL",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "0",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "0",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "entfallender_zeitanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erloschener_preisanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_VOLL_ENTFALL",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "8",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "entfallender_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "erloschener_preisanteil": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_BRUCH",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "0.1",
+      "gezahlter_abschnittspreis": "0.05",
+      "zeiteinheiten_gesamt": "3",
+      "zeiteinheiten_mangelhaft": "0.5",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "0.5",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "entfallender_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "erloschener_preisanteil": {
+          "zaehler": "1",
+          "nenner": "30"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "1",
+          "nenner": "60"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_NENNER_NULL",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "0",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_TEIL_ZU_GROSS",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "9",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_UEBERZAHLUNG",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "121",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_TYP",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": [],
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_LEER",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_FEHLT_vereinbarter_abschnittspreis",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": null,
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_NEGATIV_vereinbarter_abschnittspreis",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "-1",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_FEHLT_gezahlter_abschnittspreis",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": null,
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_NEGATIV_gezahlter_abschnittspreis",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "-1",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_FEHLT_zeiteinheiten_gesamt",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": null,
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_NEGATIV_zeiteinheiten_gesamt",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "-1",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_FEHLT_zeiteinheiten_mangelhaft",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": null,
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_NEGATIV_zeiteinheiten_mangelhaft",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "-1",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_FEHLT_zeiteinheiten_nicht_mehr_zu_erbringen",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": null,
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_NEGATIV_zeiteinheiten_nicht_mehr_zu_erbringen",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "-1",
+      "einordnungsnachweis": "Homogener Abschnitt; proportionale Teilzahlung; disjunkte qualifizierte Zeiten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "DIGITALBEENDIGUNG_ZEITANTEILIGE_BETRAEGE_FEHLT_einordnungsnachweis",
+    "funktion": "digitalbeendigung_zeitanteilige_betraege",
+    "eingaben": {
+      "vereinbarter_abschnittspreis": "120",
+      "gezahlter_abschnittspreis": "60",
+      "zeiteinheiten_gesamt": "12",
+      "zeiteinheiten_mangelhaft": "2",
+      "zeiteinheiten_nicht_mehr_zu_erbringen": "4",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: (mangelhafte+zukünftige disjunkte Zeit)/Gesamtzeit, multipliziert mit Preis bzw. proportionaler Zahlung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

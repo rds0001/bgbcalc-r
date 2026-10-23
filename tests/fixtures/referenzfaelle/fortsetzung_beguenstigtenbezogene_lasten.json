@@ -1,0 +1,1174 @@
+[
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_NUR_A",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "abkoemmlingssalden": [
+          {
+            "abkoemmling_id": "A",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "120",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "B",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "C",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "grundanteilswertsumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "lastensumme": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "rechnerische_saldosumme": {
+          "zaehler": "480",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Drei Ausgangswerte je200.120nurA:80/200/200.120nach1:3:170/110/200.300nurA:-100/200/200 ohne Behauptung persoenlicher Ersatzpflicht.1nach1:2 ergibt1/3 und2/3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_RELATIVE_VORTEILE",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            },
+            {
+              "abkoemmling_id": "B",
+              "lastgewicht": "3"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "abkoemmlingssalden": [
+          {
+            "abkoemmling_id": "A",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "170",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "B",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "90",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "110",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "C",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "grundanteilswertsumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "lastensumme": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "rechnerische_saldosumme": {
+          "zaehler": "480",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Drei Ausgangswerte je200.120nurA:80/200/200.120nach1:3:170/110/200.300nurA:-100/200/200 ohne Behauptung persoenlicher Ersatzpflicht.1nach1:2 ergibt1/3 und2/3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_ZWEI_LASTEN",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "100",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        },
+        {
+          "last_id": "L2",
+          "betrag": "50",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "B",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "abkoemmlingssalden": [
+          {
+            "abkoemmling_id": "A",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "B",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "150",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "C",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "grundanteilswertsumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "lastensumme": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "rechnerische_saldosumme": {
+          "zaehler": "450",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Drei Ausgangswerte je200.120nurA:80/200/200.120nach1:3:170/110/200.300nurA:-100/200/200 ohne Behauptung persoenlicher Ersatzpflicht.1nach1:2 ergibt1/3 und2/3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_KEINE_LAST",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "abkoemmlingssalden": [
+          {
+            "abkoemmling_id": "A",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "B",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "C",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "grundanteilswertsumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "lastensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerische_saldosumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Drei Ausgangswerte je200.120nurA:80/200/200.120nach1:3:170/110/200.300nurA:-100/200/200 ohne Behauptung persoenlicher Ersatzpflicht.1nach1:2 ergibt1/3 und2/3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_NEGATIVER_SALDO",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "300",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "abkoemmlingssalden": [
+          {
+            "abkoemmling_id": "A",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "300",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "-100",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "B",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "C",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "grundanteilswertsumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "lastensumme": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "rechnerische_saldosumme": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Drei Ausgangswerte je200.120nurA:80/200/200.120nach1:3:170/110/200.300nurA:-100/200/200 ohne Behauptung persoenlicher Ersatzpflicht.1nach1:2 ergibt1/3 und2/3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_EXAKTE_DRITTEL",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "1",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            },
+            {
+              "abkoemmling_id": "B",
+              "lastgewicht": "2"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "abkoemmlingssalden": [
+          {
+            "abkoemmling_id": "A",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "599",
+              "nenner": "3"
+            }
+          },
+          {
+            "abkoemmling_id": "B",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "2",
+              "nenner": "3"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "598",
+              "nenner": "3"
+            }
+          },
+          {
+            "abkoemmling_id": "C",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "grundanteilswertsumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "lastensumme": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "rechnerische_saldosumme": {
+          "zaehler": "599",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Drei Ausgangswerte je200.120nurA:80/200/200.120nach1:3:170/110/200.300nurA:-100/200/200 ohne Behauptung persoenlicher Ersatzpflicht.1nach1:2 ergibt1/3 und2/3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_NULL_LAST",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "0",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "abkoemmlingssalden": [
+          {
+            "abkoemmling_id": "A",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "B",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "C",
+            "grundanteilswert": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "lastensumme": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "rechnerischer_saldo": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "grundanteilswertsumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "lastensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerische_saldosumme": {
+          "zaehler": "600",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Drei Ausgangswerte je200.120nurA:80/200/200.120nach1:3:170/110/200.300nurA:-100/200/200 ohne Behauptung persoenlicher Ersatzpflicht.1nach1:2 ergibt1/3 und2/3.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_FEHLT_abkoemmlinge",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": null,
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_FEHLT_lasten",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": null,
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_FEHLT_einordnungsnachweis",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG0",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG1",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG2",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "1",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "X",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG3",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "1",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "0"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG4",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "1",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            },
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG5",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        },
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG6",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "-1",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG7",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "1",
+          "beguenstigte": []
+        }
+      ],
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG8",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": {},
+      "einordnungsnachweis": "§1503III/§1511III2: Abfindungs-/Ausschlusslast nur bei den durch Verzicht/Ausschliessung beguenstigten Abkoemmlingen verteilen. Relative Lastgewichte sind rechtlich bestimmte Vorteils-/Belastungsverhaeltnisse, nicht automatisch Erbquoten oder gleiche Kopfanteile. Jede Last wird exakt einmal verteilt; nicht beguenstigte Personen behalten ihren Ausgangswert. Grundanteilswerte muessen vor diesen Lasten und unter zutreffender Gesamtgutsbilanz1501/1498 bestimmt sein. Negative Salden sind ausschliesslich rechnerische Bilanzgroessen, kein ausgegebener Nachschuss-, Rueckzahlungs- oder persoenlicher Ersatzanspruch;1498/1476II2 beachten. Keine eigenstaendige Ermittlung von Berechtigung, Lastgewichten, Abfindungswirksamkeit oder faelliger Barauszahlung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_BEGUENSTIGTENBEZOGENE_LASTEN_UNGUELTIG9",
+    "funktion": "fortsetzung_beguenstigtenbezogene_lasten",
+    "eingaben": {
+      "abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "B",
+          "grundanteilswert": "200"
+        },
+        {
+          "abkoemmling_id": "C",
+          "grundanteilswert": "200"
+        }
+      ],
+      "lasten": [
+        {
+          "last_id": "L1",
+          "betrag": "120",
+          "beguenstigte": [
+            {
+              "abkoemmling_id": "A",
+              "lastgewicht": "1"
+            }
+          ]
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

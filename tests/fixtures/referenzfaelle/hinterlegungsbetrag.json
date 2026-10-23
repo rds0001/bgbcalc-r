@@ -1,0 +1,615 @@
+[
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_VIERTES_KALENDERJAHR",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_hinterlegungszinsbeginn": "2020-01-01",
+        "hinterlegungszinsbetrag": {
+          "zaehler": "130",
+          "nenner": "1"
+        },
+        "hinterlegungsbetrag": {
+          "zaehler": "1130",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rechtskraft2024: vier vorherige Kalenderjahre2023,2022,2021,2020;2019ausschließen.60+70=130,plus1000=1130. Ohne eingetragenen Zinssatz nur1000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_NICHT_EINGETRAGEN",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": false,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_hinterlegungszinsbeginn": "2020-01-01",
+        "hinterlegungszinsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "hinterlegungsbetrag": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rechtskraft2024: vier vorherige Kalenderjahre2023,2022,2021,2020;2019ausschließen.60+70=130,plus1000=1130. Ohne eingetragenen Zinssatz nur1000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_KEINE_ZINSABSCHNITTE",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_hinterlegungszinsbeginn": "2020-01-01",
+        "hinterlegungszinsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "hinterlegungsbetrag": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rechtskraft2024: vier vorherige Kalenderjahre2023,2022,2021,2020;2019ausschließen.60+70=130,plus1000=1130. Ohne eingetragenen Zinssatz nur1000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_REIHENFOLGE",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_hinterlegungszinsbeginn": "2020-01-01",
+        "hinterlegungszinsbetrag": {
+          "zaehler": "130",
+          "nenner": "1"
+        },
+        "hinterlegungsbetrag": {
+          "zaehler": "1130",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Rechtskraft2024: vier vorherige Kalenderjahre2023,2022,2021,2020;2019ausschließen.60+70=130,plus1000=1130. Ohne eingetragenen Zinssatz nur1000.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_FEHLT_forderungsbetrag",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": null,
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_TYP_forderungsbetrag",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": {},
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_FEHLT_ausschliessungsbeschluss_rechtskraeftig_am",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": null,
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_TYP_ausschliessungsbeschluss_rechtskraeftig_am",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": {},
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_FEHLT_zinssatz_im_grundbuch_eingetragen",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": null,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_TYP_zinssatz_im_grundbuch_eingetragen",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": {},
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_FEHLT_zinsabschnitte",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": null,
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_TYP_zinsabschnitte",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": {},
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_FEHLT_einordnungsnachweis",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_TYP_einordnungsnachweis",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_UNGUELTIG_0",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_UNGUELTIG_1",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-12-31",
+          "letzter_zinstag": "2020-01-01",
+          "zinsbetrag": "1"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_UNGUELTIG_2",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2021-01-02",
+          "letzter_zinstag": "2021-01-01",
+          "zinsbetrag": "1"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_UNGUELTIG_3",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {}
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_UNGUELTIG_4",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "-1",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": "§1171I: Forderungsbetrag plus erforderliche eingetragene Zinsen, deren Zinszeitraum nicht vor Beginn des vierten Kalenderjahres vor Rechtskraft liegt. Maßgeblich ist Zinszeit, nicht Fälligkeit oder Buchungstag. Abschnittsbeträge nach zutreffendem Satz/Kapital/Zinszeitanteil zuvor berechnen, etwa mit gesetzliche_zinsen; keine pauschale Tageslinearität für beliebig vorgegebene Zinsbeträge. Abschnitt über die Kalenderjahresgrenze muss vorher rechtlich zutreffend geteilt werden. Keine automatische Zinsentstehung, Hinterlegungswirksamkeit oder Erlöschensentscheidung1171II/III. Eingaben sind bereits rechtlich zu hinterlegende abgeschlossene Zinsabschnitte; keine Zukunftszinsen erfinden. Ohne eingetragenen Zinssatz keinen Zinsbetrag zur Hinterlegung addieren."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "HYPOTHEK_HINTERLEGUNG_FORDERUNG_UND_ZINSEN_UNGUELTIG_5",
+    "funktion": "hypothek_hinterlegung_forderung_und_zinsen",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "ausschliessungsbeschluss_rechtskraeftig_am": "2024-05-15",
+      "zinssatz_im_grundbuch_eingetragen": true,
+      "zinsabschnitte": [
+        {
+          "erster_zinstag": "2019-01-01",
+          "letzter_zinstag": "2019-12-31",
+          "zinsbetrag": "50"
+        },
+        {
+          "erster_zinstag": "2020-01-01",
+          "letzter_zinstag": "2020-12-31",
+          "zinsbetrag": "60"
+        },
+        {
+          "erster_zinstag": "2021-01-01",
+          "letzter_zinstag": "2021-12-31",
+          "zinsbetrag": "70"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

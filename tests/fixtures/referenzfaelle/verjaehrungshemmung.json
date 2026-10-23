@@ -1,0 +1,2864 @@
+[
+  {
+    "fall_id": "VHE_002",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-05",
+          "letzter_gehemmter_tag": "2026-01-07"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-13",
+        "beruecksichtigte_hemmungstage": 3
+      }
+    },
+    "herleitung": "Fünfter bis siebter Januar auslassen: drei zusätzliche Kalendertage.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_001",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-10",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Keine Hemmung; zehn laufende Tage.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_003",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-05",
+          "letzter_gehemmter_tag": "2026-01-20"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-26",
+        "beruecksichtigte_hemmungstage": 16
+      }
+    },
+    "herleitung": "Vier Tage vor der Hemmung laufen, nach dem20.Januar noch sechs Tage bis26.Januar.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_004",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-10",
+          "letzter_gehemmter_tag": "2026-01-10"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-11",
+        "beruecksichtigte_hemmungstage": 1
+      }
+    },
+    "herleitung": "Auch der bislang letzte Fristtag kann gehemmt sein.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_005",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-11",
+          "letzter_gehemmter_tag": "2026-01-20"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-10",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Erst nach Ablauf beginnende Hemmung lässt Frist nicht wieder aufleben.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_006",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2025-12-01",
+          "letzter_gehemmter_tag": "2025-12-31"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-10",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Nur Tage vor dem ersten Fristlauftag: keine Verlängerung.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_007",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2025-12-30",
+          "letzter_gehemmter_tag": "2026-01-02"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-12",
+        "beruecksichtigte_hemmungstage": 2
+      }
+    },
+    "herleitung": "Vor Beginn liegende Tage abschneiden; nur1.und2.Januar zählen als Hemmung.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_008",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-03",
+          "letzter_gehemmter_tag": "2026-01-05"
+        },
+        {
+          "erster_gehemmter_tag": "2026-01-05",
+          "letzter_gehemmter_tag": "2026-01-07"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-15",
+        "beruecksichtigte_hemmungstage": 5
+      }
+    },
+    "herleitung": "Überschneidung am5.Januar nur einmal; vereinigt3.bis7.=fünf Tage.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_009",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-05",
+          "letzter_gehemmter_tag": "2026-01-07"
+        },
+        {
+          "erster_gehemmter_tag": "2026-01-03",
+          "letzter_gehemmter_tag": "2026-01-05"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-15",
+        "beruecksichtigte_hemmungstage": 5
+      }
+    },
+    "herleitung": "Eingabereihenfolge ändert die vereinigte Hemmungsdauer nicht.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_010",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-03",
+          "letzter_gehemmter_tag": "2026-01-07"
+        },
+        {
+          "erster_gehemmter_tag": "2026-01-04",
+          "letzter_gehemmter_tag": "2026-01-05"
+        },
+        {
+          "erster_gehemmter_tag": "2026-01-03",
+          "letzter_gehemmter_tag": "2026-01-07"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-15",
+        "beruecksichtigte_hemmungstage": 5
+      }
+    },
+    "herleitung": "Enthaltene und doppelte Intervalle erzeugen keine zusätzlichen Tage.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_011",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-03",
+          "letzter_gehemmter_tag": "2026-01-04"
+        },
+        {
+          "erster_gehemmter_tag": "2026-01-05",
+          "letzter_gehemmter_tag": "2026-01-06"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-14",
+        "beruecksichtigte_hemmungstage": 4
+      }
+    },
+    "herleitung": "Direkt benachbarte Hemmungsintervalle: vier verschiedene Tage.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_012",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-02",
+          "letzter_gehemmter_tag": "2026-01-03"
+        },
+        {
+          "erster_gehemmter_tag": "2026-01-12",
+          "letzter_gehemmter_tag": "2026-01-13"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-14",
+        "beruecksichtigte_hemmungstage": 4
+      }
+    },
+    "herleitung": "Erste Hemmung verschiebt Ende auf12.Januar; dadurch zweite Hemmung relevant, Ende14.Januar.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_013",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-02",
+          "letzter_gehemmter_tag": "2026-01-03"
+        },
+        {
+          "erster_gehemmter_tag": "2026-01-13",
+          "letzter_gehemmter_tag": "2026-01-20"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-12",
+        "beruecksichtigte_hemmungstage": 2
+      }
+    },
+    "herleitung": "Zweite Hemmung beginnt einen Tag nach verlängertem Ablauf und bleibt unberücksichtigt.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_014",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-28",
+      "grundfrist_letzter_tag": "2024-03-01",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-29",
+          "letzter_gehemmter_tag": "2024-02-29"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-02",
+        "beruecksichtigte_hemmungstage": 1
+      }
+    },
+    "herleitung": "Drei laufende Tage28.Februar,1.und2.März unter Auslassung des Schalttags.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_015",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2025-12-30",
+      "grundfrist_letzter_tag": "2025-12-31",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2025-12-31",
+          "letzter_gehemmter_tag": "2026-01-01"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2026-01-02",
+        "beruecksichtigte_hemmungstage": 2
+      }
+    },
+    "herleitung": "Zwei laufende Tage über Jahreswechsel bei zweitägiger Hemmung.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_016",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "0001-01-01",
+      "grundfrist_letzter_tag": "0001-01-01",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "0001-01-01",
+          "letzter_gehemmter_tag": "0001-01-01"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "0001-01-02",
+        "beruecksichtigte_hemmungstage": 1
+      }
+    },
+    "herleitung": "Unterer Datumsbereich.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_017",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "9999-12-30",
+      "grundfrist_letzter_tag": "9999-12-31",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "9999-12-31",
+          "letzter_gehemmter_tag": "9999-12-31"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verschobenes Ende außerhalb Datumsbereich.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_018",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "§209-Wirkung für ausgewählte Frist nicht anwendbar.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_019",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-11",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Intervall oder widersprüchliche Tagesgrenzen.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_020",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-07",
+          "letzter_gehemmter_tag": "2026-01-05"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Intervall oder widersprüchliche Tagesgrenzen.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_021",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": {},
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Intervall oder widersprüchliche Tagesgrenzen.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_022",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        "2026-01-01"
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Intervall oder widersprüchliche Tagesgrenzen.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_023",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-01"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Intervall oder widersprüchliche Tagesgrenzen.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_024",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-01",
+          "letzter_gehemmter_tag": "2026-01-02",
+          "zusatz": true
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Intervall oder widersprüchliche Tagesgrenzen.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_025",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2025-02-29",
+          "letzter_gehemmter_tag": "2026-01-01"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Intervall oder widersprüchliche Tagesgrenzen.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_026",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Intervall oder widersprüchliche Tagesgrenzen.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_027",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": null,
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe fristlauf_erster_tag fehlt.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_028",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": null,
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe grundfrist_letzter_tag fehlt.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_029",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": null,
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe hemmungszeitraeume fehlt.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_030",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe hemmung_nach_209_anwendbar fehlt.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_031",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2026-01-01",
+      "grundfrist_letzter_tag": "2026-01-10",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2026-01-01",
+          "letzter_gehemmter_tag": null
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Offenes Hemmungsende erlaubt keine abschließende Berechnung.",
+    "pruefnachweis": "Manuelle Zählung der zehn laufenden Kalendertage beziehungsweise der ausdrücklich angegebenen Grundfrist unter Auslassung der markierten Tage, vor Implementierung."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_001",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-18",
+      "grundfrist_letzter_tag": "2024-03-10",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-10",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_002",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-06",
+      "grundfrist_letzter_tag": "2024-02-24",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-02",
+          "letzter_gehemmter_tag": "2024-02-07"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-31",
+          "letzter_gehemmter_tag": "2024-02-11"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-12",
+          "letzter_gehemmter_tag": "2024-02-19"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-15",
+          "letzter_gehemmter_tag": "2024-03-25"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-09",
+        "beruecksichtigte_hemmungstage": 14
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_003",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-06",
+      "grundfrist_letzter_tag": "2024-02-12",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-30",
+          "letzter_gehemmter_tag": "2024-02-12"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-24",
+          "letzter_gehemmter_tag": "2024-04-03"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-31",
+          "letzter_gehemmter_tag": "2024-01-31"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-08",
+          "letzter_gehemmter_tag": "2024-02-15"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-22",
+        "beruecksichtigte_hemmungstage": 10
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_004",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-19",
+      "grundfrist_letzter_tag": "2024-03-04",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-27",
+          "letzter_gehemmter_tag": "2024-04-30"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-26",
+          "letzter_gehemmter_tag": "2024-05-05"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-20",
+          "letzter_gehemmter_tag": "2024-02-21"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-12",
+          "letzter_gehemmter_tag": "2024-03-15"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-29",
+          "letzter_gehemmter_tag": "2024-05-03"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-06",
+        "beruecksichtigte_hemmungstage": 2
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_005",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-13",
+      "grundfrist_letzter_tag": "2024-02-20",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-11",
+          "letzter_gehemmter_tag": "2024-04-15"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-17",
+          "letzter_gehemmter_tag": "2024-03-17"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-24",
+          "letzter_gehemmter_tag": "2024-03-27"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-04",
+          "letzter_gehemmter_tag": "2024-03-18"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-01",
+          "letzter_gehemmter_tag": "2024-03-11"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-20",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_006",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-10",
+      "grundfrist_letzter_tag": "2024-02-16",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-06",
+          "letzter_gehemmter_tag": "2024-04-10"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-24",
+          "letzter_gehemmter_tag": "2024-02-25"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-09",
+          "letzter_gehemmter_tag": "2024-04-23"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-06",
+          "letzter_gehemmter_tag": "2024-03-18"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-16",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_007",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-09",
+      "grundfrist_letzter_tag": "2024-03-09",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-28",
+          "letzter_gehemmter_tag": "2024-02-03"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-18",
+          "letzter_gehemmter_tag": "2024-03-30"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-02",
+          "letzter_gehemmter_tag": "2024-02-13"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-30",
+          "letzter_gehemmter_tag": "2024-02-14"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-25",
+          "letzter_gehemmter_tag": "2024-03-31"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-14",
+          "letzter_gehemmter_tag": "2024-04-15"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-29",
+          "letzter_gehemmter_tag": "2024-03-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-14",
+          "letzter_gehemmter_tag": "2024-04-19"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-04-07",
+        "beruecksichtigte_hemmungstage": 29
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_008",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-20",
+      "grundfrist_letzter_tag": "2024-02-29",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-13",
+          "letzter_gehemmter_tag": "2024-03-21"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-29",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_009",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-15",
+      "grundfrist_letzter_tag": "2024-02-16",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-23",
+          "letzter_gehemmter_tag": "2024-03-27"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-13",
+          "letzter_gehemmter_tag": "2024-02-19"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-05",
+          "letzter_gehemmter_tag": "2024-03-10"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-21",
+        "beruecksichtigte_hemmungstage": 5
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_010",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-12",
+      "grundfrist_letzter_tag": "2024-03-05",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-02",
+          "letzter_gehemmter_tag": "2024-04-09"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-26",
+          "letzter_gehemmter_tag": "2024-02-27"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-04",
+          "letzter_gehemmter_tag": "2024-04-11"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-14",
+          "letzter_gehemmter_tag": "2024-04-24"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-07",
+          "letzter_gehemmter_tag": "2024-03-19"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-07",
+          "letzter_gehemmter_tag": "2024-02-17"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-23",
+          "letzter_gehemmter_tag": "2024-02-26"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-29",
+        "beruecksichtigte_hemmungstage": 24
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_011",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-10",
+      "grundfrist_letzter_tag": "2024-02-19",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-29",
+          "letzter_gehemmter_tag": "2024-03-14"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-06",
+          "letzter_gehemmter_tag": "2024-02-07"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-04",
+          "letzter_gehemmter_tag": "2024-02-04"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-19",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_012",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-11",
+      "grundfrist_letzter_tag": "2024-02-28",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-11",
+          "letzter_gehemmter_tag": "2024-04-14"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-26",
+          "letzter_gehemmter_tag": "2024-02-28"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-07",
+          "letzter_gehemmter_tag": "2024-02-19"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-13",
+          "letzter_gehemmter_tag": "2024-02-15"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-30",
+          "letzter_gehemmter_tag": "2024-02-06"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-09",
+          "letzter_gehemmter_tag": "2024-02-16"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-11",
+        "beruecksichtigte_hemmungstage": 12
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_013",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-01",
+      "grundfrist_letzter_tag": "2024-02-22",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-07",
+          "letzter_gehemmter_tag": "2024-04-11"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-25",
+          "letzter_gehemmter_tag": "2024-03-28"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-31",
+          "letzter_gehemmter_tag": "2024-02-14"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-04",
+          "letzter_gehemmter_tag": "2024-02-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-31",
+          "letzter_gehemmter_tag": "2024-04-06"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-23",
+          "letzter_gehemmter_tag": "2024-01-25"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-08",
+          "letzter_gehemmter_tag": "2024-04-18"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-07",
+        "beruecksichtigte_hemmungstage": 14
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_014",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-09",
+      "grundfrist_letzter_tag": "2024-02-27",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-27",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_015",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-07",
+      "grundfrist_letzter_tag": "2024-02-24",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-24",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_016",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-04",
+      "grundfrist_letzter_tag": "2024-02-21",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-14",
+          "letzter_gehemmter_tag": "2024-02-27"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-06",
+        "beruecksichtigte_hemmungstage": 14
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_017",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-16",
+      "grundfrist_letzter_tag": "2024-03-03",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-12",
+          "letzter_gehemmter_tag": "2024-02-21"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-24",
+          "letzter_gehemmter_tag": "2024-03-25"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-07",
+          "letzter_gehemmter_tag": "2024-03-14"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-11",
+          "letzter_gehemmter_tag": "2024-04-18"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-03",
+          "letzter_gehemmter_tag": "2024-03-09"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-23",
+          "letzter_gehemmter_tag": "2024-03-06"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-17",
+          "letzter_gehemmter_tag": "2024-04-21"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-22",
+          "letzter_gehemmter_tag": "2024-05-03"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-04-01",
+        "beruecksichtigte_hemmungstage": 29
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_018",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-09",
+      "grundfrist_letzter_tag": "2024-03-09",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-18",
+          "letzter_gehemmter_tag": "2024-02-23"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-12",
+          "letzter_gehemmter_tag": "2024-02-23"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-19",
+          "letzter_gehemmter_tag": "2024-03-20"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-23",
+        "beruecksichtigte_hemmungstage": 14
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_019",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-09",
+      "grundfrist_letzter_tag": "2024-03-09",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-09",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_020",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-05",
+      "grundfrist_letzter_tag": "2024-02-20",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-18",
+          "letzter_gehemmter_tag": "2024-02-28"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-08",
+          "letzter_gehemmter_tag": "2024-02-16"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-05",
+          "letzter_gehemmter_tag": "2024-03-07"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-23",
+          "letzter_gehemmter_tag": "2024-02-26"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-06",
+          "letzter_gehemmter_tag": "2024-02-17"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-06",
+          "letzter_gehemmter_tag": "2024-02-06"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-17",
+        "beruecksichtigte_hemmungstage": 26
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_021",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-14",
+      "grundfrist_letzter_tag": "2024-02-20",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-28",
+          "letzter_gehemmter_tag": "2024-04-11"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-07",
+          "letzter_gehemmter_tag": "2024-02-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-14",
+          "letzter_gehemmter_tag": "2024-02-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-23",
+          "letzter_gehemmter_tag": "2024-05-07"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-01",
+          "letzter_gehemmter_tag": "2024-03-03"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-07",
+          "letzter_gehemmter_tag": "2024-03-08"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-27",
+        "beruecksichtigte_hemmungstage": 7
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_022",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-13",
+      "grundfrist_letzter_tag": "2024-03-09",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-10",
+          "letzter_gehemmter_tag": "2024-03-21"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-07",
+          "letzter_gehemmter_tag": "2024-02-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-06",
+          "letzter_gehemmter_tag": "2024-03-11"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-23",
+          "letzter_gehemmter_tag": "2024-04-23"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-25",
+        "beruecksichtigte_hemmungstage": 16
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_023",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-19",
+      "grundfrist_letzter_tag": "2024-03-07",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-10",
+          "letzter_gehemmter_tag": "2024-03-13"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-20",
+          "letzter_gehemmter_tag": "2024-02-29"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-04",
+          "letzter_gehemmter_tag": "2024-02-12"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-21",
+        "beruecksichtigte_hemmungstage": 14
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_024",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-04",
+      "grundfrist_letzter_tag": "2024-02-13",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-22",
+          "letzter_gehemmter_tag": "2024-03-03"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-04",
+          "letzter_gehemmter_tag": "2024-03-18"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-13",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_025",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-19",
+      "grundfrist_letzter_tag": "2024-03-12",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-13",
+          "letzter_gehemmter_tag": "2024-02-27"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-28",
+          "letzter_gehemmter_tag": "2024-04-04"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-19",
+          "letzter_gehemmter_tag": "2024-04-26"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-15",
+          "letzter_gehemmter_tag": "2024-04-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-03",
+          "letzter_gehemmter_tag": "2024-03-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-29",
+          "letzter_gehemmter_tag": "2024-03-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-01",
+          "letzter_gehemmter_tag": "2024-03-13"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-04",
+          "letzter_gehemmter_tag": "2024-02-06"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-04-12",
+        "beruecksichtigte_hemmungstage": 31
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_026",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-17",
+      "grundfrist_letzter_tag": "2024-03-16",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-24",
+          "letzter_gehemmter_tag": "2024-04-28"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-02",
+          "letzter_gehemmter_tag": "2024-03-06"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-24",
+          "letzter_gehemmter_tag": "2024-04-25"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-21",
+        "beruecksichtigte_hemmungstage": 5
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_027",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-17",
+      "grundfrist_letzter_tag": "2024-03-01",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-27",
+          "letzter_gehemmter_tag": "2024-04-02"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-01",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_028",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-10",
+      "grundfrist_letzter_tag": "2024-02-22",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-17",
+          "letzter_gehemmter_tag": "2024-03-28"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-14",
+          "letzter_gehemmter_tag": "2024-04-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-12",
+          "letzter_gehemmter_tag": "2024-03-27"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-04",
+          "letzter_gehemmter_tag": "2024-04-18"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-22",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_029",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-14",
+      "grundfrist_letzter_tag": "2024-02-17",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-09",
+          "letzter_gehemmter_tag": "2024-02-16"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-20",
+        "beruecksichtigte_hemmungstage": 3
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_030",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-10",
+      "grundfrist_letzter_tag": "2024-03-04",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-04",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_031",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-02",
+      "grundfrist_letzter_tag": "2024-02-15",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-07",
+          "letzter_gehemmter_tag": "2024-03-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-18",
+          "letzter_gehemmter_tag": "2024-01-29"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-07",
+          "letzter_gehemmter_tag": "2024-04-22"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-15",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_032",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-12",
+      "grundfrist_letzter_tag": "2024-03-05",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-12",
+          "letzter_gehemmter_tag": "2024-03-22"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-31",
+          "letzter_gehemmter_tag": "2024-04-09"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-05",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_033",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-07",
+      "grundfrist_letzter_tag": "2024-02-29",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-11",
+          "letzter_gehemmter_tag": "2024-04-21"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-24",
+          "letzter_gehemmter_tag": "2024-02-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-10",
+          "letzter_gehemmter_tag": "2024-04-18"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-24",
+          "letzter_gehemmter_tag": "2024-02-06"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-20",
+          "letzter_gehemmter_tag": "2024-02-24"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-27",
+          "letzter_gehemmter_tag": "2024-02-04"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-11",
+          "letzter_gehemmter_tag": "2024-03-19"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-17",
+          "letzter_gehemmter_tag": "2024-03-19"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-07",
+        "beruecksichtigte_hemmungstage": 7
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_034",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-20",
+      "grundfrist_letzter_tag": "2024-02-20",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-27",
+          "letzter_gehemmter_tag": "2024-05-05"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-20",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_035",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-04",
+      "grundfrist_letzter_tag": "2024-02-23",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-23",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_036",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-17",
+      "grundfrist_letzter_tag": "2024-03-03",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-24",
+          "letzter_gehemmter_tag": "2024-03-29"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-25",
+          "letzter_gehemmter_tag": "2024-04-29"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-18",
+          "letzter_gehemmter_tag": "2024-05-01"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-06",
+          "letzter_gehemmter_tag": "2024-04-18"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-02",
+          "letzter_gehemmter_tag": "2024-03-03"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-24",
+          "letzter_gehemmter_tag": "2024-04-01"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-28",
+          "letzter_gehemmter_tag": "2024-04-12"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-05",
+        "beruecksichtigte_hemmungstage": 2
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_037",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-05",
+      "grundfrist_letzter_tag": "2024-02-14",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-31",
+          "letzter_gehemmter_tag": "2024-02-10"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-29",
+          "letzter_gehemmter_tag": "2024-01-31"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-20",
+        "beruecksichtigte_hemmungstage": 6
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_038",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-06",
+      "grundfrist_letzter_tag": "2024-02-09",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-18",
+          "letzter_gehemmter_tag": "2024-03-02"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-06",
+          "letzter_gehemmter_tag": "2024-02-07"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-09",
+          "letzter_gehemmter_tag": "2024-02-22"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-15",
+          "letzter_gehemmter_tag": "2024-04-24"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-30",
+          "letzter_gehemmter_tag": "2024-04-09"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-22",
+          "letzter_gehemmter_tag": "2024-03-01"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-05",
+        "beruecksichtigte_hemmungstage": 25
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_039",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-19",
+      "grundfrist_letzter_tag": "2024-03-15",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-22",
+          "letzter_gehemmter_tag": "2024-02-23"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-17",
+        "beruecksichtigte_hemmungstage": 2
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_040",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-18",
+      "grundfrist_letzter_tag": "2024-03-08",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-19",
+          "letzter_gehemmter_tag": "2024-05-04"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-07",
+          "letzter_gehemmter_tag": "2024-04-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-17",
+          "letzter_gehemmter_tag": "2024-02-19"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-06",
+          "letzter_gehemmter_tag": "2024-04-09"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-07",
+          "letzter_gehemmter_tag": "2024-02-09"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-05",
+          "letzter_gehemmter_tag": "2024-04-05"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-13",
+          "letzter_gehemmter_tag": "2024-03-27"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-26",
+          "letzter_gehemmter_tag": "2024-03-01"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-30",
+        "beruecksichtigte_hemmungstage": 22
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_041",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-08",
+      "grundfrist_letzter_tag": "2024-02-22",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-28",
+          "letzter_gehemmter_tag": "2024-03-04"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-04",
+          "letzter_gehemmter_tag": "2024-04-17"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-03",
+          "letzter_gehemmter_tag": "2024-04-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-15",
+          "letzter_gehemmter_tag": "2024-04-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-25",
+          "letzter_gehemmter_tag": "2024-02-07"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-16",
+          "letzter_gehemmter_tag": "2024-04-27"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-14",
+          "letzter_gehemmter_tag": "2024-02-18"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-27",
+        "beruecksichtigte_hemmungstage": 5
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_042",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-09",
+      "grundfrist_letzter_tag": "2024-02-14",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-10",
+          "letzter_gehemmter_tag": "2024-03-16"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-03",
+          "letzter_gehemmter_tag": "2024-02-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-19",
+          "letzter_gehemmter_tag": "2024-04-24"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-17",
+          "letzter_gehemmter_tag": "2024-02-27"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-14",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_043",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-21",
+      "grundfrist_letzter_tag": "2024-03-15",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-26",
+          "letzter_gehemmter_tag": "2024-04-26"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-17",
+          "letzter_gehemmter_tag": "2024-03-24"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-01",
+          "letzter_gehemmter_tag": "2024-03-15"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-27",
+          "letzter_gehemmter_tag": "2024-03-27"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-08",
+          "letzter_gehemmter_tag": "2024-02-23"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-24",
+          "letzter_gehemmter_tag": "2024-02-26"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-05",
+          "letzter_gehemmter_tag": "2024-03-13"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-04-14",
+        "beruecksichtigte_hemmungstage": 30
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_044",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-01",
+      "grundfrist_letzter_tag": "2024-02-25",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-09",
+          "letzter_gehemmter_tag": "2024-02-11"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-29",
+          "letzter_gehemmter_tag": "2024-03-04"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-28",
+        "beruecksichtigte_hemmungstage": 3
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_045",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-07",
+      "grundfrist_letzter_tag": "2024-03-05",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-10",
+          "letzter_gehemmter_tag": "2024-04-13"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-22",
+          "letzter_gehemmter_tag": "2024-03-06"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-11",
+          "letzter_gehemmter_tag": "2024-04-24"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-22",
+          "letzter_gehemmter_tag": "2024-03-01"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-23",
+          "letzter_gehemmter_tag": "2024-02-01"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-19",
+        "beruecksichtigte_hemmungstage": 14
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_046",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-14",
+      "grundfrist_letzter_tag": "2024-02-28",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-28",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_047",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-04",
+      "grundfrist_letzter_tag": "2024-02-05",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-06",
+          "letzter_gehemmter_tag": "2024-03-15"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-29",
+          "letzter_gehemmter_tag": "2024-02-12"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-17",
+          "letzter_gehemmter_tag": "2024-02-21"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-23",
+          "letzter_gehemmter_tag": "2024-02-29"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-08",
+          "letzter_gehemmter_tag": "2024-02-13"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-24",
+          "letzter_gehemmter_tag": "2024-01-31"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-15",
+        "beruecksichtigte_hemmungstage": 10
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_048",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-07",
+      "grundfrist_letzter_tag": "2024-02-24",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-10",
+          "letzter_gehemmter_tag": "2024-02-11"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-03",
+          "letzter_gehemmter_tag": "2024-04-03"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-26",
+          "letzter_gehemmter_tag": "2024-03-05"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-13",
+          "letzter_gehemmter_tag": "2024-02-28"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-19",
+        "beruecksichtigte_hemmungstage": 24
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_049",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-06",
+      "grundfrist_letzter_tag": "2024-02-27",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-11",
+          "letzter_gehemmter_tag": "2024-02-23"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-25",
+          "letzter_gehemmter_tag": "2024-04-02"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-25",
+          "letzter_gehemmter_tag": "2024-04-06"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-30",
+          "letzter_gehemmter_tag": "2024-04-05"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-22",
+          "letzter_gehemmter_tag": "2024-03-06"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-23",
+        "beruecksichtigte_hemmungstage": 25
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_050",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-07",
+      "grundfrist_letzter_tag": "2024-02-22",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-25",
+          "letzter_gehemmter_tag": "2024-02-28"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-06",
+          "letzter_gehemmter_tag": "2024-04-10"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-22",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_051",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-01",
+      "grundfrist_letzter_tag": "2024-02-05",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-01",
+          "letzter_gehemmter_tag": "2024-02-09"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-10",
+          "letzter_gehemmter_tag": "2024-03-13"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-19",
+          "letzter_gehemmter_tag": "2024-02-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-09",
+          "letzter_gehemmter_tag": "2024-03-11"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-12",
+          "letzter_gehemmter_tag": "2024-02-21"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-18",
+          "letzter_gehemmter_tag": "2024-03-18"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-22",
+          "letzter_gehemmter_tag": "2024-02-29"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-03",
+        "beruecksichtigte_hemmungstage": 27
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_052",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-15",
+      "grundfrist_letzter_tag": "2024-02-20",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-20",
+          "letzter_gehemmter_tag": "2024-02-25"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-24",
+          "letzter_gehemmter_tag": "2024-04-05"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-13",
+          "letzter_gehemmter_tag": "2024-04-14"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-23",
+          "letzter_gehemmter_tag": "2024-04-23"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-24",
+          "letzter_gehemmter_tag": "2024-03-06"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-13",
+          "letzter_gehemmter_tag": "2024-04-18"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-03",
+          "letzter_gehemmter_tag": "2024-02-04"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-07",
+        "beruecksichtigte_hemmungstage": 16
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_053",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-04",
+      "grundfrist_letzter_tag": "2024-02-25",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-26",
+          "letzter_gehemmter_tag": "2024-02-02"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-31",
+          "letzter_gehemmter_tag": "2024-04-01"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-07",
+          "letzter_gehemmter_tag": "2024-03-17"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-25",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_054",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-17",
+      "grundfrist_letzter_tag": "2024-02-23",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-23",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_055",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-13",
+      "grundfrist_letzter_tag": "2024-02-23",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-06",
+          "letzter_gehemmter_tag": "2024-03-15"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-01",
+          "letzter_gehemmter_tag": "2024-02-12"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-23",
+          "letzter_gehemmter_tag": "2024-03-04"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-05",
+        "beruecksichtigte_hemmungstage": 11
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_056",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-19",
+      "grundfrist_letzter_tag": "2024-03-15",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-04-11",
+          "letzter_gehemmter_tag": "2024-04-22"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-03",
+          "letzter_gehemmter_tag": "2024-03-04"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-17",
+        "beruecksichtigte_hemmungstage": 2
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_057",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-03",
+      "grundfrist_letzter_tag": "2024-02-05",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-08",
+          "letzter_gehemmter_tag": "2024-03-20"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-29",
+          "letzter_gehemmter_tag": "2024-04-10"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-05",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_058",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-13",
+      "grundfrist_letzter_tag": "2024-02-19",
+      "hemmungszeitraeume": [],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-19",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_059",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-13",
+      "grundfrist_letzter_tag": "2024-03-12",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-14",
+          "letzter_gehemmter_tag": "2024-02-28"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-05",
+          "letzter_gehemmter_tag": "2024-04-12"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-28",
+          "letzter_gehemmter_tag": "2024-03-13"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-04-18",
+        "beruecksichtigte_hemmungstage": 37
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_060",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-07",
+      "grundfrist_letzter_tag": "2024-03-04",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-03",
+          "letzter_gehemmter_tag": "2024-02-13"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-11",
+        "beruecksichtigte_hemmungstage": 7
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_061",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-01",
+      "grundfrist_letzter_tag": "2024-02-16",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-03-09",
+          "letzter_gehemmter_tag": "2024-03-18"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-21",
+          "letzter_gehemmter_tag": "2024-01-29"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-02-16",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_062",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-06",
+      "grundfrist_letzter_tag": "2024-02-27",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-13",
+          "letzter_gehemmter_tag": "2024-02-26"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-31",
+          "letzter_gehemmter_tag": "2024-02-05"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-12",
+        "beruecksichtigte_hemmungstage": 14
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_063",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-10",
+      "grundfrist_letzter_tag": "2024-02-28",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-23",
+          "letzter_gehemmter_tag": "2024-02-29"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-23",
+          "letzter_gehemmter_tag": "2024-03-08"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-29",
+          "letzter_gehemmter_tag": "2024-02-12"
+        },
+        {
+          "erster_gehemmter_tag": "2024-04-03",
+          "letzter_gehemmter_tag": "2024-04-04"
+        },
+        {
+          "erster_gehemmter_tag": "2024-03-04",
+          "letzter_gehemmter_tag": "2024-03-04"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-29",
+          "letzter_gehemmter_tag": "2024-03-09"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-18",
+        "beruecksichtigte_hemmungstage": 19
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  },
+  {
+    "fall_id": "VHE_ORAKEL_064",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-02-12",
+      "grundfrist_letzter_tag": "2024-02-18",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-02-16",
+          "letzter_gehemmter_tag": "2024-02-26"
+        },
+        {
+          "erster_gehemmter_tag": "2024-01-28",
+          "letzter_gehemmter_tag": "2024-02-04"
+        },
+        {
+          "erster_gehemmter_tag": "2024-02-29",
+          "letzter_gehemmter_tag": "2024-03-06"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2024-03-07",
+        "beruecksichtigte_hemmungstage": 18
+      }
+    },
+    "herleitung": "Alle gesperrten Tage als Menge markieren; vom ersten Fristtag vorwärts jeden nicht gesperrten Tag einzeln zählen, bis die ursprüngliche Dauer verbraucht ist.",
+    "pruefnachweis": "Unabhängiges Tageszählorakel pruefungen/hemmung_orakel.py, Zufallsstartwert 209; kein Import der Bibliothek, keine Verlängerung oder Vereinigung von Intervallen."
+  }
+]

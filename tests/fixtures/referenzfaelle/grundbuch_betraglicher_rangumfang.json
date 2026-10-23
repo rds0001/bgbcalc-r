@@ -1,0 +1,259 @@
+[
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_TEILUMFANG",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": "100",
+      "rangfall": "rangvorbehalt_881",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erfasster_rechtsteil": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "nicht_erfasster_rechtsteil": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ungenutzter_rangrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120Recht/100bezifferterUmfang=>100erfasst,20außerhalb;80Recht=>80erfasst,20Rahmenungenutzt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_KLEINERES_RECHT",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "80",
+      "bezifferter_rangumfang": "100",
+      "rangfall": "rangvorbehalt_881",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erfasster_rechtsteil": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nicht_erfasster_rechtsteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungenutzter_rangrahmen": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120Recht/100bezifferterUmfang=>100erfasst,20außerhalb;80Recht=>80erfasst,20Rahmenungenutzt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_NULLRAHMEN",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": "0",
+      "rangfall": "rangvorbehalt_881",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erfasster_rechtsteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_erfasster_rechtsteil": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "ungenutzter_rangrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120Recht/100bezifferterUmfang=>100erfasst,20außerhalb;80Recht=>80erfasst,20Rahmenungenutzt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_VORMERKUNG",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": "100",
+      "rangfall": "vormerkungsumfang_883",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erfasster_rechtsteil": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "nicht_erfasster_rechtsteil": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ungenutzter_rangrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120Recht/100bezifferterUmfang=>100erfasst,20außerhalb;80Recht=>80erfasst,20Rahmenungenutzt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_RANGVEREINBARUNG",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": "100",
+      "rangfall": "rangvereinbarung_880",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erfasster_rechtsteil": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "nicht_erfasster_rechtsteil": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ungenutzter_rangrahmen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120Recht/100bezifferterUmfang=>100erfasst,20außerhalb;80Recht=>80erfasst,20Rahmenungenutzt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_FEHLT_rechtsbetrag",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": null,
+      "bezifferter_rangumfang": "100",
+      "rangfall": "rangvorbehalt_881",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_FEHLT_bezifferter_rangumfang",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": null,
+      "rangfall": "rangvorbehalt_881",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_FEHLT_rangfall",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": "100",
+      "rangfall": null,
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_FEHLT_einordnungsnachweis",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": "100",
+      "rangfall": "rangvorbehalt_881",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_UNGUELTIG0",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "-1",
+      "bezifferter_rangumfang": "100",
+      "rangfall": "rangvorbehalt_881",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_UNGUELTIG1",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": "-1",
+      "rangfall": "rangvorbehalt_881",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_BETRAGLICHER_RANGUMFANG_UNGUELTIG2",
+    "funktion": "grundbuch_betraglicher_rangumfang",
+    "eingaben": {
+      "rechtsbetrag": "120",
+      "bezifferter_rangumfang": "100",
+      "rangfall": "automatisch",
+      "einordnungsnachweis": "Nur numerische Aufteilung eines ausdrücklich bezifferten Rangumfangs: erfasster Teil=min(Rechtsbetrag,Rangumfang), übriger Rechtsteil=Rechtsbetrag-erfassterTeil, ungenutzter Rahmen=Rangumfang-erfassterTeil.880Vschützt Zwischenrechte;881IVschränkt den Vorbehalt bei zusätzlicher Beeinträchtigung ein;883IIbegrenzt relative Unwirksamkeit auf Anspruchsbeeinträchtigung. Diese Vorschriften liefern keine allgemeine gesetzliche Geldverteilungsformel allein aus Nominalbeträgen. Rechtliche Eintragung/Auslegung und Wirkungen auf fremde Rechte sind vorqualifiziert, kein automatischer vollständiger Rangtausch oder selbst erfundene ZVG-Erlösverteilung.883IIImaßgeblicheVormerkungseintragung mit vorhandenem879-Paarvergleich verwendbar. Rechte mit nicht vergleichbaren Zins-/Nebenleistungsbestandteilen nicht in eine einzige Zahl pressen, sondern rechtlich sachgerechte Komponenten getrennt rechnen. Keine künstliche transitive Gesamtranggruppe aus einzelnen879-Vergleichen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

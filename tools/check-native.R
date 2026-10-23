@@ -1,0 +1,6 @@
+args <- commandArgs(TRUE)
+root <- if(length(args))normalizePath(args[[1]]) else normalizePath('.')
+options(bgb.instrumentiert=TRUE,bgb.pruefargumente=root,warn=2)
+kern <- asNamespace('bgbcalc')
+for(p in sort(list.files(file.path(root,'tests/native'),pattern='[.]R$',full.names=TRUE))) sys.source(p,envir=new.env(parent=kern))
+cat('Native Anwendungsketten bestanden.\n')

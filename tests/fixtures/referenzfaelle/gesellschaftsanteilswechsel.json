@@ -1,0 +1,298 @@
+[
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_AUSTRITT",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "0.25",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "3"
+      }
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_EINTRITT",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "0.25",
+      "wechselart": "eintritt",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3",
+        "nenner": "16"
+      }
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_NULL_ANTEIL",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0",
+      "wechselanteil": "0.25",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_NULL_WECHSEL",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "0",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "4"
+      }
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_NEUER_VOLLER_ANTEIL",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "1",
+      "wechselart": "eintritt",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_EINTRITT_BRUCH",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "wechselanteil": {
+        "zaehler": "1",
+        "nenner": "5"
+      },
+      "wechselart": "eintritt",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "4",
+        "nenner": "15"
+      }
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_NENNER_NULL",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "1",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_SUMME_ZU_GROSS",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "0.8",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_ALT_ZU_GROSS",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "1.1",
+      "wechselanteil": "0.25",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_NEGATIV",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "-0.1",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_FALL",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "0.25",
+      "wechselart": "x",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_TYP",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": [],
+      "wechselanteil": "0.25",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_LEER",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "0.25",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_FEHLT_bisheriger_anteil",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": null,
+      "wechselanteil": "0.25",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_FEHLT_wechselanteil",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": null,
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_FEHLT_wechselart",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "0.25",
+      "wechselart": null,
+      "einordnungsnachweis": "Qualifizierter712-Zweifelsfall, vollständige alte normierte Anteile."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_ANTEIL_NACH_BESTANDSWECHSEL_FEHLT_einordnungsnachweis",
+    "funktion": "gesellschaft_anteil_nach_bestandswechsel",
+    "eingaben": {
+      "bisheriger_anteil": "0.25",
+      "wechselanteil": "0.25",
+      "wechselart": "ausscheiden",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1/4 geteilt durch3/4 ergibt1/3; bei Eintritt1/4 mal3/4 ergibt3/16.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

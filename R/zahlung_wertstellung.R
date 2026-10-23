@@ -1,0 +1,16 @@
+zahlung_gutschrift_wertstellung <- function(eingangsgeschaeftstag=NULL, wertstellungsdatum=NULL, einordnungsnachweis=NULL) {
+ e <- .datum(eingangsgeschaeftstag,'eingangsgeschaeftstag');v <- .datum(wertstellungsdatum,'wertstellungsdatum');.text(einordnungsnachweis,'einordnungsnachweis')
+ wert <- list(spaetestes_wertstellungsdatum=format(e,'%Y-%m-%d'),wertstellungsgrenze_eingehalten=v<=e)
+ eingaben <- list(eingangsgeschaeftstag=eingangsgeschaeftstag, wertstellungsdatum=wertstellungsdatum, einordnungsnachweis=einordnungsnachweis)
+ ergebnis <- .ergebnis(wert,"datum_und_wahrheitswert","BGB_ZAHLUNG_GUTSCHRIFT_WERTSTELLUNG",eingaben,list(list(operation="Tatsaechliches Gutschrift-Wertstellungsdatum mit Eingangsgeschaeftstag als spaetester Grenze vergleichen.")),eingaben)
+ ergebnis$hinweise <- list("\u00a7675tI2/III: Gutschriftspaetestens am qualifizierten Eingangsgeschaeftstag wertstellen; Belastung nicht vor tatsaechlichem Auftragszugang, Belastungswertstellung nicht vor tatsaechlicher Kontobelastung. Keine automatische Bankkalender-/Zeitzonenannahme. Eingangsgeschaeftstag nach tatsaechlichem Vorgang und anwendbarem Kalender qualifizieren, kein frei erfundener spaeterer Valutatag. Unverzuegliche Verfuegbarkeit und Verbraucherbareinzahlung675tII1 haben keine feste weitere BGB-Sekundenzahl; nicht als Erlaubnis bis Tagesende ausgeben. Nichtverbraucher-Bareinzahlung verwendet bestehenden Geschaeftstagskern675tII2.675tIVSperrfreigabe unverzueglich, genaue Zustimmungssumme ist qualitative Befugnisgrenze; keine erfundene fixe Haltefrist.675dVI/675tVSonderausnahmen vorqualifizieren.")
+ ergebnis
+}
+zahlung_belastungszeitgrenzen <- function(auftragszugang_utc=NULL, kontobelastung_utc=NULL, wertstellung_utc=NULL, einordnungsnachweis=NULL) {
+ a <- .reise_utc_zeitpunkt(auftragszugang_utc,'auftragszugang_utc');b <- .reise_utc_zeitpunkt(kontobelastung_utc,'kontobelastung_utc');v <- .reise_utc_zeitpunkt(wertstellung_utc,'wertstellung_utc');.text(einordnungsnachweis,'einordnungsnachweis')
+ wert <- list(belastung_nicht_vor_auftragszugang=b>=a,wertstellung_nicht_vor_belastung=v>=b)
+ eingaben <- list(auftragszugang_utc=auftragszugang_utc, kontobelastung_utc=kontobelastung_utc, wertstellung_utc=wertstellung_utc, einordnungsnachweis=einordnungsnachweis)
+ ergebnis <- .ergebnis(wert,"wahrheitswerte","BGB_ZAHLUNG_BELASTUNGSZEITGRENZEN",eingaben,list(list(operation="Tatsaechliche Kontobelastung nicht vor Auftragszugang und Wertstellung nicht vor Belastung vergleichen.")),eingaben)
+ ergebnis$hinweise <- list("\u00a7675tI2/III: Gutschriftspaetestens am qualifizierten Eingangsgeschaeftstag wertstellen; Belastung nicht vor tatsaechlichem Auftragszugang, Belastungswertstellung nicht vor tatsaechlicher Kontobelastung. Keine automatische Bankkalender-/Zeitzonenannahme. Eingangsgeschaeftstag nach tatsaechlichem Vorgang und anwendbarem Kalender qualifizieren, kein frei erfundener spaeterer Valutatag. Unverzuegliche Verfuegbarkeit und Verbraucherbareinzahlung675tII1 haben keine feste weitere BGB-Sekundenzahl; nicht als Erlaubnis bis Tagesende ausgeben. Nichtverbraucher-Bareinzahlung verwendet bestehenden Geschaeftstagskern675tII2.675tIVSperrfreigabe unverzueglich, genaue Zustimmungssumme ist qualitative Befugnisgrenze; keine erfundene fixe Haltefrist.675dVI/675tVSonderausnahmen vorqualifizieren.")
+ ergebnis
+}

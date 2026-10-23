@@ -1,0 +1,791 @@
+[
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_TEIL",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "summe_teilforderungen": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "noch_nicht_zugeteilter_betrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_VOLL",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "30",
+        "70"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "summe_teilforderungen": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "noch_nicht_zugeteilter_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_KEINE",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "0"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "summe_teilforderungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "noch_nicht_zugeteilter_betrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_NULL",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "0",
+      "zugeteilte_teilforderungen": [
+        "0"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "summe_teilforderungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "noch_nicht_zugeteilter_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_EXAKT",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "0.3",
+      "zugeteilte_teilforderungen": [
+        "0.1",
+        "0.1"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "summe_teilforderungen": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "noch_nicht_zugeteilter_betrag": {
+          "zaehler": "1",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_BRUCH",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": {
+        "zaehler": "1",
+        "nenner": "1"
+      },
+      "zugeteilte_teilforderungen": [
+        {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "summe_teilforderungen": {
+          "zaehler": "2",
+          "nenner": "3"
+        },
+        "noch_nicht_zugeteilter_betrag": {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_ZU_VIEL",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "60",
+        "70"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_FEHLT_ausgangsforderung",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": null,
+      "zugeteilte_teilforderungen": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_TYP_ausgangsforderung",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": {},
+      "zugeteilte_teilforderungen": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_FEHLT_zugeteilte_teilforderungen",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": null,
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_TYP_zugeteilte_teilforderungen",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": {},
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_FEHLT_einordnungsnachweis",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_TYP_einordnungsnachweis",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_UNGUELTIG_0",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "-1",
+      "zugeteilte_teilforderungen": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_UNGUELTIG_1",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_UNGUELTIG_2",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "1",
+        "-1"
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_UNGUELTIG_3",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "1",
+        true
+      ],
+      "einordnungsnachweis": "§1132II: numerische Verteilungsplanung mit ausdrücklich zugeordneten Teilbeträgen. Keine proportionale oder gleiche Verteilung erfinden; die rechtlich gewählte Zuordnung bleibt Eingabe. Summe darf die vorhandene Forderung nicht übersteigen. Ein positiver noch nicht zugeteilter Betrag zeigt eine unvollständige Planung, keine automatisch vollzogene teilweise Aufteilung oder Freigabe von Grundstücken. Voraussetzungen875/876/878, Grundbuchvollzug, Rang und Eigentümerrechte außerhalb der Rechnung. Bereits geleistete Zahlungen vorab eindeutig berücksichtigen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_VERTEILUNGSRAHMEN_UNGUELTIG_4",
+    "funktion": "gesamthypothek_verteilungsrahmen",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "zugeteilte_teilforderungen": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_TEIL",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_befriedigung": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "verbleibende_glaeubigerforderung": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "uebersteigender_zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_VOLL",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "30",
+        "70"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_befriedigung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_glaeubigerforderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "uebersteigender_zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_KEINE",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "0"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_befriedigung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_glaeubigerforderung": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "uebersteigender_zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_NULL",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "0",
+      "befriedigungsbetraege": [
+        "0"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_befriedigung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_glaeubigerforderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "uebersteigender_zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_EXAKT",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "0.3",
+      "befriedigungsbetraege": [
+        "0.1",
+        "0.1"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_befriedigung": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "verbleibende_glaeubigerforderung": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "uebersteigender_zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_BRUCH",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": {
+        "zaehler": "1",
+        "nenner": "1"
+      },
+      "befriedigungsbetraege": [
+        {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_befriedigung": {
+          "zaehler": "2",
+          "nenner": "3"
+        },
+        "verbleibende_glaeubigerforderung": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "uebersteigender_zahlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_MEHR",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "60",
+        "70"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_befriedigung": {
+          "zaehler": "130",
+          "nenner": "1"
+        },
+        "verbleibende_glaeubigerforderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "uebersteigender_zahlbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_FEHLT_ausgangsforderung",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": null,
+      "befriedigungsbetraege": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_TYP_ausgangsforderung",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": {},
+      "befriedigungsbetraege": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_FEHLT_befriedigungsbetraege",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": null,
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_TYP_befriedigungsbetraege",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": {},
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_FEHLT_einordnungsnachweis",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_TYP_einordnungsnachweis",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_UNGUELTIG_0",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "-1",
+      "befriedigungsbetraege": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_UNGUELTIG_1",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_UNGUELTIG_2",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "1",
+        "-1"
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_UNGUELTIG_3",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "1",
+        true
+      ],
+      "einordnungsnachweis": "§1132I: dieselbe Forderung wird nicht mit der Zahl belasteter Grundstücke multipliziert. Qualifizierte Befriedigungen aus verschiedenen Grundstücken und sonstigen Quellen nur einmal auf dieselbe Ausgangsforderung anrechnen. Zahlung auf Kosten/Zinsen oder andere Forderungen zuerst richtig zuordnen; Ausgangsforderung und Beträge müssen denselben Umfang und Zeitraum betreffen. Ergebnis ist der Rest beim bisherigen Gläubiger, kein allgemeines Erlöschensurteil: Forderungs-/Hypothekenübergang insbesondere1143/1150, Ausgleich und verbleibende Eigentümerrechte separat. Übersteigender Zahlbetrag begründet keinen automatisch festgestellten Erstattungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_GLAEUBIGERREST_UNGUELTIG_4",
+    "funktion": "gesamthypothek_glaeubigerrest",
+    "eingaben": {
+      "ausgangsforderung": "100",
+      "befriedigungsbetraege": [
+        "30",
+        "40"
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:30+40=70;von100 verbleiben30.60+70=130 übersteigt100um30. Exakte Brüche ohne Rundung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

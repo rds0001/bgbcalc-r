@@ -1,0 +1,2067 @@
+[
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_KEIN_WERTDECKEL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "zugeordneter_belastungsteil": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_RENTENSCHULD",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtrentenschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "zugeordneter_belastungsteil": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_RANGLASTEN",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "50"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "400",
+          "vorrangige_belastungen": "100"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "zugeordneter_belastungsteil": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_DREI_GRUNDSTUECKE",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "C",
+          "grundstueckswert": "200",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "zugeordneter_belastungsteil": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_ANDERES_ZIEL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "B",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "3",
+          "nenner": "4"
+        },
+        "zugeordneter_belastungsteil": {
+          "zaehler": "600",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_NULLBELASTUNG",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "0",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "zugeordneter_belastungsteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_EIGENWERT_NULL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "200"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zugeordneter_belastungsteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FREMDWERT_NULL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "300"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "zugeordneter_belastungsteil": {
+          "zaehler": "800",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_NICHT_ausschliesslich_nachlassgrundstuecke",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": false,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_NICHT_zweifelsregel_anwendbar",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": false,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FEHLT_gesamtbelastungsbetrag",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": null,
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_TYP_gesamtbelastungsbetrag",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": [],
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FEHLT_grundpfandart",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": null,
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_TYP_grundpfandart",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": [],
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FEHLT_grundstuecke",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": null,
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_TYP_grundstuecke",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": {},
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FEHLT_vermachtes_grundstueck_id",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": null,
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_TYP_vermachtes_grundstueck_id",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": [],
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FEHLT_ausschliesslich_nachlassgrundstuecke",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": null,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_TYP_ausschliesslich_nachlassgrundstuecke",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": 1,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FEHLT_zweifelsregel_anwendbar",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": null,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_TYP_zweifelsregel_anwendbar",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": 1,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FEHLT_bewertungsnachweis",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_TYP_bewertungsnachweis",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_ALLE_NULL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "0",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "0",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_DOPPELTE_ID",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_ZIEL_UNBEKANNT",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "X",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_NUR_EINS",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FELD_ZUVIEL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0",
+          "extra": 1
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_NEGATIVER_BETRAG",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "-1",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_FALSCHE_ART",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "hypothek",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": "Synthetische vergleichbare Werte bei Eigentumsübergang; Ranglasten geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSANTEIL_NACHWEIS_LEER",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassanteil",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "ausschliesslich_nachlassgrundstuecke": true,
+      "zweifelsregel_anwendbar": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Grundstückswerte100/300: Quote1/4. Gesamtbelastung800 führt nach Absatz1 zu200 ohne Wertdeckel, im gesonderten Absatz2-Fall zu100 wegen Wertdeckung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_MIT_WERTDECKEL",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_RENTENSCHULD",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtrentenschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_ANTEIL_UNTER_DECKEL",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "200",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_ANTEIL_AM_DECKEL",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "400",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_RANGLASTEN",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "150",
+      "vorrangige_lasten_vermachtes_grundstueck": "50",
+      "wert_fremdgrundstueck": "400",
+      "vorrangige_lasten_fremdgrundstueck": "100",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_EIGENDECKUNG_NULL",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "200",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "wertquote": null,
+        "anteil_vor_wertbegrenzung": null,
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_GESAMTDECKUNG_NULL",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "200",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "400",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "wertquote": null,
+        "anteil_vor_wertbegrenzung": null,
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FREMDDECKUNG_NULL",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "300",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "800",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_NICHT_erblasserpflicht_gegenueber_fremdeigentuemer",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": false,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_NICHT_zweifelsregel_anwendbar",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": false,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_NICHT_genau_zwei_grundstuecke_qualifiziert",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": false,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_gesamtbelastungsbetrag",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": null,
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_gesamtbelastungsbetrag",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": [],
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_grundpfandart",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": null,
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_grundpfandart",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": [],
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_wert_vermachtes_grundstueck",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": null,
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_wert_vermachtes_grundstueck",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": [],
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_vorrangige_lasten_vermachtes_grundstueck",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": null,
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_vorrangige_lasten_vermachtes_grundstueck",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": [],
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_wert_fremdgrundstueck",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": null,
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_wert_fremdgrundstueck",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": [],
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_vorrangige_lasten_fremdgrundstueck",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": null,
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_vorrangige_lasten_fremdgrundstueck",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": [],
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_erblasserpflicht_gegenueber_fremdeigentuemer",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": null,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_erblasserpflicht_gegenueber_fremdeigentuemer",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": 1,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_zweifelsregel_anwendbar",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": null,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_zweifelsregel_anwendbar",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": 1,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_genau_zwei_grundstuecke_qualifiziert",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": null,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_genau_zwei_grundstuecke_qualifiziert",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FEHLT_bewertungsnachweis",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_TYP_bewertungsnachweis",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_NEGATIVER_BETRAG",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "-1",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_FALSCHE_ART",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "hypothek",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_FREMDGRUNDSTUECK_NACHWEIS_LEER",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "800",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "2168II_BETRAG_UNTER_EIGENWERT",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "50",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "300",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "2168II_FREMDWERT_UNABHAENGIG",
+    "funktion": "gesamtgrundpfandvermaechtnis_fremdgrundstueck",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "50",
+      "grundpfandart": "gesamtgrundschuld",
+      "wert_vermachtes_grundstueck": "100",
+      "vorrangige_lasten_vermachtes_grundstueck": "0",
+      "wert_fremdgrundstueck": "900000",
+      "vorrangige_lasten_fremdgrundstueck": "0",
+      "erblasserpflicht_gegenueber_fremdeigentuemer": true,
+      "zweifelsregel_anwendbar": true,
+      "genau_zwei_grundstuecke_qualifiziert": true,
+      "bewertungsnachweis": "Synthetische Erblasserpflicht im Erbfall gegenüber Fremdeigentümer und vergleichbare Werte."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "2168II→2166I/2167: Vergleichsgruppe umfasst nurNachlassgrundstücke. ImZweigrundstücksfall nurEigenwertV; Befriedigung=min(Gesamtbetrag,max(V−Vorrang,0)). Fremdwerte keineQuotenverdünnung.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

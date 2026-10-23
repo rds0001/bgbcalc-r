@@ -1,0 +1,844 @@
+[
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_OHNE_ERSATZ",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "0",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_ENTNAHME_AUSGLEICH",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_UEBERSCHIESSEND",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "200",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "-50",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "50",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_BEIDERSEITIG",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "200",
+      "ersatzschuld_anderer": "50",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "350",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "175",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "175",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "-25",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "25",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "175",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "125",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "125",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_GLEICHE_SCHULDEN",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "200",
+      "ersatzschuld_anderer": "200",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "250",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "200",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "250",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "200",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_NUR_FORDERUNG",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "0",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "-50",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "50",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "50",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_NUR_GLEICHE_FORDERUNGEN",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "0",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "100",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "100",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_SPIEGEL",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "0",
+      "ersatzschuld_anderer": "200",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "150",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "-50",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "50",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_ALLES_NULL",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "0",
+      "ersatzschuld_ehegatte": "0",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_EXAKT",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "1",
+      "ersatzschuld_ehegatte": "0.5",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "teilungsmasse_einschliesslich_ersatzforderungen": {
+          "zaehler": "3",
+          "nenner": "2"
+        },
+        "ehegatte": {
+          "halbanteil": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "1",
+            "nenner": "4"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        "anderer_ehegatte": {
+          "halbanteil": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "ersatzanrechnung": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "auseinandersetzungssaldo": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "auseinandersetzungsanspruch": {
+            "zaehler": "3",
+            "nenner": "4"
+          },
+          "restersatzpflicht": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      }
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_FEHLT_bereinigte_masse_ohne_ersatzforderungen",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": null,
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_TYP_bereinigte_masse_ohne_ersatzforderungen",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": [],
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_NEGATIV_bereinigte_masse_ohne_ersatzforderungen",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "-1",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_FEHLT_ersatzschuld_ehegatte",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": null,
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_TYP_ersatzschuld_ehegatte",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": [],
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_NEGATIV_ersatzschuld_ehegatte",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "-1",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_FEHLT_ersatzschuld_anderer",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": null,
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_TYP_ersatzschuld_anderer",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": [],
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_NEGATIV_ersatzschuld_anderer",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "-1",
+      "bilanznachweis": "Sonstige Masse nach§1475; beide Ersatzforderungen nicht enthalten und voll anrechenbar/werthaltig."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_FEHLT_bilanznachweis",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_TYP_bilanznachweis",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_TEILUNGSBILANZ_NACHWEIS_LEER",
+    "funktion": "gesamtgut_teilungsbilanz",
+    "eingaben": {
+      "bereinigte_masse_ohne_ersatzforderungen": "100",
+      "ersatzschuld_ehegatte": "100",
+      "ersatzschuld_anderer": "0",
+      "bilanznachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Vorentnahmebilanz: Bei ursprünglichem200Gesamtwert und100ersatzpflichtiger Entnahme verbleiben100Masse; jeder behält insgesamt100, daher Entnehmer0Restanspruch/anderer100. Überschießende Entnahme erzeugt direkte Restpflicht.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

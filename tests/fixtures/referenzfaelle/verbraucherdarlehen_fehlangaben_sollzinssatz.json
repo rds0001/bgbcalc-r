@@ -1,0 +1,112 @@
+[
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FEHLANGABEN_SOLLZINSSATZ_SECHS_PROZENT",
+    "funktion": "verbraucherdarlehen_fehlangaben_sollzinssatz",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.06",
+      "fehlangabennachweis": "494II in Verbindung mit246: Jahresquote auf höchstens0.04 vermindern. Bereits niedrigerer oder negativer vertraglicher Satz wird nicht erhöht. Ergebnis ist nur die Zinsbasis; keine automatische Zahlungspflicht bei negativem Satz. Tatsächliche Zinsbeträge/Teilzahlungen anhand der rechtlich fortbestehenden Vertragsstruktur berechnen. Nicht mit der Differenzkorrektur bei zu niedrig angegebenem Effektivzins494III verwechseln."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "25"
+      }
+    },
+    "herleitung": "6Prozentauf4Prozentvermindern.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FEHLANGABEN_SOLLZINSSATZ_NIEDRIGER",
+    "funktion": "verbraucherdarlehen_fehlangaben_sollzinssatz",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.02",
+      "fehlangabennachweis": "494II in Verbindung mit246: Jahresquote auf höchstens0.04 vermindern. Bereits niedrigerer oder negativer vertraglicher Satz wird nicht erhöht. Ergebnis ist nur die Zinsbasis; keine automatische Zahlungspflicht bei negativem Satz. Tatsächliche Zinsbeträge/Teilzahlungen anhand der rechtlich fortbestehenden Vertragsstruktur berechnen. Nicht mit der Differenzkorrektur bei zu niedrig angegebenem Effektivzins494III verwechseln."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "50"
+      }
+    },
+    "herleitung": "2Prozentnichtauf4Prozenterhöhen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FEHLANGABEN_SOLLZINSSATZ_NEGATIV",
+    "funktion": "verbraucherdarlehen_fehlangaben_sollzinssatz",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "-0.01",
+      "fehlangabennachweis": "494II in Verbindung mit246: Jahresquote auf höchstens0.04 vermindern. Bereits niedrigerer oder negativer vertraglicher Satz wird nicht erhöht. Ergebnis ist nur die Zinsbasis; keine automatische Zahlungspflicht bei negativem Satz. Tatsächliche Zinsbeträge/Teilzahlungen anhand der rechtlich fortbestehenden Vertragsstruktur berechnen. Nicht mit der Differenzkorrektur bei zu niedrig angegebenem Effektivzins494III verwechseln."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "-1",
+        "nenner": "100"
+      }
+    },
+    "herleitung": "NegativenVertragssatznichtaufpositivenSatzanheben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FEHLANGABEN_SOLLZINSSATZ_NULL",
+    "funktion": "verbraucherdarlehen_fehlangaben_sollzinssatz",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0",
+      "fehlangabennachweis": "494II in Verbindung mit246: Jahresquote auf höchstens0.04 vermindern. Bereits niedrigerer oder negativer vertraglicher Satz wird nicht erhöht. Ergebnis ist nur die Zinsbasis; keine automatische Zahlungspflicht bei negativem Satz. Tatsächliche Zinsbeträge/Teilzahlungen anhand der rechtlich fortbestehenden Vertragsstruktur berechnen. Nicht mit der Differenzkorrektur bei zu niedrig angegebenem Effektivzins494III verwechseln."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FEHLANGABEN_SOLLZINSSATZ_FEHLT_vertraglicher_sollzinssatz",
+    "funktion": "verbraucherdarlehen_fehlangaben_sollzinssatz",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": null,
+      "fehlangabennachweis": "494II in Verbindung mit246: Jahresquote auf höchstens0.04 vermindern. Bereits niedrigerer oder negativer vertraglicher Satz wird nicht erhöht. Ergebnis ist nur die Zinsbasis; keine automatische Zahlungspflicht bei negativem Satz. Tatsächliche Zinsbeträge/Teilzahlungen anhand der rechtlich fortbestehenden Vertragsstruktur berechnen. Nicht mit der Differenzkorrektur bei zu niedrig angegebenem Effektivzins494III verwechseln."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FEHLANGABEN_SOLLZINSSATZ_FEHLT_fehlangabennachweis",
+    "funktion": "verbraucherdarlehen_fehlangaben_sollzinssatz",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.06",
+      "fehlangabennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_FEHLANGABEN_SOLLZINSSATZ_UNGUELTIG",
+    "funktion": "verbraucherdarlehen_fehlangaben_sollzinssatz",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "sechs",
+      "fehlangabennachweis": "494II in Verbindung mit246: Jahresquote auf höchstens0.04 vermindern. Bereits niedrigerer oder negativer vertraglicher Satz wird nicht erhöht. Ergebnis ist nur die Zinsbasis; keine automatische Zahlungspflicht bei negativem Satz. Tatsächliche Zinsbeträge/Teilzahlungen anhand der rechtlich fortbestehenden Vertragsstruktur berechnen. Nicht mit der Differenzkorrektur bei zu niedrig angegebenem Effektivzins494III verwechseln."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

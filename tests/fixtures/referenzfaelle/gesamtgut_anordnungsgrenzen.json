@@ -1,0 +1,516 @@
+[
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_ZULAESSIGE_HOEHE",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "60",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "halbe_anteilsuntergrenze": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "angeordneter_minderungsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "halbgrenze_eingehalten": true,
+        "unterschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100/2=50Untergrenze.60ergibt40Minderung und hältGrenzeein;40ergibt60Minderung und unterschreitetGrenzeum10, ohne automatischeKorrektur.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_GENAU_HAELFTE",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "50",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "halbe_anteilsuntergrenze": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "angeordneter_minderungsbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "halbgrenze_eingehalten": true,
+        "unterschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100/2=50Untergrenze.60ergibt40Minderung und hältGrenzeein;40ergibt60Minderung und unterschreitetGrenzeum10, ohne automatischeKorrektur.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_UNTER_HAELFTE",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "40",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "halbe_anteilsuntergrenze": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "angeordneter_minderungsbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "halbgrenze_eingehalten": false,
+        "unterschreitungsbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100/2=50Untergrenze.60ergibt40Minderung und hältGrenzeein;40ergibt60Minderung und unterschreitetGrenzeum10, ohne automatischeKorrektur.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_KEINE_MINDERUNG",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "100",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "halbe_anteilsuntergrenze": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "angeordneter_minderungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "halbgrenze_eingehalten": true,
+        "unterschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100/2=50Untergrenze.60ergibt40Minderung und hältGrenzeein;40ergibt60Minderung und unterschreitetGrenzeum10, ohne automatischeKorrektur.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_NULL",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "0",
+      "angeordneter_anteilswert": "0",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "halbe_anteilsuntergrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "angeordneter_minderungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "halbgrenze_eingehalten": true,
+        "unterschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100/2=50Untergrenze.60ergibt40Minderung und hältGrenzeein;40ergibt60Minderung und unterschreitetGrenzeum10, ohne automatischeKorrektur.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_FEHLT_ungekuerzter_anteilswert",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": null,
+      "angeordneter_anteilswert": "60",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_TYP_ungekuerzter_anteilswert",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": {},
+      "angeordneter_anteilswert": "60",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_FEHLT_angeordneter_anteilswert",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": null,
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_TYP_angeordneter_anteilswert",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": {},
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "60",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_TYP_einordnungsnachweis",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "60",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_UNGUELTIG_0",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "-1",
+      "angeordneter_anteilswert": "60",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_UNGUELTIG_1",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "-1",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_UNGUELTIG_2",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "101",
+      "einordnungsnachweis": "§1512: ungekürzten gebührenden Anteil halbieren und angeordneten Wert mit dieser Untergrenze vergleichen. Angeordnete Minderung und positive Grenzunterschreitung getrennt ausweisen. Keine automatische Anhebung einer unwirksamen Anordnung, keine Vermögensbewertung oder Verteilung des freiwerdenden Anteils auf andere Beteiligte. Pflichtteil, Ausschluss1511, Erb-/Gesamtgutsquote und Wirksamkeit der Verfügung gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_ANTEILSHERABSETZUNG_HALBGRENZE_UNGUELTIG_3",
+    "funktion": "gesamtgut_anteilsherabsetzung_halbgrenze",
+    "eingaben": {
+      "ungekuerzter_anteilswert": "100",
+      "angeordneter_anteilswert": "60",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_GLEICH",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": "200000",
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ertragswertgrenze_eingehalten": true,
+        "unterschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Preis200000erreichtErtragswert200000;150000unterschreitetum50000;250000liegt darüber. Keine automatische Anpassung des Preises.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_HOEHER",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": "250000",
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ertragswertgrenze_eingehalten": true,
+        "unterschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Preis200000erreichtErtragswert200000;150000unterschreitetum50000;250000liegt darüber. Keine automatische Anpassung des Preises.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_NIEDRIGER",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": "150000",
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ertragswertgrenze_eingehalten": false,
+        "unterschreitungsbetrag": {
+          "zaehler": "50000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Preis200000erreichtErtragswert200000;150000unterschreitetum50000;250000liegt darüber. Keine automatische Anpassung des Preises.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_NULL",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "0",
+      "angeordneter_uebernahmepreis": "0",
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ertragswertgrenze_eingehalten": true,
+        "unterschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Preis200000erreichtErtragswert200000;150000unterschreitetum50000;250000liegt darüber. Keine automatische Anpassung des Preises.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_FEHLT_qualifizierter_ertragswert",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": null,
+      "angeordneter_uebernahmepreis": "200000",
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_TYP_qualifizierter_ertragswert",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": {},
+      "angeordneter_uebernahmepreis": "200000",
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_FEHLT_angeordneter_uebernahmepreis",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": null,
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_TYP_angeordneter_uebernahmepreis",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": {},
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": "200000",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_TYP_einordnungsnachweis",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": "200000",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_UNGUELTIG_0",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "-1",
+      "angeordneter_uebernahmepreis": "200000",
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_UNGUELTIG_1",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": "-1",
+      "einordnungsnachweis": "§1515II/III: angeordneten Landgut-Übernahmepreis mit qualifiziertem Ertragswert vergleichen; Gleichheit erreicht die Untergrenze. Ertragswert selbst ist Bewertungsinput nach2049, keine erfundene Kapitalisierungsformel. Keine automatische Anhebung eines unzulässigen Preises, keine Entscheidung über Testamentswirksamkeit, Übernahmeberechtigung oder Ausgleichszahlungsverteilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTGUT_LANDGUT_UEBERNAHMEPREISGRENZE_UNGUELTIG_2",
+    "funktion": "gesamtgut_landgut_uebernahmepreisgrenze",
+    "eingaben": {
+      "qualifizierter_ertragswert": "200000",
+      "angeordneter_uebernahmepreis": "200000",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

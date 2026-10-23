@@ -1,0 +1,590 @@
+[
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_MIETE_GRENZE",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-09-30",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_MIETE_ZU_KURZ",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-09-29",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-09-30",
+        "vorlauf_zum_zeitraumende_eingehalten": false
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_MIETE_ZUGANG_SPAETER",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-08-01",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-10-01",
+        "vorlauf_zum_zeitraumende_eingehalten": false
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_MIETE_SCHALTJAHR",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2023-12-31",
+      "beendigung_am": "2024-02-29",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-02-29",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_PACHTERBEN_GRENZE",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "pachterbenwiderspruch_594d",
+      "erklaerungseingang_am": "2024-03-31",
+      "beendigung_am": "2024-06-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-06-30",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_PACHTERBEN_ZU_SPAET",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "pachterbenwiderspruch_594d",
+      "erklaerungseingang_am": "2024-04-01",
+      "beendigung_am": "2024-06-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-07-01",
+        "vorlauf_zum_zeitraumende_eingehalten": false
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_FORTSETZUNG_GRENZE",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "pachtfortsetzung_595",
+      "erklaerungseingang_am": "2023-09-30",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-09-30",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_FORTSETZUNG_ZU_SPAET",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "pachtfortsetzung_595",
+      "erklaerungseingang_am": "2023-10-01",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-10-01",
+        "vorlauf_zum_zeitraumende_eingehalten": false
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_FORTSETZUNG_SCHALTTAG",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "pachtfortsetzung_595",
+      "erklaerungseingang_am": "2024-02-29",
+      "beendigung_am": "2025-02-28",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2025-02-28",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_GERICHT_GRENZE",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "pachtgerichtsantrag_595",
+      "erklaerungseingang_am": "2023-12-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-09-30",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_GERICHT_ZU_SPAET",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "pachtgerichtsantrag_595",
+      "erklaerungseingang_am": "2024-01-01",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-10-01",
+        "vorlauf_zum_zeitraumende_eingehalten": false
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_BEREITS_BEENDET",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-07-01",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-09-30",
+        "vorlauf_zum_zeitraumende_eingehalten": false
+      }
+    },
+    "herleitung": "Eingang31.7.+2Monate endet30.9.; Beendigung mit30.9.Tagesablauf umfasst den ganzen Vorlauf.31.3.+3Monate endet30.6.;30.9.+1Jahr am30.9.;31.12.+9Monate am30.9. Folgetagseingang verschiebt jeweils auf1.desFolge(monats).",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_FEHLTvorlauffall",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": null,
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_TYPvorlauffall",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": {},
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_FEHLTerklaerungseingang_am",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": null,
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_TYPerklaerungseingang_am",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": {},
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_FEHLTbeendigung_am",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": null,
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_TYPbeendigung_am",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": {},
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_FEHLTeinordnungsnachweis",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_TYPeinordnungsnachweis",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_UNGUELTIG0",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "unbekannt",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_UNGUELTIG1",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-02-30",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_UNGUELTIG2",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-02-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_UNGUELTIG3",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "2024-07-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_UNGUELTIG4",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "mietwiderspruch_574b",
+      "erklaerungseingang_am": "9999-12-31",
+      "beendigung_am": "2024-09-30",
+      "einordnungsnachweis": "§574bII Zwei-Monats-Vorlauf, §594dII Drei-Monats-Vorlauf, §595V Ein-Jahres-Vorlauf oder §595VII Neun-Monats-Vorlauf. Ereignisbeginn nach§187I und Ablauf nach§188; der volle Vorlauf muss spätestens mit Ablauf des angegebenen letzten Vertragstages enden. Anders als Beginn eines Tages schließt dieser Bezugszeitpunkt den Beendigungstag ein. Keine automatische Anwendung von§193 und keine automatische Unwirksamkeit verspäteter Erklärungen. §574bII2 fehlender rechtzeitiger Vermieterhinweis, §595V/VII Sonderfälle bei höchstens zwölfmonatiger Kündigungsfrist und gerichtliche Nachzulassung gesondert; für diese Sonderfälle existieren eigene Grundfristen. §594dII Bewirtschaftung und vollständige Mitteilung sind rechtliche Voraussetzungen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_darlehen_zinsbindungsende_493_GRENZE",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "darlehen_zinsbindungsende_493",
+      "erklaerungseingang_am": "2024-01-31",
+      "beendigung_am": "2024-04-30",
+      "einordnungsnachweis": "§493I/II: Unterrichtung spaetestens drei Kalendermonate vor dem rechtlich feststehenden Ende der Sollzinsbindung beziehungsweise des Darlehensvertrags zu Tagesablauf. Tatsaechlichen Zugang vorwaerts gegen Endtag pruefen; erforderliche Informationsinhalte und Verhaeltnis von Zinsbindung zu Rueckzahlungszeit bleiben rechtliche Qualifikation. Keine automatische Informationspflicht oder Wirksamkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-04-30",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_darlehen_zinsbindungsende_493_ZU_SPAET",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "darlehen_zinsbindungsende_493",
+      "erklaerungseingang_am": "2024-02-01",
+      "beendigung_am": "2024-04-30",
+      "einordnungsnachweis": "§493I/II: Unterrichtung spaetestens drei Kalendermonate vor dem rechtlich feststehenden Ende der Sollzinsbindung beziehungsweise des Darlehensvertrags zu Tagesablauf. Tatsaechlichen Zugang vorwaerts gegen Endtag pruefen; erforderliche Informationsinhalte und Verhaeltnis von Zinsbindung zu Rueckzahlungszeit bleiben rechtliche Qualifikation. Keine automatische Informationspflicht oder Wirksamkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-05-01",
+        "vorlauf_zum_zeitraumende_eingehalten": false
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_darlehen_zinsbindungsende_493_SCHALTJAHR",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "darlehen_zinsbindungsende_493",
+      "erklaerungseingang_am": "2023-11-30",
+      "beendigung_am": "2024-02-29",
+      "einordnungsnachweis": "§493I/II: Unterrichtung spaetestens drei Kalendermonate vor dem rechtlich feststehenden Ende der Sollzinsbindung beziehungsweise des Darlehensvertrags zu Tagesablauf. Tatsaechlichen Zugang vorwaerts gegen Endtag pruefen; erforderliche Informationsinhalte und Verhaeltnis von Zinsbindung zu Rueckzahlungszeit bleiben rechtliche Qualifikation. Keine automatische Informationspflicht oder Wirksamkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-02-29",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_darlehen_zinsbindungsende_493_JUNI",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "darlehen_zinsbindungsende_493",
+      "erklaerungseingang_am": "2024-03-31",
+      "beendigung_am": "2024-06-30",
+      "einordnungsnachweis": "§493I/II: Unterrichtung spaetestens drei Kalendermonate vor dem rechtlich feststehenden Ende der Sollzinsbindung beziehungsweise des Darlehensvertrags zu Tagesablauf. Tatsaechlichen Zugang vorwaerts gegen Endtag pruefen; erforderliche Informationsinhalte und Verhaeltnis von Zinsbindung zu Rueckzahlungszeit bleiben rechtliche Qualifikation. Keine automatische Informationspflicht oder Wirksamkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-06-30",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_darlehen_vertragsende_493_GRENZE",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "darlehen_vertragsende_493",
+      "erklaerungseingang_am": "2024-01-31",
+      "beendigung_am": "2024-04-30",
+      "einordnungsnachweis": "§493I/II: Unterrichtung spaetestens drei Kalendermonate vor dem rechtlich feststehenden Ende der Sollzinsbindung beziehungsweise des Darlehensvertrags zu Tagesablauf. Tatsaechlichen Zugang vorwaerts gegen Endtag pruefen; erforderliche Informationsinhalte und Verhaeltnis von Zinsbindung zu Rueckzahlungszeit bleiben rechtliche Qualifikation. Keine automatische Informationspflicht oder Wirksamkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-04-30",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_darlehen_vertragsende_493_ZU_SPAET",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "darlehen_vertragsende_493",
+      "erklaerungseingang_am": "2024-02-01",
+      "beendigung_am": "2024-04-30",
+      "einordnungsnachweis": "§493I/II: Unterrichtung spaetestens drei Kalendermonate vor dem rechtlich feststehenden Ende der Sollzinsbindung beziehungsweise des Darlehensvertrags zu Tagesablauf. Tatsaechlichen Zugang vorwaerts gegen Endtag pruefen; erforderliche Informationsinhalte und Verhaeltnis von Zinsbindung zu Rueckzahlungszeit bleiben rechtliche Qualifikation. Keine automatische Informationspflicht oder Wirksamkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-05-01",
+        "vorlauf_zum_zeitraumende_eingehalten": false
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_darlehen_vertragsende_493_SCHALTJAHR",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "darlehen_vertragsende_493",
+      "erklaerungseingang_am": "2023-11-30",
+      "beendigung_am": "2024-02-29",
+      "einordnungsnachweis": "§493I/II: Unterrichtung spaetestens drei Kalendermonate vor dem rechtlich feststehenden Ende der Sollzinsbindung beziehungsweise des Darlehensvertrags zu Tagesablauf. Tatsaechlichen Zugang vorwaerts gegen Endtag pruefen; erforderliche Informationsinhalte und Verhaeltnis von Zinsbindung zu Rueckzahlungszeit bleiben rechtliche Qualifikation. Keine automatische Informationspflicht oder Wirksamkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-02-29",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERKLAERUNG_VORLAUF_ZUM_ZEITRAUMENDE_darlehen_vertragsende_493_JUNI",
+    "funktion": "erklaerung_vorlauf_zum_zeitraumende",
+    "eingaben": {
+      "vorlauffall": "darlehen_vertragsende_493",
+      "erklaerungseingang_am": "2024-03-31",
+      "beendigung_am": "2024-06-30",
+      "einordnungsnachweis": "§493I/II: Unterrichtung spaetestens drei Kalendermonate vor dem rechtlich feststehenden Ende der Sollzinsbindung beziehungsweise des Darlehensvertrags zu Tagesablauf. Tatsaechlichen Zugang vorwaerts gegen Endtag pruefen; erforderliche Informationsinhalte und Verhaeltnis von Zinsbindung zu Rueckzahlungszeit bleiben rechtliche Qualifikation. Keine automatische Informationspflicht oder Wirksamkeitsentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorlauf_ablauf_am": "2024-06-30",
+        "vorlauf_zum_zeitraumende_eingehalten": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

@@ -1,0 +1,547 @@
+[
+  {
+    "fall_id": "2054_halb",
+    "funktion": "gesamtgutszuwendung_anteile",
+    "eingaben": {
+      "zuwendungswert": "120",
+      "abstammungszuordnung": "keine",
+      "ersatzpflichtzuordnung": "keine",
+      "gesamtgut_anwendbar": true,
+      "einordnungsnachweis": "2054: Abkömmling nur eines Ehegatten bzw Ersatzpflicht gerade gegenüber Gesamtgut; keine Vorfahrenalternative aus2331."
+    },
+    "wertpfad": [
+      "betrag_ehegatte_1"
+    ],
+    "erwartet": {
+      "zaehler": "60",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2054_abkoemmling",
+    "funktion": "gesamtgutszuwendung_anteile",
+    "eingaben": {
+      "zuwendungswert": "120",
+      "abstammungszuordnung": "ehegatte_1",
+      "ersatzpflichtzuordnung": "keine",
+      "gesamtgut_anwendbar": true,
+      "einordnungsnachweis": "2054: Abkömmling nur eines Ehegatten bzw Ersatzpflicht gerade gegenüber Gesamtgut; keine Vorfahrenalternative aus2331."
+    },
+    "wertpfad": [
+      "betrag_ehegatte_1"
+    ],
+    "erwartet": {
+      "zaehler": "120",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2054_ersatz",
+    "funktion": "gesamtgutszuwendung_anteile",
+    "eingaben": {
+      "zuwendungswert": "120",
+      "abstammungszuordnung": "keine",
+      "ersatzpflichtzuordnung": "ehegatte_2",
+      "gesamtgut_anwendbar": true,
+      "einordnungsnachweis": "2054: Abkömmling nur eines Ehegatten bzw Ersatzpflicht gerade gegenüber Gesamtgut; keine Vorfahrenalternative aus2331."
+    },
+    "wertpfad": [
+      "betrag_ehegatte_1"
+    ],
+    "erwartet": {
+      "zaehler": "0",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "1986_rest",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "1000",
+      "gemeinsame_verbindlichkeiten": "300",
+      "erforderlicher_rueckbehalt": "200",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 1,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "1986: Ausgangsbestand vor tatsächlich berichtigten300;200 tatsächlich gebundene, rechtlich ausreichende Sicherheit. Keine doppelte Last/Reserve."
+    },
+    "wertpfad": [
+      "anteil_am_ueberschuss"
+    ],
+    "erwartet": {
+      "zaehler": "500",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2038_reinertrag",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "1200",
+      "gemeinsame_verbindlichkeiten": "300",
+      "erforderlicher_rueckbehalt": "0",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 3,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Nur qualifizierte Jahreserträge und zugehörige abzugsfähige Ertragskosten, keine Nachlasssubstanz. Positiver Reinertrag; entsprechende Netto-/Quotenarithmetik."
+    },
+    "wertpfad": [
+      "anteil_am_ueberschuss"
+    ],
+    "erwartet": {
+      "zaehler": "300",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2338_reinertrag",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "1200",
+      "gemeinsame_verbindlichkeiten": "300",
+      "erforderlicher_rueckbehalt": "0",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 1,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Nur qualifizierte Jahreserträge und zugehörige abzugsfähige Ertragskosten, keine Nachlasssubstanz. Positiver Reinertrag; entsprechende Netto-/Quotenarithmetik."
+    },
+    "wertpfad": [
+      "anteil_am_ueberschuss"
+    ],
+    "erwartet": {
+      "zaehler": "900",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2218_periode",
+    "funktion": "fristende",
+    "eingaben": {
+      "anfangstag": "2024-03-01",
+      "anzahl": 1,
+      "einheit": "jahre",
+      "beginnart": "tagesbeginn"
+    },
+    "wertpfad": [],
+    "erwartet": "2025-02-28"
+  },
+  {
+    "fall_id": "2183_sachmangel",
+    "funktion": "maengel_verjaehrungsgrundfrist",
+    "eingaben": {
+      "regelbereich": "kauf",
+      "fristgruppe": "sonstige_sache",
+      "fristbeginnereignis_am": "2024-02-29",
+      "arglistig_verschwiegen": false,
+      "regelmaessiger_weg_letzter_tag": null,
+      "abweichende_sonderregel": false,
+      "einordnungsnachweis": "2183: vermachte Gattungssache; Ablieferung und entsprechende438-Grundfrist qualifiziert, keine Sonderregel."
+    },
+    "wertpfad": [
+      "rechnerischer_letzter_tag"
+    ],
+    "erwartet": "2026-02-28"
+  },
+  {
+    "fall_id": "2185_verwendung",
+    "funktion": "besitzer_nuetzlicher_verwendungsersatz",
+    "eingaben": {
+      "verwendungskosten": "80",
+      "fortbestehende_werterhoehung": "50",
+      "andere_als_notwendige_verwendung": true,
+      "vor_rechtshaengigkeit_verwendet": true,
+      "vor_haftungsbeginn_990_verwendet": true,
+      "eigentuemer_besitzer_verhaeltnis_anwendbar": true,
+      "bewertungsnachweis": "2185 entsprechende996-Anwendung: bestimmte Nachlasssache, nach Erbfall und vor beiden Haftungsgrenzen, Werterhöhung bei Wiedererlangung."
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "zaehler": "50",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2331a_periode1",
+    "funktion": "gesetzliche_zinsen",
+    "eingaben": {
+      "kapital": "1000",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Gerichtlich qualifizierte Halbjahresperiode,6Prozent, Tilgung400 nach erster Periode; Zinsen separat gezahlt, keine Zinseszinsen.",
+      "glaeubigerverzug": false,
+      "abweichender_zinssatz_prozent": "6"
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "zaehler": "30",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2331a_periode2",
+    "funktion": "gesetzliche_zinsen",
+    "eingaben": {
+      "kapital": "600",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Gerichtlich qualifizierte Halbjahresperiode,6Prozent, Tilgung400 nach erster Periode; Zinsen separat gezahlt, keine Zinseszinsen.",
+      "glaeubigerverzug": false,
+      "abweichender_zinssatz_prozent": "6"
+    },
+    "wertpfad": [],
+    "erwartet": {
+      "zaehler": "18",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "1944_grund",
+    "funktion": "erbausschlagung_grundfrist",
+    "eingaben": {
+      "erbfall_am": "2024-01-01",
+      "kenntnis_anfall_berufungsgrund_am": "2024-01-01",
+      "berufung_durch_verfuegung": false,
+      "gerichtliche_bekanntgabe_am": null,
+      "erblasser_letzter_wohnsitz_nur_ausland": false,
+      "erbe_bei_fristbeginn_im_ausland": false,
+      "ausschlagungsregel_anwendbar": true,
+      "einordnungsnachweis": "1944 Kenntnisereignis, kein Ausland."
+    },
+    "wertpfad": [
+      "rechnerischer_letzter_tag"
+    ],
+    "erwartet": "2024-02-12"
+  },
+  {
+    "fall_id": "1944_hemmung",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-01-02",
+      "grundfrist_letzter_tag": "2024-02-12",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-15",
+          "letzter_gehemmter_tag": "2024-01-21"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "wertpfad": [
+      "rechnerischer_letzter_tag"
+    ],
+    "erwartet": "2024-02-19"
+  },
+  {
+    "fall_id": "1944_schutz",
+    "funktion": "verjaehrung_ablaufhemmung_mindestablauf",
+    "eingaben": {
+      "schutzfall": "vertretungsmangel",
+      "schutzbeendende_ereignisse": [
+        {
+          "ereignis": "vertretungsmangel_behoben",
+          "datum": "2024-03-01"
+        }
+      ],
+      "fristdauer": 6,
+      "fristeinheit": "wochen",
+      "rechnerischer_letzter_tag": "2024-02-19",
+      "prozessfaehigkeit_bei_beschraenkter_geschaeftsfaehigkeit": false,
+      "ablaufhemmung_anwendbar": true
+    },
+    "wertpfad": [
+      "rechnerischer_letzter_tag"
+    ],
+    "erwartet": "2024-04-12"
+  },
+  {
+    "fall_id": "1997_schutz",
+    "funktion": "verjaehrung_ablaufhemmung_mindestablauf",
+    "eingaben": {
+      "schutzfall": "vertretungsmangel",
+      "schutzbeendende_ereignisse": [
+        {
+          "ereignis": "vertretungsmangel_behoben",
+          "datum": "2024-03-01"
+        }
+      ],
+      "fristdauer": 2,
+      "fristeinheit": "wochen",
+      "rechnerischer_letzter_tag": "2024-02-12",
+      "prozessfaehigkeit_bei_beschraenkter_geschaeftsfaehigkeit": false,
+      "ablaufhemmung_anwendbar": true
+    },
+    "wertpfad": [
+      "rechnerischer_letzter_tag"
+    ],
+    "erwartet": "2024-03-15"
+  },
+  {
+    "fall_id": "1954_grund",
+    "funktion": "erbrecht_anfechtungsgrundfrist",
+    "eingaben": {
+      "anfechtungsfall": "annahme",
+      "angefochtenes_ereignis_am": "1994-04-01",
+      "fristbeginn_am": "2024-02-01",
+      "erblasser_letzter_wohnsitz_nur_ausland": false,
+      "erbe_bei_fristbeginn_im_ausland": false,
+      "anfechtungsregel_anwendbar": true,
+      "einordnungsnachweis": "1954: qualifizierte Kenntnis erst2024; Annahme1994."
+    },
+    "wertpfad": [
+      "dreissigjahresgrenze"
+    ],
+    "erwartet": "2024-04-01"
+  },
+  {
+    "fall_id": "1954_ablaufhemmung",
+    "funktion": "verjaehrung_ablaufhemmung_mindestablauf",
+    "eingaben": {
+      "schutzfall": "nachlass",
+      "schutzbeendende_ereignisse": [
+        {
+          "ereignis": "erbschaft_angenommen",
+          "datum": "2024-03-01"
+        }
+      ],
+      "fristdauer": 6,
+      "fristeinheit": "wochen",
+      "rechnerischer_letzter_tag": "2024-03-14",
+      "prozessfaehigkeit_bei_beschraenkter_geschaeftsfaehigkeit": false,
+      "ablaufhemmung_anwendbar": true
+    },
+    "wertpfad": [
+      "rechnerischer_letzter_tag"
+    ],
+    "erwartet": "2024-04-12"
+  },
+  {
+    "fall_id": "2252_grund",
+    "funktion": "nottestament_grundfrist",
+    "eingaben": {
+      "errichtung_am": "2024-01-01",
+      "einordnungsnachweis": "Qualifiziertes Nottestament; notarielle Errichtung danach zeitweise unmöglich."
+    },
+    "wertpfad": [],
+    "erwartet": "2024-04-01"
+  },
+  {
+    "fall_id": "2252_hemmung",
+    "funktion": "verjaehrung_gehemmte_kalendertage",
+    "eingaben": {
+      "fristlauf_erster_tag": "2024-01-02",
+      "grundfrist_letzter_tag": "2024-04-01",
+      "hemmungszeitraeume": [
+        {
+          "erster_gehemmter_tag": "2024-01-02",
+          "letzter_gehemmter_tag": "2024-01-11"
+        }
+      ],
+      "hemmung_nach_209_anwendbar": true
+    },
+    "wertpfad": [
+      "rechnerischer_letzter_tag"
+    ],
+    "erwartet": "2024-04-11"
+  },
+  {
+    "fall_id": "2066_2068_2069_staemme",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "KindA",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "KindB",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "EnkelB1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            },
+            {
+              "person_id": "EnkelB2",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "wertpfad": [
+      "erbquoten"
+    ],
+    "erwartet": [
+      {
+        "person_id": "KindA",
+        "quote": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      },
+      {
+        "person_id": "EnkelB1",
+        "quote": {
+          "zaehler": "1",
+          "nenner": "4"
+        }
+      },
+      {
+        "person_id": "EnkelB2",
+        "quote": {
+          "zaehler": "1",
+          "nenner": "4"
+        }
+      }
+    ]
+  },
+  {
+    "fall_id": "2073_gleich",
+    "funktion": "testament_erbquoten",
+    "eingaben": {
+      "erbeinsetzungen": [
+        {
+          "erbe_id": "A",
+          "bestimmter_erbteil": null
+        },
+        {
+          "erbe_id": "B",
+          "bestimmter_erbteil": null
+        },
+        {
+          "erbe_id": "C",
+          "bestimmter_erbteil": null
+        }
+      ],
+      "alleinige_erben_gewollt": true,
+      "auslegungsregeln_anwendbar": true,
+      "einordnungsnachweis": "2073: drei passende Personen, Auslegung ohne eindeutiges Ergebnis; rechtlich qualifizierte gleiche Anteile."
+    },
+    "wertpfad": [
+      "erbquoten"
+    ],
+    "erwartet": [
+      {
+        "erbe_id": "A",
+        "erbquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      },
+      {
+        "erbe_id": "B",
+        "erbquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      },
+      {
+        "erbe_id": "C",
+        "erbquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      }
+    ]
+  },
+  {
+    "fall_id": "2153_gleiche",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "1",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftliches_vermaechtnis_2157",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "2153II: Dritter kann rechtlich nicht bestimmen; Bedachte eindeutig, gleicher Anteil an einem gemeinschaftlich vermachten Gegenstand."
+    },
+    "wertpfad": [
+      "aufgeloeste_anteile"
+    ],
+    "erwartet": [
+      {
+        "person_id": "A",
+        "anteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      },
+      {
+        "person_id": "B",
+        "anteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        }
+      }
+    ]
+  },
+  {
+    "fall_id": "2189_stufe1",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "100",
+      "vorrangige_beschwerung": "40",
+      "nachrangige_beschwerungen": "110",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Qualifizierte totale VorrangfolgeA40vorB50vorC60; keine gleichrangigen konkurrierenden Ansprüche."
+    },
+    "wertpfad": [
+      "vorrangiger_zuteilungsbetrag"
+    ],
+    "erwartet": {
+      "zaehler": "40",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2189_stufe2",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "60",
+      "vorrangige_beschwerung": "50",
+      "nachrangige_beschwerungen": "60",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Qualifizierte totale VorrangfolgeA40vorB50vorC60; keine gleichrangigen konkurrierenden Ansprüche."
+    },
+    "wertpfad": [
+      "vorrangiger_zuteilungsbetrag"
+    ],
+    "erwartet": {
+      "zaehler": "50",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2189_stufe3",
+    "funktion": "vermaechtnis_vorrangverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "10",
+      "vorrangige_beschwerung": "60",
+      "nachrangige_beschwerungen": "0",
+      "vorrang_nach_2189_qualifiziert": true,
+      "bewertungsnachweis": "Qualifizierte totale VorrangfolgeA40vorB50vorC60; keine gleichrangigen konkurrierenden Ansprüche."
+    },
+    "wertpfad": [
+      "vorrangiger_zuteilungsbetrag"
+    ],
+    "erwartet": {
+      "zaehler": "10",
+      "nenner": "1"
+    }
+  }
+]

@@ -1,0 +1,309 @@
+[
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_30MONATE_LETZTER_TAG",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigmonatszeitraum_letzter_tag": "2026-06-30",
+        "ruege_nach_dreissig_monaten": false,
+        "mietverhaeltnis_bei_ruege_beendet": false,
+        "rueckforderung_auf_spaetere_faelligkeit_beschraenkt": false
+      }
+    },
+    "herleitung": "Mietbeginn1.1.2024um00Uhr:30Monatszeitraum bis30.6.2026. Bereits eingetretenes Vertragsende ist unabhängiger Beschränkungsgrund.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_NACH30MONATEN",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-07-01",
+      "ruegezugang_utc": "2026-07-01T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigmonatszeitraum_letzter_tag": "2026-06-30",
+        "ruege_nach_dreissig_monaten": true,
+        "mietverhaeltnis_bei_ruege_beendet": false,
+        "rueckforderung_auf_spaetere_faelligkeit_beschraenkt": true
+      }
+    },
+    "herleitung": "Mietbeginn1.1.2024um00Uhr:30Monatszeitraum bis30.6.2026. Bereits eingetretenes Vertragsende ist unabhängiger Beschränkungsgrund.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_GENAU_BEENDET",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": "2026-06-30T12:00:00Z",
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigmonatszeitraum_letzter_tag": "2026-06-30",
+        "ruege_nach_dreissig_monaten": false,
+        "mietverhaeltnis_bei_ruege_beendet": true,
+        "rueckforderung_auf_spaetere_faelligkeit_beschraenkt": true
+      }
+    },
+    "herleitung": "Mietbeginn1.1.2024um00Uhr:30Monatszeitraum bis30.6.2026. Bereits eingetretenes Vertragsende ist unabhängiger Beschränkungsgrund.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_NOCH_NICHT_BEENDET",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": "2026-06-30T12:00:01Z",
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigmonatszeitraum_letzter_tag": "2026-06-30",
+        "ruege_nach_dreissig_monaten": false,
+        "mietverhaeltnis_bei_ruege_beendet": false,
+        "rueckforderung_auf_spaetere_faelligkeit_beschraenkt": false
+      }
+    },
+    "herleitung": "Mietbeginn1.1.2024um00Uhr:30Monatszeitraum bis30.6.2026. Bereits eingetretenes Vertragsende ist unabhängiger Beschränkungsgrund.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_FRUEHER_BEENDET",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": "2025-01-01T00:00:00Z",
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigmonatszeitraum_letzter_tag": "2026-06-30",
+        "ruege_nach_dreissig_monaten": false,
+        "mietverhaeltnis_bei_ruege_beendet": true,
+        "rueckforderung_auf_spaetere_faelligkeit_beschraenkt": true
+      }
+    },
+    "herleitung": "Mietbeginn1.1.2024um00Uhr:30Monatszeitraum bis30.6.2026. Bereits eingetretenes Vertragsende ist unabhängiger Beschränkungsgrund.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_MONATSENDE",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-31",
+      "ruegezugang_lokal_am": "2026-07-30",
+      "ruegezugang_utc": "2026-07-30T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigmonatszeitraum_letzter_tag": "2026-07-30",
+        "ruege_nach_dreissig_monaten": false,
+        "mietverhaeltnis_bei_ruege_beendet": false,
+        "rueckforderung_auf_spaetere_faelligkeit_beschraenkt": false
+      }
+    },
+    "herleitung": "Mietbeginn1.1.2024um00Uhr:30Monatszeitraum bis30.6.2026. Bereits eingetretenes Vertragsende ist unabhängiger Beschränkungsgrund.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_SCHALTTAG",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-02-29",
+      "ruegezugang_lokal_am": "2026-08-29",
+      "ruegezugang_utc": "2026-08-29T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigmonatszeitraum_letzter_tag": "2026-08-28",
+        "ruege_nach_dreissig_monaten": true,
+        "mietverhaeltnis_bei_ruege_beendet": false,
+        "rueckforderung_auf_spaetere_faelligkeit_beschraenkt": true
+      }
+    },
+    "herleitung": "Mietbeginn1.1.2024um00Uhr:30Monatszeitraum bis30.6.2026. Bereits eingetretenes Vertragsende ist unabhängiger Beschränkungsgrund.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_FEHLT_mietbeginn_am",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": null,
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_FEHLT_ruegezugang_lokal_am",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": null,
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_FEHLT_ruegezugang_utc",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": null,
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_FEHLT_zeitnachweis",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_UNGUELTIG0",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2023-12-31",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_UNGUELTIG1",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-02-30",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_UNGUELTIG2",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00",
+      "mietende_utc": null,
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_UNGUELTIG3",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": "",
+      "zeitnachweis": "556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist verspätet. Unabhängig davon Beschränkung, wenn Mietverhältnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt zählt als beendet. Bei üblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschließend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verlängerung dieses Rückwirkungsmerkmals. Kein materielles Urteil über Rügeform/Auskunft, Rückzahlungsbetrag oder Verjährung. Lokalzugangstag undUTC-Zeit müssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. Für untertägigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG_UNGUELTIG4",
+    "funktion": "mietpreisbremse_ruegezeitliche_beschraenkung",
+    "eingaben": {
+      "mietbeginn_am": "2024-01-01",
+      "ruegezugang_lokal_am": "2026-06-30",
+      "ruegezugang_utc": "2026-06-30T12:00:00Z",
+      "mietende_utc": null,
+      "zeitnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

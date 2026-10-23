@@ -1,0 +1,384 @@
+[
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_TEILMINDERUNG",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0.5",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "90",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_UNBENUTZBAR",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "1",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "1",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "900",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_KEIN_BERUECKSICHTIGTER_ZEITANTEIL",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_BRUCHZEIT",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": {
+        "zaehler": "1",
+        "nenner": "7"
+      },
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "180",
+        "nenner": "7"
+      }
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_HALB",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "900",
+      "nach_beendigung_liegender_zeitanteil": "0.5",
+      "einordnungsnachweis": "Vom Vermieter zu vertretende Beendigung und eindeutiger homogener Vorauszahlungsabschnitt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "450",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_VOLL",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "900",
+      "nach_beendigung_liegender_zeitanteil": "1",
+      "einordnungsnachweis": "Vom Vermieter zu vertretende Beendigung und eindeutiger homogener Vorauszahlungsabschnitt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "900",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_KEIN_NACHZEITRAUM",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "900",
+      "nach_beendigung_liegender_zeitanteil": "0",
+      "einordnungsnachweis": "Vom Vermieter zu vertretende Beendigung und eindeutiger homogener Vorauszahlungsabschnitt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_FEHLT_miete_des_abrechnungsabschnitts",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": null,
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0.5",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_FEHLT_qualifizierte_gesamtminderungsquote",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": null,
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0.5",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_FEHLT_beruecksichtigungsfaehiger_mangelzeitanteil",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": null,
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0.5",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_ANTEIL_ZU_GROSS_qualifizierte_gesamtminderungsquote",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "1.1",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0.5",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_ANTEIL_ZU_GROSS_beruecksichtigungsfaehiger_mangelzeitanteil",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "1.1",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_NEGATIV",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "-1",
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0.5",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_TYP",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": [],
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0.5",
+      "einordnungsnachweis": "Qualifizierte Gesamtminderung und berücksichtigungsfähige disjunkte Zeit bei homogener Miete."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETE_ZEITANTEILIGER_MINDERUNGSBETRAG_LEER",
+    "funktion": "miete_zeitanteiliger_minderungsbetrag",
+    "eingaben": {
+      "miete_des_abrechnungsabschnitts": "900",
+      "qualifizierte_gesamtminderungsquote": "0.2",
+      "beruecksichtigungsfaehiger_mangelzeitanteil": "0.5",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_FEHLT_vorausgezahlte_abschnittsmiete",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": null,
+      "nach_beendigung_liegender_zeitanteil": "0.5",
+      "einordnungsnachweis": "Vom Vermieter zu vertretende Beendigung und eindeutiger homogener Vorauszahlungsabschnitt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_FEHLT_nach_beendigung_liegender_zeitanteil",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "900",
+      "nach_beendigung_liegender_zeitanteil": null,
+      "einordnungsnachweis": "Vom Vermieter zu vertretende Beendigung und eindeutiger homogener Vorauszahlungsabschnitt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_FEHLT_einordnungsnachweis",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "900",
+      "nach_beendigung_liegender_zeitanteil": "0.5",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_ANTEIL_ZU_GROSS_nach_beendigung_liegender_zeitanteil",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "900",
+      "nach_beendigung_liegender_zeitanteil": "1.1",
+      "einordnungsnachweis": "Vom Vermieter zu vertretende Beendigung und eindeutiger homogener Vorauszahlungsabschnitt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_NEGATIV",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "-1",
+      "nach_beendigung_liegender_zeitanteil": "0.5",
+      "einordnungsnachweis": "Vom Vermieter zu vertretende Beendigung und eindeutiger homogener Vorauszahlungsabschnitt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_TYP",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": [],
+      "nach_beendigung_liegender_zeitanteil": "0.5",
+      "einordnungsnachweis": "Vom Vermieter zu vertretende Beendigung und eindeutiger homogener Vorauszahlungsabschnitt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "MIETVORAUSZAHLUNG_ZEITANTEILIGE_RUECKERSTATTUNG_LEER",
+    "funktion": "mietvorauszahlung_zeitanteilige_rueckerstattung",
+    "eingaben": {
+      "vorausgezahlte_abschnittsmiete": "900",
+      "nach_beendigung_liegender_zeitanteil": "0.5",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:900*0.2*0.5=90 Mietminderung;900*0.5=450 Vorauszahlungsrückbetrag.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

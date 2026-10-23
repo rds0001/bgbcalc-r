@@ -1,0 +1,578 @@
+[
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_GEWICHTET",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beobachtete_kalendertage": 30,
+        "durchschnittlicher_ueberziehungsbetrag": {
+          "zaehler": "500",
+          "nenner": "3"
+        },
+        "betragsgrenze": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "betragsgrenze_strikt_ueberschritten": true,
+        "alle_abschnitte_mit_positiver_ueberziehung": true
+      }
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_GLEICHE_GRENZE",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 30,
+          "ueberziehungsbetrag": "150"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beobachtete_kalendertage": 30,
+        "durchschnittlicher_ueberziehungsbetrag": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "betragsgrenze": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "betragsgrenze_strikt_ueberschritten": false,
+        "alle_abschnitte_mit_positiver_ueberziehung": true
+      }
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_NULLABSCHNITT",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "0"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beobachtete_kalendertage": 30,
+        "durchschnittlicher_ueberziehungsbetrag": {
+          "zaehler": "400",
+          "nenner": "3"
+        },
+        "betragsgrenze": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "betragsgrenze_strikt_ueberschritten": false,
+        "alle_abschnitte_mit_positiver_ueberziehung": false
+      }
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_GEDULDET",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "600",
+      "vergleichsregel": "geduldete_ueberziehung_505",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beobachtete_kalendertage": 30,
+        "durchschnittlicher_ueberziehungsbetrag": {
+          "zaehler": "500",
+          "nenner": "3"
+        },
+        "betragsgrenze": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "betragsgrenze_strikt_ueberschritten": true,
+        "alle_abschnitte_mit_positiver_ueberziehung": true
+      }
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_GEDULDET_GLEICH",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "1000",
+      "vergleichsregel": "geduldete_ueberziehung_505",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beobachtete_kalendertage": 30,
+        "durchschnittlicher_ueberziehungsbetrag": {
+          "zaehler": "500",
+          "nenner": "3"
+        },
+        "betragsgrenze": {
+          "zaehler": "500",
+          "nenner": "3"
+        },
+        "betragsgrenze_strikt_ueberschritten": false,
+        "alle_abschnitte_mit_positiver_ueberziehung": true
+      }
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_KEIN_GELDEINGANG",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "0",
+      "vergleichsregel": "geduldete_ueberziehung_505",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beobachtete_kalendertage": 30,
+        "durchschnittlicher_ueberziehungsbetrag": {
+          "zaehler": "500",
+          "nenner": "3"
+        },
+        "betragsgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "betragsgrenze_strikt_ueberschritten": true,
+        "alle_abschnitte_mit_positiver_ueberziehung": true
+      }
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_BRUCHBETRAG",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 1,
+          "ueberziehungsbetrag": "0.1"
+        },
+        {
+          "kalendertage": 2,
+          "ueberziehungsbetrag": "0.2"
+        }
+      ],
+      "bezugsbetrag": "0.1",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beobachtete_kalendertage": 3,
+        "durchschnittlicher_ueberziehungsbetrag": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "betragsgrenze": {
+          "zaehler": "3",
+          "nenner": "40"
+        },
+        "betragsgrenze_strikt_ueberschritten": true,
+        "alle_abschnitte_mit_positiver_ueberziehung": true
+      }
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_KEINE_ABSCHNITTE",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_TAGE_NULL",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 0,
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_TAGE_BRUCH",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 1.5,
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_ZEITGRENZE",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 1000000,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_NEGATIVER_BETRAG",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "-1"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_FORM",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {}
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_MODUS",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "x",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_LEER",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_TYP",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": "x",
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_FEHLT_kontosaldoabschnitte",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": null,
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_FEHLT_bezugsbetrag",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": null,
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_FEHLT_vergleichsregel",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": null,
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_FEHLT_einordnungsnachweis",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": "100"
+        },
+        {
+          "kalendertage": 20,
+          "ueberziehungsbetrag": "200"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_ABSCHNITT_FEHLT_kalendertage",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": null,
+          "ueberziehungsbetrag": "100"
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "UEBERZIEHUNG_DURCHSCHNITTSVERGLEICH_ABSCHNITT_FEHLT_ueberziehungsbetrag",
+    "funktion": "ueberziehung_durchschnittsvergleich",
+    "eingaben": {
+      "kontosaldoabschnitte": [
+        {
+          "kalendertage": 10,
+          "ueberziehungsbetrag": null
+        }
+      ],
+      "bezugsbetrag": "200",
+      "vergleichsregel": "kreditlinie_504a",
+      "einordnungsnachweis": "Qualifizierter lückenloser Beobachtungszeitraum; zeitgewichtete Beträge; Kalenderdauer separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(10*100+20*200)/30=500/3>150; geduldet600Geldeingang/3Monate/2=100.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

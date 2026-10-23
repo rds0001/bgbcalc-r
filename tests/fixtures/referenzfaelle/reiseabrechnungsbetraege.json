@@ -1,0 +1,511 @@
+[
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_0",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "750",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_1",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "1000",
+      "notwendige_mehrkosten": "0",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_2",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "0",
+      "ersparte_aufwendungen": "0",
+      "notwendige_mehrkosten": "25",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "25",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_3",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "0.3",
+      "ersparte_aufwendungen": "0.1",
+      "notwendige_mehrkosten": "0.2",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_FEHLT_vereinbarter_reisepreis",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": null,
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_TYP_vereinbarter_reisepreis",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": [],
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_FEHLT_ersparte_aufwendungen",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": null,
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_TYP_ersparte_aufwendungen",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": [],
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_FEHLT_notwendige_mehrkosten",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": null,
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_TYP_notwendige_mehrkosten",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": [],
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_TYP_einordnungsnachweis",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_NEGATIV_vereinbarter_reisepreis",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "-1",
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_NEGATIV_ersparte_aufwendungen",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "-1",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_NEGATIV_notwendige_mehrkosten",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": "-1",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_LEER",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "400",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GASTSCHULAUFENTHALT_KUENDIGUNGSBETRAG_ERSPARNIS_ZU_HOCH",
+    "funktion": "gastschulaufenthalt_kuendigungsbetrag",
+    "eingaben": {
+      "vereinbarter_reisepreis": "1000",
+      "ersparte_aufwendungen": "1001",
+      "notwendige_mehrkosten": "150",
+      "einordnungsnachweis": "Nur §651uIV außerhalb einer Kündigung nach §651l. Ersparnis und notwendige Mehrkosten rechtlich bewerten, ohne doppelte Kostenpositionen. Ergebnis ist der Anspruch vor bereits geleisteten Zahlungen, kein automatischer Zahlungssaldo. Bei Ersparnis über dem Preis ist dieser abgegrenzte Fall nicht modelliert; keine erfundene negative Preisforderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_0",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "100",
+      "bereits_erhaltene_ereignisentschaedigung": "40",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "60",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_1",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "40",
+      "bereits_erhaltene_ereignisentschaedigung": "100",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_2",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "0",
+      "bereits_erhaltene_ereignisentschaedigung": "0",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_3",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "100",
+      "bereits_erhaltene_ereignisentschaedigung": "100",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_4",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "0.3",
+      "bereits_erhaltene_ereignisentschaedigung": "0.1",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_FEHLT_anspruch_vor_anrechnung",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": null,
+      "bereits_erhaltene_ereignisentschaedigung": "40",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_TYP_anspruch_vor_anrechnung",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": [],
+      "bereits_erhaltene_ereignisentschaedigung": "40",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_FEHLT_bereits_erhaltene_ereignisentschaedigung",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "100",
+      "bereits_erhaltene_ereignisentschaedigung": null,
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_TYP_bereits_erhaltene_ereignisentschaedigung",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "100",
+      "bereits_erhaltene_ereignisentschaedigung": [],
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_FEHLT_einordnungsnachweis",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "100",
+      "bereits_erhaltene_ereignisentschaedigung": "40",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_TYP_einordnungsnachweis",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "100",
+      "bereits_erhaltene_ereignisentschaedigung": "40",
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_NEGATIV_anspruch_vor_anrechnung",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "-1",
+      "bereits_erhaltene_ereignisentschaedigung": "40",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_NEGATIV_bereits_erhaltene_ereignisentschaedigung",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "100",
+      "bereits_erhaltene_ereignisentschaedigung": "-1",
+      "einordnungsnachweis": "§651pIII in einer ausdrücklich vorqualifizierten Anrechnungsrichtung. Externe Verordnungen/Übereinkünfte liefern den bewerteten Anspruch und die anrechenbare bereits erhaltene Zahlung; deren Berechnung wird hier nicht erfunden. Mehrere Anspruchspositionen vorab überschneidungsfrei zuordnen; dieselbe Entschädigung nicht mehrfach abziehen. Überschießende Entschädigung begründet hier keinen Rückzahlungsanspruch."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PAUSCHALREISE_EREIGNISENTSCHAEDIGUNG_ANRECHNEN_LEER",
+    "funktion": "pauschalreise_ereignisentschaedigung_anrechnen",
+    "eingaben": {
+      "anspruch_vor_anrechnung": "100",
+      "bereits_erhaltene_ereignisentschaedigung": "40",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig vorgegebene Differenz-/Summenwerte; Null, Überschuss und exakte Dezimalwerte.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  }
+]

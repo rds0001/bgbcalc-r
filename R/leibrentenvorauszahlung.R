@@ -1,0 +1,11 @@
+leibrente_geldvorauszahlung <- function(jahresrentenbetrag=NULL,vorauszahlungszeitraum_beginnt_am=NULL,beginn_des_zeitabschnitts_erlebt=NULL,einordnungsnachweis=NULL) {
+ jahr <- .geld(jahresrentenbetrag); beginn <- .datum(vorauszahlungszeitraum_beginnt_am,'vorauszahlungszeitraum_beginnt_am')
+ .wahrheitswert(beginn_des_zeitabschnitts_erlebt,'beginn_des_zeitabschnitts_erlebt'); .text(einordnungsnachweis,'einordnungsnachweis')
+ ende <- .frist(vorauszahlungszeitraum_beginnt_am,3,'monate','tagesbeginn')
+ regelbetrag <- .multiplizieren(jahr,.bruch(1,4)); betrag <- if(beginn_des_zeitabschnitts_erlebt) regelbetrag else .bruch(0)
+ wert <- list(vorauszahlungszeitraum_beginnt_am=.iso(beginn),vorauszahlungszeitraum_endet_am=.iso(ende),dreimonats_regelbetrag=.bruchteile(regelbetrag),fuer_diesen_zeitabschnitt_gebuehrender_betrag=.bruchteile(betrag))
+ eingaben <- list(jahresrentenbetrag=jahresrentenbetrag,vorauszahlungszeitraum_beginnt_am=vorauszahlungszeitraum_beginnt_am,beginn_des_zeitabschnitts_erlebt=beginn_des_zeitabschnitts_erlebt,einordnungsnachweis=einordnungsnachweis)
+ ergebnis <- .ergebnis(wert,'EUR_und_daten','BGB_LEIBRENTE_GELDVORAUSZAHLUNG',eingaben,list(list(operation='Jahresgeldrente durch vier teilen; drei Kalendermonate ab Tagesbeginn; voller Betrag bei qualifiziert erlebtem Beginn, sonst kein Betrag f\u00fcr diese neue Periode.')),eingaben)
+ ergebnis$hinweise <- list("Nur \u00a7\u00a7759/760 gesetzlicher Geldleibrentenfall ohne abweichende Vereinbarung: Eingabebetrag ist rechtlich bestimmter Jahresbetrag, Beginn einer regul\u00e4ren Dreimonatsvorausperiode als Tagesbeginn qualifiziert. Nicht Sachrente, abweichende Zahlungsperiode oder besonders geregelte erste Rumpfperiode. Erleben des Beginns ausdr\u00fccklich rechtlich/tats\u00e4chlich bestimmen; ein blo\u00dfes Todesdatum ersetzt bei Grenzf\u00e4llen keine Feststellung. Tod w\u00e4hrend einer begonnenen Periode f\u00fchrt hier nicht zu tageweiser K\u00fcrzung. Bei nicht erlebtem Beginn null ausschlie\u00dflich f\u00fcr diese neue Periode, keine R\u00fcckforderung fr\u00fcherer Vorauszahlungen. Betrag grunds\u00e4tzlich im Voraus zu entrichten; keine automatische Feiertagsverschiebung des Periodenendes oder Auslegung abweichender Lebensdauervereinbarungen.")
+ ergebnis
+}

@@ -1,0 +1,579 @@
+[
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_TEIL",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "70",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_NICHTS_GEDECKT",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "0",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_VOLL_GEDECKT",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "100",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_NULL",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "0",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "0",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_BRUCH",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "0.03",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "0.01",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "50"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_NICHT_ANWENDBAR",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_FEHLT_ersatzfaehige_verwendungen",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": null,
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_TYP_ersatzfaehige_verwendungen",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": [],
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_FEHLT_bereits_durch_bereicherungsanrechnung_gedeckt",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": null,
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_TYP_bereits_durch_bereicherungsanrechnung_gedeckt",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": [],
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_FEHLT_anspruch_nach_2022_qualifiziert",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_TYP_anspruch_nach_2022_qualifiziert",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_FEHLT_bewertungsnachweis",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_TYP_bewertungsnachweis",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_NACHWEIS_LEER",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_ZU_VIEL_GEDECKT",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "100",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "101",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBSCHAFTSBESITZER_VERWENDUNGSREST_NEGATIV",
+    "funktion": "erbschaftsbesitzer_verwendungsrest",
+    "eingaben": {
+      "ersatzfaehige_verwendungen": "-1",
+      "bereits_durch_bereicherungsanrechnung_gedeckt": "30",
+      "anspruch_nach_2022_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch2022-qualifizierter Aufwand und nach2021 bereits gedeckter Teil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_ZWECK_DECKEL",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "30",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_BEREICHERUNG_DECKEL",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "20",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_GLEICH",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "30",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "30",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_NULL_BEREICHERUNG",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "0",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_NULL_ZWECK",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "0",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_BRUCH",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "0.03",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "0.01",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "100"
+      }
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_NICHT_ANWENDBAR",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": false,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_FEHLT_bereicherungsrechtlicher_zuwendungswert",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": null,
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_TYP_bereicherungsrechtlicher_zuwendungswert",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": [],
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_FEHLT_zur_auflagenvollziehung_erforderlicher_zuwendungsanteil",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": null,
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_TYP_zur_auflagenvollziehung_erforderlicher_zuwendungsanteil",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": [],
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_FEHLT_herausgabevoraussetzungen_2196_erfuellt",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": null,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_TYP_herausgabevoraussetzungen_2196_erfuellt",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": 1,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_FEHLT_bewertungsnachweis",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_TYP_bewertungsnachweis",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_NACHWEIS_LEER",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "100",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUFLAGE_HERAUSGABEBEGRENZUNG_NEGATIV",
+    "funktion": "erbauflage_herausgabebegrenzung",
+    "eingaben": {
+      "bereicherungsrechtlicher_zuwendungswert": "-1",
+      "zur_auflagenvollziehung_erforderlicher_zuwendungsanteil": "30",
+      "herausgabevoraussetzungen_2196_erfuellt": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte2196-Herausgabe und bewerteter zweckgebundener Anteil."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Differenz-/Minimumbeispiele mit Null, Gleichheit und Bruchteilen; bereits gedeckter Aufwand nicht doppelt ersetzbar.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

@@ -1,0 +1,354 @@
+[
+  {
+    "fall_id": "VNG_001",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 3,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2029-01-15"
+    },
+    "herleitung": "Drei volle Jahre erneut; nicht31.Dezember2029 und kein Restzeitraum.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_002",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2024-02-29",
+      "fristdauer": 3,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2027-02-28"
+    },
+    "herleitung": "Jahresfrist vom Schalttag mit fehlendem Tag im Zieljahr.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_003",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2024-02-29",
+      "fristdauer": 4,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2028-02-29"
+    },
+    "herleitung": "Jahresfrist zum nächsten Schalttag.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_004",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-31",
+      "fristdauer": 1,
+      "fristeinheit": "monate",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-02-28"
+    },
+    "herleitung": "Ein Monat, fehlender31.Tag im Februar.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_005",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 2,
+      "fristeinheit": "wochen",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-01-29"
+    },
+    "herleitung": "Zwei Wochen sind14Tage, Ereignistag nicht mitgezählt.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_006",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-12-31",
+      "fristdauer": 1,
+      "fristeinheit": "tage",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2027-01-01"
+    },
+    "herleitung": "Eintägige Frist über Jahreswechsel; keine Feiertagsverschiebung.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_007",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "0001-01-01",
+      "fristdauer": 1,
+      "fristeinheit": "tage",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "0001-01-02"
+    },
+    "herleitung": "Unterer Kalenderbereich.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_008",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "9998-12-31",
+      "fristdauer": 1,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "9999-12-31"
+    },
+    "herleitung": "Letzter darstellbarer Jahresendtag.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_009",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "9999-01-01",
+      "fristdauer": 1,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nicht darstellbarer Endtag.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_010",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 3,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unwirksamer Neubeginn berechnet keinen neuen Ablauf.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_011",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2025-02-29",
+      "fristdauer": 3,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Fristdauer, Einheit oder Wahrheitswert.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_012",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 0,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Fristdauer, Einheit oder Wahrheitswert.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_013",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": -1,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Fristdauer, Einheit oder Wahrheitswert.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_014",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 1.5,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Fristdauer, Einheit oder Wahrheitswert.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_015",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": true,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Fristdauer, Einheit oder Wahrheitswert.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_016",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 3652060,
+      "fristeinheit": "tage",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Fristdauer, Einheit oder Wahrheitswert.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_017",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 3,
+      "fristeinheit": "unbekannt",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Fristdauer, Einheit oder Wahrheitswert.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_018",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 3,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Tag, Fristdauer, Einheit oder Wahrheitswert.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_019",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": null,
+      "fristdauer": 3,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe fehlt.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_020",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": null,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe fehlt.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_021",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 3,
+      "fristeinheit": null,
+      "wirksamer_neubeginn": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe fehlt.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  },
+  {
+    "fall_id": "VNG_022",
+    "funktion": "verjaehrung_neubeginn_grundfrist",
+    "eingaben": {
+      "neubeginnereignis_am": "2026-01-15",
+      "fristdauer": 3,
+      "fristeinheit": "jahre",
+      "wirksamer_neubeginn": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe fehlt.",
+    "pruefnachweis": "Manuelle Ereignisfristen aus §212 und §§187/188 der lokalen Quelle; voller neuer Zeitraum ohne Jahresschlussverschiebung, vor Implementierung."
+  }
+]

@@ -1,0 +1,592 @@
+[
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_DIFFERENZ",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "effektivzins_unterangabe": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "rechnerisch_verminderter_sollzinssatz": {
+          "zaehler": "3",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_GLEICH",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.06",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "effektivzins_unterangabe": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerisch_verminderter_sollzinssatz": {
+          "zaehler": "1",
+          "nenner": "20"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_GENAU_NULL",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.11",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "effektivzins_unterangabe": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "rechnerisch_verminderter_sollzinssatz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_NEGATIVER_RECHENWERT",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.12",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "effektivzins_unterangabe": {
+          "zaehler": "3",
+          "nenner": "50"
+        },
+        "rechnerisch_verminderter_sollzinssatz": {
+          "zaehler": "-1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_UEBER",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wert_zum_vertragskurs": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "wert_zum_vergleichskurs": {
+          "zaehler": "1210",
+          "nenner": "1"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "grenze_strikt_ueberschritten": true,
+        "wert_zum_umstellungskurs": {
+          "zaehler": "1250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_GLEICH",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.2",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wert_zum_vertragskurs": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "wert_zum_vergleichskurs": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "grenze_strikt_ueberschritten": false,
+        "wert_zum_umstellungskurs": {
+          "zaehler": "1250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_UNTER",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.19",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wert_zum_vertragskurs": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "wert_zum_vergleichskurs": {
+          "zaehler": "1190",
+          "nenner": "1"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "grenze_strikt_ueberschritten": false,
+        "wert_zum_umstellungskurs": {
+          "zaehler": "1250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_KEIN_REST",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "0",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wert_zum_vertragskurs": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "wert_zum_vergleichskurs": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "grenze_strikt_ueberschritten": false,
+        "wert_zum_umstellungskurs": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_KURSORIENTIERUNG",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "0.5",
+      "wechselkurs_vergleich": "0.6",
+      "wechselkurs_umstellung": "0.55",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wert_zum_vertragskurs": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "wert_zum_vergleichskurs": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "zwanzigprozent_grenzwert": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "grenze_strikt_ueberschritten": false,
+        "wert_zum_umstellungskurs": {
+          "zaehler": "550",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_ANGABE_HOEHER",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": "0.09",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_KURS_NULL_wechselkurs_vertrag",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "0",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_KURS_NULL_wechselkurs_vergleich",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "0",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_KURS_NULL_wechselkurs_umstellung",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "0",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_FEHLT_vertraglicher_sollzinssatz",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": null,
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_FEHLT_angegebener_effektiver_jahreszins",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": null,
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_FEHLT_tatsaechlicher_effektiver_jahreszins",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": null,
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_FEHLT_einordnungsnachweis",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_NEGATIV",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "-1",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_TYP",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": [],
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": "Qualifizierte Effektivzins-Unterangabe und Jahresquoten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_SOLLZINSKORREKTUR_LEER",
+    "funktion": "verbraucherdarlehen_sollzinskorrektur",
+    "eingaben": {
+      "vertraglicher_sollzinssatz": "0.05",
+      "angegebener_effektiver_jahreszins": "0.06",
+      "tatsaechlicher_effektiver_jahreszins": "0.08",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_FEHLT_fremdwaehrungsbetrag",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": null,
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_FEHLT_wechselkurs_vertrag",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": null,
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_FEHLT_wechselkurs_vergleich",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": null,
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_FEHLT_wechselkurs_umstellung",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": null,
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_FEHLT_einordnungsnachweis",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_NEGATIV",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "-1",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_TYP",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": [],
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": "Qualifiziertes503-Fremdwährungsdarlehen; gleicher aktueller Restbetrag und belegter Umstellungskurs."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "IMMOBILIARDARLEHEN_WECHSELKURSRECHNUNG_LEER",
+    "funktion": "immobiliardarlehen_wechselkursrechnung",
+    "eingaben": {
+      "fremdwaehrungsbetrag": "1000",
+      "wechselkurs_vertrag": "1",
+      "wechselkurs_vergleich": "1.21",
+      "wechselkurs_umstellung": "1.25",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:5%-(8%-6%)=3%;1000*1,21=1210>1200, Umstellung1000*1,25=1250.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

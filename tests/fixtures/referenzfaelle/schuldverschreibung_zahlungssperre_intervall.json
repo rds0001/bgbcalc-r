@@ -1,0 +1,482 @@
+[
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_KEIN_EINLEITUNGSANTRAG",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": "2024-07-01",
+        "hemmung_bis_beobachtung_abgeschlossen": true,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-07-01"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_ANTRAG_AM_LETZTEN_TAG",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": "2024-07-01",
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": null,
+        "hemmung_bis_beobachtung_abgeschlossen": false,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-08-01"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_ANTRAG_ZU_SPAET",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": "2024-07-02",
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": "2024-07-01",
+        "hemmung_bis_beobachtung_abgeschlossen": true,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-07-01"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_FRUEHERE_ERLEDIGUNG",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": "2024-03-01",
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": "2024-03-01",
+        "hemmung_bis_beobachtung_abgeschlossen": true,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-03-01"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_SPAETERE_ERLEDIGUNG",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": "2024-07-15",
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": "2024-07-01",
+        "hemmung_bis_beobachtung_abgeschlossen": true,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-07-01"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_ANTRAG_UND_ERLEDIGUNG",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": "2024-07-01",
+      "verfahren_erledigt_am": "2024-07-15",
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": "2024-07-15",
+        "hemmung_bis_beobachtung_abgeschlossen": true,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-07-15"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_VOR_FRISTABLAUF",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-06-30",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": null,
+        "hemmung_bis_beobachtung_abgeschlossen": false,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-06-30"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_KEIN_VORVERFAHREN",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": false,
+      "sechsmonatsfrist_letzter_tag": null,
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": null,
+        "hemmung_bis_beobachtung_abgeschlossen": false,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-08-01"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_KEIN_VORVERFAHREN_ERLEDIGT",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": false,
+      "sechsmonatsfrist_letzter_tag": null,
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": "2024-03-01",
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "feststehendes_hemmungsende": "2024-03-01",
+        "hemmung_bis_beobachtung_abgeschlossen": true,
+        "hemmungszeitraeume": [
+          {
+            "erster_gehemmter_tag": "2024-01-01",
+            "letzter_gehemmter_tag": "2024-03-01"
+          }
+        ]
+      }
+    },
+    "herleitung": "Ohne rechtzeitigen Einleitungsantrag Ende1.7.; tatsächliche Erledigung1.3.beendet früher. Antrag1.7.verhindert Sechsmonatsende,Antrag2.7.nicht. Fehlende Erledigung bei rechtzeitigem Antrag bedeutet nur Beobachtung,kein finales Ende.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_FEHLT_antrag_zahlungssperre_am",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": null,
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_FEHLT_zahlungssperre_vor_verfahrenseinleitung",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": null,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_FEHLT_sechsmonatsfrist_letzter_tag",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": null,
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_FEHLT_beobachtung_bis",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": null,
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_FEHLT_einordnungsnachweis",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_UNGUELTIG0",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": false,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_UNGUELTIG1",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2023-12-31",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_UNGUELTIG2",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": "2023-12-31",
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_UNGUELTIG3",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": "2024-08-02",
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_UNGUELTIG4",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": "2024-08-02",
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_UNGUELTIG5",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2023-12-31",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": "802: Beginn mit Zahlungssperrenantrag. Ende mit tatsächlicher Verfahrenserledigung; im qualifizierten Vorverfahren zusätzlich Ablauf der korrigierten Sechsmonatsfrist, sofern bis dahin kein wirksamer Einleitungsantrag gestellt war. Früheres Endereignis maßgeblich. Einleitungsantrag am letzten Fristtag wahrt; späterer Antrag belebt bereits beendete Hemmung nicht rückwirkend wieder. Bei laufender Hemmung nur bis Beobachtung rechnen und Abschluss ausdrücklich verneinen. Keine künstliche Verfahrenserledigung. Hemmung beeinflusst auch Beginn der Vorlegungsfrist; entsprechende Weiterrechnung mit209unter rechtlicher Qualifikation und ohne doppelte Tage. Sechsmonatsgrundfrist/206/210/211werden vorgelagert mit vorhandenen Kernen berechnet. Datumstage sind rechtlich normalisierte eingeschlossene Hemmungstage; untertägige Sonderfälle nicht pauschal runden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "SCHULDVERSCHREIBUNG_ZAHLUNGSSPERRE_INTERVALL_UNGUELTIG6",
+    "funktion": "schuldverschreibung_zahlungssperre_intervall",
+    "eingaben": {
+      "antrag_zahlungssperre_am": "2024-01-01",
+      "zahlungssperre_vor_verfahrenseinleitung": true,
+      "sechsmonatsfrist_letzter_tag": "2024-07-01",
+      "einleitungsantrag_am": null,
+      "verfahren_erledigt_am": null,
+      "beobachtung_bis": "2024-08-01",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

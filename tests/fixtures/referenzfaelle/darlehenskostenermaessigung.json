@@ -1,0 +1,1033 @@
+[
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_ERFUELLUNG",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Z1",
+            "ermaessigungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "K2",
+            "ermaessigungsbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "S",
+            "ermaessigungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruengliche_kostensumme": {
+          "zaehler": "340",
+          "nenner": "1"
+        },
+        "gesamtermaessigung": {
+          "zaehler": "280",
+          "nenner": "1"
+        },
+        "verbleibende_kostensumme": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_KUENDIGUNG",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "kuendigung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Z1",
+            "ermaessigungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "K2",
+            "ermaessigungsbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "S",
+            "ermaessigungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruengliche_kostensumme": {
+          "zaehler": "340",
+          "nenner": "1"
+        },
+        "gesamtermaessigung": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "verbleibende_kostensumme": {
+          "zaehler": "90",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_VOR_BEGINN",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2025-12-31",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Z1",
+            "ermaessigungsbetrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "K2",
+            "ermaessigungsbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "S",
+            "ermaessigungsbetrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruengliche_kostensumme": {
+          "zaehler": "340",
+          "nenner": "1"
+        },
+        "gesamtermaessigung": {
+          "zaehler": "340",
+          "nenner": "1"
+        },
+        "verbleibende_kostensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_NACH_ENDE",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-21",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Z1",
+            "ermaessigungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "K2",
+            "ermaessigungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "S",
+            "ermaessigungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruengliche_kostensumme": {
+          "zaehler": "340",
+          "nenner": "1"
+        },
+        "gesamtermaessigung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_kostensumme": {
+          "zaehler": "340",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_LETZTER_TAG",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-20",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Z1",
+            "ermaessigungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "K2",
+            "ermaessigungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "180",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "S",
+            "ermaessigungsbetrag": {
+              "zaehler": "2",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "38",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruengliche_kostensumme": {
+          "zaehler": "340",
+          "nenner": "1"
+        },
+        "gesamtermaessigung": {
+          "zaehler": "22",
+          "nenner": "1"
+        },
+        "verbleibende_kostensumme": {
+          "zaehler": "318",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_SCHALTTAG",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2024-02-01",
+          "ende_am": "2024-02-29",
+          "kostenbetrag": "29",
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2024-02-29",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Z1",
+            "ermaessigungsbetrag": {
+              "zaehler": "1",
+              "nenner": "1"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "28",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruengliche_kostensumme": {
+          "zaehler": "29",
+          "nenner": "1"
+        },
+        "gesamtermaessigung": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "verbleibende_kostensumme": {
+          "zaehler": "28",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_EINTAGESPOSITION",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-01",
+          "kostenbetrag": "0.1",
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-01",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Z1",
+            "ermaessigungsbetrag": {
+              "zaehler": "1",
+              "nenner": "10"
+            },
+            "verbleibender_kostenbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "urspruengliche_kostensumme": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "gesamtermaessigung": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "verbleibende_kostensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_LEERE_LISTE",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_DOPPELTE_POSITION",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_UMGEKEHRTE_ZEIT",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2025-12-31",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_NEGATIV",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "-1",
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_KOSTENART",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "x"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_FORM",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {}
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_FALL",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "x",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_DATUM",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-02-30",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_LEER",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_FEHLT_kostenabschnitte",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": null,
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_FEHLT_ermaessigung_ab",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": null,
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_FEHLT_ermaessigungsfall",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": null,
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_FEHLT_einordnungsnachweis",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        },
+        {
+          "position_id": "K2",
+          "beginn_am": "2026-01-11",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "200",
+          "kostenart": "laufzeitabhaengige_kosten"
+        },
+        {
+          "position_id": "S",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-20",
+          "kostenbetrag": "40",
+          "kostenart": "sonstige_kosten"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_POSITION_FEHLT_position_id",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": null,
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_POSITION_FEHLT_beginn_am",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": null,
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_POSITION_FEHLT_ende_am",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": null,
+          "kostenbetrag": "100",
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_POSITION_FEHLT_kostenbetrag",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": null,
+          "kostenart": "zinsen"
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_KOSTENABSCHNITTE_ERMAESSIGEN_POSITION_FEHLT_kostenart",
+    "funktion": "verbraucherdarlehen_kostenabschnitte_ermaessigen",
+    "eingaben": {
+      "kostenabschnitte": [
+        {
+          "position_id": "Z1",
+          "beginn_am": "2026-01-01",
+          "ende_am": "2026-01-10",
+          "kostenbetrag": "100",
+          "kostenart": null
+        }
+      ],
+      "ermaessigung_ab": "2026-01-06",
+      "ermaessigungsfall": "vorzeitige_erfuellung",
+      "einordnungsnachweis": "Qualifizierte Kosten des vorzeitig erfüllten Teils; je Position homogene tatsächliche Tageszuordnung, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Handrechnung: erste10Tage100, davon5=50; nächste10Tage200 voll; sonstige20Tage40 davon15=30 nur bei Erfüllung, bei Kündigung0.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; echte Datumsdifferenzen im bestehenden Kalender-/Datumsrahmen."
+  }
+]

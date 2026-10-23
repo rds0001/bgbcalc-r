@@ -1,0 +1,1260 @@
+[
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_OHNE_UMVERTEILUNG",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gruppenanteile": [
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "15",
+              "nenner": "1"
+            }
+          }
+        ],
+        "personenrahmen_rest": [
+          {
+            "beschenkter_id": "A",
+            "verbleibender_rahmen": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "verbleibender_rahmen": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "verbleibender_rahmen": {
+              "zaehler": "85",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "15",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Späterer Rang:100nach60:40, Aauf30begrenzt=>30+40,Rest30. FrüherA-Rahmen0,C100:ohneUmverteilung15fürC/15Rest;mitUmverteilung30fürC. BeiA-Rahmen80undFehl200:später60/40,früher20/80,PersonAgesamt80.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_MIT_UMVERTEILUNG",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "begrenzte_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gruppenanteile": [
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "personenrahmen_rest": [
+          {
+            "beschenkter_id": "A",
+            "verbleibender_rahmen": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "verbleibender_rahmen": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "verbleibender_rahmen": {
+              "zaehler": "70",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Späterer Rang:100nach60:40, Aauf30begrenzt=>30+40,Rest30. FrüherA-Rahmen0,C100:ohneUmverteilung15fürC/15Rest;mitUmverteilung30fürC. BeiA-Rahmen80undFehl200:später60/40,früher20/80,PersonAgesamt80.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_KLEINER_FEHLBETRAG",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "50",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gruppenanteile": [
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "personenrahmen_rest": [
+          {
+            "beschenkter_id": "A",
+            "verbleibender_rahmen": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "verbleibender_rahmen": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "verbleibender_rahmen": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Späterer Rang:100nach60:40, Aauf30begrenzt=>30+40,Rest30. FrüherA-Rahmen0,C100:ohneUmverteilung15fürC/15Rest;mitUmverteilung30fürC. BeiA-Rahmen80undFehl200:später60/40,früher20/80,PersonAgesamt80.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_GETEILTER_PERSONENRAHMEN",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "200",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "80"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "begrenzte_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gruppenanteile": [
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          }
+        ],
+        "personenrahmen_rest": [
+          {
+            "beschenkter_id": "A",
+            "verbleibender_rahmen": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "verbleibender_rahmen": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "verbleibender_rahmen": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Späterer Rang:100nach60:40, Aauf30begrenzt=>30+40,Rest30. FrüherA-Rahmen0,C100:ohneUmverteilung15fürC/15Rest;mitUmverteilung30fürC. BeiA-Rahmen80undFehl200:später60/40,früher20/80,PersonAgesamt80.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_NULL",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "0",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gruppenanteile": [
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "personenrahmen_rest": [
+          {
+            "beschenkter_id": "A",
+            "verbleibender_rahmen": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "verbleibender_rahmen": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "verbleibender_rahmen": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Späterer Rang:100nach60:40, Aauf30begrenzt=>30+40,Rest30. FrüherA-Rahmen0,C100:ohneUmverteilung15fürC/15Rest;mitUmverteilung30fürC. BeiA-Rahmen80undFehl200:später60/40,früher20/80,PersonAgesamt80.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_VOLLE_GRENZEN",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "300",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "begrenzte_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "gruppenanteile": [
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "schenkungsrang": 2,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "A",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "schenkungsrang": 1,
+            "rechnerischer_haftungsanteil": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ],
+        "personenrahmen_rest": [
+          {
+            "beschenkter_id": "A",
+            "verbleibender_rahmen": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "B",
+            "verbleibender_rahmen": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkter_id": "C",
+            "verbleibender_rahmen": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_gedeckter_fehlbetrag": {
+          "zaehler": "130",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Späterer Rang:100nach60:40, Aauf30begrenzt=>30+40,Rest30. FrüherA-Rahmen0,C100:ohneUmverteilung15fürC/15Rest;mitUmverteilung30fürC. BeiA-Rahmen80undFehl200:später60/40,früher20/80,PersonAgesamt80.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_FEHLT_fehlbetrag",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": null,
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_FEHLT_schenkungsgruppen",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": null,
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_FEHLT_personenrahmen",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": null,
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_FEHLT_kuerzungsmethode",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": null,
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_FEHLT_methodennachweis",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_UNGUELTIG0",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_UNGUELTIG1",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_UNGUELTIG2",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_UNGUELTIG3",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "automatisch",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_UNGUELTIG4",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 0,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEILSERGAENZUNG_RANGGRUPPEN_MIT_PERSONENRAHMEN_UNGUELTIG5",
+    "funktion": "pflichtteilsergaenzung_ranggruppen_mit_personenrahmen",
+    "eingaben": {
+      "fehlbetrag": "100",
+      "schenkungsgruppen": [
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 2,
+          "schenkungswert": "60",
+          "einzelhaftungsgrenze": "60"
+        },
+        {
+          "beschenkter_id": "B",
+          "schenkungsrang": 2,
+          "schenkungswert": "40",
+          "einzelhaftungsgrenze": "40"
+        },
+        {
+          "beschenkter_id": "A",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "schenkungsrang": 1,
+          "schenkungswert": "100",
+          "einzelhaftungsgrenze": "100"
+        }
+      ],
+      "personenrahmen": [
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "A",
+          "gemeinsame_haftungsgrenze": "30"
+        },
+        {
+          "beschenkter_id": "B",
+          "gemeinsame_haftungsgrenze": "100"
+        },
+        {
+          "beschenkter_id": "C",
+          "gemeinsame_haftungsgrenze": "100"
+        }
+      ],
+      "kuerzungsmethode": "anteilige_kuerzung_ohne_umverteilung",
+      "methodennachweis": "Bedingte arithmetische2329III-Komposition: spätere Gruppen zuerst; gleichzeitig nach Schenkungswerten. Individuelle Kapazität=min(Gruppengrenze,Schenkungswert,noch unverbrauchter Personenrahmen). Bei anteilige_kuerzung_ohne_umverteilung erst Wertquote am kleineren Betrag aus Restfehlbetrag/Gesamtgruppenwert und danach persönliche Kappung; bei begrenzte_umverteilung proportional mit Kappung und Neuverteilung auf übrige Gruppenmitglieder. Nur tatsächlich zugeordnete Beträge verbrauchen den gemeinsamen Personenrahmen; rechtlich nicht gedeckter Rest geht zum früheren Rang. Kein doppelter Personenrahmen über mehrere Ränge. Die beiden Methoden sind ausdrücklich bedingte Rechenmodelle, keine Behauptung, dass beide gesetzlich zulässig sind. Rechtsfrage zusätzlicher Kürzungen bei Gleichzeitigkeit bleibt vom Anwender anhand seines Falls zu entscheiden; bloße Insolvenz macht spätere Verpflichtung nicht automatisch unwirksam. Keine gewöhnliche Geldhaftung statt qualifizierter Sachherausgabe unterstellen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

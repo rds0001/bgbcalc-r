@@ -1,0 +1,687 @@
+[
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_HALBE_QUOTEN",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_regressbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "verbleibende_gemeinschaftsmasse": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "eigentuemeranteile": [
+          {
+            "grundstueck_id": "A",
+            "hypothekenanteil": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "hypothekenanteil": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugewiesener_restbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100-20=80Rest;halbeQuote40,minus20=20fürA;übrige60anB. Regress60:Rest40,AnteilA20-60<0=>0,B40. NurApositiv:80-20=60fürA,20ohneZuweisung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_ANRECHNUNGSUEBERHANG",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "60",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_regressbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "verbleibende_gemeinschaftsmasse": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "eigentuemeranteile": [
+          {
+            "grundstueck_id": "A",
+            "hypothekenanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "hypothekenanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugewiesener_restbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100-20=80Rest;halbeQuote40,minus20=20fürA;übrige60anB. Regress60:Rest40,AnteilA20-60<0=>0,B40. NurApositiv:80-20=60fürA,20ohneZuweisung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_KEIN_REGRESS",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "0",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_regressbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_gemeinschaftsmasse": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "eigentuemeranteile": [
+          {
+            "grundstueck_id": "A",
+            "hypothekenanteil": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "hypothekenanteil": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugewiesener_restbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100-20=80Rest;halbeQuote40,minus20=20fürA;übrige60anB. Regress60:Rest40,AnteilA20-60<0=>0,B40. NurApositiv:80-20=60fürA,20ohneZuweisung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_VOLLER_UEBERGANG",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_regressbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_gemeinschaftsmasse": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "eigentuemeranteile": [
+          {
+            "grundstueck_id": "A",
+            "hypothekenanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "hypothekenanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugewiesener_restbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100-20=80Rest;halbeQuote40,minus20=20fürA;übrige60anB. Regress60:Rest40,AnteilA20-60<0=>0,B40. NurApositiv:80-20=60fürA,20ohneZuweisung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_KEIN_ANDERES_GEWICHT",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "0",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_regressbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "verbleibende_gemeinschaftsmasse": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "eigentuemeranteile": [
+          {
+            "grundstueck_id": "A",
+            "hypothekenanteil": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "hypothekenanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugewiesener_restbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100-20=80Rest;halbeQuote40,minus20=20fürA;übrige60anB. Regress60:Rest40,AnteilA20-60<0=>0,B40. NurApositiv:80-20=60fürA,20ohneZuweisung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_ERSATZPFLICHTIGER_OHNE_GEWICHT",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "120"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_regressbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "verbleibende_gemeinschaftsmasse": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "eigentuemeranteile": [
+          {
+            "grundstueck_id": "A",
+            "hypothekenanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "hypothekenanteil": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugewiesener_restbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100-20=80Rest;halbeQuote40,minus20=20fürA;übrige60anB. Regress60:Rest40,AnteilA20-60<0=>0,B40. NurApositiv:80-20=60fürA,20ohneZuweisung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_UNGLEICHE_GEWICHTE",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "300",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "uebergegangener_regressbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "verbleibende_gemeinschaftsmasse": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "eigentuemeranteile": [
+          {
+            "grundstueck_id": "A",
+            "hypothekenanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "hypothekenanteil": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugewiesener_restbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100-20=80Rest;halbeQuote40,minus20=20fürA;übrige60anB. Regress60:Rest40,AnteilA20-60<0=>0,B40. NurApositiv:80-20=60fürA,20ohneZuweisung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_FEHLT_gesamthypothekenbetrag",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": null,
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_FEHLT_uebergegangener_regressbetrag",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": null,
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_FEHLT_grundstuecke",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": null,
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_FEHLT_ersatzpflichtiges_grundstueck_id",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": null,
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_FEHLT_verteilungsmodell",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": null,
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_FEHLT_methodennachweis",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_UNGUELTIG0",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "101",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_UNGUELTIG1",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "X",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_UNGUELTIG2",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "automatisch",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_REGRESS_RESTVERTEILUNG_UNGUELTIG3",
+    "funktion": "gesamthypothek_regress_restverteilung",
+    "eingaben": {
+      "gesamthypothekenbetrag": "100",
+      "uebergegangener_regressbetrag": "20",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "0",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "0",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "ersatzpflichtiges_grundstueck_id": "A",
+      "verteilungsmodell": "restquotierung_mit_anteiliger_restzuweisung",
+      "methodennachweis": "Bedingtes vollständiges Rechenmodell: Restmasse=Gesamtbetrag-Regressübergang.1172-Nettogewichte mit vorhandener positiver Nettowertmethode bestimmen.1174II-Anrechnung des Übergangs auf den quotierten Restanteil des ersatzpflichtigen Eigentümers durch vorhandenen Anrechnungskern. Verbleibende Restmasse proportional nach positiven Nettogewichten der übrigen Eigentümer verteilen. Dieses zusätzliche Zuweisungsmodell ist eine ausdrücklich zu qualifizierende Voraussetzung, keine aus dem Normwortlaut allein gesicherte generelle Auslegung. Ohne andere positive Gewichte bleibt der nicht zuweisbare Betrag sichtbar; keine künstliche Kopfquote oder Rückzuweisung entgegen der gewählten Anrechnung. Bei völlig fehlender positiver Nettowertbasis Eingabe ablehnen und separate Nettowertdiagnose verwenden. Summe Übergang+Eigentümeranteile+nichtzugewiesen=Gesamtbetrag.1176/1182-Rangschutz ist zusätzlich rechtlich zu beachten und wird nicht als allgemeiner ZVG-Verteilungsalgorithmus erfunden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

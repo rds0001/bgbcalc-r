@@ -1,0 +1,386 @@
+[
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_MONATSANFANG",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-03-15",
+        "anlassmonatsanfang": "2030-03-01",
+        "rueckwirkungsbeginn": "2030-03-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_VERZUG_FRUEHER",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-02-20",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-02-20",
+        "anlassmonatsanfang": "2030-02-01",
+        "rueckwirkungsbeginn": "2030-02-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_RECHTSHAENGIG_FRUEHER",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-02-10",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-02-10",
+        "anlassmonatsanfang": "2030-02-01",
+        "rueckwirkungsbeginn": "2030-02-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_BEGINN_MONATSERSTER",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-03-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-03-15",
+        "anlassmonatsanfang": "2030-03-01",
+        "rueckwirkungsbeginn": "2030-03-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_BEGINN_MONATSZWEITER",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-03-02",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-03-15",
+        "anlassmonatsanfang": "2030-03-01",
+        "rueckwirkungsbeginn": "2030-03-15"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_BEGINN_SPAETER",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-03-20",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-03-15",
+        "anlassmonatsanfang": "2030-03-01",
+        "rueckwirkungsbeginn": "2030-03-20"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_GLEICHE_EREIGNISSE",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-03-15",
+      "rechtshaengigkeit_am": "2030-03-15",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-03-15",
+        "anlassmonatsanfang": "2030-03-01",
+        "rueckwirkungsbeginn": "2030-03-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_NUR_auskunftsaufforderung_am",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": null,
+      "rechtshaengigkeit_am": null,
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-03-15",
+        "anlassmonatsanfang": "2030-03-01",
+        "rueckwirkungsbeginn": "2030-03-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_NUR_verzug_am",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": null,
+      "verzug_am": "2030-03-15",
+      "rechtshaengigkeit_am": null,
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-03-15",
+        "anlassmonatsanfang": "2030-03-01",
+        "rueckwirkungsbeginn": "2030-03-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_NUR_rechtshaengigkeit_am",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": null,
+      "verzug_am": null,
+      "rechtshaengigkeit_am": "2030-03-15",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2030-03-15",
+        "anlassmonatsanfang": "2030-03-01",
+        "rueckwirkungsbeginn": "2030-03-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_SCHALT",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2028-02-29",
+      "verzug_am": null,
+      "rechtshaengigkeit_am": null,
+      "anspruchsbeginn_am": "2028-02-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_qualifizierter_anlass": "2028-02-29",
+        "anlassmonatsanfang": "2028-02-01",
+        "rueckwirkungsbeginn": "2028-02-01"
+      }
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_ALLE_FEHLEN",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": null,
+      "verzug_am": null,
+      "rechtshaengigkeit_am": null,
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_TYP_auskunftsaufforderung_am",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": [],
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_TYP_verzug_am",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": [],
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_TYP_rechtshaengigkeit_am",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": [],
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_TYP_anspruchsbeginn_am",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": [],
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_FEHLT_anspruchsbeginn_am",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": null,
+      "anlassnachweis": "Alle angegebenen Ereignisse für denselben durchgehend bestehenden Anspruch rechtlich qualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_TYP_anlassnachweis",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_FEHLT_anlassnachweis",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_RUECKWIRKUNGSBEGINN_NACHWEIS_LEER",
+    "funktion": "unterhalt_rueckwirkungsbeginn",
+    "eingaben": {
+      "auskunftsaufforderung_am": "2030-03-15",
+      "verzug_am": "2030-04-01",
+      "rechtshaengigkeit_am": "2030-05-01",
+      "anspruchsbeginn_am": "2030-01-01",
+      "anlassnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängiges Ereignisminimum; Monatsanfang nur bei dort bereits bestehendem Grundanspruch, sonst nicht vor Anlass/Anspruchsentstehung.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

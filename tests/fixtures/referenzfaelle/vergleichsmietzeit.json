@@ -1,0 +1,336 @@
+[
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_GENAU",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": "2026-01-01",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_zugang_nach_jahresfrist": "2026-01-01",
+        "fruehester_mietbeginn_nach_wartefrist": "2026-04-01",
+        "mietbeginn_bei_zustimmung": "2026-04-01",
+        "rechnerisches_ende_zustimmungsfrist": "2026-03-31",
+        "rechnerisches_ende_klagefrist": "2026-06-30",
+        "jahresfrist_eingehalten": true,
+        "wartefrist_eingehalten": true
+      }
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_ZUGANG_ENDE",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": "2026-01-31",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_zugang_nach_jahresfrist": "2026-01-01",
+        "fruehester_mietbeginn_nach_wartefrist": "2026-04-01",
+        "mietbeginn_bei_zustimmung": "2026-04-01",
+        "rechnerisches_ende_zustimmungsfrist": "2026-03-31",
+        "rechnerisches_ende_klagefrist": "2026-06-30",
+        "jahresfrist_eingehalten": true,
+        "wartefrist_eingehalten": true
+      }
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_ZU_FRUEH",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": "2025-12-31",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_zugang_nach_jahresfrist": "2026-01-01",
+        "fruehester_mietbeginn_nach_wartefrist": "2026-04-01",
+        "mietbeginn_bei_zustimmung": "2026-03-01",
+        "rechnerisches_ende_zustimmungsfrist": "2026-02-28",
+        "rechnerisches_ende_klagefrist": "2026-05-31",
+        "jahresfrist_eingehalten": false,
+        "wartefrist_eingehalten": false
+      }
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_NUR_JAHR",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-31",
+      "zugang_erhoehungsverlangen": "2026-01-31",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_zugang_nach_jahresfrist": "2026-01-31",
+        "fruehester_mietbeginn_nach_wartefrist": "2026-05-01",
+        "mietbeginn_bei_zustimmung": "2026-04-01",
+        "rechnerisches_ende_zustimmungsfrist": "2026-03-31",
+        "rechnerisches_ende_klagefrist": "2026-06-30",
+        "jahresfrist_eingehalten": true,
+        "wartefrist_eingehalten": false
+      }
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_SCHALTJAHR",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2024-02-29",
+      "zugang_erhoehungsverlangen": "2025-02-28",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_zugang_nach_jahresfrist": "2025-03-01",
+        "fruehester_mietbeginn_nach_wartefrist": "2025-05-29",
+        "mietbeginn_bei_zustimmung": "2025-05-01",
+        "rechnerisches_ende_zustimmungsfrist": "2025-04-30",
+        "rechnerisches_ende_klagefrist": "2025-07-31",
+        "jahresfrist_eingehalten": false,
+        "wartefrist_eingehalten": false
+      }
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_NACH_SCHALTJAHR",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2024-02-29",
+      "zugang_erhoehungsverlangen": "2025-03-01",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_zugang_nach_jahresfrist": "2025-03-01",
+        "fruehester_mietbeginn_nach_wartefrist": "2025-05-29",
+        "mietbeginn_bei_zustimmung": "2025-06-01",
+        "rechnerisches_ende_zustimmungsfrist": "2025-05-31",
+        "rechnerisches_ende_klagefrist": "2025-08-31",
+        "jahresfrist_eingehalten": true,
+        "wartefrist_eingehalten": true
+      }
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_UEBER_JAHR",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2024-01-01",
+      "zugang_erhoehungsverlangen": "2026-11-30",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_zugang_nach_jahresfrist": "2025-01-01",
+        "fruehester_mietbeginn_nach_wartefrist": "2025-04-01",
+        "mietbeginn_bei_zustimmung": "2027-02-01",
+        "rechnerisches_ende_zustimmungsfrist": "2027-01-31",
+        "rechnerisches_ende_klagefrist": "2027-04-30",
+        "jahresfrist_eingehalten": true,
+        "wartefrist_eingehalten": true
+      }
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_UNTERGRENZE",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "0001-01-01",
+      "zugang_erhoehungsverlangen": "0001-01-01",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "fruehester_zugang_nach_jahresfrist": "0002-01-01",
+        "fruehester_mietbeginn_nach_wartefrist": "0002-04-01",
+        "mietbeginn_bei_zustimmung": "0001-04-01",
+        "rechnerisches_ende_zustimmungsfrist": "0001-03-31",
+        "rechnerisches_ende_klagefrist": "0001-06-30",
+        "jahresfrist_eingehalten": false,
+        "wartefrist_eingehalten": false
+      }
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_FORMFEHLER",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": "2026-01-01",
+      "verlangen_formell_ordnungsgemaess": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Ein unverändertes Mietjahr und15Monate ab Tagesbeginn getrennt von der zugangsbezogenen Monatsstaffel: Zustimmung bis Ende des zweiten, Beginn im dritten, Klage bis Ende des fünften Folgemonats. Kalenderwerte vor Implementierung manuell bestimmt.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_LETZTE_MASSGEBLICHE_MIETE_AB0",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": null,
+      "zugang_erhoehungsverlangen": "2026-01-01",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende oder inkonsistente Eingabe beziehungsweise Überschreitung des technischen Kalenderbereichs.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_LETZTE_MASSGEBLICHE_MIETE_AB1",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2026-01-02",
+      "zugang_erhoehungsverlangen": "2026-01-01",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende oder inkonsistente Eingabe beziehungsweise Überschreitung des technischen Kalenderbereichs.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_LETZTE_MASSGEBLICHE_MIETE_AB2",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-02-30",
+      "zugang_erhoehungsverlangen": "2026-01-01",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende oder inkonsistente Eingabe beziehungsweise Überschreitung des technischen Kalenderbereichs.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_ZUGANG_ERHOEHUNGSVERLANGEN0",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": null,
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende oder inkonsistente Eingabe beziehungsweise Überschreitung des technischen Kalenderbereichs.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_ZUGANG_ERHOEHUNGSVERLANGEN1",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": "2026-02-30",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende oder inkonsistente Eingabe beziehungsweise Überschreitung des technischen Kalenderbereichs.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_ZUGANG_ERHOEHUNGSVERLANGEN2",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": "9999-10-01",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende oder inkonsistente Eingabe beziehungsweise Überschreitung des technischen Kalenderbereichs.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_VERLANGEN_FORMELL_ORDNUNGSGEMAESS0",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": "2026-01-01",
+      "verlangen_formell_ordnungsgemaess": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende oder inkonsistente Eingabe beziehungsweise Überschreitung des technischen Kalenderbereichs.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_VERLANGEN_FORMELL_ORDNUNGSGEMAESS1",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "2025-01-01",
+      "zugang_erhoehungsverlangen": "2026-01-01",
+      "verlangen_formell_ordnungsgemaess": "ja"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende oder inkonsistente Eingabe beziehungsweise Überschreitung des technischen Kalenderbereichs.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  },
+  {
+    "fall_id": "VERGLEICHSMIETZEIT_WARTEUEBERLAUF",
+    "funktion": "vergleichsmiete_zeitvoraussetzungen",
+    "eingaben": {
+      "letzte_massgebliche_miete_ab": "9999-01-01",
+      "zugang_erhoehungsverlangen": "9999-01-01",
+      "verlangen_formell_ordnungsgemaess": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unveränderte Mindestdauer reicht über den unterstützten Kalender hinaus.",
+    "pruefnachweis": "Lokale BGB-PDF §§558 Abs.1,558b Abs.1/2 und187/188; keine Produktionsfunktion als Orakel."
+  }
+]

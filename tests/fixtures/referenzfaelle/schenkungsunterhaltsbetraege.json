@@ -1,0 +1,897 @@
+[
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_RANGFOLGE",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "beschenkten_id": "spaeter",
+            "rueckforderungsbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkten_id": "frueher",
+            "rueckforderungsbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_UMGEKEHRTE_EINGABE",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        },
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "beschenkten_id": "spaeter",
+            "rueckforderungsbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkten_id": "frueher",
+            "rueckforderungsbetrag": {
+              "zaehler": "400",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_LEISTUNG_BEGRENZT",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "50"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "beschenkten_id": "spaeter",
+            "rueckforderungsbetrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkten_id": "frueher",
+            "rueckforderungsbetrag": {
+              "zaehler": "550",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_SPAETER_AUSGESCHLOSSEN",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "0",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "beschenkten_id": "spaeter",
+            "rueckforderungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkten_id": "frueher",
+            "rueckforderungsbetrag": {
+              "zaehler": "600",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_REST_UNGEDECKT",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "100"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "beschenkten_id": "spaeter",
+            "rueckforderungsbetrag": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkten_id": "frueher",
+            "rueckforderungsbetrag": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_KEINE_PERSON",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [],
+        "gesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_KEIN_BEDARF",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "1001",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "beschenkten_id": "spaeter",
+            "rueckforderungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkten_id": "frueher",
+            "rueckforderungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_SPAETER_DECKT_ALLES",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "900",
+          "leistungsfaehigkeitsgrenze": "900"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verteilung": [
+          {
+            "beschenkten_id": "spaeter",
+            "rueckforderungsbetrag": {
+              "zaehler": "600",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschenkten_id": "frueher",
+            "rueckforderungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtbetrag": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_BRUCH",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "0.1",
+      "eigene_deckungsmittel": "0.03",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "0.02",
+          "leistungsfaehigkeitsgrenze": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "unterhaltsfehlbetrag": {
+          "zaehler": "7",
+          "nenner": "100"
+        },
+        "verteilung": [
+          {
+            "beschenkten_id": "frueher",
+            "rueckforderungsbetrag": {
+              "zaehler": "1",
+              "nenner": "50"
+            }
+          }
+        ],
+        "gesamtbetrag": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "ungedeckter_fehlbetrag": {
+          "zaehler": "1",
+          "nenner": "20"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_RANG_DOPPELT",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_PERSON_DOPPELT",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_RANG_NULL",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 0,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_FORM",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {}
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_NEGATIVE_GRENZE",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "-1",
+          "leistungsfaehigkeitsgrenze": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_LEERE_KENNUNG",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": " ",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_TYP",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": "x",
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_NEGATIV",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "-1",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_LEER",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_FEHLT_unterhaltsbedarf",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": null,
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_FEHLT_eigene_deckungsmittel",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": null,
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_FEHLT_beschenkte",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": null,
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_FEHLT_einordnungsnachweis",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        },
+        {
+          "beschenkten_id": "spaeter",
+          "schenkungsrang": 2,
+          "bereicherungsgrenze": "200",
+          "leistungsfaehigkeitsgrenze": "300"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_PERSON_FEHLT_beschenkten_id",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": null,
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_PERSON_FEHLT_schenkungsrang",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": null,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_PERSON_FEHLT_bereicherungsgrenze",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": null,
+          "leistungsfaehigkeitsgrenze": "1000"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "SCHENKUNG_UNTERHALTSRUECKFORDERUNG_PERSON_FEHLT_leistungsfaehigkeitsgrenze",
+    "funktion": "schenkung_unterhaltsrueckforderung",
+    "eingaben": {
+      "unterhaltsbedarf": "1000",
+      "eigene_deckungsmittel": "400",
+      "beschenkte": [
+        {
+          "beschenkten_id": "frueher",
+          "schenkungsrang": 1,
+          "bereicherungsgrenze": "1000",
+          "leistungsfaehigkeitsgrenze": null
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte Geldgeschenke verschiedener Personen, eindeutige Ränge und rechtliche Grenzen derselben Periode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: Fehlbedarf600; später Beschenkter zuerst200, früher Beschenkter400. Grenzen/Alternativen unabhängig eingesetzt.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

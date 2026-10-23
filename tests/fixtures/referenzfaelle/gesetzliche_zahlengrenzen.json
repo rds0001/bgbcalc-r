@@ -1,0 +1,346 @@
+[
+  {
+    "fall_id": "FUND_ANZEIGEWERTGRENZE_NULL",
+    "funktion": "fund_anzeigewertgrenze",
+    "eingaben": {
+      "sachenwert": "0"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "wertgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_ANZEIGEWERTGRENZE_DARUNTER",
+    "funktion": "fund_anzeigewertgrenze",
+    "eingaben": {
+      "sachenwert": "9.99"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "wertgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_ANZEIGEWERTGRENZE_GENAU",
+    "funktion": "fund_anzeigewertgrenze",
+    "eingaben": {
+      "sachenwert": "10"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "wertgrenze_ueberschritten": false
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_ANZEIGEWERTGRENZE_DARUEBER",
+    "funktion": "fund_anzeigewertgrenze",
+    "eingaben": {
+      "sachenwert": "10.01"
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "wertgrenze_ueberschritten": true
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_ANZEIGEWERTGRENZE_FEHLT",
+    "funktion": "fund_anzeigewertgrenze",
+    "eingaben": {
+      "sachenwert": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_ANZEIGEWERTGRENZE_TYP",
+    "funktion": "fund_anzeigewertgrenze",
+    "eingaben": {
+      "sachenwert": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_ANZEIGEWERTGRENZE_NEGATIV",
+    "funktion": "fund_anzeigewertgrenze",
+    "eingaben": {
+      "sachenwert": "-1"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "FUND_ANZEIGEWERTGRENZE_BOOL",
+    "funktion": "fund_anzeigewertgrenze",
+    "eingaben": {
+      "sachenwert": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_FEHLBETRAG",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 3,
+      "zustimmende_liquidatoren": 2
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erforderliche_zustimmungen": 3,
+        "fehlende_zustimmungen": 1,
+        "einstimmigkeit_erreicht": false
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_ALLE",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 3,
+      "zustimmende_liquidatoren": 3
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erforderliche_zustimmungen": 3,
+        "fehlende_zustimmungen": 0,
+        "einstimmigkeit_erreicht": true
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_KEINER",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 3,
+      "zustimmende_liquidatoren": 0
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erforderliche_zustimmungen": 3,
+        "fehlende_zustimmungen": 3,
+        "einstimmigkeit_erreicht": false
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_EINER",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 1,
+      "zustimmende_liquidatoren": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erforderliche_zustimmungen": 1,
+        "fehlende_zustimmungen": 0,
+        "einstimmigkeit_erreicht": true
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_OBERGRENZE",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 9007199254740991,
+      "zustimmende_liquidatoren": 9007199254740990
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erforderliche_zustimmungen": 9007199254740991,
+        "fehlende_zustimmungen": 1,
+        "einstimmigkeit_erreicht": false
+      }
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_FEHLT_anzahl_liquidatoren",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": null,
+      "zustimmende_liquidatoren": 2
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_TYP_anzahl_liquidatoren",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": [],
+      "zustimmende_liquidatoren": 2
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_FEHLT_zustimmende_liquidatoren",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 3,
+      "zustimmende_liquidatoren": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_TYP_zustimmende_liquidatoren",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 3,
+      "zustimmende_liquidatoren": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_ZU_VIELE",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 3,
+      "zustimmende_liquidatoren": 4
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_KEINE_LIQUIDATOREN",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 0,
+      "zustimmende_liquidatoren": 2
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_NEGATIV",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 3,
+      "zustimmende_liquidatoren": -1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_BOOL",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": true,
+      "zustimmende_liquidatoren": 2
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "LIQUIDATOREN_EINSTIMMIGKEITSGRENZE_BRUCH",
+    "funktion": "liquidatoren_einstimmigkeitsgrenze",
+    "eingaben": {
+      "anzahl_liquidatoren": 1.5,
+      "zustimmende_liquidatoren": 2
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "10EUR überschreitet10nicht,10.01schon. Einstimmigkeit verlangt alle und errechnet tatsächlichen Zustimmungsfehlbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

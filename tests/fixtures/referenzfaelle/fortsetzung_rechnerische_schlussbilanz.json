@@ -1,0 +1,494 @@
+[
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_STANDARD",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse": {
+          "zaehler": "1200",
+          "nenner": "1"
+        },
+        "halbteil_vor_anrechnung": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "ehegattensaldo": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_vor_abfindungsanrechnung": {
+          "zaehler": "550",
+          "nenner": "1"
+        },
+        "ueberschiessende_ersatzpflicht_ehegatte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "persoenliche_ersatzpflicht_abkoemmlinge_nach_1476_absatz2_satz2": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Restmasse1000+100+50+50=1200,Haelfte600,Salden500/500. Bei0+0+300+100=400:200/-200,keine persoenliche Abkoemmlingspflicht. Bei0+400:Haelfte200,Ehegattensaldo-200 und Restersatz200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_OHNE_LASTEN",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "0",
+      "anrechnung_abkoemmlinge": "0",
+      "gezahlte_abfindungen": "0",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "halbteil_vor_anrechnung": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "ehegattensaldo": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_vor_abfindungsanrechnung": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "ueberschiessende_ersatzpflicht_ehegatte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "persoenliche_ersatzpflicht_abkoemmlinge_nach_1476_absatz2_satz2": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Restmasse1000+100+50+50=1200,Haelfte600,Salden500/500. Bei0+0+300+100=400:200/-200,keine persoenliche Abkoemmlingspflicht. Bei0+400:Haelfte200,Ehegattensaldo-200 und Restersatz200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_ABKOEMMLINGSSALDO_NEGATIV",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "0",
+      "ersatzschuld_ehegatte": "0",
+      "anrechnung_abkoemmlinge": "300",
+      "gezahlte_abfindungen": "100",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "halbteil_vor_anrechnung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "ehegattensaldo": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo": {
+          "zaehler": "-200",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_vor_abfindungsanrechnung": {
+          "zaehler": "-100",
+          "nenner": "1"
+        },
+        "ueberschiessende_ersatzpflicht_ehegatte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "persoenliche_ersatzpflicht_abkoemmlinge_nach_1476_absatz2_satz2": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Restmasse1000+100+50+50=1200,Haelfte600,Salden500/500. Bei0+0+300+100=400:200/-200,keine persoenliche Abkoemmlingspflicht. Bei0+400:Haelfte200,Ehegattensaldo-200 und Restersatz200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_EHEGATTENERSATZ",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "0",
+      "ersatzschuld_ehegatte": "400",
+      "anrechnung_abkoemmlinge": "0",
+      "gezahlte_abfindungen": "0",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "halbteil_vor_anrechnung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "ehegattensaldo": {
+          "zaehler": "-200",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_vor_abfindungsanrechnung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "ueberschiessende_ersatzpflicht_ehegatte": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "persoenliche_ersatzpflicht_abkoemmlinge_nach_1476_absatz2_satz2": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Restmasse1000+100+50+50=1200,Haelfte600,Salden500/500. Bei0+0+300+100=400:200/-200,keine persoenliche Abkoemmlingspflicht. Bei0+400:Haelfte200,Ehegattensaldo-200 und Restersatz200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_NUR_ABFINDUNG",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "100",
+      "ersatzschuld_ehegatte": "0",
+      "anrechnung_abkoemmlinge": "0",
+      "gezahlte_abfindungen": "300",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse": {
+          "zaehler": "400",
+          "nenner": "1"
+        },
+        "halbteil_vor_anrechnung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "ehegattensaldo": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo": {
+          "zaehler": "-100",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_vor_abfindungsanrechnung": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "ueberschiessende_ersatzpflicht_ehegatte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "persoenliche_ersatzpflicht_abkoemmlinge_nach_1476_absatz2_satz2": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Restmasse1000+100+50+50=1200,Haelfte600,Salden500/500. Bei0+0+300+100=400:200/-200,keine persoenliche Abkoemmlingspflicht. Bei0+400:Haelfte200,Ehegattensaldo-200 und Restersatz200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_ALLES_NULL",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "0",
+      "ersatzschuld_ehegatte": "0",
+      "anrechnung_abkoemmlinge": "0",
+      "gezahlte_abfindungen": "0",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "halbteil_vor_anrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ehegattensaldo": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "abkoemmlingssaldo_vor_abfindungsanrechnung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ueberschiessende_ersatzpflicht_ehegatte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "persoenliche_ersatzpflicht_abkoemmlinge_nach_1476_absatz2_satz2": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Restmasse1000+100+50+50=1200,Haelfte600,Salden500/500. Bei0+0+300+100=400:200/-200,keine persoenliche Abkoemmlingspflicht. Bei0+400:Haelfte200,Ehegattensaldo-200 und Restersatz200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_BRUCH",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1",
+      "ersatzschuld_ehegatte": "0",
+      "anrechnung_abkoemmlinge": "0",
+      "gezahlte_abfindungen": "0",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechenmasse": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "halbteil_vor_anrechnung": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "ehegattensaldo": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "abkoemmlingssaldo": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "abkoemmlingssaldo_vor_abfindungsanrechnung": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "ueberschiessende_ersatzpflicht_ehegatte": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "persoenliche_ersatzpflicht_abkoemmlinge_nach_1476_absatz2_satz2": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Restmasse1000+100+50+50=1200,Haelfte600,Salden500/500. Bei0+0+300+100=400:200/-200,keine persoenliche Abkoemmlingspflicht. Bei0+400:Haelfte200,Ehegattensaldo-200 und Restersatz200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_FEHLT_bereinigte_restmasse",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": null,
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_FEHLT_ersatzschuld_ehegatte",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": null,
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_FEHLT_anrechnung_abkoemmlinge",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": null,
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_FEHLT_gezahlte_abfindungen",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": null,
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_FEHLT_bilanznachweis",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_NEGATIV_bereinigte_restmasse",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "-1",
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_NEGATIV_ersatzschuld_ehegatte",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "-1",
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_NEGATIV_anrechnung_abkoemmlinge",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": "-1",
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_NEGATIV_gezahlte_abfindungen",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": "-1",
+      "bilanznachweis": "Rechnerische Verbindung1498/1476 mit1500/1501: Restmasse plus beide qualifizierten Anrechnungsposten plus tatsaechlich gezahlte Abfindungen halbieren; eigene Lasten jeweils auf die betreffende Haelfte anrechnen. Negative Abkoemmlingssalden begruenden nach1498 gerade keine ueberschiessende persoenliche1476II2-Ersatzpflicht. Nur die ueberschiessende Ersatzschuld des ueberlebenden Ehegatten wird als solche ausgewiesen. Positive Salden sind rechnerische Bilanzpositionen, keine Zusage realisierbarer oder sofort faelliger Barauszahlung; gegenstaendliche Haftung, Deckung, Bewertung und Uneinbringlichkeit gesondert bestimmen. Personenverteilung1503I, Vorempfaenge1503II und ausschliesslich Beguenstigte treffende Lasten1503III/1511III2 anschliessend ohne Doppelabzug normgerecht verbinden. Keine automatische Anrechnung aller Lasten proportional auf jeden Abkoemmling. Keine abschliessende Abwicklung beliebiger Insolvenz-/Haftungskonstellationen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_RECHNERISCHE_SCHLUSSBILANZ_LEERER_NACHWEIS",
+    "funktion": "fortsetzung_rechnerische_schlussbilanz",
+    "eingaben": {
+      "bereinigte_restmasse": "1000",
+      "ersatzschuld_ehegatte": "100",
+      "anrechnung_abkoemmlinge": "50",
+      "gezahlte_abfindungen": "50",
+      "bilanznachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

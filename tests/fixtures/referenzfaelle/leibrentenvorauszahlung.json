@@ -1,0 +1,265 @@
+[
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_ERLEBT",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+        "vorauszahlungszeitraum_endet_am": "2026-03-31",
+        "dreimonats_regelbetrag": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "fuer_diesen_zeitabschnitt_gebuehrender_betrag": {
+          "zaehler": "3000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_NICHT_ERLEBT",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": false,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+        "vorauszahlungszeitraum_endet_am": "2026-03-31",
+        "dreimonats_regelbetrag": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "fuer_diesen_zeitabschnitt_gebuehrender_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_JAHRESWECHSEL",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2026-11-15",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorauszahlungszeitraum_beginnt_am": "2026-11-15",
+        "vorauszahlungszeitraum_endet_am": "2027-02-14",
+        "dreimonats_regelbetrag": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "fuer_diesen_zeitabschnitt_gebuehrender_betrag": {
+          "zaehler": "3000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_SCHALTJAHR",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2024-02-01",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorauszahlungszeitraum_beginnt_am": "2024-02-01",
+        "vorauszahlungszeitraum_endet_am": "2024-04-30",
+        "dreimonats_regelbetrag": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "fuer_diesen_zeitabschnitt_gebuehrender_betrag": {
+          "zaehler": "3000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_BRUCH",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "0.1",
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+        "vorauszahlungszeitraum_endet_am": "2026-03-31",
+        "dreimonats_regelbetrag": {
+          "zaehler": "1",
+          "nenner": "40"
+        },
+        "fuer_diesen_zeitabschnitt_gebuehrender_betrag": {
+          "zaehler": "1",
+          "nenner": "40"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_NEGATIV",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "-1",
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_DATUM",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2026-02-30",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_BOOL",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": 1,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_LEER",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_FEHLT_jahresrentenbetrag",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": null,
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_FEHLT_vorauszahlungszeitraum_beginnt_am",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": null,
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_FEHLT_beginn_des_zeitabschnitts_erlebt",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": null,
+      "einordnungsnachweis": "Reguläre Dreimonatsgeldrente und rechtlich qualifiziert erlebter Beginn."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  },
+  {
+    "fall_id": "LEIBRENTE_GELDVORAUSZAHLUNG_FEHLT_einordnungsnachweis",
+    "funktion": "leibrente_geldvorauszahlung",
+    "eingaben": {
+      "jahresrentenbetrag": "12000",
+      "vorauszahlungszeitraum_beginnt_am": "2026-01-01",
+      "beginn_des_zeitabschnitts_erlebt": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:12000/4=3000; Periode1Januar bis31März. Tod nach erlebtem Beginn führt nicht zu Tageskürzung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität; bestehender Kalenderkern."
+  }
+]

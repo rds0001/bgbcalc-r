@@ -1,0 +1,458 @@
+[
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_BEIDE_RESTE",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungedeckte_altverbindlichkeiten": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "ungedeckte_ersatzpflicht": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "anrechnungspostensumme": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_VOLLE_DECKUNG",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "100",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "80",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungedeckte_altverbindlichkeiten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckte_ersatzpflicht": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anrechnungspostensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_KEINE_DECKUNG",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "0",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "0",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungedeckte_altverbindlichkeiten": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "ungedeckte_ersatzpflicht": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "anrechnungspostensumme": {
+          "zaehler": "180",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_KEINE_LASTEN",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "0",
+      "altverbindlichkeiten_erbendeckung": "0",
+      "ersatzpflicht_zum_gesamtgut": "0",
+      "ersatzpflicht_erbendeckung": "0",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungedeckte_altverbindlichkeiten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckte_ersatzpflicht": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anrechnungspostensumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_EXAKT",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "0.3",
+      "altverbindlichkeiten_erbendeckung": "0.1",
+      "ersatzpflicht_zum_gesamtgut": "0.7",
+      "ersatzpflicht_erbendeckung": "0.2",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungedeckte_altverbindlichkeiten": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "ungedeckte_ersatzpflicht": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "anrechnungspostensumme": {
+          "zaehler": "7",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_FEHLT_persoenliche_altverbindlichkeiten",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": null,
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_TYP_persoenliche_altverbindlichkeiten",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": {},
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_NEGATIV_persoenliche_altverbindlichkeiten",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "-1",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_FEHLT_altverbindlichkeiten_erbendeckung",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": null,
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_TYP_altverbindlichkeiten_erbendeckung",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": {},
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_NEGATIV_altverbindlichkeiten_erbendeckung",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "-1",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_FEHLT_ersatzpflicht_zum_gesamtgut",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": null,
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_TYP_ersatzpflicht_zum_gesamtgut",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": {},
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_NEGATIV_ersatzpflicht_zum_gesamtgut",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "-1",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_FEHLT_ersatzpflicht_erbendeckung",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": null,
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_TYP_ersatzpflicht_erbendeckung",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": {},
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_NEGATIV_ersatzpflicht_erbendeckung",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "-1",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_FEHLT_zuordnungsnachweis",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_TYP_zuordnungsnachweis",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_DECKUNG_SCHULD_ZU_HOCH",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "101",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_DECKUNG_ERSATZ_ZU_HOCH",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "81",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_KEINE_UEBERTRAGUNG",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "110",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "0",
+      "zuordnungsnachweis": "Getrennte qualifizierte Ausgangslasten, zugeordnete Erbendeckung ausgeschöpft, keine Doppelzählung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FORTGESETZTE_GUETERGEMEINSCHAFT_ALTLASTEN_NACHWEIS_LEER",
+    "funktion": "fortgesetzte_guetergemeinschaft_altlasten",
+    "eingaben": {
+      "persoenliche_altverbindlichkeiten": "100",
+      "altverbindlichkeiten_erbendeckung": "30",
+      "ersatzpflicht_zum_gesamtgut": "80",
+      "ersatzpflicht_erbendeckung": "50",
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Restrechnung:100−30=70 und80−50=30 ergeben100 Anrechnungsposten; keine zusätzliche persönliche Pflicht der Abkömmlinge.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

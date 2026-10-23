@@ -1,0 +1,622 @@
+[
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_stillstand_letzte_verfahrenshandlung",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2030-07-11",
+        "beruecksichtigte_hemmungstage": 182
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_rechtskraeftige_entscheidung",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "rechtskraeftige_entscheidung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2030-07-11",
+        "beruecksichtigte_hemmungstage": 182
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_anderweitige_beendigung",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "anderweitige_beendigung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2030-07-11",
+        "beruecksichtigte_hemmungstage": 182
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_LUECKE",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        },
+        {
+          "hemmungsbeginn_am": "2030-07-05",
+          "nachlaufereignis_am": "2030-07-05",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2031-01-12",
+        "beruecksichtigte_hemmungstage": 367
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_UEBERLAPPUNG",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        },
+        {
+          "hemmungsbeginn_am": "2030-06-01",
+          "nachlaufereignis_am": "2030-06-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2030-12-11",
+        "beruecksichtigte_hemmungstage": 335
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_UNSORTIERT",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-06-01",
+          "nachlaufereignis_am": "2030-06-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        },
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2030-12-11",
+        "beruecksichtigte_hemmungstage": 335
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_KEIN_AUFLEBEN",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        },
+        {
+          "hemmungsbeginn_am": "2030-07-12",
+          "nachlaufereignis_am": "2030-07-12",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2030-07-11",
+        "beruecksichtigte_hemmungstage": 182
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_LEER",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2030-01-10",
+        "beruecksichtigte_hemmungstage": 0
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_SCHALTMONAT",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2028-01-01",
+      "grundfrist_letzter_tag": "2028-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2027-08-31",
+          "nachlaufereignis_am": "2027-08-31",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_letzter_tag": "2028-03-10",
+        "beruecksichtigte_hemmungstage": 60
+      }
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_FEHLT_fristlauf_erster_tag",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": null,
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_TYP_fristlauf_erster_tag",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": 42,
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_FEHLT_grundfrist_letzter_tag",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": null,
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_TYP_grundfrist_letzter_tag",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": 42,
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_FEHLT_verfahrensabschnitte",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": null,
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_TYP_verfahrensabschnitte",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": 42,
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_FEHLT_einordnungsnachweis",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_TYP_einordnungsnachweis",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": 42
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_GRUNDFRIST",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2029-01-01",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_NACHWEIS",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_INTERVALL_TYP",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        "x"
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_EXTRA",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung",
+          "extra": 1
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_UMGEKEHRT",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-02",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_ART",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "x"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_UEBERLAUF",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "9999-12-01",
+          "nachlaufereignis_am": "9999-12-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_ABSCHNITT_FEHLT_hemmungsbeginn_am",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": null,
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_ABSCHNITT_FEHLT_nachlaufereignis_am",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": null,
+          "nachlaufgrund": "stillstand_letzte_verfahrenshandlung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "VERJAEHRUNG_VERFAHRENSHEMMUNGSKETTE_ABSCHNITT_FEHLT_nachlaufgrund",
+    "funktion": "verjaehrung_verfahrenshemmungskette",
+    "eingaben": {
+      "fristlauf_erster_tag": "2030-01-01",
+      "grundfrist_letzter_tag": "2030-01-10",
+      "verfahrensabschnitte": [
+        {
+          "hemmungsbeginn_am": "2030-01-01",
+          "nachlaufereignis_am": "2030-01-01",
+          "nachlaufgrund": null
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierter Stillstand und anschließendes Weiterbetreiben; abgeschlossene Kalendertage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "2030Jan1bisJul1 einschließlich182Tage; neuer AbschnittJul5bis2031Jan5 einschließlich185Tage; Gesamt367Tage bei echter dreitägiger Lücke. Überlappung wird nur einmal gezählt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

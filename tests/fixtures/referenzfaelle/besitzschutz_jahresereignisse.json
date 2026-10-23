@@ -1,0 +1,525 @@
+[
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_GRENZEN",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        },
+        {
+          "ereignis_id": "grenze",
+          "lokal_am": "2023-05-10",
+          "zeitpunkt_utc": "2023-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "vorher_am_tag",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T11:59:59Z"
+        },
+        {
+          "ereignis_id": "gleich",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "nachher",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:01Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jahresfenster_erster_tag": "2023-05-10",
+        "beruecksichtigte_ereignis_ids": [
+          "grenze",
+          "vorher_am_tag"
+        ],
+        "ereignisanzahl": 2,
+        "mindestens_ein_ereignis": true
+      }
+    },
+    "herleitung": "Störung10.5.2024:Jahresfenster beginnt10.5.2023. Am Störungstag zählen ausschließlich tatsächlich frühere Ereignisse. Ein einziges qualifiziertes Ereignis genügt für1029-Zeitmerkmal.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_KEINE",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jahresfenster_erster_tag": "2023-05-10",
+        "beruecksichtigte_ereignis_ids": [],
+        "ereignisanzahl": 0,
+        "mindestens_ein_ereignis": false
+      }
+    },
+    "herleitung": "Störung10.5.2024:Jahresfenster beginnt10.5.2023. Am Störungstag zählen ausschließlich tatsächlich frühere Ereignisse. Ein einziges qualifiziertes Ereignis genügt für1029-Zeitmerkmal.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_EINMAL_GENUEGT",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "grenze",
+          "lokal_am": "2023-05-10",
+          "zeitpunkt_utc": "2023-05-10T12:00:00Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jahresfenster_erster_tag": "2023-05-10",
+        "beruecksichtigte_ereignis_ids": [
+          "grenze"
+        ],
+        "ereignisanzahl": 1,
+        "mindestens_ein_ereignis": true
+      }
+    },
+    "herleitung": "Störung10.5.2024:Jahresfenster beginnt10.5.2023. Am Störungstag zählen ausschließlich tatsächlich frühere Ereignisse. Ein einziges qualifiziertes Ereignis genügt für1029-Zeitmerkmal.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_NUR_ALT",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jahresfenster_erster_tag": "2023-05-10",
+        "beruecksichtigte_ereignis_ids": [],
+        "ereignisanzahl": 0,
+        "mindestens_ein_ereignis": false
+      }
+    },
+    "herleitung": "Störung10.5.2024:Jahresfenster beginnt10.5.2023. Am Störungstag zählen ausschließlich tatsächlich frühere Ereignisse. Ein einziges qualifiziertes Ereignis genügt für1029-Zeitmerkmal.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_SCHALTTAG",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-02-29",
+      "stoerung_utc": "2024-02-29T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "februar",
+          "lokal_am": "2023-02-28",
+          "zeitpunkt_utc": "2023-02-28T12:00:00Z"
+        }
+      ],
+      "monatsendregel": "letzter_monatstag",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "jahresfenster_erster_tag": "2023-02-28",
+        "beruecksichtigte_ereignis_ids": [
+          "februar"
+        ],
+        "ereignisanzahl": 1,
+        "mindestens_ein_ereignis": true
+      }
+    },
+    "herleitung": "Störung10.5.2024:Jahresfenster beginnt10.5.2023. Am Störungstag zählen ausschließlich tatsächlich frühere Ereignisse. Ein einziges qualifiziertes Ereignis genügt für1029-Zeitmerkmal.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_FEHLT_stoerung_lokal_am",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": null,
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        },
+        {
+          "ereignis_id": "grenze",
+          "lokal_am": "2023-05-10",
+          "zeitpunkt_utc": "2023-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "vorher_am_tag",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T11:59:59Z"
+        },
+        {
+          "ereignis_id": "gleich",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "nachher",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:01Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_FEHLT_stoerung_utc",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": null,
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        },
+        {
+          "ereignis_id": "grenze",
+          "lokal_am": "2023-05-10",
+          "zeitpunkt_utc": "2023-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "vorher_am_tag",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T11:59:59Z"
+        },
+        {
+          "ereignis_id": "gleich",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "nachher",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:01Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_FEHLT_ereignisse",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": null,
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_FEHLT_monatsendregel",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        },
+        {
+          "ereignis_id": "grenze",
+          "lokal_am": "2023-05-10",
+          "zeitpunkt_utc": "2023-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "vorher_am_tag",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T11:59:59Z"
+        },
+        {
+          "ereignis_id": "gleich",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "nachher",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:01Z"
+        }
+      ],
+      "monatsendregel": null,
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_FEHLT_einordnungsnachweis",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        },
+        {
+          "ereignis_id": "grenze",
+          "lokal_am": "2023-05-10",
+          "zeitpunkt_utc": "2023-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "vorher_am_tag",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T11:59:59Z"
+        },
+        {
+          "ereignis_id": "gleich",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "nachher",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:01Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_UNGUELTIG0",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        },
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_UNGUELTIG1",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {}
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_UNGUELTIG2",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": {},
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_UNGUELTIG3",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_UNGUELTIG4",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-05-10",
+      "stoerung_utc": "2024-05-10T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        },
+        {
+          "ereignis_id": "grenze",
+          "lokal_am": "2023-05-10",
+          "zeitpunkt_utc": "2023-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "vorher_am_tag",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T11:59:59Z"
+        },
+        {
+          "ereignis_id": "gleich",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "nachher",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:01Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BESITZSCHUTZ_JAHRESEREIGNISSE_UNGUELTIG5",
+    "funktion": "besitzschutz_jahresereignisse",
+    "eingaben": {
+      "stoerung_lokal_am": "2024-02-29",
+      "stoerung_utc": "2024-02-29T12:00:00Z",
+      "ereignisse": [
+        {
+          "ereignis_id": "alt",
+          "lokal_am": "2023-05-09",
+          "zeitpunkt_utc": "2023-05-09T12:00:00Z"
+        },
+        {
+          "ereignis_id": "grenze",
+          "lokal_am": "2023-05-10",
+          "zeitpunkt_utc": "2023-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "vorher_am_tag",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T11:59:59Z"
+        },
+        {
+          "ereignis_id": "gleich",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:00Z"
+        },
+        {
+          "ereignis_id": "nachher",
+          "lokal_am": "2024-05-10",
+          "zeitpunkt_utc": "2024-05-10T12:00:01Z"
+        }
+      ],
+      "monatsendregel": "nur_taggleiche_monate",
+      "einordnungsnachweis": "861II/862II: zeitliches Merkmal der konkreten Besitzerlangung im letzten Jahr vor Entziehung/Störung; rechtliche Fehlerhaftigkeit und Gegenüberbeziehung separat.1029: mindestens eine qualifizierte Dienstbarkeitsausübung im Jahresfenster, keine Mindesthäufigkeit über einmal hinaus. Gemeinsamer Rückwärtskern bestimmt Grenztagesbeginn mit ausdrücklich vorgegebener Monatsendmethode. Ereignisse am Grenztag zählen, Ereignisse am Störungstag nur soweit ihrUTC-Zeitpunkt tatsächlich vor der Störung liegt. Spätere/gleichzeitige Ereignisse zählen nicht. Für861/862die konkret betrachtete Besitzerlangung eingeben; nicht jede beliebige Ausübung als Neuerwerb behandeln. Vollständige und konsistente Zeitpunkte rechtlich vorqualifiziert, keine stille UTC-zu-Lokaldatum-Umrechnung. Ausgabe nur Zeitmerkmale, keine Besitzschutzentscheidung.864-Erlöschen/Anspruchswahrung getrennt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

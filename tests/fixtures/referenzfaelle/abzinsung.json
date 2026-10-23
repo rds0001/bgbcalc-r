@@ -1,0 +1,340 @@
+[
+  {
+    "fall_id": "ABZINS_001",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "1000 + 40 = 1040; nicht 1040 minus 4 Prozent von 1040.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_002",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1080",
+      "zeitanteil_zaehler": 2,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "pfand_rueckgabe",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "1000 + 2*40 = 1080; einfache Verzinsung, keine Potenz.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_003",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1020",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "1000 + 20 für ein halbes Jahr = 1020.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_004",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1000",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "12500",
+        "nenner": "13"
+      }
+    },
+    "herleitung": "1000/(26/25) = 12500/13, keine Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_005",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "0",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Kein Forderungsbetrag, keine Auszahlung.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_006",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 0,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1040",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Explizit belegter Nullzinsanteil: unveränderter Forderungsbetrag.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_007",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": false,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Mindestens eine gesetzliche Voraussetzung der Abzinsungsregel fehlt; keine Aussage über andere Ansprüche.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_008",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": false,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Mindestens eine gesetzliche Voraussetzung der Abzinsungsregel fehlt; keine Aussage über andere Ansprüche.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_009",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Mindestens eine gesetzliche Voraussetzung der Abzinsungsregel fehlt; keine Aussage über andere Ansprüche.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_010",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "-1",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des expliziten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_011",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 0,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des expliziten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_012",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": -1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des expliziten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_013",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "beliebig",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des expliziten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_014",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": 1,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des expliziten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_015",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": "1040",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verletzung des expliziten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  },
+  {
+    "fall_id": "ABZINS_016",
+    "funktion": "vorzeitiger_befriedigungsbetrag",
+    "eingaben": {
+      "forderungsbetrag": null,
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein voller Zinsjahresanteil bis Fälligkeit",
+      "unverzinslich": true,
+      "noch_nicht_faellig": true,
+      "befriedigungsgrund": "hypothek_gefaehrdung",
+      "voraussetzungen_erfuellt": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ohne Forderungsbetrag keine Berechnung.",
+    "pruefnachweis": "Vor Implementierung aus lokaler Norm und einfacher Rückrechnung von Auszahlung plus 4 Prozent Jahreszins abgeleitet."
+  }
+]

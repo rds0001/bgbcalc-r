@@ -1,0 +1,533 @@
+[
+  {
+    "fall_id": "MOD_001",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": null,
+        "massgebliche_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Miete genau7:3*100-100=200 monatliche Restgrenze.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_002",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "6.99",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": null,
+        "massgebliche_restgrenze": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Miete unter7:2*100-100=100.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_003",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7.01",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": null,
+        "massgebliche_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Miete über7:weiterhin3-Euro-Grenze.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_004",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "heizung_559",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "massgebliche_restgrenze": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Heizungsgrenze0.50*100-20=30, allgemeiner Rahmen200; kleinere Grenze30.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_005",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "heizung_559e",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "massgebliche_restgrenze": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Heizungsgrenze0.50*100-20=30, allgemeiner Rahmen200; kleinere Grenze30.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_006",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "290",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "heizung_559",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "massgebliche_restgrenze": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Auch Heizungsmodernisierung unterliegt dem kleineren allgemeinen Rest von10.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_007",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "50",
+      "erhoehungsart": "heizung_559e",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "massgebliche_restgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Heizungsgrenze ausgeschöpft.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_008",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "60",
+      "erhoehungsart": "heizung_559e",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "massgebliche_restgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bereits überschrittene Heizungsgrenze führt nicht zu negativer Erhöhungsmöglichkeit.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_009",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "300",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": null,
+        "massgebliche_restgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Allgemeine Grenze genau erreicht.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_010",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "350",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": null,
+        "massgebliche_restgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Kein negativer Rest oder automatisch berechneter Rückzahlungsanspruch.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_011",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "0.1",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "0",
+      "bisherige_monatliche_heizungserhoehung": "0",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "heizungs_restgrenze": null,
+        "massgebliche_restgrenze": {
+          "zaehler": "3",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Exakter Flächenbruch, keine Quadratmeter- oder Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_012",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "60",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "allgemeine_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "heizungs_restgrenze": null,
+        "massgebliche_restgrenze": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Erschöpfte Heizungsgrenze sperrt nicht pauschal andere Modernisierungsmaßnahmen.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_013",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Kappungsregel im ausgewählten Fall nicht anwendbar.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_014",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "0",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Fläche, Auswahl oder Heizungsanteil größer als Gesamtbetrag.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_015",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "-1",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Fläche, Auswahl oder Heizungsanteil größer als Gesamtbetrag.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_016",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "-1",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Fläche, Auswahl oder Heizungsanteil größer als Gesamtbetrag.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_017",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "-1",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Fläche, Auswahl oder Heizungsanteil größer als Gesamtbetrag.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_018",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "-1",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Fläche, Auswahl oder Heizungsanteil größer als Gesamtbetrag.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_019",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "101",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Fläche, Auswahl oder Heizungsanteil größer als Gesamtbetrag.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_020",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "heizung",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Fläche, Auswahl oder Heizungsanteil größer als Gesamtbetrag.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_021",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": "20",
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Fläche, Auswahl oder Heizungsanteil größer als Gesamtbetrag.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  },
+  {
+    "fall_id": "MOD_022",
+    "funktion": "modernisierung_kappungsgrenze",
+    "eingaben": {
+      "wohnflaeche": "100",
+      "monatliche_miete_je_quadratmeter": "7",
+      "bisherige_monatliche_erhoehung_gesamt": "100",
+      "bisherige_monatliche_heizungserhoehung": null,
+      "erhoehungsart": "allgemein",
+      "kappungsregel_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Bisherige Heizungssteigerung muss ausdrücklich angegeben sein, gegebenenfalls null.",
+    "pruefnachweis": "Vor Implementierung aus §§ 559 Abs. 3a/559e Abs. 3 der lokalen PDF hergeleitete Restgrenzen."
+  }
+]

@@ -1,0 +1,481 @@
+[
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_BASIS",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "1000",
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "880",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_VORLAEUFIGER_ABSCHLAGSANSATZ_BASIS",
+    "funktion": "bau_nachtrag_vorlaeufiger_abschlagsansatz",
+    "eingaben": {
+      "angebotene_mehrverguetung": "1000",
+      "einordnungsnachweis": "Qualifizierter zulässiger und gewählter80-Prozent-Weg."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "800",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_BASIS",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": "800",
+      "geschuldete_mehrverguetung": "600",
+      "einordnungsnachweis": "Qualifizierte vorläufige Zahlungen und endgültig geschuldete Mehrvergütung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "200",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_VAR_3",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "0",
+      "angemessene_zuschlaege_mehrkosten": "0",
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "-220",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_VAR_4",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "1000",
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": "1000",
+      "entfallende_zuschlaege": "100",
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_VORLAEUFIGER_ABSCHLAGSANSATZ_VAR_5",
+    "funktion": "bau_nachtrag_vorlaeufiger_abschlagsansatz",
+    "eingaben": {
+      "angebotene_mehrverguetung": "0.1",
+      "einordnungsnachweis": "Qualifizierter zulässiger und gewählter80-Prozent-Weg."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2",
+        "nenner": "25"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_VORLAEUFIGER_ABSCHLAGSANSATZ_VAR_6",
+    "funktion": "bau_nachtrag_vorlaeufiger_abschlagsansatz",
+    "eingaben": {
+      "angebotene_mehrverguetung": "0",
+      "einordnungsnachweis": "Qualifizierter zulässiger und gewählter80-Prozent-Weg."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_VAR_7",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": "800",
+      "geschuldete_mehrverguetung": "900",
+      "einordnungsnachweis": "Qualifizierte vorläufige Zahlungen und endgültig geschuldete Mehrvergütung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_VAR_8",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": "800",
+      "geschuldete_mehrverguetung": "800",
+      "einordnungsnachweis": "Qualifizierte vorläufige Zahlungen und endgültig geschuldete Mehrvergütung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_VAR_9",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": "800",
+      "geschuldete_mehrverguetung": "0",
+      "einordnungsnachweis": "Qualifizierte vorläufige Zahlungen und endgültig geschuldete Mehrvergütung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "800",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_FEHLT_erforderliche_mehrkosten",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": null,
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_FEHLT_angemessene_zuschlaege_mehrkosten",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "1000",
+      "angemessene_zuschlaege_mehrkosten": null,
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_FEHLT_entfallende_kosten",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "1000",
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": null,
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_FEHLT_entfallende_zuschlaege",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "1000",
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": null,
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_FEHLT_einordnungsnachweis",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "1000",
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_TYP",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": [],
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_NEGATIV",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "-1",
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": "Qualifizierte Anordnung und tatsächlich erforderliche Kosten samt Zuschlägen ohne ausgeschlossene Planung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAGSVERGUETUNG_DIFFERENZ_LEER",
+    "funktion": "bau_nachtragsverguetung_differenz",
+    "eingaben": {
+      "erforderliche_mehrkosten": "1000",
+      "angemessene_zuschlaege_mehrkosten": "100",
+      "entfallende_kosten": "200",
+      "entfallende_zuschlaege": "20",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_VORLAEUFIGER_ABSCHLAGSANSATZ_FEHLT_angebotene_mehrverguetung",
+    "funktion": "bau_nachtrag_vorlaeufiger_abschlagsansatz",
+    "eingaben": {
+      "angebotene_mehrverguetung": null,
+      "einordnungsnachweis": "Qualifizierter zulässiger und gewählter80-Prozent-Weg."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_VORLAEUFIGER_ABSCHLAGSANSATZ_FEHLT_einordnungsnachweis",
+    "funktion": "bau_nachtrag_vorlaeufiger_abschlagsansatz",
+    "eingaben": {
+      "angebotene_mehrverguetung": "1000",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_VORLAEUFIGER_ABSCHLAGSANSATZ_TYP",
+    "funktion": "bau_nachtrag_vorlaeufiger_abschlagsansatz",
+    "eingaben": {
+      "angebotene_mehrverguetung": [],
+      "einordnungsnachweis": "Qualifizierter zulässiger und gewählter80-Prozent-Weg."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_VORLAEUFIGER_ABSCHLAGSANSATZ_NEGATIV",
+    "funktion": "bau_nachtrag_vorlaeufiger_abschlagsansatz",
+    "eingaben": {
+      "angebotene_mehrverguetung": "-1",
+      "einordnungsnachweis": "Qualifizierter zulässiger und gewählter80-Prozent-Weg."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_VORLAEUFIGER_ABSCHLAGSANSATZ_LEER",
+    "funktion": "bau_nachtrag_vorlaeufiger_abschlagsansatz",
+    "eingaben": {
+      "angebotene_mehrverguetung": "1000",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_FEHLT_gezahlte_vorlaeufige_nachtragsverguetung",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": null,
+      "geschuldete_mehrverguetung": "600",
+      "einordnungsnachweis": "Qualifizierte vorläufige Zahlungen und endgültig geschuldete Mehrvergütung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_FEHLT_geschuldete_mehrverguetung",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": "800",
+      "geschuldete_mehrverguetung": null,
+      "einordnungsnachweis": "Qualifizierte vorläufige Zahlungen und endgültig geschuldete Mehrvergütung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": "800",
+      "geschuldete_mehrverguetung": "600",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_TYP",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": [],
+      "geschuldete_mehrverguetung": "600",
+      "einordnungsnachweis": "Qualifizierte vorläufige Zahlungen und endgültig geschuldete Mehrvergütung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_NEGATIV",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": "-1",
+      "geschuldete_mehrverguetung": "600",
+      "einordnungsnachweis": "Qualifizierte vorläufige Zahlungen und endgültig geschuldete Mehrvergütung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BAU_NACHTRAG_UEBERZAHLUNGSBETRAG_LEER",
+    "funktion": "bau_nachtrag_ueberzahlungsbetrag",
+    "eingaben": {
+      "gezahlte_vorlaeufige_nachtragsverguetung": "800",
+      "geschuldete_mehrverguetung": "600",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung der Kosten-/Zuschlagsdifferenz, vier Fünftel des Angebots oder positiver Überzahlungsrest.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

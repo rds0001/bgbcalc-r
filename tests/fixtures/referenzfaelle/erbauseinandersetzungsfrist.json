@@ -1,0 +1,785 @@
+[
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_VOR_GRENZE",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-30",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": false,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": false
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_GRENZENDE",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": false,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_NACH_GRENZE",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-02-01",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": false,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_PERSON_NATUERLICH",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "miterbenereignis",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": false
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_PERSON_JURISTISCH",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "miterbenereignis",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": true,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": false,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_PERSON_VORZEITIGES_ENDE",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2020-01-01",
+      "fortgeltungsanordnung": "miterbenereignis",
+      "angeordnetes_ereignis_am": "2020-01-01",
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": true,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_PERSON_JURISTISCH_VORZEITIG",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2020-01-01",
+      "fortgeltungsanordnung": "miterbenereignis",
+      "angeordnetes_ereignis_am": "2020-01-01",
+      "miterbe_juristische_person": true,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": false,
+        "angeordnetes_ereignis_eingetreten": true,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_NACHERBFOLGE",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "nacherbfolge",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": false
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_NACHERBFOLGE_JURISTISCHER_MITERBE",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "nacherbfolge",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": true,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": false
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_VERMAECHTNIS",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "vermaechtnisanfall",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": false
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_VERMAECHTNIS_JURISTISCHER_MITERBE",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "vermaechtnisanfall",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": true,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": false
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_VERMAECHTNIS_AM_GRENZTAG",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "vermaechtnisanfall",
+      "angeordnetes_ereignis_am": "2030-01-31",
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": true,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_VERMAECHTNIS_SPAETER",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2040-01-31",
+      "fortgeltungsanordnung": "vermaechtnisanfall",
+      "angeordnetes_ereignis_am": "2040-01-31",
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": true,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_VERMAECHTNIS_BEI_ERBFALL",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2000-01-31",
+      "fortgeltungsanordnung": "vermaechtnisanfall",
+      "angeordnetes_ereignis_am": "2000-01-31",
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "besondere_fortgeltung_zulaessig": true,
+        "angeordnetes_ereignis_eingetreten": true,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_NICHT_QUALIFIZIERT",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": false,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_SCHALTTAG",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-02-29",
+      "prueftag": "2030-02-28",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-02-28",
+        "besondere_fortgeltung_zulaessig": false,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_UNTERGRENZE",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "0001-01-01",
+      "prueftag": "0031-01-01",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "0031-01-01",
+        "besondere_fortgeltung_zulaessig": false,
+        "angeordnetes_ereignis_eingetreten": false,
+        "zeitliche_wirkung_beendet": true
+      }
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_FEHLT_erbfall_am",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": null,
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_TYP_erbfall_am",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": [],
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_FEHLT_prueftag",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": null,
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_TYP_prueftag",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": [],
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_FEHLT_fortgeltungsanordnung",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": null,
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_TYP_fortgeltungsanordnung",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": [],
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_TYP_angeordnetes_ereignis_am",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": [],
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_FEHLT_miterbe_juristische_person",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": null,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_TYP_miterbe_juristische_person",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": 1,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_FEHLT_anordnung_rechtlich_qualifiziert",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": null,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_TYP_anordnung_rechtlich_qualifiziert",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": 1,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_FEHLT_einordnungsnachweis",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_TYP_einordnungsnachweis",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_PRUEFTAG_VORHER",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2000-01-30",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_EREIGNIS_VORHER",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "miterbenereignis",
+      "angeordnetes_ereignis_am": "2000-01-30",
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_EREIGNIS_ZUKUNFT",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "miterbenereignis",
+      "angeordnetes_ereignis_am": "2030-02-01",
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_EREIGNIS_OHNE_ANORDNUNG",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": "2030-01-31",
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_GRUND_UNBEKANNT",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "geschwistergeburt",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_UEBERLAUF",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "9990-01-01",
+      "prueftag": "9999-12-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch wirksame unbefristete Beschränkung; gesonderte Durchbrechungs-/Beendigungsgründe geprüft."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBAUSEINANDERSETZUNGSFRIST_NACHWEIS_LEER",
+    "funktion": "erbauseinandersetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "fortgeltungsanordnung": "keine",
+      "angeordnetes_ereignis_am": null,
+      "miterbe_juristische_person": false,
+      "anordnung_rechtlich_qualifiziert": true,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Dreißigjahresgrenze am Tagesende und unterschiedliche gesetzliche Fortgeltungsalternativen; Eintritt eines angeordneten Ereignisses beendet früher oder später.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

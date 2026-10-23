@@ -1,0 +1,662 @@
+[
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_VERTEILUNG",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "angerechneter_betrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "angerechneter_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100aufA60/B40ergibtA20/B30Rest. BestimmungA80beiForderung50undB20führt50/20Anrechnung,30unzugeordnet; keine Umverteilung. Drittelbeträge exakt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_TEIL_UNBESTIMMT",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "120",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "angerechneter_betrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "angerechneter_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100aufA60/B40ergibtA20/B30Rest. BestimmungA80beiForderung50undB20führt50/20Anrechnung,30unzugeordnet; keine Umverteilung. Drittelbeträge exakt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_UEBERHANG_NICHT_UMVERTEILEN",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "50",
+          "bestimmter_zahlungsbetrag": "80"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "100",
+          "bestimmter_zahlungsbetrag": "20"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "angerechneter_betrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "angerechneter_betrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100aufA60/B40ergibtA20/B30Rest. BestimmungA80beiForderung50undB20führt50/20Anrechnung,30unzugeordnet; keine Umverteilung. Drittelbeträge exakt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_NULLZAHLUNG",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "0",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "0"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "angerechneter_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "angerechneter_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "70",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100aufA60/B40ergibtA20/B30Rest. BestimmungA80beiForderung50undB20führt50/20Anrechnung,30unzugeordnet; keine Umverteilung. Drittelbeträge exakt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_NULLFORDERUNG",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "0",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "angerechneter_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "angerechneter_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "60",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100aufA60/B40ergibtA20/B30Rest. BestimmungA80beiForderung50undB20führt50/20Anrechnung,30unzugeordnet; keine Umverteilung. Drittelbeträge exakt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_BRUECHE",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "1",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "1",
+          "bestimmter_zahlungsbetrag": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "1",
+          "bestimmter_zahlungsbetrag": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "A",
+            "angerechneter_betrag": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "restforderung": {
+              "zaehler": "2",
+              "nenner": "3"
+            }
+          },
+          {
+            "schuld_id": "B",
+            "angerechneter_betrag": {
+              "zaehler": "2",
+              "nenner": "3"
+            },
+            "restforderung": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100aufA60/B40ergibtA20/B30Rest. BestimmungA80beiForderung50undB20führt50/20Anrechnung,30unzugeordnet; keine Umverteilung. Drittelbeträge exakt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_REIHENFOLGE",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        },
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zuordnungen": [
+          {
+            "schuld_id": "B",
+            "angerechneter_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "schuld_id": "A",
+            "angerechneter_betrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "restforderung": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          }
+        ],
+        "nicht_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100aufA60/B40ergibtA20/B30Rest. BestimmungA80beiForderung50undB20führt50/20Anrechnung,30unzugeordnet; keine Umverteilung. Drittelbeträge exakt.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_FEHLTzahlung",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": null,
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_TYPzahlung",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": {},
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_FEHLTbetragsbestimmungen",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": null,
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_TYPbetragsbestimmungen",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": {},
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_FEHLTeinordnungsnachweis",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_TYPeinordnungsnachweis",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_UNGUELTIG0",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "99",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_UNGUELTIG1",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_UNGUELTIG2",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_UNGUELTIG3",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "-1",
+          "bestimmter_zahlungsbetrag": "0"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_UNGUELTIG4",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "-1"
+        }
+      ],
+      "einordnungsnachweis": "§366I: rechtlich vorgegebene Betragsbestimmung je Schuld bis zur Höhe des offenen Betrags ausführen; verbleibende Forderungen und nicht zugeordneten Teil der Gesamtzahlung ausweisen. Keine zusätzliche Verwendung von Überhängen für andere Schulden entgegen der qualifizierten Bestimmung. Summe der erklärten Betragsbestimmungen größer als Zahlung ist widersprüchliche Eingabe, keine erfundene anteilige Kürzung. Gesetzliche Ersatzreihenfolge366II nur bei fehlender Bestimmung in eigener Funktion;367Bestandteile einer Schuld separat. Nicht zugeordnete Zahlung ist keine automatische Rückforderung. Abweichende Vereinbarungen nur als zuvor rechtlich festgelegte Betragszuordnung, keine freie Vertragsauslegung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GELDSCHULDEN_NACH_BETRAGSBESTIMMUNG_TILGEN_UNGUELTIG5",
+    "funktion": "geldschulden_nach_betragsbestimmung_tilgen",
+    "eingaben": {
+      "zahlung": "100",
+      "betragsbestimmungen": [
+        {
+          "schuld_id": "A",
+          "offener_betrag": "80",
+          "bestimmter_zahlungsbetrag": "60"
+        },
+        {
+          "schuld_id": "B",
+          "offener_betrag": "70",
+          "bestimmter_zahlungsbetrag": "40"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

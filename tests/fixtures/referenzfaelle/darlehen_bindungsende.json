@@ -1,0 +1,298 @@
+[
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_GLEICH",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einmonatige_kuendigungsfrist_letzter_tag": "2024-02-29",
+        "monatsfrist_zum_bindungsende_eingehalten": true,
+        "rechnerischer_beendigungstag": "2024-02-29"
+      }
+    },
+    "herleitung": "31.1.2024 plus1Kalendermonat=29.2.2024. Ohne Periodenbeschränkung max(29.2.,Bindungsende); mit Periodenbeschränkung nur vorgegebener fristgerechter Bindungsendtag, sonstnull.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_BINDUNG_SPAETER",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-03-31",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einmonatige_kuendigungsfrist_letzter_tag": "2024-02-29",
+        "monatsfrist_zum_bindungsende_eingehalten": true,
+        "rechnerischer_beendigungstag": "2024-03-31"
+      }
+    },
+    "herleitung": "31.1.2024 plus1Kalendermonat=29.2.2024. Ohne Periodenbeschränkung max(29.2.,Bindungsende); mit Periodenbeschränkung nur vorgegebener fristgerechter Bindungsendtag, sonstnull.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_MONATSFRIST_SPAETER",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-28",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einmonatige_kuendigungsfrist_letzter_tag": "2024-02-29",
+        "monatsfrist_zum_bindungsende_eingehalten": false,
+        "rechnerischer_beendigungstag": "2024-02-29"
+      }
+    },
+    "herleitung": "31.1.2024 plus1Kalendermonat=29.2.2024. Ohne Periodenbeschränkung max(29.2.,Bindungsende); mit Periodenbeschränkung nur vorgegebener fristgerechter Bindungsendtag, sonstnull.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_PERIODISCH_GLEICH",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": true,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einmonatige_kuendigungsfrist_letzter_tag": "2024-02-29",
+        "monatsfrist_zum_bindungsende_eingehalten": true,
+        "rechnerischer_beendigungstag": "2024-02-29"
+      }
+    },
+    "herleitung": "31.1.2024 plus1Kalendermonat=29.2.2024. Ohne Periodenbeschränkung max(29.2.,Bindungsende); mit Periodenbeschränkung nur vorgegebener fristgerechter Bindungsendtag, sonstnull.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_PERIODISCH_VERSPAETET",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-28",
+      "periodische_anpassung_bis_ein_jahr": true,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einmonatige_kuendigungsfrist_letzter_tag": "2024-02-29",
+        "monatsfrist_zum_bindungsende_eingehalten": false,
+        "rechnerischer_beendigungstag": null
+      }
+    },
+    "herleitung": "31.1.2024 plus1Kalendermonat=29.2.2024. Ohne Periodenbeschränkung max(29.2.,Bindungsende); mit Periodenbeschränkung nur vorgegebener fristgerechter Bindungsendtag, sonstnull.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_PERIODISCH_SPAETER",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-03-31",
+      "periodische_anpassung_bis_ein_jahr": true,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einmonatige_kuendigungsfrist_letzter_tag": "2024-02-29",
+        "monatsfrist_zum_bindungsende_eingehalten": true,
+        "rechnerischer_beendigungstag": "2024-03-31"
+      }
+    },
+    "herleitung": "31.1.2024 plus1Kalendermonat=29.2.2024. Ohne Periodenbeschränkung max(29.2.,Bindungsende); mit Periodenbeschränkung nur vorgegebener fristgerechter Bindungsendtag, sonstnull.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_FEHLTkuendigungszugang_am",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": null,
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_TYPkuendigungszugang_am",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": {},
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_FEHLTsollzinsbindung_endet_am",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": null,
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_TYPsollzinsbindung_endet_am",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": {},
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_FEHLTperiodische_anpassung_bis_ein_jahr",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": null,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_TYPperiodische_anpassung_bis_ein_jahr",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": {},
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_FEHLTeinordnungsnachweis",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_TYPeinordnungsnachweis",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_UNGUELTIG0",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-30",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_UNGUELTIG1",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": 1,
+      "einordnungsnachweis": "§489I1: Einmonatsfrist ab Zugang mit Sollzinsbindungsende verbinden. Ohne Periodenbeschränkung ist der spätere dieser beiden Tage der rechnerisch früheste Beendigungstag. Bei qualifizierter Anpassung in Zeiträumen bis zu einem Jahr ist ausschließlich der vorgegebene Bindungsendtag erfasst; ist dafür die Monatsfrist nicht eingehalten, kein fristgerechter Termin in dieser Periode (null). Keine nächste Periode oder neue Zinsvereinbarung erfinden. Kündigungsrecht und formelle Wirksamkeit sind vorqualifiziert; keine Feiertagsverschiebung der Kündigungsfrist."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "DARLEHEN_KUENDIGUNG_ZUM_SOLLZINSBINDUNGSENDE_UNGUELTIG2",
+    "funktion": "darlehen_kuendigung_zum_sollzinsbindungsende",
+    "eingaben": {
+      "kuendigungszugang_am": "2024-01-31",
+      "sollzinsbindung_endet_am": "2024-02-29",
+      "periodische_anpassung_bis_ein_jahr": false,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

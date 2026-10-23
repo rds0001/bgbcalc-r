@@ -1,0 +1,358 @@
+[
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_PAUSCHALE_ZUERST",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenbasis_pauschale_vor_kapitalabzug": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "kostenbasis_kapitalabzug_vor_pauschale": {
+          "zaehler": "5600",
+          "nenner": "1"
+        },
+        "ausgewaehlte_kostenbasis": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "pauschalenmethode": "pauschale_vor_kapitalabzug"
+      }
+    },
+    "herleitung": "10000*70%-2000=5000gegen(10000-2000)*70%=5600;8000Zuschuss=>0oder1400.6000*70%-2000=2200gegen4000*70%=2800.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_KAPITAL_ZUERST",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "kapitalabzug_vor_pauschale",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenbasis_pauschale_vor_kapitalabzug": {
+          "zaehler": "5000",
+          "nenner": "1"
+        },
+        "kostenbasis_kapitalabzug_vor_pauschale": {
+          "zaehler": "5600",
+          "nenner": "1"
+        },
+        "ausgewaehlte_kostenbasis": {
+          "zaehler": "5600",
+          "nenner": "1"
+        },
+        "pauschalenmethode": "kapitalabzug_vor_pauschale"
+      }
+    },
+    "herleitung": "10000*70%-2000=5000gegen(10000-2000)*70%=5600;8000Zuschuss=>0oder1400.6000*70%-2000=2200gegen4000*70%=2800.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_HOHE_FOERDERUNG",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "8000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenbasis_pauschale_vor_kapitalabzug": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kostenbasis_kapitalabzug_vor_pauschale": {
+          "zaehler": "1400",
+          "nenner": "1"
+        },
+        "ausgewaehlte_kostenbasis": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pauschalenmethode": "pauschale_vor_kapitalabzug"
+      }
+    },
+    "herleitung": "10000*70%-2000=5000gegen(10000-2000)*70%=5600;8000Zuschuss=>0oder1400.6000*70%-2000=2200gegen4000*70%=2800.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_VOLLE_FOERDERUNG",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "10000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenbasis_pauschale_vor_kapitalabzug": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kostenbasis_kapitalabzug_vor_pauschale": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgewaehlte_kostenbasis": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pauschalenmethode": "pauschale_vor_kapitalabzug"
+      }
+    },
+    "herleitung": "10000*70%-2000=5000gegen(10000-2000)*70%=5600;8000Zuschuss=>0oder1400.6000*70%-2000=2200gegen4000*70%=2800.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_KEINE_FOERDERUNG",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "0",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenbasis_pauschale_vor_kapitalabzug": {
+          "zaehler": "7000",
+          "nenner": "1"
+        },
+        "kostenbasis_kapitalabzug_vor_pauschale": {
+          "zaehler": "7000",
+          "nenner": "1"
+        },
+        "ausgewaehlte_kostenbasis": {
+          "zaehler": "7000",
+          "nenner": "1"
+        },
+        "pauschalenmethode": "pauschale_vor_kapitalabzug"
+      }
+    },
+    "herleitung": "10000*70%-2000=5000gegen(10000-2000)*70%=5600;8000Zuschuss=>0oder1400.6000*70%-2000=2200gegen4000*70%=2800.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_VORBELASTUNG_GRENZE",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "6000",
+      "frueher_geltend_gemachte_kosten": "4000",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kostenbasis_pauschale_vor_kapitalabzug": {
+          "zaehler": "2200",
+          "nenner": "1"
+        },
+        "kostenbasis_kapitalabzug_vor_pauschale": {
+          "zaehler": "2800",
+          "nenner": "1"
+        },
+        "ausgewaehlte_kostenbasis": {
+          "zaehler": "2200",
+          "nenner": "1"
+        },
+        "pauschalenmethode": "pauschale_vor_kapitalabzug"
+      }
+    },
+    "herleitung": "10000*70%-2000=5000gegen(10000-2000)*70%=5600;8000Zuschuss=>0oder1400.6000*70%-2000=2200gegen4000*70%=2800.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_FEHLT_geltend_gemachte_kosten",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": null,
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_FEHLT_frueher_geltend_gemachte_kosten",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": null,
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_FEHLT_abzuziehende_kapitalzuschuesse",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": null,
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_FEHLT_pauschalenmethode",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": null,
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_FEHLT_methodennachweis",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_UNGUELTIG0",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "1",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_UNGUELTIG1",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "10001",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_UNGUELTIG2",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "-1",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_UNGUELTIG3",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "automatisch",
+      "methodennachweis": "Bedingte559c/559aI-Kostenrechnung mit zwingend begründeter Reihenfolge, ohne universelle rechtliche Festlegung. Kostengrenze10000abzüglich relevanter früherer Kosten vor dieser Rechnung mit vorhandenem Kern prüfen. Pauschale_vor_kapitalabzug: max(0,0.7K-Z). Kapitalabzug_vor_pauschale:0.7(K-Z). Beide Ergebnisse ausweisen, ausgewählte Kostenbasis für8%-Umlage verwenden. Nicht den Darlehensnennbetrag als Kapitalzuschuss abziehen.559cI3schließt559aII1bis3(Zinsermäßigung)aus, nicht559aII4(laufende Zuschüsse/Darlehen); letztere nach jährlicher8%-Umlage und rechtlich bestimmter Kappungsreihenfolge mit vorhandenem Förderkappungskern berücksichtigen. Keine tatsächlichen Erhaltungskosten neben30%-Pauschale. Förderzuordnung zu Wohnungen und Erklärungs-/Härtevoraussetzungen separat; keine Förderung automatisch erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MODERNISIERUNG_VEREINFACHTE_FOERDERKOSTENBASIS_UNGUELTIG4",
+    "funktion": "modernisierung_vereinfachte_foerderkostenbasis",
+    "eingaben": {
+      "geltend_gemachte_kosten": "10000",
+      "frueher_geltend_gemachte_kosten": "0",
+      "abzuziehende_kapitalzuschuesse": "2000",
+      "pauschalenmethode": "pauschale_vor_kapitalabzug",
+      "methodennachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

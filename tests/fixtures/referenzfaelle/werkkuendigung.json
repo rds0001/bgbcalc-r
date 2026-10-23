@@ -1,0 +1,470 @@
+[
+  {
+    "fall_id": "WKU_001",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "24000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "20000 erbrachte Vergütung + 5 Prozent von 80000 nicht erbrachter Vergütung = 24000.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_002",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "0",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "4000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ohne erbrachte Leistung nur 5 Prozent des nicht erbrachten Teils.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_003",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "0",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Nicht erbrachte Leistungen können trotz noch nicht vollendetem Werk mit null vergütet sein.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_004",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "0",
+      "nicht_erbrachte_verguetung": "0.01",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "2000"
+      }
+    },
+    "herleitung": "5 Prozent eines Cents ohne automatische Rundung.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_005",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "konkret",
+      "ersparte_aufwendungen": "50000",
+      "anderweitiger_erwerb": "10000",
+      "boeswillig_unterlassener_erwerb": "5000",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "35000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "100000 vereinbarte Gesamtvergütung minus 50000 minus 10000 minus 5000 = 35000.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_006",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "konkret",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Konkrete Abrechnung ohne nachgewiesene Abzüge; nicht automatisch auf 5 Prozent begrenzen.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_007",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "konkret",
+      "ersparte_aufwendungen": "80000",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Vollständig ersparter nicht erbrachter Vergütungsanteil.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_008",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "konkret",
+      "ersparte_aufwendungen": "100000",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Abzüge verbrauchen die Gesamtvergütung.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_009",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "konkret",
+      "ersparte_aufwendungen": "110000",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Kein negativer Vergütungsanspruch; kein eigener Rückzahlungsanspruch aus dieser Funktion.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_010",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": false,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Freie Bestellerkündigung unwirksam, Werk vollendet oder § 650u Abs. 2 schließt § 648 aus.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_011",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": true,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Freie Bestellerkündigung unwirksam, Werk vollendet oder § 650u Abs. 2 schließt § 648 aus.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_012",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Freie Bestellerkündigung unwirksam, Werk vollendet oder § 650u Abs. 2 schließt § 648 aus.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_013",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "-1",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe; konkrete Abzüge nicht gleichzeitig mit ungekürzter Fünfprozentvermutung verwenden.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_014",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "-1",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe; konkrete Abzüge nicht gleichzeitig mit ungekürzter Fünfprozentvermutung verwenden.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_015",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "konkret",
+      "ersparte_aufwendungen": "-1",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe; konkrete Abzüge nicht gleichzeitig mit ungekürzter Fünfprozentvermutung verwenden.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_016",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "fuenf",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe; konkrete Abzüge nicht gleichzeitig mit ungekürzter Fünfprozentvermutung verwenden.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_017",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": 1,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe; konkrete Abzüge nicht gleichzeitig mit ungekürzter Fünfprozentvermutung verwenden.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_018",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "1",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe; konkrete Abzüge nicht gleichzeitig mit ungekürzter Fünfprozentvermutung verwenden.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_019",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "1",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe; konkrete Abzüge nicht gleichzeitig mit ungekürzter Fünfprozentvermutung verwenden.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_020",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": "vermutung",
+      "ersparte_aufwendungen": "1",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe; konkrete Abzüge nicht gleichzeitig mit ungekürzter Fünfprozentvermutung verwenden.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  },
+  {
+    "fall_id": "WKU_021",
+    "funktion": "werk_bestellerkuendigung_verguetung",
+    "eingaben": {
+      "erbrachte_verguetung": "20000",
+      "nicht_erbrachte_verguetung": "80000",
+      "abrechnungsart": null,
+      "ersparte_aufwendungen": "0",
+      "anderweitiger_erwerb": "0",
+      "boeswillig_unterlassener_erwerb": "0",
+      "bestellerkuendigung_wirksam": true,
+      "werk_vollendet": false,
+      "bautraegervertrag": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Auswahl zwischen konkreter Abrechnung und Vermutung fehlt.",
+    "pruefnachweis": "Vor Implementierung aus § 648 der lokalen PDF abgeleitete Gesamtvergütung, Anrechnung oder Fünfprozentvermutung."
+  }
+]

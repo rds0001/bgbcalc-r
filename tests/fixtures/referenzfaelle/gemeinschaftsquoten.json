@@ -1,0 +1,6142 @@
+[
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_GLEICH",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "aufgeloeste_anteile": [
+          {
+            "person_id": "A",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_VERMAECHTNIS",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftliches_vermaechtnis_2157",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "aufgeloeste_anteile": [
+          {
+            "person_id": "A",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_VERSCHACHTELT",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "H",
+          "bestimmter_anteil": "0.5",
+          "untergruppe": [
+            {
+              "knoten_id": "A",
+              "bestimmter_anteil": {
+                "zaehler": "1",
+                "nenner": "3"
+              },
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "B",
+              "bestimmter_anteil": {
+                "zaehler": "2",
+                "nenner": "3"
+              },
+              "untergruppe": null
+            }
+          ]
+        },
+        {
+          "knoten_id": "C",
+          "bestimmter_anteil": "0.5",
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "aufgeloeste_anteile": [
+          {
+            "person_id": "A",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "12"
+            }
+          },
+          {
+            "person_id": "B",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            }
+          },
+          {
+            "person_id": "C",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_UNTERBELEGUNG",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": "0.1",
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": "0.2",
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "aufgeloeste_anteile": [
+          {
+            "person_id": "A",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "6"
+            }
+          },
+          {
+            "person_id": "B",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_UEBERBELEGUNG",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": "1",
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": "1",
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "aufgeloeste_anteile": [
+          {
+            "person_id": "A",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_GEMISCHT_REST",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": "0.5",
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "C",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "aufgeloeste_anteile": [
+          {
+            "person_id": "A",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          },
+          {
+            "person_id": "C",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_GEMISCHT_ERHOEHUNG",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": "1",
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "aufgeloeste_anteile": [
+          {
+            "person_id": "A",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B",
+            "anteil": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_NICHT_ANWENDBAR",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": false,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_FEHLT_gemeinschaftlicher_anteil",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": null,
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_TYP_gemeinschaftlicher_anteil",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": [],
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_FEHLT_gruppenmitglieder",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": null,
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_TYP_gruppenmitglieder",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": {},
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_FEHLT_regelkontext",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": null,
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_TYP_regelkontext",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": [],
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_FEHLT_gruppeneinsetzung_qualifiziert",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": null,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_TYP_gruppeneinsetzung_qualifiziert",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": 1,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_FEHLT_einordnungsnachweis",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_TYP_einordnungsnachweis",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_OBERQUOTE_NULL",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_OBERQUOTE_ZU_GROSS",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "2",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_NUR_EINER",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_FEHLERSTRUKTUR",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {},
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_DOPPELT",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_DOPPELT_TIEF",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "H",
+          "bestimmter_anteil": null,
+          "untergruppe": [
+            {
+              "knoten_id": "A",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "B",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            }
+          ]
+        },
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_UNTERGRUPPE_FALSCH",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": "x"
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_NACHWEIS_LEER",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "A",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_TIEFE",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "H19",
+          "bestimmter_anteil": null,
+          "untergruppe": [
+            {
+              "knoten_id": "H18",
+              "bestimmter_anteil": null,
+              "untergruppe": [
+                {
+                  "knoten_id": "H17",
+                  "bestimmter_anteil": null,
+                  "untergruppe": [
+                    {
+                      "knoten_id": "H16",
+                      "bestimmter_anteil": null,
+                      "untergruppe": [
+                        {
+                          "knoten_id": "H15",
+                          "bestimmter_anteil": null,
+                          "untergruppe": [
+                            {
+                              "knoten_id": "H14",
+                              "bestimmter_anteil": null,
+                              "untergruppe": [
+                                {
+                                  "knoten_id": "H13",
+                                  "bestimmter_anteil": null,
+                                  "untergruppe": [
+                                    {
+                                      "knoten_id": "H12",
+                                      "bestimmter_anteil": null,
+                                      "untergruppe": [
+                                        {
+                                          "knoten_id": "H11",
+                                          "bestimmter_anteil": null,
+                                          "untergruppe": [
+                                            {
+                                              "knoten_id": "H10",
+                                              "bestimmter_anteil": null,
+                                              "untergruppe": [
+                                                {
+                                                  "knoten_id": "H9",
+                                                  "bestimmter_anteil": null,
+                                                  "untergruppe": [
+                                                    {
+                                                      "knoten_id": "H8",
+                                                      "bestimmter_anteil": null,
+                                                      "untergruppe": [
+                                                        {
+                                                          "knoten_id": "H7",
+                                                          "bestimmter_anteil": null,
+                                                          "untergruppe": [
+                                                            {
+                                                              "knoten_id": "H6",
+                                                              "bestimmter_anteil": null,
+                                                              "untergruppe": [
+                                                                {
+                                                                  "knoten_id": "H5",
+                                                                  "bestimmter_anteil": null,
+                                                                  "untergruppe": [
+                                                                    {
+                                                                      "knoten_id": "H4",
+                                                                      "bestimmter_anteil": null,
+                                                                      "untergruppe": [
+                                                                        {
+                                                                          "knoten_id": "H3",
+                                                                          "bestimmter_anteil": null,
+                                                                          "untergruppe": [
+                                                                            {
+                                                                              "knoten_id": "H2",
+                                                                              "bestimmter_anteil": null,
+                                                                              "untergruppe": [
+                                                                                {
+                                                                                  "knoten_id": "H1",
+                                                                                  "bestimmter_anteil": null,
+                                                                                  "untergruppe": [
+                                                                                    {
+                                                                                      "knoten_id": "H0",
+                                                                                      "bestimmter_anteil": null,
+                                                                                      "untergruppe": [
+                                                                                        {
+                                                                                          "knoten_id": "ENDE_A",
+                                                                                          "bestimmter_anteil": null,
+                                                                                          "untergruppe": null
+                                                                                        },
+                                                                                        {
+                                                                                          "knoten_id": "ENDE_B",
+                                                                                          "bestimmter_anteil": null,
+                                                                                          "untergruppe": null
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "knoten_id": "C0",
+                                                                                      "bestimmter_anteil": null,
+                                                                                      "untergruppe": null
+                                                                                    }
+                                                                                  ]
+                                                                                },
+                                                                                {
+                                                                                  "knoten_id": "C1",
+                                                                                  "bestimmter_anteil": null,
+                                                                                  "untergruppe": null
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "knoten_id": "C2",
+                                                                              "bestimmter_anteil": null,
+                                                                              "untergruppe": null
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "knoten_id": "C3",
+                                                                          "bestimmter_anteil": null,
+                                                                          "untergruppe": null
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "knoten_id": "C4",
+                                                                      "bestimmter_anteil": null,
+                                                                      "untergruppe": null
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "knoten_id": "C5",
+                                                                  "bestimmter_anteil": null,
+                                                                  "untergruppe": null
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "knoten_id": "C6",
+                                                              "bestimmter_anteil": null,
+                                                              "untergruppe": null
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "knoten_id": "C7",
+                                                          "bestimmter_anteil": null,
+                                                          "untergruppe": null
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "knoten_id": "C8",
+                                                      "bestimmter_anteil": null,
+                                                      "untergruppe": null
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "knoten_id": "C9",
+                                                  "bestimmter_anteil": null,
+                                                  "untergruppe": null
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "knoten_id": "C10",
+                                              "bestimmter_anteil": null,
+                                              "untergruppe": null
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "knoten_id": "C11",
+                                          "bestimmter_anteil": null,
+                                          "untergruppe": null
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "knoten_id": "C12",
+                                      "bestimmter_anteil": null,
+                                      "untergruppe": null
+                                    }
+                                  ]
+                                },
+                                {
+                                  "knoten_id": "C13",
+                                  "bestimmter_anteil": null,
+                                  "untergruppe": null
+                                }
+                              ]
+                            },
+                            {
+                              "knoten_id": "C14",
+                              "bestimmter_anteil": null,
+                              "untergruppe": null
+                            }
+                          ]
+                        },
+                        {
+                          "knoten_id": "C15",
+                          "bestimmter_anteil": null,
+                          "untergruppe": null
+                        }
+                      ]
+                    },
+                    {
+                      "knoten_id": "C16",
+                      "bestimmter_anteil": null,
+                      "untergruppe": null
+                    }
+                  ]
+                },
+                {
+                  "knoten_id": "C17",
+                  "bestimmter_anteil": null,
+                  "untergruppe": null
+                }
+              ]
+            },
+            {
+              "knoten_id": "C18",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            }
+          ]
+        },
+        {
+          "knoten_id": "C19",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GEMEINSCHAFTSQUOTEN_AUFLOESEN_KNOTENZAHL",
+    "funktion": "gemeinschaftsquoten_aufloesen",
+    "eingaben": {
+      "gemeinschaftlicher_anteil": "0.5",
+      "gruppenmitglieder": [
+        {
+          "knoten_id": "H",
+          "bestimmter_anteil": null,
+          "untergruppe": [
+            {
+              "knoten_id": "A0",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A1",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A2",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A3",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A4",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A5",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A6",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A7",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A8",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A9",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A10",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A11",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A12",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A13",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A14",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A15",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A16",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A17",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A18",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A19",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A20",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A21",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A22",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A23",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A24",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A25",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A26",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A27",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A28",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A29",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A30",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A31",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A32",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A33",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A34",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A35",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A36",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A37",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A38",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A39",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A40",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A41",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A42",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A43",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A44",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A45",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A46",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A47",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A48",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A49",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A50",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A51",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A52",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A53",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A54",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A55",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A56",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A57",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A58",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A59",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A60",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A61",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A62",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A63",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A64",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A65",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A66",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A67",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A68",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A69",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A70",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A71",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A72",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A73",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A74",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A75",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A76",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A77",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A78",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A79",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A80",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A81",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A82",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A83",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A84",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A85",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A86",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A87",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A88",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A89",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A90",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A91",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A92",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A93",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A94",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A95",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A96",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A97",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A98",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A99",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A100",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A101",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A102",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A103",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A104",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A105",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A106",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A107",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A108",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A109",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A110",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A111",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A112",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A113",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A114",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A115",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A116",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A117",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A118",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A119",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A120",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A121",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A122",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A123",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A124",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A125",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A126",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A127",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A128",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A129",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A130",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A131",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A132",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A133",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A134",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A135",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A136",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A137",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A138",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A139",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A140",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A141",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A142",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A143",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A144",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A145",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A146",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A147",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A148",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A149",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A150",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A151",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A152",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A153",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A154",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A155",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A156",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A157",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A158",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A159",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A160",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A161",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A162",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A163",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A164",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A165",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A166",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A167",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A168",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A169",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A170",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A171",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A172",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A173",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A174",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A175",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A176",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A177",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A178",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A179",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A180",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A181",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A182",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A183",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A184",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A185",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A186",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A187",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A188",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A189",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A190",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A191",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A192",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A193",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A194",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A195",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A196",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A197",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A198",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A199",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A200",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A201",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A202",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A203",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A204",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A205",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A206",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A207",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A208",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A209",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A210",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A211",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A212",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A213",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A214",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A215",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A216",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A217",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A218",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A219",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A220",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A221",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A222",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A223",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A224",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A225",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A226",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A227",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A228",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A229",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A230",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A231",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A232",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A233",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A234",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A235",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A236",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A237",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A238",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A239",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A240",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A241",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A242",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A243",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A244",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A245",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A246",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A247",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A248",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A249",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A250",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A251",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A252",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A253",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A254",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A255",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A256",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A257",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A258",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A259",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A260",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A261",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A262",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A263",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A264",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A265",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A266",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A267",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A268",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A269",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A270",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A271",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A272",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A273",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A274",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A275",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A276",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A277",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A278",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A279",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A280",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A281",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A282",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A283",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A284",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A285",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A286",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A287",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A288",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A289",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A290",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A291",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A292",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A293",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A294",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A295",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A296",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A297",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A298",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A299",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A300",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A301",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A302",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A303",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A304",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A305",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A306",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A307",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A308",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A309",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A310",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A311",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A312",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A313",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A314",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A315",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A316",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A317",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A318",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A319",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A320",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A321",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A322",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A323",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A324",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A325",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A326",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A327",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A328",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A329",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A330",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A331",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A332",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A333",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A334",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A335",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A336",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A337",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A338",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A339",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A340",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A341",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A342",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A343",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A344",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A345",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A346",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A347",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A348",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A349",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A350",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A351",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A352",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A353",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A354",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A355",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A356",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A357",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A358",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A359",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A360",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A361",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A362",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A363",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A364",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A365",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A366",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A367",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A368",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A369",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A370",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A371",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A372",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A373",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A374",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A375",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A376",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A377",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A378",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A379",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A380",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A381",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A382",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A383",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A384",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A385",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A386",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A387",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A388",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A389",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A390",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A391",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A392",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A393",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A394",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A395",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A396",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A397",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A398",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A399",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A400",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A401",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A402",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A403",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A404",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A405",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A406",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A407",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A408",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A409",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A410",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A411",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A412",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A413",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A414",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A415",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A416",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A417",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A418",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A419",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A420",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A421",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A422",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A423",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A424",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A425",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A426",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A427",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A428",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A429",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A430",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A431",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A432",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A433",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A434",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A435",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A436",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A437",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A438",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A439",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A440",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A441",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A442",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A443",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A444",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A445",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A446",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A447",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A448",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A449",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A450",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A451",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A452",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A453",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A454",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A455",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A456",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A457",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A458",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A459",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A460",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A461",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A462",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A463",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A464",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A465",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A466",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A467",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A468",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A469",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A470",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A471",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A472",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A473",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A474",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A475",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A476",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A477",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A478",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A479",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A480",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A481",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A482",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A483",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A484",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A485",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A486",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A487",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A488",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A489",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A490",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A491",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A492",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A493",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A494",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A495",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A496",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A497",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A498",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A499",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A500",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A501",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A502",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A503",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A504",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A505",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A506",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A507",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A508",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A509",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A510",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A511",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A512",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A513",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A514",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A515",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A516",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A517",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A518",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A519",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A520",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A521",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A522",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A523",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A524",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A525",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A526",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A527",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A528",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A529",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A530",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A531",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A532",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A533",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A534",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A535",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A536",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A537",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A538",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A539",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A540",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A541",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A542",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A543",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A544",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A545",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A546",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A547",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A548",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A549",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A550",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A551",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A552",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A553",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A554",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A555",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A556",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A557",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A558",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A559",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A560",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A561",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A562",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A563",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A564",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A565",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A566",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A567",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A568",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A569",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A570",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A571",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A572",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A573",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A574",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A575",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A576",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A577",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A578",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A579",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A580",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A581",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A582",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A583",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A584",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A585",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A586",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A587",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A588",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A589",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A590",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A591",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A592",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A593",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A594",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A595",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A596",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A597",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A598",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A599",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A600",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A601",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A602",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A603",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A604",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A605",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A606",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A607",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A608",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A609",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A610",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A611",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A612",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A613",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A614",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A615",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A616",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A617",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A618",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A619",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A620",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A621",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A622",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A623",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A624",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A625",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A626",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A627",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A628",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A629",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A630",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A631",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A632",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A633",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A634",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A635",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A636",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A637",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A638",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A639",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A640",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A641",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A642",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A643",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A644",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A645",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A646",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A647",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A648",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A649",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A650",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A651",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A652",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A653",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A654",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A655",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A656",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A657",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A658",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A659",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A660",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A661",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A662",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A663",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A664",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A665",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A666",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A667",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A668",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A669",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A670",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A671",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A672",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A673",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A674",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A675",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A676",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A677",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A678",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A679",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A680",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A681",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A682",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A683",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A684",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A685",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A686",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A687",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A688",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A689",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A690",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A691",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A692",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A693",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A694",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A695",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A696",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A697",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A698",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A699",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A700",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A701",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A702",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A703",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A704",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A705",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A706",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A707",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A708",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A709",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A710",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A711",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A712",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A713",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A714",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A715",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A716",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A717",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A718",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A719",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A720",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A721",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A722",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A723",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A724",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A725",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A726",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A727",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A728",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A729",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A730",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A731",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A732",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A733",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A734",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A735",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A736",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A737",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A738",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A739",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A740",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A741",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A742",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A743",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A744",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A745",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A746",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A747",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A748",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A749",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A750",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A751",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A752",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A753",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A754",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A755",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A756",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A757",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A758",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A759",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A760",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A761",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A762",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A763",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A764",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A765",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A766",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A767",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A768",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A769",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A770",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A771",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A772",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A773",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A774",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A775",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A776",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A777",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A778",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A779",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A780",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A781",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A782",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A783",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A784",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A785",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A786",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A787",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A788",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A789",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A790",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A791",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A792",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A793",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A794",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A795",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A796",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A797",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A798",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A799",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A800",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A801",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A802",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A803",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A804",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A805",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A806",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A807",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A808",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A809",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A810",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A811",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A812",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A813",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A814",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A815",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A816",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A817",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A818",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A819",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A820",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A821",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A822",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A823",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A824",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A825",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A826",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A827",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A828",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A829",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A830",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A831",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A832",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A833",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A834",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A835",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A836",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A837",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A838",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A839",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A840",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A841",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A842",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A843",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A844",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A845",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A846",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A847",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A848",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A849",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A850",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A851",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A852",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A853",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A854",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A855",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A856",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A857",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A858",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A859",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A860",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A861",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A862",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A863",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A864",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A865",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A866",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A867",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A868",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A869",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A870",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A871",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A872",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A873",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A874",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A875",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A876",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A877",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A878",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A879",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A880",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A881",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A882",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A883",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A884",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A885",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A886",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A887",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A888",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A889",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A890",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A891",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A892",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A893",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A894",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A895",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A896",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A897",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A898",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A899",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A900",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A901",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A902",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A903",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A904",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A905",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A906",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A907",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A908",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A909",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A910",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A911",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A912",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A913",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A914",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A915",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A916",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A917",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A918",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A919",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A920",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A921",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A922",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A923",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A924",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A925",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A926",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A927",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A928",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A929",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A930",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A931",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A932",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A933",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A934",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A935",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A936",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A937",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A938",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A939",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A940",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A941",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A942",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A943",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A944",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A945",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A946",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A947",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A948",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A949",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A950",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A951",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A952",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A953",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A954",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A955",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A956",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A957",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A958",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A959",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A960",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A961",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A962",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A963",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A964",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A965",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A966",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A967",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A968",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A969",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A970",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A971",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A972",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A973",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A974",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A975",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A976",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A977",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A978",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A979",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A980",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A981",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A982",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A983",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A984",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A985",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A986",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A987",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A988",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A989",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A990",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A991",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A992",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A993",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A994",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A995",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A996",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A997",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A998",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            },
+            {
+              "knoten_id": "A999",
+              "bestimmter_anteil": null,
+              "untergruppe": null
+            }
+          ]
+        },
+        {
+          "knoten_id": "B",
+          "bestimmter_anteil": null,
+          "untergruppe": null
+        }
+      ],
+      "regelkontext": "gemeinschaftlicher_erbteil_2093",
+      "gruppeneinsetzung_qualifiziert": true,
+      "einordnungsnachweis": "Synthetisch qualifizierte vollständige Gruppe."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Oberquote1/2 und gleiche Binnenhälften ergebenje1/4. ObergruppeH1/2 mit innerenDritteln ergibtA1/12,B1/6; direktePersonC1/4. Unter-/Überbelegung je Gruppe normiert.",
+    "pruefnachweis": "Bestehender Quotenkern wiederverwendet, native Python/R-Referenzen und volle Ergebnisparität."
+  }
+]

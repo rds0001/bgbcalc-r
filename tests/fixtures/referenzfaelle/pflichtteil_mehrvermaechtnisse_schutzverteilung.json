@@ -1,0 +1,1105 @@
+[
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_BEDACHTENSCHUTZ",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "kuerzungsbetrag": {
+              "zaehler": "6",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "14",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "6",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_BEIDE_SCHUTZWERTE_DECKBAR",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": true,
+      "eigener_pflichtteilswert": "10",
+      "konkurrenzmodell": "erbe_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "10",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_ERBENVORRANG_EINGRIFF",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "50",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": true,
+      "eigener_pflichtteilswert": "20",
+      "konkurrenzmodell": "erbe_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "kuerzungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_BEDACHTENVORRANG_FEHLBETRAG",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "50",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": true,
+      "eigener_pflichtteilswert": "20",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "kuerzungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_RANGVORRANG",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 2
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "4",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "56",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "kuerzungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "14",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_RANG_UND_ERBENSCHUTZ",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 2
+        }
+      ],
+      "erbenschutz_anwendbar": true,
+      "eigener_pflichtteilswert": "20",
+      "konkurrenzmodell": "erbe_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "kuerzungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_KEINE_VORBEINTRAECHTIGUNG_REPARIEREN",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "50",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": true,
+      "eigener_pflichtteilswert": "30",
+      "konkurrenzmodell": "erbe_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "30",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "kuerzungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_2323_ABZUG",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "50",
+      "anderweitig_getragene_last_2323": "20",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "kuerzungsbetrag": {
+              "zaehler": "6",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "14",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "6",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_NULL_ERWERB",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "0",
+      "gesamte_pflichtteilslast": "0",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "0",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_EINZELMODELL_ERBENVORRANG",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "80",
+          "pflichtteilsschutzwert": "70",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": true,
+      "eigener_pflichtteilswert": "10",
+      "konkurrenzmodell": "erbe_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_EINZELMODELL_BEDACHTENVORRANG",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "80",
+          "pflichtteilsschutzwert": "70",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": true,
+      "eigener_pflichtteilswert": "10",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "verbleibender_vermaechtniswert": {
+              "zaehler": "70",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibender_erbenwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_erbenschutz": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "N100,V60/20,T30: proportionale18/6,ASchutz50begrenztauf10=>50/14,Erbe6. Erbenschutz10nimmtweitere4nurB. T50:geschützteA50,B0,Erbe0;Erbenvorrang20greift20beiAein. RangAvorBohneSchutz:Gesamtkürzung24zuerstB20,dannA4.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_FEHLT_erwerbswert_vor_vermaechtnissen",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": null,
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_FEHLT_gesamte_pflichtteilslast",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": null,
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_FEHLT_anderweitig_getragene_last_2323",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": null,
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_FEHLT_vermaechtnisse",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": null,
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_FEHLT_erbenschutz_anwendbar",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": null,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_FEHLT_eigener_pflichtteilswert",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": null,
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_FEHLT_konkurrenzmodell",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": null,
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_FEHLT_methodennachweis",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_UNGUELTIG0",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "101",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_UNGUELTIG1",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "31",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_UNGUELTIG2",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "10",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_UNGUELTIG3",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "bedachte_vorrangig",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MEHRVERMAECHTNISSE_SCHUTZVERTEILUNG_UNGUELTIG4",
+    "funktion": "pflichtteil_mehrvermaechtnisse_schutzverteilung",
+    "eingaben": {
+      "erwerbswert_vor_vermaechtnissen": "100",
+      "gesamte_pflichtteilslast": "30",
+      "anderweitig_getragene_last_2323": "0",
+      "vermaechtnisse": [
+        {
+          "beschwerung_id": "A",
+          "vermaechtniswert": "60",
+          "pflichtteilsschutzwert": "50",
+          "rang": 1
+        },
+        {
+          "beschwerung_id": "B",
+          "vermaechtniswert": "20",
+          "pflichtteilsschutzwert": "0",
+          "rang": 1
+        }
+      ],
+      "erbenschutz_anwendbar": false,
+      "eigener_pflichtteilswert": "0",
+      "konkurrenzmodell": "automatisch",
+      "methodennachweis": "Bedingtes Mehrbeschwerungsmodell2318/2189/2323: anderweitigeLast zuerst abziehen. Grundkürzung je Beschwerung anteiligLast*V_i/Erwerb, höchstens positiver Überschuss über individuellen Schutzwert; gemeinsame Grundkürzung rangweise auf nachrangige Beschwerungen zuerst verteilen, innerhalb eines Rangs wertproportional mit Obergrenzen. Zusätzlichen Erbenschutzbedarf zunächst vollständig aus noch ungeschützten Beschwerungsanteilen decken. Nur bei ausdrücklich qualifiziertem Erbenvorrang darf danach verbleibender Bedarf in geschützte Anteile eingreifen; Bedachtenvorrang lässt diesen Fehlbetrag offen. Keine vorbestehende Unterdeckung auf eigenen Pflichtteil auffüllen: SchutzErbe höchstens Erwerb-SummeV, SchutzBedachter höchstensV_i. Rang-/Schutzhierarchie ist eine zwingende rechtliche Modellvoraussetzung, keine allgemeine Lösung aller Auslegungsstreitigkeiten. Negative rechnerische Erbenreste sind offen ausgewiesene Belastung, kein automatisch neuer Anspruch. Keine automatischeGeldforderung beiSachvermächtnissen, keine doppelte Gesamtlastausübung pro Vermächtnis."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

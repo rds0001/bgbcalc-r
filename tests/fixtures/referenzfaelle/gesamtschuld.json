@@ -1,0 +1,2237 @@
+[
+  {
+    "fall_id": "GESAMTSCHULD_KEIN_AUSFALL",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "anzahl_uebrige": 3
+      }
+    },
+    "herleitung": "Drei Schuldner zu je30; keine zusätzliche Belastung.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_EIN_AUSFALL",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "15",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "45",
+          "nenner": "1"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Ausgefallene30 verteilen sich hälftig auf zwei Übrige: je15 zusätzlich, insgesamt45.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_DREI_AUSFAELLE",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "100",
+      "anzahl_gesamtschuldner": 5,
+      "anzahl_vollstaendig_ausfallender_beitraege": 3,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "60",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Drei Beiträge zu20 fallen aus; zwei Übrige tragen je30 zusätzlich.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_EIN_UEBRIGER",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "100",
+      "anzahl_gesamtschuldner": 2,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Ein Übriger trägt rechnerisch den gesamten Betrag; keine Befreiung des ausfallenden Schuldners festgestellt.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_BRUCH",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gleiche Grundanteile1/3; Ausfall1/3, je1/6 zusätzlich, insgesamt1/2.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_BRUCHOBJEKT",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": {
+        "zaehler": "1",
+        "nenner": "2"
+      },
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "12"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Halber Gesamtbetrag verteilt sich auf zwei Übrige zu je1/4.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_NULL",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Nullbetrag führt zu null Beiträgen bei unveränderter Personenquote.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_GRENZE",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1",
+      "anzahl_gesamtschuldner": 9007199254740991,
+      "anzahl_vollstaendig_ausfallender_beitraege": 9007199254740990,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9007199254740991"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "9007199254740991"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "9007199254740990",
+          "nenner": "9007199254740991"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "9007199254740990",
+          "nenner": "9007199254740991"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Ein verbleibender Schuldner bei größter zulässiger exakter Ganzzahl; Summe der Brüche ist1.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ABWEICHENDE_ANTEILE",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Abweichende interne Bestimmung sperrt die Gleichanteilsfunktion.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_GESAMTBETRAG0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": null,
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_GESAMTBETRAG1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "-1",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_GESAMTBETRAG2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "falsch",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_GESAMTSCHULDNER0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": null,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_GESAMTSCHULDNER1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 1,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_GESAMTSCHULDNER2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 1.5,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_GESAMTSCHULDNER3",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": true,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_GESAMTSCHULDNER4",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 9007199254740992,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_VOLLSTAENDIG_AUSFALLENDER_BEITRAEGE0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": null,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_VOLLSTAENDIG_AUSFALLENDER_BEITRAEGE1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": -1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_VOLLSTAENDIG_AUSFALLENDER_BEITRAEGE2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 3,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_VOLLSTAENDIG_AUSFALLENDER_BEITRAEGE3",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1.5,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ANZAHL_VOLLSTAENDIG_AUSFALLENDER_BEITRAEGE4",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": true,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_GLEICHANTEILIGER_AUSGLEICH_ANWENDBAR0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_GLEICHANTEILIGER_AUSGLEICH_ANWENDBAR1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "90",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": "ja"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlende Eingabe oder Verletzung des dokumentierten Wertebereichs; mindestens ein zur Ausfalltragung verbleibender Schuldner nötig.",
+    "pruefnachweis": "Vor Implementierung manuell aus §426 Abs.1 der lokalen PDF abgeleitet; ausschließlich gleicher interner Grundanteil und vollständig ausfallende Beiträge."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_2_0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.1",
+      "anzahl_gesamtschuldner": 2,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_2_1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.3",
+      "anzahl_gesamtschuldner": 2,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "3",
+          "nenner": "20"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "3",
+          "nenner": "20"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "3",
+          "nenner": "20"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_3_0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.1",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "30"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "30"
+        },
+        "anzahl_uebrige": 3
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_3_1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.4",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "2",
+          "nenner": "15"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "2",
+          "nenner": "15"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "15"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_3_2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.7",
+      "anzahl_gesamtschuldner": 3,
+      "anzahl_vollstaendig_ausfallender_beitraege": 2,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "7",
+          "nenner": "30"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "7",
+          "nenner": "15"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "7",
+          "nenner": "15"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "7",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_4_0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.1",
+      "anzahl_gesamtschuldner": 4,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "40"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "40"
+        },
+        "anzahl_uebrige": 4
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_4_1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.5",
+      "anzahl_gesamtschuldner": 4,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "24"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "anzahl_uebrige": 3
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_4_2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.9",
+      "anzahl_gesamtschuldner": 4,
+      "anzahl_vollstaendig_ausfallender_beitraege": 2,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "9",
+          "nenner": "40"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "9",
+          "nenner": "20"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "9",
+          "nenner": "40"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "9",
+          "nenner": "20"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_4_3",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.3",
+      "anzahl_gesamtschuldner": 4,
+      "anzahl_vollstaendig_ausfallender_beitraege": 3,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "13",
+          "nenner": "40"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "39",
+          "nenner": "40"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "39",
+          "nenner": "40"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "13",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_5_0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.1",
+      "anzahl_gesamtschuldner": 5,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "50"
+        },
+        "anzahl_uebrige": 5
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_5_1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.6",
+      "anzahl_gesamtschuldner": 5,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "3",
+          "nenner": "25"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "3",
+          "nenner": "25"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "3",
+          "nenner": "100"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "3",
+          "nenner": "20"
+        },
+        "anzahl_uebrige": 4
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_5_2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.1",
+      "anzahl_gesamtschuldner": 5,
+      "anzahl_vollstaendig_ausfallender_beitraege": 2,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "11",
+          "nenner": "50"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "11",
+          "nenner": "25"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "11",
+          "nenner": "75"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "11",
+          "nenner": "30"
+        },
+        "anzahl_uebrige": 3
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_5_3",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.6",
+      "anzahl_gesamtschuldner": 5,
+      "anzahl_vollstaendig_ausfallender_beitraege": 3,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "8",
+          "nenner": "25"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "24",
+          "nenner": "25"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "12",
+          "nenner": "25"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "4",
+          "nenner": "5"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_5_4",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "2.1",
+      "anzahl_gesamtschuldner": 5,
+      "anzahl_vollstaendig_ausfallender_beitraege": 4,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "21",
+          "nenner": "50"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "42",
+          "nenner": "25"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "42",
+          "nenner": "25"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "21",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_6_0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.1",
+      "anzahl_gesamtschuldner": 6,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "60"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "60"
+        },
+        "anzahl_uebrige": 6
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_6_1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.7",
+      "anzahl_gesamtschuldner": 6,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "7",
+          "nenner": "60"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "7",
+          "nenner": "60"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "7",
+          "nenner": "300"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "7",
+          "nenner": "50"
+        },
+        "anzahl_uebrige": 5
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_6_2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.3",
+      "anzahl_gesamtschuldner": 6,
+      "anzahl_vollstaendig_ausfallender_beitraege": 2,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "13",
+          "nenner": "60"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "13",
+          "nenner": "30"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "13",
+          "nenner": "120"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "13",
+          "nenner": "40"
+        },
+        "anzahl_uebrige": 4
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_6_3",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.9",
+      "anzahl_gesamtschuldner": 6,
+      "anzahl_vollstaendig_ausfallender_beitraege": 3,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "19",
+          "nenner": "60"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "19",
+          "nenner": "20"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "19",
+          "nenner": "60"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "19",
+          "nenner": "30"
+        },
+        "anzahl_uebrige": 3
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_6_4",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "2.5",
+      "anzahl_gesamtschuldner": 6,
+      "anzahl_vollstaendig_ausfallender_beitraege": 4,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "5",
+          "nenner": "12"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "5",
+          "nenner": "3"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "5",
+          "nenner": "6"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "5",
+          "nenner": "4"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_6_5",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "3.1",
+      "anzahl_gesamtschuldner": 6,
+      "anzahl_vollstaendig_ausfallender_beitraege": 5,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "31",
+          "nenner": "60"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "31",
+          "nenner": "12"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "31",
+          "nenner": "12"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "31",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_7_0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.1",
+      "anzahl_gesamtschuldner": 7,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "7"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "70"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "70"
+        },
+        "anzahl_uebrige": 7
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_7_1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.8",
+      "anzahl_gesamtschuldner": 7,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "7"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "4",
+          "nenner": "35"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "4",
+          "nenner": "35"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "2",
+          "nenner": "105"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "2",
+          "nenner": "15"
+        },
+        "anzahl_uebrige": 6
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_7_2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.5",
+      "anzahl_gesamtschuldner": 7,
+      "anzahl_vollstaendig_ausfallender_beitraege": 2,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "7"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "3",
+          "nenner": "14"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "3",
+          "nenner": "7"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "3",
+          "nenner": "35"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 5
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_7_3",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "2.2",
+      "anzahl_gesamtschuldner": 7,
+      "anzahl_vollstaendig_ausfallender_beitraege": 3,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "7"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "11",
+          "nenner": "35"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "33",
+          "nenner": "35"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "33",
+          "nenner": "140"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "11",
+          "nenner": "20"
+        },
+        "anzahl_uebrige": 4
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_7_4",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "2.9",
+      "anzahl_gesamtschuldner": 7,
+      "anzahl_vollstaendig_ausfallender_beitraege": 4,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "7"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "29",
+          "nenner": "70"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "58",
+          "nenner": "35"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "58",
+          "nenner": "105"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "29",
+          "nenner": "30"
+        },
+        "anzahl_uebrige": 3
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_7_5",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "3.6",
+      "anzahl_gesamtschuldner": 7,
+      "anzahl_vollstaendig_ausfallender_beitraege": 5,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "7"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "18",
+          "nenner": "35"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "18",
+          "nenner": "7"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "9",
+          "nenner": "7"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "9",
+          "nenner": "5"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_7_6",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "4.3",
+      "anzahl_gesamtschuldner": 7,
+      "anzahl_vollstaendig_ausfallender_beitraege": 6,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "7"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "43",
+          "nenner": "70"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "129",
+          "nenner": "35"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "129",
+          "nenner": "35"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "43",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_8_0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.1",
+      "anzahl_gesamtschuldner": 8,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "80"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "80"
+        },
+        "anzahl_uebrige": 8
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_8_1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.9",
+      "anzahl_gesamtschuldner": 8,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "9",
+          "nenner": "80"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "9",
+          "nenner": "80"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "9",
+          "nenner": "560"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "9",
+          "nenner": "70"
+        },
+        "anzahl_uebrige": 7
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_8_2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.7",
+      "anzahl_gesamtschuldner": 8,
+      "anzahl_vollstaendig_ausfallender_beitraege": 2,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "17",
+          "nenner": "80"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "17",
+          "nenner": "40"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "17",
+          "nenner": "240"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "17",
+          "nenner": "60"
+        },
+        "anzahl_uebrige": 6
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_8_3",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "2.5",
+      "anzahl_gesamtschuldner": 8,
+      "anzahl_vollstaendig_ausfallender_beitraege": 3,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "5",
+          "nenner": "16"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "15",
+          "nenner": "16"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "3",
+          "nenner": "16"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "anzahl_uebrige": 5
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_8_4",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "3.3",
+      "anzahl_gesamtschuldner": 8,
+      "anzahl_vollstaendig_ausfallender_beitraege": 4,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "33",
+          "nenner": "80"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "33",
+          "nenner": "20"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "33",
+          "nenner": "80"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "33",
+          "nenner": "40"
+        },
+        "anzahl_uebrige": 4
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_8_5",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "4.1",
+      "anzahl_gesamtschuldner": 8,
+      "anzahl_vollstaendig_ausfallender_beitraege": 5,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "41",
+          "nenner": "80"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "41",
+          "nenner": "16"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "41",
+          "nenner": "48"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "41",
+          "nenner": "30"
+        },
+        "anzahl_uebrige": 3
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_8_6",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "4.9",
+      "anzahl_gesamtschuldner": 8,
+      "anzahl_vollstaendig_ausfallender_beitraege": 6,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "49",
+          "nenner": "80"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "147",
+          "nenner": "40"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "147",
+          "nenner": "80"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "49",
+          "nenner": "20"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_8_7",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "5.7",
+      "anzahl_gesamtschuldner": 8,
+      "anzahl_vollstaendig_ausfallender_beitraege": 7,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "57",
+          "nenner": "80"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "399",
+          "nenner": "80"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "399",
+          "nenner": "80"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "57",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_0",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "0.1",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 0,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "90"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "90"
+        },
+        "anzahl_uebrige": 9
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_1",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.0",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 1,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "72"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "1",
+          "nenner": "8"
+        },
+        "anzahl_uebrige": 8
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_2",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "1.9",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 2,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "19",
+          "nenner": "90"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "19",
+          "nenner": "45"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "19",
+          "nenner": "315"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "19",
+          "nenner": "70"
+        },
+        "anzahl_uebrige": 7
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_3",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "2.8",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 3,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "14",
+          "nenner": "45"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "14",
+          "nenner": "15"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "7",
+          "nenner": "45"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "7",
+          "nenner": "15"
+        },
+        "anzahl_uebrige": 6
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_4",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "3.7",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 4,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "37",
+          "nenner": "90"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "74",
+          "nenner": "45"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "74",
+          "nenner": "225"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "37",
+          "nenner": "50"
+        },
+        "anzahl_uebrige": 5
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_5",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "4.6",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 5,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "23",
+          "nenner": "45"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "23",
+          "nenner": "9"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "23",
+          "nenner": "36"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "23",
+          "nenner": "20"
+        },
+        "anzahl_uebrige": 4
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_6",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "5.5",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 6,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "11",
+          "nenner": "18"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "11",
+          "nenner": "3"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "11",
+          "nenner": "9"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "11",
+          "nenner": "6"
+        },
+        "anzahl_uebrige": 3
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_7",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "6.4",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 7,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "32",
+          "nenner": "45"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "224",
+          "nenner": "45"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "112",
+          "nenner": "45"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "16",
+          "nenner": "5"
+        },
+        "anzahl_uebrige": 2
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  },
+  {
+    "fall_id": "GESAMTSCHULD_ORAKEL_9_8",
+    "funktion": "gesamtschuld_gleichanteile_mit_ausfall",
+    "eingaben": {
+      "gesamtbetrag": "7.3",
+      "anzahl_gesamtschuldner": 9,
+      "anzahl_vollstaendig_ausfallender_beitraege": 8,
+      "gleichanteiliger_ausgleich_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "urspruenglicher_innenanteil": {
+          "zaehler": "1",
+          "nenner": "9"
+        },
+        "urspruenglicher_beitrag": {
+          "zaehler": "73",
+          "nenner": "90"
+        },
+        "gesamter_ausfallbetrag": {
+          "zaehler": "292",
+          "nenner": "45"
+        },
+        "zusaetzlicher_beitrag_je_uebrigem": {
+          "zaehler": "292",
+          "nenner": "45"
+        },
+        "gesamtbelastung_je_uebrigem": {
+          "zaehler": "73",
+          "nenner": "10"
+        },
+        "anzahl_uebrige": 1
+      }
+    },
+    "herleitung": "Gesamtbetrag wird von n-u Übrigen getragen: direkte Vergleichsrechnung T/(n-u). Zusatzbelastung als Differenz zum ursprünglichen Anteil; ausgefallener Betrag als Differenz zur Summe der ursprünglichen Beiträge der Übrigen.",
+    "pruefnachweis": "Unabhängiges Fraction-Orakel der Python-Standardbibliothek ohne Aufruf oder Import des Produktionskerns; ergänzt die vorab hergeleiteten manuellen Rechtsfälle."
+  }
+]

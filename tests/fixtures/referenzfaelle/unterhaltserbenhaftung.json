@@ -1,0 +1,458 @@
+[
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_GRENZE",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_haftungsgrenze": {
+          "zaehler": "700",
+          "nenner": "1"
+        },
+        "haftungsbegrenzter_unterhaltsbetrag": {
+          "zaehler": "700",
+          "nenner": "1"
+        },
+        "nicht_von_dieser_haftung_gedeckt": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "haftungsrest_nach_forderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_REST",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "500",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_haftungsgrenze": {
+          "zaehler": "700",
+          "nenner": "1"
+        },
+        "haftungsbegrenzter_unterhaltsbetrag": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "nicht_von_dieser_haftung_gedeckt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "haftungsrest_nach_forderung": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_GLEICH",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "700",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_haftungsgrenze": {
+          "zaehler": "700",
+          "nenner": "1"
+        },
+        "haftungsbegrenzter_unterhaltsbetrag": {
+          "zaehler": "700",
+          "nenner": "1"
+        },
+        "nicht_von_dieser_haftung_gedeckt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "haftungsrest_nach_forderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_ERSCHOEPFT",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "1000",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_haftungsgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "haftungsbegrenzter_unterhaltsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_von_dieser_haftung_gedeckt": {
+          "zaehler": "900",
+          "nenner": "1"
+        },
+        "haftungsrest_nach_forderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_UEBERLEISTET",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "1200",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_haftungsgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "haftungsbegrenzter_unterhaltsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_von_dieser_haftung_gedeckt": {
+          "zaehler": "900",
+          "nenner": "1"
+        },
+        "haftungsrest_nach_forderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_NULL",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "0",
+      "angerechnete_erbenleistungen": "0",
+      "offener_unterhalt": "0",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_haftungsgrenze": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "haftungsbegrenzter_unterhaltsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_von_dieser_haftung_gedeckt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "haftungsrest_nach_forderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_KEINE_FORDERUNG",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "0",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_haftungsgrenze": {
+          "zaehler": "700",
+          "nenner": "1"
+        },
+        "haftungsbegrenzter_unterhaltsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_von_dieser_haftung_gedeckt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "haftungsrest_nach_forderung": {
+          "zaehler": "700",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_EXAKT",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "0.5",
+      "angerechnete_erbenleistungen": "0.1",
+      "offener_unterhalt": "0.6",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verbleibende_haftungsgrenze": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "haftungsbegrenzter_unterhaltsbetrag": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "nicht_von_dieser_haftung_gedeckt": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "haftungsrest_nach_forderung": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_FEHLT_hypothetischer_pflichtteil",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": null,
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_TYP_hypothetischer_pflichtteil",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": [],
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_NEGATIV_hypothetischer_pflichtteil",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "-1",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_FEHLT_angerechnete_erbenleistungen",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": null,
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_TYP_angerechnete_erbenleistungen",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": [],
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_NEGATIV_angerechnete_erbenleistungen",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "-1",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_FEHLT_offener_unterhalt",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": null,
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_TYP_offener_unterhalt",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": [],
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_NEGATIV_offener_unterhalt",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "-1",
+      "haftungsnachweis": "Hypothetische Pflichtteilsgrenze ohne Güterstandsbesonderheiten; anzurechnende Leistungen aller Erben konsolidiert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_FEHLT_haftungsnachweis",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_TYP_haftungsnachweis",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_ERBENHAFTUNGSBETRAG_NACHWEIS_LEER",
+    "funktion": "unterhalt_erbenhaftungsbetrag",
+    "eingaben": {
+      "hypothetischer_pflichtteil": "1000",
+      "angerechnete_erbenleistungen": "300",
+      "offener_unterhalt": "900",
+      "haftungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:1000−300=700Restgrenze, von900offen sind700gedeckt und200nicht gedeckt. Positive Restgrenze wird nur einmal verbraucht.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

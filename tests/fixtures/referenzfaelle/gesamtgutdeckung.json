@@ -1,0 +1,865 @@
+[
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_TEIL",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorzeitiger_berichtigungsbetrag": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "restschuld": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_GLEICH",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "80",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorzeitiger_berichtigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "restschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_UEBER",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "80",
+      "verfuegbares_sondergut": "80",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorzeitiger_berichtigungsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "restschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_KEINE_MITTEL",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "0",
+      "verfuegbares_sondergut": "0",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorzeitiger_berichtigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "restschuld": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_KEINE_SCHULD",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "0",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorzeitiger_berichtigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "restschuld": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_EXAKT",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "0.5",
+      "verfuegbares_vorbehaltsgut": "0.1",
+      "verfuegbares_sondergut": "0.2",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "vorzeitiger_berichtigungsbetrag": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "restschuld": {
+          "zaehler": "1",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_FEHLT_schuld",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": null,
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_TYP_schuld",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": [],
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_NEGATIV_schuld",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "-1",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_FEHLT_verfuegbares_vorbehaltsgut",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": null,
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_TYP_verfuegbares_vorbehaltsgut",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": [],
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_NEGATIV_verfuegbares_vorbehaltsgut",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "-1",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_FEHLT_verfuegbares_sondergut",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": null,
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_TYP_verfuegbares_sondergut",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": [],
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_NEGATIV_verfuegbares_sondergut",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "-1",
+      "zuordnungsnachweis": "Innenlast und Verfügbarkeit qualifiziert, zutreffender Verwaltungsfall."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_FEHLT_zuordnungsnachweis",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_TYP_zuordnungsnachweis",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "GESAMTGUT_VORZEITIGER_BERICHTIGUNGSBETRAG_NACHWEIS_LEER",
+    "funktion": "gesamtgut_vorzeitiger_berichtigungsbetrag",
+    "eingaben": {
+      "schuld": "100",
+      "verfuegbares_vorbehaltsgut": "20",
+      "verfuegbares_sondergut": "30",
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_FEHLBETRAG",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einsatz_gesamtgut": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "einsatz_nachrangige_mittel": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ungedeckter_bedarf": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "verbleibende_gesamtgutsmittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_nachrangige_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_NACHRANG_REST",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "50",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einsatz_gesamtgut": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "einsatz_nachrangige_mittel": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "ungedeckter_bedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_gesamtgutsmittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_nachrangige_mittel": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_GESAMTGUT_REST",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "120",
+      "nachrangige_mittel": "50",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einsatz_gesamtgut": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "einsatz_nachrangige_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_bedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_gesamtgutsmittel": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "verbleibende_nachrangige_mittel": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_GLEICH",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "100",
+      "nachrangige_mittel": "50",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einsatz_gesamtgut": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "einsatz_nachrangige_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_bedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_gesamtgutsmittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_nachrangige_mittel": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_STAMM",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "vermoegensstamm",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einsatz_gesamtgut": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "einsatz_nachrangige_mittel": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ungedeckter_bedarf": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "verbleibende_gesamtgutsmittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_nachrangige_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_NULLBEDARF",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "0",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einsatz_gesamtgut": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "einsatz_nachrangige_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ungedeckter_bedarf": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_gesamtgutsmittel": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "verbleibende_nachrangige_mittel": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_EXAKT",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "0.5",
+      "gesamtgutsmittel": "0.1",
+      "nachrangige_mittel": "0.2",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "einsatz_gesamtgut": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "einsatz_nachrangige_mittel": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "ungedeckter_bedarf": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "verbleibende_gesamtgutsmittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_nachrangige_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_FEHLT_bedarf_dieser_mittelstufe",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": null,
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_TYP_bedarf_dieser_mittelstufe",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": [],
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_FEHLT_gesamtgutsmittel",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": null,
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_TYP_gesamtgutsmittel",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": [],
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_FEHLT_nachrangige_mittel",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": null,
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_TYP_nachrangige_mittel",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": [],
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_FEHLT_mittelart",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": null,
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_TYP_mittelart",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": [],
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_FEHLT_zuordnungsnachweis",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_TYP_zuordnungsnachweis",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_NEGATIV_bedarf_dieser_mittelstufe",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "-1",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_NEGATIV_gesamtgutsmittel",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "-1",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_NEGATIV_nachrangige_mittel",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "-1",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_ART",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "frei",
+      "zuordnungsnachweis": "Getrennte Einkünfteebene rechtlich bestimmt; keine globale Einkünfte-/Stamm-Rangfolge."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  },
+  {
+    "fall_id": "FAMILIENUNTERHALT_MITTELVORRANG_NACHWEIS_LEER",
+    "funktion": "familienunterhalt_mittelvorrang",
+    "eingaben": {
+      "bedarf_dieser_mittelstufe": "100",
+      "gesamtgutsmittel": "70",
+      "nachrangige_mittel": "20",
+      "mittelart": "einkuenfte",
+      "zuordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Rangrechnung mit min, Differenz und exakten nichtnegativen Beträgen.",
+    "pruefnachweis": "Native Python/R mit vollständiger Ergebnisparität."
+  }
+]

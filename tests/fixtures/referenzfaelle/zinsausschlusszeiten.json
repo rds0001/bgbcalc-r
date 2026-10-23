@@ -1,0 +1,833 @@
+[
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_KEINE",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 0,
+        "verzinsliche_kalendertage": 10,
+        "vereinigte_ausschlusszeitraeume": []
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_UEBERLAPPUNG",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        },
+        {
+          "erster_zinsfreier_tag": "2024-01-05",
+          "letzter_zinsfreier_tag": "2024-01-07",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 5,
+        "verzinsliche_kalendertage": 5,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-03",
+            "letzter_zinsfreier_tag": "2024-01-07"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_ANGRENZEND",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-06",
+          "letzter_zinsfreier_tag": "2024-01-08",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        },
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 6,
+        "verzinsliche_kalendertage": 4,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-03",
+            "letzter_zinsfreier_tag": "2024-01-08"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_DOPPELT",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        },
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 3,
+        "verzinsliche_kalendertage": 7,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-03",
+            "letzter_zinsfreier_tag": "2024-01-05"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_GETRENNT",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-07",
+          "letzter_zinsfreier_tag": "2024-01-07",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        },
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 4,
+        "verzinsliche_kalendertage": 6,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-03",
+            "letzter_zinsfreier_tag": "2024-01-05"
+          },
+          {
+            "erster_zinsfreier_tag": "2024-01-07",
+            "letzter_zinsfreier_tag": "2024-01-07"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_BESCHNEIDEN",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2023-12-29",
+          "letzter_zinsfreier_tag": "2024-01-02",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        },
+        {
+          "erster_zinsfreier_tag": "2024-01-09",
+          "letzter_zinsfreier_tag": "2024-01-15",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 4,
+        "verzinsliche_kalendertage": 6,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-01",
+            "letzter_zinsfreier_tag": "2024-01-02"
+          },
+          {
+            "erster_zinsfreier_tag": "2024-01-09",
+            "letzter_zinsfreier_tag": "2024-01-10"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_AUSSERHALB",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2023-12-29",
+          "letzter_zinsfreier_tag": "2023-12-31",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        },
+        {
+          "erster_zinsfreier_tag": "2024-01-11",
+          "letzter_zinsfreier_tag": "2024-01-15",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 0,
+        "verzinsliche_kalendertage": 10,
+        "vereinigte_ausschlusszeitraeume": []
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_ALLES",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2023-12-01",
+          "letzter_zinsfreier_tag": "2024-02-01",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 10,
+        "verzinsliche_kalendertage": 0,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-01",
+            "letzter_zinsfreier_tag": "2024-01-10"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_glaeubigerverzug_301_None",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "glaeubigerverzug_301",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 3,
+        "verzinsliche_kalendertage": 7,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-03",
+            "letzter_zinsfreier_tag": "2024-01-05"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_hinterlegung_379_False",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "hinterlegung_379",
+          "hinterlegung_zurueckgenommen": false
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 3,
+        "verzinsliche_kalendertage": 7,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-03",
+            "letzter_zinsfreier_tag": "2024-01-05"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_hinterlegung_379_True",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "hinterlegung_379",
+          "hinterlegung_zurueckgenommen": true
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 0,
+        "verzinsliche_kalendertage": 10,
+        "vereinigte_ausschlusszeitraeume": []
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_RUECKNAHME_ANDERER_GRUND_BLEIBT",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-01",
+          "letzter_zinsfreier_tag": "2024-01-10",
+          "ausschlussgrund": "hinterlegung_379",
+          "hinterlegung_zurueckgenommen": true
+        },
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "glaeubigerverzug_301",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 10,
+        "zinsfreie_kalendertage": 3,
+        "verzinsliche_kalendertage": 7,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-01-03",
+            "letzter_zinsfreier_tag": "2024-01-05"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_SCHALTTAG",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-02-28",
+      "letzter_betrachteter_tag": "2024-03-01",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-02-29",
+          "letzter_zinsfreier_tag": "2024-02-29",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 3,
+        "zinsfreie_kalendertage": 1,
+        "verzinsliche_kalendertage": 2,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "2024-02-29",
+            "letzter_zinsfreier_tag": "2024-02-29"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_EIN_TAG",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-01",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 1,
+        "zinsfreie_kalendertage": 0,
+        "verzinsliche_kalendertage": 1,
+        "vereinigte_ausschlusszeitraeume": []
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_GESAMTER_KALENDER",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "0001-01-01",
+      "letzter_betrachteter_tag": "9999-12-31",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 3652059,
+        "zinsfreie_kalendertage": 0,
+        "verzinsliche_kalendertage": 3652059,
+        "vereinigte_ausschlusszeitraeume": []
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_FRUEHES_JAHR",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "0001-01-01",
+      "letzter_betrachteter_tag": "0001-01-01",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "0001-01-01",
+          "letzter_zinsfreier_tag": "0001-01-01",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kalendertage_gesamt": 1,
+        "zinsfreie_kalendertage": 1,
+        "verzinsliche_kalendertage": 0,
+        "vereinigte_ausschlusszeitraeume": [
+          {
+            "erster_zinsfreier_tag": "0001-01-01",
+            "letzter_zinsfreier_tag": "0001-01-01"
+          }
+        ]
+      }
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_FEHLT_erster_betrachteter_tag",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": null,
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_TYP_erster_betrachteter_tag",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": {},
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_FEHLT_letzter_betrachteter_tag",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": null,
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_TYP_letzter_betrachteter_tag",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": {},
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_FEHLT_ausschlusszeitraeume",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": null,
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_TYP_ausschlusszeitraeume",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": {},
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_FEHLT_einordnungsnachweis",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_TYP_einordnungsnachweis",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_UNGUELTIG_0",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2023-12-31",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_UNGUELTIG_1",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-05",
+          "letzter_zinsfreier_tag": "2024-01-03",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_UNGUELTIG_2",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "x",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_UNGUELTIG_3",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": false
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_UNGUELTIG_4",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "hinterlegung_379",
+          "hinterlegung_zurueckgenommen": 1
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_UNGUELTIG_5",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "nutzungen_ohne_verguetung_256",
+          "hinterlegung_zurueckgenommen": null,
+          "extra": 1
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_UNGUELTIG_6",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZINSKALENDERTAGE_NACH_AUSSCHLUSS_RUECKNAHMEANGABE_FEHLT",
+    "funktion": "zinskalendertage_nach_ausschluss",
+    "eingaben": {
+      "erster_betrachteter_tag": "2024-01-01",
+      "letzter_betrachteter_tag": "2024-01-10",
+      "ausschlusszeitraeume": [
+        {
+          "erster_zinsfreier_tag": "2024-01-03",
+          "letzter_zinsfreier_tag": "2024-01-05",
+          "ausschlussgrund": "hinterlegung_379",
+          "hinterlegung_zurueckgenommen": null
+        }
+      ],
+      "einordnungsnachweis": "§256Satz2: nur Zeiträume, in denen dem Aufwendungsersatzberechtigten Nutzungen/Früchte des herauszugebenden Gegenstands ohne Vergütung verbleiben.301: qualifizierter Gläubigerverzug hinsichtlich der verzinslichen Geldschuld.379II/III: wirksame Hinterlegung; bei Rücknahme gilt diese als nicht erfolgt, deshalb wird ihr gesamtes eingegebenes Intervall nicht als zinsfrei abgezogen. Andere wirksame Ausschlussgründe desselben Tages bleiben bestehen. Tagesgrenzen einschließlich und rechtlich auf ganze Kalendertage normalisiert; untertägige Bruchteile nicht pauschal runden. Zeiträume werden auf den betrachteten Zinsabschnitt begrenzt, Überschneidungen/gleiche Tage nur einmal gezählt. Keine Verlängerung des Abschnitts wie bei Verjährungshemmung. Ergebnis ist tatsächliche Kalendertageszahl, noch kein universeller Jahresbruch oder Zinsbetrag; rechtlich geltende Zinstageskonvention, wechselnde Kapital-/Zinssatzwerte und Jahresgrenzen gesondert behandeln und vorhandene Zinsfunktionen verwenden. Erster/letzter Zinstag und rechtliche Ausschlussgründe müssen vorqualifiziert sein."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:01.–10.Januar zehnTage;03.–05. und05.–07. zusammen fünfTage, nicht sechs. Rücknahme beseitigt nur den jeweiligen Hinterlegungsgrund, andere Ausschlüsse bleiben. Betrachteter Zeitraum bleibt unverändert.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

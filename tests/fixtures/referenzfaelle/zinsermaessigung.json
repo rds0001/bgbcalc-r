@@ -1,0 +1,302 @@
+[
+  {
+    "fall_id": "MZI_001",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "1",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "300",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ursprungsdarlehen10000*(4-1)/100=300 pro Jahr.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_002",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "0",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "400",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Zinsloses Darlehen: voller marktüblicher Jahreszins des Ursprungsbetrags.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_003",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "4",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Kein Zinsunterschied.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_004",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "0",
+      "ermaessigter_zinssatz_prozent": "1",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Darlehensursprungsbetrag null.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_005",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "1",
+      "ermaessigter_zinssatz_prozent": "1.25",
+      "marktueblicher_zinssatz_prozent": "4.5",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "13",
+        "nenner": "400"
+      }
+    },
+    "herleitung": "1*(4.5-1.25)/100=0.0325 ohne Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_006",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "-1",
+      "marktueblicher_zinssatz_prozent": "0",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Rein rechnerischer Zinsabstand auch bei ausdrücklich eingegebenem negativem Ermäßigungssatz; rechtliche Einordnung vorausgesetzt.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_007",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "1",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": false,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Darlehen nicht eingeordnet oder vereinfachtes Verfahren schließt die Zinsvorteilsanrechnung aus.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_008",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "1",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Darlehen nicht eingeordnet oder vereinfachtes Verfahren schließt die Zinsvorteilsanrechnung aus.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_009",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "-1",
+      "ermaessigter_zinssatz_prozent": "1",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe oder Ermäßigungssatz höher als Vergleichssatz.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_010",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "5",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe oder Ermäßigungssatz höher als Vergleichssatz.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_011",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": 1,
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe oder Ermäßigungssatz höher als Vergleichssatz.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_012",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "1",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe oder Ermäßigungssatz höher als Vergleichssatz.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_013",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "1",
+      "marktueblicher_zinssatz_prozent": "4",
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe oder Ermäßigungssatz höher als Vergleichssatz.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "MZI_014",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": "10000",
+      "ermaessigter_zinssatz_prozent": "1",
+      "marktueblicher_zinssatz_prozent": null,
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kein stillschweigender marktüblicher Zins; Nutzervorgabe fehlt.",
+    "pruefnachweis": "Vor Implementierung Jahreszinsdifferenz aus § 559a Abs. 2/3 und Ausnahme § 559c Abs. 1 lokal hergeleitet."
+  },
+  {
+    "fall_id": "BRUCHEINGABE_005",
+    "funktion": "modernisierung_zinsermaessigung",
+    "eingaben": {
+      "darlehensursprungsbetrag": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "ermaessigter_zinssatz_prozent": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "marktueblicher_zinssatz_prozent": {
+        "zaehler": "2",
+        "nenner": "3"
+      },
+      "marktzinssatz_nachweis": "Synthetischer Marktzinssatz erstrangiger Hypotheken zum Maßnahmenabschluss",
+      "beruecksichtigungsfaehiges_darlehen": true,
+      "vereinfachtes_verfahren": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "900"
+      }
+    },
+    "herleitung": "Unabhängige Bruchrechnung beziehungsweise unveränderte fachliche Nichtnegativitätsgrenze; exakte Objekte statt gerundeter Dezimaltexte. Erwartung 1/900.",
+    "pruefnachweis": "Manuelle Erwartung für zusätzliche verlustfreie Eingabedarstellung; keine neue materielle Rechenregel."
+  }
+]

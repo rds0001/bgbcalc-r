@@ -1,0 +1,766 @@
+[
+  {
+    "fall_id": "NACHERBFRIST_VOR_GRENZE",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-30",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": false
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_AM_GRENZENDE",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_NACH_GRENZE",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-02-01",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_EREIGNIS_AM_LETZTEN_TAG",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": "2030-01-31",
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": true,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": false
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_EREIGNIS_FRUEHER",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": "2000-01-31",
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": true,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": false
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_EREIGNIS_ZU_SPAET",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-02-01",
+      "nacherbfall_am": "2030-02-01",
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_PERSON_LEBTE",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "personenereignis",
+      "ereignistraeger_bei_erbfall_vorhanden": true,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": true,
+        "unwirksam_wegen_dreissigjahresgrenze": false
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_PERSON_LEBTE_NICHT",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "personenereignis",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_JURISTISCHE_PERSON_EXISTIERTE",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "personenereignis",
+      "ereignistraeger_bei_erbfall_vorhanden": true,
+      "ereignistraeger_juristische_person": true,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_JURISTISCHE_PERSON_SPAETER",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "personenereignis",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": true,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_GESCHWISTER_BEZUGSPERSON_LEBTE",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "geschwistergeburt",
+      "ereignistraeger_bei_erbfall_vorhanden": true,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": true,
+        "unwirksam_wegen_dreissigjahresgrenze": false
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_GESCHWISTER_BEZUGSPERSON_SPAETER",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "geschwistergeburt",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": true,
+        "unwirksam_wegen_dreissigjahresgrenze": false
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_SPAETERE_GEBURT_AUSNAHME",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-02-01",
+      "nacherbfall_am": "2030-02-01",
+      "fortgeltungsgrund": "geschwistergeburt",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": true,
+        "unwirksam_wegen_dreissigjahresgrenze": false
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_PERSON_OHNE_ANORDNUNG",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": true,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-01-31",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_SCHALTTAG",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-02-29",
+      "prueftag": "2030-02-28",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "2030-02-28",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_UNTERGRENZE",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "0001-01-01",
+      "prueftag": "0031-01-01",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "dreissigjahresfristende": "0031-01-01",
+        "nacherbfall_bis_fristablauf": false,
+        "fortgeltungsausnahme": false,
+        "unwirksam_wegen_dreissigjahresgrenze": true
+      }
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_FEHLT_erbfall_am",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": null,
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_TYP_erbfall_am",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": [],
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_FEHLT_prueftag",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": null,
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_TYP_prueftag",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": [],
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_TYP_nacherbfall_am",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": [],
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_FEHLT_fortgeltungsgrund",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": null,
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_TYP_fortgeltungsgrund",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": [],
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_FEHLT_ereignistraeger_bei_erbfall_vorhanden",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": null,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_TYP_ereignistraeger_bei_erbfall_vorhanden",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": 1,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_FEHLT_ereignistraeger_juristische_person",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": null,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_TYP_ereignistraeger_juristische_person",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": 1,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_FEHLT_einordnungsnachweis",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_TYP_einordnungsnachweis",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_PRUEFTAG_VORHER",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2000-01-30",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_EREIGNIS_VORHER",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": "2000-01-30",
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_EREIGNIS_ZUKUNFT",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": "2030-02-01",
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_GRUND_UNBEKANNT",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "tod_eines_dritten",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_JURISTISCHE_GESCHWISTER",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "geschwistergeburt",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": true,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_UEBERLAUF",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "9990-01-01",
+      "prueftag": "9999-12-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": "Synthetisch rechtlich qualifizierte Nacherbeinsetzung und Ereignislage."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "NACHERBFRIST_NACHWEIS_LEER",
+    "funktion": "nacherbeneinsetzung_dreissigjahresgrenze",
+    "eingaben": {
+      "erbfall_am": "2000-01-31",
+      "prueftag": "2030-01-31",
+      "nacherbfall_am": null,
+      "fortgeltungsgrund": "keiner",
+      "ereignistraeger_bei_erbfall_vorhanden": false,
+      "ereignistraeger_juristische_person": false,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig gesetzte Dreißigjahresenden, Grenze am Tagesende, rechtzeitiges gegenüber verspätetem Ereignis und gesetzliche Ausnahmen.",
+    "pruefnachweis": "Native Python-/R-Ausführung und vollständige Ergebnisparität."
+  }
+]

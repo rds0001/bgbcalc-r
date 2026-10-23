@@ -1,0 +1,13 @@
+betriebsuebergang_bisheriger_arbeitgeber_haftungsbetrag <- function(betriebsuebergang_am=NULL, faellig_am=NULL, nach_uebergang_faellig=NULL, verpflichtungsbetrag=NULL, abgelaufene_bemessungseinheiten=NULL, gesamte_bemessungseinheiten=NULL, einordnungsnachweis=NULL) {
+ uebergang <- .datum(betriebsuebergang_am,'betriebsuebergang_am');faellig <- .datum(faellig_am,'faellig_am');.wahrheitswert(nach_uebergang_faellig,'nach_uebergang_faellig');.text(einordnungsnachweis,'einordnungsnachweis')
+ betrag <- .geld(verpflichtungsbetrag);teil <- .geld(abgelaufene_bemessungseinheiten);gesamt <- .geld(gesamte_bemessungseinheiten)
+ if(.vergleichen(gesamt,.bruch(0))<=0 || .vergleichen(teil,gesamt)>0) .fehler('bemessungseinheiten','Positiver Gesamtumfang und Teil h\u00f6chstens Gesamtumfang erforderlich.')
+ if((nach_uebergang_faellig && faellig<uebergang) || (!nach_uebergang_faellig && faellig>uebergang)) .fehler('nach_uebergang_faellig','Zeitliche Einordnung widerspricht Kalendertagen.')
+ ende <- .frist(betriebsuebergang_am,1,'jahre','ereignis')
+ haftung <- if(!nach_uebergang_faellig) betrag else if(faellig<=ende) .multiplizieren(betrag,.dividieren(teil,gesamt)) else .geld('0')
+ wert <- list(einjahresgrenze_letzter_tag=.iso(ende),haftungsbetrag_bisheriger_arbeitgeber=.bruchteile(haftung))
+ eingaben <- list(betriebsuebergang_am=betriebsuebergang_am, faellig_am=faellig_am, nach_uebergang_faellig=nach_uebergang_faellig, verpflichtungsbetrag=verpflichtungsbetrag, abgelaufene_bemessungseinheiten=abgelaufene_bemessungseinheiten, gesamte_bemessungseinheiten=gesamte_bemessungseinheiten, einordnungsnachweis=einordnungsnachweis)
+ ergebnis <- .ergebnis(wert,"datum_und_EUR","BGB_BETRIEBSUEBERGANG_BISHERIGER_ARBEITGEBER_HAFTUNGSBETRAG",eingaben,list(list(operation="F\u00e4lligkeitszeitgrenze und zeitanteiligen Haftungsumfang des bisherigen Arbeitgebers berechnen.")),eingaben)
+ ergebnis$hinweise <- list("\u00a7613aII: Vor \u00dcbergang f\u00e4llige qualifizierte Verpflichtung in voller H\u00f6he; sp\u00e4ter f\u00e4llige nur bis zur gesetzlichen Einjahresgrenze und im Verh\u00e4ltnis des bereits abgelaufenen zum gesamten Bemessungszeitraum. Fristende nach187I/188; Datumsgleichheit zum letzten Tag gilt nur bei rechtlich qualifizierter F\u00e4lligkeit vor dessen Ablauf. Ausgabe ist Umfang der gesamtschuldnerischen Haftung des bisherigen Arbeitgebers; keine h\u00e4lftige Aufteilung und kein zus\u00e4tzlicher Anspruch neben dem Gesamtbetrag. \u00dcbrige Haftungsgrundlagen und Innenausgleich nicht entschieden. Beide Zeiteinheiten auch im Vollhaftungsfall angeben; keine automatische Bewertung oder zeitliche Entstehung der Verpflichtung.")
+ ergebnis
+}

@@ -1,0 +1,497 @@
+[
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_0",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlbare_lieferkosten": {
+          "zaehler": "5",
+          "nenner": "1"
+        },
+        "ausgeschlossene_liefermehrkosten": {
+          "zaehler": "5",
+          "nenner": "1"
+        },
+        "rueckzahlungsgrundbetrag": {
+          "zaehler": "105",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_1",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": false,
+      "guenstigste_standardlieferkosten": null,
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlbare_lieferkosten": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "ausgeschlossene_liefermehrkosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rueckzahlungsgrundbetrag": {
+          "zaehler": "110",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_2",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "3",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlbare_lieferkosten": {
+          "zaehler": "3",
+          "nenner": "1"
+        },
+        "ausgeschlossene_liefermehrkosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rueckzahlungsgrundbetrag": {
+          "zaehler": "103",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_3",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "5",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlbare_lieferkosten": {
+          "zaehler": "5",
+          "nenner": "1"
+        },
+        "ausgeschlossene_liefermehrkosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rueckzahlungsgrundbetrag": {
+          "zaehler": "105",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_4",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "0",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlbare_lieferkosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgeschlossene_liefermehrkosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rueckzahlungsgrundbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_5",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "0",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlbare_lieferkosten": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgeschlossene_liefermehrkosten": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "rueckzahlungsgrundbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_6",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "0",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlbare_lieferkosten": {
+          "zaehler": "5",
+          "nenner": "1"
+        },
+        "ausgeschlossene_liefermehrkosten": {
+          "zaehler": "5",
+          "nenner": "1"
+        },
+        "rueckzahlungsgrundbetrag": {
+          "zaehler": "5",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_7",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "0.1",
+      "gezahlte_lieferkosten": "0.2",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "0.15",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckzahlbare_lieferkosten": {
+          "zaehler": "3",
+          "nenner": "20"
+        },
+        "ausgeschlossene_liefermehrkosten": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "rueckzahlungsgrundbetrag": {
+          "zaehler": "1",
+          "nenner": "4"
+        }
+      }
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_FEHLT_empfangene_warenzahlung",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": null,
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_TYP_empfangene_warenzahlung",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": {},
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_FEHLT_gezahlte_lieferkosten",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": null,
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_TYP_gezahlte_lieferkosten",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": {},
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_FEHLT_abweichende_lieferart_gewaehlt",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": null,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_TYP_abweichende_lieferart_gewaehlt",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": {},
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_FEHLT_guenstigste_standardlieferkosten",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": null,
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_TYP_guenstigste_standardlieferkosten",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": {},
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_FEHLT_einordnungsnachweis",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_TYP_einordnungsnachweis",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_UNGUELTIG_0",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "-1",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_UNGUELTIG_1",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "-1",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_UNGUELTIG_2",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "-1",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_UNGUELTIG_3",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": false,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": "§357I/II: grundsätzlich auch Lieferzahlungen zurückgewähren. Nur zusätzliche Kosten infolge gewählter abweichender Lieferart ausschließen; ohne diesen Tatbestand tatsächliche Lieferzahlung vollständig berücksichtigen. Standardvergleich auf denselben widerrufenen Lieferumfang beziehen, keine pauschale Zuordnung bei Teilwiderruf oder mehreren Warenkörben. Rücksendekosten357V/VI/VII, Wertersatz357a, mögliche Zahlungsverweigerung357IV, Rückzahlungsweg357III und Frist getrennt behandeln. Grundbetrag vor weiteren rechtlich zulässigen Anrechnungen; keine automatische Saldierung oder zusätzliche Rückabwicklungsgebühr."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "WIDERRUF_RUECKZAHLUNG_LIEFERKOSTEN_UNGUELTIG_4",
+    "funktion": "widerruf_rueckzahlung_lieferkosten",
+    "eingaben": {
+      "empfangene_warenzahlung": "100",
+      "gezahlte_lieferkosten": "10",
+      "abweichende_lieferart_gewaehlt": true,
+      "guenstigste_standardlieferkosten": "5",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig:Waren100+Standard5=105, Liefermehrkosten10−5=5. Ohne gewählte andere Lieferart100+10=110. Keine Erstattung nie gezahlter Lieferkosten.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

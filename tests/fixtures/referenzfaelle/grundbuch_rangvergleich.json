@@ -1,0 +1,450 @@
+[
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_GLEICHE_ABTEILUNG",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rangvergleich": -1,
+        "vergleichsmassstab": "eintragungsreihenfolge"
+      }
+    },
+    "herleitung": "Gleiche Abteilung:Position1 vor2 auch am gleichen Eintragungstag. Andere Abteilung:2.Januar vor3.Januar, Gleichheit nur am selben angegebenen Tag. Vorzeichen bezieht sich auf erstes gegenüber zweitem Recht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_UMGEKEHRT",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "zweites_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rangvergleich": 1,
+        "vergleichsmassstab": "eintragungsreihenfolge"
+      }
+    },
+    "herleitung": "Gleiche Abteilung:Position1 vor2 auch am gleichen Eintragungstag. Andere Abteilung:2.Januar vor3.Januar, Gleichheit nur am selben angegebenen Tag. Vorzeichen bezieht sich auf erstes gegenüber zweitem Recht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_GLEICHER_TAG_GLEICHE_ABTEILUNG",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-02"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rangvergleich": -1,
+        "vergleichsmassstab": "eintragungsreihenfolge"
+      }
+    },
+    "herleitung": "Gleiche Abteilung:Position1 vor2 auch am gleichen Eintragungstag. Andere Abteilung:2.Januar vor3.Januar, Gleichheit nur am selben angegebenen Tag. Vorzeichen bezieht sich auf erstes gegenüber zweitem Recht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_ANDERE_ABTEILUNG_FRUEHER",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "III",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rangvergleich": -1,
+        "vergleichsmassstab": "eintragungstag"
+      }
+    },
+    "herleitung": "Gleiche Abteilung:Position1 vor2 auch am gleichen Eintragungstag. Andere Abteilung:2.Januar vor3.Januar, Gleichheit nur am selben angegebenen Tag. Vorzeichen bezieht sich auf erstes gegenüber zweitem Recht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_ANDERE_ABTEILUNG_GLEICH",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "III",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-02"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rangvergleich": 0,
+        "vergleichsmassstab": "eintragungstag"
+      }
+    },
+    "herleitung": "Gleiche Abteilung:Position1 vor2 auch am gleichen Eintragungstag. Andere Abteilung:2.Januar vor3.Januar, Gleichheit nur am selben angegebenen Tag. Vorzeichen bezieht sich auf erstes gegenüber zweitem Recht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_ANDERE_ABTEILUNG_SPAETER",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "III",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-01"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rangvergleich": 1,
+        "vergleichsmassstab": "eintragungstag"
+      }
+    },
+    "herleitung": "Gleiche Abteilung:Position1 vor2 auch am gleichen Eintragungstag. Andere Abteilung:2.Januar vor3.Januar, Gleichheit nur am selben angegebenen Tag. Vorzeichen bezieht sich auf erstes gegenüber zweitem Recht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_FEHLT_erstes_recht",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": null,
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_TYP_erstes_recht",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {},
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_FEHLT_zweites_recht",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": null,
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_TYP_zweites_recht",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {},
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_FEHLT_einordnungsnachweis",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_TYP_einordnungsnachweis",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_UNGUELTIG_0",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_UNGUELTIG_1",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_UNGUELTIG_2",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 0,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_UNGUELTIG_3",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-02-30"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_UNGUELTIG_4",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": " ",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": "§879I/II: in derselben Grundbuchabteilung tatsächliche Reihenfolge der Eintragungen vergleichen; in verschiedenen Abteilungen angegebenen Eintragungstag vergleichen, bei gleichem Tag Gleichrang. Zeitpunkt einer späteren dinglichen Einigung ersetzt den Eintragungsmaßstab nicht. Position ist wirkliche Reihenfolge, nicht ungeprüft laufende Nummer eines Rechts oder Antragsnummer. Nur Paarvergleich: bei mehreren Rechten keine transitive globale Ranggruppe aus einzelnen Gleichrangvergleichen erfinden. Abweichende eingetragene Rangbestimmung,880Rangänderung,881Vorbehalt,883Vormerkung und Verwertungsbeträge gesondert. Gleiche Position verschiedener Rechte derselben Abteilung wird mangels eindeutig qualifizierter Reihenfolge nicht angenommen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GRUNDBUCH_RANGPAARVERGLEICH_UNGUELTIG_5",
+    "funktion": "grundbuch_rangpaarvergleich",
+    "eingaben": {
+      "erstes_recht": {
+        "recht_id": "A",
+        "abteilung": "II",
+        "eintragungsposition": 1,
+        "eintragungstag": "2024-01-02"
+      },
+      "zweites_recht": {
+        "recht_id": "B",
+        "abteilung": "II",
+        "eintragungsposition": 2,
+        "eintragungstag": "2024-01-03"
+      },
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

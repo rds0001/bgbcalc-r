@@ -1,0 +1,560 @@
+[
+  {
+    "fall_id": "SKO_001",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "2 Prozent eines Jahres bei 100000 Sicherheit begrenzen Kosten auf 2000.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_002",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "1500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Übliche Kosten unter Höchstsatz.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_003",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "1000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Keine Erstattung nicht entstandener Kosten.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_004",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Explizites halbes Jahr halbiert Höchstbetrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_005",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 2,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Zwei Jahre: Grenze 4000, übliche Kosten 2500.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_006",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 0,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Kein Jahresanteil.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_007",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "0",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Sicherheitsbetrag null.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_008",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "1",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 3,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "150"
+      }
+    },
+    "herleitung": "Exakter Dritteljahresbetrag ohne Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_009",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "verbraucherbau",
+      "baubetreuer_bevollmaechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Bevollmächtigter Baubetreuer hebt Verbraucherausnahme auf.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_010",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "bautraeger_verbraucher",
+      "baubetreuer_bevollmaechtigt": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "2000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Gleiche Rückausnahme beim Verbraucher-Bauträgervertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_011",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": false,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Tatbestand nicht erfüllt oder gesetzliche Ausnahme.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_012",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": true,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Tatbestand nicht erfüllt oder gesetzliche Ausnahme.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_013",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "verbraucherbau",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Tatbestand nicht erfüllt oder gesetzliche Ausnahme.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_014",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "bautraeger_verbraucher",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Tatbestand nicht erfüllt oder gesetzliche Ausnahme.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_015",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "oeffentlich_insolvenzunfaehig",
+      "baubetreuer_bevollmaechtigt": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Tatbestand nicht erfüllt oder gesetzliche Ausnahme.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_016",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "-1",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verstoß gegen Eingabevertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_017",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "-1",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verstoß gegen Eingabevertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_018",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "-1",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verstoß gegen Eingabevertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_019",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 0,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verstoß gegen Eingabevertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_020",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": -1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verstoß gegen Eingabevertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_021",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verstoß gegen Eingabevertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_022",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "unbekannt",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verstoß gegen Eingabevertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_023",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": "2500",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": 1,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Verstoß gegen Eingabevertrag.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  },
+  {
+    "fall_id": "SKO_024",
+    "funktion": "bau_sicherungskosten_erstattung",
+    "eingaben": {
+      "sicherheitsbetrag": "100000",
+      "tatsaechliche_kosten": "3000",
+      "uebliche_kosten": null,
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 1,
+      "zeitanteil_nachweis": "Ein volles Jahr unveränderte Sicherheit",
+      "sicherheit_nach_650f": true,
+      "aufrechterhaltung_wegen_unbegruendeter_einwendungen": false,
+      "bestellerart": "sonstiger",
+      "baubetreuer_bevollmaechtigt": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Bewertung der üblichen Kosten fehlt.",
+    "pruefnachweis": "Vor Implementierung aus § 650f Abs. 3/6 lokal abgeleitet: tatsächliche/übliche Kosten und jahresanteilige Zweiprozentgrenze."
+  }
+]

@@ -1,0 +1,540 @@
+[
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_EINER",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_nachlassanteil_gesamtgut": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "herauszurechnende_anteile": [
+          {
+            "abkoemmling_id": "A",
+            "betrag": {
+              "zaehler": "375",
+              "nenner": "2"
+            }
+          }
+        ],
+        "herauszurechnender_gesamtbetrag": {
+          "zaehler": "375",
+          "nenner": "2"
+        },
+        "verbleibendes_gesamtgut": {
+          "zaehler": "1625",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Bereinigtes Gesamtgut1000: Nachlasshälfte500; Quote3/8 ergibt187,5 und Rest812,5. Zwei Viertel ergeben125jePerson und750Rest. Gut1 und Drittelquote ergeben1/6Entnahme,5/6Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_MEHRERE",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "4"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_nachlassanteil_gesamtgut": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "herauszurechnende_anteile": [
+          {
+            "abkoemmling_id": "A",
+            "betrag": {
+              "zaehler": "125",
+              "nenner": "1"
+            }
+          },
+          {
+            "abkoemmling_id": "B",
+            "betrag": {
+              "zaehler": "125",
+              "nenner": "1"
+            }
+          }
+        ],
+        "herauszurechnender_gesamtbetrag": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "verbleibendes_gesamtgut": {
+          "zaehler": "750",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bereinigtes Gesamtgut1000: Nachlasshälfte500; Quote3/8 ergibt187,5 und Rest812,5. Zwei Viertel ergeben125jePerson und750Rest. Gut1 und Drittelquote ergeben1/6Entnahme,5/6Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_KEINE",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_nachlassanteil_gesamtgut": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "herauszurechnende_anteile": [],
+        "herauszurechnender_gesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibendes_gesamtgut": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bereinigtes Gesamtgut1000: Nachlasshälfte500; Quote3/8 ergibt187,5 und Rest812,5. Zwei Viertel ergeben125jePerson und750Rest. Gut1 und Drittelquote ergeben1/6Entnahme,5/6Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_NULLGUT",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "0",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_nachlassanteil_gesamtgut": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "herauszurechnende_anteile": [
+          {
+            "abkoemmling_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "herauszurechnender_gesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibendes_gesamtgut": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bereinigtes Gesamtgut1000: Nachlasshälfte500; Quote3/8 ergibt187,5 und Rest812,5. Zwei Viertel ergeben125jePerson und750Rest. Gut1 und Drittelquote ergeben1/6Entnahme,5/6Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_DRITTEL",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_nachlassanteil_gesamtgut": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "herauszurechnende_anteile": [
+          {
+            "abkoemmling_id": "A",
+            "betrag": {
+              "zaehler": "1",
+              "nenner": "6"
+            }
+          }
+        ],
+        "herauszurechnender_gesamtbetrag": {
+          "zaehler": "1",
+          "nenner": "6"
+        },
+        "verbleibendes_gesamtgut": {
+          "zaehler": "5",
+          "nenner": "6"
+        }
+      }
+    },
+    "herleitung": "Bereinigtes Gesamtgut1000: Nachlasshälfte500; Quote3/8 ergibt187,5 und Rest812,5. Zwei Viertel ergeben125jePerson und750Rest. Gut1 und Drittelquote ergeben1/6Entnahme,5/6Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_NULLQUOTE",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_nachlassanteil_gesamtgut": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "herauszurechnende_anteile": [
+          {
+            "abkoemmling_id": "A",
+            "betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "herauszurechnender_gesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibendes_gesamtgut": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Bereinigtes Gesamtgut1000: Nachlasshälfte500; Quote3/8 ergibt187,5 und Rest812,5. Zwei Viertel ergeben125jePerson und750Rest. Gut1 und Drittelquote ergeben1/6Entnahme,5/6Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_FEHLTteilungsfaehiges_gesamtgut",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": null,
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_TYPteilungsfaehiges_gesamtgut",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": {},
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_FEHLTerbquoten_nichtgemeinsamer_abkoemmlinge",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": null,
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_TYPerbquoten_nichtgemeinsamer_abkoemmlinge",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": {},
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_FEHLTeinordnungsnachweis",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_TYPeinordnungsnachweis",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_UNGUELTIG0",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "-1",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_UNGUELTIG1",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "-1",
+            "nenner": "3"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_UNGUELTIG2",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        },
+        {
+          "abkoemmling_id": "B",
+          "erbquote": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_UNGUELTIG3",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_UNGUELTIG4",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A"
+        }
+      ],
+      "einordnungsnachweis": "§1483II: ursprünglichen, bereits bereinigten Gesamtgutwert hälftig dem hypothetischen Nachlass zuordnen; Erbquoten der nichtgemeinschaftlichen Abkömmlinge auf diese Hälfte anwenden und aus dem Gesamtgut herausrechnen. Nur Gesamtgutkomponente ihrer Erbteile; Sondergut/Vorbehaltsgut und sonstige Nachlasspositionen gesondert. Keine automatische Güterstands-, Abstammungs-, Erbquoten- oder Bewertungsentscheidung. Keine erneute Schuldenberichtigung bereits bereinigter Werte, kein negativer Nachlass und keine pauschale Kappung tatsächlicher Außenhaftung. Abweichende ehevertragliche Teilungsverhältnisse nicht mit Halbteilung vermischen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "FORTSETZUNG_NICHTGEMEINSAME_ABKOEMMLINGE_GESAMTGUT_UNGUELTIG5",
+    "funktion": "fortsetzung_nichtgemeinsame_abkoemmlinge_gesamtgut",
+    "eingaben": {
+      "teilungsfaehiges_gesamtgut": "1000",
+      "erbquoten_nichtgemeinsamer_abkoemmlinge": [
+        {
+          "abkoemmling_id": "A",
+          "erbquote": {
+            "zaehler": "3",
+            "nenner": "8"
+          }
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

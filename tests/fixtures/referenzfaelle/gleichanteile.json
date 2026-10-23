@@ -1,0 +1,1017 @@
+[
+  {
+    "fall_id": "GLA_001",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "leistungsanteil": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120Einheiten durch3Beteiligte:40Einheiten je Anteil.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_002",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "1",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "leistungsanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      }
+    },
+    "herleitung": "Drittelanteil ohne Dezimalrundung.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_003",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "0.01",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "leistungsanteil": {
+          "zaehler": "1",
+          "nenner": "300"
+        }
+      }
+    },
+    "herleitung": "Drittel eines Cents bleibt exakt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_004",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "12",
+      "anzahl_beteiligte": 4,
+      "leistungseinheit": "kg",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "leistungsanteil": {
+          "zaehler": "3",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Andere einheitliche Mengenangabe:12kg durch4gleich3kg; keine Währungsannahme.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_005",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "0",
+      "anzahl_beteiligte": 2,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "leistungsanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Nullgesamtleistung erzeugt keine positive Teilleistung.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_006",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "anzahl_beteiligte": 2,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "leistungsanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        }
+      }
+    },
+    "herleitung": "Exaktes Bruchobjekt weiterverarbeiten.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_007",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "1",
+      "anzahl_beteiligte": 9007199254740991,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "9007199254740991"
+        },
+        "leistungsanteil": {
+          "zaehler": "1",
+          "nenner": "9007199254740991"
+        }
+      }
+    },
+    "herleitung": "Oberer gemeinsam exakt darstellbarer Zähler-/Nennerbereich.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_008",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 1,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_009",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 0,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_010",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": -1,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_011",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": true,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_012",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 2.5,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_013",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 9007199254740992,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_014",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "-1",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_015",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_016",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": 1,
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_017",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": null,
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe gesamtleistung fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_018",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": null,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe anzahl_beteiligte fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_019",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": null,
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe leistungseinheit fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_020",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": null,
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe rollenart fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_021",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": null,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe leistung_teilbar fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_022",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe gleichanteilsvermutung_anwendbar fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_023",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "leistungsanteil": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "120Einheiten durch3Beteiligte:40Einheiten je Anteil.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_024",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "1",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "leistungsanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        }
+      }
+    },
+    "herleitung": "Drittelanteil ohne Dezimalrundung.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_025",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "0.01",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "leistungsanteil": {
+          "zaehler": "1",
+          "nenner": "300"
+        }
+      }
+    },
+    "herleitung": "Drittel eines Cents bleibt exakt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_026",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "12",
+      "anzahl_gesamtglaeubiger": 4,
+      "leistungseinheit": "kg",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "leistungsanteil": {
+          "zaehler": "3",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Andere einheitliche Mengenangabe:12kg durch4gleich3kg; keine Währungsannahme.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_027",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "0",
+      "anzahl_gesamtglaeubiger": 2,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "leistungsanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Nullgesamtleistung erzeugt keine positive Teilleistung.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_028",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "anzahl_gesamtglaeubiger": 2,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "leistungsanteil": {
+          "zaehler": "1",
+          "nenner": "6"
+        }
+      }
+    },
+    "herleitung": "Exaktes Bruchobjekt weiterverarbeiten.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_029",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "1",
+      "anzahl_gesamtglaeubiger": 9007199254740991,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "9007199254740991"
+        },
+        "leistungsanteil": {
+          "zaehler": "1",
+          "nenner": "9007199254740991"
+        }
+      }
+    },
+    "herleitung": "Oberer gemeinsam exakt darstellbarer Zähler-/Nennerbereich.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_030",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 1,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_031",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 0,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_032",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": -1,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_033",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": true,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_034",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 2.5,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_035",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 9007199254740992,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_036",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "-1",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_037",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_038",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": 1,
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Typ, Wertebereich oder fehlende Pluralität.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_039",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": null,
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe gesamtleistung fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_040",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": null,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe anzahl_gesamtglaeubiger fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_041",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": null,
+      "gleichanteilige_innenberechtigung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe leistungseinheit fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_042",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe gleichanteilige_innenberechtigung_anwendbar fehlt.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_043",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilforderung",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "anteilsquote": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "leistungsanteil": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleiche Teilforderung mehrerer Gläubiger nach §420.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_044",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": false,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine Anwendung der Zweifelsregel ohne beide Voraussetzungen.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_045",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine Anwendung der Zweifelsregel ohne beide Voraussetzungen.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_046",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": false,
+      "gleichanteilsvermutung_anwendbar": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine Anwendung der Zweifelsregel ohne beide Voraussetzungen.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_047",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "gesamtschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nicht gewählte Rechtsform oder Zahl statt explizitem Wahrheitswert.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_048",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": 1,
+      "gleichanteilsvermutung_anwendbar": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nicht gewählte Rechtsform oder Zahl statt explizitem Wahrheitswert.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_049",
+    "funktion": "teilbare_leistung_gleichanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_beteiligte": 3,
+      "leistungseinheit": "EUR",
+      "rollenart": "teilschuld",
+      "leistung_teilbar": true,
+      "gleichanteilsvermutung_anwendbar": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nicht gewählte Rechtsform oder Zahl statt explizitem Wahrheitswert.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_050",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Abweichende Innenberechtigung oder fehlende Gesamtgläubigerschaft: keine Gleichaufteilung.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  },
+  {
+    "fall_id": "GLA_051",
+    "funktion": "gesamtglaeubiger_innenanteil",
+    "eingaben": {
+      "gesamtleistung": "120",
+      "anzahl_gesamtglaeubiger": 3,
+      "leistungseinheit": "EUR",
+      "gleichanteilige_innenberechtigung_anwendbar": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Expliziter Wahrheitswert erforderlich.",
+    "pruefnachweis": "Handrechnung gleicher Anteile bei ausdrücklich ausgewählter Fallgruppe aus lokalem §420 beziehungsweise §430; vor Implementierung."
+  }
+]

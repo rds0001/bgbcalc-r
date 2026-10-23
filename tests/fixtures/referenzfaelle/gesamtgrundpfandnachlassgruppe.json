@@ -1,0 +1,931 @@
+[
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_DECKEL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_UNTER_DECKEL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "100",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_RENTENSCHULD",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtrentenschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_EIGEN_NULL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "10",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "120",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "120",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_ALLE_NULL",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "10",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "0",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "wertquote": null,
+        "anteil_vor_wertbegrenzung": null,
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_NULLBETRAG",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "0",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "bereinigter_wert_vermachtes_grundstueck": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "bereinigter_gesamtwert": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "wertquote": {
+          "zaehler": "2",
+          "nenner": "5"
+        },
+        "anteil_vor_wertbegrenzung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_QUALIFIKATION",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": false,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_ABWEICHUNG",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": false,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FEHLT_gesamtbelastungsbetrag",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": null,
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_TYP_gesamtbelastungsbetrag",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": [],
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FEHLT_grundpfandart",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": null,
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_TYP_grundpfandart",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": [],
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FEHLT_grundstuecke",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": null,
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_TYP_grundstuecke",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": {},
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FEHLT_vermachtes_grundstueck_id",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": null,
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_TYP_vermachtes_grundstueck_id",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": [],
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FEHLT_fremdhaftung_und_erblasserpflicht_qualifiziert",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": null,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_TYP_fremdhaftung_und_erblasserpflicht_qualifiziert",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": 1,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FEHLT_zweifelsregel_anwendbar",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": null,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_TYP_zweifelsregel_anwendbar",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": 1,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FEHLT_rechts_und_bewertungsnachweis",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_TYP_rechts_und_bewertungsnachweis",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_DOPPELT",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "1",
+          "vorrangige_belastungen": "0"
+        },
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "1",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FREMD_ID",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "X",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_ZU_KLEINE_GRUPPE",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "1",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_FELD_FEHLT",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {},
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "1",
+          "vorrangige_belastungen": "0"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_NEGATIV",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "-1",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": "A/B vollständigeNachlassgruppe; FremdgrundstückC gehört nichtinWertliste, ErblasserpflichtgegenüberFremdeigentümer fürdenselbenGesamtbetragqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  },
+  {
+    "fall_id": "GESAMTGRUNDPFANDVERMAECHTNIS_NACHLASSGRUPPE_MIT_FREMDHAFTUNG_LEERER_NACHWEIS",
+    "funktion": "gesamtgrundpfandvermaechtnis_nachlassgruppe_mit_fremdhaftung",
+    "eingaben": {
+      "gesamtbelastungsbetrag": "300",
+      "grundpfandart": "gesamtgrundschuld",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "150",
+          "vorrangige_belastungen": "30"
+        }
+      ],
+      "vermachtes_grundstueck_id": "A",
+      "fremdhaftung_und_erblasserpflicht_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "rechts_und_bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "NachlassA80+B120=200,Q2/5; Betrag300gibt120vorDeckel,80danach. FremdgrundstückC hat keinenWertinput undverändertQuote nicht. Betrag100ergibt40.",
+    "pruefnachweis": "NativePython/R und vollständigeErgebnisparität;2168II-Nachlassvergleichsgruppe explizit."
+  }
+]

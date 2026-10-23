@@ -1,0 +1,11 @@
+mietpreisbremse_ruegezeitliche_beschraenkung <- function(mietbeginn_am=NULL, ruegezugang_lokal_am=NULL, ruegezugang_utc=NULL, mietende_utc=NULL, zeitnachweis=NULL) {
+ a <- .datum(mietbeginn_am,'mietbeginn_am');r <- .datum(ruegezugang_lokal_am,'ruegezugang_lokal_am');u <- .reise_utc_zeitpunkt(ruegezugang_utc,'ruegezugang_utc');.text(zeitnachweis,'zeitnachweis')
+ if(r<a) .fehler('ruegezugang_lokal_am','R\u00fcge des betrachteten Mietverh\u00e4ltnisses nicht vor Mietbeginn.')
+ e <- .frist(mietbeginn_am,30,'monate','tagesbeginn');spaet <- r>e
+ beendet <- if(is.null(mietende_utc)) FALSE else u>=.reise_utc_zeitpunkt(mietende_utc,'mietende_utc')
+ wert <- list(dreissigmonatszeitraum_letzter_tag=format(e,'%Y-%m-%d'),ruege_nach_dreissig_monaten=spaet,mietverhaeltnis_bei_ruege_beendet=beendet,rueckforderung_auf_spaetere_faelligkeit_beschraenkt=spaet||beendet)
+ eingaben <- list(mietbeginn_am=mietbeginn_am, ruegezugang_lokal_am=ruegezugang_lokal_am, ruegezugang_utc=ruegezugang_utc, mietende_utc=mietende_utc, zeitnachweis=zeitnachweis)
+ ergebnis <- .ergebnis(wert,"datum_und_wahrheitswerte","BGB_MIETPREISBREMSE_RUEGEZEITLICHE_BESCHRAENKUNG",eingaben,list(list(operation="30Monatsende aus Tagesbeginn berechnen, lokalen R\u00fcgetag und unabh\u00e4ngig davon UTC-Beendigungszeitpunkt vergleichen; Beschr\u00e4nkungsgr\u00fcnde mit ODER verbinden.")),eingaben)
+ ergebnis$hinweise <- list("556gII3:30Kalendermonate ab Mietbeginn zu Tagesbeginn nach187II/188. Zugang nach dem so berechneten letzten Tag ist versp\u00e4tet. Unabh\u00e4ngig davon Beschr\u00e4nkung, wenn Mietverh\u00e4ltnis beim UTC-Zugang bereits beendet ist; Zugang gleich exklusivem Beendigungszeitpunkt z\u00e4hlt als beendet. Bei \u00fcblichem Vertragsende31.12.um24Uhr ist dieser Zeitpunkt1.1.um00Uhr in zutreffender Zeitzone, anschlie\u00dfend inUTC normalisieren. Keine pauschalen900Tage, keine Zeitzone raten und keine193-Verl\u00e4ngerung dieses R\u00fcckwirkungsmerkmals. Kein materielles Urteil \u00fcber R\u00fcgeform/Auskunft, R\u00fcckzahlungsbetrag oder Verj\u00e4hrung. Lokalzugangstag undUTC-Zeit m\u00fcssen dasselbe rechtlich qualifizierte Ereignis bezeichnen. F\u00fcr untert\u00e4gigen Mietbeginn ist diese Tagesbeginnvariante nicht freigegeben.")
+ ergebnis
+}

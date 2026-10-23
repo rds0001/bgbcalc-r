@@ -1,0 +1,640 @@
+[
+  {
+    "fall_id": "GEM_001",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 3
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 2,
+          "anteil_nenner": 3
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "person_id": "A",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "40",
+            "nenner": "1"
+          }
+        },
+        {
+          "person_id": "B",
+          "anteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "80",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "120 im Verhältnis1:2.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_002",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "0",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 3
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 2,
+          "anteil_nenner": 3
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "person_id": "A",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "person_id": "B",
+          "anteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Nullbetrag bleibt auf allen Anteilen null.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_003",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "1",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 3
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 2,
+          "anteil_nenner": 3
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "person_id": "A",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "person_id": "B",
+          "anteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        }
+      ]
+    },
+    "herleitung": "Keine automatische Cent-Rundung.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_004",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": null,
+          "anteil_nenner": null
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": null,
+          "anteil_nenner": null
+        }
+      ],
+      "gleiche_anteile_im_zweifel": true,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "person_id": "A",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "betrag": {
+            "zaehler": "60",
+            "nenner": "1"
+          }
+        },
+        {
+          "person_id": "B",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "2"
+          },
+          "betrag": {
+            "zaehler": "60",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Zweifelsregel § 742: gleiche Anteile.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_005",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": null,
+          "anteil_nenner": null
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": null,
+          "anteil_nenner": null
+        },
+        {
+          "person_id": "C",
+          "anteil_zaehler": null,
+          "anteil_nenner": null
+        }
+      ],
+      "gleiche_anteile_im_zweifel": true,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "person_id": "A",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "40",
+            "nenner": "1"
+          }
+        },
+        {
+          "person_id": "B",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "40",
+            "nenner": "1"
+          }
+        },
+        {
+          "person_id": "C",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "40",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Drei Teilhaber: Drittel nach Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_006",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 2,
+          "anteil_nenner": 6
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 4,
+          "anteil_nenner": 6
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "person_id": "A",
+          "anteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "40",
+            "nenner": "1"
+          }
+        },
+        {
+          "person_id": "B",
+          "anteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "betrag": {
+            "zaehler": "80",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Gleichwertige ungekürzte Brüche.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_007",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 3
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 2,
+          "anteil_nenner": 3
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine hier eingeordnete Bruchteilsgemeinschaft.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_008",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_009",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 1
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_010",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 2
+        },
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 2
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_011",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 0,
+          "anteil_nenner": 1
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 1
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_012",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 2
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 3
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_013",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "-1",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 3
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 2,
+          "anteil_nenner": 3
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_014",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 3
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 2,
+          "anteil_nenner": 3
+        }
+      ],
+      "gleiche_anteile_im_zweifel": true,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_015",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A"
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": null,
+          "anteil_nenner": null
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_016",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 3
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 2,
+          "anteil_nenner": 3
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_017",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 0
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": 1,
+          "anteil_nenner": 2
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Gruppe, Quote, Betrag oder widersprüchlicher Gebrauch der Zweifelsregel.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_018",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": null,
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Teilhaber fehlen.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  },
+  {
+    "fall_id": "GEM_019",
+    "funktion": "gemeinschaft_lastenanteile",
+    "eingaben": {
+      "gesamtbetrag": "120",
+      "teilhaber": [
+        {
+          "person_id": "A",
+          "anteil_zaehler": null,
+          "anteil_nenner": null
+        },
+        {
+          "person_id": "B",
+          "anteil_zaehler": null,
+          "anteil_nenner": null
+        }
+      ],
+      "gleiche_anteile_im_zweifel": false,
+      "gemeinschaft_nach_bruchteilen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Ohne Zweifelsregel müssen Anteile ausdrücklich vorliegen.",
+    "pruefnachweis": "Vor Implementierung einfache Bruchrechnung aus §§ 742/748 lokaler PDF."
+  }
+]

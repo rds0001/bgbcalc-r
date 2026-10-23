@@ -1,0 +1,675 @@
+[
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_ZWEI",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [
+          "A",
+          "B"
+        ],
+        "anzahl_betreuungen": 2,
+        "mehr_als_eine_betreuung": true
+      }
+    },
+    "herleitung": "Inklusive Intervallschnittmenge: ersterTag<=Prüftag und letzterTag>=qualifizierter ersterRückblicktag; jede eindeutige Betreuung einmal zählen und Zahl>1 vergleichen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_KEINE",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [],
+        "anzahl_betreuungen": 0,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Inklusive Intervallschnittmenge: ersterTag<=Prüftag und letzterTag>=qualifizierter ersterRückblicktag; jede eindeutige Betreuung einmal zählen und Zahl>1 vergleichen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_EINE",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [
+          "A"
+        ],
+        "anzahl_betreuungen": 1,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Inklusive Intervallschnittmenge: ersterTag<=Prüftag und letzterTag>=qualifizierter ersterRückblicktag; jede eindeutige Betreuung einmal zählen und Zahl>1 vergleichen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_ALT",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2024-10-21"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [],
+        "anzahl_betreuungen": 0,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Inklusive Intervallschnittmenge: ersterTag<=Prüftag und letzterTag>=qualifizierter ersterRückblicktag; jede eindeutige Betreuung einmal zählen und Zahl>1 vergleichen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_GRENZTAG",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [
+          "X"
+        ],
+        "anzahl_betreuungen": 1,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Inklusive Intervallschnittmenge: ersterTag<=Prüftag und letzterTag>=qualifizierter ersterRückblicktag; jede eindeutige Betreuung einmal zählen und Zahl>1 vergleichen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_NUR_PRUEFTAG",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2026-10-21",
+          "letzter_tag": "2026-10-21"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [
+          "X"
+        ],
+        "anzahl_betreuungen": 1,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Inklusive Intervallschnittmenge: ersterTag<=Prüftag und letzterTag>=qualifizierter ersterRückblicktag; jede eindeutige Betreuung einmal zählen und Zahl>1 vergleichen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_ZUKUENFTIG",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2026-10-22",
+          "letzter_tag": "2027-01-01"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [],
+        "anzahl_betreuungen": 0,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Inklusive Intervallschnittmenge: ersterTag<=Prüftag und letzterTag>=qualifizierter ersterRückblicktag; jede eindeutige Betreuung einmal zählen und Zahl>1 vergleichen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_UNSORTIERT",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        },
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [
+          "B",
+          "A"
+        ],
+        "anzahl_betreuungen": 2,
+        "mehr_als_eine_betreuung": true
+      }
+    },
+    "herleitung": "Inklusive Intervallschnittmenge: ersterTag<=Prüftag und letzterTag>=qualifizierter ersterRückblicktag; jede eindeutige Betreuung einmal zählen und Zahl>1 vergleichen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_GLEICHE_BETREUUNG_ZWEI_ZEITRAEUME",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2025-01-01",
+          "letzter_tag": "2025-02-01"
+        },
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2026-01-01",
+          "letzter_tag": "2026-02-01"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [
+          "X"
+        ],
+        "anzahl_betreuungen": 1,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Je Intervall Schnittmenge getrennt prüfen, danach eindeutige Betreuungen zählen; Zeitlücken nicht auffüllen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_LUECKE_UM_FENSTER",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2024-10-21"
+        },
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2026-10-22",
+          "letzter_tag": "2027-01-01"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [],
+        "anzahl_betreuungen": 0,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Je Intervall Schnittmenge getrennt prüfen, danach eindeutige Betreuungen zählen; Zeitlücken nicht auffüllen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_ALTER_UND_NEUER_ZEITRAUM",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2024-10-21"
+        },
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2026-01-01",
+          "letzter_tag": "2026-02-01"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [
+          "X"
+        ],
+        "anzahl_betreuungen": 1,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Je Intervall Schnittmenge getrennt prüfen, danach eindeutige Betreuungen zählen; Zeitlücken nicht auffüllen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_UEBERLAPPENDE_GLEICHE_BETREUUNG",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2025-01-01",
+          "letzter_tag": "2026-02-01"
+        },
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2026-01-01",
+          "letzter_tag": "2026-10-21"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "beruecksichtigte_betreuungs_ids": [
+          "X"
+        ],
+        "anzahl_betreuungen": 1,
+        "mehr_als_eine_betreuung": false
+      }
+    },
+    "herleitung": "Je Intervall Schnittmenge getrennt prüfen, danach eindeutige Betreuungen zählen; Zeitlücken nicht auffüllen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_FEHLTprueftag",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": null,
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_TYPprueftag",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": {},
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_FEHLTrueckblick_erster_tag",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": null,
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_TYPrueckblick_erster_tag",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": {},
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_FEHLTbetreuungszeitraeume",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": null,
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_TYPbetreuungszeitraeume",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": {},
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_FEHLTeinordnungsnachweis",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_TYPeinordnungsnachweis",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_UNGUELTIG0",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2026-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_UNGUELTIG1",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2025-01-02",
+          "letzter_tag": "2025-01-01"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_UNGUELTIG2",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2025-01-01",
+          "letzter_tag": "2025-02-01"
+        },
+        {
+          "betreuungs_id": "X",
+          "erster_tag": "2025-01-01",
+          "letzter_tag": "2025-02-01"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_UNGUELTIG3",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "",
+          "erster_tag": "2025-01-01",
+          "letzter_tag": "2025-02-01"
+        }
+      ],
+      "einordnungsnachweis": "§1861II: Zahl unterschiedlicher Betreuungen zählen, die am Prüftag geführt werden oder das vorqualifizierte eingeschlossene Zweijahresfenster schneiden. Mehr als eine bedeutet strikt mindestens zwei; nicht Anzahl einzelner Tätigkeitstage oder unterschiedlicher Betreuer. Keine automatische Pflichtbefreiung oder Festlegung eines ungeklärten rückwärts zu berechnenden Grenztags. Nicht zusammenhängende Zeiträume derselben Betreuung werden getrennt auf Schnittmenge geprüft; gezählt wird die eindeutige Betreuung, nicht ihre Zeiträume."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNGEN_IM_QUALIFIZIERTEN_ZWEIJAHRESFENSTER_UNGUELTIG4",
+    "funktion": "betreuungen_im_qualifizierten_zweijahresfenster",
+    "eingaben": {
+      "prueftag": "2026-10-21",
+      "rueckblick_erster_tag": "2024-10-22",
+      "betreuungszeitraeume": [
+        {
+          "betreuungs_id": "A",
+          "erster_tag": "2020-01-01",
+          "letzter_tag": "2026-10-21"
+        },
+        {
+          "betreuungs_id": "B",
+          "erster_tag": "2024-10-22",
+          "letzter_tag": "2024-10-22"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

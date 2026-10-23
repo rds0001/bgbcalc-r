@@ -1,0 +1,724 @@
+[
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_NORMAL",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettobetrag_nach_lasten_und_reserve": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "verteilbarer_ueberschuss": {
+          "zaehler": "70",
+          "nenner": "1"
+        },
+        "anteil_am_ueberschuss": {
+          "zaehler": "35",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_NULL",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "30",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettobetrag_nach_lasten_und_reserve": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verteilbarer_ueberschuss": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anteil_am_ueberschuss": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_UNTERDECKT",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "10",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettobetrag_nach_lasten_und_reserve": {
+          "zaehler": "-20",
+          "nenner": "1"
+        },
+        "verteilbarer_ueberschuss": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "anteil_am_ueberschuss": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_BRUCH",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "0.06",
+      "gemeinsame_verbindlichkeiten": "0.01",
+      "erforderlicher_rueckbehalt": "0.01",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettobetrag_nach_lasten_und_reserve": {
+          "zaehler": "1",
+          "nenner": "25"
+        },
+        "verteilbarer_ueberschuss": {
+          "zaehler": "1",
+          "nenner": "25"
+        },
+        "anteil_am_ueberschuss": {
+          "zaehler": "1",
+          "nenner": "50"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_NICHT_ANWENDBAR",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_FEHLT_nachlasswert",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": null,
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_TYP_nachlasswert",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": [],
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_FEHLT_gemeinsame_verbindlichkeiten",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": null,
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_TYP_gemeinsame_verbindlichkeiten",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": [],
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_FEHLT_erforderlicher_rueckbehalt",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": null,
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_TYP_erforderlicher_rueckbehalt",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": [],
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_FEHLT_erbquote_zaehler",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": null,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_TYP_erbquote_zaehler",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": [],
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_FEHLT_erbquote_nenner",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": null,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_TYP_erbquote_nenner",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": [],
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_FEHLT_einfaches_teilungsmodell_qualifiziert",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_TYP_einfaches_teilungsmodell_qualifiziert",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_FEHLT_bewertungsnachweis",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_TYP_bewertungsnachweis",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_QUOTE_ZU_GROSS",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "100",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 3,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "ERBNACHLASS_UEBERSCHUSSANTEIL_NEGATIV",
+    "funktion": "erbnachlass_ueberschussanteil",
+    "eingaben": {
+      "nachlasswert": "-1",
+      "gemeinsame_verbindlichkeiten": "20",
+      "erforderlicher_rueckbehalt": "10",
+      "erbquote_zaehler": 1,
+      "erbquote_nenner": 2,
+      "einfaches_teilungsmodell_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Lasten und Reserve."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_MEHR",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "40",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_GLEICH",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "60",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_WENIGER",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "40",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_NULL",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "0",
+      "angemessenes_mass": "0",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_BRUCH",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "0.03",
+      "angemessenes_mass": "0.01",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "50"
+      }
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_NICHT_ANWENDBAR",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_FEHLT_zuwendungswert",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": null,
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_TYP_zuwendungswert",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": [],
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_FEHLT_angemessenes_mass",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": null,
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_TYP_angemessenes_mass",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": [],
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_FEHLT_zuwendung_nach_2050_abs2_qualifiziert",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_TYP_zuwendung_nach_2050_abs2_qualifiziert",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_TYP_bewertungsnachweis",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_NEGATIV",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": "-1",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierte Vorbildungskosten und angemessenes Maß."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSGLEICHUNG_ZUSCHUSS_MEHRBETRAG_NACHWEIS_LEER",
+    "funktion": "ausgleichung_zuschuss_mehrbetrag",
+    "eingaben": {
+      "zuwendungswert": "100",
+      "angemessenes_mass": "60",
+      "zuwendung_nach_2050_abs2_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Sollwerte:100−20−10=70, davon1/2=35; bei Unterdeckung kein positiver Überschuss. Zuwendung100 minus angemessen60 ergibt40, mindestens null.",
+    "pruefnachweis": "Gezielte native Python-/R-Referenzfälle und vollständige Ergebnisparität."
+  }
+]

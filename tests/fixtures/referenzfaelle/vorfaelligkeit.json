@@ -1,0 +1,632 @@
+[
+  {
+    "fall_id": "VORF_001",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Mehr als ein Jahr: min(300 Schaden, 100 aus 1 Prozent, 400 Sollzins) = 100.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_002",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-15",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "50",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Genau ein Jahr überschreitet ein Jahr nicht: 0,5 Prozent = 50.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_003",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2026-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "50",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Ein Tag Restlaufzeit, Grenze 0,5 Prozent; verbleibender Sollzins hier ausdrücklich 400.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_004",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "20",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Sollzinsobergrenze schlägt Prozentobergrenze.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_005",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "10",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Kein pauschaler Anspruch auf Obergrenze: niedrigerer Schaden maßgeblich.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_006",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "0",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Sollzinsobergrenze null.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_007",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "0",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Kein unmittelbarer Schaden.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_008",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "0",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Prozentobergrenze null.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_009",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "immobiliar",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "300",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "§ 502 Abs. 3 gilt nicht für Immobiliar-Verbraucherdarlehen; bewerteter unmittelbarer Schaden, keine automatische Schadensbewertung.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_010",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "immobiliar",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": false,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "300",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Bindung bei Vertragsschluss nur Voraussetzung für Allgemein-Verbraucherdarlehen; zum Rückzahlungstag bleibt Bindung erforderlich.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_011",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2024-02-29",
+      "vereinbarter_rueckzahlungstag": "2025-02-28",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "50",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Jahresfrist ab Schalttag endet nach § 188 Abs. 3 am 28. Februar.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_012",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2024-02-29",
+      "vereinbarter_rueckzahlungstag": "2025-03-01",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "100",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Tag nach Ende der Jahresfrist: mehr als ein Jahr.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_013",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": false,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Voraussetzung fehlt oder ausdrücklicher Anspruchsausschluss.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_014",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": false,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Voraussetzung fehlt oder ausdrücklicher Anspruchsausschluss.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_015",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": true,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Voraussetzung fehlt oder ausdrücklicher Anspruchsausschluss.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_016",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Voraussetzung fehlt oder ausdrücklicher Anspruchsausschluss.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_017",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "eingeraeumte_ueberziehung",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Voraussetzung fehlt oder ausdrücklicher Anspruchsausschluss.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_018",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "geduldete_ueberziehung",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Voraussetzung fehlt oder ausdrücklicher Anspruchsausschluss.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_019",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "immobiliar",
+      "gebundener_sollzins": false,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Gesetzliche Voraussetzung fehlt oder ausdrücklicher Anspruchsausschluss.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_020",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2027-01-16",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe, keine vorzeitige Zahlung oder ungültiger Datum-/Betragstyp.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_021",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2027-01-17",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe, keine vorzeitige Zahlung oder ungültiger Datum-/Betragstyp.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_022",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-02-30",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe, keine vorzeitige Zahlung oder ungültiger Datum-/Betragstyp.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_023",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "gewerblich",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe, keine vorzeitige Zahlung oder ungültiger Datum-/Betragstyp.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_024",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "-1",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe, keine vorzeitige Zahlung oder ungültiger Datum-/Betragstyp.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_025",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe, keine vorzeitige Zahlung oder ungültiger Datum-/Betragstyp.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_026",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": 400,
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": true,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültige Eingabe, keine vorzeitige Zahlung oder ungültiger Datum-/Betragstyp.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  },
+  {
+    "fall_id": "VORF_027",
+    "funktion": "vorfaelligkeitsentschaedigung_betrag",
+    "eingaben": {
+      "vorzeitig_zurueckgezahlter_betrag": "10000",
+      "unmittelbarer_schaden": "300",
+      "verbleibende_sollzinsen": "400",
+      "rueckzahlungstag": "2026-01-15",
+      "vereinbarter_rueckzahlungstag": "2027-01-16",
+      "darlehensart": "allgemein",
+      "gebundener_sollzins": null,
+      "bei_abschluss_gebunden": true,
+      "versicherung_rueckzahlung": false,
+      "vertragsangaben_ausreichend": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Erforderliche rechtliche Bewertung fehlt.",
+    "pruefnachweis": "Vor Implementierung aus dem lokalen § 502 einschließlich §§ 504/505 und Kalendergrenzen manuell abgeleitet. Schaden als vorgegebene Bewertung."
+  }
+]

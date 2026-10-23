@@ -1,0 +1,380 @@
+[
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_DECKEL",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_zinssatz_prozent": {
+          "zaehler": "4",
+          "nenner": "1"
+        },
+        "zinsbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000*min(6,4)/100*1/2=20;bei2Prozent10;1*4/100*1/3=1/75.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_NIEDRIGER",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "2",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_zinssatz_prozent": {
+          "zaehler": "2",
+          "nenner": "1"
+        },
+        "zinsbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000*min(6,4)/100*1/2=20;bei2Prozent10;1*4/100*1/3=1/75.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_GENAU_VIER",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "4",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_zinssatz_prozent": {
+          "zaehler": "4",
+          "nenner": "1"
+        },
+        "zinsbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000*min(6,4)/100*1/2=20;bei2Prozent10;1*4/100*1/3=1/75.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_ZINSFREI",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "0",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_zinssatz_prozent": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "zinsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000*min(6,4)/100*1/2=20;bei2Prozent10;1*4/100*1/3=1/75.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_DRITTEL",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 3,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_zinssatz_prozent": {
+          "zaehler": "4",
+          "nenner": "1"
+        },
+        "zinsbetrag": {
+          "zaehler": "1",
+          "nenner": "75"
+        }
+      }
+    },
+    "herleitung": "1000*min(6,4)/100*1/2=20;bei2Prozent10;1*4/100*1/3=1/75.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_NULLZEIT",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 0,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "massgeblicher_zinssatz_prozent": {
+          "zaehler": "4",
+          "nenner": "1"
+        },
+        "zinsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "1000*min(6,4)/100*1/2=20;bei2Prozent10;1*4/100*1/3=1/75.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_FEHLT_massgeblicher_barzahlungspreis",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": null,
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_FEHLT_vertraglicher_zinssatz_prozent",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": null,
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_FEHLT_zeitanteil_zaehler",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": null,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_FEHLT_zeitanteil_nenner",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": null,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_FEHLT_zeitanteil_nachweis",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": null,
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_UNGUELTIG0",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "-1",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_UNGUELTIG1",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "-1",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_UNGUELTIG2",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 0,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_UNGUELTIG3",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": -1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_UNGUELTIG4",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen.",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "TEILZAHLUNG_FEHLANGABEN_ZINSBETRAG_UNGUELTIG5",
+    "funktion": "teilzahlung_fehlangaben_zinsbetrag",
+    "eingaben": {
+      "massgeblicher_barzahlungspreis": "1000",
+      "vertraglicher_zinssatz_prozent": "6",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": " ",
+      "einordnungsnachweis": "§507II3: Barzahlungspreis hoechstens mit gesetzlichem246-Jahreszinssatz4Prozent verzinsen. Niedrigerer rechtlich geschuldeter Vertragszins bleibt niedriger, keine Erhoehung auf4Prozent. Bei fehlendem Barzahlungspreis den rechtlich bewerteten Marktpreis nachII4 als gleiche Basis eingeben. Bestehender exakter Zinskern mit min(Vertragszins,4) wird verwendet. Abschnitt mit unveraenderter Basis und belegtem Jahresanteil; Raten-/Tilgungsplaene nach Vertrag abschnittsweise, kein erfundenes Annuitaetenmodell. Nicht die Gesamtbetragskorrektur bei zu niedrig angegebenem Effektivzins507II5 und nicht494II.507III-Kostenermaessigung verwendet246als qualifizierte Zinsbasis in vorhandenen501-Rechenwegen; Vorfaelligkeitsentschaedigung dort ausgeschlossen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

@@ -1,0 +1,500 @@
+[
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_BELEG_TAGESENDE",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2023-03-14",
+        "letzter_voller_tag_vor_grenze": "2023-03-13"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_EREIGNISTAG",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": "ereignistag",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2023-03-13",
+        "letzter_voller_tag_vor_grenze": "2023-03-12"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_SECHSMONATSFENSTER",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2024-12-31",
+      "anzahl": 6,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "letzter_monatstag",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2024-07-01",
+        "letzter_voller_tag_vor_grenze": "2024-06-30"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_SCHALTMONAT",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2024-03-31",
+      "anzahl": 1,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "letzter_monatstag",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2024-03-01",
+        "letzter_voller_tag_vor_grenze": "2024-02-29"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_SCHALTMONAT_EREIGNIS",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2024-03-31",
+      "anzahl": 1,
+      "einheit": "monate",
+      "bezugsart": "ereignistag",
+      "monatsendregel": "letzter_monatstag",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2024-02-29",
+        "letzter_voller_tag_vor_grenze": "2024-02-28"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_NICHTSCHALTMONAT",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2023-03-31",
+      "anzahl": 1,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "letzter_monatstag",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2023-03-01",
+        "letzter_voller_tag_vor_grenze": "2023-02-28"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_WOCHEN",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2024-03-12",
+      "anzahl": 2,
+      "einheit": "wochen",
+      "bezugsart": "ereignistag",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2024-02-27",
+        "letzter_voller_tag_vor_grenze": "2024-02-26"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_TAGE20",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2024-07-21",
+      "anzahl": 20,
+      "einheit": "tage",
+      "bezugsart": "ereignistag",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2024-07-01",
+        "letzter_voller_tag_vor_grenze": "2024-06-30"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_JAHR_SCHALTTAG",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2024-02-29",
+      "anzahl": 1,
+      "einheit": "jahre",
+      "bezugsart": "tagesende",
+      "monatsendregel": "letzter_monatstag",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2023-03-01",
+        "letzter_voller_tag_vor_grenze": "2023-02-28"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_MONATSGRENZE_ERSTER",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2024-03-01",
+      "anzahl": 1,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "grenztag_beginn": "2024-02-02",
+        "letzter_voller_tag_vor_grenze": "2024-02-01"
+      }
+    },
+    "herleitung": "BNetzA-BeschlussBK10-24-0329_Z,S.23:13.12.2025Tagesende minus33Monate =>14.3.2023Tagesbeginn,Handlung bis13.3.2023Tagesende. Weitere Werte unabhängig nach ausdrücklich gewählter Kalenderregel.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_FEHLT_bezugstag",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": null,
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_FEHLT_anzahl",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": null,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_FEHLT_einheit",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": null,
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_FEHLT_bezugsart",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": null,
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_FEHLT_monatsendregel",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": null,
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_FEHLT_methodennachweis",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG0",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2024-03-31",
+      "anzahl": 1,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG1",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 0,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG2",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": true,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG3",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 3652060,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG4",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "stunden",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG5",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": "tagesbeginn",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG6",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "automatisch",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG7",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "2025-12-13",
+      "anzahl": 33,
+      "einheit": "monate",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG8",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "0001-01-01",
+      "anzahl": 1,
+      "einheit": "tage",
+      "bezugsart": "tagesende",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "RUECKWAERTSFRIST_KALENDERGRENZE_UNGUELTIG9",
+    "funktion": "rueckwaertsfrist_kalendergrenze",
+    "eingaben": {
+      "bezugstag": "0001-01-02",
+      "anzahl": 1,
+      "einheit": "tage",
+      "bezugsart": "ereignistag",
+      "monatsendregel": "nur_taggleiche_monate",
+      "methodennachweis": "Bedingter Kalenderkern zur ausdrücklich qualifizierten Rückwärtsanalogie187/188. Ereignistag: zurückliegender gleichbenannter/gleichzahliger Tag beginnt die Grenze; letzter voller vorausgehender Handlungstag ist dessen Vortag. Tagesende: rückwärts mitgezählter Bezugstag, Grenze am Folgetagesbeginn des zurückliegenden Vergleichstags; letzter voller Handlungstag ist Vergleichstag. Für reine Zeitfenster ist die Grenztagesbeginn-Ausgabe zu verwenden, nicht ungeprüft der letzte Handlungstag. Untertägige Zeitpunkte und rechtliche Einschließung einer einzelnen Grenzhandlung gesondert bestimmen. Monatsende nur auf ausdrückliche Methodenvorgabe; nur_taggleiche_monate verhindert eine ungesicherte Ersatzregel. Kein193-Automatismus: Verfahrenszwecke können unterschiedliche Werktagskorrekturen verlangen. Keine Inversion durch Suche nach einem beliebigen vorwärts passenden Datum. Standardkalender und bestehende Datumshelfer, unveränderte Vorwärtsfunktionen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

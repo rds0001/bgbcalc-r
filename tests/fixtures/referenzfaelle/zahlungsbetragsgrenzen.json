@@ -1,0 +1,1278 @@
+[
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_einzelzahlung_None_GRENZE",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_einzelzahlung_None_DARUEBER",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": "30.01",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_ausgabenobergrenze_False_GRENZE",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "ausgabenobergrenze",
+      "massgeblicher_betrag": "150",
+      "ausschliesslich_inland": false,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_ausgabenobergrenze_False_DARUEBER",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "ausgabenobergrenze",
+      "massgeblicher_betrag": "150.01",
+      "ausschliesslich_inland": false,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_ausgabenobergrenze_True_GRENZE",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "ausgabenobergrenze",
+      "massgeblicher_betrag": "200",
+      "ausschliesslich_inland": true,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_ausgabenobergrenze_True_DARUEBER",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "ausgabenobergrenze",
+      "massgeblicher_betrag": "200.01",
+      "ausschliesslich_inland": true,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_speicherobergrenze_False_GRENZE",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "speicherobergrenze",
+      "massgeblicher_betrag": "150",
+      "ausschliesslich_inland": false,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_speicherobergrenze_False_DARUEBER",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "speicherobergrenze",
+      "massgeblicher_betrag": "150.01",
+      "ausschliesslich_inland": false,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "150",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_speicherobergrenze_True_GRENZE",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "speicherobergrenze",
+      "massgeblicher_betrag": "200",
+      "ausschliesslich_inland": true,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_speicherobergrenze_True_DARUEBER",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "speicherobergrenze",
+      "massgeblicher_betrag": "200.01",
+      "ausschliesslich_inland": true,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_egeld_sperrausnahme_None_GRENZE",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "egeld_sperrausnahme",
+      "massgeblicher_betrag": "200",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_egeld_sperrausnahme_None_DARUEBER",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "egeld_sperrausnahme",
+      "massgeblicher_betrag": "200.01",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "betragsgrenze_euro": {
+          "zaehler": "200",
+          "nenner": "1"
+        },
+        "grenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_SONDERFEHLER_0",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "x",
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_SONDERFEHLER_1",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": "-1",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_SONDERFEHLER_2",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": false,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_SONDERFEHLER_3",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "ausgabenobergrenze",
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": 1,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_INLAND_FEHLT",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "ausgabenobergrenze",
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_0",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "13000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_1",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_2",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "10000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "10500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_3",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "12500",
+      "nicht_begrenzbarer_schaden": "0",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "12500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_4",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "15000",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "15500",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_5",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "0",
+      "nicht_begrenzbarer_schaden": "20000",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "20000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_6",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "0.1",
+      "nicht_begrenzbarer_schaden": "0.2",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "3",
+        "nenner": "10"
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_SONDERFEHLER_0",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12499.99",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_SONDERFEHLER_1",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": {},
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_SONDERFEHLER_2",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "-1",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_SONDERFEHLER_3",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "-1",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_nichtautorisiert_675u0",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "noch_zu_korrigierender_betrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "berichtigter_kontostand": {
+          "zaehler": "-120",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_nichtautorisiert_675u1",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "50",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "0",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "noch_zu_korrigierender_betrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "berichtigter_kontostand": {
+          "zaehler": "150",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_nichtautorisiert_675u2",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "50",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "100",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "noch_zu_korrigierender_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "berichtigter_kontostand": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_nichtautorisiert_675u3",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-0.3",
+      "fehlerhafte_belastung": "0.2",
+      "bereits_korrigierter_betrag": "0.1",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "noch_zu_korrigierender_betrag": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "berichtigter_kontostand": {
+          "zaehler": "-1",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_ausfuehrungsfehler_675y0",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "ausfuehrungsfehler_675y",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "noch_zu_korrigierender_betrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "berichtigter_kontostand": {
+          "zaehler": "-120",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_ausfuehrungsfehler_675y1",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "ausfuehrungsfehler_675y",
+      "aktueller_kontostand": "50",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "0",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "noch_zu_korrigierender_betrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "berichtigter_kontostand": {
+          "zaehler": "150",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_ausfuehrungsfehler_675y2",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "ausfuehrungsfehler_675y",
+      "aktueller_kontostand": "50",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "100",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "noch_zu_korrigierender_betrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "berichtigter_kontostand": {
+          "zaehler": "50",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_ausfuehrungsfehler_675y3",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "ausfuehrungsfehler_675y",
+      "aktueller_kontostand": "-0.3",
+      "fehlerhafte_belastung": "0.2",
+      "bereits_korrigierter_betrag": "0.1",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "noch_zu_korrigierender_betrag": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "berichtigter_kontostand": {
+          "zaehler": "-1",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_SONDERFEHLER_0",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "x",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_SONDERFEHLER_1",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "-1",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_SONDERFEHLER_2",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "-1",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_SONDERFEHLER_3",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "101",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_FEHLT_grenzfall",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": null,
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_TYP_grenzfall",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": {},
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_FEHLT_massgeblicher_betrag",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": null,
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_TYP_massgeblicher_betrag",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": {},
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_TYP_einordnungsnachweis",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KLEINBETRAGSINSTRUMENT_BETRAGSGRENZE_NACHWEIS_LEER",
+    "funktion": "kleinbetragsinstrument_betragsgrenze",
+    "eingaben": {
+      "grenzfall": "einzelzahlung",
+      "massgeblicher_betrag": "30",
+      "ausschliesslich_inland": null,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_FEHLT_begrenzbarer_schaden",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": null,
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_TYP_begrenzbarer_schaden",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": {},
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_FEHLT_nicht_begrenzbarer_schaden",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": null,
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_TYP_nicht_begrenzbarer_schaden",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": {},
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_TYP_einordnungsnachweis",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_SONSTIGER_SCHADENBETRAG_NACHWEIS_LEER",
+    "funktion": "zahlung_sonstiger_schadenbetrag",
+    "eingaben": {
+      "begrenzbarer_schaden": "20000",
+      "nicht_begrenzbarer_schaden": "500",
+      "vereinbarte_haftungsgrenze": "12500",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_FEHLT_regelfall",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": null,
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_TYP_regelfall",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": {},
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_FEHLT_aktueller_kontostand",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": null,
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_TYP_aktueller_kontostand",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": {},
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_FEHLT_fehlerhafte_belastung",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": null,
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_TYP_fehlerhafte_belastung",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": {},
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_FEHLT_bereits_korrigierter_betrag",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": null,
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_TYP_bereits_korrigierter_betrag",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": {},
+      "einordnungsnachweis": "Qualifizierter Normfall mit widerspruchsfreier Betragszuordnung; Voraussetzungen und Einwendungen vorab festgestellt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_FEHLT_einordnungsnachweis",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_TYP_einordnungsnachweis",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNG_KONTOBERICHTIGUNG_NACHWEIS_LEER",
+    "funktion": "zahlung_kontoberichtigung",
+    "eingaben": {
+      "regelfall": "nichtautorisiert_675u",
+      "aktueller_kontostand": "-200",
+      "fehlerhafte_belastung": "100",
+      "bereits_korrigierter_betrag": "20",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige einschließlich geprüfte30/150/200Grenzen,12500Kappung nur mit Vereinbarung und exakte Restgutschriften auf vorzeichenbehafteten Kontostand.",
+    "pruefnachweis": "Native Python/R mit vollständigem Ergebnisvergleich."
+  }
+]

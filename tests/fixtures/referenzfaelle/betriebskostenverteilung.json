@@ -1,0 +1,652 @@
+[
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_GEMISCHT",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnflaeche"
+        },
+        {
+          "position_id": "Verbrauch",
+          "gesamtkosten": "900",
+          "wohnungsbezugswert": "20",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "verbrauch"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Flaeche",
+            "wohnungsquote": {
+              "zaehler": "3",
+              "nenner": "10"
+            },
+            "wohnungsbetrag": {
+              "zaehler": "300",
+              "nenner": "1"
+            }
+          },
+          {
+            "position_id": "Verbrauch",
+            "wohnungsquote": {
+              "zaehler": "1",
+              "nenner": "5"
+            },
+            "wohnungsbetrag": {
+              "zaehler": "180",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtwohnungsbetrag": {
+          "zaehler": "480",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_BRUCH",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "0.1",
+          "wohnungsbezugswert": "1",
+          "gesamtbezugswert": "3",
+          "umlagemassstab": "wohnflaeche"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Flaeche",
+            "wohnungsquote": {
+              "zaehler": "1",
+              "nenner": "3"
+            },
+            "wohnungsbetrag": {
+              "zaehler": "1",
+              "nenner": "30"
+            }
+          }
+        ],
+        "gesamtwohnungsbetrag": {
+          "zaehler": "1",
+          "nenner": "30"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_NULLANTEIL",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "0",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnflaeche"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Flaeche",
+            "wohnungsquote": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "wohnungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtwohnungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_MASSSTAB_verursachung",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "verursachung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Flaeche",
+            "wohnungsquote": {
+              "zaehler": "3",
+              "nenner": "10"
+            },
+            "wohnungsbetrag": {
+              "zaehler": "300",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtwohnungsbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_MASSSTAB_vereinbarung",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "vereinbarung"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Flaeche",
+            "wohnungsquote": {
+              "zaehler": "3",
+              "nenner": "10"
+            },
+            "wohnungsbetrag": {
+              "zaehler": "300",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtwohnungsbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_MASSSTAB_wohnungseigentum",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnungseigentum"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "positionen": [
+          {
+            "position_id": "Flaeche",
+            "wohnungsquote": {
+              "zaehler": "3",
+              "nenner": "10"
+            },
+            "wohnungsbetrag": {
+              "zaehler": "300",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamtwohnungsbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_ABZUG",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "1000",
+      "bisher_enthaltener_kostenanteil": "150",
+      "einordnungsnachweis": "Zulässige Umstellung, bisher enthaltener Kostenanteil derselben Periode künftig separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "850",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_VOLLANTEIL",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "1000",
+      "bisher_enthaltener_kostenanteil": "1000",
+      "einordnungsnachweis": "Zulässige Umstellung, bisher enthaltener Kostenanteil derselben Periode künftig separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_NULLANTEIL",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "1000",
+      "bisher_enthaltener_kostenanteil": "0",
+      "einordnungsnachweis": "Zulässige Umstellung, bisher enthaltener Kostenanteil derselben Periode künftig separat."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_DOPPELT",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnflaeche"
+        },
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnflaeche"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_NENNER_NULL",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "0",
+          "umlagemassstab": "wohnflaeche"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_TEIL_ZU_GROSS",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "101",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnflaeche"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_NEGATIV",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "-1",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnflaeche"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_FORM",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {}
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_MASSSTAB",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "x"
+        }
+      ],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_LEERE_LISTE",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [],
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_ANTEIL_ZU_GROSS",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "1000",
+      "bisher_enthaltener_kostenanteil": "1001",
+      "einordnungsnachweis": "Zulässige Umstellung, bisher enthaltener Kostenanteil derselben Periode künftig separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_NEGATIV",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "-1",
+      "bisher_enthaltener_kostenanteil": "150",
+      "einordnungsnachweis": "Zulässige Umstellung, bisher enthaltener Kostenanteil derselben Periode künftig separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_FEHLT_kostenpositionen",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": null,
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_FEHLT_einordnungsnachweis",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnflaeche"
+        },
+        {
+          "position_id": "Verbrauch",
+          "gesamtkosten": "900",
+          "wohnungsbezugswert": "20",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "verbrauch"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_TYP",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": "x",
+      "einordnungsnachweis": "Qualifizierte umlagefähige Kosten nach unterschiedlichen passenden556a-Schlüsseln ohne Überschneidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_WOHNUNGSANTEILE_LEER",
+    "funktion": "betriebskosten_wohnungsanteile",
+    "eingaben": {
+      "kostenpositionen": [
+        {
+          "position_id": "Flaeche",
+          "gesamtkosten": "1000",
+          "wohnungsbezugswert": "30",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "wohnflaeche"
+        },
+        {
+          "position_id": "Verbrauch",
+          "gesamtkosten": "900",
+          "wohnungsbezugswert": "20",
+          "gesamtbezugswert": "100",
+          "umlagemassstab": "verbrauch"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_FEHLT_bisherige_zeitraummiete",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": null,
+      "bisher_enthaltener_kostenanteil": "150",
+      "einordnungsnachweis": "Zulässige Umstellung, bisher enthaltener Kostenanteil derselben Periode künftig separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_FEHLT_bisher_enthaltener_kostenanteil",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "1000",
+      "bisher_enthaltener_kostenanteil": null,
+      "einordnungsnachweis": "Zulässige Umstellung, bisher enthaltener Kostenanteil derselben Periode künftig separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_FEHLT_einordnungsnachweis",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "1000",
+      "bisher_enthaltener_kostenanteil": "150",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_TYP",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "x",
+      "bisher_enthaltener_kostenanteil": "150",
+      "einordnungsnachweis": "Zulässige Umstellung, bisher enthaltener Kostenanteil derselben Periode künftig separat."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "BETRIEBSKOSTEN_UMSTELLUNG_MIETHERABSETZUNG_LEER",
+    "funktion": "betriebskosten_umstellung_mietherabsetzung",
+    "eingaben": {
+      "bisherige_zeitraummiete": "1000",
+      "bisher_enthaltener_kostenanteil": "150",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:1000*30/100+900*20/100=480;1000-150=850.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

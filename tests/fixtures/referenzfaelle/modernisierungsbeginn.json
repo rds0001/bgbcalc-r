@@ -1,0 +1,484 @@
+[
+  {
+    "fall_id": "MBEG_001",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-04-01"
+    },
+    "herleitung": "Genau zehn Prozent: keine Verlängerung; Februar/März/April sind erster/zweiter/dritter Folgemonat.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_002",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-01",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-04-01"
+    },
+    "herleitung": "Zugang am Monatsanfang führt zum gleichen dritten Folgemonat.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_003",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110.01",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-10-01"
+    },
+    "herleitung": "Mehr als zehn Prozent: April plus sechs Monate ist Oktober.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_004",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": false,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-10-01"
+    },
+    "herleitung": "Nicht ordnungsgemäß angekündigt: sechs Monate zusätzlich.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_005",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": false,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "200",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-10-01"
+    },
+    "herleitung": "Beide Gründe zusammen verlängern einmalig um sechs, nicht zwölf Monate.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_006",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-10-20",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2027-01-01"
+    },
+    "herleitung": "Dritter Folgemonat über Jahreswechsel; keine Feiertagsverschiebung des Geltungsbeginns.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_007",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-10-20",
+      "ankuendigung_ordnungsgemaess": false,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2027-07-01"
+    },
+    "herleitung": "Verlängerter Beginn über Jahreswechsel.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_008",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2024-02-29",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2024-05-01"
+    },
+    "herleitung": "Schalttagszugang, Monatsanfang im Mai.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_009",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "0001-01-01",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "0001-04-01"
+    },
+    "herleitung": "Unterer zulässiger Datumsbereich.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_010",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "9999-09-30",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "9999-12-01"
+    },
+    "herleitung": "Letzter noch darstellbarer dritter Folgemonat.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_011",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "9999-10-01",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Zielmonat außerhalb 0001..9999.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_012",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "9999-04-01",
+      "ankuendigung_ordnungsgemaess": false,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Auch verlängerter Zielmonat muss darstellbar bleiben.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_013",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "0",
+      "tatsaechlicher_erhoehungsbetrag": "0",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-04-01"
+    },
+    "herleitung": "Null gegenüber null überschreitet die Schwelle nicht; der Zeitmechanismus erzeugt keinen positiven Betrag.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_014",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "0",
+      "tatsaechlicher_erhoehungsbetrag": "0.01",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-10-01"
+    },
+    "herleitung": "Positiver Istbetrag überschreitet 110 Prozent von null; keine Division durch null.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_015",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "tatsaechlicher_erhoehungsbetrag": {
+        "zaehler": "11",
+        "nenner": "30"
+      },
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-04-01"
+    },
+    "herleitung": "Exakt zehn Prozent auch für nicht endliche Dezimalbrüche.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_016",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "50",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-04-01"
+    },
+    "herleitung": "Geringerer Istbetrag verlängert nicht.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_017",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unwirksame Erklärung löst hier keinen Erhöhungsbeginn aus.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_018",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2025-02-29",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Kalendertag.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_019",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": 1,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Expliziter Wahrheitswert erforderlich.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_020",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": "ja"
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Expliziter Wahrheitswert erforderlich.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_021",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "-1",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kein negativer Erhöhungsbetrag.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_022",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "-1",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Kein negativer Erhöhungsbetrag.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_023",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": null,
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe zugang_erklaerung fehlt.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_024",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": null,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe ankuendigung_ordnungsgemaess fehlt.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_025",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": null,
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe angekuendigter_erhoehungsbetrag fehlt.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_026",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": null,
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe tatsaechlicher_erhoehungsbetrag fehlt.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_027",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "110",
+      "erklaerung_wirksam": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Pflichteingabe erklaerung_wirksam fehlt.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  },
+  {
+    "fall_id": "MBEG_028",
+    "funktion": "modernisierung_erhoehungsbeginn",
+    "eingaben": {
+      "zugang_erklaerung": "2026-01-31",
+      "ankuendigung_ordnungsgemaess": true,
+      "angekuendigter_erhoehungsbetrag": "100",
+      "tatsaechlicher_erhoehungsbetrag": "109.99",
+      "erklaerung_wirksam": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": "2026-04-01"
+    },
+    "herleitung": "Unmittelbar unter zehn Prozent Überschreitung: keine Verlängerung.",
+    "pruefnachweis": "Manuelle Kalender- und Schwellenfälle anhand des lokalen § 559b Absatz 2, ohne Aufruf der Implementierung."
+  }
+]

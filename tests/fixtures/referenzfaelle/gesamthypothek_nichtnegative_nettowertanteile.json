@@ -1,0 +1,486 @@
+[
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_UEBERBELASTUNG",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettowerte": [
+          {
+            "grundstueck_id": "A",
+            "roher_nettowert": {
+              "zaehler": "-20",
+              "nenner": "1"
+            },
+            "verteilungsgewicht": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "roher_nettowert": {
+              "zaehler": "80",
+              "nenner": "1"
+            },
+            "verteilungsgewicht": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          }
+        ],
+        "quoten_bestimmbar": true,
+        "anteile": [
+          {
+            "grundstueck_id": "A",
+            "anteilsquote": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "hypothekenanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "anteilsquote": {
+              "zaehler": "1",
+              "nenner": "1"
+            },
+            "hypothekenanteil": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "50-70=-20=>Nullgewicht;100-20=80=>volleQuoteB. Positive20/80=>1/5und4/5. AlleGewichte0=>keineQuote,keinGleichverteilungsdefault.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_POSITIVE_NETTOWERTE",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "30"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettowerte": [
+          {
+            "grundstueck_id": "A",
+            "roher_nettowert": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "verteilungsgewicht": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "roher_nettowert": {
+              "zaehler": "80",
+              "nenner": "1"
+            },
+            "verteilungsgewicht": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          }
+        ],
+        "quoten_bestimmbar": true,
+        "anteile": [
+          {
+            "grundstueck_id": "A",
+            "anteilsquote": {
+              "zaehler": "1",
+              "nenner": "5"
+            },
+            "hypothekenanteil": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "anteilsquote": {
+              "zaehler": "4",
+              "nenner": "5"
+            },
+            "hypothekenanteil": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "50-70=-20=>Nullgewicht;100-20=80=>volleQuoteB. Positive20/80=>1/5und4/5. AlleGewichte0=>keineQuote,keinGleichverteilungsdefault.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_NUR_NULLGEWICHTE",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "110"
+        }
+      ],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettowerte": [
+          {
+            "grundstueck_id": "A",
+            "roher_nettowert": {
+              "zaehler": "-20",
+              "nenner": "1"
+            },
+            "verteilungsgewicht": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "roher_nettowert": {
+              "zaehler": "-10",
+              "nenner": "1"
+            },
+            "verteilungsgewicht": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "quoten_bestimmbar": false,
+        "anteile": null
+      }
+    },
+    "herleitung": "50-70=-20=>Nullgewicht;100-20=80=>volleQuoteB. Positive20/80=>1/5und4/5. AlleGewichte0=>keineQuote,keinGleichverteilungsdefault.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_NULLBETRAG",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "0",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "nettowerte": [
+          {
+            "grundstueck_id": "A",
+            "roher_nettowert": {
+              "zaehler": "-20",
+              "nenner": "1"
+            },
+            "verteilungsgewicht": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "roher_nettowert": {
+              "zaehler": "80",
+              "nenner": "1"
+            },
+            "verteilungsgewicht": {
+              "zaehler": "80",
+              "nenner": "1"
+            }
+          }
+        ],
+        "quoten_bestimmbar": true,
+        "anteile": [
+          {
+            "grundstueck_id": "A",
+            "anteilsquote": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "hypothekenanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "grundstueck_id": "B",
+            "anteilsquote": {
+              "zaehler": "1",
+              "nenner": "1"
+            },
+            "hypothekenanteil": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "50-70=-20=>Nullgewicht;100-20=80=>volleQuoteB. Positive20/80=>1/5und4/5. AlleGewichte0=>keineQuote,keinGleichverteilungsdefault.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_FEHLT_zu_verteilender_hypothekenbetrag",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": null,
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_FEHLT_grundstuecke",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": null,
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_FEHLT_gewichtsmethode",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "gewichtsmethode": null,
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_FEHLT_verteilungsnachweis",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_UNGUELTIG0",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_UNGUELTIG1",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_UNGUELTIG2",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "50",
+          "vorrangige_belastungen": "70"
+        },
+        {
+          "grundstueck_id": "B",
+          "grundstueckswert": "100",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "gewichtsmethode": "automatisch",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "GESAMTHYPOTHEK_NICHTNEGATIVE_NETTOWERTANTEILE_UNGUELTIG3",
+    "funktion": "gesamthypothek_nichtnegative_nettowertanteile",
+    "eingaben": {
+      "zu_verteilender_hypothekenbetrag": "100",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "A",
+          "grundstueckswert": "-1",
+          "vorrangige_belastungen": "70"
+        }
+      ],
+      "gewichtsmethode": "positive_nettowerte",
+      "verteilungsnachweis": "Bedingte Nettowertrechnung: ursprünglichen Wert minus qualifizierte vorrangige Belastungen ausweisen; unter ausdrücklich vorgegebener Methode positive_nettowerte Verteilungsgewicht=max(Rohsaldo,0). Bestehenden1172-Quotenkern mit diesen abgeleiteten Gewichten verwenden, Vorrang nicht doppelt abziehen. Bei Gewichtssumme0keine Division/keine künstliche Kopfquote: quoten_bestimmbar=false, anteile=None/NULL; die Rohsalden bleiben ausgewiesen. Gesetzliche Vorschrift liefert für0/0keine feste Ersatzquote. Keine automatische Bewertung der Vorranglast, Verwertung oder rechtliche Freigabe des Nullgewichtsmodells in jedem Streitfall.1174-Regress und1176/1182-Rangschutz gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

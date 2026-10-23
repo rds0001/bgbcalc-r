@@ -1,0 +1,337 @@
+[
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_GENAU_3000",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": "3000",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "wertgrenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleichheit3000bzw6000erfüllt Zahlengrenze;3000,01liegt1Cent darüber;6001liegt1EUR darüber. Keine eigenständige Genehmigungsentscheidung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_DARUEBER_3000",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": "3000.01",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "wertgrenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Gleichheit3000bzw6000erfüllt Zahlengrenze;3000,01liegt1Cent darüber;6001liegt1EUR darüber. Keine eigenständige Genehmigungsentscheidung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_DARUNTER",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": "2999",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "wertgrenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleichheit3000bzw6000erfüllt Zahlengrenze;3000,01liegt1Cent darüber;6001liegt1EUR darüber. Keine eigenständige Genehmigungsentscheidung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_VERGLEICH_6000",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "vergleichsgegenstand_1854",
+      "massgeblicher_gesamtwert": "6000",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "6000",
+          "nenner": "1"
+        },
+        "wertgrenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleichheit3000bzw6000erfüllt Zahlengrenze;3000,01liegt1Cent darüber;6001liegt1EUR darüber. Keine eigenständige Genehmigungsentscheidung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_VERGLEICH_6001",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "vergleichsgegenstand_1854",
+      "massgeblicher_gesamtwert": "6001",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "6000",
+          "nenner": "1"
+        },
+        "wertgrenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleichheit3000bzw6000erfüllt Zahlengrenze;3000,01liegt1Cent darüber;6001liegt1EUR darüber. Keine eigenständige Genehmigungsentscheidung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_VERMOEGEN_6000",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "vermoegenswert_1860",
+      "massgeblicher_gesamtwert": "6000",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "6000",
+          "nenner": "1"
+        },
+        "wertgrenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleichheit3000bzw6000erfüllt Zahlengrenze;3000,01liegt1Cent darüber;6001liegt1EUR darüber. Keine eigenständige Genehmigungsentscheidung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_VERMOEGEN_6001",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "vermoegenswert_1860",
+      "massgeblicher_gesamtwert": "6001",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "6000",
+          "nenner": "1"
+        },
+        "wertgrenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleichheit3000bzw6000erfüllt Zahlengrenze;3000,01liegt1Cent darüber;6001liegt1EUR darüber. Keine eigenständige Genehmigungsentscheidung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_NULL",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": "0",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertgrenze": {
+          "zaehler": "3000",
+          "nenner": "1"
+        },
+        "wertgrenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Gleichheit3000bzw6000erfüllt Zahlengrenze;3000,01liegt1Cent darüber;6001liegt1EUR darüber. Keine eigenständige Genehmigungsentscheidung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_FEHLT_grenzfall",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": null,
+      "massgeblicher_gesamtwert": "3000",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_TYP_grenzfall",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": {},
+      "massgeblicher_gesamtwert": "3000",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_FEHLT_massgeblicher_gesamtwert",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": null,
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_TYP_massgeblicher_gesamtwert",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": {},
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": "3000",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_TYP_einordnungsnachweis",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": "3000",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_UNGUELTIG_0",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "unbekannt",
+      "massgeblicher_gesamtwert": "3000",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_UNGUELTIG_1",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": "-1",
+      "einordnungsnachweis": "Nur numerische Höchstwertvergleiche1849II1a,1854Nr6 und1860I: nicht mehr als/nicht übersteigt schließt Gleichheit ein. Keine automatische Genehmigungsfreiheit oder gerichtliche Befreiung.1849III-Ausnahmen insbesondere gesperrte Geldanlage/Wertpapiereinlösung gesondert;1854 gerichtlicher Vergleichsvorschlag eigener Ausnahmeweg;1860 Antrag, Ermessen und Gefährdungsprüfung gesondert. Für1849 nicht bloß aktuell abgehobenen Teilbetrag verwenden; für1860 keine Verbindlichkeiten vom Nichtimmobilienvermögen abziehen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BETREUUNG_NUMERISCHE_WERTGRENZE_UNGUELTIG_2",
+    "funktion": "betreuung_numerische_wertgrenze",
+    "eingaben": {
+      "grenzfall": "zahlungsanspruch_1849",
+      "massgeblicher_gesamtwert": "3000",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

@@ -1,0 +1,530 @@
+[
+  {
+    "fall_id": "DMI_001",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "100"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "200"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "wohnung_id": "A",
+          "kostenanteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "wohnung_id": "B",
+          "kostenanteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "200",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Kostenverhältnis100:200 verteilt300 Mittel auf100/200.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_002",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "1",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "100"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "200"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "wohnung_id": "A",
+          "kostenanteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "wohnung_id": "B",
+          "kostenanteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        }
+      ]
+    },
+    "herleitung": "Exakte Drittel statt gerundeter Geldzuordnung.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_003",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "0",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "100"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "200"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "wohnung_id": "A",
+          "kostenanteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "wohnung_id": "B",
+          "kostenanteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Keine Mittel, Quoten bleiben bestimmbar.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_004",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "0"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "100"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "wohnung_id": "A",
+          "kostenanteil": {
+            "zaehler": "0",
+            "nenner": "1"
+          },
+          "drittmittel": {
+            "zaehler": "0",
+            "nenner": "1"
+          }
+        },
+        {
+          "wohnung_id": "B",
+          "kostenanteil": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "drittmittel": {
+            "zaehler": "300",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Wohnung ohne aufgewendete Kosten hat Anteil null; keine automatische Deckungsgrenze erfunden.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_005",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "100"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "wohnung_id": "A",
+          "kostenanteil": {
+            "zaehler": "1",
+            "nenner": "1"
+          },
+          "drittmittel": {
+            "zaehler": "300",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Einzige Wohnung erhält gesamten zuzuordnenden Betrag.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_006",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "0.1"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "0.2"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "wohnung_id": "A",
+          "kostenanteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "wohnung_id": "B",
+          "kostenanteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "200",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Kostenverhältnis hängt nicht von gemeinsamen Dezimalmaßstab ab.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_007",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": {
+            "zaehler": "1",
+            "nenner": "3"
+          }
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": {
+            "zaehler": "2",
+            "nenner": "3"
+          }
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "wohnung_id": "A",
+          "kostenanteil": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "100",
+            "nenner": "1"
+          }
+        },
+        {
+          "wohnung_id": "B",
+          "kostenanteil": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "drittmittel": {
+            "zaehler": "200",
+            "nenner": "1"
+          }
+        }
+      ]
+    },
+    "herleitung": "Exakte Kostenbrüche ohne vorangehende Dezimalrundung.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_008",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "100"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "200"
+        }
+      ],
+      "zuordnung_feststellbar": true
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Feststellbare individuelle Förderung wird nicht durch Auffangschlüssel ersetzt.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_009",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "-1",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "100"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "200"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Kostenschlüssel, Objekt oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_010",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Kostenschlüssel, Objekt oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_011",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "0"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "0"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Kostenschlüssel, Objekt oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_012",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "-1"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "200"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Kostenschlüssel, Objekt oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_013",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "100"
+        },
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "200"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Kostenschlüssel, Objekt oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_014",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A"
+        }
+      ],
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Kostenschlüssel, Objekt oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_015",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": "A",
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Kostenschlüssel, Objekt oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_016",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": [
+        {
+          "wohnung_id": "A",
+          "aufgewendete_kosten": "100"
+        },
+        {
+          "wohnung_id": "B",
+          "aufgewendete_kosten": "200"
+        }
+      ],
+      "zuordnung_feststellbar": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ungültiger Betrag, Kostenschlüssel, Objekt oder Wahrheitswert.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  },
+  {
+    "fall_id": "DMI_017",
+    "funktion": "modernisierung_drittmittel_aufteilen",
+    "eingaben": {
+      "gesamtmittel": "300",
+      "wohnungskosten": null,
+      "zuordnung_feststellbar": false
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Kosten je Wohnung fehlen.",
+    "pruefnachweis": "Vor Implementierung proportionale Zuordnung nach § 559a Abs. 4 aus lokaler PDF von Hand berechnet."
+  }
+]

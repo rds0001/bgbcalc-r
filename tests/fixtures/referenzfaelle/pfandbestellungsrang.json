@@ -1,0 +1,389 @@
+[
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_SEKUNDEN_UND_GLEICHRANG",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        },
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-01-01T10:00:00Z"
+        },
+        {
+          "pfandrecht_id": "C",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "pfandrecht_id": "B",
+          "ranggruppe": 2
+        },
+        {
+          "pfandrecht_id": "A",
+          "ranggruppe": 1
+        },
+        {
+          "pfandrecht_id": "C",
+          "ranggruppe": 2
+        }
+      ]
+    },
+    "herleitung": "Bestellungszeit10:00:00 vor10:00:01; zwei nachweislich gleiche Zeiten teilen Ranggruppe2. Eingabereihenfolge ändert den Rang nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_UMGEKEHRTE_EINGABE",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "C",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        },
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-01-01T10:00:00Z"
+        },
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "pfandrecht_id": "C",
+          "ranggruppe": 2
+        },
+        {
+          "pfandrecht_id": "A",
+          "ranggruppe": 1
+        },
+        {
+          "pfandrecht_id": "B",
+          "ranggruppe": 2
+        }
+      ]
+    },
+    "herleitung": "Bestellungszeit10:00:00 vor10:00:01; zwei nachweislich gleiche Zeiten teilen Ranggruppe2. Eingabereihenfolge ändert den Rang nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_EIN_PFAND",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "pfandrecht_id": "B",
+          "ranggruppe": 1
+        }
+      ]
+    },
+    "herleitung": "Bestellungszeit10:00:00 vor10:00:01; zwei nachweislich gleiche Zeiten teilen Ranggruppe2. Eingabereihenfolge ändert den Rang nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_SCHALTJAHR",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-02-29T23:59:59Z"
+        },
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-03-01T00:00:00Z"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "pfandrecht_id": "A",
+          "ranggruppe": 1
+        },
+        {
+          "pfandrecht_id": "B",
+          "ranggruppe": 2
+        }
+      ]
+    },
+    "herleitung": "Bestellungszeit10:00:00 vor10:00:01; zwei nachweislich gleiche Zeiten teilen Ranggruppe2. Eingabereihenfolge ändert den Rang nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_DATUMSBEREICH",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "0001-01-01T00:00:00Z"
+        },
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "9999-12-31T23:59:59Z"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": [
+        {
+          "pfandrecht_id": "A",
+          "ranggruppe": 1
+        },
+        {
+          "pfandrecht_id": "B",
+          "ranggruppe": 2
+        }
+      ]
+    },
+    "herleitung": "Bestellungszeit10:00:00 vor10:00:01; zwei nachweislich gleiche Zeiten teilen Ranggruppe2. Eingabereihenfolge ändert den Rang nicht.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_FEHLT_pfandrechte",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": null,
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_TYP_pfandrechte",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": {},
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_FEHLT_einordnungsnachweis",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        },
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-01-01T10:00:00Z"
+        },
+        {
+          "pfandrecht_id": "C",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_TYP_einordnungsnachweis",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        },
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-01-01T10:00:00Z"
+        },
+        {
+          "pfandrecht_id": "C",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_UNGUELTIG_0",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_UNGUELTIG_1",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        },
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_UNGUELTIG_2",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {}
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_UNGUELTIG_3",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-01-01T10:00:00.1Z"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_UNGUELTIG_4",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-02-30T10:00:00Z"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_UNGUELTIG_5",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-01-01T10:00:00+01:00"
+        }
+      ],
+      "einordnungsnachweis": "§1209: frühere rechtlich wirksame Bestellung hat niedrigere Ranggruppe, gleichzeitige Bestellung gleiche Ranggruppe. Künftige oder bedingte Forderungen verwenden ebenfalls die Bestellungszeit des Pfandrechts. Kein automatischer Rangwechsel, keine Entscheidung über Entstehung/Gutgläubigkeit oder Befriedigungsbeträge. Zeitpunkte müssen rechtlich ausreichend exakt auf UTC-Sekunden normalisiert sein; unterschiedliche Subsekunden dürfen nicht durch Abschneiden zu Gleichrang werden. Bei nicht sekundengenau abbildbarem Sachverhalt diese Funktion nicht verwenden. Ausgabe in Eingabereihenfolge; Ranggruppen sind lückenlos numeriert, kein Grundbuchrang nach879."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFANDRECHTE_BESTELLUNGSRANG_UNGUELTIG_6",
+    "funktion": "pfandrechte_bestellungsrang",
+    "eingaben": {
+      "pfandrechte": [
+        {
+          "pfandrecht_id": "B",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        },
+        {
+          "pfandrecht_id": "A",
+          "bestellung_am_utc": "2024-01-01T10:00:00Z"
+        },
+        {
+          "pfandrecht_id": "C",
+          "bestellung_am_utc": "2024-01-01T10:00:01Z"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

@@ -1,0 +1,851 @@
+[
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_KURZ_UNTER",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "999.99",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "mindestrueckstand": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": false,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": false
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_KURZ_GENAU",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "mindestrueckstand": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_KURZ_UEBER",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.01",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "mindestrueckstand": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_LANG_UNTER",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "499.99",
+      "vertragslaufzeit_jahre": {
+        "zaehler": "37",
+        "nenner": "12"
+      },
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "mindestrueckstand": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": false,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": false
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_LANG_GENAU",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "500.00",
+      "vertragslaufzeit_jahre": {
+        "zaehler": "37",
+        "nenner": "12"
+      },
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "mindestrueckstand": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_LANG_UEBER",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "500.01",
+      "vertragslaufzeit_jahre": {
+        "zaehler": "37",
+        "nenner": "12"
+      },
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "mindestrueckstand": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_IMMOB_UNTER",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "249.99",
+      "vertragslaufzeit_jahre": null,
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": true,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "40"
+        },
+        "mindestrueckstand": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": false,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": false
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_IMMOB_GENAU",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "250.00",
+      "vertragslaufzeit_jahre": null,
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": true,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "40"
+        },
+        "mindestrueckstand": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_IMMOB_UEBER",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "250.01",
+      "vertragslaufzeit_jahre": null,
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": true,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "40"
+        },
+        "mindestrueckstand": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_RATEN_0",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 0,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "mindestrueckstand": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": false,
+        "voraussetzungen_nummer_1_erfuellt": false
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_RATEN_1",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 1,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "mindestrueckstand": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": false,
+        "voraussetzungen_nummer_1_erfuellt": false
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_RATEN_3",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 3,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "mindestrueckstand": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_KNAPP_UNTER_DREI",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "500",
+      "vertragslaufzeit_jahre": "2.9999",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "mindestrueckstand": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": false,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": false
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_KNAPP_UEBER_DREI",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "500",
+      "vertragslaufzeit_jahre": "3.0001",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "20"
+        },
+        "mindestrueckstand": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_IMMOB_LAUFZEIT_IGNORIERT",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "250",
+      "vertragslaufzeit_jahre": "30",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": true,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "40"
+        },
+        "mindestrueckstand": {
+          "zaehler": "250",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": true,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": true
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_NULLRUECKSTAND",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "0",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rueckstandsquote": {
+          "zaehler": "1",
+          "nenner": "10"
+        },
+        "mindestrueckstand": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "rueckstandsschwelle_erreicht": false,
+        "mindestens_zwei_aufeinanderfolgende_raten": true,
+        "voraussetzungen_nummer_1_erfuellt": false
+      }
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_KEIN_TEILZAHLUNGSDARLEHEN",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": false
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_NENNBETRAG0",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": null,
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_NENNBETRAG1",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "0",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_NENNBETRAG2",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "-1",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_MASSGEBLICHER_RUECKSTAND0",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": null,
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_MASSGEBLICHER_RUECKSTAND1",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "-1",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_VERTRAGSLAUFZEIT_JAHRE0",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": null,
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_VERTRAGSLAUFZEIT_JAHRE1",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "0",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_VERTRAGSLAUFZEIT_JAHRE2",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "-1",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_VERTRAGSLAUFZEIT_JAHRE3",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "falsch",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_ANZAHL_AUFEINANDERFOLGENDER_VERZUGSRATEN0",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": null,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_ANZAHL_AUFEINANDERFOLGENDER_VERZUGSRATEN1",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": -1,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_ANZAHL_AUFEINANDERFOLGENDER_VERZUGSRATEN2",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 1.5,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_ANZAHL_AUFEINANDERFOLGENDER_VERZUGSRATEN3",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": true,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_ANZAHL_AUFEINANDERFOLGENDER_VERZUGSRATEN4",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 9007199254740992,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_IMMOBILIAR_VERBRAUCHERDARLEHEN0",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": null,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_IMMOBILIAR_VERBRAUCHERDARLEHEN1",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": "ja",
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_TEILZAHLUNGSDARLEHEN0",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_TEILZAHLUNGSDARLEHEN1",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "1000.00",
+      "vertragslaufzeit_jahre": "3",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": false,
+      "teilzahlungsdarlehen": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Fehlender Pflichtwert oder Verletzung des dokumentierten Eingabevertrags.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  },
+  {
+    "fall_id": "DARLEHENSRUECKSTAND_IMMOB_UNGUELTIGE_DAUER",
+    "funktion": "verbraucherdarlehen_verzugsschwelle",
+    "eingaben": {
+      "nennbetrag": "10000",
+      "massgeblicher_rueckstand": "250.00",
+      "vertragslaufzeit_jahre": "0",
+      "anzahl_aufeinanderfolgender_verzugsraten": 2,
+      "immobiliar_verbraucherdarlehen": true,
+      "teilzahlungsdarlehen": true
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Nennbetrag10000: bei Laufzeit bis einschließlich3Jahre Mindestbetrag1000, darüber500; bei Immobiliar-Verbraucherdarlehen250. Zusätzlich mindestens zwei aufeinanderfolgende ganz oder teilweise im Verzug befindliche Teilzahlungen.",
+    "pruefnachweis": "Vor Implementierung manuell aus §498 Abs.1 Satz1 Nr.1 undAbs.2 der lokalen PDF abgeleitet."
+  }
+]

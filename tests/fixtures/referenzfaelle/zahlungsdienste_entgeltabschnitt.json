@@ -1,0 +1,551 @@
+[
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_HALB",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 2505600,
+        "sekunden_bis_beendigung": 1252800,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "29",
+          "nenner": "2"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "29",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_AM_BEGINN",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-01T00:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 2505600,
+        "sekunden_bis_beendigung": 0,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "29",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_AM_ENDE",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-03-01T00:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 2505600,
+        "sekunden_bis_beendigung": 2505600,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "29",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_VORHER",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-01-01T00:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 2505600,
+        "sekunden_bis_beendigung": 0,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "29",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_NACHHER",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2025-01-01T00:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 2505600,
+        "sekunden_bis_beendigung": 2505600,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "29",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_TEILZAHLUNG",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "10",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 2505600,
+        "sekunden_bis_beendigung": 1252800,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "29",
+          "nenner": "2"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "5",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_KEINE_ZAHLUNG",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "0",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 2505600,
+        "sekunden_bis_beendigung": 1252800,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "2"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "29",
+          "nenner": "2"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_EINE_SEKUNDE",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-29T23:59:59Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-03-01T00:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 1,
+        "sekunden_bis_beendigung": 1,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "29",
+          "nenner": "1"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_DRITTEL",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-29T23:59:57Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-29T23:59:58Z",
+      "abschnittsentgelt": "1",
+      "vorausgezahltes_entgelt": "1",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "sekunden_gesamt": 3,
+        "sekunden_bis_beendigung": 1,
+        "geschuldeter_zeitanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "geschuldetes_entgelt": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "erstattungsbetrag": {
+          "zaehler": "2",
+          "nenner": "3"
+        }
+      }
+    },
+    "herleitung": "Februar2024:29*86400=2505600Sekunden;15.Februar12Uhr nach14.5Tagen exakt Hälfte. Halb offene Ein-/Dreisekundenfälle und Randlagen unabhängig vorgegeben.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_FEHLT_abschnitt_von_utc",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": null,
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_FEHLT_abschnitt_bis_utc",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": null,
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_FEHLT_beendigung_utc",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": null,
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_FEHLT_abschnittsentgelt",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": null,
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_FEHLT_vorausgezahltes_entgelt",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": null,
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_FEHLT_einordnungsnachweis",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_UNGUELTIG0",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-02-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_UNGUELTIG1",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-01-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_UNGUELTIG2",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00+01:00",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_UNGUELTIG3",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00.1Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_UNGUELTIG4",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-30T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_UNGUELTIG5",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "30",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_UNGUELTIG6",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "-1",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": "§675hIII: Entgelt nur bis zur Beendigung; auf danach entfallende Zeit zugeordnete Vorauszahlung erstatten. Berechnung unter ausdrücklich rechtlich bestimmter gleichmäßiger Zeitbewertung in Sekunden; keine automatische Wahl einer Vertrags-/Tageskonvention. Abweichend bewertete Preisperioden getrennt normalisieren und abrechnen. Halb offene Intervalle verhindern doppelte Grenzsekunden. Standardbibliotheken und vorhandener UTC-Parser, keine neue Datumsbibliothek; keine stillschweigende Zeitzone oder Rundung von Subsekunden. Vertragswirksamkeit, zulässige Kündigungsfrist675hI/II und EntgeltverbotIV separat; kein Kündigungsentgelt ergänzen. Geschuldetes Entgelt und Rückerstattung nicht als zwei zusätzliche Ansprüche zusammenzählen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ZAHLUNGSDIENSTE_ENTGELTABSCHNITT_UNGUELTIG7",
+    "funktion": "zahlungsdienste_entgeltabschnitt",
+    "eingaben": {
+      "abschnitt_von_utc": "2024-02-01T00:00:00Z",
+      "abschnitt_bis_utc": "2024-03-01T00:00:00Z",
+      "beendigung_utc": "2024-02-15T12:00:00Z",
+      "abschnittsentgelt": "29",
+      "vorausgezahltes_entgelt": "29",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

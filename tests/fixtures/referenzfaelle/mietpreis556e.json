@@ -1,0 +1,619 @@
+[
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_KOMBINATION",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [
+        "50",
+        "25"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungeminderte_monatsmiete": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erhoehungssumme": {
+          "zaehler": "75",
+          "nenner": "1"
+        },
+        "bereinigte_vormiete": {
+          "zaehler": "925",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "900+100−50−25=925; Minderung zuerst entfernen, Erhöhungsanteile nur einmal abziehen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_KEINE_ABZUEGE",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungeminderte_monatsmiete": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erhoehungssumme": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "bereinigte_vormiete": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "900+100−50−25=925; Minderung zuerst entfernen, Erhöhungsanteile nur einmal abziehen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_KEINE_MINDERUNG",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "0",
+      "auszunehmende_erhoehungsbetraege": [
+        "50",
+        "25"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungeminderte_monatsmiete": {
+          "zaehler": "900",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erhoehungssumme": {
+          "zaehler": "75",
+          "nenner": "1"
+        },
+        "bereinigte_vormiete": {
+          "zaehler": "825",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "900+100−50−25=925; Minderung zuerst entfernen, Erhöhungsanteile nur einmal abziehen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_NULLREST",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [
+        "1000"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungeminderte_monatsmiete": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erhoehungssumme": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "bereinigte_vormiete": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "900+100−50−25=925; Minderung zuerst entfernen, Erhöhungsanteile nur einmal abziehen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_BRUCH",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "0.5",
+      "minderungsbetrag": "0.1",
+      "auszunehmende_erhoehungsbetraege": [
+        "0.2"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "ungeminderte_monatsmiete": {
+          "zaehler": "3",
+          "nenner": "5"
+        },
+        "ausgeschlossene_erhoehungssumme": {
+          "zaehler": "1",
+          "nenner": "5"
+        },
+        "bereinigte_vormiete": {
+          "zaehler": "2",
+          "nenner": "5"
+        }
+      }
+    },
+    "herleitung": "900+100−50−25=925; Minderung zuerst entfernen, Erhöhungsanteile nur einmal abziehen.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_FEHLT_letzte_geschuldete_monatsmiete",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": null,
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [
+        "50",
+        "25"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_FEHLT_minderungsbetrag",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": null,
+      "auszunehmende_erhoehungsbetraege": [
+        "50",
+        "25"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_FEHLT_auszunehmende_erhoehungsbetraege",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": null,
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_FEHLT_bereinigungsnachweis",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [
+        "50",
+        "25"
+      ],
+      "bereinigungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_UNGUELTIG0",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [
+        "1001"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_UNGUELTIG1",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [
+        "-1"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_UNGUELTIG2",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": {},
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_UNGUELTIG3",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "-1",
+      "auszunehmende_erhoehungsbetraege": [
+        "50",
+        "25"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_UNGUELTIG4",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": true,
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [
+        "50",
+        "25"
+      ],
+      "bereinigungsnachweis": "556eI2: zunächst Minderung aus letzter geschuldeter Monatsmiete herausrechnen, dann Summe der rechtlich ausgeschlossenen Erhöhungsanteile abziehen. Das Ergebnis ist Eingabe für vorhandenen Vormietgrenzenkern. Erhöhungsanteile nach tatsächlicher Wirkung in der ungeminderten letzten Miete bestimmen; verkettete Prozentänderungen oder später aufgehobene Erhöhungen nicht doppelt zählen. Rechtswirksamkeit, zeitliche Einordnung ins letzte Jahr, Staffel-/Indexsonderfälle und Nutzbarkeit nach556g sind vorqualifiziert. Keine automatische Vertragszeitreihenbewertung. Abzüge oberhalb ungeminderter Miete sind widersprüchliche Eingaben und werden nicht still auf null gekappt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_VORMIETE_BEREINIGEN_UNGUELTIG5",
+    "funktion": "mietpreisbegrenzung_vormiete_bereinigen",
+    "eingaben": {
+      "letzte_geschuldete_monatsmiete": "900",
+      "minderungsbetrag": "100",
+      "auszunehmende_erhoehungsbetraege": [
+        "50",
+        "25"
+      ],
+      "bereinigungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_MODERNISIERUNG_HOEHER",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "modernisierungsweg_monatsgrenze": {
+          "zaehler": "980",
+          "nenner": "1"
+        },
+        "nutzbare_monatsgrenze": {
+          "zaehler": "980",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "880+100=980;max(950,980)=980,nicht950+100=1050.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_VORMIETE_HOEHER",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "1000",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "modernisierungsweg_monatsgrenze": {
+          "zaehler": "980",
+          "nenner": "1"
+        },
+        "nutzbare_monatsgrenze": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "880+100=980;max(950,980)=980,nicht950+100=1050.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_NICHT_NUTZBAR",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": false,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "modernisierungsweg_monatsgrenze": null,
+        "nutzbare_monatsgrenze": {
+          "zaehler": "950",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "880+100=980;max(950,980)=980,nicht950+100=1050.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_GLEICH",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "980",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "modernisierungsweg_monatsgrenze": {
+          "zaehler": "980",
+          "nenner": "1"
+        },
+        "nutzbare_monatsgrenze": {
+          "zaehler": "980",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "880+100=980;max(950,980)=980,nicht950+100=1050.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_KEIN_ZUSCHLAG",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "0",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "modernisierungsweg_monatsgrenze": {
+          "zaehler": "880",
+          "nenner": "1"
+        },
+        "nutzbare_monatsgrenze": {
+          "zaehler": "950",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "880+100=980;max(950,980)=980,nicht950+100=1050.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_FEHLT_grund_oder_vormietgrenze",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": null,
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_FEHLT_grundbetrag_ohne_modernisierung",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": null,
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_FEHLT_modernisierung_monatlich",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": null,
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_FEHLT_modernisierungsprivileg_nutzbar",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": null,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_FEHLT_einordnungsnachweis",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_UNGUELTIG0",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "-1",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_UNGUELTIG1",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "-1",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_UNGUELTIG2",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": "ja",
+      "einordnungsnachweis": "556eII-Alternativweg: Grundbetrag auf unmodernisierter Vergleichsmiete plus hypothetischer559/559a-Erhöhung; anschließend höherer nutzbarer Betrag gegenüber eigenständigem Grund-/Vormietweg. Niemals Modernisierungszuschlag zusätzlich auf die Vormiete aufschlagen. Bei nicht nutzbarem Privileg bleibt nur bisheriger Weg; hypothetischer Alternativbetrag wird dann nicht ausgegeben. Keine doppelte Einbeziehung der Modernisierung in Vergleichsmiete und Zuschlag. Zeitliche Dreijahreszuordnung, Maßnahmenqualifikation und556g-Auskunft sind rechtliche Eingaben. Die rechtliche Förderabzugs-/Kappungsreihenfolge bleibt bei einschlägiger Konkurrenz ausdrücklich vorzugeben; kein neuer Standard dafür."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "MIETPREISBEGRENZUNG_MODERNISIERUNGSALTERNATIVE_UNGUELTIG3",
+    "funktion": "mietpreisbegrenzung_modernisierungsalternative",
+    "eingaben": {
+      "grund_oder_vormietgrenze": "950",
+      "grundbetrag_ohne_modernisierung": "880",
+      "modernisierung_monatlich": "100",
+      "modernisierungsprivileg_nutzbar": true,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

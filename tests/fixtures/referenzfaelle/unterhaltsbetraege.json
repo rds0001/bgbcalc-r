@@ -1,0 +1,1212 @@
+[
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_DIFFERENZ",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "600",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_GLEICH",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": "1000",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_UEBER",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": "1400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_BEIDE_NULL",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "0",
+      "erwerbsdeckung": "0",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_KEINE_DECKUNG",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": "0",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_EXAKT",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "0.3",
+      "erwerbsdeckung": "0.1",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_BRUCH",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "erwerbsdeckung": {
+        "zaehler": "1",
+        "nenner": "6"
+      },
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "6"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_FEHLT_voller_unterhalt",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": null,
+      "erwerbsdeckung": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_TYP_voller_unterhalt",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": [],
+      "erwerbsdeckung": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_FEHLT_erwerbsdeckung",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": null,
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_TYP_erwerbsdeckung",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": [],
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": "400",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_TYP_bewertungsnachweis",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": "400",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_NEGATIV_voller_unterhalt",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "-1",
+      "erwerbsdeckung": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_NEGATIV_erwerbsdeckung",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": "-1",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_UNTERSCHIEDSBETRAG_NACHWEIS_LEER",
+    "funktion": "unterhalt_unterschiedsbetrag",
+    "eingaben": {
+      "voller_unterhalt": "1000",
+      "erwerbsdeckung": "400",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_DIFFERENZ",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "600",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_GLEICH",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": "1000",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_UEBER",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": "1400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_BEIDE_NULL",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "0",
+      "vom_erben_erlangbar": "0",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_KEINE_DECKUNG",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": "0",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_EXAKT",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "0.3",
+      "vom_erben_erlangbar": "0.1",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_BRUCH",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "vom_erben_erlangbar": {
+        "zaehler": "1",
+        "nenner": "6"
+      },
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "6"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_FEHLT_beerdigungskosten",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": null,
+      "vom_erben_erlangbar": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_TYP_beerdigungskosten",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": [],
+      "vom_erben_erlangbar": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_FEHLT_vom_erben_erlangbar",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": null,
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_TYP_vom_erben_erlangbar",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": [],
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_FEHLT_bewertungsnachweis",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": "400",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_TYP_bewertungsnachweis",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": "400",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_NEGATIV_beerdigungskosten",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "-1",
+      "vom_erben_erlangbar": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_NEGATIV_vom_erben_erlangbar",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": "-1",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_BEERDIGUNGSKOSTENREST_NACHWEIS_LEER",
+    "funktion": "unterhalt_beerdigungskostenrest",
+    "eingaben": {
+      "beerdigungskosten": "1000",
+      "vom_erben_erlangbar": "400",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_DIFFERENZ",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "600",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_GLEICH",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": "1000",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_UEBER",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": "1400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_BEIDE_NULL",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "0",
+      "angemessenes_mass": "0",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_KEINE_DECKUNG",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": "0",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1000",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_EXAKT",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "0.3",
+      "angemessenes_mass": "0.1",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "5"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_BRUCH",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "angemessenes_mass": {
+        "zaehler": "1",
+        "nenner": "6"
+      },
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "1",
+        "nenner": "6"
+      }
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_FEHLT_ausstattungswert",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": null,
+      "angemessenes_mass": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_TYP_ausstattungswert",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": [],
+      "angemessenes_mass": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_FEHLT_angemessenes_mass",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": null,
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_TYP_angemessenes_mass",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": [],
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_FEHLT_bewertungsnachweis",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": "400",
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_TYP_bewertungsnachweis",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": "400",
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_NEGATIV_ausstattungswert",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "-1",
+      "angemessenes_mass": "400",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_NEGATIV_angemessenes_mass",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": "-1",
+      "bewertungsnachweis": "Qualifizierte synthetische Beträge derselben Bezugsperiode."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "AUSSTATTUNG_SCHENKUNGSMEHRBETRAG_NACHWEIS_LEER",
+    "funktion": "ausstattung_schenkungsmehrbetrag",
+    "eingaben": {
+      "ausstattungswert": "1000",
+      "angemessenes_mass": "400",
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_DREI",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 3,
+        "gesamtbetrag": {
+          "zaehler": "900",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_ENDE_ERSTER_TAG",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-01",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 3,
+        "gesamtbetrag": {
+          "zaehler": "900",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_ENDE_LETZTER_TAG",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-31",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 3,
+        "gesamtbetrag": {
+          "zaehler": "900",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_EIN_MONAT",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-01-01",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 1,
+        "gesamtbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_JAHRESWECHSEL",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2029-12-01",
+      "beendigung_am": "2030-02-01",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 3,
+        "gesamtbetrag": {
+          "zaehler": "900",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_SCHALT",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2028-02-01",
+      "beendigung_am": "2028-02-29",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 1,
+        "gesamtbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_NULL",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "0",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 3,
+        "gesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_BRUCH",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": {
+        "zaehler": "1",
+        "nenner": "3"
+      },
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 3,
+        "gesamtbetrag": {
+          "zaehler": "1",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_GESAMTBEREICH",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "1",
+      "erster_voller_monat": "0001-01-01",
+      "beendigung_am": "9999-12-31",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monatsanzahl": 119988,
+        "gesamtbetrag": {
+          "zaehler": "119988",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige inklusive Zählung voller Kalendermonate, auch Endmonat ohne Tageskürzung, multipliziert mit Monatsbetrag.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_FEHLT_monatsbetrag",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": null,
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_TYP_monatsbetrag",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": [],
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_FEHLT_erster_voller_monat",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": null,
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_TYP_erster_voller_monat",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": [],
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_FEHLT_beendigung_am",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": null,
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_TYP_beendigung_am",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": [],
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_FEHLT_zeitraumnachweis",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_TYP_zeitraumnachweis",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_ANFANG_MITTE",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-02",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_ENDE_VORHER",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2029-12-31",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_BETRAG_NEGATIV",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "-1",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_NACHWEIS_LEER",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-03-15",
+      "zeitraumnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "UNTERHALT_MONATSGESAMTBETRAG_UNGUELTIGES_DATUM",
+    "funktion": "unterhalt_monatsgesamtbetrag",
+    "eingaben": {
+      "monatsbetrag": "300",
+      "erster_voller_monat": "2030-01-01",
+      "beendigung_am": "2030-02-29",
+      "zeitraumnachweis": "Konstanter qualifizierter Vollmonatsanspruch; Tod im Endmonat, keine abweichende Bestimmung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Subtraktion mit Mindestwert null; keine Bewertungsmethode vorausgesetzt.",
+    "pruefnachweis": "Native Python/R und vollständige Ergebnisparität."
+  }
+]

@@ -1,0 +1,765 @@
+[
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_REDUKTION",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_sollzins_prozent": {
+          "zaehler": "2",
+          "nenner": "1"
+        },
+        "rechnerischer_zinsbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "rechnerische_zinsdifferenz": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000*min(6,2)/100*1/2=100; vertraglich300, Differenz200. Markt8 ergibt keine Erhöhung. Exakte Brüche und Vorzeichen ohne eigenständiges Negativzins-Zahlungsurteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_KEINE_ERHOEHUNG",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "8",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_sollzins_prozent": {
+          "zaehler": "6",
+          "nenner": "1"
+        },
+        "rechnerischer_zinsbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "rechnerische_zinsdifferenz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000*min(6,2)/100*1/2=100; vertraglich300, Differenz200. Markt8 ergibt keine Erhöhung. Exakte Brüche und Vorzeichen ohne eigenständiges Negativzins-Zahlungsurteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_GLEICH",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "6",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_sollzins_prozent": {
+          "zaehler": "6",
+          "nenner": "1"
+        },
+        "rechnerischer_zinsbetrag": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "rechnerische_zinsdifferenz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000*min(6,2)/100*1/2=100; vertraglich300, Differenz200. Markt8 ergibt keine Erhöhung. Exakte Brüche und Vorzeichen ohne eigenständiges Negativzins-Zahlungsurteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_VARIABEL",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "1.5",
+      "zinsart": "veraenderlich",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_sollzins_prozent": {
+          "zaehler": "3",
+          "nenner": "2"
+        },
+        "rechnerischer_zinsbetrag": {
+          "zaehler": "75",
+          "nenner": "1"
+        },
+        "rechnerische_zinsdifferenz": {
+          "zaehler": "225",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000*min(6,2)/100*1/2=100; vertraglich300, Differenz200. Markt8 ergibt keine Erhöhung. Exakte Brüche und Vorzeichen ohne eigenständiges Negativzins-Zahlungsurteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_NULL",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "0",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_sollzins_prozent": {
+          "zaehler": "2",
+          "nenner": "1"
+        },
+        "rechnerischer_zinsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "rechnerische_zinsdifferenz": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000*min(6,2)/100*1/2=100; vertraglich300, Differenz200. Markt8 ergibt keine Erhöhung. Exakte Brüche und Vorzeichen ohne eigenständiges Negativzins-Zahlungsurteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_NEGATIV_RECHNERISCH",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "-1",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_sollzins_prozent": {
+          "zaehler": "-1",
+          "nenner": "1"
+        },
+        "rechnerischer_zinsbetrag": {
+          "zaehler": "-50",
+          "nenner": "1"
+        },
+        "rechnerische_zinsdifferenz": {
+          "zaehler": "350",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "10000*min(6,2)/100*1/2=100; vertraglich300, Differenz200. Markt8 ergibt keine Erhöhung. Exakte Brüche und Vorzeichen ohne eigenständiges Negativzins-Zahlungsurteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_EXAKTER_ANTEIL",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "100",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 3,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "rechnerischer_sollzins_prozent": {
+          "zaehler": "2",
+          "nenner": "1"
+        },
+        "rechnerischer_zinsbetrag": {
+          "zaehler": "2",
+          "nenner": "3"
+        },
+        "rechnerische_zinsdifferenz": {
+          "zaehler": "4",
+          "nenner": "3"
+        }
+      }
+    },
+    "herleitung": "10000*min(6,2)/100*1/2=100; vertraglich300, Differenz200. Markt8 ergibt keine Erhöhung. Exakte Brüche und Vorzeichen ohne eigenständiges Negativzins-Zahlungsurteil.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_kapital",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": null,
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_kapital",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": {},
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_vertraglicher_sollzins_prozent",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": null,
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_vertraglicher_sollzins_prozent",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": {},
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_qualifizierter_marktzins_prozent",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": null,
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_qualifizierter_marktzins_prozent",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": {},
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_zinsart",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": null,
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_zinsart",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": {},
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_marktzins_stichtag_am",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": null,
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_marktzins_stichtag_am",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": {},
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_zeitanteil_zaehler",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": null,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_zeitanteil_zaehler",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": {},
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_zeitanteil_nenner",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": null,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_zeitanteil_nenner",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": {},
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_zeitanteil_nachweis",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": null,
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_zeitanteil_nachweis",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": {},
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_FEHLT_einordnungsnachweis",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_TYP_einordnungsnachweis",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_UNGUELTIG_0",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "-1",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_UNGUELTIG_1",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "sonstige",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_UNGUELTIG_2",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-02-30",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_UNGUELTIG_3",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 0,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_UNGUELTIG_4",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": -1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_UNGUELTIG_5",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": "Qualifizierter halber Jahresanteil.",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "KREDITWUERDIGKEIT_ZINSERMAESSIGUNG_UNGUELTIG_6",
+    "funktion": "kreditwuerdigkeit_zinsermaessigung",
+    "eingaben": {
+      "kapital": "10000",
+      "vertraglicher_sollzins_prozent": "6",
+      "qualifizierter_marktzins_prozent": "2",
+      "zinsart": "gebunden",
+      "marktzins_stichtag_am": "2024-01-01",
+      "zeitanteil_zaehler": 1,
+      "zeitanteil_nenner": 2,
+      "zeitanteil_nachweis": " ",
+      "einordnungsnachweis": "§505dI1/2: bereits rechtlich feststehende Zinsermäßigung; numerisch kleinerer Vertrags-/Marktzinssatz, keine Zinserhöhung. Gebundener Sollzins: Markt für Hypothekenpfandbriefe/öffentliche Pfandbriefe mit entsprechender Bindungslaufzeit; veränderlicher Sollzins: Euro-Dreimonats-Interbankenmarkt. Marktwerte, Vertragsschluss und vereinbarte Anpassungsstichtage vorqualifizieren. Jeder homogene Kapital-/Zinsabschnitt separat; keine Tilgungsplan- oder Zinseszinsannahme. Vorzeichenbehaftete Ergebnisse sind rechnerische Zinsbeträge, kein automatisch festgestellter Zahlungsanspruch bei Negativzinsen. Eine rechtlich anzuwendende Zinsuntergrenze ist vorab in der qualifizierten Zinsgrundlage zu berücksichtigen und nachzuweisen; keine erfundene Nullgrenze. Ausnahmefälle505dI5/III nicht mit dieser Funktion berechnen. Keine automatische Kreditwürdigkeitsprüfung, Pflichtverletzungsentscheidung oder Marktdatenbeschaffung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

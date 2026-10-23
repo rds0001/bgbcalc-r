@@ -1,0 +1,600 @@
+[
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_VORRANG_DANN_GLEICHRANG",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "90",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "zugeteilter_betrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "zugeteilter_betrag": {
+              "zaehler": "15",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "25",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "C",
+            "zugeteilter_betrag": {
+              "zaehler": "15",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "5",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibendes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Budget90:60vorrangig,Rest30zu15/15. Budget110:Rest50Vorschlag25/25,Cauf20gedeckelt,B30. Budget150:volle120+30Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_GLEICHRANG_DECKEL",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "110",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "zugeteilter_betrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "zugeteilter_betrag": {
+              "zaehler": "30",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "C",
+            "zugeteilter_betrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibendes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Budget90:60vorrangig,Rest30zu15/15. Budget110:Rest50Vorschlag25/25,Cauf20gedeckelt,B30. Budget150:volle120+30Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_VORRANG_ALLEIN",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "50",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "zugeteilter_betrag": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "zugeteilter_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "C",
+            "zugeteilter_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibendes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Budget90:60vorrangig,Rest30zu15/15. Budget110:Rest50Vorschlag25/25,Cauf20gedeckelt,B30. Budget150:volle120+30Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_UEBERSCHUSS",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "150",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "zugeteilter_betrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "zugeteilter_betrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "C",
+            "zugeteilter_betrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibendes_budget": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Budget90:60vorrangig,Rest30zu15/15. Budget110:Rest50Vorschlag25/25,Cauf20gedeckelt,B30. Budget150:volle120+30Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_NULL",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "0",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "beschwerung_id": "A",
+            "zugeteilter_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "60",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "B",
+            "zugeteilter_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "40",
+              "nenner": "1"
+            }
+          },
+          {
+            "beschwerung_id": "C",
+            "zugeteilter_betrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kuerzungsbetrag": {
+              "zaehler": "20",
+              "nenner": "1"
+            }
+          }
+        ],
+        "verbleibendes_budget": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Budget90:60vorrangig,Rest30zu15/15. Budget110:Rest50Vorschlag25/25,Cauf20gedeckelt,B30. Budget150:volle120+30Rest.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_FEHLT_verfuegbarer_beschwerungsbetrag",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": null,
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_FEHLT_beschwerungen",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "90",
+      "beschwerungen": null,
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_FEHLT_verteilungsnachweis",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "90",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_UNGUELTIG0",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "90",
+      "beschwerungen": [],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_UNGUELTIG1",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "90",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_UNGUELTIG2",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "90",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 0,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_UNGUELTIG3",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "90",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "0"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERMAECHTNIS_RANGWEISE_BESCHWERUNGSVERTEILUNG_UNGUELTIG4",
+    "funktion": "vermaechtnis_rangweise_beschwerungsverteilung",
+    "eingaben": {
+      "verfuegbarer_beschwerungsbetrag": "-1",
+      "beschwerungen": [
+        {
+          "beschwerung_id": "A",
+          "rang": 1,
+          "beschwerungswert": "60",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "B",
+          "rang": 2,
+          "beschwerungswert": "40",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "beschwerung_id": "C",
+          "rang": 2,
+          "beschwerungswert": "20",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "Mehrere rechtlich feststehende Beschwerungsränge mit bestehendem begrenztem Quotenkern bedienen. Innerhalb eines Rangs proportional zu qualifizierten Gewichten, höchstens jeweiliger Beschwerungswert, über Obergrenzen hinausgehende Anteile innerhalb desselben Rangs neu verteilen. Restbudget erst danach an nachrangige Ränge. Keine automatische Testamentsauslegung, automatische Gleichrangigkeit oder Erfindung von Quoten. Individuelle2318II/III-Schutzkonkurrenz muss bereits rechtlich in Budget/zulässiger Rangverteilung berücksichtigt sein; dieser Kern entscheidet sie nicht. Kürzungsrecht muss ausgeübt werden, keine automatische Schuldtilgung. Keine mehrfache Verwendung desselben Budgets oder Umdeutung von Sachvermächtnissen in Zahlungsansprüche."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

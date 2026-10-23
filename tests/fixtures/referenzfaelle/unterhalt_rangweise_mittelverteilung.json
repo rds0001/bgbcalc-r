@@ -1,0 +1,898 @@
+[
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_VORRANGIGER_MANGEL",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "25",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "75",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "75",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "225",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "rang1609": 2,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_zugeordnet": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100anRang1nach1:3=>25/75,Rang2null.500=>100/300inRang1,100inRang2. Gleichgewichte bei300:150/150Vorschlag,Aauf100gedeckelt,Berhaelt200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_REST_IN_ZWEITEN_RANG",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "500",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "300",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "rang1609": 2,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_zugeordnet": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "verbleibende_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100anRang1nach1:3=>25/75,Rang2null.500=>100/300inRang1,100inRang2. Gleichgewichte bei300:150/150Vorschlag,Aauf100gedeckelt,Berhaelt200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_ALLE_GEDECKT",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "700",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "300",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "rang1609": 2,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_zugeordnet": {
+          "zaehler": "600",
+          "nenner": "1"
+        },
+        "verbleibende_mittel": {
+          "zaehler": "100",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100anRang1nach1:3=>25/75,Rang2null.500=>100/300inRang1,100inRang2. Gleichgewichte bei300:150/150Vorschlag,Aauf100gedeckelt,Berhaelt200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_RANG7_NAEHEVORRANG",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 7,
+          "verwandtschaftsgrad": 2,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1"
+        },
+        {
+          "person_id": "B",
+          "rang1609": 7,
+          "verwandtschaftsgrad": 3,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3"
+        },
+        {
+          "person_id": "C",
+          "rang1609": 7,
+          "verwandtschaftsgrad": 4,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1"
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "rang1609": 7,
+            "verwandtschaftsgrad": 2,
+            "zugeordneter_unterhalt": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "rang1609": 7,
+            "verwandtschaftsgrad": 3,
+            "zugeordneter_unterhalt": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "300",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "rang1609": 7,
+            "verwandtschaftsgrad": 4,
+            "zugeordneter_unterhalt": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_zugeordnet": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "verbleibende_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100anRang1nach1:3=>25/75,Rang2null.500=>100/300inRang1,100inRang2. Gleichgewichte bei300:150/150Vorschlag,Aauf100gedeckelt,Berhaelt200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_KEINE_MITTEL",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "0",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "300",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "rang1609": 2,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_zugeordnet": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100anRang1nach1:3=>25/75,Rang2null.500=>100/300inRang1,100inRang2. Gleichgewichte bei300:150/150Vorschlag,Aauf100gedeckelt,Berhaelt200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_BEDARFSDECKEL",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "300",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "verteilung": [
+          {
+            "person_id": "A",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "rang1609": 1,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "200",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "100",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "C",
+            "rang1609": 2,
+            "verwandtschaftsgrad": null,
+            "zugeordneter_unterhalt": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "ungedeckter_restbedarf": {
+              "zaehler": "200",
+              "nenner": "1"
+            }
+          }
+        ],
+        "gesamt_zugeordnet": {
+          "zaehler": "300",
+          "nenner": "1"
+        },
+        "verbleibende_mittel": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100anRang1nach1:3=>25/75,Rang2null.500=>100/300inRang1,100inRang2. Gleichgewichte bei300:150/150Vorschlag,Aauf100gedeckelt,Berhaelt200.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_FEHLT_verfuegbare_mittel",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": null,
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_FEHLT_berechtigte",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": null,
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_FEHLT_verteilungsnachweis",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG0",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "-1",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG1",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG2",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG3",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 0,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG4",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 8,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG5",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "0",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG6",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "-1",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG7",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 7,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": 1
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG8",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": 2
+        }
+      ],
+      "verteilungsnachweis": "§§1603/1609: qualifizierte verfuegbare Mittel rangweise verwenden. Rang1vor2usw.; innerhalb Rang7gehen naehere Verwandtschaftsgrade den ferneren vor. Innerhalb eines Rangs nach rechtlich begruendeten Gewichten proportional unter individuellen ungedeckten Bedarfsgrenzen mit vorhandenem begrenztem Quotenkern verteilen. Erst danach Restmittel an naechsten Rang. Keine Gleichverteilung nach Koepfen und keine erfundene Unterhaltstabelle/Selbstbehaltshoehe.1603IIgesteigerte Haftung bestimmt rechtlich verfuegbare Mittel und qualifizierte Mangelfallgewichte, kein vom BGB vorgegebener weiterer pauschaler Prozentsatz. Gewichte und Grenzen muessen fuer die gesamte jeweilige Rangverteilung gelten; rechtliche Neubewertung bei geaenderter Grundlage explizit erforderlich. Mehrere Pflichtige1606IIIund Ersatzhaftung1607/1608mit bestehenden Anteils-/Leistungsgrenzenkernen in rechtlich bestimmter Reihenfolge komponieren; keine automatische globale Familienmatrix oder Umdeutung eines ungedeckten Bedarfs in Anspruch gegen beliebige Dritte. Bereits anderweitig gedeckte Bedarfe/gebundene Mittel nicht doppelt verwenden. Keine automatische Bestimmung von Berechtigung, Rang, Leistungsfaehigkeit, Naturalleistung oder Tabellenbetrag."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "UNTERHALT_RANGWEISE_MITTELVERTEILUNG_UNGUELTIG9",
+    "funktion": "unterhalt_rangweise_mittelverteilung",
+    "eingaben": {
+      "verfuegbare_mittel": "100",
+      "berechtigte": [
+        {
+          "person_id": "A",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "100",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "B",
+          "rang1609": 1,
+          "ungedeckter_bedarf": "300",
+          "verteilungsgewicht": "3",
+          "verwandtschaftsgrad": null
+        },
+        {
+          "person_id": "C",
+          "rang1609": 2,
+          "ungedeckter_bedarf": "200",
+          "verteilungsgewicht": "1",
+          "verwandtschaftsgrad": null
+        }
+      ],
+      "verteilungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

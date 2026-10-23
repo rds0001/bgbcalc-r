@@ -1,0 +1,57 @@
+[
+  {
+    "fall_id": "2168a_einzelschiff",
+    "funktion": "hypothekenvermaechtnis_befriedigungsbetrag",
+    "eingaben": {
+      "schuldbetrag": "100",
+      "grundstueckswert": "90",
+      "vorrangige_belastungen": "20",
+      "vom_dritten_erlangbarer_betrag": "10",
+      "schuld_nach_2166_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "hoechstbetragshypothek": false,
+      "weitere_grundstuecke_mithaftend": false,
+      "bewertungsnachweis": "2168a entsprechende2166-Anwendung: eingetragenes Schiff, keine weitere Mithaftung, qualifizierte Schiffshypothek. Grundstücksfelder bedeuten hier entsprechende Schiffswerte bei Eigentumsübergang."
+    },
+    "wertpfad": [
+      "befriedigungsbetrag"
+    ],
+    "erwartet": {
+      "zaehler": "70",
+      "nenner": "1"
+    }
+  },
+  {
+    "fall_id": "2168a_gesamtschiffshypothek",
+    "funktion": "gesamthypothekenvermaechtnis_befriedigungsbetrag",
+    "eingaben": {
+      "schuldbetrag": "120",
+      "grundstuecke": [
+        {
+          "grundstueck_id": "SchiffA",
+          "grundstueckswert": "80",
+          "vorrangige_belastungen": "20"
+        },
+        {
+          "grundstueck_id": "SchiffB",
+          "grundstueckswert": "140",
+          "vorrangige_belastungen": "20"
+        }
+      ],
+      "vermachtes_grundstueck_id": "SchiffA",
+      "schuld_nach_2166_qualifiziert": true,
+      "zweifelsregel_anwendbar": true,
+      "hoechstbetragshypothek": false,
+      "alle_mithaftenden_grundstuecke_im_nachlass": true,
+      "drittberichtigung_nach_2166_absatz_2": false,
+      "bewertungsnachweis": "2168a entsprechende2167-Anwendung: zwei eingetragene Schiffe/Schiffsbauwerke im Nachlass, selbe Schiffshypothek, keine Drittberichtigung; Grundstücksparameter bilden hier entsprechende Schiffe ab."
+    },
+    "wertpfad": [
+      "befriedigungsbetrag"
+    ],
+    "erwartet": {
+      "zaehler": "40",
+      "nenner": "1"
+    }
+  }
+]

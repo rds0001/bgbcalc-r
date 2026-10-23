@@ -1,0 +1,18 @@
+argumente <- getOption('bgb.pruefargumente',commandArgs(trailingOnly=TRUE))
+if(!isTRUE(getOption('bgb.instrumentiert'))) for(datei in list.files(file.path(argumente[[1]],'r/R'),full.names=TRUE)) source(datei)
+f <- jsonlite::fromJSON(file.path(argumente[[1]],'tests/fixtures/kompositionsfaelle/vaterschaft1600b_korrekturen_normanwendung.json'),simplifyVector=FALSE)
+h <- '1600b-Fall und Ereignisse rechtlich qualifiziert, abgeschlossene ganze Hemmungstage.'
+beginn <- max(f$kenntnis_am,f$geschaeftsunfaehigkeit_weggefallen_am)
+r <- fristende(max(beginn,f$kind_geboren_am),2,'jahre','ereignis')
+stopifnot(identical(r$wert,f$wiederanfechtung_ende))
+r <- fristende(f$unzumutbarkeit_bekannt_am,2,'jahre','ereignis')
+stopifnot(identical(r$wert,f$neubeginn_ende))
+grund <- vaterschaftsanfechtung_grundfrist(f$grundereignis,f$kind_geboren_am,'allgemein',NULL,NULL,h)$wert$anfechtungsgrundfristende
+stopifnot(identical(grund,f$grundende))
+r <- verjaehrung_verfahrenshemmungskette('2020-01-02',grund,list(list(hemmungsbeginn_am='2021-01-01',nachlaufereignis_am='2021-01-01',nachlaufgrund='anderweitige_beendigung')),h)
+stopifnot(r$wert$beruecksichtigte_hemmungstage==182,identical(r$wert$rechnerischer_letzter_tag,f$verfahrensende))
+r <- verjaehrung_gehemmte_kalendertage('2020-01-02',grund,list(list(erster_gehemmter_tag='2021-01-01',letzter_gehemmter_tag='2021-01-10')),TRUE)
+stopifnot(identical(r$wert$rechnerischer_letzter_tag,f$drohungsende))
+r <- verjaehrung_ablaufhemmung_mindestablauf('vertretungsmangel',list(list(ereignis='vertretungsmangel_behoben',datum='2022-02-01')),2,'jahre',grund,FALSE,TRUE)
+stopifnot(identical(r$wert$rechnerischer_letzter_tag,f$schutzende))
+cat('Native1600b-Korrekturketten bestanden.\n')

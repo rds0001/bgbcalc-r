@@ -1,0 +1,1107 @@
+[
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_LEISTENDER_UEBEREMPFAENGER",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_gruppennachlass": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "hypothetischer_gesetzlicher_erbteil": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "pflichtteil_vor_anrechnungen": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "halber_doppelanrechnungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pflichtteilswert": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "mehrbetrag_gegenueber_hinterlassenem_erbteil": {
+          "zaehler": "25",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VorwegmodellA50=>Pflichtteil25;halbeDoppelanrechnung50/2=>0. ReineZuwendung30beiN300:330/3/2-30=25. Teilgruppe1/2,N150,Z12:156/3/2-12=14.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_GEMEINSAMES_MODELL",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "gemeinsame_neuberechnung_ohne_ausgeschiedene",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_gruppennachlass": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "hypothetischer_gesetzlicher_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pflichtteil_vor_anrechnungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "halber_doppelanrechnungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pflichtteilswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "mehrbetrag_gegenueber_hinterlassenem_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VorwegmodellA50=>Pflichtteil25;halbeDoppelanrechnung50/2=>0. ReineZuwendung30beiN300:330/3/2-30=25. Teilgruppe1/2,N150,Z12:156/3/2-12=14.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_DOPPELANRECHNUNG",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "50",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_gruppennachlass": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "hypothetischer_gesetzlicher_erbteil": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "pflichtteil_vor_anrechnungen": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "halber_doppelanrechnungswert": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "pflichtteilswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "mehrbetrag_gegenueber_hinterlassenem_erbteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VorwegmodellA50=>Pflichtteil25;halbeDoppelanrechnung50/2=>0. ReineZuwendung30beiN300:330/3/2-30=25. Teilgruppe1/2,N150,Z12:156/3/2-12=14.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_HINTERLASSEN",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "10",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_gruppennachlass": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "hypothetischer_gesetzlicher_erbteil": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "pflichtteil_vor_anrechnungen": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "halber_doppelanrechnungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pflichtteilswert": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "mehrbetrag_gegenueber_hinterlassenem_erbteil": {
+          "zaehler": "15",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VorwegmodellA50=>Pflichtteil25;halbeDoppelanrechnung50/2=>0. ReineZuwendung30beiN300:330/3/2-30=25. Teilgruppe1/2,N150,Z12:156/3/2-12=14.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_REINE_2315_ZUWENDUNG",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "300",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "30",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_gruppennachlass": {
+          "zaehler": "330",
+          "nenner": "1"
+        },
+        "hypothetischer_gesetzlicher_erbteil": {
+          "zaehler": "110",
+          "nenner": "1"
+        },
+        "pflichtteil_vor_anrechnungen": {
+          "zaehler": "55",
+          "nenner": "1"
+        },
+        "halber_doppelanrechnungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pflichtteilswert": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "mehrbetrag_gegenueber_hinterlassenem_erbteil": {
+          "zaehler": "25",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VorwegmodellA50=>Pflichtteil25;halbeDoppelanrechnung50/2=>0. ReineZuwendung30beiN300:330/3/2-30=25. Teilgruppe1/2,N150,Z12:156/3/2-12=14.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_TEILGRUPPE",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "150",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": {
+        "zaehler": "1",
+        "nenner": "2"
+      },
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "12",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "hypothetischer_gruppennachlass": {
+          "zaehler": "156",
+          "nenner": "1"
+        },
+        "hypothetischer_gesetzlicher_erbteil": {
+          "zaehler": "52",
+          "nenner": "1"
+        },
+        "pflichtteil_vor_anrechnungen": {
+          "zaehler": "26",
+          "nenner": "1"
+        },
+        "halber_doppelanrechnungswert": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "pflichtteilswert": {
+          "zaehler": "14",
+          "nenner": "1"
+        },
+        "mehrbetrag_gegenueber_hinterlassenem_erbteil": {
+          "zaehler": "14",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "VorwegmodellA50=>Pflichtteil25;halbeDoppelanrechnung50/2=>0. ReineZuwendung30beiN300:330/3/2-30=25. Teilgruppe1/2,N150,Z12:156/3/2-12=14.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_gruppennachlass",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": null,
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_miterben",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": null,
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_berechtigter_id",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": null,
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_gruppenquote_am_gesamtnachlass",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": null,
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_zugleich_anrechenbarer_zuwendungswert",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": null,
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_reiner_anrechnungswert_2315",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": null,
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_hinterlassener_erbteilwert",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": null,
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_ausgleichungsmodell",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": null,
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_FEHLT_methodennachweis",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_UNGUELTIG0",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "0",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_UNGUELTIG1",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "2",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_UNGUELTIG2",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "D",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_UNGUELTIG3",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "151",
+      "reiner_anrechnungswert_2315": "0",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_GEMISCHTER_AUSGLEICH_MIT_ANRECHNUNG_UNGUELTIG4",
+    "funktion": "pflichtteil_gemischter_ausgleich_mit_anrechnung",
+    "eingaben": {
+      "gruppennachlass": "100",
+      "miterben": [
+        {
+          "person_id": "A",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "150",
+          "leistungs_ausgleichsbetrag": "50"
+        },
+        {
+          "person_id": "B",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        },
+        {
+          "person_id": "C",
+          "relative_erbquote": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "ausgleichungswert_zuwendungen": "0",
+          "leistungs_ausgleichsbetrag": "0"
+        }
+      ],
+      "berechtigter_id": "A",
+      "gruppenquote_am_gesamtnachlass": "1",
+      "zugleich_anrechenbarer_zuwendungswert": "0",
+      "reiner_anrechnungswert_2315": "-1",
+      "hinterlassener_erbteilwert": "0",
+      "ausgleichungsmodell": "leistungsvorwegabzug_mit_fortgeltung",
+      "methodennachweis": "Bedingte2316/2315-Komposition: reine eigene2315-Zuwendung mit gesetzlicher Gruppenquote zur Gruppenmasse hinzufügen; vorhandenen ausdrücklich ausgewählten2055/2056/2057a-Kern auf hypothetische Masse anwenden. Eigenen hypothetischen gesetzlichen Anteil halbieren; zugleich ausgleichungspflichtige2315-Zuwendung nach2316IVnur halb, zusätzliche reine2315-Zuwendung vollständig abziehen; positiver Rest und2316II-Mehrbetrag. Gruppenquote verhindert volle Hinzurechnung zur Teilgruppe bei weiteren gesetzlichen Erben. Kein doppelt erfasstes Geschenk, keine automatische Bewertung/Kaufkraftbereinigung. Kombination und Reihenfolge sind rechtliche Modellvoraussetzungen, insbesondere zugleich leistende Überempfänger bleiben keine automatisch gelöste Auslegungsfrage. Unterschiedliche Wertansätze derselben Doppelzuwendung und2325/2327-Ergänzung separat. Rechtlicher Gruppenausschluss durch Erbverzicht und Ausstattungsschutz2316IIIvorqualifiziert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

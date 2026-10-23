@@ -1,0 +1,544 @@
+[
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_GEKAPPT",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "4500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "16500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_kappung": {
+          "zaehler": "1650",
+          "nenner": "1"
+        },
+        "monatsbetrag_vor_kappung": {
+          "zaehler": "275",
+          "nenner": "2"
+        },
+        "gekappter_monatsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_UNGEKAPPT",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "200",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "4500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "16500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_kappung": {
+          "zaehler": "1650",
+          "nenner": "1"
+        },
+        "monatsbetrag_vor_kappung": {
+          "zaehler": "275",
+          "nenner": "2"
+        },
+        "gekappter_monatsbetrag": {
+          "zaehler": "275",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_GRENZGLEICH",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "137.5",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "4500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "16500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_kappung": {
+          "zaehler": "1650",
+          "nenner": "1"
+        },
+        "monatsbetrag_vor_kappung": {
+          "zaehler": "275",
+          "nenner": "2"
+        },
+        "gekappter_monatsbetrag": {
+          "zaehler": "275",
+          "nenner": "2"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_KEIN_SPIELRAUM",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "0",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "4500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "16500",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_kappung": {
+          "zaehler": "1650",
+          "nenner": "1"
+        },
+        "monatsbetrag_vor_kappung": {
+          "zaehler": "275",
+          "nenner": "2"
+        },
+        "gekappter_monatsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_VOLLE_AUSNAHME",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "30000",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "21000",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_kappung": {
+          "zaehler": "2100",
+          "nenner": "1"
+        },
+        "monatsbetrag_vor_kappung": {
+          "zaehler": "175",
+          "nenner": "1"
+        },
+        "gekappter_monatsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_HALBE_AUSNAHME",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "15000",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "2250",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "18750",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_kappung": {
+          "zaehler": "1875",
+          "nenner": "1"
+        },
+        "monatsbetrag_vor_kappung": {
+          "zaehler": "625",
+          "nenner": "4"
+        },
+        "gekappter_monatsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_VOLLE_FOERDERUNG",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "30000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "4500",
+          "nenner": "1"
+        },
+        "kostenbasis": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "jahresbetrag_vor_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "monatsbetrag_vor_kappung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "gekappter_monatsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_BRUCH",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "1",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "0.1",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erhaltungspauschale": {
+          "zaehler": "3",
+          "nenner": "20"
+        },
+        "kostenbasis": {
+          "zaehler": "3",
+          "nenner": "4"
+        },
+        "jahresbetrag_vor_kappung": {
+          "zaehler": "3",
+          "nenner": "40"
+        },
+        "monatsbetrag_vor_kappung": {
+          "zaehler": "1",
+          "nenner": "160"
+        },
+        "gekappter_monatsbetrag": {
+          "zaehler": "1",
+          "nenner": "160"
+        }
+      }
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_AUSNAHME_ZU_GROSS",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "30001",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_DRITTMITTEL_ZU_GROSS",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "30001",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_KEINE_FOERDERUNG",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "0",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_TYP",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": [],
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_LEER",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_FEHLT_kosten_wohnung",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": null,
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_NEGATIV_kosten_wohnung",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "-1",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_FEHLT_von_erhaltungspauschale_ausgenommene_kosten",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": null,
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_NEGATIV_von_erhaltungspauschale_ausgenommene_kosten",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "-1",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_FEHLT_abzuziehende_drittmittel",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": null,
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_NEGATIV_abzuziehende_drittmittel",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "-1",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_FEHLT_monatliche_restkappungsgrenze",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": null,
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_NEGATIV_monatliche_restkappungsgrenze",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "-1",
+      "einordnungsnachweis": "Förderfähige Maßnahme; Kapitalzuschuss und qualifizierte Restkappung; keine laufende Förderung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "HEIZUNGSMODERNISIERUNG_GEFOERDERTER_BETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "heizungsmodernisierung_gefoerderter_betrag",
+    "eingaben": {
+      "kosten_wohnung": "30000",
+      "von_erhaltungspauschale_ausgenommene_kosten": "0",
+      "abzuziehende_drittmittel": "9000",
+      "monatliche_restkappungsgrenze": "40",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung: 30000 minus 4500 Erhaltungspauschale minus 9000 Zuschuss =16500; zehn Prozent =1650 jährlich, 137,50 monatlich, begrenzt auf40. Ausnahmefälle entsprechend separat gerechnet.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

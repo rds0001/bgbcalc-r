@@ -1,0 +1,8 @@
+mieterbe_vorauszahlungsersparnis <- function(vorausgezahlte_abschnittsmiete=NULL, nach_tod_zugeordneter_anteil_zaehler=NULL, nach_tod_zugeordneter_anteil_nenner=NULL, einordnungsnachweis=NULL) {
+ .text(einordnungsnachweis,'einordnungsnachweis')
+ wert <- .bruchteile(.teilbetrag(vorausgezahlte_abschnittsmiete,nach_tod_zugeordneter_anteil_zaehler,nach_tod_zugeordneter_anteil_nenner))
+ eingaben <- list(vorausgezahlte_abschnittsmiete=vorausgezahlte_abschnittsmiete, nach_tod_zugeordneter_anteil_zaehler=nach_tod_zugeordneter_anteil_zaehler, nach_tod_zugeordneter_anteil_nenner=nach_tod_zugeordneter_anteil_nenner, einordnungsnachweis=einordnungsnachweis)
+ ergebnis <- .ergebnis(wert,"EUR","BGB_MIETERBE_VORAUSZAHLUNGSERSPARNIS",eingaben,list(list(operation="Qualifizierte Vorauszahlung mit dem vollst\u00e4ndig ersparten/erlangten Mietanteil nach dem Tod multiplizieren.")),eingaben)
+ ergebnis$hinweise <- list("\u00a7563bII: rechnerischer Erstattungsbetrag gegen\u00fcber dem Erben f\u00fcr den qualifizierten Fall, dass die vorausbezahlte Miete im angegebenen Anteil den nach dem Tod liegenden Zeitraum betrifft und den eingetretenen/fortsetzenden Personen vollst\u00e4ndig zugutekommt. Der Tod beendet das Mietverh\u00e4ltnis hier nicht. Keine automatische Anwendung der547-R\u00fcckforderung gegen den Vermieter. Zeitanteil, tats\u00e4chliche Ersparnis/Erlangtes und Zahlungszuordnung vorqualifizieren; bei abweichendem Vorteil ist diese Anteilsrechnung nicht ausreichend. Unterschiedlich bepreiste Abschnitte getrennt berechnen, keine pauschalen30Monatstage. Keine automatische Aufteilung unter mehreren Erben oder mehreren Eingetretenen; keine Addition von Ersparnis und Erlangtem f\u00fcr denselben Vorteil.")
+ ergebnis
+}

@@ -1,0 +1,247 @@
+[
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_BASIS",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "0.25",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "150",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_GEDECKT",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "1000",
+      "gewinn_verlust_anteil": "0.25",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_UEBERDECKT",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "1100",
+      "gewinn_verlust_anteil": "0.25",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_NULLQUOTE",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "0",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "0",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_VOLLE_QUOTE",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "1",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "600",
+        "nenner": "1"
+      }
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_BRUCH",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": {
+        "zaehler": "1",
+        "nenner": "7"
+      },
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zaehler": "600",
+        "nenner": "7"
+      }
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_QUOTE_ZU_GROSS",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "1.1",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_NEGATIV",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "-0.1",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_TYP",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": [],
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "0.25",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_LEER",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "0.25",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_FEHLT_gesellschaftsverbindlichkeiten",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": null,
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "0.25",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_FEHLT_wert_gesellschaftsvermoegen",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": null,
+      "gewinn_verlust_anteil": "0.25",
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_FEHLT_gewinn_verlust_anteil",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": null,
+      "einordnungsnachweis": "Qualifiziertes Ausscheiden, gleiche Stichtagswerte und Gewinn-/Verlustquote."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  },
+  {
+    "fall_id": "GESELLSCHAFT_AUSSCHEIDENSFEHLBETRAG_FEHLT_einordnungsnachweis",
+    "funktion": "gesellschaft_ausscheidensfehlbetrag",
+    "eingaben": {
+      "gesellschaftsverbindlichkeiten": "1000",
+      "wert_gesellschaftsvermoegen": "400",
+      "gewinn_verlust_anteil": "0.25",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Handrechnung:(1000-400)*1/4=150; kein positiver Fehlbetrag bei voller Deckung.",
+    "pruefnachweis": "Native Python/R und volle Ergebnisparität."
+  }
+]

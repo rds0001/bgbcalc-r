@@ -1,0 +1,956 @@
+[
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_ZEHN_PROZENT",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "2881",
+          "nenner": "50"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "2881",
+              "nenner": "50"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "2881",
+              "nenner": "50"
+            },
+            "restkapital": {
+              "zaehler": "2619",
+              "nenner": "50"
+            }
+          },
+          {
+            "zahlungsnummer": 2,
+            "anfangssaldo": {
+              "zaehler": "2619",
+              "nenner": "50"
+            },
+            "zinsbetrag": {
+              "zaehler": "131",
+              "nenner": "25"
+            },
+            "kapitaldienst": {
+              "zaehler": "2881",
+              "nenner": "50"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "2881",
+              "nenner": "50"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "381",
+          "nenner": "25"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "2881",
+          "nenner": "25"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_NULLZINS",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "zahlungsnummer": 2,
+            "anfangssaldo": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_SCHLUSSRATE",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100.01",
+      "korrigierter_periodenzinssatz": "0",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "5001",
+          "nenner": "100"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "10001",
+              "nenner": "100"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "5001",
+              "nenner": "100"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "5001",
+              "nenner": "100"
+            },
+            "restkapital": {
+              "zaehler": "50",
+              "nenner": "1"
+            }
+          },
+          {
+            "zahlungsnummer": 2,
+            "anfangssaldo": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "50",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "10001",
+          "nenner": "100"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_NEGATIVER_ZINS",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "-0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "4263",
+          "nenner": "100"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "-10",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "4263",
+              "nenner": "100"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "4263",
+              "nenner": "100"
+            },
+            "restkapital": {
+              "zaehler": "4737",
+              "nenner": "100"
+            }
+          },
+          {
+            "zahlungsnummer": 2,
+            "anfangssaldo": {
+              "zaehler": "4737",
+              "nenner": "100"
+            },
+            "zinsbetrag": {
+              "zaehler": "-237",
+              "nenner": "50"
+            },
+            "kapitaldienst": {
+              "zaehler": "4263",
+              "nenner": "100"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "4263",
+              "nenner": "100"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "-737",
+          "nenner": "50"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "4263",
+          "nenner": "50"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_ZUSATZKOSTEN",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "2",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "2881",
+          "nenner": "50"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "2881",
+              "nenner": "50"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "2",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "2981",
+              "nenner": "50"
+            },
+            "restkapital": {
+              "zaehler": "2619",
+              "nenner": "50"
+            }
+          },
+          {
+            "zahlungsnummer": 2,
+            "anfangssaldo": {
+              "zaehler": "2619",
+              "nenner": "50"
+            },
+            "zinsbetrag": {
+              "zaehler": "131",
+              "nenner": "25"
+            },
+            "kapitaldienst": {
+              "zaehler": "2881",
+              "nenner": "50"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "2",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "2981",
+              "nenner": "50"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "381",
+          "nenner": "25"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "2981",
+          "nenner": "25"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_NULLKAPITAL",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "0",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "zahlungsnummer": 2,
+            "anfangssaldo": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_EINE_RATE",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 1,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "110",
+          "nenner": "1"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "100",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "10",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "110",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "110",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "10",
+          "nenner": "1"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "110",
+          "nenner": "1"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_GERADE_RUNDUNG",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1",
+      "korrigierter_periodenzinssatz": "0.005",
+      "anzahl_teilzahlungen": 1,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "gerade",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "1",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "kapitaldienst": {
+              "zaehler": "1",
+              "nenner": "1"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "1",
+              "nenner": "1"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_KAUFMAENNISCHE_RUNDUNG",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1",
+      "korrigierter_periodenzinssatz": "0.005",
+      "anzahl_teilzahlungen": 1,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "regelmaessiger_kapitaldienst": {
+          "zaehler": "101",
+          "nenner": "100"
+        },
+        "teilzahlungen": [
+          {
+            "zahlungsnummer": 1,
+            "anfangssaldo": {
+              "zaehler": "1",
+              "nenner": "1"
+            },
+            "zinsbetrag": {
+              "zaehler": "1",
+              "nenner": "100"
+            },
+            "kapitaldienst": {
+              "zaehler": "101",
+              "nenner": "100"
+            },
+            "geschuldete_kosten": {
+              "zaehler": "0",
+              "nenner": "1"
+            },
+            "neue_teilzahlung": {
+              "zaehler": "101",
+              "nenner": "100"
+            },
+            "restkapital": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "zinsgesamtbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        },
+        "neuer_gesamtbetrag": {
+          "zaehler": "101",
+          "nenner": "100"
+        },
+        "restkapital": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "100bei10%:57.62führt über52.38Rest/5.24Zins zu0;57.61würde0.02Rest lassen. Bei-10%:42.63führt über47.37Rest/-4.74Zins zu0. Nullzins100.01:50.01und50.00. 0.005Zins wird gerade0.00/kaufmännisch0.01.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_FEHLT_anfangskapital",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": null,
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_FEHLT_korrigierter_periodenzinssatz",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": null,
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_FEHLT_anzahl_teilzahlungen",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": null,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_FEHLT_geschuldete_kosten_je_teilzahlung",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": null,
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_FEHLT_rundungsmodus",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": null,
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_FEHLT_plannachweis",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_UNGUELTIG0",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "1.001",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_UNGUELTIG1",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "-1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_UNGUELTIG2",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 0,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_UNGUELTIG3",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": true,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_UNGUELTIG4",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0.001",
+      "rundungsmodus": "kaufmaennisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VERBRAUCHERDARLEHEN_CENTANNUITAET_NEUBERECHNEN_UNGUELTIG5",
+    "funktion": "verbraucherdarlehen_centannuitaet_neuberechnen",
+    "eingaben": {
+      "anfangskapital": "100",
+      "korrigierter_periodenzinssatz": "0.1",
+      "anzahl_teilzahlungen": 2,
+      "geschuldete_kosten_je_teilzahlung": "0",
+      "rundungsmodus": "automatisch",
+      "plannachweis": "Bedingter vertraglicher Annuitätenplan für494V, kein gesetzlich vorgeschriebenes Universalmodell. Bestehenden exakten Rundungskern verwenden. Durch monotone ganzzahlige Intervallsuche kleinste centgenaue Kapitaldienstrate bestimmen, die das Kapital bis zum letzten Termin tilgt. Jede Periode Zins=Anfangssaldo*Periodenquote aufCent runden; Zahlung=min(Regelrate,Saldo+Zins), danach Saldo fortschreiben. Letzte Zahlung kann kleiner sein; bei frühzeitiger Tilgung weitere Kapitaldienstraten0. Explizite gleichbleibende Zusatzkosten separat addieren. Keine Potenz riesiger Brüche, keine Näherungstoleranz, keine Kapitalisierung von Kosten oder Änderung der vorgegebenen Laufzeit. Negative korrigierte Zinsen sind mathematische Rechenwerte, keine automatische rechtliche Pflicht des Darlehensgebers. Nicht erfasst: vorschüssige Zahlung, variable Perioden oder abweichende Rundungs-/Gebührenstruktur; diese Vertragsmodelle nicht stillschweigend ersetzen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

@@ -1,0 +1,653 @@
+[
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_0",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": 0,
+      "einordnungsnachweis": "Nur numerische Mindestzahl651aII/651bI; rechtlich verschiedene Arten nach651aIII für dieselbe Reise vorqualifizieren. Mehrere Hotels sind nicht automatisch mehrere Arten. Wesensmäßige Bestandteile anderer Leistungen nicht doppelt zählen. Weitere Voraussetzungen, touristische Nebenleistungsgrenzen und Ausnahmen separat; Ergebnis ist keine abschließende Pauschalreiseentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "mindestzahl": 2,
+        "fehlende_arten": 2,
+        "mindestzahl_erreicht": false
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_1",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": 1,
+      "einordnungsnachweis": "Nur numerische Mindestzahl651aII/651bI; rechtlich verschiedene Arten nach651aIII für dieselbe Reise vorqualifizieren. Mehrere Hotels sind nicht automatisch mehrere Arten. Wesensmäßige Bestandteile anderer Leistungen nicht doppelt zählen. Weitere Voraussetzungen, touristische Nebenleistungsgrenzen und Ausnahmen separat; Ergebnis ist keine abschließende Pauschalreiseentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "mindestzahl": 2,
+        "fehlende_arten": 1,
+        "mindestzahl_erreicht": false
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_2",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": 2,
+      "einordnungsnachweis": "Nur numerische Mindestzahl651aII/651bI; rechtlich verschiedene Arten nach651aIII für dieselbe Reise vorqualifizieren. Mehrere Hotels sind nicht automatisch mehrere Arten. Wesensmäßige Bestandteile anderer Leistungen nicht doppelt zählen. Weitere Voraussetzungen, touristische Nebenleistungsgrenzen und Ausnahmen separat; Ergebnis ist keine abschließende Pauschalreiseentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "mindestzahl": 2,
+        "fehlende_arten": 0,
+        "mindestzahl_erreicht": true
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_3",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": 3,
+      "einordnungsnachweis": "Nur numerische Mindestzahl651aII/651bI; rechtlich verschiedene Arten nach651aIII für dieselbe Reise vorqualifizieren. Mehrere Hotels sind nicht automatisch mehrere Arten. Wesensmäßige Bestandteile anderer Leistungen nicht doppelt zählen. Weitere Voraussetzungen, touristische Nebenleistungsgrenzen und Ausnahmen separat; Ergebnis ist keine abschließende Pauschalreiseentscheidung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "mindestzahl": 2,
+        "fehlende_arten": 0,
+        "mindestzahl_erreicht": true
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_FEHLT_anzahl_verschiedener_reiseleistungsarten",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": null,
+      "einordnungsnachweis": "Nur numerische Mindestzahl651aII/651bI; rechtlich verschiedene Arten nach651aIII für dieselbe Reise vorqualifizieren. Mehrere Hotels sind nicht automatisch mehrere Arten. Wesensmäßige Bestandteile anderer Leistungen nicht doppelt zählen. Weitere Voraussetzungen, touristische Nebenleistungsgrenzen und Ausnahmen separat; Ergebnis ist keine abschließende Pauschalreiseentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_TYP_anzahl_verschiedener_reiseleistungsarten",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": [],
+      "einordnungsnachweis": "Nur numerische Mindestzahl651aII/651bI; rechtlich verschiedene Arten nach651aIII für dieselbe Reise vorqualifizieren. Mehrere Hotels sind nicht automatisch mehrere Arten. Wesensmäßige Bestandteile anderer Leistungen nicht doppelt zählen. Weitere Voraussetzungen, touristische Nebenleistungsgrenzen und Ausnahmen separat; Ergebnis ist keine abschließende Pauschalreiseentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_FEHLT_einordnungsnachweis",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": 0,
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_TYP_einordnungsnachweis",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": 0,
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_NEGATIV_anzahl_verschiedener_reiseleistungsarten",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": -1,
+      "einordnungsnachweis": "Nur numerische Mindestzahl651aII/651bI; rechtlich verschiedene Arten nach651aIII für dieselbe Reise vorqualifizieren. Mehrere Hotels sind nicht automatisch mehrere Arten. Wesensmäßige Bestandteile anderer Leistungen nicht doppelt zählen. Weitere Voraussetzungen, touristische Nebenleistungsgrenzen und Ausnahmen separat; Ergebnis ist keine abschließende Pauschalreiseentscheidung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "REISELEISTUNGSARTEN_MINDESTZAHL_LEER",
+    "funktion": "reiseleistungsarten_mindestzahl",
+    "eingaben": {
+      "anzahl_verschiedener_reiseleistungsarten": 0,
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_0",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "24.99",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertanteil": {
+          "zaehler": "2499",
+          "nenner": "10000"
+        },
+        "wertanteil_prozent": {
+          "zaehler": "2499",
+          "nenner": "100"
+        },
+        "unter_25_prozent": true
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_1",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "25",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertanteil": {
+          "zaehler": "1",
+          "nenner": "4"
+        },
+        "wertanteil_prozent": {
+          "zaehler": "25",
+          "nenner": "1"
+        },
+        "unter_25_prozent": false
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_2",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "25.01",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertanteil": {
+          "zaehler": "2501",
+          "nenner": "10000"
+        },
+        "wertanteil_prozent": {
+          "zaehler": "2501",
+          "nenner": "100"
+        },
+        "unter_25_prozent": false
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_3",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "0",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertanteil": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "wertanteil_prozent": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "unter_25_prozent": true
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_4",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "100",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertanteil": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "wertanteil_prozent": {
+          "zaehler": "100",
+          "nenner": "1"
+        },
+        "unter_25_prozent": false
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_5",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "1",
+      "gesamtwert_zusammenstellung": "3",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "wertanteil": {
+          "zaehler": "1",
+          "nenner": "3"
+        },
+        "wertanteil_prozent": {
+          "zaehler": "100",
+          "nenner": "3"
+        },
+        "unter_25_prozent": false
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_FEHLT_touristischer_teilwert",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": null,
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_TYP_touristischer_teilwert",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": [],
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_FEHLT_gesamtwert_zusammenstellung",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "24.99",
+      "gesamtwert_zusammenstellung": null,
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_TYP_gesamtwert_zusammenstellung",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "24.99",
+      "gesamtwert_zusammenstellung": [],
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_FEHLT_einordnungsnachweis",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "24.99",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_TYP_einordnungsnachweis",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "24.99",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_NEGATIV_touristischer_teilwert",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "-1",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_NEGATIV_gesamtwert_zusammenstellung",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "24.99",
+      "gesamtwert_zusammenstellung": "-1",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_LEER",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "24.99",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_GESAMTWERT_NULL",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "24.99",
+      "gesamtwert_zusammenstellung": "0",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TOURISTISCHE_LEISTUNG_WERTANTEIL_TEILWERT_ZU_HOCH",
+    "funktion": "touristische_leistung_wertanteil",
+    "eingaben": {
+      "touristischer_teilwert": "101",
+      "gesamtwert_zusammenstellung": "100",
+      "einordnungsnachweis": "§651aIV: nur rechnerischer touristischer Wertanteil in einer qualifizierten Zusammenstellung aus einer Art651aIII1bis3 und zusätzlichen touristischen Leistungen. Genau25Prozent ist nicht weniger als25Prozent. Teil-/Gesamtwerte derselben Bewertungsbasis, Gesamtwert strikt positiv, Teilwert höchstens Gesamtwert. Wesentliches Merkmal/Bewerbung sowie spätere Auswahl bleiben gesondert; ein kleiner Anteil allein schließt Pauschalreiserecht nicht aus. Keine automatische Bewertung aus unbekannten Einzelpreisen."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_0",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": "0",
+      "einordnungsnachweis": "Nur Preisgrenze651aV2, nicht gesamte Tagesreiseausnahme. Reisedauer strikt unter24Stunden und keine Übernachtung zusätzlich qualifizieren. Im besonderen651cIII-Fall ist die Tagesreiseausnahme unabhängig vom Preis anzuwenden; dort keinen500EUR-Filter erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "preisgrenze_euro": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "preisgrenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_1",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": "499.99",
+      "einordnungsnachweis": "Nur Preisgrenze651aV2, nicht gesamte Tagesreiseausnahme. Reisedauer strikt unter24Stunden und keine Übernachtung zusätzlich qualifizieren. Im besonderen651cIII-Fall ist die Tagesreiseausnahme unabhängig vom Preis anzuwenden; dort keinen500EUR-Filter erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "preisgrenze_euro": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "preisgrenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_2",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": "500",
+      "einordnungsnachweis": "Nur Preisgrenze651aV2, nicht gesamte Tagesreiseausnahme. Reisedauer strikt unter24Stunden und keine Übernachtung zusätzlich qualifizieren. Im besonderen651cIII-Fall ist die Tagesreiseausnahme unabhängig vom Preis anzuwenden; dort keinen500EUR-Filter erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "preisgrenze_euro": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "preisgrenze_eingehalten": true,
+        "ueberschreitungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_3",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": "500.01",
+      "einordnungsnachweis": "Nur Preisgrenze651aV2, nicht gesamte Tagesreiseausnahme. Reisedauer strikt unter24Stunden und keine Übernachtung zusätzlich qualifizieren. Im besonderen651cIII-Fall ist die Tagesreiseausnahme unabhängig vom Preis anzuwenden; dort keinen500EUR-Filter erfinden."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "preisgrenze_euro": {
+          "zaehler": "500",
+          "nenner": "1"
+        },
+        "preisgrenze_eingehalten": false,
+        "ueberschreitungsbetrag": {
+          "zaehler": "1",
+          "nenner": "100"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_FEHLT_reisepreis",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": null,
+      "einordnungsnachweis": "Nur Preisgrenze651aV2, nicht gesamte Tagesreiseausnahme. Reisedauer strikt unter24Stunden und keine Übernachtung zusätzlich qualifizieren. Im besonderen651cIII-Fall ist die Tagesreiseausnahme unabhängig vom Preis anzuwenden; dort keinen500EUR-Filter erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_TYP_reisepreis",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": [],
+      "einordnungsnachweis": "Nur Preisgrenze651aV2, nicht gesamte Tagesreiseausnahme. Reisedauer strikt unter24Stunden und keine Übernachtung zusätzlich qualifizieren. Im besonderen651cIII-Fall ist die Tagesreiseausnahme unabhängig vom Preis anzuwenden; dort keinen500EUR-Filter erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_FEHLT_einordnungsnachweis",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": "0",
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_TYP_einordnungsnachweis",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": "0",
+      "einordnungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_NEGATIV_reisepreis",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": "-1",
+      "einordnungsnachweis": "Nur Preisgrenze651aV2, nicht gesamte Tagesreiseausnahme. Reisedauer strikt unter24Stunden und keine Übernachtung zusätzlich qualifizieren. Im besonderen651cIII-Fall ist die Tagesreiseausnahme unabhängig vom Preis anzuwenden; dort keinen500EUR-Filter erfinden."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "TAGESREISE_REISEPREISGRENZE_LEER",
+    "funktion": "tagesreise_reisepreisgrenze",
+    "eingaben": {
+      "reisepreis": "0",
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Reisegrenzen: mindestens2Arten, strikt weniger25Prozent, höchstens500EUR; exakte Quotienten und Differenzen.",
+    "pruefnachweis": "Native Python/R vollständige Ergebnisparität."
+  }
+]

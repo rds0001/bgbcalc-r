@@ -1,0 +1,518 @@
+[
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_0",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "hauptschuld",
+          "betrag": "1000",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "verzug",
+          "betrag": "50",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "kuendigung",
+          "betrag": "10",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "rechtsverfolgung",
+          "betrag": "40",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "vertragserweiterung",
+          "betrag": "200",
+          "spaetere_rechtsgeschaeftliche_erweiterung": true
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "schuldumfang_nach_767": {
+          "zaehler": "1100",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erweiterungen": {
+          "zaehler": "200",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_1",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "hauptschuld",
+          "betrag": "1000",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "nur_mehrbetrag",
+          "betrag": "250",
+          "spaetere_rechtsgeschaeftliche_erweiterung": true
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "schuldumfang_nach_767": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erweiterungen": {
+          "zaehler": "250",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_2",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "hauptschuld",
+          "betrag": "1000",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "schuldumfang_nach_767": {
+          "zaehler": "1000",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erweiterungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_3",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "erweiterung",
+          "betrag": "1000",
+          "spaetere_rechtsgeschaeftliche_erweiterung": true
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "schuldumfang_nach_767": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erweiterungen": {
+          "zaehler": "1000",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_4",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "null",
+          "betrag": "0",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "schuldumfang_nach_767": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erweiterungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_5",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": "0.1",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "b",
+          "betrag": "0.2",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "c",
+          "betrag": "0.3",
+          "spaetere_rechtsgeschaeftliche_erweiterung": true
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "schuldumfang_nach_767": {
+          "zaehler": "3",
+          "nenner": "10"
+        },
+        "ausgeschlossene_erweiterungen": {
+          "zaehler": "3",
+          "nenner": "10"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_6",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": {
+            "zaehler": "1",
+            "nenner": "3"
+          },
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "b",
+          "betrag": {
+            "zaehler": "2",
+            "nenner": "3"
+          },
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "schuldumfang_nach_767": {
+          "zaehler": "1",
+          "nenner": "1"
+        },
+        "ausgeschlossene_erweiterungen": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_FEHLT_schuldpositionen",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": null,
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_TYP_schuldpositionen",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": {},
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_FEHLT_einordnungsnachweis",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "hauptschuld",
+          "betrag": "1000",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_TYP_einordnungsnachweis",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "hauptschuld",
+          "betrag": "1000",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_UNGUELTIG_0",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_UNGUELTIG_1",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": "1",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        },
+        {
+          "positions_id": "a",
+          "betrag": "2",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_UNGUELTIG_2",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": "-1",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_UNGUELTIG_3",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": "1",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false,
+          "extra": 1
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_UNGUELTIG_4",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": "1"
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_UNGUELTIG_5",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": "1",
+          "spaetere_rechtsgeschaeftliche_erweiterung": 1
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_UNGUELTIG_6",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": " ",
+          "betrag": "1",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_UNGUELTIG_7",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": "1",
+          "spaetere_rechtsgeschaeftliche_erweiterung": "false"
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_FLAG_FEHLT",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "a",
+          "betrag": "1",
+          "spaetere_rechtsgeschaeftliche_erweiterung": null
+        }
+      ],
+      "einordnungsnachweis": "Hauptschuld, zurechenbare Verzugsfolgen und erstattungsfähige Kosten qualifiziert; spätere rechtsgeschäftliche Erweiterungen einzeln abgegrenzt."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "BUERGSCHAFT_SCHULDKOMPONENTEN_NACHWEIS_LEER",
+    "funktion": "buergschaft_schuldkomponenten",
+    "eingaben": {
+      "schuldpositionen": [
+        {
+          "positions_id": "hauptschuld",
+          "betrag": "1000",
+          "spaetere_rechtsgeschaeftliche_erweiterung": false
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Addition der qualifizierten Hauptschuld, Verzugs- und Kostenpositionen; spätere rechtsgeschäftliche Erweiterungsbeträge nur in Ausschlusssumme.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

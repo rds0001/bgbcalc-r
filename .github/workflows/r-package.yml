@@ -1,0 +1,42 @@
+name: R package
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-latest, r: 'release'}
+          - {os: ubuntu-latest, r: 'devel'}
+          - {os: windows-latest, r: 'release'}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_KEEP_PKG_SOURCE: yes
+      OMP_NUM_THREADS: 1
+      OPENBLAS_NUM_THREADS: 1
+      _R_CHECK_ELAPSED_TIMEOUT_: 180
+      _R_CHECK_EXAMPLE_TIMING_THRESHOLD_: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ matrix.r }}
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-tinytex@v2
+      - run: tlmgr install courier makeindex
+      - if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y tidy
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::rcmdcheck
+          needs: check
+      - uses: r-lib/actions/check-r-package@v2
+        with:
+          args: 'c("--as-cran", "--timings")'
+          build_args: 'character()'
+          error-on: '"warning"'
+          upload-results: true

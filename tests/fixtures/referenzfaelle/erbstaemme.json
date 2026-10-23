@@ -1,0 +1,1084 @@
+[
+  {
+    "fall_id": "ERBST_001",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "A",
+            "stammpfad": [
+              "A"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "stammpfad": [
+              "B"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Zwei eintretende Kinder erhalten gleiche Hälften.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_002",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": [
+            {
+              "person_id": "A1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "A",
+            "stammpfad": [
+              "A"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "stammpfad": [
+              "B"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Eintretender Vorfahr schließt die durch ihn verwandten Nachkommen aus.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_003",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "B1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            },
+            {
+              "person_id": "B2",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "A",
+            "stammpfad": [
+              "A"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B1",
+            "stammpfad": [
+              "B",
+              "B1"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B2",
+            "stammpfad": [
+              "B",
+              "B2"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B1",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B2",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Hälfte des vertretenen Kinderstamms wird auf dessen zwei Kinder verteilt.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_004",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "B1",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            },
+            {
+              "person_id": "B2",
+              "tritt_ein": false,
+              "abkoemmlinge": [
+                {
+                  "person_id": "B21",
+                  "tritt_ein": true,
+                  "abkoemmlinge": []
+                },
+                {
+                  "person_id": "B22",
+                  "tritt_ein": true,
+                  "abkoemmlinge": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "A",
+            "stammpfad": [
+              "A"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B1",
+            "stammpfad": [
+              "B",
+              "B1"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B21",
+            "stammpfad": [
+              "B",
+              "B2",
+              "B21"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          },
+          {
+            "person_id": "B22",
+            "stammpfad": [
+              "B",
+              "B2",
+              "B22"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "B1",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "4"
+            }
+          },
+          {
+            "person_id": "B21",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          },
+          {
+            "person_id": "B22",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "8"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Rekursive Vertretung innerhalb des Stamms, keine gleiche Verteilung auf alle Endpersonen.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_005",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": false,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "C",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "A",
+            "stammpfad": [
+              "A"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "C",
+            "stammpfad": [
+              "C"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "C",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Stamm ohne eintretende Person und ohne Nachkommen entfällt vollständig.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_006",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "A1",
+              "tritt_ein": false,
+              "abkoemmlinge": []
+            }
+          ]
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "B",
+            "stammpfad": [
+              "B"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Auch mehrstufig leerer Stamm fällt weg.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_007",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 3,
+      "verwandtenanteil_nenner": 4
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "A",
+            "stammpfad": [
+              "A"
+            ],
+            "quote": {
+              "zaehler": "3",
+              "nenner": "8"
+            }
+          },
+          {
+            "person_id": "B",
+            "stammpfad": [
+              "B"
+            ],
+            "quote": {
+              "zaehler": "3",
+              "nenner": "8"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "3",
+              "nenner": "8"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "3",
+              "nenner": "8"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Expliziter Verwandtenanteil 3/4 wird auf zwei Stämme verteilt; Ehegattenanteil nicht nochmals berechnen.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_008",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "X",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "X",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "X",
+            "stammpfad": [
+              "A",
+              "X"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          },
+          {
+            "person_id": "X",
+            "stammpfad": [
+              "B",
+              "X"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "2"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "X",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "§ 1927: Person X in zwei Stämmen erhält beide besonderen Erbteile; Gesamtquote ist Summe.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_009",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "C",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "A",
+            "stammpfad": [
+              "A"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "B",
+            "stammpfad": [
+              "B"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "C",
+            "stammpfad": [
+              "C"
+            ],
+            "quote": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          },
+          {
+            "person_id": "C",
+            "quote": {
+              "zaehler": "1",
+              "nenner": "3"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Drei gleiche Stämme ergeben exakte Drittel.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_010",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 0,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erbteile": [
+          {
+            "person_id": "A",
+            "stammpfad": [
+              "A"
+            ],
+            "quote": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "stammpfad": [
+              "B"
+            ],
+            "quote": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ],
+        "erbquoten": [
+          {
+            "person_id": "A",
+            "quote": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          },
+          {
+            "person_id": "B",
+            "quote": {
+              "zaehler": "0",
+              "nenner": "1"
+            }
+          }
+        ]
+      }
+    },
+    "herleitung": "Expliziter Nullanteil erzeugt Nullquoten; keine automatische Prüfung des vorgegebenen Anteils.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_011",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine eintretenden Abkömmlinge in erster Ordnung; andere Ordnungen gesondert.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_012",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": false,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Keine eintretenden Abkömmlinge in erster Ordnung; andere Ordnungen gesondert.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_013",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_014",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "A",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_015",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "X",
+              "tritt_ein": true,
+              "abkoemmlinge": []
+            }
+          ]
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": false,
+          "abkoemmlinge": [
+            {
+              "person_id": "X",
+              "tritt_ein": false,
+              "abkoemmlinge": []
+            }
+          ]
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_016",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": 1,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_017",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": "A",
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_018",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_019",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 2,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_020",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 0
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_021",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        },
+        {
+          "person_id": "B",
+          "tritt_ein": true,
+          "abkoemmlinge": []
+        }
+      ],
+      "verwandtenanteil_zaehler": true,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Doppelte Geschwister, Selbstabstammung, widersprüchliche Personenstellung oder strukturell/typmäßig ungültige Eingaben.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "ERBST_022",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": null,
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Stammdaten fehlen.",
+    "pruefnachweis": "Stammquoten und Mehrfachzugehörigkeit vor Implementierung unabhängig aus §§ 1924/1927 manuell aufgeteilt. Synthetische Personenkennungen."
+  },
+  {
+    "fall_id": "TECH_ERBSTAEMME_001",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": [
+        {
+          "person_id": "A",
+          "tritt_ein": true,
+          "abkoemmlinge": 0
+        }
+      ],
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Falscher leer wirkender Nachkommentyp darf die Listenprüfung nicht umgehen.",
+    "pruefnachweis": "Nach Codeabdeckungsmessung ergänzter Grenzfall aus dem dokumentierten technischen Eingabevertrag; keine zusätzliche materielle Rechenregel."
+  },
+  {
+    "fall_id": "STRUKTUR_001",
+    "funktion": "abkoemmlings_erbquoten",
+    "eingaben": {
+      "kinderstaemme": {},
+      "verwandtenanteil_zaehler": 1,
+      "verwandtenanteil_nenner": 1
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Ein Objekt mit benannten Feldern ersetzt keine erwartete geordnete Liste, auch nicht bei leerem Objekt.",
+    "pruefnachweis": "Regression nach systematischem Typvergleich; Erwartung aus dem expliziten Eingabestrukturvertrag."
+  }
+]

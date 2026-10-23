@@ -1,0 +1,877 @@
+[
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_GRUND",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2000-01-01",
+        "rechnerisches_fristende": "2009-12-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_NACHFOLGE",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2004-12-31"
+        },
+        {
+          "erster_tag": "2005-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2000-01-01",
+        "rechnerisches_fristende": "2009-12-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_HEMMUNG_SCHALTJAHR",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [
+        {
+          "erster_tag": "2000-02-01",
+          "letzter_tag": "2000-02-29"
+        }
+      ],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2000-01-01",
+        "rechnerisches_fristende": "2010-01-29",
+        "hemmungstage_im_massgeblichen_lauf": 29,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_NEUER_LAUF",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [
+        {
+          "erster_tag": "2005-01-01",
+          "letzter_tag": "2005-01-31"
+        }
+      ],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2005-02-01",
+        "rechnerisches_fristende": "2015-01-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_ALTE_HEMMUNG_VERFALLEN",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [
+        {
+          "erster_tag": "2000-02-01",
+          "letzter_tag": "2000-02-29"
+        }
+      ],
+      "unterbrechungszeitraeume": [
+        {
+          "erster_tag": "2005-01-01",
+          "letzter_tag": "2005-01-31"
+        }
+      ],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2005-02-01",
+        "rechnerisches_fristende": "2015-01-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_NEUE_HEMMUNG",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [
+        {
+          "erster_tag": "2006-02-01",
+          "letzter_tag": "2006-02-10"
+        }
+      ],
+      "unterbrechungszeitraeume": [
+        {
+          "erster_tag": "2005-01-01",
+          "letzter_tag": "2005-01-31"
+        }
+      ],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2005-02-01",
+        "rechnerisches_fristende": "2015-02-10",
+        "hemmungstage_im_massgeblichen_lauf": 10,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_ZWEI_UNTERBRECHUNGEN",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2021-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [
+        {
+          "erster_tag": "2005-01-01",
+          "letzter_tag": "2005-01-31"
+        },
+        {
+          "erster_tag": "2010-06-01",
+          "letzter_tag": "2010-06-30"
+        }
+      ],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2010-07-01",
+        "rechnerisches_fristende": "2020-06-30",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_HEMMUNG_UEBERSCHNEIDUNG",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [
+        {
+          "erster_tag": "2000-02-01",
+          "letzter_tag": "2000-02-20"
+        },
+        {
+          "erster_tag": "2000-02-10",
+          "letzter_tag": "2000-02-29"
+        }
+      ],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2000-01-01",
+        "rechnerisches_fristende": "2010-01-29",
+        "hemmungstage_im_massgeblichen_lauf": 29,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNTERBRECHUNG_NACH_GRUNDGRENZE_VOR_HEMMUNGSENDE",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2021-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [
+        {
+          "erster_tag": "2009-12-20",
+          "letzter_tag": "2010-01-10"
+        }
+      ],
+      "unterbrechungszeitraeume": [
+        {
+          "erster_tag": "2010-01-15",
+          "letzter_tag": "2010-01-16"
+        }
+      ],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2010-01-17",
+        "rechnerisches_fristende": "2020-01-16",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_OBERE_GRENZE",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "9990-01-01",
+          "letzter_tag": "9999-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "9990-01-01",
+        "rechnerisches_fristende": "9999-12-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_FRUEHES_JAHR",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "0001-01-01",
+          "letzter_tag": "0010-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "0001-01-01",
+        "rechnerisches_fristende": "0010-12-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_BUCHERSITZUNG",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "buchersitzung_900",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2000-01-01",
+        "rechnerisches_fristende": "2029-12-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": false
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_AUFGEBOT",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "grundstuecksaufgebot_927",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2000-01-01",
+        "rechnerisches_fristende": "2029-12-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": false
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_DRITTRECHT",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "drittrecht_945",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "erster_tag_des_massgeblichen_laufs": "2000-01-01",
+        "rechnerisches_fristende": "2009-12-31",
+        "hemmungstage_im_massgeblichen_lauf": 0,
+        "frist_am_letzten_belegten_tag_vollendet": true
+      }
+    },
+    "herleitung": "Vollständig mitgezählter1.Januar2000 plus10Jahre endet31.Dezember2009;29Hemmungstage bis29.Januar2010. Unterbrechungsende31.Januar2005: neuer Volljahreslauf ab1.Februar bis31.Januar2015; alte Hemmung nicht nochmals addieren.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_FEHLT_fristfall",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": null,
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_TYP_fristfall",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": {},
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_FEHLT_besitzabschnitte",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": null,
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_TYP_besitzabschnitte",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": {},
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_FEHLT_hemmungszeitraeume",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": null,
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_TYP_hemmungszeitraeume",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": {},
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_FEHLT_unterbrechungszeitraeume",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": null,
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_TYP_unterbrechungszeitraeume",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": {},
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_FEHLT_einordnungsnachweis",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_TYP_einordnungsnachweis",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNGUELTIG_0",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "sonstige",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNGUELTIG_1",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNGUELTIG_2",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2004-12-31"
+        },
+        {
+          "erster_tag": "2005-01-02",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNGUELTIG_3",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2004-12-31"
+        },
+        {
+          "erster_tag": "2004-12-31",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNGUELTIG_4",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [
+        {
+          "erster_tag": "1999-12-31",
+          "letzter_tag": "2000-01-02"
+        }
+      ],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNGUELTIG_5",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [
+        {
+          "erster_tag": "2011-01-01",
+          "letzter_tag": "2011-01-02"
+        }
+      ],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNGUELTIG_6",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [
+        {
+          "erster_tag": "2005-01-01",
+          "letzter_tag": "2005-01-31"
+        },
+        {
+          "erster_tag": "2005-01-20",
+          "letzter_tag": "2005-02-10"
+        }
+      ],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_UNGUELTIG_7",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "ERSITZUNG_ANRECHENBARE_ZEITKETTE_KEIN_BELEGTER_NEUBEGINN",
+    "funktion": "ersitzung_anrechenbare_zeitkette",
+    "eingaben": {
+      "fristfall": "bewegliche_sache_937",
+      "besitzabschnitte": [
+        {
+          "erster_tag": "2000-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "hemmungszeitraeume": [],
+      "unterbrechungszeitraeume": [
+        {
+          "erster_tag": "2005-01-01",
+          "letzter_tag": "2015-12-31"
+        }
+      ],
+      "einordnungsnachweis": "§§939bis944, bei900/927 entsprechend und945 für gesonderten drittrechtbezogenen Lauf: zehn beziehungsweise dreißig Kalenderjahre ab erstem vollständig anrechenbarem Tag, Vorgängerzeiten ohne Doppelzählung verbinden. Alle Besitzabschnitte müssen rechtlich eine lückenlose anrechenbare Kette bilden;940II-Nichtunterbrechung und Nachfolge943/944 vorqualifizieren. Wirksame Unterbrechung verwirft Vorzeit; neuer voller Lauf erst nach Ende der Unterbrechung und belegtem erneuten anrechenbarem Besitz. Unterbrechung nach bereits rechnerisch vollendetem Lauf wird als widersprüchliche Eingabe abgelehnt. Hemmungen werden vom vorhandenen209-Kern je neuem Lauf verarbeitet; vor dessen Beginn liegende Hemmung wirkt nicht nochmals.939II-Hemmung während210/211-Schutz muss als rechtlich bestimmtes Intervall vorliegen, nicht unbesehen als bloßes Maximaldatum. Nur abgeschlossene Intervalle bis zum letzten belegten Besitztag; Ergebnis danach ist rechnerische Prognose unter Fortdauer der Voraussetzungen. Keine automatische Personen-/Rechtsnachfolge, Wirkung gegenüber Dritten, Ausschließungsentscheidung oder Eigentumsfeststellung;900-Registergleichlauf,927-Zustimmungseintragungsgrenze und945-Bösglauben gesondert."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

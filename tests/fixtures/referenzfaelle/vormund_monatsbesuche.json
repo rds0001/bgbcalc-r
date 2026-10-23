@@ -1,0 +1,655 @@
+[
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_JE_MONAT",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monate": [
+          {
+            "monat": "2024-01",
+            "besuchszahl": 1,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          },
+          {
+            "monat": "2024-02",
+            "besuchszahl": 1,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          }
+        ],
+        "alle_monate_mit_mindestbesuch": true,
+        "besuche_ausserhalb_pruefmonate": 0
+      }
+    },
+    "herleitung": "Kalendermonate getrennt zählen. Zwei Januartermine ersetzen keinen Februartermin.1.Januar und29.Februar erfüllen jeweils Monatsschwelle trotz59Tagen Abstand; kürzere gebotene Intervalle sind nicht diese numerische Regelprüfung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_FEHLENDER_MONAT",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-01"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-01-31"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monate": [
+          {
+            "monat": "2024-01",
+            "besuchszahl": 2,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          },
+          {
+            "monat": "2024-02",
+            "besuchszahl": 0,
+            "regelmaessiger_mindestbesuch_erreicht": false
+          }
+        ],
+        "alle_monate_mit_mindestbesuch": false,
+        "besuche_ausserhalb_pruefmonate": 0
+      }
+    },
+    "herleitung": "Kalendermonate getrennt zählen. Zwei Januartermine ersetzen keinen Februartermin.1.Januar und29.Februar erfüllen jeweils Monatsschwelle trotz59Tagen Abstand; kürzere gebotene Intervalle sind nicht diese numerische Regelprüfung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_KEINE_BESUCHE",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monate": [
+          {
+            "monat": "2024-01",
+            "besuchszahl": 0,
+            "regelmaessiger_mindestbesuch_erreicht": false
+          },
+          {
+            "monat": "2024-02",
+            "besuchszahl": 0,
+            "regelmaessiger_mindestbesuch_erreicht": false
+          }
+        ],
+        "alle_monate_mit_mindestbesuch": false,
+        "besuche_ausserhalb_pruefmonate": 0
+      }
+    },
+    "herleitung": "Kalendermonate getrennt zählen. Zwei Januartermine ersetzen keinen Februartermin.1.Januar und29.Februar erfüllen jeweils Monatsschwelle trotz59Tagen Abstand; kürzere gebotene Intervalle sind nicht diese numerische Regelprüfung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_AUSSERHALB",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        },
+        {
+          "besuch_id": "C",
+          "besuch_am": "2023-12-31"
+        },
+        {
+          "besuch_id": "D",
+          "besuch_am": "2024-03-01"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monate": [
+          {
+            "monat": "2024-01",
+            "besuchszahl": 1,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          },
+          {
+            "monat": "2024-02",
+            "besuchszahl": 1,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          }
+        ],
+        "alle_monate_mit_mindestbesuch": true,
+        "besuche_ausserhalb_pruefmonate": 2
+      }
+    },
+    "herleitung": "Kalendermonate getrennt zählen. Zwei Januartermine ersetzen keinen Februartermin.1.Januar und29.Februar erfüllen jeweils Monatsschwelle trotz59Tagen Abstand; kürzere gebotene Intervalle sind nicht diese numerische Regelprüfung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_SORTIERUNG",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-02",
+        "2024-01"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monate": [
+          {
+            "monat": "2024-01",
+            "besuchszahl": 1,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          },
+          {
+            "monat": "2024-02",
+            "besuchszahl": 1,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          }
+        ],
+        "alle_monate_mit_mindestbesuch": true,
+        "besuche_ausserhalb_pruefmonate": 0
+      }
+    },
+    "herleitung": "Kalendermonate getrennt zählen. Zwei Januartermine ersetzen keinen Februartermin.1.Januar und29.Februar erfüllen jeweils Monatsschwelle trotz59Tagen Abstand; kürzere gebotene Intervalle sind nicht diese numerische Regelprüfung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_GLEICHER_TAG",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-01-31"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monate": [
+          {
+            "monat": "2024-01",
+            "besuchszahl": 2,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          }
+        ],
+        "alle_monate_mit_mindestbesuch": true,
+        "besuche_ausserhalb_pruefmonate": 0
+      }
+    },
+    "herleitung": "Kalendermonate getrennt zählen. Zwei Januartermine ersetzen keinen Februartermin.1.Januar und29.Februar erfüllen jeweils Monatsschwelle trotz59Tagen Abstand; kürzere gebotene Intervalle sind nicht diese numerische Regelprüfung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_KEINE_30_TAGE_REGEL",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-01"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "monate": [
+          {
+            "monat": "2024-01",
+            "besuchszahl": 1,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          },
+          {
+            "monat": "2024-02",
+            "besuchszahl": 1,
+            "regelmaessiger_mindestbesuch_erreicht": true
+          }
+        ],
+        "alle_monate_mit_mindestbesuch": true,
+        "besuche_ausserhalb_pruefmonate": 0
+      }
+    },
+    "herleitung": "Kalendermonate getrennt zählen. Zwei Januartermine ersetzen keinen Februartermin.1.Januar und29.Februar erfüllen jeweils Monatsschwelle trotz59Tagen Abstand; kürzere gebotene Intervalle sind nicht diese numerische Regelprüfung.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_FEHLTpruefmonate",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": null,
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_TYPpruefmonate",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": {},
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_FEHLTbesuche",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": null,
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_TYPbesuche",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": {},
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_FEHLTeinordnungsnachweis",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_TYPeinordnungsnachweis",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": {}
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG0",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG1",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-01"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG2",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-13"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG3",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-1"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG4",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "0000-01"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG5",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-01"
+        },
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-02-01"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG6",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2023-02-29"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG7",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A"
+        }
+      ],
+      "einordnungsnachweis": "§1790III nennt in der Regel einmal im Monat. Die Funktion zählt tatsächliche Besuche je qualifiziertem Kalendermonat und vergleicht mit mindestens1; sie ersetzt dies nicht durch starre30-Tage-Abstände. Alle ausgewählten Monate werden ausgewiesen, auch ohne Besuch. Besuche außerhalb der Prüfmonate werden gesondert gezählt. Kürzere/längere gebotene Besuchsabstände, ein anderer Ort, Beginn/Ende der Vormundschaft und qualitative Kontaktpflichten sind rechtlich zu bestimmen; keine automatische Pflichtverletzungs- oder Haftungsentscheidung. Mehrere Mündel getrennt auswerten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  },
+  {
+    "fall_id": "VORMUND_MONATLICHE_BESUCHSZAHLEN_UNGUELTIG8",
+    "funktion": "vormund_monatliche_besuchszahlen",
+    "eingaben": {
+      "pruefmonate": [
+        "2024-01",
+        "2024-02"
+      ],
+      "besuche": [
+        {
+          "besuch_id": "A",
+          "besuch_am": "2024-01-31"
+        },
+        {
+          "besuch_id": "B",
+          "besuch_am": "2024-02-29"
+        }
+      ],
+      "einordnungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängig festgelegte Rechen-/Kalenderwerte; native Python/R-Ergebnisparität.",
+    "pruefnachweis": "Native Python/R und vollständiger Ergebnisvergleich."
+  }
+]

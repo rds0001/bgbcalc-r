@@ -1,0 +1,1124 @@
+[
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_TEILDECKUNG",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "befriedigungsbetrag": {
+          "zaehler": "40",
+          "nenner": "1"
+        },
+        "ausfall_fuer_uebrige_erben": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_VOLLDECKUNG",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "20",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "befriedigungsbetrag": {
+          "zaehler": "20",
+          "nenner": "1"
+        },
+        "ausfall_fuer_uebrige_erben": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_GLEICH",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "60",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "20",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausfall_fuer_uebrige_erben": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_UNTERDECKT",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "40",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "20",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausfall_fuer_uebrige_erben": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_NULL",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "0",
+      "eigener_pflichtteilswert": "0",
+      "verlangter_pflichtteilsbetrag": "0",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "befriedigungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "ausfall_fuer_uebrige_erben": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_NICHT_ANWENDBAR",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_FEHLT_erbteilwert_nach_teilung",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": null,
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_TYP_erbteilwert_nach_teilung",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": [],
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_FEHLT_eigener_pflichtteilswert",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": null,
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_TYP_eigener_pflichtteilswert",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": [],
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_FEHLT_verlangter_pflichtteilsbetrag",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": null,
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_TYP_verlangter_pflichtteilsbetrag",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": [],
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_FEHLT_schutz_nach_2319_qualifiziert",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_TYP_schutz_nach_2319_qualifiziert",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch qualifizierter Schutz nach Teilung."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_FEHLT_bewertungsnachweis",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_MITERBE_EIGENBEDARF_TYP_bewertungsnachweis",
+    "funktion": "pflichtteil_miterbe_eigenbedarf",
+    "eingaben": {
+      "erbteilwert_nach_teilung": "100",
+      "eigener_pflichtteilswert": "60",
+      "verlangter_pflichtteilsbetrag": "70",
+      "schutz_nach_2319_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_GEDECKELT",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugeordnete_sonderlast": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "nicht_durch_vorteil_zugeordnete_restlast": {
+          "zaehler": "30",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_VOLL",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "100",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugeordnete_sonderlast": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nicht_durch_vorteil_zugeordnete_restlast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_GLEICH",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "80",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugeordnete_sonderlast": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nicht_durch_vorteil_zugeordnete_restlast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_NULL",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "0",
+      "angenommenes_vermaechtnis": "0",
+      "erlangter_vorteil": "0",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugeordnete_sonderlast": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_durch_vorteil_zugeordnete_restlast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_2321",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "vermaechtnisausschlagung_2321",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "0",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "zugeordnete_sonderlast": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "nicht_durch_vorteil_zugeordnete_restlast": {
+          "zaehler": "10",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_2321_ANGENOMMEN",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "vermaechtnisausschlagung_2321",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_NICHT_ANWENDBAR",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": false,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_FEHLT_fallart",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": null,
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_TYP_fallart",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": [],
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_FEHLT_pflichtteilslast",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": null,
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_TYP_pflichtteilslast",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": [],
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_FEHLT_angenommenes_vermaechtnis",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": null,
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_TYP_angenommenes_vermaechtnis",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": [],
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_FEHLT_erlangter_vorteil",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": null,
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_TYP_erlangter_vorteil",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": [],
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_FEHLT_lastzuordnung_qualifiziert",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": null,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_TYP_lastzuordnung_qualifiziert",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetischer Vorteil und getrennte Lasten."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_FEHLT_bewertungsnachweis",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_VORTEILSLAST_TYP_bewertungsnachweis",
+    "funktion": "pflichtteil_vorteilslast",
+    "eingaben": {
+      "fallart": "ersatzerwerb_2320",
+      "pflichtteilslast": "60",
+      "angenommenes_vermaechtnis": "20",
+      "erlangter_vorteil": "50",
+      "lastzuordnung_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_TEILKUERZUNG",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "30",
+          "nenner": "1"
+        },
+        "verbleibende_beschwerung": {
+          "zaehler": "50",
+          "nenner": "1"
+        },
+        "nicht_gedeckte_pflichtteilslast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_KEINE",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "10",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_beschwerung": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nicht_gedeckte_pflichtteilslast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_GLEICH",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "20",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_beschwerung": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "nicht_gedeckte_pflichtteilslast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_VOLL",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "100",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "verbleibende_beschwerung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_gedeckte_pflichtteilslast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_RESTLAST",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "120",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "80",
+          "nenner": "1"
+        },
+        "verbleibende_beschwerung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_gedeckte_pflichtteilslast": {
+          "zaehler": "20",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_NULL",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "0",
+      "beschwerungswert": "0",
+      "zu_deckende_pflichtteilslast": "0",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "BERECHNET",
+      "wert": {
+        "kuerzungsbetrag": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "verbleibende_beschwerung": {
+          "zaehler": "0",
+          "nenner": "1"
+        },
+        "nicht_gedeckte_pflichtteilslast": {
+          "zaehler": "0",
+          "nenner": "1"
+        }
+      }
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_NICHT_ANWENDBAR",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": false,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "NICHT_ANWENDBAR",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_FEHLT_erwerbswert_vor_beschwerung",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": null,
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_TYP_erwerbswert_vor_beschwerung",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": [],
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_FEHLT_beschwerungswert",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": null,
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_TYP_beschwerungswert",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": [],
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_FEHLT_zu_deckende_pflichtteilslast",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": null,
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_TYP_zu_deckende_pflichtteilslast",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": [],
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_FEHLT_kuerzung_nach_2322_qualifiziert",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": null,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_TYP_kuerzung_nach_2322_qualifiziert",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": 1,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_FEHLT_bewertungsnachweis",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": null
+    },
+    "erwartung": {
+      "status": "EINGABE_FEHLT",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_TYP_bewertungsnachweis",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": []
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_BESCHWERUNG_ZU_HOCH",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "101",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_NEGATIV",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "-1",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": "Synthetisch qualifizierter beschwerter Erwerb."
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  },
+  {
+    "fall_id": "PFLICHTTEIL_DECKUNG_BESCHWERUNGSKUERZUNG_NACHWEIS_LEER",
+    "funktion": "pflichtteil_deckung_beschwerungskuerzung",
+    "eingaben": {
+      "erwerbswert_vor_beschwerung": "100",
+      "beschwerungswert": "80",
+      "zu_deckende_pflichtteilslast": "50",
+      "kuerzung_nach_2322_qualifiziert": true,
+      "bewertungsnachweis": " "
+    },
+    "erwartung": {
+      "status": "EINGABE_UNGUELTIG",
+      "wert": null
+    },
+    "herleitung": "Unabhängige Deckungs-/Differenzfälle:Erbteil100−Eigenpflichtteil60 lässt40 zur Forderungsdeckung;Sonderlast80 durch Vorteil50 begrenzt;Erwerb100−Beschwerung80 frei20, Pflichtteil50 benötigt Kürzung30.",
+    "pruefnachweis": "Gezielte native Python/R-Referenzen und vollständige Ergebnisparität."
+  }
+]
